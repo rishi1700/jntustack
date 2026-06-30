@@ -3,6 +3,7 @@ node_modules/
 
 # Build output
 dist/
+drafts/
 
 # Secrets / environment
 .env
@@ -20,3 +21,6 @@ Thumbs.db
 
 # Claude Code local-only settings (keep shared config, ignore machine-local)
 .claude/settings.local.json
+
+# Project archive snapshots (redundant with git history)
+*.zip
