@@ -213,6 +213,16 @@ const baseStyles = `
   .college-link{display:inline-block;font-size:.85rem;font-weight:600;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--marigold);}
   .college-link:hover{color:var(--marigold);}
   @media (min-width:560px){.college-grid{grid-template-columns:1fr 1fr;}}
+
+  /* --- Branch hub --- */
+  .hub-breadcrumb{display:inline-block;margin-bottom:1rem;font-size:.82rem;font-weight:600;color:var(--ink-soft);text-decoration:none;}
+  .hub-breadcrumb:hover{color:var(--marigold);}
+  .hub-sem-group h2{font-size:1.2rem;border-bottom:1px solid var(--rule);padding-bottom:.3rem;}
+  .hub-subject-list{list-style:none;margin:.6rem 0 0;padding:0;}
+  .hub-subject-list li{padding:.6rem 0;border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:.6rem;flex-wrap:wrap;}
+  .hub-subject-list a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--marigold);}
+  .hub-subject-list a:hover{color:var(--marigold);}
+  .hub-reg{font-size:.66rem;color:var(--text-muted);background:#ECE7DA;padding:.1rem .45rem;border-radius:99px;letter-spacing:.03em;}
 `;
 
 export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp }) {

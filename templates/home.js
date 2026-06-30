@@ -1,9 +1,18 @@
 import { escapeHtml } from './layout.js';
 
-export function renderHomePage({ publishedSubjects = [] }) {
+export function renderHomePage({ publishedSubjects = [], publishedBranchHubs = [] }) {
   const subjectLinks = publishedSubjects.length
     ? `<ul class="fit-list">${publishedSubjects.map(s => `<li><a href="/${s.slug}/">${escapeHtml(s.title)}</a></li>`).join('')}</ul>`
     : `<div class="empty-state">No subject pages published yet.</div>`;
+
+  const branchHubSection = publishedBranchHubs.length
+    ? `
+<section>
+  <h2>Browse by branch</h2>
+  <p class="guide-intro">Branch hubs collect every verified subject for a branch in one place. Only branches with at least one verified subject appear here -- the rest aren't live yet.</p>
+  <ul class="fit-list">${publishedBranchHubs.map(b => `<li><a href="${b.href}">${escapeHtml(b.name)} (${escapeHtml(b.code)})</a></li>`).join('')}</ul>
+</section>`
+    : '';
 
   return `
 <h1 class="subject-title">JNTUStack</h1>
@@ -24,6 +33,8 @@ export function renderHomePage({ publishedSubjects = [] }) {
     <a class="download" href="/colleges/">Open the college directory &rarr;</a>
   </div>
 </section>
+
+${branchHubSection}
 
 <section>
   <h2>Available course materials</h2>

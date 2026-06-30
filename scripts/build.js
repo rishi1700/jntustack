@@ -5,6 +5,7 @@ import { loadAndValidate } from '../lib/validate.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
+import { renderBranchHubPage } from '../templates/branch-hub.js';
 import { renderCollegeDirectoryPage } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
 
@@ -20,6 +21,11 @@ console.log('Schema validation passed.');
 const branchByCode = Object.fromEntries(data.branches.map(b => [b.code, b]));
 const regulationByCode = Object.fromEntries(data.regulations.map(r => [r.code, r]));
 const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
+
+// Verified subjects are the only ones that get published pages, so they're also
+// the only ones that count toward whether a branch hub is worth generating.
+const verifiedSubjects = data.subjects.filter(s => s.source.status === 'verified');
+const publishedBranchCodes = new Set(verifiedSubjects.map(s => s.branch));
 
 const distDir = path.join(ROOT, 'dist');
 const draftsDir = path.join(ROOT, 'drafts');
@@ -54,7 +60,7 @@ for (const subject of data.subjects) {
     description: subject.seo.meta_description || '',
     canonical: `${SITE_URL}/${slug}/`,
     jsonLd: courseJsonLd(subject, branch, regulation),
-    bodyHtml: renderSubjectPage(subject, { branch, regulation, legacySubject }),
+    bodyHtml: renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished: publishedBranchCodes.has(subject.branch) }),
     stamp: subject.source.status,
   });
 
@@ -130,6 +136,36 @@ if (fs.existsSync(collegesPath)) {
   }
 }
 
+// Branch hubs: one page per branch, gated on the same verified-only discipline.
+// A hub is generated ONLY if the branch has at least one verified (published)
+// subject -- an empty hub is worse than no page, so a branch with zero verified
+// subjects is skipped entirely and its /<code>/ URL simply 404s.
+let branchHubsPublished = 0;
+let branchHubsSkipped = 0;
+const publishedBranchHubs = [];
+for (const branch of data.branches) {
+  const branchVerified = verifiedSubjects.filter(s => s.branch === branch.code);
+  if (branchVerified.length === 0) {
+    branchHubsSkipped++;
+    continue;
+  }
+  const code = branch.code.toLowerCase();
+  const html = layout({
+    title: `${branch.name} (${branch.code}) Notes & Materials - JNTUK - JNTUStack`,
+    description: `Verified JNTUK ${branch.code} subject notes and previous question papers, grouped by year and semester.`,
+    canonical: `${SITE_URL}/${code}/`,
+    jsonLd: null,
+    bodyHtml: renderBranchHubPage(branch, branchVerified),
+    stamp: 'verified',
+  });
+  const outDir = path.join(distDir, code);
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'index.html'), html);
+  sitemapUrls.push(`${SITE_URL}/${code}/`);
+  publishedBranchHubs.push({ code: branch.code, name: branch.name, href: `/${code}/` });
+  branchHubsPublished++;
+}
+
 // Homepage -- the most basic requirement of a live site, generated last so
 // it can honestly reflect what actually got published above.
 const homeHtml = layout({
@@ -137,7 +173,7 @@ const homeHtml = layout({
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
   jsonLd: null,
-  bodyHtml: renderHomePage({ publishedSubjects }),
+  bodyHtml: renderHomePage({ publishedSubjects, publishedBranchHubs }),
   stamp: null,
 });
 fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml);
@@ -159,3 +195,4 @@ console.log(`Skipped (placeholder)        : ${skipped}  -> not rendered at all`)
 console.log(`Sitemap entries               : ${sitemapUrls.length}`);
 console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `published (${branchGuidePublished} branches)` : 'not published'}`);
 console.log(`College directory             : ${collegesPublished > 0 ? `published (${collegesPublished} colleges)` : 'not published'}`);
+console.log(`Branch hubs                   : ${branchHubsPublished} published, ${branchHubsSkipped} skipped (no verified subjects)`);

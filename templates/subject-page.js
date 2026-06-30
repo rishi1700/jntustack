@@ -1,6 +1,6 @@
 import { escapeHtml } from './layout.js';
 
-export function renderSubjectPage(subject, { branch, regulation, legacySubject }) {
+export function renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished }) {
   const isVerified = subject.source.status === 'verified';
   const badgeClass = isVerified ? 'badge--verified' : 'badge--draft';
   const badgeLabel = isVerified ? 'Verified vs. official syllabus' : 'Needs verification';
@@ -32,6 +32,13 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject }
     ? `<div class="resources-box">${resourceLinks}</div>`
     : `<div class="empty-state">Notes for this subject haven't been uploaded yet. Check back soon or use the Telegram channel link below to ask.</div>`;
 
+  // Back-link to the branch hub, but only when that hub was actually published
+  // (i.e. the branch has at least one verified subject). Never link to a hub
+  // URL that the verified-only gate didn't generate -- that would be a 404.
+  const hubBreadcrumb = branchHubPublished && branch
+    ? `<a class="hub-breadcrumb" href="/${escapeHtml(branch.code.toLowerCase())}/">&larr; All ${escapeHtml(branch.name || branch.code)} subjects</a>`
+    : '';
+
   const legacyHtml = legacySubject
     ? `<div class="legacy-callout">
         Studying under the older ${escapeHtml(legacySubject.regulation)} regulation (supply/backlog)?
@@ -40,6 +47,7 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject }
     : '';
 
   return `
+${hubBreadcrumb}
 <div class="form-strip">
   <span>Regulation: <b>${escapeHtml(subject.regulation)}</b></span>
   <span>Branch: <b>${escapeHtml(branch?.name || subject.branch)}</b></span>
