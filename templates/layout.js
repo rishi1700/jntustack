@@ -225,7 +225,7 @@ const baseStyles = `
   .hub-reg{font-size:.66rem;color:var(--text-muted);background:#ECE7DA;padding:.1rem .45rem;border-radius:99px;letter-spacing:.03em;}
 `;
 
-export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp }) {
+export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp, navBranches = [] }) {
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -244,8 +244,8 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
   <a class="brand" href="/">JNTUStack</a>
-  <nav class="top-nav">
-    <a href="/cse/">CSE</a><a href="/it/">IT</a><a href="/ece/">ECE</a><a href="/eee/">EEE</a><a href="/ce/">CE</a><a href="/mech/">MECH</a><a href="/colleges/">Colleges</a><a href="/branch-guide/">Choosing a Branch?</a>
+  <nav class="top-nav" aria-label="Main navigation">
+    ${navBranches.map(b => `<a href="${escapeHtml(b.href)}">${escapeHtml(b.code)}</a>`).join('')}<a href="/colleges/">Colleges</a><a href="/branch-guide/">Choosing a Branch?</a>
   </nav>
 </header>
 <main>

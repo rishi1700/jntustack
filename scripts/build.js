@@ -27,6 +27,15 @@ const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
 const verifiedSubjects = data.subjects.filter(s => s.source.status === 'verified');
 const publishedBranchCodes = new Set(verifiedSubjects.map(s => s.branch));
 
+// Single source of truth for the nav: the branch hubs that will actually be
+// published this build (same gate as the per-branch loop below). Computed
+// up-front because EVERY page's nav needs it, and subject + branch-guide pages
+// are rendered before that loop runs. Order follows data.branches. The moment a
+// branch gains a verified subject it appears here automatically -- no hardcoding.
+const navBranches = data.branches
+  .filter(b => publishedBranchCodes.has(b.code))
+  .map(b => ({ code: b.code, name: b.name, href: `/${b.code.toLowerCase()}/` }));
+
 const distDir = path.join(ROOT, 'dist');
 const draftsDir = path.join(ROOT, 'drafts');
 fs.rmSync(distDir, { recursive: true, force: true });
@@ -61,6 +70,7 @@ for (const subject of data.subjects) {
     canonical: `${SITE_URL}/${slug}/`,
     jsonLd: courseJsonLd(subject, branch, regulation),
     bodyHtml: renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished: publishedBranchCodes.has(subject.branch) }),
+    navBranches,
     stamp: subject.source.status,
   });
 
@@ -96,6 +106,7 @@ if (fs.existsSync(branchGuidePath)) {
       canonical: `${SITE_URL}/branch-guide/`,
       jsonLd: null,
       bodyHtml: renderBranchGuidePage(verifiedProfiles),
+      navBranches,
       stamp: 'verified',
     });
     const outDir = path.join(distDir, 'branch-guide');
@@ -124,6 +135,7 @@ if (fs.existsSync(collegesPath)) {
       canonical: `${SITE_URL}/colleges/`,
       jsonLd: null,
       bodyHtml: renderCollegeDirectoryPage(verifiedColleges, collegesData._coverage_note),
+      navBranches,
       stamp: 'verified',
     });
     const outDir = path.join(distDir, 'colleges');
@@ -142,7 +154,6 @@ if (fs.existsSync(collegesPath)) {
 // subjects is skipped entirely and its /<code>/ URL simply 404s.
 let branchHubsPublished = 0;
 let branchHubsSkipped = 0;
-const publishedBranchHubs = [];
 for (const branch of data.branches) {
   const branchVerified = verifiedSubjects.filter(s => s.branch === branch.code);
   if (branchVerified.length === 0) {
@@ -156,13 +167,13 @@ for (const branch of data.branches) {
     canonical: `${SITE_URL}/${code}/`,
     jsonLd: null,
     bodyHtml: renderBranchHubPage(branch, branchVerified),
+    navBranches,
     stamp: 'verified',
   });
   const outDir = path.join(distDir, code);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'index.html'), html);
   sitemapUrls.push(`${SITE_URL}/${code}/`);
-  publishedBranchHubs.push({ code: branch.code, name: branch.name, href: `/${code}/` });
   branchHubsPublished++;
 }
 
@@ -173,7 +184,8 @@ const homeHtml = layout({
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
   jsonLd: null,
-  bodyHtml: renderHomePage({ publishedSubjects, publishedBranchHubs }),
+  bodyHtml: renderHomePage({ publishedSubjects, publishedBranchHubs: navBranches }),
+  navBranches,
   stamp: null,
 });
 fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml);
