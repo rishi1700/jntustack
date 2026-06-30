@@ -1,12 +1,21 @@
 # JNTUStack -- project state as of this handoff
 
-Domain: jntustack.com (primary) + jntustack.in (redirect to .com).
-Both verified available; not yet registered.
+Domain: jntustack.com (primary, **registered 2026-06-30, expires
+2027-06-30**) + jntustack.in (intended .com redirect, **not yet registered**).
 
 Hosting: **Hostinger Node.js Apps** (hPanel, Business/Cloud plan), deployed
 via GitHub. Not Cloudflare Pages -- that was the original plan, changed
 mid-build, and the architecture below reflects the current (Hostinger)
 target.
+
+**Live status (2026-06-30):** deployed to Hostinger as a Node.js/Express app
+(three completed git deploys, entry `server.js`, Node 24) and DNS for
+jntustack.com points at Hostinger (A 217.21.87.84). BUT
+https://jntustack.com currently returns **404** -- the deploy ran without a
+build step (`build_script: null`), so `dist/` was never generated on the
+server and Express has nothing to serve at `/`. Not publicly accessible
+until that's fixed: set the app's build command to `npm run build` and
+redeploy (see "Deploying to Hostinger" #5).
 
 ## What this is
 
@@ -39,12 +48,13 @@ untested, since there's no API key yet.
    error until it's set.
 4. Hostinger sets `PORT` itself -- server.js already defers to
    `process.env.PORT`, don't hardcode a port anywhere.
-5. Build step on deploy should run `npm run build` before `npm start` (the
-   search index has to exist before the server boots, or the ask widget
-   has nothing to ground answers on -- it'll log a warning and keep running
-   with an empty index rather than crash).
-6. Connect jntustack.com to the deployed app (separate documented step in
-   hPanel once the domain is registered).
+5. Build step on deploy MUST run `npm run build` before `npm start` (the
+   homepage `dist/index.html` and the search index have to exist before the
+   server boots, or Express serves nothing and the site 404s -- this is
+   exactly the bug that left the first deploys returning 404). Set this as
+   the app's build command in hPanel.
+6. Connect jntustack.com to the deployed app (done -- DNS now resolves to
+   Hostinger; the app just needs the build step above to actually serve).
 
 ## What's real vs. what's scaffolding
 
@@ -68,7 +78,10 @@ renders to `drafts/` with a visible orange watermark instead.
 
 ## Immediate next steps, roughly in order
 
-1. Register jntustack.com + jntustack.in.
+1. **Make the site actually load.** jntustack.com is registered and DNS +
+   the Express deploy are in place, but the live URL 404s because no build
+   step ran -- set the app's build command to `npm run build` and redeploy
+   so `dist/` exists on the server. (jntustack.in still unregistered.)
 2. Get an Anthropic API key (console.anthropic.com) when ready to test
    the ask widget for real -- not required to launch without it.
 3. Source the official R23 syllabus PDFs (see notes in
@@ -79,7 +92,7 @@ renders to `drafts/` with a visible orange watermark instead.
 5. Branch hub / semester hub page templates don't exist yet -- only
    individual subject pages and the branch guide do.
 6. Decide free-vs-rate-limited access model for the ask widget before
-   deploying `functions/api/ask.js` live.
+   linking `routes/ask.js` (/api/ask) from a live page.
 
 ## Design constraints worth preserving as this grows
 
