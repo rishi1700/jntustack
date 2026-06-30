@@ -1,0 +1,113 @@
+import fs from 'node:fs';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { loadAndValidate } from '../lib/validate.js';
+import { layout } from '../templates/layout.js';
+import { renderSubjectPage } from '../templates/subject-page.js';
+import { renderBranchGuidePage } from '../templates/branch-guide.js';
+
+const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const SITE_URL = 'https://jntukmaterials.com';
+
+const data = loadAndValidate(
+  path.join(ROOT, 'data/schema.json'),
+  path.join(ROOT, 'data/cse-r23-sample.json')
+);
+console.log('Schema validation passed.');
+
+const branchByCode = Object.fromEntries(data.branches.map(b => [b.code, b]));
+const regulationByCode = Object.fromEntries(data.regulations.map(r => [r.code, r]));
+const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
+
+const distDir = path.join(ROOT, 'dist');
+const draftsDir = path.join(ROOT, 'drafts');
+fs.rmSync(distDir, { recursive: true, force: true });
+fs.rmSync(draftsDir, { recursive: true, force: true });
+
+function courseJsonLd(subject, branch, regulation) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: subject.name,
+    description: subject.seo.meta_description,
+    provider: { '@type': 'Organization', name: 'JNTUK Materials', sameAs: SITE_URL },
+    courseCode: subject.subject_code || undefined,
+    educationalLevel: `${branch?.name || subject.branch} - ${subject.year_sem_label}`,
+    inLanguage: 'en',
+  };
+}
+
+let published = 0, drafted = 0, skipped = 0;
+const sitemapUrls = [];
+
+for (const subject of data.subjects) {
+  const branch = branchByCode[subject.branch];
+  const regulation = regulationByCode[subject.regulation];
+  const legacySubject = subject.legacy_equivalent_id ? subjectById[subject.legacy_equivalent_id] : null;
+  const slug = subject.seo.slug || subject.id;
+
+  const html = layout({
+    title: subject.seo.title || subject.name,
+    description: subject.seo.meta_description || '',
+    canonical: `${SITE_URL}/${slug}/`,
+    jsonLd: courseJsonLd(subject, branch, regulation),
+    bodyHtml: renderSubjectPage(subject, { branch, regulation, legacySubject }),
+    stamp: subject.source.status,
+  });
+
+  if (subject.source.status === 'verified') {
+    const outDir = path.join(distDir, slug);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    sitemapUrls.push(`${SITE_URL}/${slug}/`);
+    published++;
+  } else if (subject.source.status === 'needs_verification') {
+    const outDir = path.join(draftsDir, subject.id);
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    drafted++;
+  } else {
+    skipped++; // placeholder -- not even rendered to drafts
+  }
+}
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
+</urlset>
+`;
+fs.mkdirSync(distDir, { recursive: true });
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+
+// Branch guide: a separate dataset (not regulation-bound), same verified-only discipline.
+let branchGuidePublished = 0;
+const branchGuidePath = path.join(ROOT, 'data/branch-guide-data.json');
+if (fs.existsSync(branchGuidePath)) {
+  const { branch_profiles } = JSON.parse(fs.readFileSync(branchGuidePath, 'utf-8'));
+  const verifiedProfiles = branch_profiles.filter(b => b.source.status === 'verified');
+  if (verifiedProfiles.length === branch_profiles.length && verifiedProfiles.length > 0) {
+    const html = layout({
+      title: 'Choosing a Branch? CSE vs ECE vs EEE vs Civil vs Mechanical vs IT - JNTUStack',
+      description: 'An honest, no-fabricated-stats guide to picking an engineering branch -- core focus, real fit signals, and an optional 5-question narrowing quiz.',
+      canonical: `${SITE_URL}/branch-guide/`,
+      jsonLd: null,
+      bodyHtml: renderBranchGuidePage(verifiedProfiles),
+      stamp: 'verified',
+    });
+    const outDir = path.join(distDir, 'branch-guide');
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    branchGuidePublished = verifiedProfiles.length;
+  } else {
+    console.warn(`Branch guide skipped: ${branch_profiles.length - verifiedProfiles.length} profile(s) not yet verified.`);
+  }
+}
+
+console.log('');
+console.log('Build summary');
+console.log('-------------');
+console.log(`Published (verified)         : ${published}  -> dist/   (these are deployable)`);
+console.log(`Drafted (needs_verification) : ${drafted}  -> drafts/ (watermarked preview, NOT deployed)`);
+console.log(`Skipped (placeholder)        : ${skipped}  -> not rendered at all`);
+console.log(`Sitemap entries               : ${sitemapUrls.length}`);
+console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `published (${branchGuidePublished} branches)` : 'not published'}`);

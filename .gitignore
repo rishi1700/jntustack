@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Secrets / environment
+.env
+.env.*
+*.key
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+
+# Claude Code local-only settings (keep shared config, ignore machine-local)
+.claude/settings.local.json

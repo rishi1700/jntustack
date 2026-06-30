@@ -1,0 +1,117 @@
+{
+  "branch_profiles": [
+    {
+      "branch": "CSE",
+      "tagline": "Software, algorithms, and systems -- the most in-demand branch, also the most crowded.",
+      "core_focus": ["Programming and data structures", "Algorithms", "Operating systems", "Databases", "Computer networks", "An AI/ML foundation"],
+      "suits_students_who": [
+        "Actually enjoy debugging -- not just the idea of coding, the slow grind of fixing broken things",
+        "Are comfortable with abstract, symbolic problem-solving rather than physical/hands-on work",
+        "Don't mind that the field changes every few years and expects continuous self-learning"
+      ],
+      "less_good_fit_if": [
+        "You're choosing CSE mainly because 'it has the best placements' without any real curiosity about programming itself",
+        "You strongly prefer hands-on, physical, or visual work over screen-based abstract work",
+        "You're hoping for a fixed, stable curriculum that won't keep changing -- it will"
+      ],
+      "career_paths": ["Software development", "Data engineering / data science", "Product roles", "Systems / DevOps", "Research, if pursuing further study"],
+      "further_study_paths": ["GATE for M.Tech at IITs/NITs", "MS abroad", "Direct industry entry is the most common path for this branch specifically"],
+      "related_branches": ["IT", "CSE-AIML", "CSE-AIDS", "CSE-DS", "CSE-CS"],
+      "data_disclaimer": "No placement or salary figures are claimed here. Those numbers vary a lot by college and year -- ask your specific college's placement cell for real, current data rather than relying on internet averages.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    },
+    {
+      "branch": "IT",
+      "tagline": "Very close to CSE in practice, with more weight on networks, web systems, and enterprise software.",
+      "core_focus": ["Programming and data structures", "Computer networks", "Web technologies", "Database management", "Software engineering practice"],
+      "suits_students_who": [
+        "Want the CSE-adjacent career path but at a college/cutoff where CSE itself wasn't an option",
+        "Lean slightly more toward systems, networks, and applied software over deep algorithmic theory"
+      ],
+      "less_good_fit_if": [
+        "You specifically want the heaviest theoretical CS depth (algorithms, theory of computation) -- CSE leans further that direction"
+      ],
+      "career_paths": ["Software development", "Systems/network administration", "QA and testing", "IT services and enterprise software roles"],
+      "further_study_paths": ["GATE", "MS abroad", "Direct industry entry"],
+      "related_branches": ["CSE"],
+      "data_disclaimer": "No placement or salary figures are claimed here. In practice, recruiters increasingly treat CSE and IT similarly, but this varies by company -- check specific companies' eligibility criteria if this matters to you.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    },
+    {
+      "branch": "ECE",
+      "tagline": "The hardware-software bridge: circuits, signals, communication systems, and embedded devices.",
+      "core_focus": ["Electronic devices and circuits", "Signals and systems", "Communication systems", "VLSI / digital IC design", "Embedded systems and microcontrollers"],
+      "suits_students_who": [
+        "Like both physics/circuits and programming, and don't want to fully commit to one or the other",
+        "Are curious how physical devices (phones, chips, sensors) actually work underneath the software",
+        "Are fine with a heavier, more varied course load than pure CSE"
+      ],
+      "less_good_fit_if": [
+        "You actively dislike circuit theory and signal processing math -- it's a large, unavoidable part of the curriculum",
+        "You want a branch with one obvious, single career direction -- ECE careers fork in several directions and that ambiguity itself can be stressful"
+      ],
+      "career_paths": ["Embedded systems engineering", "VLSI / chip design", "Telecom", "Many ECE graduates also move into software roles, since the branch builds strong general problem-solving"],
+      "further_study_paths": ["GATE -- a particularly common and well-trodden path for ECE", "M.Tech in VLSI/Communications/Embedded Systems", "MS abroad"],
+      "related_branches": ["EEE", "CSE-IOT"],
+      "data_disclaimer": "No placement or salary figures are claimed here.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    },
+    {
+      "branch": "EEE",
+      "tagline": "Power systems, electrical machines, and control -- the branch behind the grid, not the gadget.",
+      "core_focus": ["Electrical circuit analysis", "Electrical machines", "Power systems", "Control systems", "Power electronics"],
+      "suits_students_who": [
+        "Are genuinely interested in power generation, transmission, and the energy sector -- including renewables",
+        "Want a path toward government/PSU electrical roles (state electricity boards, NTPC-type organizations)",
+        "Don't mind a branch with less buzz than CSE but real, stable core-industry demand"
+      ],
+      "less_good_fit_if": [
+        "Your real interest is software and you're choosing EEE only as a fallback -- the curriculum won't scratch that itch",
+        "You want fast-moving, trend-driven work -- power systems engineering moves slowly and deliberately by design"
+      ],
+      "career_paths": ["Power sector / electricity boards", "Electrical equipment manufacturing", "Renewable energy", "Control systems and automation", "Some graduates pivot into software/analytics roles"],
+      "further_study_paths": ["GATE -- strong PSU recruitment route specifically for EEE", "M.Tech in Power Systems/Control Systems", "MBA, for those moving toward energy-sector management"],
+      "related_branches": ["ECE", "MECH"],
+      "data_disclaimer": "No placement or salary figures are claimed here.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    },
+    {
+      "branch": "CE",
+      "tagline": "Structures, construction, and infrastructure -- the most tangible, real-world branch of the six.",
+      "core_focus": ["Strength of materials", "Structural analysis", "Surveying", "Geotechnical engineering", "Transportation and construction management"],
+      "suits_students_who": [
+        "Want to see physical, tangible results of their work -- buildings, roads, bridges",
+        "Are drawn to government infrastructure roles (PWD, municipal engineering, railways) or construction-industry careers",
+        "Are comfortable with significant site/field work, not just office or lab work"
+      ],
+      "less_good_fit_if": [
+        "You want a desk-based, software-centric daily routine -- site visits and field components are a real part of this branch",
+        "Your interest is purely in the design/software side (e.g. architecture/CAD) without the structural engineering fundamentals underneath it"
+      ],
+      "career_paths": ["Construction and infrastructure firms", "Government engineering services (PWD, municipal, railways)", "Real estate and project management", "Structural design consultancies"],
+      "further_study_paths": ["GATE -- well-established route into government infrastructure jobs and PSUs", "M.Tech in Structural/Geotechnical/Transportation Engineering"],
+      "related_branches": ["MECH"],
+      "data_disclaimer": "No placement or salary figures are claimed here.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    },
+    {
+      "branch": "MECH",
+      "tagline": "Machines, manufacturing, and thermal systems -- the broadest, most classically 'engineering' branch.",
+      "core_focus": ["Thermodynamics", "Machine design", "Manufacturing/production technology", "Fluid mechanics", "Automobile and industrial engineering"],
+      "suits_students_who": [
+        "Like understanding how physical machines and systems actually work, from engines to manufacturing lines",
+        "Are interested in the automotive, manufacturing, or industrial/production sectors",
+        "Want one of the broadest, most flexible engineering foundations -- mechanical concepts show up almost everywhere"
+      ],
+      "less_good_fit_if": [
+        "You're specifically chasing software-only career paths -- mechanical's curriculum is mostly hardware/physical-systems focused",
+        "You dislike workshop/lab-heavy, hands-on coursework"
+      ],
+      "career_paths": ["Manufacturing and production engineering", "Automotive industry", "Core mechanical design roles", "Many graduates also move into software, analytics, or further study"],
+      "further_study_paths": ["GATE", "M.Tech in Design/Thermal/Manufacturing", "MBA -- common route for those moving toward operations/management"],
+      "related_branches": ["CE", "EEE"],
+      "data_disclaimer": "No placement or salary figures are claimed here.",
+      "source": { "origin_url": null, "retrieved_date": "2026-06-30", "status": "verified" }
+    }
+  ]
+}

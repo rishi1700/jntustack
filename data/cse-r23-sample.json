@@ -1,0 +1,274 @@
+{
+  "regulations": [
+    {
+      "code": "R16",
+      "full_name": "JNTUK Regulation 2016",
+      "effective_from": "2016-17",
+      "status": "legacy",
+      "supersedes": null,
+      "source_url": "https://jntukmaterials.com/",
+      "last_verified": "2026-06-30",
+      "notes": "What the current jntukmaterials.com site is built around. Now mostly relevant to supply/backlog-exam students, not active cohorts. Keep these pages live -- don't delete -- but stop treating them as the primary content target."
+    },
+    {
+      "code": "R19",
+      "full_name": "JNTUK Regulation 2019",
+      "effective_from": "2019-20",
+      "status": "legacy",
+      "supersedes": "R16",
+      "source_url": null,
+      "last_verified": "2026-06-30",
+      "notes": "Largely winding down to backlog/supply exams as of mid-2026."
+    },
+    {
+      "code": "R20",
+      "full_name": "JNTUK Regulation 2020",
+      "effective_from": "2020-21",
+      "status": "legacy",
+      "supersedes": "R19",
+      "source_url": null,
+      "last_verified": "2026-06-30",
+      "notes": "Still appears in supply/backlog result and timetable notices as of 2026, but no longer the active intake."
+    },
+    {
+      "code": "R23",
+      "full_name": "JNTUK Regulation 2023",
+      "effective_from": "2023-24",
+      "status": "active",
+      "supersedes": "R20",
+      "branch_groups": {
+        "Group-A": ["CSE", "EEE", "Chemical Engineering", "Food Technology", "Petroleum Technology", "Pharmaceutical Engineering"],
+        "Group-B": ["Agricultural Engineering", "Civil Engineering", "Mechanical Engineering", "Mining Engineering", "Automobile Engineering", "Robotics", "ECE", "ECE-Allied", "CSE-Allied", "IT"]
+      },
+      "evaluation_scheme": "Two-part practical subjects are examined as a single 3-hour, 70-mark end exam; mid-semester work evaluated separately for 30 marks; viva voce carries 20 marks within the relevant practical/project components.",
+      "honors_minor_rules": "Honors registration opens in semester IV after semester III results are declared; students may take a maximum of two Honors subjects per semester from semester V onward; Honors courses may be completed in-college or via platforms like SWAYAM (minimum 12 weeks for a 3-credit course, 8 weeks for a 2-credit course).",
+      "source_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+      "last_verified": "2026-06-30",
+      "notes": "This is THE current regulation -- the build priority. Covers 1st through 4th year students as of the 2026-27 academic year."
+    },
+    {
+      "code": "R25",
+      "full_name": "JNTUK Regulation 2025 (scope unconfirmed)",
+      "effective_from": "2025-26",
+      "status": "unconfirmed",
+      "supersedes": "R23",
+      "source_url": null,
+      "last_verified": "2026-06-30",
+      "notes": "Shows up in aggregator regulation listings alongside R23/R20/R19/R16, but no course-structure or syllabus document located yet. Watch item -- confirm scope before building against it."
+    }
+  ],
+  "branches": [
+    {
+      "code": "CSE",
+      "name": "Computer Science and Engineering",
+      "group": "Group-A",
+      "specializations": [
+        { "code": "CSE", "name": "Computer Science and Engineering (core)" },
+        { "code": "CSE-AIML", "name": "CSE - Artificial Intelligence and Machine Learning" },
+        { "code": "CSE-AI", "name": "CSE - Artificial Intelligence" },
+        { "code": "CSE-AIDS", "name": "CSE - AI and Data Science" },
+        { "code": "CSE-DS", "name": "CSE - Data Science" },
+        { "code": "CSE-CS", "name": "CSE - Cyber Security" },
+        { "code": "CSE-IOT", "name": "CSE - Internet of Things" },
+        { "code": "CSE-IOT-CS-BCT", "name": "CSE - IoT and Cyber Security including Blockchain Technology" },
+        { "code": "CSD", "name": "Computer Science and Design" }
+      ]
+    }
+  ],
+  "subjects": [
+    {
+      "id": "r23-cse-3-1-data-warehousing-and-data-mining",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Data Warehousing and Data Mining",
+      "category": "ProfessionalCore",
+      "credits": null,
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "seo": {
+        "slug": "data-warehousing-and-data-mining-jntuk-r23-cse-3-1",
+        "title": "Data Warehousing & Data Mining Notes - JNTUK R23 CSE 3-1",
+        "meta_description": "JNTUK R23 CSE 3-1 Data Warehousing and Data Mining lecture notes, unit-wise topics, and previous question papers."
+      },
+      "legacy_equivalent_id": "r16-cse-3-2-data-warehousing-and-mining",
+      "source": {
+        "origin_url": "https://www.scribd.com/document/880014947/R23-3rd-Year-B-Tech-CSE",
+        "retrieved_date": "2026-06-30",
+        "status": "needs_verification"
+      },
+      "notes": "Subject's presence in R23 CSE III-year course structure is confirmed. Credits, L-T-P split, and unit breakdown are NOT yet confirmed -- pull and parse the official 'JNTUK R23 B.Tech CSE Syllabus.pdf' before generating page content."
+    },
+    {
+      "id": "r23-cse-3-2-computer-networks",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Computer Networks",
+      "category": "ProfessionalCore",
+      "credits": null,
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "seo": {
+        "slug": "computer-networks-jntuk-r23-cse-3-2",
+        "title": "Computer Networks Notes - JNTUK R23 CSE 3-2",
+        "meta_description": "JNTUK R23 CSE 3-2 Computer Networks lecture notes, unit-wise topics, and previous question papers."
+      },
+      "legacy_equivalent_id": "r16-cse-3-2-computer-networks",
+      "source": {
+        "origin_url": "https://www.scribd.com/document/880014947/R23-3rd-Year-B-Tech-CSE",
+        "retrieved_date": "2026-06-30",
+        "status": "needs_verification"
+      },
+      "notes": "Same caveat as Data Warehousing and Data Mining: semester slot confirmed, detail not yet sourced from the primary syllabus PDF."
+    },
+    {
+      "id": "r23-cse-1-1-engineering-physics",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 1,
+      "semester": 1,
+      "year_sem_label": "1-1",
+      "subject_code": null,
+      "name": "Engineering Physics",
+      "category": "BasicScience",
+      "credits": null,
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Wave Optics",
+          "topics": ["Interference and intensity variation due to polarization", "Diffraction (qualitative treatment)"]
+        },
+        {
+          "number": 2,
+          "title": "Crystal Structures and Magnetism",
+          "topics": ["Crystal structure basics", "Ferromagnetism and domain walls (qualitative)", "Hysteresis, soft and hard magnetic materials"]
+        },
+        {
+          "number": 3,
+          "title": "Quantum Mechanics and Free Electron Theory",
+          "topics": ["Dual nature of matter, Heisenberg's uncertainty principle", "Schrodinger's wave equations, particle in a 1-D potential well", "Classical and quantum free electron theory", "Fermi-Dirac distribution, density of states, Fermi energy"]
+        }
+      ],
+      "course_outcomes": [
+        "Analyze intensity variation due to polarization, interference and diffraction",
+        "Explain fundamentals of quantum mechanics and apply to one-dimensional motion",
+        "Identify semiconductor type using the Hall effect"
+      ],
+      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "seo": {
+        "slug": "engineering-physics-jntuk-r23-cse-1-1",
+        "title": "Engineering Physics Notes - JNTUK R23 CSE 1-1",
+        "meta_description": "JNTUK R23 CSE 1-1 Engineering Physics lecture notes covering wave optics, crystal structures, and quantum mechanics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://kits-anna.com/wp-content/uploads/2024/07/CSE-AI-ML-R23-SYLLABUS.pdf",
+        "retrieved_date": "2026-06-30",
+        "status": "needs_verification"
+      },
+      "notes": "Topics drawn from a real R23 syllabus PDF (for a CSE specialization, not yet confirmed identical for core CSE), but exact semester placement (1-1 vs 1-2), subject title, and credits are unconfirmed -- this record demonstrates the unit-level shape, not a publish-ready page."
+    },
+    {
+      "id": "r23-cse-4-1-honors-blockchain",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Honors Elective (placeholder -- specific title not yet sourced)",
+      "category": "Honors",
+      "credits": null,
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "seo": { "slug": "", "title": "", "meta_description": "" },
+      "legacy_equivalent_id": null,
+      "source": { "origin_url": null, "retrieved_date": null, "status": "placeholder" },
+      "notes": "Pure scaffolding to show the 'placeholder' status -- R23 confirms an Honors track exists with specific registration rules, but no Honors subject list has been sourced yet. Do not generate or publish a page from this record."
+    },
+    {
+      "id": "r16-cse-3-2-data-warehousing-and-mining",
+      "regulation": "R16",
+      "branch": "CSE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Data Warehousing and Mining",
+      "category": "ProfessionalCore",
+      "credits": { "L": 4, "T": 0, "P": 0, "C": 3 },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": "https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/",
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes",
+        "title": "Data Warehousing and Mining Notes - JNTUK R16 CSE 3-2",
+        "meta_description": "JNTUK R16 CSE 3-2 Data Warehousing and Mining lecture notes and previous question papers."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/",
+        "retrieved_date": "2026-06-30",
+        "status": "verified"
+      },
+      "notes": "Live page on the current site today. Keep it live and cross-link to its R23 equivalent rather than redirecting it away -- backlog/supply R16 students still search this directly. AUDIT (2026-06-30, scripts/audit-content.js): credits confirmed 4-0-0-3. On-page unit text is run through a crude word-spinner ('Knowledge Mining' for 'Data Mining', etc.) -- needs an LLM cleanup pass before reuse, not a direct copy. Page describes 6 units but the gated EDD product only contains 5 files -- Unit VI may be missing from the actual download; verify before publishing the R23 version."
+    },
+    {
+      "id": "r16-cse-3-2-computer-networks",
+      "regulation": "R16",
+      "branch": "CSE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Computer Networks",
+      "category": "ProfessionalCore",
+      "credits": null,
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": "https://jntukmaterials.com/computer-networks-jntuk-r16-3-2-lecture-notes/",
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-networks-jntuk-r16-3-2-lecture-notes",
+        "title": "Computer Networks Notes - JNTUK R16 CSE 3-2",
+        "meta_description": "JNTUK R16 CSE 3-2 Computer Networks lecture notes and previous question papers."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukmaterials.com/computer-networks-jntuk-r16-3-2-lecture-notes/",
+        "retrieved_date": "2026-06-30",
+        "status": "verified"
+      },
+      "notes": "Live page on the current site today. Same cross-link treatment as the entry above."
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+SOURCE_URL: https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/
+CAPTURED: 2026-06-30
+
+# Data Warehousing and Data Mining R16 Jntuk 3-2 Lecture Notes
+
+by Rishi | Mar 23, 2020 | Jntuk lecture notes
+
+# DATA WARE HOUSING AND DATA MINING
+
+OBJECTIVES:
+• College students will likely be enabled to know and implement classical fashions and algorithms in
+information warehousing and information mining.
+• They'll learn to analyze the info, establish the issues, and select the related
+fashions and algorithms to use.
+• They'll additional have the ability to assess the strengths and weaknesses of varied strategies and
+algorithms and to research their conduct.
+
+UNIT –I:
+Introduction:Why Knowledge Mining? What Is Knowledge Mining?1.Three What Sorts of Knowledge Can Be
+Mined?1.Four What Sorts of Patterns Can Be Mined?Which Applied sciences Are Used?Which Varieties
+of Purposes Are Focused?Main Points in Knowledge Mining.Knowledge Objects and Attribute
+Sorts,Primary Statistical Descriptions of Knowledge,Knowledge Visualization, Measuring Knowledge Similarity and
+Dissimilarity
+
+UNIT –II:
+Knowledge Pre-processing: Knowledge Preprocessing: An Overview,Knowledge Cleansing,Knowledge Integration,Knowledge
+Discount,Knowledge Transformation and Knowledge Discretization
+
+UNIT –III:
+Classification: Primary Ideas, Normal Strategy to fixing a classification downside, Resolution
+Tree Induction: Working of Resolution Tree, constructing a choice tree, strategies for expressing an
+attribute check situations, measures for choosing the right break up, Algorithm for determination tree
+induction.
+
+UNIT –IV:
+Classification: Alterative Methods, Bayes' Theorem, Naïve Bayesian Classification,
+Bayesian Perception Networks
+
+UNIT –V
+Affiliation Evaluation: Primary Ideas and Algorithms: Drawback Defecation, Frequent Merchandise
+Set era, Rule era, compact illustration of frequent merchandise units, FP-Progress
+Algorithm. (Tan &Vipin)
+
+UNIT –VI
+Cluster Evaluation: Primary Ideas and Algorithms:Overview: What Is Cluster Evaluation?
+Completely different Kinds of Clustering, Completely different Kinds of Clusters; Ok-means: The Primary Ok-means
+Algorithm, Ok-means Further Points, Bisecting Ok-means, Strengths and Weaknesses;
+Agglomerative Hierarchical Clustering: Primary Agglomerative Hierarchical Clustering Algorithm
+DBSCAN: Conventional Density Middle-Based mostly Strategy, DBSCAN Algorithm, Strengths and
+Weaknesses. (Tan &Vipin)
+
+III 12 months – II Semester
+L T P C
+Four zero zero 3
+
+OUTCOMES:
+• Perceive phases in constructing a Knowledge Warehouse
+• Perceive the necessity and significance of preprocessing strategies
+• Perceive the necessity and significance of Similarity and dissimilarity strategies
+• Analyze and consider efficiency of algorithms for Affiliation Guidelines.
+• Analyze Classification and Clustering algorithms
+
+TEXT BOOKS:
+1. Introduction to Knowledge Mining: Pang-Ning Tan & Michael Steinbach, Vipin Kumar, Pearson.
+2. Knowledge Mining ideas and Methods, 3/e, Jiawei Han, Michel Kamber, Elsevier.
+
+REFERENCE BOOKS:
+1. Knowledge Mining Methods and Purposes: An Introduction, Hongbo Du, Cengage Studying.
+2. Knowledge Mining : VikramPudi and P. Radha Krishna, Oxford.
+3. Knowledge Mining and Evaluation – Basic Ideas and Algorithms; Mohammed J. Zaki, Wagner Meira, Jr, Oxford
+4. Knowledge Warehousing Knowledge Mining & OLAP, Alex Berson, Stephen Smith, TMH.
+
+[Download](https://jntukmaterials.com/downloads/data-warehousing-and-mining-jntuk-r16-materials/)
+[All Access Download Any Available Materials](https://jntukmaterials.com/downloads/all-access/)
