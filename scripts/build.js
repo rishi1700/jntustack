@@ -5,6 +5,7 @@ import { loadAndValidate } from '../lib/validate.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
+import { renderCollegeDirectoryPage } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -101,6 +102,34 @@ if (fs.existsSync(branchGuidePath)) {
   }
 }
 
+// College directory: JNTUK colleges, a separate dataset, same verified-only
+// discipline as the branch guide -- the page is generated only if every record
+// is verified, so an unverified college can never reach dist/.
+let collegesPublished = 0;
+const collegesPath = path.join(ROOT, 'data/colleges-jntuk.json');
+if (fs.existsSync(collegesPath)) {
+  const collegesData = JSON.parse(fs.readFileSync(collegesPath, 'utf-8'));
+  const colleges = collegesData.colleges || [];
+  const verifiedColleges = colleges.filter(c => c.source.status === 'verified');
+  if (verifiedColleges.length === colleges.length && verifiedColleges.length > 0) {
+    const html = layout({
+      title: 'JNTUK College Directory - Constituent & Autonomous Colleges - JNTUStack',
+      description: 'A directory of JNTUK constituent and autonomous engineering colleges, filterable by district. Honest about coverage -- the full affiliated-college list is still in progress.',
+      canonical: `${SITE_URL}/colleges/`,
+      jsonLd: null,
+      bodyHtml: renderCollegeDirectoryPage(verifiedColleges, collegesData._coverage_note),
+      stamp: 'verified',
+    });
+    const outDir = path.join(distDir, 'colleges');
+    fs.mkdirSync(outDir, { recursive: true });
+    fs.writeFileSync(path.join(outDir, 'index.html'), html);
+    collegesPublished = verifiedColleges.length;
+    sitemapUrls.push(`${SITE_URL}/colleges/`);
+  } else {
+    console.warn(`College directory skipped: ${colleges.length - verifiedColleges.length} record(s) not yet verified.`);
+  }
+}
+
 // Homepage -- the most basic requirement of a live site, generated last so
 // it can honestly reflect what actually got published above.
 const homeHtml = layout({
@@ -129,3 +158,4 @@ console.log(`Drafted (needs_verification) : ${drafted}  -> drafts/ (watermarked 
 console.log(`Skipped (placeholder)        : ${skipped}  -> not rendered at all`);
 console.log(`Sitemap entries               : ${sitemapUrls.length}`);
 console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `published (${branchGuidePublished} branches)` : 'not published'}`);
+console.log(`College directory             : ${collegesPublished > 0 ? `published (${collegesPublished} colleges)` : 'not published'}`);

@@ -7,7 +7,7 @@ export function renderHomePage({ publishedSubjects = [] }) {
 
   return `
 <h1 class="subject-title">JNTUStack</h1>
-<p class="guide-intro">A clean, fast resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and (soon) a real college directory. Built page by page, verified before it goes live, not scraped together.</p>
+<p class="guide-intro">A clean, fast resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and a JNTUK college directory. Built page by page, verified before it goes live, not scraped together.</p>
 
 <div class="ad-slot">ad slot &mdash; below intro</div>
 
@@ -17,6 +17,11 @@ export function renderHomePage({ publishedSubjects = [] }) {
     <h3>Not sure which branch to pick?</h3>
     <p class="tagline">A 5-question quiz plus an honest comparison of all six branches -- no fabricated placement stats, no "best college" rankings invented out of thin air.</p>
     <a class="download" href="/branch-guide/">Open the branch guide &rarr;</a>
+  </div>
+  <div class="branch-compare-card">
+    <h3>Looking for a JNTUK college?</h3>
+    <p class="tagline">A directory of JNTUK constituent and autonomous colleges, grouped by type and filterable by district. Just the facts on record -- no rankings, no "best college" claims.</p>
+    <a class="download" href="/colleges/">Open the college directory &rarr;</a>
   </div>
 </section>
 

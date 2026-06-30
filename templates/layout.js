@@ -185,6 +185,34 @@ const baseStyles = `
   .fit-list li{color:var(--ink-soft);}
   .nonfit-list li{color:var(--text-muted);}
   .compare-label{font-family:"IBM Plex Mono",monospace;font-size:.68rem;text-transform:uppercase;letter-spacing:.05em;color:var(--marigold);margin:.6rem 0 .25rem;}
+
+  /* --- College directory --- */
+  .district-filter{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.2rem 0 .4rem;}
+  .district-btn{
+    padding:.4rem .8rem;border:1px solid var(--rule);border-radius:99px;
+    background:var(--paper-raised);font-family:"IBM Plex Mono",monospace;
+    font-size:.72rem;letter-spacing:.03em;text-transform:uppercase;
+    color:var(--ink-soft);cursor:pointer;
+  }
+  .district-btn:hover{border-color:var(--marigold);color:var(--marigold);}
+  .district-btn[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink);}
+  .college-count{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--text-muted);margin:.2rem 0 1.4rem;}
+  .college-type-group h2{font-size:1.25rem;border-bottom:1px solid var(--rule);padding-bottom:.3rem;}
+  .college-type-group .group-count{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:400;color:var(--text-muted);}
+  .college-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:.9rem;}
+  .college-card{border:1px solid var(--rule);border-radius:var(--radius);padding:.9rem 1rem;background:var(--paper-raised);}
+  .college-card h3{font-size:1.02rem;line-height:1.3;margin-bottom:.45rem;}
+  .college-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem;}
+  .college-type-badge{
+    display:inline-block;padding:.12rem .5rem;border-radius:99px;
+    font-size:.66rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+    background:#ECE7DA;color:var(--ink-soft);
+  }
+  .college-district{font-size:.85rem;color:var(--text-muted);}
+  .college-codes{font-size:.72rem;color:var(--text-muted);margin-bottom:.35rem;}
+  .college-link{display:inline-block;font-size:.85rem;font-weight:600;color:var(--ink-soft);text-decoration:none;border-bottom:1px solid var(--marigold);}
+  .college-link:hover{color:var(--marigold);}
+  @media (min-width:560px){.college-grid{grid-template-columns:1fr 1fr;}}
 `;
 
 export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp }) {
@@ -207,7 +235,7 @@ ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
   <a class="brand" href="/">JNTUStack</a>
   <nav class="top-nav">
-    <a href="/cse/">CSE</a><a href="/it/">IT</a><a href="/ece/">ECE</a><a href="/eee/">EEE</a><a href="/ce/">CE</a><a href="/mech/">MECH</a><a href="/branch-guide/">Choosing a Branch?</a>
+    <a href="/cse/">CSE</a><a href="/it/">IT</a><a href="/ece/">ECE</a><a href="/eee/">EEE</a><a href="/ce/">CE</a><a href="/mech/">MECH</a><a href="/colleges/">Colleges</a><a href="/branch-guide/">Choosing a Branch?</a>
   </nav>
 </header>
 <main>
