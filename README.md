@@ -62,6 +62,7 @@ untested, since there's no API key yet.
 |---|---|
 | Schema (`data/schema.json`) | Stable. Regulation/Branch/Subject/BranchProfile/College all defined, ajv-validated. |
 | CSE R23 + R16 subject data (`data/subjects-cse.json`) | Mostly `needs_verification` -- only 2 R16 records are `verified` and actually publish. See each record's `notes` field. |
+| Data loading layer (`lib/dataset.js`) | Stable. Globs `data/subjects-*.json` and merges them with `data/shared.json` (regulations + branches) into one dataset; the merged object is then ajv-validated against the schema. Shared by `build.js`, `build-search-index.js`, and `lib/retrieve.js`. Adding a branch needs no change here -- drop in a `data/subjects-<code>.json` file and it's discovered automatically. |
 | Branch guide (6 branches) | `verified`, live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
 | JNTUK colleges | 33 real records (constituent + autonomous), sourced from jntukdaaportal.in. The larger private-affiliated list (~120+ more) and JNTUH/JNTUA/JNTUGV are NOT done -- see `_coverage_note` in `data/colleges-jntuk.json`. |
 | Ask widget UI | Built, works standalone in mock mode. |
