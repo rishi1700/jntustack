@@ -5,9 +5,10 @@ import { loadAndValidate } from '../lib/validate.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
+import { renderHomePage } from '../templates/home.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
-const SITE_URL = 'https://jntukmaterials.com';
+const SITE_URL = 'https://jntustack.com';
 
 const data = loadAndValidate(
   path.join(ROOT, 'data/schema.json'),
@@ -30,7 +31,7 @@ function courseJsonLd(subject, branch, regulation) {
     '@type': 'Course',
     name: subject.name,
     description: subject.seo.meta_description,
-    provider: { '@type': 'Organization', name: 'JNTUK Materials', sameAs: SITE_URL },
+    provider: { '@type': 'Organization', name: 'JNTUStack', sameAs: SITE_URL },
     courseCode: subject.subject_code || undefined,
     educationalLevel: `${branch?.name || subject.branch} - ${subject.year_sem_label}`,
     inLanguage: 'en',
@@ -39,6 +40,7 @@ function courseJsonLd(subject, branch, regulation) {
 
 let published = 0, drafted = 0, skipped = 0;
 const sitemapUrls = [];
+const publishedSubjects = [];
 
 for (const subject of data.subjects) {
   const branch = branchByCode[subject.branch];
@@ -60,6 +62,7 @@ for (const subject of data.subjects) {
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     sitemapUrls.push(`${SITE_URL}/${slug}/`);
+    publishedSubjects.push({ slug, title: subject.seo.title || subject.name });
     published++;
   } else if (subject.source.status === 'needs_verification') {
     const outDir = path.join(draftsDir, subject.id);
@@ -71,13 +74,7 @@ for (const subject of data.subjects) {
   }
 }
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
-</urlset>
-`;
 fs.mkdirSync(distDir, { recursive: true });
-fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 
 // Branch guide: a separate dataset (not regulation-bound), same verified-only discipline.
 let branchGuidePublished = 0;
@@ -98,10 +95,31 @@ if (fs.existsSync(branchGuidePath)) {
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     branchGuidePublished = verifiedProfiles.length;
+    sitemapUrls.push(`${SITE_URL}/branch-guide/`);
   } else {
     console.warn(`Branch guide skipped: ${branch_profiles.length - verifiedProfiles.length} profile(s) not yet verified.`);
   }
 }
+
+// Homepage -- the most basic requirement of a live site, generated last so
+// it can honestly reflect what actually got published above.
+const homeHtml = layout({
+  title: 'JNTUStack - JNTU Materials, Branch Guide & College Directory',
+  description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
+  canonical: `${SITE_URL}/`,
+  jsonLd: null,
+  bodyHtml: renderHomePage({ publishedSubjects }),
+  stamp: null,
+});
+fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml);
+sitemapUrls.unshift(`${SITE_URL}/`);
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${sitemapUrls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
+</urlset>
+`;
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 
 console.log('');
 console.log('Build summary');
