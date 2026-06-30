@@ -3,23 +3,48 @@
 Domain: jntustack.com (primary) + jntustack.in (redirect to .com).
 Both verified available; not yet registered.
 
+Hosting: **Hostinger Node.js Apps** (hPanel, Business/Cloud plan), deployed
+via GitHub. Not Cloudflare Pages -- that was the original plan, changed
+mid-build, and the architecture below reflects the current (Hostinger)
+target.
+
 ## What this is
 
-A custom Node.js static-site generator (no framework) for a JNTU student
-resource site: course materials, a branch-choice guide, a college directory,
-and the scaffolding for an AI study assistant. No database -- everything is
-JSON in `data/`, rendered to static HTML by `scripts/build.js`.
+A custom Node.js site: a static-site generator (no framework, plain
+template literals driven by `data/*.json`) plus a thin Express server that
+serves the generated output and handles one dynamic route, `/api/ask`.
 
-## Quick start
+## Quick start (local)
 
 ```
 npm install
-npm run build              # -> dist/
-node scripts/build-search-index.js   # -> dist/search-index.json (for the ask widget)
+npm run build      # generates dist/ AND dist/search-index.json
+npm start          # boots server.js on process.env.PORT (defaults to 3000)
 ```
 
-Open anything in `dist/` directly, or deploy `dist/` to Cloudflare Pages /
-Vercel / any static host.
+Tested and confirmed working: static file serving, /health, and /api/ask's
+validation + graceful no-key error handling all checked with real curl
+requests during this build. Only the live Anthropic call itself is
+untested, since there's no API key yet.
+
+## Deploying to Hostinger
+
+1. Push this repo to GitHub.
+2. hPanel -> Websites -> Add Website -> Node.js Apps -> connect the repo.
+   Hostinger should auto-detect Express from package.json; if not, select
+   "Other" manually.
+3. Set the **ANTHROPIC_API_KEY** environment variable in hPanel (Node.js
+   app -> Environment Variables) once you have a key -- never commit it to
+   the repo. The app runs fine without it; /api/ask just returns a clean
+   error until it's set.
+4. Hostinger sets `PORT` itself -- server.js already defers to
+   `process.env.PORT`, don't hardcode a port anywhere.
+5. Build step on deploy should run `npm run build` before `npm start` (the
+   search index has to exist before the server boots, or the ask widget
+   has nothing to ground answers on -- it'll log a warning and keep running
+   with an empty index rather than crash).
+6. Connect jntustack.com to the deployed app (separate documented step in
+   hPanel once the domain is registered).
 
 ## What's real vs. what's scaffolding
 
@@ -30,7 +55,7 @@ Vercel / any static host.
 | Branch guide (6 branches) | `verified`, live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
 | JNTUK colleges | 33 real records (constituent + autonomous), sourced from jntukdaaportal.in. The larger private-affiliated list (~120+ more) and JNTUH/JNTUA/JNTUGV are NOT done -- see `_coverage_note` in `data/colleges-jntuk.json`. |
 | Ask widget UI | Built, works standalone in mock mode. |
-| `functions/api/ask.js` | Written correctly per Anthropic's API conventions, but NEVER tested against a live key. Run real questions through it before linking it from a live page. Model-calling is abstracted into `callModel()` specifically so swapping providers later doesn't touch retrieval/widget/validation code. |
+| `routes/ask.js` + `server.js` | Express, written correctly per Anthropic's API conventions, tested end-to-end against a real running server (validation, static serving, graceful no-key failure) -- only the actual Anthropic API call is untested, since there's no key yet. Model-calling is abstracted into `callModel()` specifically so swapping providers later doesn't touch retrieval/routing/validation code. |
 | `lib/retrieve.js` | Tested, working keyword retrieval. Has a known limitation: naive keyword overlap, no semantic search. Fine at this corpus size; revisit if it grows ~10x. |
 
 ## The verified/needs_verification/placeholder discipline

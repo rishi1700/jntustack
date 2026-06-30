@@ -3,13 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
-  "description": "Custom Node.js static site generator for jntukmaterials.com. No framework -- plain template-literal rendering driven entirely by data/*.json.",
+  "description": "JNTUStack: custom Node.js site generator + Express server, deployed on Hostinger Node.js hosting.",
   "scripts": {
-    "build": "node scripts/build.js"
+    "build": "node scripts/build.js && node scripts/build-search-index.js",
+    "start": "node server.js",
+    "dev": "npm run build && node server.js"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dependencies": {
     "ajv": "^8.17.1",
     "ajv-formats": "^3.0.1",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "php-serialize": "^5.1.3"
   }
 }
