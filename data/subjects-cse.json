@@ -1,80 +1,4 @@
 {
-  "regulations": [
-    {
-      "code": "R16",
-      "full_name": "JNTUK Regulation 2016",
-      "effective_from": "2016-17",
-      "status": "legacy",
-      "supersedes": null,
-      "source_url": "https://jntukmaterials.com/",
-      "last_verified": "2026-06-30",
-      "notes": "What the current jntukmaterials.com site is built around. Now mostly relevant to supply/backlog-exam students, not active cohorts. Keep these pages live -- don't delete -- but stop treating them as the primary content target."
-    },
-    {
-      "code": "R19",
-      "full_name": "JNTUK Regulation 2019",
-      "effective_from": "2019-20",
-      "status": "legacy",
-      "supersedes": "R16",
-      "source_url": null,
-      "last_verified": "2026-06-30",
-      "notes": "Largely winding down to backlog/supply exams as of mid-2026."
-    },
-    {
-      "code": "R20",
-      "full_name": "JNTUK Regulation 2020",
-      "effective_from": "2020-21",
-      "status": "legacy",
-      "supersedes": "R19",
-      "source_url": null,
-      "last_verified": "2026-06-30",
-      "notes": "Still appears in supply/backlog result and timetable notices as of 2026, but no longer the active intake."
-    },
-    {
-      "code": "R23",
-      "full_name": "JNTUK Regulation 2023",
-      "effective_from": "2023-24",
-      "status": "active",
-      "supersedes": "R20",
-      "branch_groups": {
-        "Group-A": ["CSE", "EEE", "Chemical Engineering", "Food Technology", "Petroleum Technology", "Pharmaceutical Engineering"],
-        "Group-B": ["Agricultural Engineering", "Civil Engineering", "Mechanical Engineering", "Mining Engineering", "Automobile Engineering", "Robotics", "ECE", "ECE-Allied", "CSE-Allied", "IT"]
-      },
-      "evaluation_scheme": "Two-part practical subjects are examined as a single 3-hour, 70-mark end exam; mid-semester work evaluated separately for 30 marks; viva voce carries 20 marks within the relevant practical/project components.",
-      "honors_minor_rules": "Honors registration opens in semester IV after semester III results are declared; students may take a maximum of two Honors subjects per semester from semester V onward; Honors courses may be completed in-college or via platforms like SWAYAM (minimum 12 weeks for a 3-credit course, 8 weeks for a 2-credit course).",
-      "source_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
-      "last_verified": "2026-06-30",
-      "notes": "This is THE current regulation -- the build priority. Covers 1st through 4th year students as of the 2026-27 academic year."
-    },
-    {
-      "code": "R25",
-      "full_name": "JNTUK Regulation 2025 (scope unconfirmed)",
-      "effective_from": "2025-26",
-      "status": "unconfirmed",
-      "supersedes": "R23",
-      "source_url": null,
-      "last_verified": "2026-06-30",
-      "notes": "Shows up in aggregator regulation listings alongside R23/R20/R19/R16, but no course-structure or syllabus document located yet. Watch item -- confirm scope before building against it."
-    }
-  ],
-  "branches": [
-    {
-      "code": "CSE",
-      "name": "Computer Science and Engineering",
-      "group": "Group-A",
-      "specializations": [
-        { "code": "CSE", "name": "Computer Science and Engineering (core)" },
-        { "code": "CSE-AIML", "name": "CSE - Artificial Intelligence and Machine Learning" },
-        { "code": "CSE-AI", "name": "CSE - Artificial Intelligence" },
-        { "code": "CSE-AIDS", "name": "CSE - AI and Data Science" },
-        { "code": "CSE-DS", "name": "CSE - Data Science" },
-        { "code": "CSE-CS", "name": "CSE - Cyber Security" },
-        { "code": "CSE-IOT", "name": "CSE - Internet of Things" },
-        { "code": "CSE-IOT-CS-BCT", "name": "CSE - IoT and Cyber Security including Blockchain Technology" },
-        { "code": "CSD", "name": "Computer Science and Design" }
-      ]
-    }
-  ],
   "subjects": [
     {
       "id": "r23-cse-3-1-data-warehousing-and-data-mining",
@@ -91,7 +15,11 @@
       "type": "theory",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "data-warehousing-and-data-mining-jntuk-r23-cse-3-1",
         "title": "Data Warehousing & Data Mining Notes - JNTUK R23 CSE 3-1",
@@ -120,7 +48,11 @@
       "type": "theory",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "computer-networks-jntuk-r23-cse-3-2",
         "title": "Computer Networks Notes - JNTUK R23 CSE 3-2",
@@ -151,17 +83,29 @@
         {
           "number": 1,
           "title": "Wave Optics",
-          "topics": ["Interference and intensity variation due to polarization", "Diffraction (qualitative treatment)"]
+          "topics": [
+            "Interference and intensity variation due to polarization",
+            "Diffraction (qualitative treatment)"
+          ]
         },
         {
           "number": 2,
           "title": "Crystal Structures and Magnetism",
-          "topics": ["Crystal structure basics", "Ferromagnetism and domain walls (qualitative)", "Hysteresis, soft and hard magnetic materials"]
+          "topics": [
+            "Crystal structure basics",
+            "Ferromagnetism and domain walls (qualitative)",
+            "Hysteresis, soft and hard magnetic materials"
+          ]
         },
         {
           "number": 3,
           "title": "Quantum Mechanics and Free Electron Theory",
-          "topics": ["Dual nature of matter, Heisenberg's uncertainty principle", "Schrodinger's wave equations, particle in a 1-D potential well", "Classical and quantum free electron theory", "Fermi-Dirac distribution, density of states, Fermi energy"]
+          "topics": [
+            "Dual nature of matter, Heisenberg's uncertainty principle",
+            "Schrodinger's wave equations, particle in a 1-D potential well",
+            "Classical and quantum free electron theory",
+            "Fermi-Dirac distribution, density of states, Fermi energy"
+          ]
         }
       ],
       "course_outcomes": [
@@ -169,7 +113,11 @@
         "Explain fundamentals of quantum mechanics and apply to one-dimensional motion",
         "Identify semiconductor type using the Hall effect"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "engineering-physics-jntuk-r23-cse-1-1",
         "title": "Engineering Physics Notes - JNTUK R23 CSE 1-1",
@@ -198,10 +146,22 @@
       "type": "theory",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
-      "seo": { "slug": "", "title": "", "meta_description": "" },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "",
+        "title": "",
+        "meta_description": ""
+      },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": null, "retrieved_date": null, "status": "placeholder" },
+      "source": {
+        "origin_url": null,
+        "retrieved_date": null,
+        "status": "placeholder"
+      },
       "notes": "Pure scaffolding to show the 'placeholder' status -- R23 confirms an Honors track exists with specific registration rules, but no Honors subject list has been sourced yet. Do not generate or publish a page from this record."
     },
     {
@@ -215,7 +175,12 @@
       "subject_code": null,
       "name": "Data Warehousing and Mining",
       "category": "ProfessionalCore",
-      "credits": { "L": 4, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 4,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [],
       "course_outcomes": [],

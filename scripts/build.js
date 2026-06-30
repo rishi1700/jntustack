@@ -1,7 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadAndValidate } from '../lib/validate.js';
+import { validateData } from '../lib/validate.js';
+import { loadDataset } from '../lib/dataset.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
@@ -12,11 +13,16 @@ import { renderHomePage } from '../templates/home.js';
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE_URL = 'https://jntustack.com';
 
-const data = loadAndValidate(
-  path.join(ROOT, 'data/schema.json'),
-  path.join(ROOT, 'data/cse-r23-sample.json')
-);
+// Dataset assembly: data/shared.json holds regulations + ALL branches; each
+// data/subjects-<code>.json contributes its own subjects array. A new branch's
+// syllabus is added by DROPPING IN a data/subjects-<code>.json file -- loadDataset
+// globs them, so no filename is hardcoded here. The merged object is then
+// validated against schema.json exactly as the single file was.
+const dataDir = path.join(ROOT, 'data');
+const { files: subjectFiles, data: mergedData } = loadDataset(dataDir);
+const data = validateData(path.join(dataDir, 'schema.json'), mergedData);
 console.log('Schema validation passed.');
+console.log(`Merged ${subjectFiles.length} subject file(s): ${subjectFiles.join(', ')}`);
 
 const branchByCode = Object.fromEntries(data.branches.map(b => [b.code, b]));
 const regulationByCode = Object.fromEntries(data.regulations.map(r => [r.code, r]));

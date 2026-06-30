@@ -2,10 +2,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSearchIndex } from '../lib/retrieve.js';
+import { loadMergedSubjects } from '../lib/dataset.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
-const { subjects } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/cse-r23-sample.json'), 'utf-8'));
+// Same glob-based discovery as build.js -- subjects come from every
+// data/subjects-*.json file, never a hardcoded filename, so the search index
+// stays in sync the moment a new branch file is dropped in.
+const { subjects } = loadMergedSubjects(path.join(ROOT, 'data'));
 const { branch_profiles } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/branch-guide-data.json'), 'utf-8'));
 
 const index = buildSearchIndex({ subjects, branchProfiles: branch_profiles });

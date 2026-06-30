@@ -61,12 +61,34 @@ untested, since there's no API key yet.
 | Piece | Status |
 |---|---|
 | Schema (`data/schema.json`) | Stable. Regulation/Branch/Subject/BranchProfile/College all defined, ajv-validated. |
-| CSE R23 + R16 subject data | Mostly `needs_verification` -- only 2 R16 records are `verified` and actually publish. See each record's `notes` field. |
+| CSE R23 + R16 subject data (`data/subjects-cse.json`) | Mostly `needs_verification` -- only 2 R16 records are `verified` and actually publish. See each record's `notes` field. |
 | Branch guide (6 branches) | `verified`, live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
 | JNTUK colleges | 33 real records (constituent + autonomous), sourced from jntukdaaportal.in. The larger private-affiliated list (~120+ more) and JNTUH/JNTUA/JNTUGV are NOT done -- see `_coverage_note` in `data/colleges-jntuk.json`. |
 | Ask widget UI | Built, works standalone in mock mode. |
 | `routes/ask.js` + `server.js` | Express, written correctly per Anthropic's API conventions, tested end-to-end against a real running server (validation, static serving, graceful no-key failure) -- only the actual Anthropic API call is untested, since there's no key yet. Model-calling is abstracted into `callModel()` specifically so swapping providers later doesn't touch retrieval/routing/validation code. |
 | `lib/retrieve.js` | Tested, working keyword retrieval. Has a known limitation: naive keyword overlap, no semantic search. Fine at this corpus size; revisit if it grows ~10x. |
+
+## Data files & how they're loaded
+
+Subject content is split **per branch** so each branch's syllabus can be
+sourced independently without touching another branch's already-verified
+records.
+
+| File | Holds |
+|---|---|
+| `data/schema.json` | The content model. Everything below is ajv-validated against it at build time. |
+| `data/shared.json` | `regulations` (R16/R19/R20/R23/R25) and `branches` (all six: CSE, IT, ECE, EEE, CE, MECH). Cross-branch facts that don't belong to any one subject file. |
+| `data/subjects-<code>.json` | One file per branch -- each a `{ "subjects": [...] }` object (e.g. `data/subjects-cse.json`). **Adding a branch = drop in a new `data/subjects-<code>.json` file.** The build globs `data/subjects-*.json`, so no build-script edit is needed. |
+| `data/branch-guide-data.json` | `branch_profiles` for the branch-choice guide (separate dataset, loaded on its own). |
+| `data/colleges-jntuk.json` | College directory records (separate dataset). |
+
+At build time `scripts/build.js` (via `lib/dataset.js`) merges `shared.json`'s
+`regulations` + `branches` with the concatenated `subjects` arrays from every
+`data/subjects-*.json` file (sorted, for deterministic order) into one dataset
+object, then validates that combined object against `schema.json` -- exactly as
+when it was a single file. `scripts/build-search-index.js` uses the same glob
+(`lib/dataset.js`), so the `/api/ask` search index can't drift from what's
+published. There are no hardcoded subject filenames anywhere in the build.
 
 ## The verified/needs_verification/placeholder discipline
 
@@ -85,7 +107,7 @@ renders to `drafts/` with a visible orange watermark instead.
 2. Get an Anthropic API key (console.anthropic.com) when ready to test
    the ask widget for real -- not required to launch without it.
 3. Source the official R23 syllabus PDFs (see notes in
-   `data/cse-r23-sample.json`) to flip subject records to `verified`.
+   `data/subjects-cse.json`) to flip subject records to `verified`.
 4. Finish the JNTUK private-college list, then JNTUH/JNTUA/JNTUGV
    (`data/colleges-jntuk.json` coverage note has the blocker: the source
    page is JS-rendered, needs a browser-automation pass, not a plain fetch).
