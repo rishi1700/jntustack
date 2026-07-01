@@ -1,0 +1,423 @@
+{
+  "_coverage_note": "JNTU-GV (Jawaharlal Nehru Technological University Gurajada, Vizianagaram -- split from JNTUK in 2022) Engineering colleges: 2 constituent + 10 autonomous + 10 regular-affiliated (Private), sourced from JNTU-GV's own official academics pages (jntugv.edu.in/academics: constituent-colleges, autonomous-colleges, affliated-colleges). Pharmacy and Management/PG colleges on those pages were excluded -- Engineering only. Every college falls within JNTU-GV's six-district jurisdiction (Vizianagaram, Visakhapatnam, Srikakulam, Parvathipuram Manyam, Alluri Sitharama Raju, Anakapalli). The dedicated DAA portal (daa.jntugv.edu.in) did not resolve from this environment, so it was not used; its /constituent/ page had also been independently flagged as carrying a spam-injection page title, so the constituent colleges were taken from the clean jntugv.edu.in academics page (spam-checked -- no such signal) and cross-checked against the colleges' own official sites. branches_offered and per-college city are not yet sourced per-college.",
+  "colleges": [
+    {
+      "name": "JNTU-GV College of Engineering, Vizianagaram",
+      "short_code": null,
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://jntugvcev.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/constituent-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTU-GV constituent (university-run) engineering college -- the main campus. Confirmed from JNTU-GV's official academics/constituent-colleges page and cross-checked against the college's own site (jntugvcev.edu.in). branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTU-GV Tribal College of Engineering, Kurupam",
+      "short_code": null,
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Parvathipuram Manyam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://teck.jntugv.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/constituent-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTU-GV constituent tribal engineering college at Kurupam (Parvathipuram Manyam district). Confirmed from JNTU-GV's official academics/constituent-colleges page and the college's own site (teck.jntugv.edu.in); the source lists its location as the town 'Kurupam', which is in Parvathipuram Manyam district. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi Institute of Engineering and Technology, Bhogapuram",
+      "short_code": "Q7",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://aietta.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2024), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "GMR Institute of Technology, Rajam",
+      "short_code": "34",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.gmrit.org/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2012), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Lendi Institute of Engineering & Technology, Jonnada",
+      "short_code": "KD",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://www.lendi.org/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2019), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Maharaj Vijayaram Gajapathi Raj College of Engineering (MVGR), Chintalavalasa",
+      "short_code": "33",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://www.mvgrce.com/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2015), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Raghu Engineering College, Dakamarri",
+      "short_code": "98",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://raghuenggcollege.com/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2017), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Vignans Institute of Information Technology, Duvvada",
+      "short_code": "L3",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://vignaniit.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2017), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Nadimpalli Satyanarayana Raju Institute of Technology, Sontyam",
+      "short_code": "NU",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.nsrit.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2020), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi Institute of Engineering and Technology, Makavarapalem",
+      "short_code": "81",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Anakapalli",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://avanthienggcollege.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2024), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Dadi Institute of Engineering & Technology, Anakapalli",
+      "short_code": "U4",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Anakapalli",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://www.diet.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2023), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Aditya Institute of Technology and Management, Tekkali",
+      "short_code": "A5",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Srikakulam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://www.adityatekkali.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/autonomous-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Autonomous engineering college under JNTU-GV (autonomous since 2013), from the official jntugv.edu.in autonomous-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Satya Institute of Technology and Management Vizianagaram",
+      "short_code": "B6",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.sitam.co.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Permanent affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi Research and Technological Academy Basavapalem Bhogapuram",
+      "short_code": "HQ",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://arta.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi St.Theressa Institute of Engineering and Tech Garividi",
+      "short_code": "99",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.sttheressaengg.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Gokul Group of Institutions Piridi Bobbili, Vizianagaram",
+      "short_code": "8K",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Vizianagaram",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gokulcollege.com/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Chaitanya Engineering College Kommadi Madhurawada Visakhapatnam",
+      "short_code": "L6",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://cec.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Gonna Institute of Information Technology and Sciences Aganampudi",
+      "short_code": "6E",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Anakapalli",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.giits.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Sai Ganapathi Engineering College Gidijala Anandapuram, Visakhapatnam",
+      "short_code": "6F",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.sgec.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Simhadri Educational Society Group of Institutions Engineering College",
+      "short_code": "6J",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Anakapalli",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://simhadhriedu.com/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "Sri Venkateswara College of Engineering and Technology, Etcherla, Srikakulam",
+      "short_code": "MT",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Srikakulam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://svcet.net/new/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "N S Raju Institute of Engineering & Technology Dakamarri Bheemunipatnam",
+      "short_code": "PC",
+      "affiliated_to": "JNTUGV",
+      "location": {
+        "district": "Visakhapatnam",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.nsriet.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntugv.edu.in/academics/affliated-colleges",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular (non-autonomous) affiliated engineering college under JNTU-GV (Temporary affiliation), from the official jntugv.edu.in affiliated-colleges list. branches_offered not yet sourced per-college."
+    }
+  ]
+}
