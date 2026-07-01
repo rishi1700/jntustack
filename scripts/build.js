@@ -117,6 +117,15 @@ fs.mkdirSync(distDir, { recursive: true });
 // pure, Node-import-free ESM specifically so it loads unchanged in the browser.
 fs.copyFileSync(path.join(ROOT, 'lib/retrieve.js'), path.join(distDir, 'retrieve.js'));
 
+// Copy every static asset in public/ (favicon.ico, icon PNGs, logo SVGs) into
+// dist/ on EVERY build. dist/ is wiped and regenerated each run (see rmSync
+// above), so this MUST live in the build -- a one-time manual copy would work
+// once and then silently vanish on the next deploy.
+const publicDir = path.join(ROOT, 'public');
+if (fs.existsSync(publicDir)) {
+  fs.cpSync(publicDir, distDir, { recursive: true });
+}
+
 // Branch guide: a separate dataset (not regulation-bound), same verified-only discipline.
 let branchGuidePublished = 0;
 const branchGuidePath = path.join(ROOT, 'data/branch-guide-data.json');

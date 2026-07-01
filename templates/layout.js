@@ -57,7 +57,8 @@ const baseStyles = `
     padding:.85rem 1.25rem;border-bottom:2px solid var(--ink);
     background:var(--paper-raised);
   }
-  .brand{font-family:"Zilla Slab",serif;font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink);}
+  .brand{display:inline-flex;align-items:center;text-decoration:none;}
+  .brand-logo{display:block;height:38px;width:auto;}
   .top-nav{display:flex;gap:1rem;font-size:.85rem;font-weight:500;}
   .top-nav a{text-decoration:none;color:var(--ink-soft);}
   .top-nav a:hover{color:var(--marigold);}
@@ -346,6 +347,9 @@ export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp,
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="google-site-verification" content="5esvFUc-qzMRnp0UPJUJU-KhwEswnbysH32nnWdTLig" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/icon-512.png" sizes="512x512">
+<link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
 <link rel="canonical" href="${canonical}">
@@ -358,7 +362,7 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 <body>
 ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
-  <a class="brand" href="/">JNTUStack</a>
+  <a class="brand" href="/" aria-label="JNTUStack home"><img class="brand-logo" src="/jntustack-lockup.svg" alt="JNTUStack" width="131" height="38"></a>
   ${renderSearchBar()}
   <nav class="top-nav" aria-label="Main navigation">
     <div class="nav-branches">
