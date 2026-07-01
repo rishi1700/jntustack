@@ -1,0 +1,1043 @@
+{
+  "subjects": [
+    {
+      "id": "r23-eee-3-1-power-electronics",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Power Electronics",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Power Semi-Conductor Devices",
+          "topics": [
+            "Silicon controlled rectifier (SCR): two transistor analogy, static and dynamic characteristics",
+            "Turn-on and turn-off methods; triggering methods (R, RC and UJT); snubber circuit design",
+            "Static and dynamic characteristics of Power MOSFET and Power IGBT",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Single-phase & Three-phase AC-DC Converters",
+          "topics": [
+            "Single-phase half-wave controlled rectifiers with R and RL loads, with and without freewheeling diode",
+            "Single-phase fully controlled mid-point and bridge converters (R, RL, RLE); continuous/discontinuous conduction; effect of source inductance; semi-converter; dual converter",
+            "Three-phase half-wave, fully controlled and semi converters with R and RL loads; output voltage expressions",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "AC-AC Converters",
+          "topics": [
+            "Single-phase AC-AC power control by phase control with R and RL loads",
+            "Expression for rms output voltage",
+            "Single-phase step-down and step-up cycloconverters",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "DC-DC Converters",
+          "topics": [
+            "Operation of basic chopper; analysis of buck, boost and buck-boost converters in CCM and DCM",
+            "Output voltage equations using volt-sec balance in CCM and DCM",
+            "Output voltage ripple and inductor current ripple; control techniques; introduction to PWM control",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "DC-AC Converters",
+          "topics": [
+            "Single-phase half-bridge and full-bridge inverters with R and RL loads; phase displacement control",
+            "PWM with bipolar and unipolar voltage switching",
+            "Three-phase square wave inverters (120-degree and 180-degree conduction); sinusoidal PWM; current source inverter (CSI)",
+            "Numerical problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-electronics-jntuk-r23-eee-3-1",
+        "title": "Power Electronics - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Power Electronics: power semiconductor devices (SCR, MOSFET, IGBT), AC-DC/AC-AC/DC-DC converters and DC-AC inverters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-digital-circuits",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Digital Circuits",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Combinational Logic Circuits - I",
+          "topics": [
+            "Combinational logic definition, canonical forms, switching equations from truth tables",
+            "Simplification using Boolean theorems, NAND/NOR implementations, Karnaugh maps (3, 4, 5 variables), don't-care terms",
+            "Simplifying max-term equations, Quine-McCluskey minimization technique, general approach to combinational logic design",
+            "Look-ahead carry adder, cascading full adders, 4-bit adder-subtractor, BCD adder, Excess-3 adder, binary comparators"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Combinational Logic Circuits - II",
+          "topics": [
+            "Decoders, BCD decoders, 7-segment decoder, higher-order decoders",
+            "Multiplexers, higher-order multiplexing, de-multiplexers; realization of Boolean functions using decoders and multiplexers",
+            "Encoders, priority encoder",
+            "ROM and R/W memories, PROM, PAL, PLA basic structures, programming tables, realization of Boolean functions"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Sequential Logic Circuits",
+          "topics": [
+            "Flip-flop timing considerations, master-slave and edge-triggered flip-flops, characteristic equations",
+            "Flip-flops with reset and clear terminals, excitation tables, flip-flop conversion",
+            "Design of asynchronous and synchronous counters, modulus-N counters, Johnson counter, ring counter",
+            "Registers: buffer, control buffer, shift, bidirectional shift and universal shift registers"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sequential Circuit Design",
+          "topics": [
+            "Mealy and Moore models, state machine notation",
+            "Synchronous sequential circuit analysis, construction of state diagrams",
+            "Analysis of clocked sequential circuits, realization of a sequence detector circuit",
+            "State reduction and assignments, design procedure"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Digital Integrated Circuits",
+          "topics": [
+            "Logic levels, propagation delay time, power dissipation, fan-out and fan-in, noise margin",
+            "Logic families: RTL and DTL circuits, TTL",
+            "Emitter-coupled logic (ECL), metal-oxide semiconductor (MOS)",
+            "Complementary MOS (CMOS), CMOS transmission gate circuits"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-circuits-jntuk-r23-eee-3-1",
+        "title": "Digital Circuits - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Digital Circuits: combinational logic, decoders/multiplexers/PLDs, sequential circuits, sequential circuit design and digital ICs."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-power-systems-ii",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Power Systems-II",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Transmission Line Parameters Calculations",
+          "topics": [
+            "Conductor materials and types; resistance for solid conductors",
+            "Inductance for single-phase and three-phase single and double circuit lines; concept of GMR and GMD",
+            "Symmetrical and asymmetrical configuration with and without transposition; bundled conductors; skin and proximity effects",
+            "Capacitance for 2-wire and 3-wire systems; effect of ground; capacitance for symmetrical/asymmetrical single and double circuit lines"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Performance Analysis of Transmission Lines",
+          "topics": [
+            "Classification: short, medium and long lines and their model representation",
+            "Nominal-T, nominal-pi and ABCD constants for symmetrical networks",
+            "Rigorous solution for long line equations; equivalent T and equivalent pi models",
+            "Surge impedance and surge impedance loading; regulation and efficiency; Ferranti effect"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Power System Transients",
+          "topics": [
+            "Types of system transients; propagation of surges; attenuation and distortion",
+            "Reflection and refraction coefficients",
+            "Termination of lines: open-circuited, short-circuited, through a resistance, connected to a cable",
+            "Reflection and refraction at a T-junction"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Factors Governing Performance of Transmission Line",
+          "topics": [
+            "Skin and proximity effects; Ferranti effect",
+            "Corona: description of the phenomenon, types of corona",
+            "Critical voltages and power loss; factors affecting corona; advantages and disadvantages",
+            "Radio interference"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Sag and Tension Calculations & Overhead Line Insulators",
+          "topics": [
+            "Sag and tension calculations with equal and unequal heights of towers; effect of wind and ice",
+            "Stringing chart and sag template and their applications",
+            "Types of insulators; voltage distribution in suspension insulators",
+            "String efficiency and methods for its improvement; capacitance grading and static shielding"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-systems-ii-jntuk-r23-eee-3-1",
+        "title": "Power Systems-II - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Power Systems-II: transmission line parameters, performance analysis, power system transients, corona and sag/tension with insulators."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-power-electronics-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Power Electronics Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-electronics-lab-jntuk-r23-eee-3-1",
+        "title": "Power Electronics Lab - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Power Electronics Lab: device characteristics, firing circuits, converters, cycloconverter, choppers and inverters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: device characteristics, R/RC/UJT firing circuits, single-phase full/semi/dual and three-phase full converters, AC voltage regulator, cycloconverter, buck/boost converters, square-wave and SPWM inverters."
+    },
+    {
+      "id": "r23-eee-3-1-analog-and-digital-circuits-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Analog and Digital Circuits Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-and-digital-circuits-lab-jntuk-r23-eee-3-1",
+        "title": "Analog & Digital Circuits Lab - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Analog & Digital Circuits Lab: amplifiers, oscillators, 555/741/565 IC circuits, adders, multiplexers, flip-flops and counters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). Part A (analog): clipper/clamper, transistor biasing, feedback amplifiers, Wien-bridge and RC phase-shift oscillators, IC 741 integrator/differentiator, IC 555 multivibrators/Schmitt trigger, IC 565 PLL, ADC/DAC. Part B (digital): full adder/subtractor, IC 7483 adder, decoders, multiplexers, IC 7476 JK flip-flop, IC 7495 shift registers, ripple/synchronous/ring/Johnson counters. Read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-soft-skills",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Soft Skills",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Analytical Thinking & Listening Skills",
+          "topics": [
+            "Self-introduction, self-analysis, developing a positive attitude, perception",
+            "Listening activity (Shaping Young Minds - a talk by Azim Premji)",
+            "Verbal communication",
+            "Non-verbal communication (body language)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Self-Management Skills & Etiquette",
+          "topics": [
+            "Anger management, stress management, time management",
+            "Six thinking hats, team building, leadership qualities",
+            "Social and business etiquette",
+            "Telephone and dining etiquette"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Standard Operation Methods",
+          "topics": [
+            "Basic grammar, tenses, prepositions, pronunciation",
+            "Letter writing",
+            "Note making and note taking, minutes preparation",
+            "Email and letter writing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Job-Oriented Skills",
+          "topics": [
+            "Group discussion and mock group discussions",
+            "Resume preparation",
+            "Interview skills",
+            "Mock interview"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Interpersonal Relationships",
+          "topics": [
+            "Introduction, importance, types and uses",
+            "Factors affecting interpersonal relationships",
+            "Accommodating different styles",
+            "Consequences of interpersonal relationships"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "soft-skills-jntuk-r23-eee-3-1",
+        "title": "Soft Skills - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Soft Skills: analytical thinking, listening, self-management, communication, job-oriented skills and interpersonal relationships."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2). Name, credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-tinkering-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Tinkering Lab",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "tinkering-lab-jntuk-r23-eee-3-1",
+        "title": "Tinkering Lab - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Tinkering Lab (engineering science): breadboard circuits, LDR street light, Arduino and ESP32 projects, sensor interfacing and 3D printing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Engineering Science lab (0-0-2-1). Experiment list read from the source PDF: breadboard series/parallel circuits, traffic-light circuit, automatic street light using LDR, Arduino LED blinking (Tinkercad and IDE), IR sensor and servo motor interfacing, ESP32 LED/LDR, mobile-app LED control, 3D-printed walking robot and rocket, soil-moisture monitoring, and a design-thinking motorbike redesign."
+    },
+    {
+      "id": "r23-eee-3-2-electrical-measurements-and-instrumentation",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Electrical Measurements and Instrumentation",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Analog Ammeters and Voltmeters",
+          "topics": [
+            "Classification; deflecting, control and damping torques",
+            "PMMC, moving iron type and electrostatic instruments: construction, torque equation, range extension",
+            "Errors and compensations; advantages and disadvantages",
+            "Instrument transformers: CT and PT theory, ratio and phase angle errors; numerical problems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Analog Wattmeters and Power Factor Meters",
+          "topics": [
+            "Electrodynamometer type wattmeter (LPF and UPF)",
+            "Power factor meters: dynamometer and MI type (single and three phase), construction and torque equation",
+            "Potentiometers: DC Crompton's potentiometer, standardization and applications",
+            "AC potentiometer (polar and coordinate types), standardization and applications; numerical problems"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Measurement of Electrical Parameters",
+          "topics": [
+            "DC bridges: Wheatstone's bridge (medium resistance), Kelvin's double bridge (low resistance)",
+            "Loss of charge method (high resistance), Megger, measurement of earth resistance",
+            "AC bridges for inductance and Q: Maxwell's, Hay's and Anderson's bridges",
+            "AC bridges for capacitance and loss angle: De Sauty's, Schering and Wien's bridges; numerical problems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Transducers",
+          "topics": [
+            "Definition and classification",
+            "Resistive, inductive and capacitive transducers; LVDT; strain gauge",
+            "Thermistors, thermocouples, piezoelectric and photodiode transducers",
+            "Hall effect sensors; numerical problems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Digital Meters",
+          "topics": [
+            "Digital voltmeters: successive approximation, ramp type and integrating type DVM",
+            "Digital frequency meter, digital multimeter, digital tachometer",
+            "Digital energy meter, Q meter",
+            "CRO: measurement of phase difference and frequency using Lissajous patterns; numerical problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electrical-measurements-and-instrumentation-jntuk-r23-eee-3-2",
+        "title": "Electrical Measurements & Instrumentation - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Electrical Measurements & Instrumentation: analog meters, wattmeters, PF meters, DC/AC bridges, transducers and digital meters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-microprocessors-and-microcontrollers",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microprocessors and Microcontrollers",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Microprocessor Architecture",
+          "topics": [
+            "Introduction and evolution of microprocessors",
+            "Architecture of 8086",
+            "Memory and register organization of 8086",
+            "Introduction to 80286, 80386, 80486 and Pentium (architectural advancements only)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Minimum and Maximum Mode Operations",
+          "topics": [
+            "Instruction sets of 8086, addressing modes, assembler directives, simple programs",
+            "General bus operation of 8086",
+            "Minimum and maximum mode operations of 8086; control signal interfacing",
+            "Read and write cycle timing diagrams"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Microprocessor I/O Interfacing",
+          "topics": [
+            "8255 PPI: architecture and modes of operation; interfacing I/O devices to 8086 using 8255",
+            "Interfacing ADC and DAC converters",
+            "Stepper motor interfacing; static memory interfacing with 8086",
+            "Architecture and interfacing of DMA controller (8257)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "8051 Microcontroller",
+          "topics": [
+            "Overview and architecture of 8051; memory organization and register set",
+            "Instruction set and simple programs",
+            "I/O ports and interrupts; timers and counters",
+            "Serial communication; interfacing of peripherals"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "PIC Architecture",
+          "topics": [
+            "Block diagram of the basic PIC 18 microcontroller",
+            "Registers and I/O ports",
+            "Programming in C for PIC: data types, I/O programming",
+            "Logical operations and data conversion"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-jntuk-r23-eee-3-2",
+        "title": "Microprocessors & Microcontrollers - R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Microprocessors & Microcontrollers: 8086 architecture, min/max mode operation, I/O interfacing (8255/8257), 8051 microcontroller and PIC 18."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-power-system-analysis",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Power System Analysis",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Circuit Topology & Per Unit Representation",
+          "topics": [
+            "Graph theory definitions; element-node and bus incidence matrices; primitive network representation",
+            "Formation of Ybus matrix by singular transformation and direct inspection methods",
+            "Per unit quantities; single line diagram; impedance diagram of a power system",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Power Flow Studies",
+          "topics": [
+            "Necessity of power flow studies; derivation of static power flow equations",
+            "Power flow solution using Gauss-Seidel method",
+            "Newton-Raphson method (rectangular and polar coordinate forms)",
+            "Decoupled and fast decoupled methods; algorithmic approach; numerical problems on a 3-bus system"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Z-Bus Algorithm & Symmetrical Fault Analysis",
+          "topics": [
+            "Formation of Zbus; algorithm for modification of Zbus matrix (without mutual impedance)",
+            "Reactances of synchronous machine",
+            "Three-phase short circuit currents; short circuit MVA calculations",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Symmetrical Components & Unsymmetrical Fault Analysis",
+          "topics": [
+            "Definition and symmetrical components of unbalanced three-phase systems; power in symmetrical components",
+            "Sequence impedances and sequence networks of synchronous generator, transformers and transmission line",
+            "Unsymmetrical faults: LG, LL, LLG and LLL on an unloaded alternator",
+            "Numerical problems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Power System Stability Analysis",
+          "topics": [
+            "Elementary concepts of steady state, dynamic and transient stabilities; swing equation",
+            "Steady state stability",
+            "Equal area criterion of stability and its applications",
+            "Factors affecting transient stability; methods to improve steady state and transient stability; numerical problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-system-analysis-jntuk-r23-eee-3-2",
+        "title": "Power System Analysis - JNTUK R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Power System Analysis: Ybus and per-unit, power flow studies, Zbus and faults, symmetrical components and stability."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-electrical-measurements-and-instrumentation-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Electrical Measurements and Instrumentation Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electrical-measurements-and-instrumentation-lab-jntuk-r23-eee-3-2",
+        "title": "Electrical Measurements & Instrumentation Lab - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Electrical Measurements & Instrumentation Lab: wattmeter/energy-meter calibration, bridges, CT/PT testing and transducers."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: dynamometer wattmeter calibration (phantom loading), Kelvin's double / Schering / Anderson bridges, LPF wattmeter calibration, three-phase reactive power, CT and PT testing, thermocouple/LVDT/capacitive transducer characteristics, strain gauge, choke coil parameters, energy meter calibration, DC and AC potentiometer calibration."
+    },
+    {
+      "id": "r23-eee-3-2-microprocessors-and-microcontrollers-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microprocessors and Microcontrollers Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-lab-jntuk-r23-eee-3-2",
+        "title": "Microprocessors & Microcontrollers Lab - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Microprocessors & Microcontrollers Lab: 8086 and 8051 programs, plus interfacing (8255, stepper motor, timers, serial)."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: 8086 arithmetic, logic, array, factorial, Fibonacci and string programs; 8051 arithmetic, number conversion and array programs; interfacing 8255 PPI, stepper motor (8253/8255), parallel port, timers, serial communication and a traffic-light controller."
+    },
+    {
+      "id": "r23-eee-3-2-iot-applications-of-electrical-engineering-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "IoT Applications of Electrical Engineering Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Programming Arduino",
+          "topics": [
+            "Arduino and classification of Arduino boards",
+            "Pin diagrams",
+            "Arduino Integrated Development Environment (IDE)",
+            "Programming Arduino"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Sensors and Actuators",
+          "topics": [
+            "Temperature, proximity, IR, light and ultrasonic sensors",
+            "PIR, colour, soil, heartbeat sensors and fire alarms",
+            "Actuators: stepper motor and servo motor",
+            "Integration of sensors and actuators with Arduino/Raspberry Pi"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Raspberry Pi",
+          "topics": [
+            "Introduction to Raspberry Pi",
+            "Classification of the Raspberry Pi series",
+            "Pin diagrams",
+            "Programming Raspberry Pi"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Display Devices",
+          "topics": [
+            "Working of LEDs and OLED displays",
+            "LCDs and seven-segment displays",
+            "Touch screen; analog input and digital output converters",
+            "Integration of displays with Arduino/Raspberry Pi"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Wireless Communication Devices",
+          "topics": [
+            "Working of Bluetooth and Wi-Fi",
+            "Radio Frequency Identification (RFID), GPRS/GSM technology",
+            "ZigBee and their integration with Arduino/Raspberry Pi",
+            "Features of Alexa"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "iot-applications-of-electrical-engineering-lab-jntuk-r23-eee-3-2",
+        "title": "IoT Applications Lab - JNTUK R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 IoT Applications Lab: Arduino programming, sensors and actuators, Raspberry Pi, displays and wireless communication devices."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2). Five tutorial modules plus an experiment list read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-research-methodology",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Research Methodology",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Research Problem Formulation",
+          "topics": [
+            "Meaning and sources of a research problem",
+            "Criteria and characteristics of a good research problem; errors in selecting a research problem",
+            "Scope and objectives of a research problem; approaches to investigation of solutions",
+            "Data collection, analysis and interpretation; necessary instrumentation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Literature Review and Technical Writing",
+          "topics": [
+            "Effective literature study approaches and analysis",
+            "Plagiarism and research ethics",
+            "Effective technical writing; how to write a report and a paper",
+            "Developing a research proposal, format of a research proposal, presentation and assessment by a review committee"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Nature of Intellectual Property",
+          "topics": [
+            "Intellectual property: patents, designs, trademarks and copyright",
+            "Process of patenting and development: technological research, innovation, patenting, development",
+            "International scenario: international cooperation on intellectual property",
+            "Procedure for grant of patents; patenting under PCT"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Patent Rights",
+          "topics": [
+            "Scope of patent rights",
+            "Licensing and transfer of technology",
+            "Patent information and databases",
+            "Geographical indications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "New Developments in IPR",
+          "topics": [
+            "Administration of the patent system; new developments in IPR",
+            "IPR of biological systems and computer software",
+            "Traditional knowledge case studies",
+            "IPR and IITs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "research-methodology-jntuk-r23-eee-3-2",
+        "title": "Research Methodology - JNTUK R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Research Methodology (audit): research problem, literature and ethics, intellectual property, patent rights and IPR developments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '--' in the source). 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-evaluation-of-community-service-internship",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Evaluation of Community Service Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-community-service-internship-jntuk-r23-eee-3-1",
+        "title": "Community Service Internship - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+    }
+  ]
+}
