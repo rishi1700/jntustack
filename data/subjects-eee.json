@@ -1038,6 +1038,1164 @@
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
       "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-eee-3-1-signals-and-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Signals and Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Definition and classification of signals and systems",
+            "Operations on signals: time-shifting, time-scaling, amplitude-shifting and amplitude-scaling",
+            "Complex exponential and sinusoidal signals",
+            "Singularity functions: impulse, step, signum and ramp functions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fourier Series and Fourier Transform",
+          "topics": [
+            "Fourier series of continuous-time periodic signals; Dirichlet's conditions",
+            "Trigonometric and exponential Fourier series; relation between them; complex Fourier spectrum",
+            "Deriving the Fourier transform from the Fourier series; Fourier transform of standard signals",
+            "Properties of Fourier transforms; transforms involving impulse and signum functions"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Correlation and Sampling Theorem",
+          "topics": [
+            "Auto-correlation and cross-correlation of functions and their properties",
+            "Energy density spectrum, Parseval's theorem, power density spectrum; relation between convolution and correlation",
+            "Sampling theorem for band-limited signals; impulse, natural and flat-top sampling",
+            "Reconstruction of a signal from its samples; aliasing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Laplace Transforms",
+          "topics": [
+            "Concept of region of convergence (ROC) for Laplace transforms and constraints for various signal classes",
+            "Properties of Laplace transforms",
+            "Inverse Laplace transform; relation between Laplace transform and Fourier transform",
+            "Laplace transform of signals using waveform synthesis"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Z-Transforms",
+          "topics": [
+            "Concept of the Z-transform of a discrete sequence",
+            "Region of convergence in the Z-transform and constraints for various signal classes",
+            "Inverse Z-transform and properties of Z-transforms",
+            "Distinction between Laplace, Fourier and Z transforms"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "signals-and-systems-jntuk-r23-eee-3-1",
+        "title": "Signals and Systems - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Signals and Systems: signal & system classification, Fourier series & transform, correlation, sampling, Laplace and Z-transforms."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-computer-architecture-and-organization",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Architecture and Organization",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Computer Organization and Design",
+          "topics": [
+            "Instruction codes, computer registers, computer instructions",
+            "Timing and control, instruction cycle, memory-reference instructions",
+            "Input-output and interrupt; complete computer description",
+            "Design of the basic computer and accumulator logic"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Register Transfer and Micro-operations",
+          "topics": [
+            "Register transfer language, register transfer, bus and memory transfers",
+            "Arithmetic, logic and shift micro-operations; arithmetic logic shift unit",
+            "Microprogrammed control: control memory, address sequencing",
+            "Microprogram example; design of control unit"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Central Processing Unit and Pipelining",
+          "topics": [
+            "General register and stack organization, instruction formats, addressing modes",
+            "Data transfer and manipulation, program control, RISC",
+            "Parallel processing and pipelining; arithmetic and instruction pipelines, RISC pipeline",
+            "Vector processing and array processors"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Input/Output Organization",
+          "topics": [
+            "Peripheral devices and I/O interface",
+            "Asynchronous data transfer and modes of transfer",
+            "Priority interrupt and direct memory access",
+            "Input-Output Processor (IOP) and serial communication"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Memory Organization",
+          "topics": [
+            "Memory hierarchy",
+            "Main memory and auxiliary memory",
+            "Associative memory and cache memory",
+            "Virtual memory and memory management hardware"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-architecture-and-organization-jntuk-r23-eee-3-1",
+        "title": "Computer Architecture & Organization - EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Computer Architecture and Organization: computer design, register transfer & micro-operations, CPU & pipelining, I/O and memory."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-communication-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Communication Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "communication-systems-jntuk-r23-eee-3-1",
+        "title": "Communication Systems - JNTUK R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Communication Systems (Professional Elective-I) - listed with 3-0-0-3 credits but no syllabus content in the source document."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (pages 15-16) -- only the heading 'Communication Systems' and the L-T-P-C line (3-0-0-3), with no course objectives, outcomes, units or textbooks. The other two Professional Elective-I options (Signals and Systems, Computer Architecture and Organization) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+    },
+    {
+      "id": "r23-eee-3-1-renewable-energy-sources",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Renewable Energy Sources",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Solar Energy",
+          "topics": [
+            "Renewable sources and prospects; solar radiation at the Earth's surface",
+            "Equivalent circuit of a photovoltaic (PV) cell; I-V and P-V characteristics",
+            "Solar energy collectors: flat plate and concentrating collectors",
+            "Solar energy storage systems and applications: solar pond, solar water heating, solar greenhouse"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Wind Energy",
+          "topics": [
+            "Basic principles of wind energy conversion; the nature of wind; power in the wind",
+            "Wind energy conversion; site selection considerations",
+            "Basic components of wind energy conversion systems (WECS)",
+            "Classification and applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Biomass, Hydel and Geothermal Energy",
+          "topics": [
+            "Biomass: conversion technologies, photosynthesis, factors affecting bio-digestion",
+            "Hydro plants: basic working principle",
+            "Classification of hydro systems: large, small and micro hydel plants",
+            "Geothermal energy: sources, applications, operational and environmental problems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Energy from Oceans, Waves and Tides",
+          "topics": [
+            "Ocean Thermal Electric Conversion (OTEC): methods and prospects of OTEC in India",
+            "Waves: energy and power from the waves",
+            "Wave energy conversion devices",
+            "Tides: basic principle of tide energy and components of tidal energy"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Chemical Energy Sources",
+          "topics": [
+            "Fuel cells: equivalent circuit, operation, types and applications",
+            "Hydrogen energy: methods of production, storage and applications",
+            "Magneto Hydro Dynamic (MHD) power generation: principle of operation",
+            "Types of MHD power generation"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "renewable-energy-sources-jntuk-r23-eee-3-1",
+        "title": "Renewable Energy Sources - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Renewable Energy Sources: solar, wind, biomass/hydel/geothermal, ocean/wave/tidal energy and chemical energy sources."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Open Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-concepts-of-energy-auditing-and-management",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Concepts of Energy Auditing & Management",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Principles of Energy Audit",
+          "topics": [
+            "Energy audit definitions, concept and types; energy index and cost index",
+            "Pie charts, Sankey diagrams and load profiles; energy conservation schemes",
+            "Energy audit of industries and energy saving potential; process industry and thermal power station",
+            "Building energy audit; Energy Conservation Building Codes (ECBC-2017)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Energy Management",
+          "topics": [
+            "Principles of energy management",
+            "Organizing an energy management program: initiating, planning, controlling, promoting",
+            "Monitoring and reporting",
+            "Energy manager: qualities and functions; questionnaire and checklist for top management"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Energy Efficient Motors and Lighting",
+          "topics": [
+            "Energy efficient motors: factors affecting efficiency and loss distribution",
+            "Constructional details, characteristics, variable speed, voltage variation and unbalance, over-motoring",
+            "Motor energy audit",
+            "Lighting system design and practice, lighting control and lighting energy audit"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Power Factor Improvement and Energy Instruments",
+          "topics": [
+            "Power factor: methods of improvement and location of capacitors",
+            "Power factor with non-linear loads; effect of harmonics; power factor motor controllers",
+            "Energy instruments: watt meter, data loggers, thermocouples",
+            "Pyrometers, lux meters and tong testers"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Economic Aspects and their Computation",
+          "topics": [
+            "Economic analysis: depreciation methods, time value of money, rate of return",
+            "Present worth method, replacement analysis, life-cycle costing analysis",
+            "Simple payback method and net present value method",
+            "Power factor correction, lighting, applications of life-cycle costing and return on investment"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "concepts-of-energy-auditing-and-management-jntuk-r23-eee-3-1",
+        "title": "Energy Auditing & Management - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Concepts of Energy Auditing & Management: audit principles, energy management, efficient motors & lighting, power factor and economics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Open Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-1-entrepreneurship-development-and-venture-creation",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Entrepreneurship Development & Venture Creation",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-eee-3-1",
+        "title": "Entrepreneurship Development - R23 EEE 3-1",
+        "meta_description": "JNTUK R23 EEE 3-1 Entrepreneurship Development & Venture Creation - an Open Elective-I alternative with no syllabus content in the source document."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this is listed in the III-I course structure as an OR-alternative to Open Elective-I (3-0-0-3), but the source document contains no syllabus section for it -- no course objectives, outcomes, units or textbooks (unlike the two Open Elective-I options Renewable Energy Sources and Concepts of Energy Auditing & Management, which are complete). Source the unit-wise content from an official document before flipping to verified."
+    },
+    {
+      "id": "r23-eee-3-2-switchgear-and-protection",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Switchgear and Protection",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Circuit Breakers",
+          "topics": [
+            "Miniature circuit breaker (MCB); elementary principles of arc interruption",
+            "Restriking and recovery voltages; restriking phenomenon; RRRV (average and maximum)",
+            "Current chopping and resistance switching",
+            "Oil, air blast, vacuum and SF6 circuit breakers; ratings and specifications; auto-reclosing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Electromagnetic Protection",
+          "topics": [
+            "Relay connection; balanced beam attracted armature relay; induction disc and cup relays; torque equation",
+            "Relay classification: instantaneous, DMT and IDMT types",
+            "Overcurrent, undervoltage, directional, differential and percentage differential relays; universal torque equation",
+            "Distance relays: impedance, reactance, mho and offset mho; characteristics and comparison"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Generator and Transformer Protection",
+          "topics": [
+            "Generator protection against stator faults, rotor faults and abnormal conditions",
+            "Restricted earth fault and inter-turn fault protection",
+            "Transformer percentage differential protection; design of CT ratio",
+            "Buchholz relay protection; numerical examples"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Feeder and Busbar Protection & Static Relays",
+          "topics": [
+            "Overcurrent protection schemes; PSM and TMS; numerical examples",
+            "Carrier current and three-zone distance relay using impedance relays",
+            "Busbar protection using differential protection",
+            "Static relays: classification and basic components"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Protection against Overvoltage and Grounding",
+          "topics": [
+            "Generation of overvoltages in power systems; protection against lightning overvoltages",
+            "Valve type and zinc oxide lightning arresters",
+            "Grounded and ungrounded neutral systems; effects of ungrounded neutral",
+            "Methods of neutral grounding: solid, resistance, reactance; arcing grounds and grounding practices"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "switchgear-and-protection-jntuk-r23-eee-3-2",
+        "title": "Switchgear and Protection - R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Switchgear and Protection: circuit breakers, relays, generator/transformer protection, feeder/busbar protection and overvoltage protection."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-advanced-control-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Advanced Control Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Controllability, Observability and Pole Placement",
+          "topics": [
+            "General concepts and tests for controllability and observability of continuous-time systems",
+            "Principle of duality; effect of state feedback on controllability and observability",
+            "Design of state feedback control through pole placement",
+            "Full order and reduced order observers"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Nonlinear Systems",
+          "topics": [
+            "Introduction to nonlinear systems and types of nonlinearities",
+            "Phase plane analysis; construction of phase trajectories by analytical and isocline methods",
+            "Describing function",
+            "Describing functions of on-off nonlinearity, on-off with hysteresis and relay with dead zone"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Stability Analysis by Lyapunov Method",
+          "topics": [
+            "Stability in the sense of Lyapunov",
+            "Lyapunov's stability and instability theorems",
+            "Direct method of Lyapunov for linear continuous-time autonomous systems",
+            "Direct method of Lyapunov for nonlinear continuous-time autonomous systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Calculus of Variations",
+          "topics": [
+            "Minimization of functionals; functionals of a single function",
+            "Constrained minimization",
+            "Minimum principle",
+            "Control variable and state variable inequality constraints"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Optimal Control",
+          "topics": [
+            "Necessary conditions for optimal control; formulation of the optimal control problem",
+            "Minimum time problem; minimum energy problem",
+            "Minimum fuel problem",
+            "State regulator and output regulator problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-control-systems-jntuk-r23-eee-3-2",
+        "title": "Advanced Control Systems - R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Advanced Control Systems: controllability, observability & pole placement, nonlinear systems, Lyapunov stability and optimal control."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-renewable-and-distributed-energy-technologies",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Renewable and Distributed Energy Technologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Wind Energy Systems",
+          "topics": [
+            "Renewable and distributed sources: usefulness and advantages",
+            "Estimates of wind energy potential; wind maps",
+            "Aerodynamic and mechanical aspects of wind machine design; conversion to electrical energy",
+            "Aspects of location of wind farms"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Wind Power and Energy",
+          "topics": [
+            "Wind speed and energy; speed and power relations; power extraction from wind; tip speed ratio (TSR) and characteristics",
+            "Functional structure of wind energy conversion systems; pitch and speed control",
+            "Fixed speed and variable speed wind turbine control; power optimization",
+            "Electrical generators: self-excited and doubly-fed induction generators - operation and control"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Solar PV Systems",
+          "topics": [
+            "PV technological developments; estimation of solar irradiance; components of solar energy systems",
+            "Modelling of a PV cell; current-voltage and power-voltage characteristics; effects of temperature and irradiance; sun tracking",
+            "MPPT techniques: perturb and observe, hill climbing and incremental conductance methods",
+            "Effects of partial shading; solar park design; solar pond; types of PV systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Small Hydro and Other Sources",
+          "topics": [
+            "Hydel: small, mini and medium; plant layouts; water power estimates; use of hydrographs",
+            "Hydraulic turbine characteristics and part load performance",
+            "Design of wheels, draft tubes and penstocks",
+            "Other sources: tidal, geothermal and gas-based generation"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Hybrid Renewable Systems",
+          "topics": [
+            "Requirements of hybrid/combined use of different renewable and distributed sources; need for energy storage",
+            "Control of frequency and voltage of distributed generation in stand-alone and grid-connected modes",
+            "Use of energy storage and power electronics interfaces for connection to grid and loads",
+            "Design and optimization of the size of renewable sources and their storage"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "renewable-and-distributed-energy-technologies-jntuk-r23-eee-3-2",
+        "title": "Renewable & Distributed Energy Tech - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Renewable & Distributed Energy Technologies: wind energy, solar PV & MPPT, small hydro and hybrid renewable systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-electric-drives",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Electric Drives",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals of Electric Drives",
+          "topics": [
+            "Electric drive and its components; fundamental torque equation",
+            "Load torque components; nature and classification of load torques; steady state stability; load equalization",
+            "Four quadrant operation of a drive (hoist control)",
+            "Braking methods: dynamic braking, plugging and regenerative braking"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Converter Fed DC Motor Drives",
+          "topics": [
+            "3-phase half and fully-controlled converter fed separately and self-excited DC motor drives",
+            "Output voltage and current waveforms",
+            "Speed-torque characteristics and expressions",
+            "3-phase dual converter fed DC motor drives"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "DC-DC Converter Fed DC Motor Drives",
+          "topics": [
+            "Single, two and four quadrant DC-DC converter fed separately and self-excited DC motors",
+            "Continuous current mode of operation; output voltage and current waveforms",
+            "Speed-torque characteristics and expressions",
+            "Closed loop operation (qualitative treatment)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Control of 3-phase Induction Motor Drives",
+          "topics": [
+            "Stator voltage control using 3-phase AC voltage regulators; waveforms and speed-torque characteristics",
+            "Variable voltage variable frequency control by PWM voltage source inverter; closed loop V/f control",
+            "Static rotor resistance control",
+            "Slip power recovery schemes: static Scherbius and static Kramer drives; speed-torque characteristics"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Control of Synchronous Motor Drives",
+          "topics": [
+            "Separate control of synchronous motor",
+            "Self-control of synchronous motor employing a load commutated thyristor inverter",
+            "Closed loop control of synchronous motor drive (qualitative treatment)",
+            "PMSM: basic operation and advantages"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electric-drives-jntuk-r23-eee-3-2",
+        "title": "Electric Drives - JNTUK R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Electric Drives: drive fundamentals, converter-fed and DC-DC converter-fed DC motor drives, induction and synchronous motor control."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-digital-signal-processing",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Digital Signal Processing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Digital Signal Processing",
+          "topics": [
+            "Discrete-time signals and sequences; classification of discrete-time systems",
+            "Stability and invertibility of LTI systems; response of LTI systems to arbitrary inputs",
+            "Solution of linear constant coefficient difference equations; frequency domain representation",
+            "Review of Z-transforms; solution of difference equations using Z-transforms; system function"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Discrete Fourier Transforms and FFT Algorithms",
+          "topics": [
+            "Discrete Fourier series representation of periodic sequences and properties",
+            "Discrete Fourier transform and its properties",
+            "Linear filtering methods based on the DFT",
+            "Fast Fourier transform (FFT): radix-2 decimation in time and frequency; inverse FFT"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Design and Realization of IIR Digital Filters",
+          "topics": [
+            "Analog filter approximations: Butterworth and Chebyshev filters",
+            "Design of IIR digital filters from analog filters",
+            "Analog and digital frequency transformations",
+            "Basic structures of IIR systems: direct, transposed, cascade, parallel, lattice and lattice-ladder"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Design and Realization of FIR Digital Filters",
+          "topics": [
+            "Characteristics of FIR filters with linear phase; frequency response of linear phase FIR filters",
+            "Design of FIR filters using window and frequency sampling techniques",
+            "Comparison of IIR and FIR filters",
+            "Basic structures of FIR systems: direct, cascade, linear phase and lattice structures"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Multirate Digital Signal Processing",
+          "topics": [
+            "Decimation and interpolation",
+            "Sampling rate conversion by a rational factor",
+            "Implementation of sampling rate converters",
+            "Applications of multirate signal processing; digital filter banks"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-signal-processing-jntuk-r23-eee-3-2",
+        "title": "Digital Signal Processing - R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Digital Signal Processing: discrete-time signals & systems, DFT/FFT, IIR and FIR filter design and multirate signal processing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-high-voltage-engineering",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "High Voltage Engineering",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Breakdown in Gaseous and Vacuum",
+          "topics": [
+            "Insulating materials: types, properties and applications; gases as insulating media",
+            "Collision and ionization processes",
+            "Townsend's criteria of breakdown in gases and limitations; streamer theory; time lag",
+            "Paschen's law and curve; Penning effect; breakdown mechanisms in vacuum"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Breakdown in Liquids and Solids",
+          "topics": [
+            "Liquids as insulators: pure and commercial liquids",
+            "Breakdown in pure and commercial liquids and mechanisms",
+            "Solid breakdown: intrinsic and electromechanical breakdown",
+            "Thermal breakdown; breakdown of composite solid dielectrics"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Generation of High DC and AC Voltages",
+          "topics": [
+            "Voltage doubler circuit",
+            "Voltage multiplier circuit; Van de Graaff generator",
+            "Cascaded transformers",
+            "Resonant transformers and Tesla coil"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Generation of Impulse Voltages and Currents",
+          "topics": [
+            "Specifications of an impulse wave; analysis of RLC circuits",
+            "Marx circuit",
+            "Impulse current generation: definitions and circuits for producing impulse current waves",
+            "Wave shape control; tripping and control of impulse generators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Measurement of High Voltages and Currents",
+          "topics": [
+            "Measurement of high DC and AC voltages: resistance potential divider, generating voltmeter",
+            "Capacitor voltage transformer (CVT), electrostatic voltmeters, sphere gaps",
+            "Measurement of impulse voltages: potential dividers with CRO",
+            "Measurement of impulse currents: Hall generator and Rogowski coils"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "high-voltage-engineering-jntuk-r23-eee-3-2",
+        "title": "High Voltage Engineering - R23 EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 High Voltage Engineering: breakdown in gases, liquids and solids, generation of high DC/AC and impulse voltages, and HV measurement."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-fundamentals-of-electric-vehicles",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Fundamentals of Electric Vehicles",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Fundamentals of vehicles; vehicle model; calculation of road load and tractive force",
+            "Components and drawbacks of conventional vehicles; need for electric vehicles",
+            "Advantages and applications of electric vehicles; history of electric vehicles",
+            "EV market in India and outside India; types of electric vehicles"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Components of Electric Vehicles",
+          "topics": [
+            "Main components of electric vehicles; electric traction motor and controller",
+            "Power converters; rectifiers used in EVs",
+            "Bidirectional DC-DC converters",
+            "Voltage source inverters and PWM inverters used in EVs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Motors for Electric Vehicles",
+          "topics": [
+            "Characteristics of traction drive; requirements of electric machines for EVs",
+            "Comparison of different motors for electric and hybrid vehicles",
+            "Induction motors, synchronous motors and permanent magnet synchronous motors",
+            "Brushless DC motors and switched reluctance motors (construction and working)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Hybrid Electric Vehicles",
+          "topics": [
+            "Evolution of hybrid electric vehicles; advantages and applications",
+            "Architecture of HEVs: series and parallel HEVs",
+            "Complex HEVs and range-extended HEVs",
+            "Examples; merits and demerits"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Energy Sources for Electric Vehicles",
+          "topics": [
+            "Batteries: lithium-ion, nickel-metal hydride and lead-acid; comparison",
+            "Battery charging and fast charging; battery management system",
+            "Ultra capacitors and flywheels",
+            "Compressed air energy storage (CAES); fuel cell and its working"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "fundamentals-of-electric-vehicles-jntuk-r23-eee-3-2",
+        "title": "Fundamentals of Electric Vehicles - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Fundamentals of Electric Vehicles: EV fundamentals, components & power converters, traction motors, hybrid EVs and energy sources."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-3-2-electrical-wiring-estimation-and-costing",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Electrical Wiring Estimation and Costing",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Electrical Symbols and Simple Electrical Circuits",
+          "topics": [
+            "Identification of electrical symbols",
+            "Electrical wiring diagrams and methods of representation",
+            "Introduction to simple light and fan circuits",
+            "System of connection of appliances and accessories"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Considerations of Electrical Installations",
+          "topics": [
+            "Electric supply system; three-phase four-wire distribution system",
+            "Protection against overload, short circuit and earth fault; earthing, neutral and earth wire",
+            "Types of loads and systems of wiring",
+            "Permissible voltage drops and sizes of wires; estimating and costing of installations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Installation for Buildings and Small Industries",
+          "topics": [
+            "Electrical installations for residential buildings; estimating and costing of materials",
+            "Simple examples of installation for residential buildings",
+            "Electrical installations for commercial buildings",
+            "Electrical installation for small industries; case study"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Substations",
+          "topics": [
+            "Introduction and types of substations",
+            "Outdoor substations: pole mounted type",
+            "Indoor substations: floor mounted type",
+            "Simple examples on quantity estimation; case study"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Motor Control Circuits",
+          "topics": [
+            "Introduction to AC motors; starting of three-phase squirrel cage induction motors",
+            "Starting of wound rotor motors and synchronous motors",
+            "Contactor control circuit components and basic control circuits",
+            "Motor protection; schematic and wiring diagrams for motor control circuits"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electrical-wiring-estimation-and-costing-jntuk-r23-eee-3-2",
+        "title": "Electrical Wiring Estimation & Costing-EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Electrical Wiring Estimation & Costing: symbols & circuits, installation design, buildings & industry, substations and motor control."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     }
   ]
 }
