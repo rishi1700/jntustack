@@ -41,6 +41,25 @@ function campusesFromData(colleges) {
   return ordered.map((code) => ({ code, ...(CAMPUS_META[code] || { name: code, blurb: '' }) }));
 }
 
+// Short label for naming universities in running prose (title, meta description,
+// intro, disclaimer) -- distinct from CAMPUS_META.name, which is the full section
+// heading. Same fallback discipline: an unlisted code just uses itself.
+const CAMPUS_SHORT_LABEL = { JNTUK: 'JNTUK', JNTUGV: 'JNTU-GV', JNTUH: 'JNTUH', JNTUA: 'JNTUA' };
+
+function joinNatural(items) {
+  if (items.length <= 1) return items.join('');
+  if (items.length === 2) return items.join(' and ');
+  return `${items.slice(0, -1).join(', ')} and ${items[items.length - 1]}`;
+}
+
+// Single source of truth for "which universities does this directory cover" prose,
+// used by the page copy below AND by build.js for the <title>/meta description --
+// so neither can go stale the way "JNTUK & JNTU-GV" did after JNTUH and now JNTUA
+// were added without anyone updating the hardcoded copy.
+export function collegeDirectoryUniversitySummary(colleges) {
+  return joinNatural(campusesFromData(colleges).map((c) => CAMPUS_SHORT_LABEL[c.code] || c.code));
+}
+
 // Three honest buckets, matching the only distinction the data actually makes.
 // No ranking, no "tier", no quality ordering -- those aren't in the data.
 const TYPE_GROUPS = [
@@ -158,6 +177,7 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
   ].join('\n    ');
 
   const campusesHtml = campusesFromData(colleges).map((c) => renderCampus(c, colleges)).join('\n');
+  const universitySummary = collegeDirectoryUniversitySummary(colleges);
 
   // Support one or many coverage notes (one per campus data file). Back-compat:
   // a bare string is still accepted.
@@ -170,7 +190,7 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
 
   return `
 <h1 class="subject-title">College Directory</h1>
-<p class="guide-intro">Every JNTUK and JNTU-GV constituent, autonomous and affiliated engineering college currently in our dataset, grouped by university and filterable by district. Just what's on record -- no rankings, no "best college" claims, nothing we can't point to a source for.</p>
+<p class="guide-intro">Every ${escapeHtml(universitySummary)} constituent, autonomous and affiliated engineering college currently in our dataset, grouped by university and filterable by district. Just what's on record -- no rankings, no "best college" claims, nothing we can't point to a source for.</p>
 
 ${notesHtml}
 
@@ -183,7 +203,7 @@ ${notesHtml}
 
 ${campusesHtml}
 
-<div class="disclaimer-box">Listings are sourced from the official JNTUK and JNTU-GV DAA / academics portals. This directory is informational only -- inclusion here is not an endorsement, and the order of listing carries no meaning.</div>
+<div class="disclaimer-box">Listings are sourced from each university's own official DAA / academics / affiliated-colleges portal (${escapeHtml(universitySummary)}). This directory is informational only -- inclusion here is not an endorsement, and the order of listing carries no meaning.</div>
 ${filterScript()}
 `;
 }

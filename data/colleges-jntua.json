@@ -1,0 +1,1597 @@
+{
+  "_coverage_note": "JNTUA (Jawaharlal Nehru Technological University Anantapur, Andhra Pradesh) Engineering colleges: 3 constituent (Ananthapuramu, Pulivendula, Kalikiri) + 84 affiliated, sourced from jntua.ac.in's own official pages. Excludes JNTUA-OTPRI (Oil Technology and Pharmaceutical Research Institute), the 4th constituent unit -- a research institute (est. 1948 as OTRI, renamed 2016), not a B.Tech engineering college, same reasoning as excluding pharmacy-only constituent colleges at JNTUK/JNTUH. Affiliated colleges are from the 5 official per-district pages linked from jntua.ac.in's own 'Affiliated Colleges' index -- Anantapur, Chittoor, Y.S.R, Kurnool, Nellore -- which render as a JavaScript app shell under plain HTTP fetch and required browser rendering to read. Filtered to Engineering only: excludes 17 Pharmacy and 21 Management/MBA/MCA/PG colleges on the same 5 pages. 17 ambiguous names (Group of Institutions / 'Technology and Management' / 'IT and Management' / PG College phrasing that didn't resolve from the name alone) were checked individually against each institution's own website rather than guessed; the resulting classifications and any umbrella-org double-count risk are recorded per-record in `notes`. Two on-page exact-duplicate rows (Annamacharya P.G. College of Computer Studies on the Y.S.R page; Master Institute of Management Science and Technology on the Nellore page) were deduped to one record each -- both are non-Engineering entries excluded from this dataset regardless. VINTAGE: none of the 5 district pages carries an explicit academic-year label. All 5 report an identical document Last-Modified of 2025-11-26 (likely a site-wide rebuild date, not necessarily a per-page data-curation date). No colleges on the current live Y.S.R page carry an asterisk/provisional-code marker, despite earlier sourcing notes describing such a marker and a 2021 date signal on that page -- the live page as fetched (July 2026) shows neither, consistent with the site having been rebuilt/edited since. jntua.ac.in's navigation lists four additional new-district page names (Annamayya, Nandyal, Sri Sathya Sai, Tirupati -- the districts carved out of Anantapur/Kurnool/Y.S.R/Chittoor in Andhra Pradesh's 2022 reorganization) as plain, non-linked menu text; the corresponding URLs (e.g. affiliated-colleges-annamayya) 404, confirming the 5 old-district pages are still the university's actual, complete, live source. CROSS-CHECK: this dataset counts 84 affiliated Engineering colleges. JNTUA's own homepage states 98 affiliated Engineering colleges (also citing 33 Pharmacy and 29 MBA/MCA, versus 17 and 21 counted on these same 5 pages). This does NOT converge, unlike JNTUH's list (137 vs 137). Investigated before shipping: confirmed no pagination hides additional rows on any of the 5 pages; confirmed no further district pages exist beyond the 5 (the 4 new-district names above 404); re-verified all 17 ambiguous entries against each institution's own site. No missing-page or miscount cause was found. Notably, the SAME shortfall pattern holds across all three of JNTUA's own categories on these pages (Engineering 84/98, Pharmacy 17/33, Management/MCA 21/29) -- not just Engineering -- which is evidence against a category-specific miscount on this project's part, and supports the most likely explanation: the homepage's descriptive '98/33/29' figures are a legacy aggregate that hasn't been kept in sync with the live, apparently-pruned district tables (which show a Nov 2025 edit signal). Shipped with the actual count from the live official source rather than padded to match the homepage figure; this gap should be revisited if JNTUA republishes the district pages or an updated aggregate count.",
+  "colleges": [
+    {
+      "name": "JNTUA College of Engineering, Ananthapuramu",
+      "short_code": null,
+      "affiliated_to": "JNTUA",
+      "location": {
+        "city": "Ananthapuramu",
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://www.jntuacea.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Flagship constituent college -- originally College of Engineering, Anantapur (started at Guindy, Madras in 1946, shifted to Anantapur in 1948); became a JNTUA constituent college at JNTUA's 2008 formation, per JNTUA's own homepage history."
+    },
+    {
+      "name": "JNTUA College of Engineering, Pulivendula",
+      "short_code": null,
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://jntuacep.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Constituent college established 2006, per JNTUA's own homepage history."
+    },
+    {
+      "name": "JNTUA College of Engineering, Kalikiri",
+      "short_code": null,
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://www.jntuacek.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Constituent college established 2013, per JNTUA's own homepage history."
+    },
+    {
+      "name": "Sri Chaitanya Institute of Engineering and Technology",
+      "short_code": null,
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sscet.co.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Anantha Lakshmi Institute of Technology and Sciences",
+      "short_code": "ALTS",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.alits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Chiranjeevi Reddy Group of Institutions",
+      "short_code": "CRMT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.crgroups.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site as a separate B.Tech campus (Civil/CSE/EEE/ECE/Mech) from the separately-coded Chiranjeevi Reddy Institute of Engineering and Technology (CRIT) below, not a duplicate umbrella listing."
+    },
+    {
+      "name": "Gates Institute of Technology",
+      "short_code": "GATE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gatesit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Intell Engineering College",
+      "short_code": "INTL",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.intellengg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Intellectual Institute of Technology",
+      "short_code": "IITA",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.iitatp.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Formerly Moula Ali College of Engineering and Technology, per JNTUA's own table."
+    },
+    {
+      "name": "P.V.K.K. Institute of Technology",
+      "short_code": "PVKK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.pvkkit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Shri Sai Institute of Engineering and Technology",
+      "short_code": null,
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.ssea.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Shri Shirdi Sai Institute of Science and Engineering",
+      "short_code": "SSSS",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": null,
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "official_website omitted -- JNTUA's table lists the URL as 'www.ssss.ac.n', an apparently truncated/mistyped domain; not corrected without independent confirmation."
+    },
+    {
+      "name": "Sir C.V.Raman Institute of Technology and Sciences",
+      "short_code": "CVRT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.scvrits.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "St.Mark Educational Institution Society Group of Institution",
+      "short_code": "CESM",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.cesm.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: offers B.Tech CSE/EEE/ECE/ME/Civil despite the 'Group of Institution' name."
+    },
+    {
+      "name": "Sri Krishna Devaraya Engineering College",
+      "short_code": "KDEG",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.skdengg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Sri Venkateswara Institute of Technology",
+      "short_code": "SVIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://svitatp.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Srinivasa Ramanujan Institute of Technology",
+      "short_code": "SRIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.srit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Tadipatri Engineering College",
+      "short_code": "TECH",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.tec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Chiranjeevi Reddy Institute of Engineering and Technology",
+      "short_code": "CRIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Anantapur",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.crit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-anantapur",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Chadalawada Venkata Subbaiah College of Engineering",
+      "short_code": "CVSE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.cvcetirupati.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Aditya College of Engineering",
+      "short_code": "ACEM",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.acem.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Annamacharya Institute of Technology and Sciences",
+      "short_code": "AITT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.aits-tpt.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Tirupati campus -- distinct from the Kadapa and Rajampet Annamacharya ITS campuses in Y.S.R district (separate codes, separate campuses, same group)."
+    },
+    {
+      "name": "Chadalawada Ramanamma Engineering College",
+      "short_code": "CHDL",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.crectirupati.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "KMM Institute of Technology and Science",
+      "short_code": "KMMT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kmmits.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Golden Valley Integrated Campus",
+      "short_code": "GVIC",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gvic.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: AICTE-approved B.Tech CSE/ECE/EEE/Civil/Mechanical/AI-ML/DS."
+    },
+    {
+      "name": "J.B.Women's Engineering College",
+      "short_code": "JBWC",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.jbcollegestpt.org.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "KKC Institute of Technology and Engineering",
+      "short_code": "KKCT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kkctech.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Priyadarshini Institute of Technology",
+      "short_code": "PDIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.pdittpt.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Kuppam Engineering College",
+      "short_code": "KUPM",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "M.J.R. College of Engineering and Technology",
+      "short_code": "MJRT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mjrcet.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Madanapalle Institute of Technology and Science",
+      "short_code": "MITS, MITS2",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.mits.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Mother Theresa Institute of Engineering and Technology",
+      "short_code": "MTIE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mtitech.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Sai Sakthi Engineering College",
+      "short_code": "SSEC",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.saisakthi.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Seshachala Institute of Engineering and Technology",
+      "short_code": "SESE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.seshachala.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Seshachala Institute of Technology",
+      "short_code": "SEST",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.seshachala.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Shree Institute of Technical Education",
+      "short_code": "SHRE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.site.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: B.Tech Civil/EEE/ECE/Mechanical/CSE."
+    },
+    {
+      "name": "Shree Rama Educational Society Group of Institutions",
+      "short_code": "SRES",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sreerama.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: runs Sree Rama Engineering College, B.Tech Civil/Mech/EEE/CSE/ECE; no separately-coded 'Sree Rama Engineering College' entry elsewhere on this district list, so not a duplicate."
+    },
+    {
+      "name": "Siddharth Institute of Engineering and Technology",
+      "short_code": "SDTN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Chittoor",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sietk.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-chittoor",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "JNTUA's table lists this row's University Code / Counselling Code columns in reversed order compared to every other row (SDTN then F6); normalized here to match the 2-char-code/4-char-code pattern used consistently elsewhere on the same page."
+    },
+    {
+      "name": "Global College of Engineering and Technology",
+      "short_code": "GLBC",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.glbc.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Acharya college of Engineering",
+      "short_code": "ANMB",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.acharyaedu.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Goutami Institute of Technology and Management for Women",
+      "short_code": "GTMW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gitamw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: B.Tech CSE/EEE/ECE/AI&ML despite 'Technology and Management' naming."
+    },
+    {
+      "name": "Akshaya Bharathi Institute of Technology",
+      "short_code": "ABIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.abit.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Annamacharya Institute of Technology and Sciences",
+      "short_code": "AITK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "city": "Kadapa",
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.aitskadapa.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Kadapa campus."
+    },
+    {
+      "name": "Annamacharya Institute of Technology and Sciences",
+      "short_code": "AITS",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "city": "Rajampet",
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.aitsrajampet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Rajampet campus; JNTUA's table appends 'Autonomous' to this college's name -- stripped into the type field per the same convention used for JNTUH's autonomous annotations."
+    },
+    {
+      "name": "Kandula Obula Reddy Memorial College of Engineering",
+      "short_code": "KORK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kormce.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Balaji Institute of Technology and Science",
+      "short_code": "BITP",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bitspdtr.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Bharath College of Engineering and Technology for Women",
+      "short_code": "BCTW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bcetfw.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Chaitanya Bharathi Institute of Technology",
+      "short_code": "CBIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.cbit.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Kadapa-district college on its own cbit.edu.in domain -- confirmed via web search to be genuinely distinct from the unrelated, similarly-named Chaitanya Bharathi Institute of Technology, Hyderabad (cbit.ac.in), not a copy-paste error on JNTUA's page."
+    },
+    {
+      "name": "Dr.Y.S.Rajasekhar Reddy Institute of Engineering and Technology",
+      "short_code": "YSET",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.drysrengg.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "GITAMS Business and IT School",
+      "short_code": "GBIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gitamskadapa.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: B.Tech Civil/CSE/ECE/EEE/Mechanical/Control Systems."
+    },
+    {
+      "name": "K.S.R.M. College of Engineering",
+      "short_code": "KSRM",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://ksrmce.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Kandula Lakshumma Memorial College of Engineering for Women",
+      "short_code": "KLMW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.klmcew.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Madina Engineering College",
+      "short_code": "MDJM",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.madinaengg.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Modugula Kalavathamma Institute of Technology for Women",
+      "short_code": "mktw",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Y.S.R",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mkitwrjpt.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-y-s-r",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Brindavan Institute of Technology and Science",
+      "short_code": "BRNK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bitsKurnool.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Alfa College of Engineering and Technology",
+      "short_code": "ALFA",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.alfacet.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "B.V.R Institute of Engineering and Technology",
+      "short_code": "BVRT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bvriet.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Bheema Institute of Technology and Science",
+      "short_code": "BEMA",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bitsadoni.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Dr.K.V.Subba Reddy College of Engineering for Women",
+      "short_code": "KVSW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kvsw.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Dr.K.V.Subba Reddy Institute of Technology",
+      "short_code": "KVSR",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.drkvsrit.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "G.Pulla Reddy Engineering College",
+      "short_code": "GPRE",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gprec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "G.Pullaiah College of Engineering and Technology",
+      "short_code": "PCEK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gpcet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Geethanjali College of Engineering and Technology",
+      "short_code": "GCET",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.avrsvrecknl.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Indira Priyadarshini College of Engineering and Technology for Women",
+      "short_code": "INPW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.Indirapriyadarshini.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Kottam College of Engineering",
+      "short_code": "KTMK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kottam.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: a genuinely separate campus from Kottam Karunakara Reddy Institute of Technology below (same trust/area, distinct EAMCET codes and founding years, B.Tech Civil/CSE/ECE/EEE/Mech)."
+    },
+    {
+      "name": "Kottam Karunakara Reddy Institute of Technology",
+      "short_code": "KKIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kottam.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Verified via institution site: separate campus from Kottam College of Engineering above (B.Tech Civil/CSE/CSE-AIML)."
+    },
+    {
+      "name": "Ravindra College of Engineering for Women",
+      "short_code": "RAVW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.recw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Safa College of Engineering and Technology",
+      "short_code": "SAFA",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.safa.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Srinivasa College of Engineering and Technology",
+      "short_code": "SECT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sectknl.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "St. Johns College of Engineering and Technology",
+      "short_code": "JONY",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sjcet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Stanley Stephen College of Engineering and Technology",
+      "short_code": "STFN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Kurnool",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.stanleystephen.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-kurnool",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Mekapati Rajamohan Reddy Institute of Technology and Science",
+      "short_code": "MRMU",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.meritstech.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Andhra Engineering College",
+      "short_code": "AECN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.aecn.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Audisankara College of Engineering and Technology",
+      "short_code": "SANK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.audisankara.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Audisankara College of Engineering for Women",
+      "short_code": "ASCW",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.audisankarawomen.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Audisankara Institute of Technology",
+      "short_code": "ASIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.audisankarait.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "AVS College of Engineering and Technology",
+      "short_code": "AVVN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.avsenggcollege.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Gokula Krishna College of Engineering",
+      "short_code": "GKCS",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gkcesp.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Brahmaiah College of Engineering",
+      "short_code": "BCEN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bcen.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Damisetty Bala Suresh Institute of Technology",
+      "short_code": "DSIT",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.dbsinstitutions.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Geethanjali Institute of Science and Technology",
+      "short_code": "GTNN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.gist.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Jagans College of Engineering and Technology",
+      "short_code": "JGNN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.jagans.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "N.B.K.R. Institute of Science and Technology",
+      "short_code": "NBKR",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.nbkrist.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Priyadarshini College of Engineering",
+      "short_code": "PDCS",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.pcespt.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    },
+    {
+      "name": "Narayana Engineering College",
+      "short_code": "NRNG",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "city": "Gudur",
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://necg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Gudur campus (est. 2001) -- confirmed a genuinely separate campus from the Nellore-town Narayana Engineering College below, not a duplicate."
+    },
+    {
+      "name": "Narayana Engineering College",
+      "short_code": "NARN",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "city": "Nellore",
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://necn.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      },
+      "notes": "Nellore-town campus (est. 1998). JNTUA's table lists the URL as necNellore.com, which now redirects to an unrelated domain; necn.ac.in is the college's current live site, used here instead."
+    },
+    {
+      "name": "Parvatha Reddy Babul Reddy Visvodaya Institute of Technology and Science",
+      "short_code": "VITK",
+      "affiliated_to": "JNTUA",
+      "location": {
+        "district": "Nellore",
+        "state": "Andhra Pradesh"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.visvodayata.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://www.jntua.ac.in/affiliated-colleges-nellore",
+        "retrieved_date": "2026-07-02",
+        "status": "verified"
+      }
+    }
+  ]
+}

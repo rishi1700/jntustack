@@ -7,7 +7,7 @@ import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
 import { renderBranchHubPage } from '../templates/branch-hub.js';
-import { renderCollegeDirectoryPage } from '../templates/college-directory.js';
+import { renderCollegeDirectoryPage, collegeDirectoryUniversitySummary } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -162,9 +162,10 @@ const { colleges: allColleges, coverageNotes } = loadMergedColleges(dataDir);
 if (allColleges.length > 0) {
   const verifiedColleges = allColleges.filter(c => c.source.status === 'verified');
   if (verifiedColleges.length === allColleges.length && verifiedColleges.length > 0) {
+    const universitySummary = collegeDirectoryUniversitySummary(verifiedColleges);
     const html = layout({
-      title: 'JNTUK & JNTU-GV College Directory - Engineering Colleges - JNTUStack',
-      description: 'A directory of JNTUK and JNTU-GV constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.',
+      title: `${universitySummary} College Directory - Engineering Colleges - JNTUStack`,
+      description: `A directory of ${universitySummary} constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.`,
       canonical: `${SITE_URL}/colleges/`,
       jsonLd: null,
       bodyHtml: renderCollegeDirectoryPage(verifiedColleges, coverageNotes),
