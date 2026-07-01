@@ -1,0 +1,1391 @@
+{
+  "subjects": [
+    {
+      "id": "r23-mech-2-1-numerical-methods-and-transform-techniques",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23FE09",
+      "name": "Numerical Methods and Transform Techniques",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Iterative Methods",
+          "topics": [
+            "Solutions of algebraic and transcendental equations: bisection, secant, false position and iteration methods",
+            "Newton-Raphson method (including simultaneous equations)",
+            "Interpolation: Newton's forward and backward formulae",
+            "Interpolation with unequal intervals; Lagrange's interpolation formula"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Numerical Integration & Solution of ODEs",
+          "topics": [
+            "Trapezoidal rule; Simpson's 1/3 and 3/8 rules",
+            "Solution of initial value problems by Taylor's series and Picard's method",
+            "Euler's method",
+            "Runge-Kutta method (second and fourth order); Milne's predictor-corrector method"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Laplace Transforms",
+          "topics": [
+            "Definition, Laplace transforms of standard functions, properties and shifting theorems",
+            "Transforms of derivatives and integrals; unit step and Dirac delta functions",
+            "Inverse Laplace transforms; convolution theorem (without proof)",
+            "Applications: solving ODEs (initial value problems) and integro-differential equations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Fourier Series",
+          "topics": [
+            "Periodic functions; Fourier series of periodic functions",
+            "Dirichlet's conditions",
+            "Even and odd functions; change of interval",
+            "Half-range sine and cosine series"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Fourier Transforms",
+          "topics": [
+            "Fourier integral theorem (without proof); Fourier sine and cosine integrals",
+            "Infinite Fourier transforms; sine and cosine transforms",
+            "Properties and inverse transforms; convolution theorem (without proof)",
+            "Finite Fourier transforms"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "numerical-methods-and-transform-techniques-jntuk-r23-mech-2-1",
+        "title": "Numerical Methods & Transform Techniques - MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Numerical Methods & Transform Techniques: iterative methods, numerical integration & ODEs, Laplace transforms, Fourier series and transforms."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Common to all branches of Engineering (per the LBRCE course structure). Course code 23FE09, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-thermodynamics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ME03",
+      "name": "Thermodynamics",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Concepts & Zeroth Law",
+          "topics": [
+            "System, boundary, surroundings, types of systems, macroscopic and microscopic viewpoints, control mass and volume, continuum",
+            "Properties, state, process (reversible and irreversible), cycle, quasi-static process, thermodynamic equilibrium",
+            "Path and point functions, specific heat, internal energy, enthalpy",
+            "Zeroth law of thermodynamics, measurement of temperature, constant volume gas thermometer"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "First Law of Thermodynamics",
+          "topics": [
+            "First law for a closed system undergoing change of state and a cycle; p-v representation; forms of stored energy",
+            "Mechanical and non-mechanical work transfer; pdV and other work transfer",
+            "Open system: control volume, flow work, steady flow energy equation (SFEE)",
+            "Steady flow devices (nozzles, diffusers, turbine, compressors, throttling valves, heat exchangers); limitations of the first law; PMM-I"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Second Law of Thermodynamics & Entropy",
+          "topics": [
+            "Energy reservoirs, heat engine, refrigerator, heat pump; Kelvin-Planck and Clausius statements and their equivalence; PMM-II",
+            "Carnot cycle, Carnot theorem and corollary",
+            "Entropy, principle of entropy increase, T-s plot, Clausius inequality, entropy changes for ideal gases",
+            "Availability and irreversibility, Maxwell relations, third law of thermodynamics"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Ideal Gas Mixtures & Pure Substances",
+          "topics": [
+            "Equation of state, Avogadro's law, ideal/perfect/real gas; Dalton's and Amagat's laws",
+            "Internal energy, enthalpy, specific heats and entropy of gas mixtures",
+            "Pure substance: phases, p-v, p-T, T-s and h-s diagrams, p-v-T surface",
+            "Properties of steam, dryness fraction, phase change processes, Mollier chart"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Thermodynamic Cycles",
+          "topics": [
+            "Carnot vapour cycle; simple Rankine cycle and problems",
+            "Gas power cycles: Otto, Diesel, Dual and Brayton cycles",
+            "Refrigeration cycles: reversed Carnot and Bell-Coleman cycles",
+            "Working of the vapour compression refrigeration cycle"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "thermodynamics-jntuk-r23-mech-2-1",
+        "title": "Thermodynamics - JNTUK R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Thermodynamics: basic concepts and Zeroth law, First and Second laws, entropy, ideal gas mixtures, pure substances and thermodynamic cycles."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME03, 2-0-0-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-mechanics-of-solids",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ME04",
+      "name": "Mechanics of Solids",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Simple Stresses & Strains",
+          "topics": [
+            "Elasticity and plasticity, types of stresses and strains, Hooke's law, stress-strain diagram for mild steel, working stress, factor of safety",
+            "Lateral strain, Poisson's ratio and volumetric strain; bars of varying section; composite bars; thermal stresses",
+            "Complex stresses; stresses on an inclined plane; principal planes and principal stresses; Mohr's circle; relation between elastic constants",
+            "Strain energy, resilience; gradual, sudden, impact and shock loadings"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Shear Force and Bending Moment",
+          "topics": [
+            "Definition and types of beams; concept of shear force and bending moment",
+            "SF and BM diagrams for cantilever, simply supported and overhanging beams",
+            "Beams subjected to point loads, UDL, uniformly varying loads and their combinations",
+            "Point of contraflexure; relation between SF, BM and rate of loading"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Flexural Stresses & Torsion",
+          "topics": [
+            "Theory of simple bending; derivation of bending equation; bending stresses",
+            "Section modulus of rectangular, circular, I and T sections; design of simple beam sections",
+            "Torsion of circular shafts; pure shear; transmission of power",
+            "Shafts in series and parallel"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Shear Stresses & Deflection of Beams",
+          "topics": [
+            "Shear stress distribution across rectangular, circular, triangular, I and T sections",
+            "Deflection of beams: slope, deflection and radius of curvature; differential equation of the elastic line",
+            "Double integration and Macaulay's methods for cantilever and simply supported beams",
+            "Mohr's theorem and moment area method"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Thin & Thick Cylinders and Columns",
+          "topics": [
+            "Thin cylindrical shells: longitudinal and circumferential stresses; hoop, longitudinal and volumetric strains; thin spherical shells",
+            "Wire-wound thin cylinders",
+            "Lame's equation; cylinders under inside and outside pressures; compound cylinders",
+            "Columns: buckling and stability; Euler's formula and its limitations; Rankine's formula"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mechanics-of-solids-jntuk-r23-mech-2-1",
+        "title": "Mechanics of Solids - JNTUK R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Mechanics of Solids: simple stresses & strains, shear force & bending moment, flexural stresses, torsion, cylinders and columns."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME04, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-material-science-and-metallurgy",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ME05",
+      "name": "Material Science and Metallurgy",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Structure of Metals & Constitution of Alloys",
+          "topics": [
+            "Crystallization of metals; atomic packing factor - SC, BCC, FCC and HCP",
+            "Grain and grain boundaries and their effect on properties; determination of grain size",
+            "Necessity of alloying; types of solid solutions",
+            "Hume-Rothery's rules; intermediate alloy phases and electron compounds"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Equilibrium Diagrams",
+          "topics": [
+            "Construction of equilibrium diagrams; isomorphous alloy systems; equilibrium cooling and heating; lever rule; coring",
+            "Eutectic systems, peritectic reaction",
+            "Solid-state transformations: allotropy, eutectoid and peritectoid reactions, phase rule",
+            "Binary phase diagrams: Cu-Ni, Bi-Cd and Fe-Fe3C"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Ferrous & Non-ferrous Metals and Alloys",
+          "topics": [
+            "Cast irons: white, malleable, grey, spheroidal graphite and alloy cast iron",
+            "Classification of steels; plain carbon and low alloy steels",
+            "Hadfield manganese steels; tool and die steels",
+            "Non-ferrous: structure and properties of copper and aluminium alloys"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Mechanical Working & Heat Treatment",
+          "topics": [
+            "Hot working, cold working, strain hardening, recovery, recrystallization and grain growth",
+            "Heat treatment of steels: annealing, normalizing, hardening",
+            "TTT diagrams, tempering, hardenability, Jominy end quench test",
+            "Surface-hardening methods; age hardening treatment"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Ceramics & Advanced Materials",
+          "topics": [
+            "Crystalline ceramics, glasses, cermets, abrasive materials",
+            "Classification of composites",
+            "Manufacturing methods of fiber and particle reinforced composites",
+            "PMC, MMC, CMC and CCCs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "material-science-and-metallurgy-jntuk-r23-mech-2-1",
+        "title": "Material Science & Metallurgy - R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Material Science & Metallurgy: metal & alloy structure, equilibrium diagrams, ferrous/non-ferrous alloys, heat treatment and composites."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME05, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-universal-human-values-2",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23HS01",
+      "name": "UHV 2 - Understanding Harmony and Ethical Human Conduct",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right understanding, relationship and physical facility (holistic development and the role of education)",
+            "Understanding value education; self-exploration as the process",
+            "Continuous happiness and prosperity - the basic human aspirations; current scenario",
+            "Method to fulfil the basic human aspirations"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "Understanding the human being as the co-existence of the self and the body",
+            "Distinguishing between the needs of the self and the body; the body as an instrument of the self",
+            "Understanding harmony in the self; harmony of the self with the body",
+            "Programme to ensure self-regulation and health"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the family - the basic unit of human interaction; 'Trust' - the foundational value",
+            "'Respect' - as the right evaluation; other feelings, justice in human-to-human relationship",
+            "Understanding harmony in the society",
+            "Vision for the universal human order"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in the Nature/Existence",
+          "topics": [
+            "Understanding harmony in nature",
+            "Interconnectedness, self-regulation and mutual fulfilment among the four orders of nature",
+            "Realizing existence as co-existence at all levels",
+            "The holistic perception of harmony in existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications of the Holistic Understanding - Professional Ethics",
+          "topics": [
+            "Natural acceptance of human values; definitiveness of (ethical) human conduct",
+            "A basis for humanistic education, humanistic constitution and universal human order",
+            "Competence in professional ethics",
+            "Holistic technologies and management models; strategies for transition towards value-based life and profession"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "universal-human-values-2-jntuk-r23-mech-2-1",
+        "title": "Universal Human Values 2 - R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Universal Human Values 2: value education, harmony in the human being, family and society, harmony in nature and professional ethics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Common to all branches of Engineering (per the LBRCE course structure). Course code 23HS01, 2-1-0-3 credits and the 5-module (28 lectures + 14 tutorials) structure read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-environmental-science",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23MC01",
+      "name": "Environmental Science",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Multidisciplinary Nature & Natural Resources",
+          "topics": [
+            "Definition, scope and importance of environmental studies; need for public awareness",
+            "Renewable and non-renewable resources; forest resources - use, over-exploitation, deforestation",
+            "Water resources - use and over-utilization, floods, drought, dams; mineral resources",
+            "Food resources - world food problems, effects of modern agriculture; energy resources"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ecosystems & Biodiversity",
+          "topics": [
+            "Structure and function of an ecosystem; producers, consumers and decomposers; energy flow; ecological succession",
+            "Food chains, food webs and ecological pyramids; forest, grassland, desert and aquatic ecosystems",
+            "Biodiversity: genetic, species and ecosystem diversity; value of biodiversity; India as a mega-diversity nation",
+            "Threats to biodiversity; endangered and endemic species; in-situ and ex-situ conservation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Environmental Pollution & Solid Waste Management",
+          "topics": [
+            "Air, water, soil, marine, noise and thermal pollution and nuclear hazards - causes, effects and control",
+            "Solid waste management: urban and industrial wastes",
+            "Role of an individual in prevention of pollution; pollution case studies",
+            "Disaster management: floods, earthquake, cyclone and landslides"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Social Issues and the Environment",
+          "topics": [
+            "From unsustainable to sustainable development; water conservation, rainwater harvesting, watershed management",
+            "Resettlement and rehabilitation; environmental ethics",
+            "Climate change, global warming, acid rain, ozone layer depletion; wasteland reclamation",
+            "Environment Protection Act, Air Act, Water Act, Wildlife and Forest Conservation Acts; public awareness"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Population and the Environment",
+          "topics": [
+            "Population growth and explosion; family welfare programmes",
+            "Environment and human health; human rights; value education",
+            "HIV/AIDS; women and child welfare; role of information technology",
+            "Field work: visit to local areas and polluted sites; study of common plants, insects and birds"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "environmental-science-jntuk-r23-mech-2-1",
+        "title": "Environmental Science - JNTUK R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Environmental Science (audit): natural resources, ecosystems, biodiversity, pollution, social issues and human population."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Common to all branches (per the LBRCE course structure). Audit course - no credit (L-T-P 2-0-0, credits shown as '--'). Course code 23MC01. 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-mechanics-of-solids-and-materials-science-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ME53",
+      "name": "Mechanics of Solids and Materials Science Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mechanics-of-solids-and-materials-science-lab-jntuk-r23-mech-2-1",
+        "title": "Mechanics of Solids & Materials Science Lab - MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Mechanics of Solids & Materials Science Lab: tensile, bending, torsion, hardness, spring, impact and shear tests plus microstructure study."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME53). Part A (mechanics of solids): tensile, bending, torsion, hardness (Brinell/Rockwell/Vickers), spring, impact (Charpy/Izod) and shear tests. Part B (material science): microstructure of pure metals, mild/medium/high carbon steels, cast irons, non-ferrous and heat-treated steels, Jominy end quench. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-computer-aided-machine-drawing",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ME54",
+      "name": "Computer-aided Machine Drawing",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-aided-machine-drawing-jntuk-r23-mech-2-1",
+        "title": "Computer-Aided Machine Drawing - R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Computer-Aided Machine Drawing: conventional representations, riveted/welded/key joints, couplings, solid models and assembly drawings."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME54). Covers conventional representation of materials/components, detachable joints (bolts, studs, screws), riveted and welded joints, keys and couplings, 3D solid models and sectional views, assembly drawings and production drawing with limits/fits/tolerances. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-python-programming-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CS57",
+      "name": "Python Programming Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "python-programming-lab-jntuk-r23-mech-2-1",
+        "title": "Python Programming Lab - R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Python Programming Lab: Python basics, functions, lists, dictionaries, files, exceptions, OOP, NumPy/Pandas and databases."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill-enhancement lab (0-0-2-1, course code 23CS57). Twelve experiments: Python setup and basics, functions and modules, lists and tuples, dictionaries and sets, strings and file I/O, error handling, OOP, libraries (NumPy/Pandas), data manipulation and visualization, web scraping and APIs, and databases (SQLite/SQLAlchemy). Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-1-embedded-systems-and-iot",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23ECS1",
+      "name": "Embedded Systems & IoT",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "embedded-systems-and-iot-jntuk-r23-mech-2-1",
+        "title": "Embedded Systems & IoT - JNTUK R23 MECH 2-1",
+        "meta_description": "LBRCE R23 MECH 2-1 Embedded Systems & IoT: microcontroller-transducer interfacing, serial communication with Arduino, and Raspberry Pi based IoT experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill-enhancement course (0-1-2-2, course code 23ECS1). Given as two experiment groups rather than unit-wise theory. Embedded Systems: analog signal from temperature sensor, PWM output, HyperTerminal serial links, SPI DAC, stepper motor and accelerometer using Arduino. IoT: Raspberry Pi setup and Python IDE, distance sensor, public APIs/SDKs, ZigBee protocol, and sensor experiments on Arduino/Node MCU. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-complex-variables-probability-and-statistics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23FE13",
+      "name": "Complex Variables, Probability and Statistics",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Complex Variables & Complex Integration",
+          "topics": [
+            "Continuity, differentiability, analyticity; Cauchy-Riemann equations in Cartesian and polar coordinates",
+            "Harmonic and conjugate harmonic functions; Milne-Thomson method",
+            "Complex integration: line integral, Cauchy's integral theorem",
+            "Cauchy's integral formula and generalized integral formula (without proofs)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Series Expansions & Residue Theorem",
+          "topics": [
+            "Radius of convergence; Taylor's, Maclaurin's and Laurent series",
+            "Types of singularities: isolated, essential and pole of order m",
+            "Residues and residue theorem (without proof)",
+            "Evaluation of real integrals using the residue theorem"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Probability and Distributions",
+          "topics": [
+            "Review of probability and Baye's theorem; discrete and continuous random variables",
+            "Distribution functions: probability mass function, probability density function and cumulative distribution functions",
+            "Mathematical expectation and variance",
+            "Binomial, Poisson, Uniform and Normal distributions"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sampling Theory",
+          "topics": [
+            "Population and samples; sampling distribution of means and variance",
+            "Central limit theorem (without proof); representation of normal theory distributions",
+            "Introduction to t, chi-square and F distributions",
+            "Point and interval estimations; maximum error of estimate"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Tests of Hypothesis",
+          "topics": [
+            "Hypothesis; null and alternative hypothesis; Type I and Type II errors",
+            "Level of significance; one-tail and two-tail tests",
+            "Tests concerning one mean and two means (large and small samples)",
+            "Tests on proportions"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "complex-variables-probability-and-statistics-jntuk-r23-mech-2-2",
+        "title": "Complex Variables, Probability & Statistics - MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Complex Variables, Probability & Statistics: complex integration, series & residues, distributions, sampling and hypothesis tests."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23FE13, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-manufacturing-processes",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME06",
+      "name": "Manufacturing Processes",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Casting",
+          "topics": [
+            "Steps in making a casting; advantages and applications",
+            "Patterns and pattern making; types of patterns; pattern allowances; moulding and cores",
+            "Principles of gating, risers and casting design considerations",
+            "Special casting processes: centrifugal, die, investment and shell moulding"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Welding",
+          "topics": [
+            "Classification of welding processes; types of welded joints; gas welding, flames and oxy-acetylene cutting",
+            "Arc welding: MMAW, submerged arc, TIG and MIG, electro-slag welding",
+            "Resistance, friction, friction-stir, forge, explosive, thermit, plasma-arc, laser and electron-beam welding",
+            "Soldering and brazing; heat affected zones; pre- and post-heating"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Bulk Forming",
+          "topics": [
+            "Plastic deformation; recovery, recrystallization and grain growth; hot and cold working; strain hardening and annealing",
+            "Forging: types, defects and remedies",
+            "Rolling: types of mills and products, forces and power requirements",
+            "Extrusion (impact and hydrostatic); wire drawing and tube drawing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sheet Metal Forming",
+          "topics": [
+            "Blanking and piercing; forces and power requirements",
+            "Deep drawing, stretch forming, bending, spring back and remedies",
+            "Coining, spinning; types of presses and press tools",
+            "High energy rate forming: explosive, electromagnetic, electro-hydraulic and rubber pad forming"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Powder Metallurgy",
+          "topics": [
+            "Methods of producing metal powders: milling, atomization, granulation, reduction and electrolytic deposition",
+            "Compacting methods",
+            "Sintering and methods of manufacturing sintered parts",
+            "Secondary operations and applications of powder metallurgical products"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "manufacturing-processes-jntuk-r23-mech-2-2",
+        "title": "Manufacturing Processes - R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Manufacturing Processes: metal casting, welding, bulk forming (forging/rolling/extrusion), sheet metal forming and powder metallurgy."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME06, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-fluid-mechanics-and-hydraulic-machines",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME07",
+      "name": "Fluid Mechanics & Hydraulic Machines",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fluid Statics",
+          "topics": [
+            "Properties of fluids: specific gravity, viscosity, surface tension, capillarity, vapor pressure",
+            "Atmospheric, gauge and vacuum pressure; measurement of pressure",
+            "Manometers: piezometer, U-tube, inverted and differential; Pascal's and hydrostatic laws",
+            "Buoyancy and flotation: metacenter, stability of floating and submerged bodies"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fluid Kinematics & Dynamics",
+          "topics": [
+            "Flow types; continuity equation; circulation and vorticity; stream, path and streak lines; stream function and velocity potential",
+            "Euler's and Bernoulli's equations; momentum equation and force on a pipe bend",
+            "Closed conduit flow; Reynold's experiment; Darcy-Weisbach equation",
+            "Minor losses; pipes in series and parallel; hydraulic gradient and total energy lines"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Boundary Layer Theory & Dimensional Analysis",
+          "topics": [
+            "Momentum integral equation; displacement, momentum and energy thickness",
+            "Separation of boundary layer and control of flow separation; streamlined and bluff body",
+            "Dimensional analysis; dimensional homogeneity",
+            "Method of repeating variables and Buckingham Pi theorem"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Turbo Machinery & Hydraulic Turbines",
+          "topics": [
+            "Hydrodynamic force of jets on stationary and moving flat, inclined and curved vanes; velocity diagrams",
+            "Work done and efficiency; flow over radial vanes",
+            "Classification of turbines; impulse and reaction turbines",
+            "Pelton wheel, Francis and Kaplan turbines; draft tube theory, functions and efficiency"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Performance of Turbines & Pumps",
+          "topics": [
+            "Geometric similarity; unit and specific quantities; characteristic curves; governing; cavitation",
+            "Centrifugal pumps: working, work done, manometric head, losses and efficiencies, specific speed",
+            "Pumps in series and parallel; NPSH",
+            "Reciprocating pumps: working, discharge, slip, indicator diagrams"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "fluid-mechanics-and-hydraulic-machines-jntuk-r23-mech-2-2",
+        "title": "Fluid Mechanics & Hydraulic Machines - MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Fluid Mechanics & Hydraulic Machines: fluid statics, kinematics & dynamics, boundary layer theory, hydraulic turbines and pumps."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME07, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-theory-of-machines",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME08",
+      "name": "Theory of Machines",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Simple Mechanisms",
+          "topics": [
+            "Classification of mechanisms; basic kinematic concepts; degree of freedom and mobility",
+            "Grashof's law; kinematic inversions of four-bar and slider-crank chains",
+            "Limit positions, mechanical advantage, transmission angle",
+            "Quick-return and straight-line mechanisms; universal joint; rocker mechanisms"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Plane Motion Analysis",
+          "topics": [
+            "Displacement, velocity and acceleration analysis of simple mechanisms",
+            "Graphical velocity analysis using instantaneous centers",
+            "Velocity and acceleration analysis using the relative velocity method",
+            "Coriolis component of acceleration"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Gyroscope & Gear Profile",
+          "topics": [
+            "Principle of gyroscope; gyroscopic effect in aeroplane, ship, car and two-wheeler",
+            "Involute and cycloidal gear profiles; gear parameters; fundamental law of gearing and conjugate action",
+            "Spur gear contact ratio and interference/undercutting",
+            "Helical, bevel, worm, rack & pinion gears; epicyclic and regular gear train kinematics"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Balancing of Rotating Masses & Cams",
+          "topics": [
+            "Need for balancing; balancing of single and several masses in different planes (analytical and graphical)",
+            "Cams and followers: classification, terminology and definitions",
+            "Displacement diagrams: uniform velocity, parabolic, simple harmonic and cycloidal motions",
+            "Derivatives of follower motions; specified contour cams; circular and tangent cams"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Vibrations & Turning Moment Diagrams",
+          "topics": [
+            "Free natural vibrations; Newton and energy methods for single degree of freedom",
+            "Damped vibrations (under, critical and over damped); forced vibrations; vibration isolation and transmissibility",
+            "Turning moment diagrams for steam engine, IC engine and multi-cylinder engine",
+            "Crank effort; coefficients of fluctuation of energy and speed; flywheel and its design"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "theory-of-machines-jntuk-r23-mech-2-2",
+        "title": "Theory of Machines - JNTUK R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Theory of Machines: simple mechanisms, plane motion analysis, gyroscope & gear profiles, balancing & cams, vibrations and flywheels."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23ME08, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-industrial-management",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23HS03",
+      "name": "Industrial Management",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction & Plant Layout",
+          "topics": [
+            "Definition and development of industrial engineering; role of an industrial engineer; production management vs IE",
+            "Concepts and functions of management; scientific management; Taylor's principles; theory X and Y; Fayol's principles",
+            "Plant location factors; types of plant layouts; process vs product layout",
+            "Quantitative techniques for layout design; plant maintenance (preventive and breakdown)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Work Study",
+          "topics": [
+            "Importance and types of production; work study; method study and time study",
+            "Work sampling; PMTS; micro-motion study; rating techniques",
+            "MTM; work factor system; principles of ergonomics",
+            "Flow process charts, string diagrams and Therbligs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Statistical Quality Control & TQM",
+          "topics": [
+            "Quality control and its importance; SQC",
+            "Attribute sampling inspection with single and double sampling",
+            "Control charts: X-bar and R charts, X and S charts and applications",
+            "TQM: zero defect concept, quality circles, ISO quality systems, Six Sigma"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Financial Management",
+          "topics": [
+            "Scope and nature of financial management; sources of finance; ratio analysis",
+            "Management of working capital and its estimation; stock management",
+            "Cost accounting and control; budget and budgetary control",
+            "Capital budgeting: NPV, IRR, PI, payback period and ARR"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Resource Management & Value Analysis",
+          "topics": [
+            "Human resource management; personnel management and industrial relations; functions of personnel management",
+            "Job evaluation, merit rating; wage incentive plans and types",
+            "Value engineering and implementation procedure",
+            "Enterprise resource planning and supply chain management"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "industrial-management-jntuk-r23-mech-2-2",
+        "title": "Industrial Management - JNTUK R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Industrial Management: industrial engineering & plant layout, work study, statistical quality control & TQM, financial management and HRM."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23HS03, 2-0-0-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-fluid-mechanics-and-hydraulic-machines-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME55",
+      "name": "Fluid Mechanics & Hydraulic Machines Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "fluid-mechanics-and-hydraulic-machines-lab-jntuk-r23-mech-2-2",
+        "title": "Fluid Mechanics & Hydraulic Machines Lab - MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Fluid Mechanics & Hydraulic Machines Lab: impact of jets, turbine and pump performance tests, flow-meter calibration and pipe friction."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME55). Experiments: impact of jets on vanes; performance tests on Pelton wheel, Francis and Kaplan turbines, single- and multi-stage centrifugal pumps and reciprocating pump; calibration of venturimeter and orificemeter; friction factor; loss of head due to sudden contraction; turbine flow meter. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-manufacturing-processes-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME56",
+      "name": "Manufacturing Processes Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "manufacturing-processes-lab-jntuk-r23-mech-2-2",
+        "title": "Manufacturing Processes Lab - R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Manufacturing Processes Lab: pattern making, sand testing, moulding, gas/arc/TIG/MIG welding, sheet metal, brazing and 3D printing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME56). Experiments: pattern making (single-piece and split); sand property testing (sieve, clay content, moisture, strength, permeability); mould preparation; gas cutting and welding; manual metal arc welding (lap and butt); injection and blow moulding; sheet metal operations; deep drawing and extrusion; TIG/MIG and spot welding; brazing and soldering; 3D printing; metal casting demonstration. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-design-thinking-and-innovation",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME57",
+      "name": "Design Thinking & Innovation",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 1,
+        "T": 0,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design Thinking",
+          "topics": [
+            "Introduction to elements and principles of design",
+            "Basics of design - dot, line, shape, form as fundamental design components",
+            "Principles of design",
+            "Introduction to design thinking, history of design thinking, new materials in industry"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Thinking Process",
+          "topics": [
+            "Design thinking process: empathize, analyze, idea and prototype",
+            "Implementing the process in driving inventions",
+            "Design thinking in social innovations",
+            "Tools of design thinking - persona, customer journey map, brainstorming, product development"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Innovation",
+          "topics": [
+            "Art of innovation; difference between innovation and creativity",
+            "Role of creativity and innovation in organizations",
+            "Creativity to innovation; teams for innovation",
+            "Measuring the impact and value of creativity"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Product Design",
+          "topics": [
+            "Problem formation; introduction to product design",
+            "Product strategies, product value, product planning and specifications",
+            "Innovation towards product design",
+            "Case studies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design Thinking in Business Processes",
+          "topics": [
+            "Design thinking applied in business and strategic innovation; principles that redefine business",
+            "Business challenges: growth, predictability, change, maintaining relevance, extreme competition, standardization",
+            "Design thinking to meet corporate needs; design thinking for startups",
+            "Defining and testing business models and cases; developing and testing prototypes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-thinking-and-innovation-jntuk-r23-mech-2-2",
+        "title": "Design Thinking & Innovation - R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Design Thinking & Innovation: elements & principles of design, design thinking process, innovation, product design and business processes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME57, 1-0-2-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-structural-and-modal-analysis-using-ansys",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23MES1",
+      "name": "Structural and Modal Analysis Using ANSYS",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "structural-and-modal-analysis-using-ansys-jntuk-r23-mech-2-2",
+        "title": "Structural & Modal Analysis (ANSYS) - MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 Structural & Modal Analysis Using ANSYS: FEM fundamentals, ANSYS Workbench, static structural analysis of beams and modal analysis."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill-enhancement course (0-1-2-2, course code 23MES1). Exercises using ANSYS Workbench: FEM introduction and ANSYS utilities; static structural analysis of stepped/tapered bars, planar truss, cantilever/simply-supported/fixed beams, flat plates and shells, axi-symmetric components; vibration analysis of spring-mass systems; modal analysis of beams, plates and shells. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-2-2-community-service-project-internship",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Community Service Project Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "community-service-project-internship-jntuk-r23-mech-2-2",
+        "title": "Community Service Internship - R23 MECH 2-2",
+        "meta_description": "LBRCE R23 MECH 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation - no credits or evaluation detail in the source."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the IV-semester course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation' but gives no credits, evaluation scheme or detailed guidelines. Mirrors the same gap seen in the Tirumala CSE/ECE/IT documents. Confirm credits and requirements before flipping to verified."
+    }
+  ]
+}
