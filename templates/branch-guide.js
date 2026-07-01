@@ -204,6 +204,7 @@ export function renderBranchGuidePage(branchProfiles, navBranches = []) {
     () => JSON.stringify(augmentedProfiles)
   );
   return `
+<div class="page-narrow">
 <h1 class="subject-title">Choosing a branch?</h1>
 <p class="guide-intro">Picking CSE, ECE, EEE, Civil, Mechanical, or IT shapes the next four years and a good chunk of your career after. This page won't decide for you -- nothing online should -- but it'll help you ask the right questions before you do.</p>
 
@@ -212,5 +213,6 @@ export function renderBranchGuidePage(branchProfiles, navBranches = []) {
 ${quizHtml}
 
 ${renderComparisonGrid(branchProfiles, statusByCode)}
+</div>
 `;
 }
