@@ -33,14 +33,28 @@ const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
 const verifiedSubjects = data.subjects.filter(s => s.source.status === 'verified');
 const publishedBranchCodes = new Set(verifiedSubjects.map(s => s.branch));
 
-// Single source of truth for the nav: the branch hubs that will actually be
-// published this build (same gate as the per-branch loop below). Computed
-// up-front because EVERY page's nav needs it, and subject + branch-guide pages
-// are rendered before that loop runs. Order follows data.branches. The moment a
-// branch gains a verified subject it appears here automatically -- no hardcoding.
-const navBranches = data.branches
-  .filter(b => publishedBranchCodes.has(b.code))
-  .map(b => ({ code: b.code, name: b.name, href: `/${b.code.toLowerCase()}/` }));
+// Single source of truth for the nav + homepage branch grid: ALL six branches,
+// each annotated with whether its hub is published (has >=1 verified subject)
+// and its verified-subject count. Computed up-front because EVERY page's nav
+// needs it, and subject + branch-guide pages render before the hub loop below.
+// Unpublished branches carry href:null and no count claim -- the templates render
+// them as disabled (never a link), so a branch can be listed without a dead URL.
+// The moment a branch gains a verified subject it flips to published automatically.
+const verifiedCountByBranch = {};
+for (const s of verifiedSubjects) {
+  verifiedCountByBranch[s.branch] = (verifiedCountByBranch[s.branch] || 0) + 1;
+}
+const navBranches = data.branches.map(b => {
+  const verifiedCount = verifiedCountByBranch[b.code] || 0;
+  const published = verifiedCount > 0;
+  return {
+    code: b.code,
+    name: b.name,
+    published,
+    verifiedCount,
+    href: published ? `/${b.code.toLowerCase()}/` : null,
+  };
+});
 
 const distDir = path.join(ROOT, 'dist');
 const draftsDir = path.join(ROOT, 'drafts');
@@ -62,7 +76,6 @@ function courseJsonLd(subject, branch, regulation) {
 
 let published = 0, drafted = 0, skipped = 0;
 const sitemapUrls = [];
-const publishedSubjects = [];
 
 for (const subject of data.subjects) {
   const branch = branchByCode[subject.branch];
@@ -85,7 +98,6 @@ for (const subject of data.subjects) {
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     sitemapUrls.push(`${SITE_URL}/${slug}/`);
-    publishedSubjects.push({ slug, title: subject.seo.title || subject.name });
     published++;
   } else if (subject.source.status === 'needs_verification') {
     const outDir = path.join(draftsDir, subject.id);
@@ -98,6 +110,12 @@ for (const subject of data.subjects) {
 }
 
 fs.mkdirSync(distDir, { recursive: true });
+
+// Ship the matching module to the browser: the in-page search box imports this
+// exact file (/retrieve.js) so its ranking can never drift from the build-time
+// search index, which is generated from the same module. lib/retrieve.js is
+// pure, Node-import-free ESM specifically so it loads unchanged in the browser.
+fs.copyFileSync(path.join(ROOT, 'lib/retrieve.js'), path.join(distDir, 'retrieve.js'));
 
 // Branch guide: a separate dataset (not regulation-bound), same verified-only discipline.
 let branchGuidePublished = 0;
@@ -190,7 +208,7 @@ const homeHtml = layout({
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
   jsonLd: null,
-  bodyHtml: renderHomePage({ publishedSubjects, publishedBranchHubs: navBranches }),
+  bodyHtml: renderHomePage({ branches: navBranches }),
   navBranches,
   stamp: null,
 });

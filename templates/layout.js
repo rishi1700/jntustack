@@ -1,3 +1,5 @@
+import { renderSearchBar, searchBarScript } from './search-bar.js';
+
 export function escapeHtml(str = '') {
   return String(str)
     .replaceAll('&', '&amp;')
@@ -223,6 +225,103 @@ const baseStyles = `
   .hub-subject-list a{font-weight:600;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--marigold);}
   .hub-subject-list a:hover{color:var(--marigold);}
   .hub-reg{font-size:.66rem;color:var(--text-muted);background:#ECE7DA;padding:.1rem .45rem;border-radius:99px;letter-spacing:.03em;}
+
+  /* --- Header search bar --- */
+  .site-search{position:relative;flex:1 1 auto;max-width:340px;margin:0 1rem;}
+  .site-search-input{
+    width:100%;padding:.5rem .85rem;border:1.5px solid var(--rule);border-radius:99px;
+    background:var(--paper);font-family:inherit;font-size:.85rem;color:var(--ink);
+  }
+  .site-search-input:focus{outline:none;border-color:var(--marigold);background:var(--paper-raised);}
+  .site-search-input::placeholder{color:#9c9484;}
+  .site-search-results{
+    position:absolute;left:0;right:0;top:calc(100% + .35rem);z-index:60;
+    background:var(--paper-raised);border:1.5px solid var(--ink);border-radius:var(--radius);
+    box-shadow:0 6px 20px rgba(27,42,74,.12);max-height:60vh;overflow-y:auto;
+  }
+  .site-search-hit{
+    display:flex;align-items:center;justify-content:space-between;gap:.6rem;
+    padding:.55rem .8rem;text-decoration:none;color:var(--ink);
+    border-bottom:1px solid var(--rule);font-size:.85rem;
+  }
+  .site-search-hit:last-child{border-bottom:none;}
+  .site-search-hit:hover,.site-search-hit:focus{background:#FBF3E6;color:var(--marigold);}
+  .site-search-hit-title{font-weight:500;line-height:1.3;}
+  .site-search-badge{
+    flex:none;font-family:"IBM Plex Mono",monospace;font-size:.6rem;font-weight:600;
+    text-transform:uppercase;letter-spacing:.04em;padding:.12rem .45rem;border-radius:99px;
+    background:#ECE7DA;color:var(--ink-soft);
+  }
+  .site-search-badge--subject{background:#E4F1EA;color:var(--verified);}
+  .site-search-badge--branch_profile{background:#F7E9D6;color:var(--marigold);}
+  .site-search-badge--college{background:#E7ECF5;color:var(--ink-soft);}
+  .site-search-empty{padding:.7rem .8rem;font-size:.82rem;color:var(--text-muted);}
+
+  /* --- Branches dropdown nav --- */
+  .nav-branches{position:relative;}
+  .nav-branches-toggle{
+    font-family:inherit;font-size:.85rem;font-weight:500;color:var(--ink-soft);
+    background:none;border:none;cursor:pointer;padding:0;
+  }
+  .nav-branches-toggle:hover{color:var(--marigold);}
+  .nav-branches-menu{
+    display:none;position:absolute;right:0;top:calc(100% + .5rem);z-index:60;min-width:240px;
+    background:var(--paper-raised);border:1.5px solid var(--ink);border-radius:var(--radius);
+    box-shadow:0 6px 20px rgba(27,42,74,.12);overflow:hidden;
+  }
+  .nav-branches:hover .nav-branches-menu,
+  .nav-branches:focus-within .nav-branches-menu{display:block;}
+  .nav-branch{
+    display:flex;align-items:center;justify-content:space-between;gap:.8rem;
+    padding:.5rem .8rem;font-size:.82rem;border-bottom:1px solid var(--rule);text-decoration:none;
+  }
+  .nav-branch:last-child{border-bottom:none;}
+  a.nav-branch{color:var(--ink);}
+  a.nav-branch:hover,a.nav-branch:focus{background:#FBF3E6;color:var(--marigold);}
+  .nav-branch-count{
+    flex:none;font-family:"IBM Plex Mono",monospace;font-size:.62rem;font-weight:600;
+    background:#E4F1EA;color:var(--verified);padding:.1rem .45rem;border-radius:99px;
+  }
+  .nav-branch--disabled{color:#A9A290;cursor:not-allowed;}
+  .nav-branch-soon{
+    flex:none;font-family:"IBM Plex Mono",monospace;font-size:.58rem;text-transform:uppercase;
+    letter-spacing:.03em;color:#A9A290;
+  }
+
+  /* --- Homepage CTA row + branch grid --- */
+  .badge--soon{background:#F7E9D6;color:var(--marigold);margin-left:.35rem;vertical-align:middle;}
+  .home-cta-row{display:grid;grid-template-columns:1fr;gap:1rem;margin-bottom:2rem;}
+  .home-cta-card{
+    display:block;border:1.5px solid var(--ink);border-radius:var(--radius);padding:1.1rem;
+    background:var(--paper-raised);text-decoration:none;color:var(--ink);
+  }
+  a.home-cta-card:hover{border-color:var(--marigold);}
+  .home-cta-card h3{font-size:1.08rem;margin-bottom:.3rem;}
+  .home-cta-card .tagline{font-size:.88rem;color:var(--text-muted);margin:0 0 .7rem;}
+  .home-cta-go{font-size:.85rem;font-weight:600;color:var(--marigold);}
+  .home-cta-card--soon{border-style:dashed;border-color:var(--rule);}
+  .home-cta-go--muted{color:var(--text-muted);font-weight:600;font-size:.85rem;}
+  @media (min-width:640px){.home-cta-row{grid-template-columns:1fr 1fr 1fr;}}
+
+  .branch-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-top:.9rem;}
+  @media (min-width:560px){.branch-grid{grid-template-columns:1fr 1fr 1fr;}}
+  .branch-tile{
+    display:flex;flex-direction:column;gap:.2rem;padding:.85rem .9rem;
+    border:1px solid var(--rule);border-radius:var(--radius);background:var(--paper-raised);
+    text-decoration:none;
+  }
+  a.branch-tile:hover{border-color:var(--marigold);}
+  .branch-tile-code{font-family:"Zilla Slab",serif;font-weight:700;font-size:1.05rem;color:var(--ink);}
+  .branch-tile-name{font-size:.82rem;color:var(--ink-soft);}
+  .branch-tile-count{font-family:"IBM Plex Mono",monospace;font-size:.66rem;color:var(--verified);margin-top:.15rem;}
+  .branch-tile--disabled{opacity:.55;}
+  .branch-tile--disabled .branch-tile-code{color:var(--text-muted);}
+  .branch-tile-soon{font-family:"IBM Plex Mono",monospace;font-size:.62rem;text-transform:uppercase;letter-spacing:.03em;color:#A9A290;margin-top:.15rem;}
+
+  @media (max-width:560px){
+    .site-header{flex-wrap:wrap;gap:.5rem;}
+    .site-search{order:3;flex-basis:100%;max-width:none;margin:.2rem 0 0;}
+  }
 `;
 
 export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp, navBranches = [] }) {
@@ -245,8 +344,19 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
   <a class="brand" href="/">JNTUStack</a>
+  ${renderSearchBar()}
   <nav class="top-nav" aria-label="Main navigation">
-    ${navBranches.map(b => `<a href="${escapeHtml(b.href)}">${escapeHtml(b.code)}</a>`).join('')}<a href="/colleges/">Colleges</a><a href="/branch-guide/">Choosing a Branch?</a>
+    <div class="nav-branches">
+      <button type="button" class="nav-branches-toggle" aria-haspopup="true">Branches <span aria-hidden="true">&#9662;</span></button>
+      <div class="nav-branches-menu">
+        ${navBranches.map(b => b.published
+          ? `<a class="nav-branch" href="${escapeHtml(b.href)}"><span>${escapeHtml(b.name)} (${escapeHtml(b.code)})</span><span class="nav-branch-count">${b.verifiedCount}</span></a>`
+          : `<span class="nav-branch nav-branch--disabled" aria-disabled="true"><span>${escapeHtml(b.name)} (${escapeHtml(b.code)})</span><span class="nav-branch-soon">not yet available</span></span>`
+        ).join('')}
+      </div>
+    </div>
+    <a href="/colleges/">Colleges</a>
+    <a href="/branch-guide/">Choosing a Branch?</a>
   </nav>
 </header>
 <main>
@@ -256,6 +366,7 @@ ${bodyHtml}
   <a class="telegram-cta" href="#" target="_blank" rel="noopener">Join the Telegram channel for new uploads &rarr;</a>
   <p>&copy; ${new Date().getFullYear()} JNTUStack. Independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV.</p>
 </footer>
+${searchBarScript()}
 </body>
 </html>`;
 }
