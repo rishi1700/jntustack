@@ -1,6 +1,6 @@
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { loadMergedSubjects } from '../lib/dataset.js';
+import { loadMergedSubjects, loadMergedColleges } from '../lib/dataset.js';
 import { buildSearchIndex, retrieve } from '../lib/retrieve.js';
 
 // Self-test against the real datasets in this project. Moved out of
@@ -10,7 +10,7 @@ import { buildSearchIndex, retrieve } from '../lib/retrieve.js';
 const dataDir = fileURLToPath(new URL('../data', import.meta.url));
 const { subjects } = loadMergedSubjects(dataDir);
 const { branch_profiles } = JSON.parse(fs.readFileSync(new URL('../data/branch-guide-data.json', import.meta.url), 'utf-8'));
-const { colleges } = JSON.parse(fs.readFileSync(new URL('../data/colleges-jntuk.json', import.meta.url), 'utf-8'));
+const { colleges } = loadMergedColleges(dataDir);
 
 const index = buildSearchIndex({ subjects, branchProfiles: branch_profiles, colleges });
 console.log(`Indexed ${index.length} verified documents (unverified content excluded from grounding).`);

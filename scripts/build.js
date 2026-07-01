@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateData } from '../lib/validate.js';
-import { loadDataset } from '../lib/dataset.js';
+import { loadDataset, loadMergedColleges } from '../lib/dataset.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
@@ -156,18 +156,18 @@ if (fs.existsSync(branchGuidePath)) {
 // discipline as the branch guide -- the page is generated only if every record
 // is verified, so an unverified college can never reach dist/.
 let collegesPublished = 0;
-const collegesPath = path.join(ROOT, 'data/colleges-jntuk.json');
-if (fs.existsSync(collegesPath)) {
-  const collegesData = JSON.parse(fs.readFileSync(collegesPath, 'utf-8'));
-  const colleges = collegesData.colleges || [];
-  const verifiedColleges = colleges.filter(c => c.source.status === 'verified');
-  if (verifiedColleges.length === colleges.length && verifiedColleges.length > 0) {
+// Merged across every data/colleges-*.json -- drop in a new campus file and it
+// auto-loads, same glob convention as subjects-*.json (see lib/dataset.js).
+const { colleges: allColleges, coverageNotes } = loadMergedColleges(dataDir);
+if (allColleges.length > 0) {
+  const verifiedColleges = allColleges.filter(c => c.source.status === 'verified');
+  if (verifiedColleges.length === allColleges.length && verifiedColleges.length > 0) {
     const html = layout({
-      title: 'JNTUK College Directory - Constituent & Autonomous Colleges - JNTUStack',
-      description: 'A directory of JNTUK constituent and autonomous engineering colleges, filterable by district. Honest about coverage -- the full affiliated-college list is still in progress.',
+      title: 'JNTUK & JNTU-GV College Directory - Engineering Colleges - JNTUStack',
+      description: 'A directory of JNTUK and JNTU-GV constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.',
       canonical: `${SITE_URL}/colleges/`,
       jsonLd: null,
-      bodyHtml: renderCollegeDirectoryPage(verifiedColleges, collegesData._coverage_note),
+      bodyHtml: renderCollegeDirectoryPage(verifiedColleges, coverageNotes),
       navBranches,
       stamp: 'verified',
     });
@@ -177,7 +177,7 @@ if (fs.existsSync(collegesPath)) {
     collegesPublished = verifiedColleges.length;
     sitemapUrls.push(`${SITE_URL}/colleges/`);
   } else {
-    console.warn(`College directory skipped: ${colleges.length - verifiedColleges.length} record(s) not yet verified.`);
+    console.warn(`College directory skipped: ${allColleges.length - verifiedColleges.length} record(s) not yet verified.`);
   }
 }
 

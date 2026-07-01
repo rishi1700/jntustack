@@ -170,11 +170,15 @@ section{margin-bottom:2rem;}
 .district-btn:hover{border-color:var(--accent);color:var(--accent);}
 .district-btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
 .college-count{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--faint);margin:.2rem 0 1.4rem;}
-.college-type-group h2{font-size:1.25rem;border-bottom:1px solid var(--border);padding-bottom:.35rem;}
+.campus-group{margin-top:2.6rem;}
+.campus-heading{font-size:1.5rem;border-bottom:2px solid var(--accent);padding-bottom:.4rem;margin-bottom:.25rem;}
+.campus-sub{font-size:.85rem;color:var(--muted);max-width:72ch;margin:0 0 1rem;}
+.college-type-group{margin-top:1.2rem;}
+.college-type-group h3{font-size:1.05rem;color:var(--text-2);margin:.2rem 0 .1rem;}
 .college-type-group .group-count{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:400;color:var(--muted);}
-.college-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:.9rem;}
+.college-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:.7rem;}
 .college-card{border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;background:var(--surface-2);}
-.college-card h3{font-size:1.02rem;line-height:1.3;margin-bottom:.5rem;}
+.college-card h4{font-size:1.02rem;line-height:1.3;margin:0 0 .5rem;}
 .college-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem;}
 .college-type-badge{display:inline-block;padding:.14rem .55rem;border-radius:99px;font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--surface);border:1px solid var(--border);color:var(--muted);}
 .college-district{font-size:.85rem;color:var(--muted);}
