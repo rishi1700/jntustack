@@ -60,7 +60,7 @@ a:hover{filter:brightness(1.1);}
   background:var(--bar);position:sticky;top:0;z-index:40;
 }
 .brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--text);font-weight:700;font-size:1.15rem;}
-.brand-logo{display:block;height:34px;width:auto;}
+.brand-logo{display:block;height:44px;width:auto;}
 /* Logo is inlined in the header and recolors via the --logo-* tokens per theme. */
 .top-nav{display:flex;align-items:center;gap:1.1rem;font-size:.85rem;font-weight:500;}
 .top-nav a,.nav-branches-toggle{color:var(--muted);}

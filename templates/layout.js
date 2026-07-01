@@ -45,7 +45,7 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 <body>
 ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
-  <a class="brand" href="/" aria-label="JNTUStack home"><svg class="brand-logo" viewBox="0 0 900 260" width="118" height="34" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" style="fill:var(--logo-bot)"/><polygon points="0,22 92,-12 0,-46 -92,-12" style="fill:var(--logo-mid)"/><polygon points="0,-16 80,-46 0,-76 -80,-46" style="fill:var(--logo-top)"/></g><text x="268" y="164" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="92" letter-spacing="-2" style="fill:var(--text)">JNTUStack</text></svg></a>
+  <a class="brand" href="/" aria-label="JNTUStack home"><svg class="brand-logo" viewBox="0 0 900 260" width="152" height="44" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" style="fill:var(--logo-bot)"/><polygon points="0,22 92,-12 0,-46 -92,-12" style="fill:var(--logo-mid)"/><polygon points="0,-16 80,-46 0,-76 -80,-46" style="fill:var(--logo-top)"/></g><text x="268" y="164" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="92" letter-spacing="-2" style="fill:var(--text)">JNTUStack</text></svg></a>
   ${renderSearchBar()}
   <nav class="top-nav" aria-label="Main navigation">
     <div class="nav-branches">
