@@ -59,9 +59,7 @@ a:hover{filter:brightness(1.1);}
 }
 .brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--text);font-weight:700;font-size:1.15rem;}
 .brand-logo{display:block;height:34px;width:auto;}
-/* The shipped SVG lockup has a navy wordmark; recolor it for the dark bar. */
-:root .brand-logo{filter:brightness(0) invert(1);}
-html[data-theme="light"] .brand-logo{filter:none;}
+/* Logo is inlined in the header and recolors via the --logo-* tokens per theme. */
 .top-nav{display:flex;align-items:center;gap:1.1rem;font-size:.85rem;font-weight:500;}
 .top-nav a,.nav-branches-toggle{color:var(--muted);}
 .top-nav a:hover,.nav-branches-toggle:hover{color:var(--accent);}
