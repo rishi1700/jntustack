@@ -1,25 +1,45 @@
 import { escapeHtml } from './layout.js';
 
-// Universities are the top-level grouping so it's never ambiguous which campus
-// a college belongs to. Order is fixed (JNTUK, JNTU-GV, then JNTUH); a campus
-// with no colleges in the data renders nothing.
-const CAMPUSES = [
-  {
-    code: 'JNTUK',
+// Display metadata for every affiliated_to enum value in schema.json
+// (#/definitions/College/properties/affiliated_to). This is presentation-only:
+// which campus SECTIONS actually render is derived from the distinct
+// affiliated_to values present in the merged college data passed into
+// renderCollegeDirectoryPage, not from this object -- so dropping in a new
+// data/colleges-<code>.json for a university already listed here needs zero
+// template edits. CAMPUS_ORDER fixes the reading order (not alphabetical);
+// a code missing from either map still renders, using the code itself as a
+// fallback name, so an unanticipated enum value can never crash the build.
+const CAMPUS_META = {
+  JNTUK: {
     name: 'JNTU Kakinada (JNTUK)',
     blurb: 'Constituent, autonomous and regular-affiliated engineering colleges under Jawaharlal Nehru Technological University, Kakinada.',
   },
-  {
-    code: 'JNTUGV',
+  JNTUGV: {
     name: 'JNTU-GV, Vizianagaram (JNTUGV)',
     blurb: 'Engineering colleges under Jawaharlal Nehru Technological University Gurajada, Vizianagaram -- the campus that split from JNTUK in 2022 (Vizianagaram, Visakhapatnam, Srikakulam, Parvathipuram Manyam, Alluri Sitharama Raju and Anakapalli districts).',
   },
-  {
-    code: 'JNTUH',
+  JNTUH: {
     name: 'JNTU Hyderabad (JNTUH)',
     blurb: "Constituent and regular-affiliated engineering colleges under Jawaharlal Nehru Technological University Hyderabad -- Telangana's main affiliating university, a separate institution from the Andhra Pradesh campuses above.",
   },
-];
+  JNTUA: {
+    name: 'JNTU Anantapur (JNTUA)',
+    blurb: "Constituent and regular-affiliated engineering colleges under Jawaharlal Nehru Technological University Anantapur -- covering Rayalaseema and Nellore, the Andhra Pradesh districts not covered by JNTUK or JNTU-GV.",
+  },
+};
+const CAMPUS_ORDER = ['JNTUK', 'JNTUGV', 'JNTUH', 'JNTUA'];
+
+function campusesFromData(colleges) {
+  const present = new Set(colleges.map((c) => c.affiliated_to));
+  const ordered = CAMPUS_ORDER.filter((code) => present.has(code));
+  // Any enum value present in the data but missing from CAMPUS_ORDER (should
+  // not happen given the closed schema enum, but keeps this genuinely data-driven
+  // rather than silently dropping a campus) is appended in first-seen order.
+  for (const code of colleges.map((c) => c.affiliated_to)) {
+    if (!ordered.includes(code)) ordered.push(code);
+  }
+  return ordered.map((code) => ({ code, ...(CAMPUS_META[code] || { name: code, blurb: '' }) }));
+}
 
 // Three honest buckets, matching the only distinction the data actually makes.
 // No ranking, no "tier", no quality ordering -- those aren't in the data.
@@ -137,7 +157,7 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
     ),
   ].join('\n    ');
 
-  const campusesHtml = CAMPUSES.map((c) => renderCampus(c, colleges)).join('\n');
+  const campusesHtml = campusesFromData(colleges).map((c) => renderCampus(c, colleges)).join('\n');
 
   // Support one or many coverage notes (one per campus data file). Back-compat:
   // a bare string is still accepted.
