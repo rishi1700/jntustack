@@ -5,7 +5,7 @@
     </style>
   </defs>
 
-  <!-- Icon: three stacked plates -- teal brand palette: bottom = deep teal-ink, middle = sage, top = brand teal -->
+  <!-- Icon: three stacked plates. Teal brand palette: bottom = deep teal-ink, middle = sage, top = brand teal -->
   <g transform="translate(130,130)">
     <!-- connector lines (drawn first, so nodes sit on top) -->
     <g stroke="#5D7873" stroke-width="3" opacity="0.55">
