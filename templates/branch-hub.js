@@ -17,33 +17,42 @@ function groupByYearSem(subjects) {
   });
 }
 
-function subjectItem(subject) {
+function subjectItem(subject, index) {
   const slug = subject.seo?.slug || subject.id;
   const reg = subject.regulation
     ? `<span class="hub-reg mono">${escapeHtml(subject.regulation)}</span>`
     : '';
-  return `<li><a href="/${escapeHtml(slug)}/">${escapeHtml(subject.name)}</a>${reg}</li>`;
+  const num = String(index + 1).padStart(2, '0');
+  return `<li><span class="hub-index">${num}</span><a href="/${escapeHtml(slug)}/">${escapeHtml(subject.name)}</a>${reg}<span class="hub-arrow" aria-hidden="true">&rarr;</span></li>`;
 }
 
 export function renderBranchHubPage(branch, subjects) {
   const groups = groupByYearSem(subjects);
   const count = subjects.length;
 
+  // Running index across all groups (01, 02, 03 ...), registry-style.
+  let idx = 0;
   const groupsHtml = groups
     .map(
       ([label, list]) => `
   <section class="hub-sem-group">
     <h2>Year &amp; semester ${escapeHtml(label)}</h2>
     <ul class="hub-subject-list">
-      ${list.map(subjectItem).join('\n      ')}
+      ${list.map((s) => subjectItem(s, idx++)).join('\n      ')}
     </ul>
   </section>`
     )
     .join('\n');
 
   return `
-<h1 class="subject-title">${escapeHtml(branch.name || branch.code)}</h1>
-<p class="guide-intro">Every verified JNTUK ${escapeHtml(branch.code)} subject currently live on JNTUStack, grouped by year and semester. This hub lists only pages that have been checked against an official source -- ${count} so far, with more added page by page, never dumped in unverified.</p>
+<a class="crumb" href="/">&larr; Home</a>
+<div class="hub-head">
+  <div>
+    <h1 class="subject-title">${escapeHtml(branch.name || branch.code)}</h1>
+    <p class="guide-intro">Every verified JNTUK ${escapeHtml(branch.code)} subject currently live on JNTUStack, grouped by year and semester. This hub lists only pages that have been checked against an official source -- ${count} so far, with more added page by page, never dumped in unverified.</p>
+  </div>
+  <div class="stat-chip"><b>${count}</b><span>VERIFIED<br>SUBJECT${count === 1 ? '' : 'S'}</span></div>
+</div>
 
 <div class="ad-slot">ad slot &mdash; below intro</div>
 

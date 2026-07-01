@@ -25,3 +25,7 @@ Thumbs.db
 # Project archive snapshots (redundant with git history)
 *.zip
 preview-homepage.html
+
+# Browser automation / screenshot artifacts (never intentional to commit)
+.playwright-mcp/
+rd-*.png

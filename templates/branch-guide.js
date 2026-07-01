@@ -81,7 +81,8 @@ function renderQuizSection() {
     card.style.display = 'block';
     const q = QUESTIONS[current];
     card.innerHTML =
-      '<div class="quiz-question">' + (current + 1) + '. ' + q.q + '</div>' +
+      '<div class="quiz-kicker">QUESTION ' + (current + 1) + ' / ' + QUESTIONS.length + '</div>' +
+      '<div class="quiz-question">' + q.q + '</div>' +
       '<div class="quiz-options">' +
         q.options.map((opt, i) => '<button class="quiz-option" data-i="' + i + '">' + opt.label + '</button>').join('') +
       '</div>' +
@@ -127,7 +128,7 @@ function renderQuizSection() {
         '</div>';
       }).join('') +
       '<div class="disclaimer-box">This is a narrowing tool, not an answer. Read the full comparison below for all six branches -- including the ones that didn\\'t come out on top here -- and talk to seniors or a counsellor before deciding anything.</div>' +
-      '<button class="quiz-option" id="retakeBtn" style="margin-top:.5rem;">Retake the quiz</button>';
+      '<button class="quiz-option" id="retakeBtn" style="margin-top:.5rem;">&#8635; Retake the quiz</button>';
     document.getElementById('retakeBtn').addEventListener('click', () => {
       current = 0; for (const k in scores) delete scores[k]; renderQuestion();
     });
@@ -139,8 +140,8 @@ function renderQuizSection() {
 }
 
 function contentStatusHtml(status) {
-  // Available -> green pill linking to the real hub. Not yet -> muted pill, no
-  // link, no invented count. Same rule as the nav dropdown and homepage grid.
+  // Available -> teal pill linking to the real hub. Not yet -> muted pill, no
+  // link, no invented count. Same rule as the nav dropdown and homepage registry.
   return status && status.published
     ? `<a class="content-status content-status--available" href="${escapeHtml(status.href)}">${status.verifiedCount} real subject${status.verifiedCount === 1 ? '' : 's'} &rarr;</a>`
     : `<span class="content-status content-status--none">Not sourced yet</span>`;
@@ -179,7 +180,7 @@ function renderComparisonGrid(branchProfiles, statusByCode = {}) {
 
 export function renderBranchGuidePage(branchProfiles, navBranches = []) {
   // Content-status is keyed by branch code and comes from the SAME navBranches
-  // data build.js computes for the nav dropdown and homepage branch grid -- not
+  // data build.js computes for the nav dropdown and homepage branch registry -- not
   // recomputed here, so the "N real subjects" / "Not sourced yet" state can never
   // drift from what's actually published.
   const statusByCode = Object.fromEntries(

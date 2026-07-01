@@ -172,28 +172,13 @@ section{margin-bottom:2rem;}
 .district-btn:hover{border-color:var(--accent);color:var(--accent);}
 .district-btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);}
 .college-count{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--faint);margin:.2rem 0 1.4rem;}
-.campus-group{margin-top:2.6rem;}
-.campus-heading{font-size:1.5rem;border-bottom:2px solid var(--brand);padding-bottom:.4rem;margin-bottom:.25rem;}
-.campus-sub{font-size:.85rem;color:var(--muted);max-width:72ch;margin:0 0 1rem;}
-.college-type-group{margin-top:1.2rem;}
-.college-type-group h3{font-size:1.05rem;color:var(--text-2);margin:.2rem 0 .1rem;}
+.college-type-group h2{font-size:1.25rem;border-bottom:1px solid var(--border);padding-bottom:.35rem;}
 .college-type-group .group-count{font-family:"IBM Plex Mono",monospace;font-size:.8rem;font-weight:400;color:var(--muted);}
-.college-grid{display:grid;grid-template-columns:1fr;gap:.8rem;margin-top:.7rem;}
-.college-card{border:1px solid var(--border);border-radius:12px;padding:1rem 1.1rem;background:var(--surface-2);}
-.college-card h4{font-size:1.02rem;line-height:1.3;margin:0 0 .5rem;}
-.college-meta{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem;margin-bottom:.35rem;}
-.college-type-badge{display:inline-block;padding:.14rem .55rem;border-radius:99px;font-size:.66rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;background:var(--surface);border:1px solid var(--border);color:var(--muted);}
-.college-district{font-size:.85rem;color:var(--muted);}
-.college-codes{font-size:.72rem;color:var(--faint);margin-bottom:.35rem;font-family:"IBM Plex Mono",monospace;}
-.college-link{display:inline-block;font-size:.85rem;font-weight:600;color:var(--accent);text-decoration:none;}
-.college-link:hover{filter:brightness(1.1);}
 @media (min-width:560px){.college-grid{grid-template-columns:1fr 1fr;}}
 
 /* --- Branch hub --- */
 .hub-breadcrumb{display:inline-block;margin-bottom:1rem;font-size:.82rem;font-weight:600;color:var(--accent);text-decoration:none;}
 .hub-sem-group h2{font-size:1.2rem;color:var(--accent);font-family:"IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;}
-.hub-subject-list{list-style:none;margin:.6rem 0 1.4rem;padding:0;display:flex;flex-direction:column;gap:.5rem;}
-.hub-subject-list li{padding:.85rem 1rem;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;}
 .hub-subject-list a{font-weight:600;color:var(--text);text-decoration:none;}
 .hub-subject-list a:hover{color:var(--accent);}
 .hub-reg{font-size:.66rem;color:var(--green);background:var(--green-bg);padding:.15rem .5rem;border-radius:99px;letter-spacing:.03em;font-family:"IBM Plex Mono",monospace;}
@@ -267,3 +252,124 @@ a.branch-tile:hover{border-color:var(--accent);}
   .stamp{top:70px;right:10px;padding:.4rem .6rem;font-size:.7rem;}
   h1.subject-title{font-size:1.6rem;}
 }
+
+
+/* ============================================================================
+   Teal redesign — NEW components introduced by the 2026 refresh
+   (hero, verification pipeline, branch registry, tools band, subject rail,
+   slate footer). See design_handoff_teal_redesign/README.md for exact specs.
+   ========================================================================== */
+
+/* --- Buttons --- */
+.btn-row{display:flex;gap:.75rem;flex-wrap:wrap;}
+.btn-primary{display:inline-block;background:var(--brand);color:var(--brand-ink);border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:.92rem;padding:.9rem 1.6rem;border-radius:11px;text-decoration:none;}
+.btn-primary:hover{filter:brightness(1.06);}
+.btn-secondary{display:inline-block;background:var(--surface-2);color:var(--text);border:1.5px solid var(--text);cursor:pointer;font-family:inherit;font-weight:600;font-size:.92rem;padding:.9rem 1.6rem;border-radius:11px;text-decoration:none;}
+.btn-secondary:hover{background:var(--surface);}
+
+/* --- Home hero --- */
+.hero-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--accent-soft);color:var(--accent);font-size:.75rem;font-weight:700;padding:.4rem .9rem;border-radius:99px;margin-bottom:1.5rem;}
+.hero-title{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.05;letter-spacing:-.035em;margin:0 0 1.2rem;max-width:18ch;}
+.text-brand{color:var(--accent);font-style:normal;}
+.hero-sub{font-size:1.1rem;line-height:1.6;color:var(--text-2);max-width:56ch;margin:0 0 1.9rem;}
+
+/* --- Verification pipeline strip --- */
+.pipeline{display:grid;grid-template-columns:1fr;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin:4rem 0;}
+.pipeline-step{padding:1.6rem 1.75rem;border-bottom:1px solid var(--hair);}
+.pipeline-step:last-child{border-bottom:none;}
+.pipeline-step--live{background:var(--green-bg);}
+.pipeline-num{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.12em;color:var(--accent);margin-bottom:.6rem;}
+.pipeline-step h3{font-size:1rem;margin-bottom:.35rem;}
+.pipeline-step p{font-size:.82rem;line-height:1.55;color:var(--muted);margin:0;}
+@media (min-width:720px){
+  .pipeline{grid-template-columns:1fr 1fr 1fr;}
+  .pipeline-step{border-bottom:none;border-right:1px solid var(--hair);}
+  .pipeline-step:last-child{border-right:none;}
+}
+
+/* --- Branch registry (replaces .branch-grid tiles on home) --- */
+.registry{border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-bottom:4rem;}
+.registry-row{display:grid;grid-template-columns:88px 1fr auto;align-items:center;gap:1rem;padding:1.2rem 1.6rem;border-bottom:1px solid var(--hair);background:var(--surface-2);text-decoration:none;}
+.registry-row:last-child{border-bottom:none;}
+.registry-code{font-weight:700;font-size:1.05rem;color:var(--muted);}
+.registry-name{font-size:.85rem;color:var(--muted);}
+.registry-status{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--faint);}
+.registry-row--live{background:var(--green-bg);}
+.registry-row--live .registry-code{color:var(--text);}
+.registry-row--live .registry-status{color:var(--accent);}
+a.registry-row--live:hover .registry-code{color:var(--accent);}
+
+/* --- Tools band --- */
+.tools-band{background:var(--surface);border-radius:20px;padding:2.25rem 2.5rem 2.5rem;margin-bottom:5rem;}
+.tools-band .home-cta-row{margin-bottom:0;}
+.tools-band .home-cta-card{background:var(--surface-2);}
+
+/* --- Hub: numbered subject rows + stat chip --- */
+.crumb{display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:.75rem;font-weight:600;letter-spacing:.06em;color:var(--accent);text-decoration:none;margin-bottom:1.1rem;text-transform:uppercase;}
+.stat-chip{flex:none;border:1px solid var(--border);border-radius:14px;padding:1rem 1.4rem;text-align:center;background:var(--green-bg);}
+.stat-chip b{display:block;font-size:1.9rem;line-height:1;color:var(--accent);}
+.stat-chip span{font-family:"IBM Plex Mono",monospace;font-size:.6rem;letter-spacing:.08em;color:var(--muted);margin-top:.4rem;display:block;}
+.hub-index{font-family:"IBM Plex Mono",monospace;font-size:.75rem;color:var(--faint);margin-right:.9rem;}
+
+/* --- Subject page: two-column grid + right rail --- */
+.subject-grid{display:grid;grid-template-columns:1fr;gap:2.75rem;align-items:start;}
+@media (min-width:900px){.subject-grid{grid-template-columns:1fr 300px;}}
+.verify-card{border:1.5px solid var(--brand);border-radius:14px;background:var(--green-bg);padding:1.1rem 1.25rem;margin-bottom:.9rem;}
+.verify-card .check{display:inline-flex;width:22px;height:22px;background:var(--brand);color:var(--brand-ink);border-radius:50%;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;}
+.rail-card{border:1px solid var(--border);border-radius:14px;padding:1.1rem 1.25rem;}
+.unit-row{display:grid;grid-template-columns:88px 1fr;gap:1.1rem;padding:1.1rem .25rem;border-bottom:1px solid var(--hair);}
+.unit-row .unit-tag{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.06em;color:var(--accent);padding-top:2px;}
+
+/* --- Slate footer (always dark, both themes) --- */
+.site-footer--slate{background:#04231F;border-top:none;text-align:left;color:#9DBBB5;padding:2.75rem 1.25rem 2.25rem;}
+.site-footer--slate .footer-inner{max-width:1140px;margin:0 auto;}
+.site-footer--slate .footer-top{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;}
+.site-footer--slate .footer-brand{color:#FFFFFF;font-weight:700;}
+.site-footer--slate a{color:#9DBBB5;text-decoration:none;}
+.site-footer--slate a:hover{color:#2EDFCF;filter:none;}
+.site-footer--slate .footer-note{border-top:1px solid rgba(255,255,255,.09);padding-top:1.1rem;margin-top:1.75rem;font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:#6F918B;}
+
+
+/* ============================================================================
+   Teal redesign — production-template adaptations (jntu-site templates/*.js)
+   ========================================================================== */
+.home-hero{padding:2.25rem 0 0;}
+
+/* Hub: header row + subject rows */
+.hub-head{display:flex;justify-content:space-between;align-items:flex-start;gap:1.5rem;flex-wrap:wrap;}
+.hub-arrow{color:var(--accent);font-weight:600;}
+.hub-subject-list{list-style:none;margin:.6rem 0 1.8rem;padding:0;display:flex;flex-direction:column;gap:0;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+.hub-subject-list li{border:none;border-bottom:1px solid var(--hair);border-radius:0;padding:1.05rem 1.5rem;display:flex;align-items:center;justify-content:space-between;gap:.6rem;flex-wrap:wrap;background:var(--surface-2);}
+.hub-subject-list li:last-child{border-bottom:none;}
+.hub-subject-list li:hover{background:var(--surface);}
+.hub-subject-list a{flex:1;}
+
+/* Subject page grid helpers */
+.subject-main{min-width:0;}
+.subject-rail .download{display:block;text-align:center;margin-bottom:.6rem;}
+
+/* Quiz kicker */
+.quiz-kicker{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.1em;color:var(--accent);margin-bottom:.7rem;}
+
+/* College directory: campus grouping (markup from templates/college-directory.js,
+   unchanged) restyled into registry rows purely via CSS. */
+.campus-group{margin-top:2.6rem;}
+.campus-heading{font-size:1.35rem;letter-spacing:-.01em;margin-top:2.2rem;}
+.campus-sub{font-size:.9rem;color:var(--muted);max-width:72ch;}
+.college-grid{display:block;border:1px solid var(--border);border-radius:16px;overflow:hidden;margin-top:.9rem;}
+.college-card{border:none;border-radius:0;background:var(--surface-2);border-bottom:1px solid var(--hair);padding:1rem 1.5rem;display:grid;grid-template-columns:1fr auto auto;gap:.25rem 1.25rem;align-items:center;}
+.college-card:last-child{border-bottom:none;}
+.college-card:hover{background:var(--surface);}
+.college-card h4{grid-row:1;grid-column:1;margin:0;font-size:.95rem;line-height:1.35;}
+.college-card .college-meta{grid-row:1;grid-column:2;margin:0;}
+.college-card .college-codes{grid-row:2;grid-column:1;margin:0;}
+.college-card .college-link{grid-row:1;grid-column:3;}
+@media (max-width:560px){
+  .college-card{grid-template-columns:1fr;}
+  .college-card .college-meta,.college-card .college-link{grid-column:1;grid-row:auto;justify-self:start;}
+}
+
+/* Slate footer extras */
+.footer-tag{font-size:.82rem;color:#9DBBB5;max-width:40ch;line-height:1.6;margin:.6rem 0 0;}
+.footer-links{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.85rem;align-items:center;}
+.site-footer--slate .telegram-cta{color:#2EDFCF;border-bottom:2px solid #2EDFCF;margin:0;}

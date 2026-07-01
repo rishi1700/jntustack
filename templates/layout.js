@@ -37,7 +37,7 @@ export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp,
 <link rel="canonical" href="${canonical}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script src="/theme-toggle.js"></script>
 <link rel="stylesheet" href="/teal-brand.css">
@@ -65,9 +65,21 @@ ${stamp ? stampMarkup(stamp) : ''}
 <main>
 ${bodyHtml}
 </main>
-<footer class="site-footer">
-  <a class="telegram-cta" href="#" target="_blank" rel="noopener">Join the Telegram channel for new uploads &rarr;</a>
-  <p>&copy; ${new Date().getFullYear()} JNTUStack. Independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV.</p>
+<footer class="site-footer site-footer--slate">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <span class="footer-brand">JNTUStack</span>
+        <p class="footer-tag">Built page by page, checked against an official source before it goes live.</p>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/colleges/">Colleges</a>
+        <a href="/branch-guide/">Choosing a Branch?</a>
+        <a class="telegram-cta" href="#" target="_blank" rel="noopener">Join the Telegram channel for new uploads &rarr;</a>
+      </nav>
+    </div>
+    <p class="footer-note">&copy; ${new Date().getFullYear()} JNTUStack &middot; Independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV &middot; No fabricated placement or salary stats</p>
+  </div>
 </footer>
 ${searchBarScript()}
 </body>
