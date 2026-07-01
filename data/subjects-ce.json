@@ -1,0 +1,1439 @@
+{
+  "subjects": [
+    {
+      "id": "r23-ce-2-1-numerical-techniques-and-statistical-methods",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23FE08",
+      "name": "Numerical Techniques and Statistical Methods",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Iterative Methods",
+          "topics": [
+            "Solutions of algebraic and transcendental equations: bisection, secant, false position and iteration methods",
+            "Newton-Raphson method (one variable and simultaneous equations)",
+            "Interpolation: Newton's forward and backward formulae",
+            "Interpolation with unequal intervals; Lagrange's interpolation formula"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Numerical Integration and Solution of ODEs",
+          "topics": [
+            "Trapezoidal rule; Simpson's 1/3 and 3/8 rules",
+            "Solution of initial value problems by Taylor's series and Picard's method",
+            "Euler's method",
+            "Runge-Kutta method (second and fourth order); Milne's predictor-corrector method"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Probability and Distributions",
+          "topics": [
+            "Baye's theorem; discrete and continuous random variables",
+            "Distribution functions: probability mass function, probability density function and cumulative distribution functions",
+            "Mathematical expectation and variance",
+            "Binomial, Poisson, Uniform and Normal distributions"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sampling Theory",
+          "topics": [
+            "Population and samples; sampling distribution of means and variance",
+            "Point and interval estimations; maximum error of estimate",
+            "Central limit theorem (without proof)",
+            "Estimation using t, chi-square and F distributions"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Tests of Hypothesis",
+          "topics": [
+            "Hypothesis; null and alternative hypothesis; Type I and Type II errors",
+            "Level of significance; one-tail and two-tail tests",
+            "Test of significance for large and small samples: single and difference of means, single and two proportions",
+            "Student's t-test, F-test and chi-square test"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "numerical-techniques-and-statistical-methods-jntuk-r23-ce-2-1",
+        "title": "Numerical Techniques & Statistical Methods - CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Numerical Techniques & Statistical Methods: iterative methods, integration & ODEs, distributions, sampling and hypothesis tests."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23FE08, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-1-universal-human-values-2",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23HS01",
+      "name": "UHV 2 - Understanding Harmony and Ethical Human Conduct",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right understanding, relationship and physical facility (holistic development and the role of education)",
+            "Understanding value education; self-exploration as the process",
+            "Continuous happiness and prosperity - the basic human aspirations; current scenario",
+            "Method to fulfil the basic human aspirations"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "Understanding the human being as the co-existence of the self and the body",
+            "Distinguishing between the needs of the self and the body; the body as an instrument of the self",
+            "Understanding harmony in the self; harmony of the self with the body",
+            "Programme to ensure self-regulation and health"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the family - the basic unit of human interaction; 'Trust' - the foundational value",
+            "'Respect' - as the right evaluation; other feelings, justice in human-to-human relationship",
+            "Understanding harmony in the society",
+            "Vision for the universal human order"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in the Nature/Existence",
+          "topics": [
+            "Understanding harmony in nature",
+            "Interconnectedness, self-regulation and mutual fulfilment among the four orders of nature",
+            "Realizing existence as co-existence at all levels",
+            "The holistic perception of harmony in existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications of the Holistic Understanding - Professional Ethics",
+          "topics": [
+            "Natural acceptance of human values; definitiveness of (ethical) human conduct",
+            "A basis for humanistic education, humanistic constitution and universal human order",
+            "Competence in professional ethics",
+            "Holistic technologies and management models; strategies for transition towards value-based life and profession"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "universal-human-values-2-jntuk-r23-ce-2-1",
+        "title": "Universal Human Values 2 - R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Universal Human Values 2: value education, harmony in the human being, family and society, harmony in nature and professional ethics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23HS01, 2-1-0-3 credits and the 5-module (28 lectures + 14 tutorials) structure read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-1-surveying",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CE01",
+      "name": "Surveying",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Basic Concepts",
+          "topics": [
+            "Classification and principles of surveying; surveying accessories; introduction to compass, levelling and plane table surveying",
+            "Linear distances: approximate and direct methods; chains, tapes, ranging, tape corrections",
+            "Prismatic compass: bearings, included angles",
+            "Local attraction, magnetic declination and dip; WCB and QB systems of locating bearings"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Levelling, Contouring, Areas and Volumes",
+          "topics": [
+            "Levelling: types of levels, methods and determination of levels; effect of curvature and refraction",
+            "Contouring: characteristics and uses of contours, methods of contour surveying",
+            "Areas: determination of areas with irregular and regular boundaries",
+            "Volumes: earthwork in cutting and embankments for level section, capacity of reservoirs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Theodolite Surveying and Traversing",
+          "topics": [
+            "Types of theodolites and temporary adjustments",
+            "Measurement of horizontal angle by repetition and reiteration methods; vertical angle measurement",
+            "Trigonometrical levelling when base is accessible and inaccessible",
+            "Traversing: methods, traverse computations and adjustments, omitted measurements"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Curves and Modern Surveying Methods",
+          "topics": [
+            "Types of curves and their necessity; elements of simple, compound and reverse curves",
+            "Introduction to tacheometric surveying",
+            "EDM instruments; total station - advantages and applications",
+            "Introduction to Global Positioning System, drone survey and LiDAR survey"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Photogrammetry Surveying",
+          "topics": [
+            "Basic concepts; perspective geometry of an aerial photograph; relief and tilt displacements",
+            "Terrestrial photogrammetry; flight planning; stereoscopy",
+            "Ground control extension: aerial triangulation, radial triangulation",
+            "Photographic mapping: paper prints, stereo-plotting instruments, mosaics, map substitutes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "surveying-jntuk-r23-ce-2-1",
+        "title": "Surveying - JNTUK R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Surveying: compass & levelling, contouring, areas & volumes, theodolite & traversing, curves, modern surveying and photogrammetry."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE01, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-1-strength-of-materials",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CE02",
+      "name": "Strength of Materials",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Simple Stresses and Strains",
+          "topics": [
+            "Elasticity and plasticity; types of stresses and strains; Hooke's law",
+            "Factor of safety; Poisson's ratio",
+            "Relationship between elastic constants",
+            "Bars of varying section; stresses in composite bars"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Shear Force and Bending Moment",
+          "topics": [
+            "Definition and types of beams; point of contraflexure",
+            "Relation between shear force, bending moment and rate of loading",
+            "SF and BM diagrams for cantilever, simply supported and overhanging beams",
+            "Beams under point loads, UDL, uniformly varying loads, partial UDL, couple and combinations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Flexural and Shear Stresses & Torsion",
+          "topics": [
+            "Theory of simple bending: assumptions, derivation of bending equation, neutral axis",
+            "Section modulus of rectangular, circular (solid and hollow), I, T, angle and channel sections; design of beams",
+            "Shear stress distribution across rectangular, circular, I, T and angle sections",
+            "Torsion of circular shafts"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Deflection of Beams",
+          "topics": [
+            "Double integration and Macaulay's methods",
+            "Slope and deflection for cantilever, simply supported and overhanging beams",
+            "Beams under point loads, UDL, UVL, partial UDL, couple and combinations",
+            "Mohr's theorems and moment area method"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Columns, Thin and Thick Cylinders",
+          "topics": [
+            "Classification of columns; Euler's crippling load theory for various end conditions; equivalent length and slenderness ratio",
+            "Limitations of Euler's theory; Rankine-Gordon formula; eccentric loading, secant and Perry's formula",
+            "Thin cylindrical shells: longitudinal and circumferential stresses; hoop, longitudinal and volumetric strains",
+            "Lame's theory for thick cylinders; distribution of hoop and radial stresses; compound cylinders"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "strength-of-materials-jntuk-r23-ce-2-1",
+        "title": "Strength of Materials - JNTUK R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Strength of Materials: stresses & strains, shear force & bending moment, flexural & shear stresses, beam deflection, columns and cylinders."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE02, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-1-fluid-mechanics",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CE03",
+      "name": "Fluid Mechanics",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Concepts and Fluid Pressure",
+          "topics": [
+            "Distinction between fluid and solid; density, specific weight and gravity; kinematic and dynamic viscosity, Newton's law of viscosity",
+            "Vapor pressure, surface tension, capillarity, bulk modulus of elasticity, compressibility",
+            "Fluid pressure: pressure at a point, Pascal's law, variation with temperature/density/altitude",
+            "Piezometer, U-tube, single column and differential manometers; pressure gauges"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fluid Statics",
+          "topics": [
+            "Hydrostatic pressure and force on horizontal, vertical and inclined surfaces",
+            "Buoyancy and stability of floating bodies",
+            "Centre of buoyancy and metacenter",
+            "Conditions of equilibrium for floating and submerged bodies"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Fluid Kinematics",
+          "topics": [
+            "Classification of fluid flow: steady/unsteady, uniform/non-uniform, laminar/turbulent, rotational/irrotational, compressible/incompressible, ideal/real, 1D/2D/3D",
+            "Stream line, path line, streak line and stream tube",
+            "Stream function and velocity potential function",
+            "One, two and three dimensional continuity equations in Cartesian coordinates"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Fluid Dynamics",
+          "topics": [
+            "Surface and body forces; Euler's equation; Bernoulli's equation - derivation; energy principle",
+            "Applications of Bernoulli's equation: venturimeter, orifice meter and Pitot tube",
+            "Momentum principle; forces exerted by fluid flow on a pipe bend",
+            "Free and forced vortex flow - governing equations and applications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Analysis of Pipe Flow",
+          "topics": [
+            "Energy losses in pipelines; Darcy-Weisbach equation; minor losses",
+            "Hydraulic grade line and total energy line; concept of equivalent length",
+            "Pipes in series and parallel",
+            "Dimensionless numbers: Reynolds, Froude, Mach, Weber and Euler numbers"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "fluid-mechanics-jntuk-r23-ce-2-1",
+        "title": "Fluid Mechanics - JNTUK R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Fluid Mechanics: fluid properties & pressure, fluid statics, fluid kinematics, fluid dynamics (Bernoulli, momentum) and analysis of pipe flow."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE03, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-1-surveying-lab",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CE52",
+      "name": "Surveying Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "surveying-lab-jntuk-r23-ce-2-1",
+        "title": "Surveying Lab - JNTUK R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Surveying Lab: chain, compass and plane-table surveys, fly levelling, theodolite work, total station and curve/contour setting."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE52). Field works read from the source PDF: chain survey with offsets, distance between inaccessible points by compass, plane table (radiation), fly levelling (height-of-instrument and rise-and-fall), theodolite (horizontal/vertical angles, inaccessible distances, object heights), total station (area/perimeter/distance), setting out a curve and determining contour levels."
+    },
+    {
+      "id": "r23-ce-2-1-strength-of-materials-lab",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CE53",
+      "name": "Strength of Materials Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "strength-of-materials-lab-jntuk-r23-ce-2-1",
+        "title": "Strength of Materials Lab - R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Strength of Materials Lab: tension, bending, torsion, hardness, spring, impact and shear tests, strain gauges and continuous-beam deflection."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE53). Experiments read from the source PDF: tension test, bending tests (cantilever/overhanging/simply supported), torsion, hardness, open- and closely-coiled spring tests, compression on wood/concrete, Izod/Charpy impact, shear on metals, electrical resistance strain gauges and continuous-beam deflection."
+    },
+    {
+      "id": "r23-ce-2-1-building-planning-and-drawing",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23CES1",
+      "name": "Building Planning and Drawing",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "building-planning-and-drawing-jntuk-r23-ce-2-1",
+        "title": "Building Planning and Drawing - R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Building Planning and Drawing: sign conventions, brick bonds, doors/windows/roofs, and plan/elevation/section of buildings."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill-enhancement drawing course (0-1-2-2, course code 23CES1). Exercises read from the source PDF: sign conventions, English and Flemish bonds, doors, windows, ventilators and roofs, line diagrams of residential buildings per building bye-laws, and plan/elevation/section drawings for single-storey, hospital and industrial buildings."
+    },
+    {
+      "id": "r23-ce-2-1-environmental-science",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": "23MC01",
+      "name": "Environmental Science",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Multidisciplinary Nature and Natural Resources",
+          "topics": [
+            "Definition, scope and importance of environmental studies; need for public awareness",
+            "Renewable and non-renewable resources; forest resources - use, over-exploitation, deforestation",
+            "Water resources - use and over-utilization, floods, drought, dams; mineral resources",
+            "Food resources - world food problems, effects of modern agriculture; energy resources"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ecosystems and Biodiversity",
+          "topics": [
+            "Structure and function of an ecosystem; producers, consumers and decomposers; energy flow; ecological succession",
+            "Food chains, food webs and ecological pyramids; forest, grassland, desert and aquatic ecosystems",
+            "Biodiversity: genetic, species and ecosystem diversity; value of biodiversity; India as a mega-diversity nation",
+            "Threats to biodiversity; endangered and endemic species; in-situ and ex-situ conservation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Environmental Pollution and Solid Waste Management",
+          "topics": [
+            "Air, water, soil, marine, noise and thermal pollution and nuclear hazards - causes, effects and control",
+            "Solid waste management: urban and industrial wastes",
+            "Role of an individual in prevention of pollution; pollution case studies",
+            "Disaster management: floods, earthquake, cyclone and landslides"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Social Issues and the Environment",
+          "topics": [
+            "From unsustainable to sustainable development; resettlement and rehabilitation",
+            "Environmental ethics; climate change, global warming, acid rain, ozone layer depletion",
+            "Carbon credits and Mission LiFE; wasteland reclamation; consumerism and waste products",
+            "Environment Protection Act, Air Act, Water Act, Wildlife and Forest Conservation Acts; public awareness"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Population and the Environment",
+          "topics": [
+            "Population growth and explosion; family welfare programmes",
+            "Environment and human health; human rights; value education",
+            "HIV/AIDS; women and child welfare; role of information technology",
+            "Field work: visit to local areas and polluted sites; study of common plants, insects and birds"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "environmental-science-jntuk-r23-ce-2-1",
+        "title": "Environmental Science - JNTUK R23 CE 2-1",
+        "meta_description": "LBRCE R23 CE 2-1 Environmental Science (audit): natural resources, ecosystems, biodiversity, pollution, social issues and human population."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '-'). Course code 23MC01. 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-managerial-economics-and-financial-analysis",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23HS02",
+      "name": "Managerial Economics and Financial Analysis",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Managerial Economics",
+          "topics": [
+            "Economics and managerial economics - nature and scope",
+            "Demand and law of demand",
+            "Elasticity of demand and its types",
+            "Demand forecasting methods"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Theory of Production and Cost Analysis",
+          "topics": [
+            "Production function; isoquant and isocost; least cost combination of inputs",
+            "Law of returns",
+            "Internal and external economies of scale",
+            "Cost concepts and break-even analysis"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Markets and Pricing Policies",
+          "topics": [
+            "Market structures: types of markets",
+            "Features and price determination under perfect competition, monopoly and monopolistic competition",
+            "Pricing policies and objectives",
+            "Pricing methods and applications in business"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Capital and Capital Budgeting",
+          "topics": [
+            "Nature and significance of capital; types of capital",
+            "Sources of raising capital",
+            "Capital budgeting: significance and process",
+            "Techniques of capital budgeting: non-discounted and discounted cash flow techniques"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Financial Accounting and Analysis",
+          "topics": [
+            "Accounting significance; book keeping; double entry system",
+            "Journal, ledger and trial balance",
+            "Final accounts with simple adjustments",
+            "Financial statement analysis through ratios"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "managerial-economics-and-financial-analysis-jntuk-r23-ce-2-2",
+        "title": "Managerial Economics & Financial Analysis-CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Managerial Economics & Financial Analysis: demand, production & cost, markets & pricing, capital budgeting and financial accounting."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23HS02, 2-0-0-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-engineering-geology",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE04",
+      "name": "Engineering Geology",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Branches of geology; importance of geology in civil engineering with case studies",
+            "Weathering of rocks",
+            "Geological agents and the weathering process of rock",
+            "Rivers and the geological work of rivers"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Mineralogy and Petrology",
+          "topics": [
+            "Definitions of mineral and rock; methods of study; physical properties for megascopic study",
+            "Common rock-forming minerals (feldspar, quartz, olivine, augite, hornblende, mica, calcite)",
+            "Ore-forming minerals (pyrite, hematite, magnetite, galena, graphite, chromite, bauxite)",
+            "Classification, structures, textures and forms of igneous, sedimentary and metamorphic rocks"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Structural Geology",
+          "topics": [
+            "Strike, dip and outcrop",
+            "Folds and faults: parts, types, mechanism",
+            "Joints and unconformities",
+            "Importance of geological structures in civil engineering"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Ground Water, Earthquakes, Landslides and Geophysics",
+          "topics": [
+            "Water table, cone of depression; geological controls of groundwater movement; exploration techniques",
+            "Earthquakes: terminology, classification, causes and effects; Richter scale; precautions in seismic areas",
+            "Landslides: classification, causes, effects and preventive measures",
+            "Geophysical methods: gravity, magnetic, electrical, seismic, radiometric and electrical resistivity"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Geology of Dams, Reservoirs and Tunnels",
+          "topics": [
+            "Types and purpose of dams",
+            "Geological considerations in the selection of a dam site",
+            "Geological considerations for reservoirs; life of reservoirs",
+            "Purpose of tunnelling; lining of tunnels; influence of geology on successful tunnelling"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-geology-jntuk-r23-ce-2-2",
+        "title": "Engineering Geology - JNTUK R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Engineering Geology: geological processes, mineralogy & petrology, structural geology, groundwater & geophysics and geology of dams & tunnels."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE04, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-concrete-technology",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE05",
+      "name": "Concrete Technology",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Cements and Aggregates",
+          "topics": [
+            "Portland cement: chemical composition, hydration, setting, fineness; test for physical properties; grades",
+            "Admixtures: mineral and chemical - accelerators, retarders, air entrainers, plasticizers, fly ash, silica fume",
+            "Aggregates: classification, particle shape and texture, mechanical properties, specific gravity, bulk density, bulking of sand",
+            "Deleterious substances, alkali-aggregate reaction, sieve analysis, fineness modulus, grading"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fresh Concrete",
+          "topics": [
+            "Steps in manufacture: proportioning, mixing, placing, compaction, finishing and curing",
+            "Workability and factors affecting it; measurement by different tests",
+            "Setting times; effect of time and temperature on workability",
+            "Segregation and bleeding; ready mixed concrete; shotcrete"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hardened Concrete",
+          "topics": [
+            "Water/cement ratio, Abram's law, gel/space ratio; maturity concept",
+            "Strength in tension and compression; factors affecting strength; relation between compressive and tensile strength",
+            "Curing; testing: compression, tension, flexure and splitting tests",
+            "Non-destructive testing methods and codal provisions for NDT"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Elasticity, Creep and Shrinkage",
+          "topics": [
+            "Modulus of elasticity; dynamic modulus of elasticity; Poisson's ratio",
+            "Creep of concrete and factors influencing creep",
+            "Relation between creep and time; nature and effects of creep",
+            "Shrinkage and types of shrinkage"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Mix Design and Special Concretes",
+          "topics": [
+            "Ready mixed concrete; fibre reinforced concrete - types of fibres and factors affecting FRC properties",
+            "High performance concrete; self-consolidating and self-healing concrete",
+            "Factors in the choice of mix proportions; quality control and statistical methods; acceptance criteria",
+            "Proportioning of concrete mixes by ACI method and IS code method"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "concrete-technology-jntuk-r23-ce-2-2",
+        "title": "Concrete Technology - JNTUK R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Concrete Technology: cements & aggregates, fresh concrete, hardened concrete, elasticity/creep/shrinkage, and mix design & special concretes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE05, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-structural-analysis",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE06",
+      "name": "Structural Analysis",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Energy Theorems",
+          "topics": [
+            "Strain energy in a linear elastic system",
+            "Expressions of strain energy due to axial load, bending moment and shear forces",
+            "Castigliano's first theorem",
+            "Deflections of simple beams and pin-jointed trusses"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Analysis of Indeterminate Structures",
+          "topics": [
+            "Indeterminate structural analysis",
+            "Determination of static and kinematic indeterminacies",
+            "Solution of trusses with up to two degrees of internal and external indeterminacy",
+            "Castigliano's second theorem"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Fixed and Continuous Beams",
+          "topics": [
+            "Statically indeterminate beams under UDL, central and eccentric point loads, multiple point loads, UVL and couple",
+            "Shear force and bending moment diagrams",
+            "Deflection of fixed beams",
+            "Effect of sinking and rotation of a support"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Slope-Deflection Method",
+          "topics": [
+            "Derivation of slope-deflection equations",
+            "Application to continuous beams with and without settlement of supports",
+            "Analysis of single bay portal frames without sway",
+            "Worked applications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Moment Distribution Method",
+          "topics": [
+            "Introduction to the moment distribution method",
+            "Application to continuous beams with and without settlement of supports",
+            "Analysis of single bay single storey portal frames without sway",
+            "Worked applications"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "structural-analysis-jntuk-r23-ce-2-2",
+        "title": "Structural Analysis - JNTUK R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Structural Analysis: energy theorems, indeterminate structures, fixed & continuous beams, slope-deflection and moment distribution methods."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE06, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-hydraulics-and-hydraulic-machinery",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE07",
+      "name": "Hydraulics and Hydraulic Machinery",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Laminar and Turbulent Flow in Pipes",
+          "topics": [
+            "Laminar flow through circular pipes, annulus and parallel plates; Stoke's law; measurement of viscosity",
+            "Reynolds experiment; transition from laminar to turbulent flow",
+            "Resistance to flow in smooth and rough pipes; Moody's diagram",
+            "Introduction to boundary layer theory"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Uniform Flow in Open Channels",
+          "topics": [
+            "Comparison between open channel flow and pipe flow; geometrical parameters of a channel",
+            "Classification of open channels and open channel flow",
+            "Velocity distribution of a channel section",
+            "Hydraulically efficient sections: rectangular, trapezoidal and triangular; energy and momentum correction factors"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Non-Uniform Flow in Open Channels",
+          "topics": [
+            "Specific energy, critical flow, discharge curve; specific force, specific depth and critical depth",
+            "Measurement of discharge and velocity",
+            "Gradually varied flow and its dynamic equation",
+            "Hydraulic jump and its classification; elements, characteristics and energy dissipation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Impact of Jets and Hydraulic Turbines",
+          "topics": [
+            "Hydrodynamic force of jets on stationary and moving flat, inclined and curved vanes; velocity triangles; work done and efficiency",
+            "Classification of turbines; Pelton wheel and its design",
+            "Francis turbine and its design; efficiency; draft tube theory",
+            "Characteristic curves of hydraulic turbines; cavitation - causes and effects"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Pumps",
+          "topics": [
+            "Working principle of a centrifugal pump; work done by impeller; heads, losses and efficiencies",
+            "Minimum starting speed; priming; specific speed; net positive suction head (NPSH)",
+            "Performance and characteristic curves; cavitation effects",
+            "Multistage centrifugal pumps; troubles and remedies"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "hydraulics-and-hydraulic-machinery-jntuk-r23-ce-2-2",
+        "title": "Hydraulics & Hydraulic Machinery - CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Hydraulics & Hydraulic Machinery: laminar & turbulent pipe flow, open channel flow, impact of jets, turbines and pumps."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core. Course code 23CE07, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-concrete-technology-lab",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE54",
+      "name": "Concrete Technology Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "concrete-technology-lab-jntuk-r23-ce-2-2",
+        "title": "Concrete Technology Lab - R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Concrete Technology Lab: tests on cement, fine and coarse aggregates, fresh concrete (slump, compaction factor, Vee-bee) and hardened concrete."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE54). Experiments read from the source PDF: cement tests (consistency, fineness, setting times, specific gravity, soundness, compressive strength), fine and coarse aggregate tests (grading, specific gravity, water absorption, bulking), fresh concrete workability (compaction factor, slump, Vee-bee) and hardened concrete (compressive strength, modulus of rupture, Young's modulus and Poisson's ratio, split tensile strength, NDT)."
+    },
+    {
+      "id": "r23-ce-2-2-engineering-geology-lab",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CE55",
+      "name": "Engineering Geology Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-geology-lab-jntuk-r23-ce-2-2",
+        "title": "Engineering Geology Lab - R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Engineering Geology Lab: identification of minerals and rocks, geological map interpretation, structural geology problems and bore-hole data."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE55). Experiments read from the source PDF: megascopic identification of rock-forming and ore-forming minerals and of igneous, sedimentary and metamorphic rocks; interpretation and drawing of sections for geological maps (tilted beds, faults, unconformities); simple structural geology and strike/dip problems; bore-hole data; rock strength tests; and field work."
+    },
+    {
+      "id": "r23-ce-2-2-remote-sensing-and-geographical-information-systems",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23CES2",
+      "name": "Remote Sensing and Geographical Information Systems",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Remote Sensing",
+          "topics": [
+            "History of remote sensing; electromagnetic radiation and spectrum",
+            "Energy interaction with the atmosphere and with earth surfaces",
+            "Characteristics of remote sensing systems; sensor resolutions; advantages and limitations",
+            "Platforms: types of sensors, airborne and spaceborne remote sensing (IRS, LANDSAT, SPOT and recent satellites)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Digital Image Analysis",
+          "topics": [
+            "Digital image characteristics and data formats: BIP, BIL and BSQ",
+            "Visual interpretation elements",
+            "Preprocessing and enhancement",
+            "Classification: supervised and unsupervised classification"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Introduction to Geographic Information System",
+          "topics": [
+            "Principles, components and applications of GIS; map projections",
+            "Spatial data structures: raster and vector data formats; data input, manipulation, retrieval and analysis",
+            "Spatial data analysis: vector and raster overlay operations, arithmetic/comparison/logical operators, conditional expressions",
+            "Network analysis: components of a network, transportation network, optimum path analysis"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "remote-sensing-and-geographical-information-systems-jntuk-r23-ce-2-2",
+        "title": "Remote Sensing & GIS - JNTUK R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Remote Sensing & Geographical Information Systems: remote sensing fundamentals, digital image analysis and GIS, plus QGIS/ArcGIS practicals."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill-enhancement course (0-1-2-2, course code 23CES2). The source gives 3 theory units plus a practical experiment list (georeferencing, digitization, thematic maps, feature geometry, TIN/DEM from contours, stream ordering, watershed parameters and route analysis using QGIS/ArcGIS) read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-design-thinking-and-innovation",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23ME57",
+      "name": "Design Thinking & Innovation",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 1,
+        "T": 0,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design Thinking",
+          "topics": [
+            "Introduction to elements and principles of design",
+            "Basics of design - dot, line, shape, form as fundamental design components",
+            "Principles of design",
+            "Introduction to design thinking, history of design thinking, new materials in industry"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Thinking Process",
+          "topics": [
+            "Design thinking process: empathize, analyze, idea and prototype",
+            "Implementing the process in driving inventions",
+            "Design thinking in social innovations",
+            "Tools of design thinking - persona, customer journey map, brainstorming, product development"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Innovation",
+          "topics": [
+            "Art of innovation; difference between innovation and creativity",
+            "Role of creativity and innovation in organizations",
+            "Creativity to innovation; teams for innovation",
+            "Measuring the impact and value of creativity"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Product Design",
+          "topics": [
+            "Problem formation; introduction to product design",
+            "Product strategies, product value, product planning and specifications",
+            "Innovation towards product design",
+            "Case studies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design Thinking in Business Processes",
+          "topics": [
+            "Design thinking applied in business and strategic innovation; principles that redefine business",
+            "Business challenges: growth, predictability, change, maintaining relevance, extreme competition, standardization",
+            "Design thinking to meet corporate needs; design thinking for startups",
+            "Defining and testing business models and cases; developing and testing prototypes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-thinking-and-innovation-jntuk-r23-ce-2-2",
+        "title": "Design Thinking & Innovation - R23 CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Design Thinking & Innovation: elements & principles of design, design thinking process, innovation, product design and business processes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME57, 1-0-2-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ce-2-2-building-materials-and-construction",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": "23MC02",
+      "name": "Building Materials and Construction",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Stones and Bricks",
+          "topics": [
+            "Classification of rocks; characteristics of a good building stone; dressing of stones",
+            "Common building stones - properties, composition and uses",
+            "Bricks: composition, constituents of brick earth, manufacturing process",
+            "Characteristics of good bricks; classification; fly ash and hollow bricks"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Lime and Cement",
+          "topics": [
+            "Lime: limestone cycle, sources, properties, constituents, classification and storage",
+            "Cement: classification and properties; comparison between cement and lime",
+            "Constituents and functions of ingredients; outline of Portland cement manufacture",
+            "Field tests for cement; types, uses and storage of cements"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Mortar and Masonry",
+          "topics": [
+            "Classification and characteristics of good mortar; types and preparation; precautions",
+            "Types of masonry; joints in stone masonry",
+            "Bonds in bricks: English and Flemish bonds; tools for brick laying",
+            "Defects in brick masonry; importance of cavity and partition walls"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Building Components",
+          "topics": [
+            "Components of a building: substructure and superstructure",
+            "Importance, functions and requirements of good foundations; types of foundations",
+            "Lintels, arches and walls",
+            "Staircases; types of floors and roofs"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Timber and Finishings in Buildings",
+          "topics": [
+            "Classification of timber trees; cross section of an exogenous tree; seasoning of timber; types and uses; plywood",
+            "Paints: functions, types, constituents, characteristics and defects",
+            "Damp proofing: effects of dampness, methods",
+            "Materials used for damp-proof course and treatment in buildings"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "building-materials-and-construction-jntuk-r23-ce-2-2",
+        "title": "Building Materials & Construction - CE 2-2",
+        "meta_description": "LBRCE R23 CE 2-2 Building Materials and Construction (audit): stones & bricks, lime & cement, mortar & masonry, building components, and timber & finishings."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Audit course - no credit (L-T-P 3-0-0, credits shown as '-'). Course code 23MC02. 5-unit syllabus read from the source PDF."
+    }
+  ]
+}
