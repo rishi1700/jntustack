@@ -46,6 +46,13 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject, 
       </div>`
     : '';
 
+  // Short, student-facing caveat about the source itself (e.g. autonomous-college
+  // sourcing). Rendered only when present so it stays honest about the "Verified"
+  // stamp instead of hiding the nuance in maintainer-only metadata.
+  const sourceCaveatHtml = subject.source.college_source_note
+    ? `<div class="disclaimer-box">${escapeHtml(subject.source.college_source_note)}</div>`
+    : '';
+
   return `
 ${hubBreadcrumb}
 <div class="form-strip">
@@ -60,6 +67,8 @@ ${hubBreadcrumb}
   <span class="badge ${badgeClass}">${badgeLabel}</span>
   ${subject.source.retrieved_date ? `<span>Checked ${escapeHtml(subject.source.retrieved_date)}</span>` : ''}
 </div>
+
+${sourceCaveatHtml}
 
 ${legacyHtml}
 

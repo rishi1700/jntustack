@@ -90,6 +90,10 @@
           "type": "string",
           "enum": ["verified", "needs_verification", "placeholder"],
           "description": "verified = checked against an official JNTUK/UCEN/affiliated-college source; needs_verification = structurally present but not yet checked against a primary source; placeholder = scaffolding only, must not be published as-is"
+        },
+        "college_source_note": {
+          "type": ["string", "null"],
+          "description": "Optional short, single-sentence, student-facing caveat about the source itself (e.g. autonomous-college sourcing). Rendered on the page in a disclaimer box; only populate when a reader genuinely needs to know. Distinct from the internal maintainer-facing notes field on the record."
         }
       }
     },
