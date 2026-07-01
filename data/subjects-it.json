@@ -1,0 +1,1454 @@
+{
+  "subjects": [
+    {
+      "id": "r23-it-2-1-discrete-mathematics-and-graph-theory",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Discrete Mathematics & Graph Theory",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Mathematical Logic",
+          "topics": [
+            "Propositional calculus: statements and notations, connectives, well-formed formula, truth tables",
+            "Tautologies, equivalence of formulas, duality law, tautological implications, normal forms",
+            "Theory of inference for statement calculus: consistency of premises, indirect method of proof",
+            "Predicate calculus: predicates, statement functions, variables and quantifiers, free and bound variables, inference theory"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Set Theory",
+          "topics": [
+            "Sets: operations on sets, principle of inclusion-exclusion",
+            "Relations: properties, operations, partition and covering, transitive closure",
+            "Equivalence, compatibility and partial ordering, Hasse diagrams",
+            "Functions: bijective, composition, inverse, permutation and recursive functions; lattice and its properties"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Combinatorics and Recurrence Relations",
+          "topics": [
+            "Basis of counting; permutations with repetition, circular and restricted permutations",
+            "Combinations, restricted combinations; binomial and multinomial coefficients and theorems",
+            "Recurrence relations: generating functions, function of sequences, partial fractions, calculating coefficients",
+            "Formulation as recurrence relations; solving by substitution and generating functions; method of characteristic roots; inhomogeneous relations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Graph Theory",
+          "topics": [
+            "Basic concepts, graph theory and its applications, subgraphs",
+            "Graph representations: adjacency and incidence matrices",
+            "Isomorphic graphs, paths and circuits",
+            "Eulerian and Hamiltonian graphs"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Multi Graphs",
+          "topics": [
+            "Multigraphs, bipartite and planar graphs, Euler's theorem",
+            "Graph colouring and covering, chromatic number",
+            "Spanning trees, Prim's and Kruskal's algorithms",
+            "BFS and DFS spanning trees"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "discrete-mathematics-and-graph-theory-jntuk-r23-it-2-1",
+        "title": "Discrete Mathematics & Graph Theory - R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Discrete Mathematics & Graph Theory syllabus: mathematical logic, set theory, combinatorics, recurrence relations and graph theory."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Common to CSE, IT and CSE-AI&ML (per the IT course structure). Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Content matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-1-universal-human-values",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Universal Human Values - Understanding Harmony and Ethical Human Conduct",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right understanding, relationship and physical facility (holistic development and the role of education)",
+            "Understanding value education; self-exploration as the process for value education",
+            "Continuous happiness and prosperity - the basic human aspirations; current scenario",
+            "Method to fulfil the basic human aspirations"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "Understanding the human being as the co-existence of the self and the body",
+            "Distinguishing between the needs of the self and the body; the body as an instrument of the self",
+            "Understanding harmony in the self; harmony of the self with the body",
+            "Programme to ensure self-regulation and health"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the family - the basic unit of human interaction",
+            "'Trust' - the foundational value in relationship; 'Respect' - as the right evaluation",
+            "Other feelings, justice in human-to-human relationship",
+            "Understanding harmony in the society; vision for the universal human order"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in the Nature/Existence",
+          "topics": [
+            "Understanding harmony in the nature",
+            "Interconnectedness, self-regulation and mutual fulfilment among the four orders of nature",
+            "Realizing existence as co-existence at all levels",
+            "The holistic perception of harmony in existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications of the Holistic Understanding - a Look at Professional Ethics",
+          "topics": [
+            "Natural acceptance of human values; definitiveness of (ethical) human conduct",
+            "A basis for humanistic education, humanistic constitution and universal human order",
+            "Competence in professional ethics",
+            "Holistic technologies, production systems and management models; strategies for transition towards value-based life and profession"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "universal-human-values-jntuk-r23-it-2-1",
+        "title": "Universal Human Values - R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Universal Human Values (UHV-II): value education, harmony in the human being, family, society, nature and professional ethics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "The IT course structure lists this under BS&H; mapped to HSMC for site consistency (it is the values/humanities course, same as CSE's UHV). 2-1-0-3 credits and the 5-unit (28 lectures + 14 tutorials) structure confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-1-digital-logic-and-computer-organization",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Digital Logic & Computer Organization",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Data Representation & Digital Logic Circuits-I",
+          "topics": [
+            "Data representation: binary numbers, fixed point and floating point representation",
+            "Number base conversions, octal and hexadecimal numbers, complements, signed binary numbers, binary codes",
+            "Boolean theorems, logic gates, universal logic gates, minimization of logic expressions, K-map simplification (up to 4 variables)",
+            "Combinational circuits: adders, subtractor, encoders, decoders, multiplexers and de-multiplexers"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Digital Logic Circuits-II & Basic Structure of Computers",
+          "topics": [
+            "Sequential circuits, flip-flops, binary counters, registers, shift registers, ripple counters",
+            "Computer types, functional units, basic operational concepts, bus structures",
+            "Software, performance, multiprocessors and multicomputers",
+            "Computer generations, Von-Neumann architecture"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Computer Arithmetic & Processor Organization",
+          "topics": [
+            "Addition and subtraction of signed numbers, design of fast adders",
+            "Multiplication of positive numbers, signed-operand multiplication, fast multiplication, integer division",
+            "Processor organization: fundamental concepts, execution of a complete instruction, multiple-bus organization",
+            "Hardwired control and microprogrammed control"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Memory Organization",
+          "topics": [
+            "Basic concepts, semiconductor RAM memories, read-only memories",
+            "Speed, size and cost; cache memories, performance considerations",
+            "Virtual memories, memory management requirements",
+            "Secondary storage"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Input/Output Organization",
+          "topics": [
+            "Accessing I/O devices, interrupts, processor examples",
+            "Direct memory access (DMA)",
+            "Buses, interface circuits",
+            "Standard I/O interfaces"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-logic-and-computer-organization-jntuk-r23-it-2-1",
+        "title": "Digital Logic & Computer Organization - R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Digital Logic & Computer Organization syllabus: data representation, logic circuits, computer arithmetic, memory and I/O organization."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-1-advanced-data-structures-and-algorithms",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Advanced Data Structures & Algorithms",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Advanced Data Structures",
+          "topics": [
+            "AVL trees - creation, insertion, deletion operations and applications",
+            "B-trees - creation, insertion, deletion operations and applications",
+            "Heap trees (priority queues) - min and max heaps, operations and applications",
+            "Graphs - terminology, representations, basic search and traversals, connected and biconnected components, applications"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Algorithm Analysis & Divide and Conquer",
+          "topics": [
+            "Algorithm, types of algorithms, algorithm specifications",
+            "Performance analysis: space and time complexity analysis, asymptotic notations",
+            "Divide and conquer: general method, quick sort, merge sort",
+            "Strassen's matrix multiplication, convex hull"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Greedy Method & Dynamic Programming",
+          "topics": [
+            "Greedy method: general method, job sequencing with deadlines, knapsack problem, minimum cost spanning trees, single source shortest paths",
+            "Dynamic programming: general method, all pairs shortest paths, single source shortest paths - general weights (Bellman-Ford)",
+            "Optimal binary search trees, 0/1 knapsack, string editing",
+            "Travelling salesperson problem"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Backtracking & Branch and Bound",
+          "topics": [
+            "Backtracking: general method, 8-queens problem, sum of subsets problem",
+            "Graph colouring, 0/1 knapsack problem",
+            "Branch and bound: general method, 0/1 knapsack problem",
+            "Travelling salesperson problem"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "NP Hard and NP Complete Problems",
+          "topics": [
+            "Basic concepts, Cook's theorem",
+            "NP hard graph problems: clique decision problem (CDP), chromatic number decision problem (CNDP), travelling salesperson decision problem (TSP)",
+            "NP hard scheduling problems: scheduling identical processors",
+            "Job shop scheduling"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-data-structures-and-algorithms-jntuk-r23-it-2-1",
+        "title": "Advanced Data Structures & Algorithms - R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Advanced Data Structures & Algorithms: AVL and B-trees, heaps, graphs, divide & conquer, greedy, DP, backtracking and NP problems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "IT titles this subject 'Advanced Data Structures & Algorithms' -- note the CSE R23 record is titled 'Advanced Data Structures & Algorithm Analysis'. The unit content is closely aligned, but this record is transcribed independently from the IT syllabus PDF. 3-0-0-3 credits and 5-unit syllabus confirmed."
+    },
+    {
+      "id": "r23-it-2-1-object-oriented-programming-through-java",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Object Oriented Programming Through Java",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "OOP Basics, Data Types and Control Statements",
+          "topics": [
+            "Object oriented programming: basic concepts, history of Java, buzz words, principles, program structure in Java",
+            "Elements/tokens, Java statements, command line arguments, user input, escape sequences, comments",
+            "Data types, variables, type casting, scope, literal and symbolic constants, static variables and methods, operators",
+            "Control statements: if, nested if, if-else, switch, while, do-while, for, for-each, break and continue"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Classes, Objects and Methods",
+          "topics": [
+            "Class declaration and modifiers, class members, declaration of class objects, assigning objects",
+            "Access control, accessing private members, constructor methods, nested classes, passing arguments by value, keyword this",
+            "Methods: defining, overloaded methods and constructors, class objects as parameters, access control",
+            "Recursive methods, nesting of methods, overriding methods, final and static attributes, static methods"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Arrays, Inheritance and Interfaces",
+          "topics": [
+            "Arrays: declaration and initialization, storage, accessing elements, operations, sorting and searching, two- and three-dimensional arrays, arrays as vectors",
+            "Inheritance: process, types, universal super class (Object), final classes and methods, access control and inheritance, multilevel inheritance, super, constructor and inheritance",
+            "Method overriding, dynamic method dispatch, abstract classes",
+            "Interfaces: declaration, implementation, multiple and nested interfaces, inheritance of interfaces, default and static methods"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Packages and Exception Handling",
+          "topics": [
+            "Packages and Java library: defining, importing packages and classes, path and class path, access control, packages in Java SE",
+            "java.lang package and its classes, class Object, enumeration, class Math, wrapper classes, auto-boxing and auto-unboxing",
+            "java.util classes and interfaces, Formatter, Random, Time package, Instant, date/time formatting, temporal adjusters",
+            "Exception handling: hierarchy of standard exception classes, throws and throw, try/catch/finally, multiple catch, Throwable, checked and unchecked exceptions"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Strings, Multithreading and JDBC",
+          "topics": [
+            "String handling: CharSequence, class String, extracting/comparing/modifying/searching characters, StringBuffer",
+            "Multithreaded programming: need for multiple threads, multi-core programming, Thread class, main thread, thread states and priority",
+            "Synchronization, deadlock and race situations, inter-thread communication, suspending/resuming/stopping threads",
+            "Java Database Connectivity: JDBC architecture, installing MySQL and Connector/J, environment setup, establishing connections, ResultSet interface"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "object-oriented-programming-through-java-jntuk-r23-it-2-1",
+        "title": "OOP Through Java - JNTUK R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Object Oriented Programming Through Java syllabus: classes, methods, inheritance, interfaces, packages, exceptions, threads and JDBC."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-1-advanced-data-structures-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Advanced Data Structures Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-data-structures-lab-jntuk-r23-it-2-1",
+        "title": "Advanced Data Structures Lab - R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Advanced Data Structures Lab: AVL/B-trees, heaps, graph traversals, sorting, single-source shortest paths, knapsack, N-Queens and TSP."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list covering AVL/B-trees, heaps, BFT/DFT, biconnected components, quick/merge sort, greedy shortest paths, job sequencing, 0/1 knapsack (DP and backtracking), N-Queens and branch-and-bound TSP confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-1-object-oriented-programming-through-java-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Object Oriented Programming Through Java Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "object-oriented-programming-through-java-lab-jntuk-r23-it-2-1",
+        "title": "OOP Through Java Lab - JNTUK R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Object Oriented Programming Through Java Lab: classes, inheritance, polymorphism, exceptions, threads, packages and JDBC connectivity."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Lab (0-0-3-1.5). Twelve exercises covering data types, classes and constructors, inheritance, interfaces, runtime polymorphism, exception handling, user-defined exceptions, threads, packages and JDBC confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-1-python-programming",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Python Programming",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Python Basics and Control Flow",
+          "topics": [
+            "History of Python, thrust areas, installing Anaconda distribution, Jupyter Notebook",
+            "Identifiers, keywords, statements and expressions, variables, operators, precedence and associativity, data types",
+            "Indentation, comments, reading input, print output, type conversions, type() and is operator, dynamic and strongly typed language",
+            "Control flow: if, if-else, if-elif-else, nested if, while and for loops, continue and break, catching exceptions with try/except"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Functions, Strings and Lists",
+          "topics": [
+            "Functions: built-in functions, modules, definition and calling, return and void functions, scope and lifetime",
+            "Default parameters, keyword arguments, *args and **kwargs, command line arguments",
+            "Strings: creating and storing, basic operations, indexing, slicing and joining, string methods, formatting",
+            "Lists: creating, basic operations, indexing and slicing, built-in functions, list methods, del statement"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Dictionaries, Tuples and Sets",
+          "topics": [
+            "Dictionaries: creating, accessing and modifying key:value pairs, built-in functions, methods, del statement",
+            "Tuples: creating, basic operations, tuple() function, indexing and slicing, built-in functions",
+            "Relation between tuples and lists, tuples and dictionaries, using zip()",
+            "Sets, set methods, frozenset"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Files and Object-Oriented Programming",
+          "topics": [
+            "Files: types of files, creating and reading text data, file methods to read and write",
+            "Reading and writing binary files, pickle module, reading and writing CSV files, os and os.path modules",
+            "Classes and objects, creating classes and objects, constructor method, classes with multiple objects",
+            "Class attributes vs data attributes, encapsulation, inheritance, polymorphism"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Introduction to Data Science",
+          "topics": [
+            "Functional programming",
+            "JSON and XML in Python",
+            "NumPy with Python",
+            "Pandas"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "python-programming-jntuk-r23-it-2-1",
+        "title": "Python Programming - JNTUK R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Python Programming (skill enhancement): data types, control flow, functions, strings, lists, dictionaries, tuples, files, OOP and NumPy/Pandas."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2). 5-unit syllabus with per-unit exercises confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-1-environmental-science",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Environmental Science",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Multidisciplinary Nature & Natural Resources",
+          "topics": [
+            "Multidisciplinary nature of environmental studies: definition, scope and importance, need for public awareness",
+            "Renewable and non-renewable resources; forest resources - use, over-exploitation, deforestation, timber extraction, mining, dams",
+            "Water resources - use and over-utilization, floods, drought, conflicts over water; mineral resources",
+            "Food resources - world food problems, effects of modern agriculture, fertilizer-pesticide problems; energy resources"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ecosystems and Biodiversity",
+          "topics": [
+            "Concept, structure and function of an ecosystem; producers, consumers and decomposers; energy flow; ecological succession",
+            "Food chains, food webs and ecological pyramids; forest, grassland, desert and aquatic ecosystems",
+            "Biodiversity: genetic, species and ecosystem diversity; bio-geographical classification of India; value of biodiversity",
+            "Threats to biodiversity, endangered and endemic species; in-situ and ex-situ conservation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Environmental Pollution and Solid Waste Management",
+          "topics": [
+            "Air, water, soil, marine, noise, thermal pollution and nuclear hazards - causes, effects and control measures",
+            "Solid waste management: causes, effects and control of urban and industrial wastes",
+            "Role of an individual in prevention of pollution; pollution case studies",
+            "Disaster management: floods, earthquake, cyclone and landslides"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Social Issues and the Environment",
+          "topics": [
+            "From unsustainable to sustainable development; urban problems related to energy; water conservation, rainwater harvesting, watershed management",
+            "Resettlement and rehabilitation of people; environmental ethics: issues and possible solutions",
+            "Climate change, global warming, acid rain, ozone layer depletion, nuclear accidents; wasteland reclamation; consumerism and waste products",
+            "Environment Protection Act, Air Act, Water Act, Wildlife Protection Act, Forest Conservation Act; issues in enforcement; public awareness"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Population and the Environment",
+          "topics": [
+            "Population growth, variation among nations, population explosion, family welfare programmes",
+            "Environment and human health, human rights, value education",
+            "HIV/AIDS, women and child welfare, role of information technology in environment and human health",
+            "Field work: visit to a local area/polluted site; study of common plants, insects and birds"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "environmental-science-jntuk-r23-it-2-1",
+        "title": "Environmental Science - JNTUK R23 IT 2-1",
+        "meta_description": "JNTUK R23 IT 2-1 Environmental Science (audit course): natural resources, ecosystems, biodiversity, pollution, social issues and human population."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '--' in the source). 5-unit syllabus confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-optimization-techniques",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Optimization Techniques",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Classical Optimization Techniques",
+          "topics": [
+            "Statement of an optimization problem, design vector, design constraints, constraint surface, objective function and surfaces, classification",
+            "Single variable optimization; multi-variable optimization without constraints, necessary and sufficient conditions for minimum/maximum",
+            "Multivariable optimization with equality constraints - solution by method of Lagrange multipliers",
+            "Multivariable optimization with inequality constraints, Kuhn-Tucker conditions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Linear Programming",
+          "topics": [
+            "Standard form of a linear programming problem, geometry of linear programming problems",
+            "Definitions and theorems",
+            "Solution of a system of linear simultaneous equations, pivotal reduction of a general system of equations",
+            "Motivation to the simplex method, simplex algorithm"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Transportation Problem",
+          "topics": [
+            "Finding initial basic feasible solution by north-west corner rule",
+            "Least cost method and Vogel's approximation method",
+            "Testing for optimality of balanced transportation problems",
+            "Special cases in transportation problem"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sequencing and Theory of Games",
+          "topics": [
+            "Sequencing: flow-shop sequencing, n jobs through two machines, n jobs through three machines, two jobs through m machines",
+            "Theory of games: introduction to decision theory, minimax (maximin) criterion and optimal strategy",
+            "Solution of games with saddle points; rectangular games without saddle points; 2 x 2 games",
+            "Dominance principle; m x 2 and 2 x n games - graphical method"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Network Analysis",
+          "topics": [
+            "Project planning, scheduling and controlling; tools for project management",
+            "Critical path method (CPM)",
+            "Programme evaluation and review technique (PERT)",
+            "Cost analysis and crashing, resource leveling, updating"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "optimization-techniques-jntuk-r23-it-2-2",
+        "title": "Optimization Techniques - JNTUK R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Optimization Techniques: classical optimization, linear programming & simplex, transportation, sequencing, game theory, CPM and PERT."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "IT's Management Course-I slot is Optimization Techniques (Common to CSE-AIML and IT per the doc) -- note the CSE R23 2-2 record fills this same slot with 'Managerial Economics & Financial Analysis' instead; the two branches differ here. 2-0-0-2 credits and 5-unit syllabus confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-probability-and-statistics",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Probability & Statistics",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Descriptive Statistics and Methods for Data Science",
+          "topics": [
+            "Data science, statistics introduction, population vs sample, collection of data, primary and secondary data",
+            "Types of variable: dependent and independent, categorical and continuous variables",
+            "Data visualization",
+            "Measures of central tendency, measures of variability, skewness, kurtosis"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Correlation and Regression",
+          "topics": [
+            "Correlation: correlation coefficient, rank correlation",
+            "Linear regression: straight line, multiple linear regression",
+            "Regression coefficients and properties",
+            "Curvilinear regression: parabola, exponential and power curves"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Probability and Distributions",
+          "topics": [
+            "Introduction of probability, addition theorem, conditional probability, Baye's theorem",
+            "Random variables: discrete and continuous",
+            "Distribution functions: probability mass function, probability density function, cumulative distribution functions; expectation and variance",
+            "Binomial, Poisson, uniform and normal distributions"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sampling Theory",
+          "topics": [
+            "Introduction, population and samples",
+            "Sampling distribution of means and variance",
+            "Point and interval estimations, maximum error of estimate",
+            "Central limit theorem (without proof), estimation using t-test"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Test of Hypothesis",
+          "topics": [
+            "Introduction, hypothesis, null and alternative hypothesis, errors in sampling, level of significance, one-tail and two-tail tests",
+            "Test of significance for large samples and small samples",
+            "Single and two means, single and two proportions",
+            "Student's t-test, F-test, chi-square test"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "probability-and-statistics-jntuk-r23-it-2-2",
+        "title": "Probability & Statistics - JNTUK R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Probability & Statistics: descriptive statistics, correlation & regression, probability distributions, sampling theory and hypothesis testing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Common to CSE, IT and CSE-AI&ML (per the IT course structure). 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-2-operating-systems",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Operating Systems",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Operating Systems Overview and System Structures",
+          "topics": [
+            "Introduction, operating system functions, operations, computing environments, free and open-source operating systems",
+            "Operating system services, user and operating-system interface",
+            "System calls, types of system calls, system programs",
+            "OS design and implementation, structure, building and booting an operating system, debugging"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Processes, Threads and CPU Scheduling",
+          "topics": [
+            "Process concept, process scheduling, operations on processes, inter-process communication",
+            "Threads and concurrency: multithreading models, thread libraries, threading issues",
+            "CPU scheduling: basic concepts, scheduling criteria, scheduling algorithms",
+            "Multiple processor scheduling"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Synchronization and Deadlocks",
+          "topics": [
+            "Synchronization tools: the critical section problem, Peterson's solution, mutex locks, semaphores, monitors, classic problems",
+            "Deadlocks: system model, deadlock characterization, methods for handling deadlocks",
+            "Deadlock prevention, avoidance, detection",
+            "Recovery from deadlock"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Memory and Virtual Memory Management",
+          "topics": [
+            "Memory-management strategies: contiguous memory allocation, paging, structure of the page table, swapping",
+            "Virtual memory management: demand paging, copy-on-write",
+            "Page replacement, allocation of frames, thrashing",
+            "Storage management: overview of mass storage structure, HDD scheduling"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "File System and Protection",
+          "topics": [
+            "File system interface: file concept, access methods, directory structure",
+            "File system implementation: structure, operations, directory implementation, allocation methods, free space management",
+            "File-system internals: mounting, partitions and mounting, file sharing",
+            "Protection: goals and principles of protection, protection rings, domain of protection, access matrix"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "operating-systems-jntuk-r23-it-2-2",
+        "title": "Operating Systems - JNTUK R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Operating Systems: OS structures and system calls, processes and threads, CPU scheduling, synchronization, deadlocks, memory and file systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-2-database-management-systems",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Database Management Systems",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Entity Relationship Model",
+          "topics": [
+            "Database system, characteristics (database vs file system), database users, advantages, applications",
+            "Data models; schema, instance and data independence; three-tier schema architecture",
+            "Database system structure, environment, centralized and client-server architecture",
+            "Entity Relationship model: entities, attributes, entity set, relationship, constraints, subclasses, superclass, inheritance, specialization, generalization, ER diagrams"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Relational Model and Basic SQL",
+          "topics": [
+            "Introduction to relational model, concepts of domain, attribute, tuple, relation, importance of null values",
+            "Constraints (domain, key constraints, integrity constraints) and their importance",
+            "Relational algebra, relational calculus",
+            "Basic SQL: simple schema, data types, table definitions (create, alter), DML operations (insert, delete, update)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "SQL",
+          "topics": [
+            "Basic SQL querying (select and project) using where clause, arithmetic and logical operations, SQL functions",
+            "Creating tables with relationships, implementation of key and integrity constraints",
+            "Nested queries, sub queries, grouping, aggregation, ordering",
+            "Different types of joins, views (updatable and non-updatable), relational set operations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Schema Refinement (Normalization)",
+          "topics": [
+            "Purpose of normalization or schema refinement, concept of functional dependency",
+            "Normal forms based on functional dependency, lossless join and dependency preserving decomposition",
+            "1NF, 2NF and 3NF; concept of surrogate key",
+            "Boyce-Codd normal form (BCNF), MVD, fourth normal form (4NF), fifth normal form (5NF)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transactions and Indexing",
+          "topics": [
+            "Transaction concept, transaction state, ACID properties, concurrent executions, serializability, recoverability",
+            "Implementation of isolation, testing for serializability; lock based, timestamp based and optimistic concurrency protocols",
+            "Deadlocks, failure classification, storage, recovery and atomicity, recovery algorithm",
+            "Introduction to indexing techniques: B+ trees, operations on B+ trees, hash based indexing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "database-management-systems-jntuk-r23-it-2-2",
+        "title": "Database Management Systems - R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Database Management Systems: ER model, relational model, SQL, normalization, transactions, concurrency control and B+ tree indexing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
+    },
+    {
+      "id": "r23-it-2-2-software-engineering",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Software Engineering",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Software Life Cycle Models",
+          "topics": [
+            "Evolution, software development projects, exploratory style of software development",
+            "Emergence of software engineering, notable changes in software development practices, computer system engineering",
+            "Software life cycle models: basic concepts, waterfall model and its extensions",
+            "Rapid application development, agile development model, spiral model"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Software Project Management and Requirements",
+          "topics": [
+            "Software project management complexities, responsibilities of a software project manager",
+            "Metrics for project size estimation, project estimation techniques, empirical estimation, COCOMO, Halstead's software science, risk management",
+            "Requirements gathering and analysis, Software Requirements Specification (SRS)",
+            "Formal system specification, axiomatic and algebraic specification, executable specification and 4GL"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Software Design, Agility and UI Design",
+          "topics": [
+            "Overview of the design process, characterizing a good software design, layered arrangement of modules, cohesion and coupling",
+            "Agility and the cost of change, agile process, Extreme Programming (XP), other agile process models and tool set",
+            "Function-oriented software design: SA/SD methodology, structured analysis, DFD model, structured design, detailed design and design review",
+            "User interface design: characteristics of a good UI, types of user interfaces, component-based GUI development, UI design methodology"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Coding, Testing and Quality Management",
+          "topics": [
+            "Coding, code review, software documentation",
+            "Testing: black-box testing, white-box testing, debugging, program analysis tools, integration testing, testing OO programs, smoke testing",
+            "Software reliability, statistical testing",
+            "Software quality, quality management system, ISO 9000, SEI capability maturity model, other quality standards, Six Sigma"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "CASE, Maintenance and Reuse",
+          "topics": [
+            "Computer-aided software engineering (CASE): scope, environment, support in the software life cycle, characteristics, second generation CASE, architecture",
+            "Software maintenance: characteristics, software reverse engineering, maintenance process models, estimation of maintenance cost",
+            "Software reuse: definition and introduction, reasons behind no reuse so far",
+            "Basic issues in a reuse program, a reuse approach, reuse at organization level"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-engineering-jntuk-r23-it-2-2",
+        "title": "Software Engineering - JNTUK R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Software Engineering: software life cycle models, project management, requirements, design, testing, quality management, CASE and maintenance."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "IT lists Software Engineering as 3-0-0-3 (3 credits) -- note the CSE R23 2-2 record is 2-1-0-3; the lecture/tutorial split differs between the two branches. 5-unit syllabus confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-operating-systems-and-software-engineering-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Operating Systems & Software Engineering Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "operating-systems-and-software-engineering-lab-jntuk-r23-it-2-2",
+        "title": "OS & Software Engineering Lab - R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Operating Systems & Software Engineering Lab: UNIX system calls, CPU scheduling, semaphores, deadlock, paging, SRS, DFD, UML and test cases."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "IT combines Operating Systems and Software Engineering into one lab (0-0-3-1.5) -- note the CSE R23 2-2 has a standalone 'Operating Systems Lab' instead; the lab structure differs between branches. Experiment lists for both OS (UNIX commands/system calls, CPU scheduling, semaphores/monitors, memory allocation, page replacement, Banker's algorithm, file allocation) and SE (SRS, ER/DFD/CFD, COCOMO/FP estimation, UML diagrams, test case design) confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-database-management-systems-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Database Management Systems Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "database-management-systems-lab-jntuk-r23-it-2-2",
+        "title": "Database Management Systems Lab - R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Database Management Systems Lab: DDL/DML/DCL, queries, joins, views, PL/SQL procedures, functions, cursors, triggers, indexing and JDBC."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Lab (0-0-3-1.5). Ten exercises covering table creation and constraints, sub queries, aggregate/conversion/string/date functions, views, PL/SQL blocks, procedures, functions, cursors, triggers, indexing and JDBC connectivity confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-python-with-django",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Python with Django",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Python Libraries for Web Development",
+          "topics": [
+            "Collections - container datatypes; Tkinter - GUI applications; Requests - HTTP requests",
+            "BeautifulSoup4 - web scraping; Scrapy, Zappa, Dash",
+            "CherryPy, TurboGears, Flask, Web2Py, Bottle",
+            "Falcon, CubicWeb, Quixote, Pyramid; sample experiments (Tkinter windows, login form, BeautifulSoup4 scraping, Flask/CherryPy pages)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Introduction to Django Framework",
+          "topics": [
+            "Understanding the Django environment, features of Django and Django architecture, MVC and MTV",
+            "URLs and views, mapping views to URLs, Django template, template inheritance",
+            "Django models, creating a model for the site, converting the model into a table, fields in models",
+            "Integrating Bootstrap into Django, creating tables, grids and carousels"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Accounts & Authentication in Django",
+          "topics": [
+            "Introduction to Django authentication system, security problem and solution with Django",
+            "Creating registration form using Django, adding email field in forms, configuring email settings, sending emails",
+            "Adding grid layout on registration page, adding page restrictions",
+            "Login functionality test and logout"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Connecting SQLite with Django",
+          "topics": [
+            "Database migrations, fetch data from database, displaying data on templates, adding conditions on data",
+            "Sending data from url to view and from view to template, saving objects into database",
+            "Sorting, filtering and deleting objects",
+            "Difference between session and cookie, creating sessions and cookies in Django"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Deploying Django Web Application on Cloud",
+          "topics": [
+            "Creating a functional website in Django, four important pillars to deploy",
+            "Registering on Heroku and GitHub, pushing project from local system to GitHub",
+            "Working with Django Heroku, working with StaticRoot, handling WSGI with gunicorn",
+            "Setting up database and adding users"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "python-with-django-jntuk-r23-it-2-2",
+        "title": "Python with Django - JNTUK R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Python with Django (skill enhancement): Python web libraries, Django framework, authentication, SQLite integration and cloud deployment."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "IT's 2-2 skill-enhancement course is 'Python with Django' -- note the CSE R23 2-2 record has 'Full Stack Development - I' in this slot; the two branches differ here. 0-1-2-2 credits and 5-unit syllabus with per-unit experiments confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-design-thinking-and-innovation",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Design Thinking & Innovation",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 1,
+        "T": 0,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design Thinking",
+          "topics": [
+            "Introduction to elements and principles of design",
+            "Basics of design - dot, line, shape, form as fundamental design components",
+            "Principles of design",
+            "Introduction to design thinking, history of design thinking, new materials in industry"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Thinking Process",
+          "topics": [
+            "Design thinking process: empathize, analyze, idea and prototype",
+            "Implementing the process in driving inventions",
+            "Design thinking in social innovations",
+            "Tools of design thinking - persona, customer journey map, brainstorming, product development"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Innovation",
+          "topics": [
+            "Art of innovation; difference between innovation and creativity",
+            "Role of creativity and innovation in organizations",
+            "Creativity to innovation; teams for innovation",
+            "Measuring the impact and value of creativity"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Product Design",
+          "topics": [
+            "Problem formation, introduction to product design",
+            "Product strategies, product value, product planning, product specifications",
+            "Innovation towards product design",
+            "Case studies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design Thinking in Business Processes",
+          "topics": [
+            "Design thinking applied in business and strategic innovation; principles that redefine business",
+            "Business challenges: growth, predictability, change, maintaining relevance, extreme competition, standardization",
+            "Design thinking to meet corporate needs; design thinking for startups",
+            "Defining and testing business models and business cases; developing and testing prototypes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-thinking-and-innovation-jntuk-r23-it-2-2",
+        "title": "Design Thinking & Innovation - R23 IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 Design Thinking & Innovation: elements & principles of design, design thinking process, innovation, product design and business processes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "Common for all branches of Engineering (per the IT course structure). The IT structure lists it under BS&H; mapped to EngineeringScience for site consistency with the identical CSE record. 1-0-2-2 credits and 5-unit syllabus confirmed from the source PDF."
+    },
+    {
+      "id": "r23-it-2-2-community-service-project-internship",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Community Service Project Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "community-service-project-internship-jntuk-r23-it-2-2",
+        "title": "Community Service Project Internship - IT 2-2",
+        "meta_description": "JNTUK R23 IT 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
+      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. This mirrors the same gap seen in the CSE and ECE Tirumala documents (a structural feature of how the college publishes these syllabi). Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    }
+  ]
+}
