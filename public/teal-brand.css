@@ -1,7 +1,8 @@
 /* ============================================================================
-   JNTUStack — "Night Study" theme
+   JNTUStack — Teal brand theme
    Drop-in replacement for the `baseStyles` string in templates/layout.js.
-   Dark by default; light is opt-in via <html data-theme="light">.
+   Light by default; dark is opt-in via <html data-theme="dark">.
+   One signature teal (--brand:#00B8A9) is identical in both modes.
 
    Everything is token-driven: the two themes only swap the :root tokens, so
    component rules never carry literal colors. The old semantic variable names
@@ -11,15 +12,16 @@
    ========================================================================== */
 
 :root{
-  /* --- Night (default) --- */
-  --bg:#14161C;        --surface:#1E212A;   --surface-2:#232732;
-  --border:#2C313C;    --hair:#242A34;
-  --text:#F2F0EA;      --text-2:#C9CDD6;    --muted:#9AA0AE;   --faint:#7C8290;
-  --accent:#E8A24A;    --accent-ink:#1A1206; --accent-soft:rgba(232,162,74,.15);
-  --green:#4FBF88;     --green-bg:rgba(79,191,136,.12); --green-border:rgba(79,191,136,.28); --green-ink:#0D2018;
-  --draft:#E8A24A;     --draft-bg:rgba(232,162,74,.13);
-  --bar:#191C24;       --shadow:0 24px 50px -24px rgba(0,0,0,.55);
-  --logo-bot:#E8E6E0;  --logo-mid:#79808F;  --logo-top:#E8A24A;
+  /* --- Day (default) — teal brand --- */
+  --brand:#00B8A9;     --brand-ink:#04231F;
+  --bg:#FFFFFF;        --surface:#F5FBFA;   --surface-2:#FFFFFF;
+  --border:#DCE9E6;    --hair:#E9F1EF;
+  --text:#0B2B27;      --text-2:#4A6560;    --muted:#5D7873;   --faint:#A9BCB8;
+  --accent:#00897D;    --accent-ink:#FFFFFF; --accent-soft:#E2F6F3;
+  --green:#00897D;     --green-bg:#E9F8F5;  --green-border:#BFE8E2; --green-ink:#FFFFFF;
+  --draft:#B97509;     --draft-bg:#F9EFDD;
+  --bar:#FFFFFF;       --shadow:0 20px 44px -22px rgba(11,43,39,.16);
+  --logo-bot:#0B2B27;  --logo-mid:#8FAEA9;  --logo-top:#00B8A9;
   --radius:10px;
 
   /* --- Back-compat aliases (so existing template var() calls still work) --- */
@@ -28,15 +30,15 @@
   --verified:var(--green);  --text-muted:var(--muted);
 }
 
-html[data-theme="light"]{
-  --bg:#F1ECE1;        --surface:#FFFFFF;   --surface-2:#FCFAF5;
-  --border:#E4DECF;    --hair:#EDE7DA;
-  --text:#1B2A4A;      --text-2:#33456B;    --muted:#6B6656;   --faint:#9A927E;
-  --accent:#C97A0A;    --accent-ink:#FFFFFF; --accent-soft:rgba(201,122,10,.10);
-  --green:#2F6D4F;     --green-bg:#E4F1EA;  --green-border:#CFE8DA; --green-ink:#FFFFFF;
-  --draft:#C97A0A;     --draft-bg:#F7E9D6;
-  --bar:#FFFFFF;       --shadow:0 12px 30px -16px rgba(20,34,63,.18);
-  --logo-bot:#1B2A4A;  --logo-mid:#7D88A3;  --logo-top:#C97A0A;
+html[data-theme="dark"]{
+  --bg:#04231F;        --surface:#0A2F2A;   --surface-2:#0E3630;
+  --border:#1C453F;    --hair:#123832;
+  --text:#EAF4F2;      --text-2:#C3DAD6;    --muted:#9DBBB5;   --faint:#6F918B;
+  --accent:#2EDFCF;    --accent-ink:#04231F; --accent-soft:rgba(0,184,169,.16);
+  --green:#2EDFCF;     --green-bg:rgba(46,223,207,.1); --green-border:rgba(46,223,207,.3); --green-ink:#04231F;
+  --draft:#E8A24A;     --draft-bg:rgba(232,162,74,.13);
+  --bar:#062B26;       --shadow:0 24px 50px -24px rgba(0,0,0,.6);
+  --logo-bot:#EAF4F2;  --logo-mid:#4E736D;  --logo-top:#00B8A9;
 }
 
 *{box-sizing:border-box;}
@@ -54,7 +56,7 @@ a:hover{filter:brightness(1.1);}
 /* --- Header / nav --- */
 .site-header{
   display:flex;align-items:center;justify-content:space-between;
-  padding:.85rem 1.25rem;border-bottom:1px solid var(--border);
+  padding:.85rem 1.25rem;border-top:3px solid var(--brand);border-bottom:1px solid var(--border);
   background:var(--bar);position:sticky;top:0;z-index:40;
 }
 .brand{display:inline-flex;align-items:center;gap:.55rem;text-decoration:none;color:var(--text);font-weight:700;font-size:1.15rem;}
@@ -120,7 +122,7 @@ section{margin-bottom:2rem;}
 /* --- Resources / download --- */
 .resources-box{border:1px solid var(--border);border-radius:var(--radius);padding:1rem;background:var(--surface-2);display:flex;gap:.6rem;flex-wrap:wrap;}
 .resources-box a.download{
-  display:inline-block;padding:.6rem 1rem;background:var(--accent);color:var(--accent-ink);
+  display:inline-block;padding:.6rem 1rem;background:var(--brand);color:var(--brand-ink);
   text-decoration:none;border-radius:var(--radius);font-weight:600;font-size:.88rem;
 }
 .resources-box a.download:hover{filter:brightness(1.06);}
@@ -137,7 +139,7 @@ section{margin-bottom:2rem;}
 
 /* --- Branch guide: quiz --- */
 .progress-bar{height:5px;background:var(--border);border-radius:99px;margin-bottom:1.3rem;overflow:hidden;}
-.progress-bar-fill{height:100%;background:var(--accent);width:0%;transition:width .3s ease;}
+.progress-bar-fill{height:100%;background:var(--brand);width:0%;transition:width .3s ease;}
 .quiz-card{border:1px solid var(--border);border-radius:16px;padding:1.5rem;background:var(--surface-2);}
 .quiz-question{font-weight:600;font-size:1.2rem;margin-bottom:1.1rem;color:var(--text);}
 .quiz-options{display:flex;flex-direction:column;gap:.6rem;}
@@ -168,10 +170,10 @@ section{margin-bottom:2rem;}
 .district-filter{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.3rem 0 .5rem;}
 .district-btn{padding:.45rem .85rem;border:1px solid var(--border);border-radius:99px;background:var(--surface);font-family:"IBM Plex Mono",monospace;font-size:.72rem;letter-spacing:.03em;text-transform:uppercase;color:var(--text-2);cursor:pointer;}
 .district-btn:hover{border-color:var(--accent);color:var(--accent);}
-.district-btn[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+.district-btn[aria-pressed="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand);}
 .college-count{font-family:"IBM Plex Mono",monospace;font-size:.74rem;color:var(--faint);margin:.2rem 0 1.4rem;}
 .campus-group{margin-top:2.6rem;}
-.campus-heading{font-size:1.5rem;border-bottom:2px solid var(--accent);padding-bottom:.4rem;margin-bottom:.25rem;}
+.campus-heading{font-size:1.5rem;border-bottom:2px solid var(--brand);padding-bottom:.4rem;margin-bottom:.25rem;}
 .campus-sub{font-size:.85rem;color:var(--muted);max-width:72ch;margin:0 0 1rem;}
 .college-type-group{margin-top:1.2rem;}
 .college-type-group h3{font-size:1.05rem;color:var(--text-2);margin:.2rem 0 .1rem;}
@@ -253,7 +255,7 @@ a.branch-tile:hover{border-color:var(--accent);}
 .ask-box{display:flex;flex-direction:column;gap:.6rem;}
 .ask-box textarea{width:100%;min-height:84px;padding:.85rem;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);font-family:inherit;font-size:.95rem;color:var(--text);resize:vertical;}
 .ask-box textarea:focus{outline:none;border-color:var(--accent);}
-.ask-submit{align-self:flex-start;background:var(--accent);color:var(--accent-ink);border:none;border-radius:10px;padding:.7rem 1.4rem;font-weight:600;cursor:pointer;}
+.ask-submit{align-self:flex-start;background:var(--brand);color:var(--brand-ink);border:none;border-radius:10px;padding:.7rem 1.4rem;font-weight:600;cursor:pointer;}
 .ask-submit:hover{filter:brightness(1.06);}
 .ask-answer-card{margin-top:1rem;padding:1rem 1.1rem;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);font-size:.95rem;line-height:1.6;color:var(--text-2);}
 .ask-grounded-on{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--green);margin-top:.6rem;border-top:1px solid var(--border);padding-top:.6rem;}

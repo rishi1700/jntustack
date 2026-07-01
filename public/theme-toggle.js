@@ -1,29 +1,29 @@
-/* JNTUStack — Night Study theme toggle
-   Dark is the default (the :root tokens). "light" is the only stored override.
+/* JNTUStack — Teal brand theme toggle
+   Light is the default (the :root tokens). "dark" is the only stored override.
    Serve this from /theme-toggle.js and include it once, site-wide.
    Pair it with a <button id="themeToggle" class="theme-toggle"></button> in the header. */
 (function () {
-  var KEY = "ns-theme";
+  var KEY = "ts-theme";
   var root = document.documentElement;
 
   function apply(mode) {
-    if (mode === "light") root.setAttribute("data-theme", "light");
-    else root.removeAttribute("data-theme"); // absent = dark (default tokens)
+    if (mode === "dark") root.setAttribute("data-theme", "dark");
+    else root.removeAttribute("data-theme"); // absent = light (default tokens)
     var btn = document.getElementById("themeToggle");
-    if (btn) btn.textContent = mode === "light" ? "☾ Night" : "☀ Day";
+    if (btn) btn.textContent = mode === "dark" ? "☀ Day" : "☾ Night";
   }
 
   // Apply saved preference immediately (this file is in <head>, so no flash).
   var saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
-  apply(saved === "light" ? "light" : "dark");
+  apply(saved === "dark" ? "dark" : "light");
 
   function wire() {
     var btn = document.getElementById("themeToggle");
     if (!btn) return;
-    apply(root.getAttribute("data-theme") === "light" ? "light" : "dark");
+    apply(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
     btn.addEventListener("click", function () {
-      var next = root.getAttribute("data-theme") === "light" ? "dark" : "light";
+      var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       try { localStorage.setItem(KEY, next); } catch (e) {}
       apply(next);
     });

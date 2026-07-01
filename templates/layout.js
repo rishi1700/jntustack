@@ -40,7 +40,7 @@ export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp,
 <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
 ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>` : ''}
 <script src="/theme-toggle.js"></script>
-<link rel="stylesheet" href="/night-study.css">
+<link rel="stylesheet" href="/teal-brand.css">
 </head>
 <body>
 ${stamp ? stampMarkup(stamp) : ''}
@@ -59,7 +59,7 @@ ${stamp ? stampMarkup(stamp) : ''}
     </div>
     <a href="/colleges/">Colleges</a>
     <a href="/branch-guide/">Choosing a Branch?</a>
-    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle day / night">&#9728; Day</button>
+    <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle day / night">&#9790; Night</button>
   </nav>
 </header>
 <main>
