@@ -69,7 +69,10 @@ ${bodyHtml}
   <div class="footer-inner">
     <div class="footer-top">
       <div>
-        <span class="footer-brand">JNTUStack</span>
+        <div style="display:flex;align-items:center;gap:.6rem;">
+          <svg width="22" height="22" viewBox="0 0 260 260" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" fill="#EAF4F2"/><polygon points="0,22 92,-12 0,-46 -92,-12" fill="#4E736D"/><polygon points="0,-16 80,-46 0,-76 -80,-46" fill="#00B8A9"/></g></svg>
+          <span class="footer-brand">JNTUStack</span>
+        </div>
         <p class="footer-tag">Built page by page, checked against an official source before it goes live.</p>
       </div>
       <nav class="footer-links" aria-label="Footer">
