@@ -17,23 +17,6 @@ export function renderAskWidget({ mock = false } = {}) {
   <div class="disclaimer-box">Answers come from an AI model and can still be wrong, especially for anything time-sensitive (exam dates, fee changes, official notices) -- always confirm those against your college or the official JNTU site.</div>
 </section>
 
-<style>
-  .ask-widget{margin:1.5rem 0;}
-  .ask-box{display:flex;flex-direction:column;gap:.6rem;}
-  .ask-box textarea{
-    width:100%;min-height:80px;padding:.7rem;border:1.5px solid var(--ink);border-radius:var(--radius);
-    font-family:inherit;font-size:.95rem;resize:vertical;
-  }
-  .ask-submit{align-self:flex-start;background:var(--ink);color:#fff;border-color:var(--ink);}
-  .ask-submit:hover{background:var(--ink-soft);}
-  .ask-answer-card{
-    margin-top:1rem;padding:1rem;border:1px solid var(--rule);border-radius:var(--radius);
-    background:var(--paper-raised);font-size:.95rem;line-height:1.6;
-  }
-  .ask-grounded-on{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--text-muted);margin-top:.6rem;}
-  .ask-loading{color:var(--text-muted);font-size:.9rem;font-style:italic;}
-</style>
-
 <script>
 (function(){
   const MOCK = ${mock ? 'true' : 'false'};
