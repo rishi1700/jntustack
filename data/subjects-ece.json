@@ -1,5 +1,5 @@
 {
-  "_source_note": "ECE R23 II-Year (2-1 and 2-2) subject data sourced from Tirumala Engineering College's published JNTUK R23 ECE syllabus PDF: https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf (downloaded 2026-07-01, 20 pages, extracted with pdf-parse). Tirumala Engineering College (Narasaraopet) is a JNTUK-affiliated, NON-autonomous college that follows the university curriculum directly (no local adaptation), so this reflects the JNTUK-wide R23 ECE baseline. The university's own forum PDF (forum.universityupdates.in) is login-gated and could not be fetched; this affiliated-college copy was used instead. Every record's source.origin_url points at the actual file used. verified = subject name, L-T-P-C credits AND full unit topics confirmed by reading the document; needs_verification = name/credits confirmed but full unit detail not transcribed in this pass (see each record's notes).",
+  "_source_note": "ECE R23 II-Year (2-1 and 2-2) subject data sourced from Tirumala Engineering College's published JNTUK R23 ECE syllabus PDF: https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf (downloaded 2026-07-01, 20 pages, extracted with pdf-parse). Tirumala Engineering College (Narasaraopet) is a JNTUK-affiliated AUTONOMOUS college -- confirmed by the source PDF's own letterhead ('TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'). As an autonomous college it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline, so every record below carries an autonomous-college local-adaptation caveat in its notes; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text. (The JNTUK DAA portal's autonomous list is a real but NON-exhaustive source -- it omits Tirumala -- so it is not a definitive autonomous/non-autonomous check.) The university's own forum PDF (forum.universityupdates.in) is login-gated and could not be fetched; this affiliated-college copy was used instead. Every record's source.origin_url points at the actual file used. verified = subject name, L-T-P-C credits AND full unit topics confirmed by reading the document; needs_verification = name/credits confirmed but full unit detail not transcribed in this pass (see each record's notes).",
   "subjects": [
     {
       "id": "r23-ece-2-1-signals-and-systems",
@@ -30,7 +30,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the Tirumala Engineering College JNTUK R23 ECE PDF (non-autonomous, follows university curriculum)."
+      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the Tirumala Engineering College JNTUK R23 ECE PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-electronic-devices-and-circuits",
@@ -61,7 +61,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-switching-theory-and-logic-design",
@@ -92,7 +92,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-environmental-science",
@@ -123,7 +123,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as '-' (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as '-' (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-electronic-devices-and-circuits-lab",
@@ -148,7 +148,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Experiment-based lab (clippers/clampers, rectifiers, BJT-CE and FET-CS characteristics, SCR/UJT, biasing, CE/CC/CS amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty."
+      "notes": "Experiment-based lab (clippers/clampers, rectifiers, BJT-CE and FET-CS characteristics, SCR/UJT, biasing, CE/CC/CS amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-signals-and-systems-lab",
@@ -173,7 +173,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Experiment-based lab (basic signal generation, operations on signals, energy/power, convolution and correlation, Fourier/Laplace/Z-transforms). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
+      "notes": "Experiment-based lab (basic signal generation, operations on signals, energy/power, convolution and correlation, Fourier/Laplace/Z-transforms). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-data-structures-using-python",
@@ -198,7 +198,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Skill Enhancement course delivered as programming experiments (classes/inheritance, comprehensions, linear/binary search, bubble/selection/merge/quick sort, stacks, queues, singly/doubly linked lists, BST). Name, 0-1-2-2 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
+      "notes": "Skill Enhancement course delivered as programming experiments (classes/inheritance, comprehensions, linear/binary search, bubble/selection/merge/quick sort, stacks, queues, singly/doubly linked lists, BST). Name, 0-1-2-2 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-probability-theory-and-stochastic-process",
@@ -229,7 +229,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "needs_verification" },
-      "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
+      "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-1-universal-human-values",
@@ -260,7 +260,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "needs_verification" },
-      "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
+      "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-managerial-economics-and-financial-analysis",
@@ -291,7 +291,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-linear-control-systems",
@@ -322,7 +322,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-electromagnetic-waves-and-transmission-lines",
@@ -353,7 +353,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-electronic-circuit-analysis",
@@ -384,7 +384,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-analog-communications",
@@ -415,7 +415,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-switching-theory-and-logic-design-lab",
@@ -440,7 +440,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Experiment-based lab (logic gate verification, combinational design, decoders/multiplexers, flip-flops, ring/Johnson counters, universal shift register, seven-segment display). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
+      "notes": "Experiment-based lab (logic gate verification, combinational design, decoders/multiplexers, flip-flops, ring/Johnson counters, universal shift register, seven-segment display). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-electronic-circuit-analysis-lab",
@@ -465,7 +465,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Simulation (Multisim) + hardware lab (Ft determination, voltage-series/current-shunt feedback amplifiers, RC/Wien/Hartley/Colpitts oscillators, RC coupled and Darlington amplifiers, Class A/B power amplifiers, tuned amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
+      "notes": "Simulation (Multisim) + hardware lab (Ft determination, voltage-series/current-shunt feedback amplifiers, RC/Wien/Hartley/Colpitts oscillators, RC coupled and Darlington amplifiers, Class A/B power amplifiers, tuned amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-soft-skills",
@@ -496,7 +496,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Name, 0-1-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Name, 0-1-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-design-thinking-and-innovation",
@@ -527,7 +527,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified" },
-      "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
+      "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
       "id": "r23-ece-2-2-community-service-project-internship",
@@ -552,7 +552,7 @@
       },
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "needs_verification" },
-      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     }
   ]
 }
