@@ -115,10 +115,14 @@ function renderQuizSection() {
         const b = BRANCH_DATA.find(x => x.branch === code);
         if (!b) return '';
         const reasons = (b.suits_students_who || []).slice(0, 2);
+        const statusHtml = b.published
+          ? '<a class="content-status content-status--available" href="' + b.hubUrl + '">' + b.verifiedCount + ' real subject' + (b.verifiedCount === 1 ? '' : 's') + ' \\u2192</a>'
+          : '<span class="content-status content-status--none">Not sourced yet</span>';
         return '<div class="result-card">' +
           '<div class="result-rank">Match ' + (i + 1) + '</div>' +
           '<h3>' + b.branch + '</h3>' +
           '<div class="tagline">' + b.tagline + '</div>' +
+          '<div class="result-status">' + statusHtml + '</div>' +
           (reasons.length ? '<div class="result-reasons">Why it came up: ' + reasons.join('; ') + '.</div>' : '') +
         '</div>';
       }).join('') +
@@ -134,7 +138,15 @@ function renderQuizSection() {
 </script>`;
 }
 
-function renderComparisonGrid(branchProfiles) {
+function contentStatusHtml(status) {
+  // Available -> green pill linking to the real hub. Not yet -> muted pill, no
+  // link, no invented count. Same rule as the nav dropdown and homepage grid.
+  return status && status.published
+    ? `<a class="content-status content-status--available" href="${escapeHtml(status.href)}">${status.verifiedCount} real subject${status.verifiedCount === 1 ? '' : 's'} &rarr;</a>`
+    : `<span class="content-status content-status--none">Not sourced yet</span>`;
+}
+
+function renderComparisonGrid(branchProfiles, statusByCode = {}) {
   return `
 <section>
   <h2>All six branches, compared honestly</h2>
@@ -143,6 +155,7 @@ function renderComparisonGrid(branchProfiles) {
       <div class="branch-compare-card">
         <h3>${escapeHtml(b.branch)}</h3>
         <div class="tagline">${escapeHtml(b.tagline)}</div>
+        ${contentStatusHtml(statusByCode[b.branch])}
 
         <div class="compare-label">Core focus</div>
         <p>${b.core_focus.map(escapeHtml).join(' &middot; ')}</p>
@@ -164,10 +177,30 @@ function renderComparisonGrid(branchProfiles) {
 </section>`;
 }
 
-export function renderBranchGuidePage(branchProfiles) {
+export function renderBranchGuidePage(branchProfiles, navBranches = []) {
+  // Content-status is keyed by branch code and comes from the SAME navBranches
+  // data build.js computes for the nav dropdown and homepage branch grid -- not
+  // recomputed here, so the "N real subjects" / "Not sourced yet" state can never
+  // drift from what's actually published.
+  const statusByCode = Object.fromEntries(
+    navBranches.map(b => [b.code, { published: b.published, verifiedCount: b.verifiedCount, href: b.href }])
+  );
+  // The quiz result cards render the same indicator client-side, so fold the
+  // count/hub-url into the existing BRANCH_DATA blob rather than adding a second
+  // data channel.
+  const augmentedProfiles = branchProfiles.map(b => {
+    const st = statusByCode[b.branch] || { published: false, verifiedCount: 0, href: null };
+    return { ...b, published: st.published, verifiedCount: st.verifiedCount, hubUrl: st.href };
+  });
+  // NOTE: the placeholder is injected WITHOUT surrounding quotes (renderQuizSection
+  // writes `${'__BRANCH_DATA_PLACEHOLDER__'}` which renders the bare token), so the
+  // replace target must be the bare token too. A previous version matched
+  // "'...'" (quoted) which never hit, leaving `const BRANCH_DATA = __..._PLACEHOLDER__;`
+  // -- a ReferenceError that silently killed the whole quiz. A function replacer
+  // also avoids `$&`/`$1` being interpreted inside the JSON payload.
   const quizHtml = renderQuizSection().replace(
-    "'__BRANCH_DATA_PLACEHOLDER__'",
-    JSON.stringify(branchProfiles)
+    '__BRANCH_DATA_PLACEHOLDER__',
+    () => JSON.stringify(augmentedProfiles)
   );
   return `
 <h1 class="subject-title">Choosing a branch?</h1>
@@ -177,6 +210,6 @@ export function renderBranchGuidePage(branchProfiles) {
 
 ${quizHtml}
 
-${renderComparisonGrid(branchProfiles)}
+${renderComparisonGrid(branchProfiles, statusByCode)}
 `;
 }

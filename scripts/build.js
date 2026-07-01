@@ -129,7 +129,7 @@ if (fs.existsSync(branchGuidePath)) {
       description: 'An honest, no-fabricated-stats guide to picking an engineering branch -- core focus, real fit signals, and an optional 5-question narrowing quiz.',
       canonical: `${SITE_URL}/branch-guide/`,
       jsonLd: null,
-      bodyHtml: renderBranchGuidePage(verifiedProfiles),
+      bodyHtml: renderBranchGuidePage(verifiedProfiles, navBranches),
       navBranches,
       stamp: 'verified',
     });

@@ -1,0 +1,146 @@
+- generic [active] [ref=f2e1]:
+  - generic [ref=f2e2]:
+    - text: VERIFIED
+    - generic [ref=f2e3]: vs. official syllabus
+  - banner [ref=f2e4]:
+    - link "JNTUStack" [ref=f2e5] [cursor=pointer]:
+      - /url: /
+    - search [ref=f2e6]:
+      - searchbox "Search JNTUStack" [ref=f2e7]
+    - navigation "Main navigation" [ref=f2e8]:
+      - button "Branches" [ref=f2e10] [cursor=pointer]: Branches ▾
+      - link "Colleges" [ref=f2e11] [cursor=pointer]:
+        - /url: /colleges/
+      - link "Choosing a Branch?" [ref=f2e12] [cursor=pointer]:
+        - /url: /branch-guide/
+  - main [ref=f2e13]:
+    - heading "Choosing a branch?" [level=1] [ref=f2e14]
+    - paragraph [ref=f2e15]: Picking CSE, ECE, EEE, Civil, Mechanical, or IT shapes the next four years and a good chunk of your career after. This page won't decide for you -- nothing online should -- but it'll help you ask the right questions before you do.
+    - generic [ref=f2e16]: ad slot — below intro, well clear of the quiz
+    - generic [ref=f2e17]:
+      - heading "Find a starting point" [level=2] [ref=f2e18]
+      - paragraph [ref=f2e19]: Five quick questions. This narrows the field based on how you actually answer -- it doesn't hand you a verdict. Treat the result as something to go research and discuss, not a decision made for you.
+      - generic [ref=f2e21]:
+        - generic [ref=f2e22]: 1. Which of these would you rather spend an afternoon doing?
+        - generic [ref=f2e23]:
+          - button "Debugging a program until it finally works" [ref=f2e24] [cursor=pointer]
+          - button "Tinkering with a circuit board or microcontroller" [ref=f2e25] [cursor=pointer]
+          - button "Working out how to wire or fix something electrical" [ref=f2e26] [cursor=pointer]
+          - button "Visiting a site to check on a building or structure" [ref=f2e27] [cursor=pointer]
+          - button "Taking apart an engine or machine to see how it works" [ref=f2e28] [cursor=pointer]
+    - generic [ref=f2e29]:
+      - heading "All six branches, compared honestly" [level=2] [ref=f2e30]
+      - generic [ref=f2e31]:
+        - generic [ref=f2e32]:
+          - heading "CSE" [level=3] [ref=f2e33]
+          - generic [ref=f2e34]: Software, algorithms, and systems -- the most in-demand branch, also the most crowded.
+          - link "2 real subjects →" [ref=f2e35] [cursor=pointer]:
+            - /url: /cse/
+          - generic [ref=f2e36]: Core focus
+          - paragraph [ref=f2e37]: Programming and data structures · Algorithms · Operating systems · Databases · Computer networks · An AI/ML foundation
+          - generic [ref=f2e38]: Probably a good fit if
+          - list [ref=f2e39]:
+            - listitem [ref=f2e40]: Actually enjoy debugging -- not just the idea of coding, the slow grind of fixing broken things
+            - listitem [ref=f2e41]: Are comfortable with abstract, symbolic problem-solving rather than physical/hands-on work
+            - listitem [ref=f2e42]: Don't mind that the field changes every few years and expects continuous self-learning
+          - generic [ref=f2e43]: Maybe reconsider if
+          - list [ref=f2e44]:
+            - listitem [ref=f2e45]: You're choosing CSE mainly because 'it has the best placements' without any real curiosity about programming itself
+            - listitem [ref=f2e46]: You strongly prefer hands-on, physical, or visual work over screen-based abstract work
+            - listitem [ref=f2e47]: You're hoping for a fixed, stable curriculum that won't keep changing -- it will
+          - generic [ref=f2e48]: Career paths
+          - paragraph [ref=f2e49]: Software development · Data engineering / data science · Product roles · Systems / DevOps · Research, if pursuing further study
+          - generic [ref=f2e50]: No placement or salary figures are claimed here. Those numbers vary a lot by college and year -- ask your specific college's placement cell for real, current data rather than relying on internet averages.
+        - generic [ref=f2e51]:
+          - heading "IT" [level=3] [ref=f2e52]
+          - generic [ref=f2e53]: Very close to CSE in practice, with more weight on networks, web systems, and enterprise software.
+          - generic [ref=f2e54]: Not sourced yet
+          - generic [ref=f2e55]: Core focus
+          - paragraph [ref=f2e56]: Programming and data structures · Computer networks · Web technologies · Database management · Software engineering practice
+          - generic [ref=f2e57]: Probably a good fit if
+          - list [ref=f2e58]:
+            - listitem [ref=f2e59]: Want the CSE-adjacent career path but at a college/cutoff where CSE itself wasn't an option
+            - listitem [ref=f2e60]: Lean slightly more toward systems, networks, and applied software over deep algorithmic theory
+          - generic [ref=f2e61]: Maybe reconsider if
+          - list [ref=f2e62]:
+            - listitem [ref=f2e63]: You specifically want the heaviest theoretical CS depth (algorithms, theory of computation) -- CSE leans further that direction
+          - generic [ref=f2e64]: Career paths
+          - paragraph [ref=f2e65]: Software development · Systems/network administration · QA and testing · IT services and enterprise software roles
+          - generic [ref=f2e66]: No placement or salary figures are claimed here. In practice, recruiters increasingly treat CSE and IT similarly, but this varies by company -- check specific companies' eligibility criteria if this matters to you.
+        - generic [ref=f2e67]:
+          - heading "ECE" [level=3] [ref=f2e68]
+          - generic [ref=f2e69]: "The hardware-software bridge: circuits, signals, communication systems, and embedded devices."
+          - link "16 real subjects →" [ref=f2e70] [cursor=pointer]:
+            - /url: /ece/
+          - generic [ref=f2e71]: Core focus
+          - paragraph [ref=f2e72]: Electronic devices and circuits · Signals and systems · Communication systems · VLSI / digital IC design · Embedded systems and microcontrollers
+          - generic [ref=f2e73]: Probably a good fit if
+          - list [ref=f2e74]:
+            - listitem [ref=f2e75]: Like both physics/circuits and programming, and don't want to fully commit to one or the other
+            - listitem [ref=f2e76]: Are curious how physical devices (phones, chips, sensors) actually work underneath the software
+            - listitem [ref=f2e77]: Are fine with a heavier, more varied course load than pure CSE
+          - generic [ref=f2e78]: Maybe reconsider if
+          - list [ref=f2e79]:
+            - listitem [ref=f2e80]: You actively dislike circuit theory and signal processing math -- it's a large, unavoidable part of the curriculum
+            - listitem [ref=f2e81]: You want a branch with one obvious, single career direction -- ECE careers fork in several directions and that ambiguity itself can be stressful
+          - generic [ref=f2e82]: Career paths
+          - paragraph [ref=f2e83]: Embedded systems engineering · VLSI / chip design · Telecom · Many ECE graduates also move into software roles, since the branch builds strong general problem-solving
+          - generic [ref=f2e84]: No placement or salary figures are claimed here.
+        - generic [ref=f2e85]:
+          - heading "EEE" [level=3] [ref=f2e86]
+          - generic [ref=f2e87]: Power systems, electrical machines, and control -- the branch behind the grid, not the gadget.
+          - generic [ref=f2e88]: Not sourced yet
+          - generic [ref=f2e89]: Core focus
+          - paragraph [ref=f2e90]: Electrical circuit analysis · Electrical machines · Power systems · Control systems · Power electronics
+          - generic [ref=f2e91]: Probably a good fit if
+          - list [ref=f2e92]:
+            - listitem [ref=f2e93]: Are genuinely interested in power generation, transmission, and the energy sector -- including renewables
+            - listitem [ref=f2e94]: Want a path toward government/PSU electrical roles (state electricity boards, NTPC-type organizations)
+            - listitem [ref=f2e95]: Don't mind a branch with less buzz than CSE but real, stable core-industry demand
+          - generic [ref=f2e96]: Maybe reconsider if
+          - list [ref=f2e97]:
+            - listitem [ref=f2e98]: Your real interest is software and you're choosing EEE only as a fallback -- the curriculum won't scratch that itch
+            - listitem [ref=f2e99]: You want fast-moving, trend-driven work -- power systems engineering moves slowly and deliberately by design
+          - generic [ref=f2e100]: Career paths
+          - paragraph [ref=f2e101]: Power sector / electricity boards · Electrical equipment manufacturing · Renewable energy · Control systems and automation · Some graduates pivot into software/analytics roles
+          - generic [ref=f2e102]: No placement or salary figures are claimed here.
+        - generic [ref=f2e103]:
+          - heading "CE" [level=3] [ref=f2e104]
+          - generic [ref=f2e105]: Structures, construction, and infrastructure -- the most tangible, real-world branch of the six.
+          - generic [ref=f2e106]: Not sourced yet
+          - generic [ref=f2e107]: Core focus
+          - paragraph [ref=f2e108]: Strength of materials · Structural analysis · Surveying · Geotechnical engineering · Transportation and construction management
+          - generic [ref=f2e109]: Probably a good fit if
+          - list [ref=f2e110]:
+            - listitem [ref=f2e111]: Want to see physical, tangible results of their work -- buildings, roads, bridges
+            - listitem [ref=f2e112]: Are drawn to government infrastructure roles (PWD, municipal engineering, railways) or construction-industry careers
+            - listitem [ref=f2e113]: Are comfortable with significant site/field work, not just office or lab work
+          - generic [ref=f2e114]: Maybe reconsider if
+          - list [ref=f2e115]:
+            - listitem [ref=f2e116]: You want a desk-based, software-centric daily routine -- site visits and field components are a real part of this branch
+            - listitem [ref=f2e117]: Your interest is purely in the design/software side (e.g. architecture/CAD) without the structural engineering fundamentals underneath it
+          - generic [ref=f2e118]: Career paths
+          - paragraph [ref=f2e119]: Construction and infrastructure firms · Government engineering services (PWD, municipal, railways) · Real estate and project management · Structural design consultancies
+          - generic [ref=f2e120]: No placement or salary figures are claimed here.
+        - generic [ref=f2e121]:
+          - heading "MECH" [level=3] [ref=f2e122]
+          - generic [ref=f2e123]: Machines, manufacturing, and thermal systems -- the broadest, most classically 'engineering' branch.
+          - generic [ref=f2e124]: Not sourced yet
+          - generic [ref=f2e125]: Core focus
+          - paragraph [ref=f2e126]: Thermodynamics · Machine design · Manufacturing/production technology · Fluid mechanics · Automobile and industrial engineering
+          - generic [ref=f2e127]: Probably a good fit if
+          - list [ref=f2e128]:
+            - listitem [ref=f2e129]: Like understanding how physical machines and systems actually work, from engines to manufacturing lines
+            - listitem [ref=f2e130]: Are interested in the automotive, manufacturing, or industrial/production sectors
+            - listitem [ref=f2e131]: Want one of the broadest, most flexible engineering foundations -- mechanical concepts show up almost everywhere
+          - generic [ref=f2e132]: Maybe reconsider if
+          - list [ref=f2e133]:
+            - listitem [ref=f2e134]: You're specifically chasing software-only career paths -- mechanical's curriculum is mostly hardware/physical-systems focused
+            - listitem [ref=f2e135]: You dislike workshop/lab-heavy, hands-on coursework
+          - generic [ref=f2e136]: Career paths
+          - paragraph [ref=f2e137]: Manufacturing and production engineering · Automotive industry · Core mechanical design roles · Many graduates also move into software, analytics, or further study
+          - generic [ref=f2e138]: No placement or salary figures are claimed here.
+  - contentinfo [ref=f2e139]:
+    - link "Join the Telegram channel for new uploads →" [ref=f2e140] [cursor=pointer]:
+      - /url: "#"
+    - paragraph [ref=f2e141]: © 2026 JNTUStack. Independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV.

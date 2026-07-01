@@ -179,8 +179,23 @@ const baseStyles = `
   .result-rank{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--verified);text-transform:uppercase;letter-spacing:.05em;}
   .result-reasons{font-size:.9rem;color:var(--text-muted);margin-top:.4rem;}
 
-  .branch-compare-grid{display:grid;grid-template-columns:1fr;gap:1rem;}
+  .branch-compare-grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(min(380px,100%),1fr));gap:1rem;
+    /* The reading column (main) is 760px -- too narrow for two 380px tracks, so
+       auto-fit would collapse to one column even on desktop. Let ONLY the
+       comparison grid break out wider than main (centred on the viewport) so it's
+       genuinely two-up on desktop while still collapsing to one on narrow screens. */
+    width:min(92vw,1040px);margin-left:50%;transform:translateX(-50%);
+  }
   .branch-compare-card{border:1px solid var(--rule);border-radius:var(--radius);padding:1.1rem;background:var(--paper-raised);}
+  .content-status{
+    display:inline-block;margin:.15rem 0 .5rem;padding:.2rem .65rem;border-radius:99px;
+    font-family:"IBM Plex Mono",monospace;font-size:.68rem;font-weight:600;letter-spacing:.03em;text-decoration:none;
+  }
+  .content-status--available{background:#E4F1EA;color:var(--verified);}
+  .content-status--available:hover{background:#D3E8DC;color:var(--verified);}
+  .content-status--none{background:#ECE7DA;color:var(--text-muted);}
+  .result-status{margin:.2rem 0 .1rem;}
   .branch-compare-card h3{font-size:1.1rem;margin-bottom:.2rem;}
   .branch-compare-card .tagline{font-size:.9rem;color:var(--text-muted);margin-bottom:.7rem;}
   .fit-list,.nonfit-list{margin:0 0 .6rem;padding-left:1.1rem;font-size:.87rem;}
