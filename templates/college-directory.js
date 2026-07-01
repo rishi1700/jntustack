@@ -1,7 +1,7 @@
 import { escapeHtml } from './layout.js';
 
 // Universities are the top-level grouping so it's never ambiguous which campus
-// a college belongs to. Order is fixed (JNTUK first, then JNTU-GV); a campus
+// a college belongs to. Order is fixed (JNTUK, JNTU-GV, then JNTUH); a campus
 // with no colleges in the data renders nothing.
 const CAMPUSES = [
   {
@@ -13,6 +13,11 @@ const CAMPUSES = [
     code: 'JNTUGV',
     name: 'JNTU-GV, Vizianagaram (JNTUGV)',
     blurb: 'Engineering colleges under Jawaharlal Nehru Technological University Gurajada, Vizianagaram -- the campus that split from JNTUK in 2022 (Vizianagaram, Visakhapatnam, Srikakulam, Parvathipuram Manyam, Alluri Sitharama Raju and Anakapalli districts).',
+  },
+  {
+    code: 'JNTUH',
+    name: 'JNTU Hyderabad (JNTUH)',
+    blurb: "Constituent and regular-affiliated engineering colleges under Jawaharlal Nehru Technological University Hyderabad -- Telangana's main affiliating university, a separate institution from the Andhra Pradesh campuses above.",
   },
 ];
 

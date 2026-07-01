@@ -1,0 +1,2760 @@
+{
+  "_coverage_note": "JNTUH (Jawaharlal Nehru Technological University Hyderabad -- Telangana's main affiliating university) Engineering colleges: 8 constituent (university-run) + 137 regular-affiliated (Autonomous-Private or Private), sourced from JNTUH's own official portals. Constituent colleges from jntuh.ac.in's official constituent-colleges page (Hyderabad/Kukatpally flagship, Jagtial, Manthani, Sultanpur, Rajanna Sircilla, Wanaparthy, Mahabubabad, Palair) -- excludes the 2 non-Engineering constituent colleges also listed there (University College of Pharmaceutical Sciences & Management Sultanpur; University College of Management Hyderabad). Affiliated colleges from jntuhaac.in's 'Colleges Granted Affiliation Academic Year wise' page for ACADEMIC YEAR 2025-26 (the current AY at the time of sourcing, selected via ?academicYearId=17) -- NOT the /Public/oldcolleges or /Public/CollegeNameAndAddress pages, which are stale/cumulative or explicitly dated AY 2019-20. Filtered to Engineering only (excludes Pharmacy and Management/PG colleges on the same list); autonomous status taken from the '(Autonomous)' annotation the portal itself attaches to college names. Ten ambiguous names (Group of Institutions / Technical Campus / PG & Research Academy phrasing that didn't match simple Engineering keywords) were resolved individually against each college's own website or a web search rather than guessed -- see each record's notes for colleges where this applied; two were excluded as umbrella entries that would have double-counted an Engineering college already captured under its own separately-coded entry elsewhere in the same list (Sree Dattha Group of Institutions, St. Mary's Group of Institutions Hyderabad). Deduped within JNTUH by name+district (not by code, which the portal reuses, and not by name alone, since some genuinely different JNTUH colleges share a near-identical name in different districts). The resulting Engineering-only count (137 affiliated) matches JNTUH's own current-homepage-cited figure of 137 Engineering colleges, and the excluded Management/PG count (6) matches its cited 6 standalone MCA/MBA colleges -- both used as an external cross-check on the classification, not as a source in themselves. Districts and college names are exactly as given by the source portals (Telangana district reorganization names, e.g. Ranga Reddy, Medchal, Yadadri Bhuvanagiri). branches_offered and per-college city are not yet sourced per-college.",
+  "colleges": [
+    {
+      "name": "JNTUH University College of Engineering, Science & Technology, Hyderabad",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://jntuh.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. The flagship/main campus at Kukatpally; JNTUH's own site footer gives its address as 'Kukatpally, Hyderabad', so Hyderabad is used as the district. No dedicated college subdomain was found reachable, so the main university site is used as the official_website. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Jagtial",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Jagtial",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "http://jntuhcej.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. Located at Nachupally (Kondagattu), Kodimyal mandal. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Manthani",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Peddapalli",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "http://jntuhcem.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. Located at Centenary Colony, Pannur village, Ramagiri mandal. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Sultanpur",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medak",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "http://jntuhces.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Rajanna Sircilla",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Rajanna Sircilla",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "http://jntuhcers.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Wanaparthy",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Wanaparthy",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://ucew.jntuh.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. Established 2022. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Mahabubabad",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Mahabubabad",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://ucemb.jntuh.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "JNTUH University College of Engineering, Palair",
+      "short_code": null,
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Constituent",
+      "branches_offered": [],
+      "official_website": "https://ucepl.jntuh.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "https://jntuh.ac.in/content/constituent-colleges/31/e40052927aa3e6fe1e78523a14dd3466",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "JNTUH constituent (university-run) engineering college, confirmed from JNTUH's own official constituent-colleges page. Palair is in Khammam Rural. branches_offered not yet sourced per-college."
+    },
+    {
+      "name": "A A R Mahaveer Engineering College",
+      "short_code": "8P",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.aarm.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Abdul Kalam Institute of Technological Sciences",
+      "short_code": "EK",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Bhadradri Kothagudem",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://akits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "ACE Engineering College",
+      "short_code": "AG",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.aceec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Annamacharya Institute of Technology & Sciences",
+      "short_code": "T8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.aits-hyd.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Anubose Institute of Technology for Women's",
+      "short_code": "PP",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Bhadradri Kothagudem",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.abit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Anurag Engineering College",
+      "short_code": "C1",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.anurag.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Arjun College of Technology & Sciences",
+      "short_code": "W8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.arjunengg.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Aurora`s Technological Institute",
+      "short_code": "U7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.ati.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Aurora's Scientific &Technological Institute",
+      "short_code": "M9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.asti.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Aurora's Scientific, Technological and Research Academy",
+      "short_code": "D9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.astra.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Aurora's Technological & Management Academy",
+      "short_code": "9K",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.ata.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi Institute of Engineering & Technology",
+      "short_code": "Q6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.aietg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Avanthi's Scientific Technological & Research Academy",
+      "short_code": "PT",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.avanthi.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "AVN Institute of Engineering and Technology",
+      "short_code": "5U",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.avniet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Azad College of Engineering and Technology",
+      "short_code": "Q8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.azadcet.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "B.V.Raju Institute of Technology",
+      "short_code": "21",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medak",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.bvrit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Balaji Institute of Technology & Science",
+      "short_code": "C3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (RURAL)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://www.bitswgl.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Bandari Srinivas Institute of Technology",
+      "short_code": "M1",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bsit.org.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Bharat Institute of Engineering and Technology",
+      "short_code": "E1",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.biet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Bhaskar Engineering College",
+      "short_code": "GE",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.bec.edu.in//",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Bhoj Reddy Engineering College for Women",
+      "short_code": "32",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.brecw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Bomma Institute of Technology and Science",
+      "short_code": "U3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.bomma.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Brilliant Grammar School Educational Society's Group of Institutions-Integrated Campus",
+      "short_code": "7Q",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.bgiic.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Brilliant Institute of Engineering & Technology",
+      "short_code": "QA",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.b-iet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "BVRIT Hyderabad College of Engineering for Women",
+      "short_code": "WH",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.bvrithyderabad.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Christu Jyothi Institute of Technology & Science",
+      "short_code": "68",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Jangaon",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.cjits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CMR College of Engineering &Technology",
+      "short_code": "H5",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.cmrcet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CMR Engineering College",
+      "short_code": "8R",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://cmrec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CMR Institute of Technology",
+      "short_code": "R0",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://cmrithyderabad.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CMR Technical Campus",
+      "short_code": "7R",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.cmrtc.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CSI Wesley Institute of Technology and Sciences",
+      "short_code": "XU",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://wesleyengineeringcollege.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "CVR College of Engineering",
+      "short_code": "B8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://cvr.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Daripally Anantha Ramulu College of Engineering & Technology",
+      "short_code": "HD",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.dare.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Dr.V.R.K Women's College of Engineering & Technology",
+      "short_code": "H8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.drvrkwomenscollege.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "DRK Institute of Science & Technology",
+      "short_code": "N7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.drkist.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Ellenki College of Engineering and Technology",
+      "short_code": "C7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Sangareddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.ellenkicet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "G.Narayanamma Institute Technology & Science, for Women",
+      "short_code": "25",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.gnits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Gate Institute of Technology and Sciences",
+      "short_code": "QE",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.ssesgi.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Geetanjali College of Engineering and Technology",
+      "short_code": "R1",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.gcet.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "GK Institute of Engineering and Technology",
+      "short_code": "YF",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Mahabubnagar",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://madinaeducationalsociety.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Global Institute of Engineering & Technology",
+      "short_code": "U6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.globalhyd.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Gokaraju Rangaraju Institute of Engineering & Technology",
+      "short_code": "24",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.griet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Government Engineering College, Kosgi",
+      "short_code": "YC",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Narayanapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": null,
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Guru Nanak Institute of Technology",
+      "short_code": "83",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.gnithyd.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Guru Nanak Institutions Technical Campus",
+      "short_code": "WJ",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.gniindia.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Holy Mary Institute of Technology & Science",
+      "short_code": "C9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.hits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Hyderabad Institute of Technology and Management",
+      "short_code": "E5",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.hitam.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Indur Institute of Engineering & Technology",
+      "short_code": "D3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Siddipet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.induriet.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Institute of Aeronautical Engineering",
+      "short_code": "95",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.iare.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "J.B.Institute of Engineering & Technology",
+      "short_code": "67",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.jbiet.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Jayamukhi Institute of Technological Sciences",
+      "short_code": "C4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (RURAL)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.jits.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Jayaprakash Narayan College of Engineering",
+      "short_code": "36",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Mahabubnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.jpnce.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Jayaprakash Narayan Engineering College",
+      "short_code": "R4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.jpnec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Joginpally B.R. Engineering College",
+      "short_code": "J2",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.jbrec.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Jyothishmathi Institute of Technology & Science",
+      "short_code": "27",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.jits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kakatiya Institute of Technology and Science for Women",
+      "short_code": "6B",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Nizamabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kitw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kamala Institute of Technology & Science",
+      "short_code": "28",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.kitss.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kasireddy Narayan Reddy College of Engineering & Research",
+      "short_code": "5D",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://knrcer.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Keshav Memorial College of Engineering",
+      "short_code": "P8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kmce.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Keshav Memorial Institute of Technology",
+      "short_code": "BD",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.kmit.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "KG Reddy College of Engineering & Technology",
+      "short_code": "QM",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.kgr.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "KLR College of Engineering &Technology",
+      "short_code": "QT",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Bhadradri Kothagudem",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.cet.klr.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kodada Institute of Technology & Science for Women",
+      "short_code": "QU",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kitskodad.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kommuri Pratap Reddy Institute of Technology",
+      "short_code": "RA",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.kpritech.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Kshatriya College of Engineering",
+      "short_code": "B4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Nizamabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.kcea.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Madhira Institute of Technology & Sciences",
+      "short_code": "G7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mitskodad.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mahatma Gandhi Institute of Technology",
+      "short_code": "26",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mgit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mahaveer Institute of Science & Technology",
+      "short_code": "E3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mist.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Malla Reddy College of Engineering and Technology",
+      "short_code": "N3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mrcet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Malla Reddy College of Engineering",
+      "short_code": "Q9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mrce.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Malla Reddy Engineering College and Management Sciences",
+      "short_code": "UJ",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mrem.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Malla Reddy Engineering College for Women",
+      "short_code": "RH",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mallareddyecw.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Marri Laxman Reddy Institute of Technology and Management",
+      "short_code": "7Y",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mlritm.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Megha Institute of Engineering & Technology for Women",
+      "short_code": "RP",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.meghaengg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mina Institute of Engineering & Technology for Women",
+      "short_code": "RQ",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Nalgonda",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.minaenggcollege.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "MLR Institute of Technology",
+      "short_code": "R2",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mlrit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mother Teresa Institute of Science & Technology",
+      "short_code": "C6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.mist.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mother Theressa College of Engineering and Technology",
+      "short_code": "86",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Peddapalli",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mtec86.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Mumtaz College of Engineering & Technology",
+      "short_code": "6E",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.mumtazcet.info",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Nalla Malla Reddy Engineering College",
+      "short_code": "B6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.nmrec.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Nalla Narasimha Reddy Education Society's Group of Institutions",
+      "short_code": "7Z",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.nnrg.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Narsimha Reddy Engineering College",
+      "short_code": "X0",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.nrcmec.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Netaji Institute of Engineering & Technology",
+      "short_code": "N2",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Yadadri Bhuvanagiri",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.netajiengg.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Nigama Engineering College",
+      "short_code": "TD",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Peddapalli",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.nigama.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Pallavi Engineering College",
+      "short_code": "6F",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.pallaviengineeringcollege.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Princeton Institute of Engineering and Technology for Women",
+      "short_code": "6M",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.petw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Priyadarshini Institute of Science & Technology for Women",
+      "short_code": "6C",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.priw.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Ramappa Engineering College",
+      "short_code": "87",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.ramappa.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Rishi Ms Institute of Engineering & Technology for Women",
+      "short_code": "6P",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.rishimsengg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sai Spurthi Institute of Technology",
+      "short_code": "C5",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.saispurthi.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Samskruti College of Engineering & Technology",
+      "short_code": "U1",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.samskruti.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sana Engineering College",
+      "short_code": "M8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sanaeng.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Scient Institute of Technology",
+      "short_code": "C0",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.scient.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Shadan College of Engineering and Technology",
+      "short_code": "08",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.scet.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Shadan Womens College of Engineering & Technology",
+      "short_code": "L5",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.swcet.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Siddhartha Institute of Engineering & Technology",
+      "short_code": "TP",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.siddhartha.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Siddhartha Institute of Technology & Sciences",
+      "short_code": "TQ",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.siddhartha.co.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sphoorthy Engineering College",
+      "short_code": "N8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sphoorthyengg.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sree Chaitanya College of Engineering",
+      "short_code": "N0",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.scce.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sree Chaitanya Institute of Technological Sciences",
+      "short_code": "TR",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.scit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sree Dattha Institute of Engineering and Science",
+      "short_code": "E4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sreedattha.ac.in/sdes",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sree Visvesvaraya Institute of Technology & Science",
+      "short_code": "57",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Mahabubnagar",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.svitsmbnr.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sreekavitha Engineering College",
+      "short_code": "C8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.skec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sreenidhi Institute of Science & Technology",
+      "short_code": "31",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sreenidhi.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sreyas Institute of Engineering and Technology",
+      "short_code": "VE",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sreyas.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sri Chaitanya Institute of Technology and Research",
+      "short_code": "QP",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://scitr.edu.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sri Chaitanya Technical Campus",
+      "short_code": "8A",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.srichaitanya.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sri Indu College of Engineering & Technology",
+      "short_code": "D4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://sriindu.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sri Indu Institute of Engineering & Technology",
+      "short_code": "X3",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.siiet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sri Venkateswara Engineering College",
+      "short_code": "63",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Suryapet",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.sves-srpt.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sridevi Women's Engineering College",
+      "short_code": "D2",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.swec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "St. Martin's Engineering College",
+      "short_code": "K8",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.smec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "St. Mary's Engineering College",
+      "short_code": "BH",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Yadadri Bhuvanagiri",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.smecd.com",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "St. Peter's Engineering College",
+      "short_code": "BK",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.spechyd.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Sumathi Reddy Institute of Technology for Women",
+      "short_code": "6Y",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sritw.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "SVS Group of Institutions",
+      "short_code": "TK",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.svsit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Swami Vivekananada Institute of Technology",
+      "short_code": "P7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Hyderabad",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.svit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Swarna Bharathi Institute of Science and Technology",
+      "short_code": "M6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.sbit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Talla Padmavathi College of Engineering",
+      "short_code": "UC",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.tpce.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Teegala Krishna Reddy Engineering College",
+      "short_code": "R9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.tkrec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "TKR College of Engineering & Technology",
+      "short_code": "K9",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://tkrcet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Trinity College of Engineering & Technology",
+      "short_code": "UE",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.trinityengineering.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Trinity College of Engineering and Technology",
+      "short_code": "UD",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Peddapalli",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.tcek.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "TRR College of Technology",
+      "short_code": "XZ",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "https://www.trr.org.in/engineering",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vaagdevi College of Engineering",
+      "short_code": "64",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vaagdevi.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vaagdevi Engineering College",
+      "short_code": "UK",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Warangal (URBAN)",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vecw.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vaageswari College of Engineering",
+      "short_code": "S4",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Karimnagar",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vgsek.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vardhaman College of Engineering",
+      "short_code": "88",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vardhaman.org",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vathsalya Institute of Science and Technology",
+      "short_code": "E7",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Yadadri Bhuvanagiri",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.vathsalya.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vidya Jyothi Institute of Technology",
+      "short_code": "91",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vjit.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vignan Institute of Technology & Science",
+      "short_code": "89",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Yadadri Bhuvanagiri",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vignanits.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vignana Bharathi Institute of Technology",
+      "short_code": "P6",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vbithyd.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vignan's Institute of Management and Technology for Women",
+      "short_code": "UP",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vmtw.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vijay Rural Engineering College",
+      "short_code": "29",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Nizamabad",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.vrec.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Vijaya Engineering College",
+      "short_code": "BR",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Khammam",
+        "state": "Telangana"
+      },
+      "type": "Private",
+      "branches_offered": [],
+      "official_website": "http://www.vjeckmm.edu.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "Visvesvaraya College of Engineering & Technology",
+      "short_code": "BT",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Ranga Reddy",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "https://vcethyd.ac.in/",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    },
+    {
+      "name": "VNR Vignana Jyothi Institute of Engineering & Technology",
+      "short_code": "07",
+      "affiliated_to": "JNTUH",
+      "location": {
+        "district": "Medchal",
+        "state": "Telangana"
+      },
+      "type": "Autonomous-Private",
+      "branches_offered": [],
+      "official_website": "http://www.vnrvjiet.ac.in",
+      "nirf_rank": null,
+      "source": {
+        "origin_url": "http://jntuhaac.in/Public/AcademicYearWiseColleges?academicYearId=17",
+        "retrieved_date": "2026-07-01",
+        "status": "verified"
+      },
+      "notes": "Regular affiliated engineering college under JNTUH for Academic Year 2025-26 (the current AY at time of sourcing), from the official JNTUH Academic Audit Cell portal's year-wise affiliation list. Portal marks this college as academically autonomous. branches_offered and city not yet sourced per-college."
+    }
+  ]
+}
