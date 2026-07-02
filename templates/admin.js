@@ -1,0 +1,953 @@
+function escapeHtml(value = '') {
+  return String(value)
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;');
+}
+
+function adminShell({ title, active = 'dashboard', body }) {
+  const nav = [
+    ['dashboard', '/admin/', 'Dashboard'],
+    ['subjects', '/admin/subjects', 'Subjects'],
+    ['colleges', '/admin/colleges', 'Colleges'],
+    ['branch_profiles', '/admin/branch-profiles', 'Branch profiles'],
+    ['proposals', '/admin/proposals', 'Review queue'],
+    ['revisions', '/admin/revisions', 'Revisions'],
+    ['sources', '/admin/sources', 'Sources'],
+    ['assets', '/admin/assets', 'Assets'],
+    ['source_evidence', '/admin/source-evidence', 'Evidence'],
+  ];
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>${escapeHtml(title)} - JNTUStack Admin</title>
+<style>
+:root{--ink:#18212f;--muted:#657184;--line:#d9e1e8;--paper:#f7fafc;--panel:#fff;--accent:#007c73;--warn:#a45d00;--bad:#9b1c31;--ok:#0d7a48;}
+*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:14px;line-height:1.45}
+a{color:inherit}.admin-frame{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.admin-rail{background:#0e2530;color:#e8f3f2;padding:18px 14px;position:sticky;top:0;height:100vh}
+.admin-brand{font-weight:700;font-size:18px;margin-bottom:18px}.admin-source{font-size:12px;color:#9fc5c0;margin-bottom:20px}
+.admin-nav{display:grid;gap:4px}.admin-nav a{display:block;text-decoration:none;padding:9px 10px;border-radius:6px;color:#d9ece9}
+.admin-nav a[aria-current="page"]{background:#173946;color:#fff}.admin-nav a:hover{background:#17313c}
+.admin-main{padding:22px 28px;min-width:0}.admin-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
+h1{font-size:24px;margin:0}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color:var(--muted);font-size:13px;margin-top:4px}.logout{font-size:13px;color:var(--muted)}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}
+.metric-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}.metric-value{font-size:24px;font-weight:700;margin-top:4px}
+.status-ok{color:var(--ok)}.status-warn{color:var(--warn)}.status-bad{color:var(--bad)}
+.table-wrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#f0f5f7}
+tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:12px;background:#f8fbfc}
+.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}
+.login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px}
+.login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-top:5px;font:inherit}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.error{border:1px solid #f0b8b8;color:var(--bad);background:#fff5f5;border-radius:6px;padding:9px;margin:12px 0 0}
+@media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top{align-items:flex-start;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="admin-frame">
+  <aside class="admin-rail">
+    <div class="admin-brand">JNTUStack Admin</div>
+    <div class="admin-source">Read-only content view</div>
+    <nav class="admin-nav" aria-label="Admin navigation">
+      ${nav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
+    </nav>
+  </aside>
+  <main class="admin-main">
+    ${body}
+  </main>
+</div>
+</body>
+</html>`;
+}
+
+function formatBytes(value) {
+  const bytes = Number(value || 0);
+  if (!Number.isFinite(bytes) || bytes <= 0) return '';
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+export function renderLoginPage({ error = null } = {}) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin login - JNTUStack</title>
+${adminShell({ title: 'Login', body: '' }).match(/<style>[\s\S]*<\/style>/)[0]}
+</head>
+<body class="login-page">
+  <form class="login-box" method="post" action="/admin/login">
+    <h1>Admin login</h1>
+    <div class="admin-sub">Private read-only dashboard</div>
+    ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+    <label for="email">Email</label>
+    <input id="email" name="email" type="email" autocomplete="username" required>
+    <label for="password">Password</label>
+    <input id="password" name="password" type="password" autocomplete="current-password" required>
+    <button type="submit">Sign in</button>
+  </form>
+</body>
+</html>`;
+}
+
+export function renderAdminConfigError({ message }) {
+  return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Admin not configured</title></head><body><h1>Admin not configured</h1><p>${escapeHtml(message)}</p></body></html>`;
+}
+
+export function renderDashboard({ counts, contentSource }) {
+  const metrics = [
+    ['Content source', contentSource],
+    ['Subjects total', counts.subjectsTotal],
+    ['Verified subjects', counts.subjectsVerified, 'status-ok'],
+    ['Needs verification', counts.subjectsNeedsVerification, 'status-warn'],
+    ['Placeholder subjects', counts.subjectsPlaceholder, 'status-bad'],
+    ['Colleges total', counts.collegesTotal],
+    ['Branch profiles', counts.branchProfilesTotal],
+  ];
+  return adminShell({
+    title: 'Dashboard',
+    active: 'dashboard',
+    body: `
+<div class="admin-top"><div><h1>Dashboard</h1><div class="admin-sub">Visibility only. No edits, publishing, or automation are available here.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">${metrics.map(([label, value, cls]) => `<div class="metric"><div class="metric-label">${escapeHtml(label)}</div><div class="metric-value ${cls || ''}">${escapeHtml(value)}</div></div>`).join('')}</section>`,
+  });
+}
+
+export function renderSubjectsPage({ subjects, contentSource }) {
+  return adminShell({
+    title: 'Subjects',
+    active: 'subjects',
+    body: `
+<div class="admin-top"><div><h1>Subjects</h1><div class="admin-sub">Source: ${escapeHtml(contentSource)}. Read-only table.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Subject</th><th>Branch</th><th>Regulation</th><th>Semester</th><th>Slug</th></tr></thead><tbody>
+${subjects.map(s => `<tr><td><span class="pill">${escapeHtml(s.source?.status || '')}</span></td><td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.branch)}</td><td>${escapeHtml(s.regulation)}</td><td>${escapeHtml(s.year_sem_label)}</td><td class="mono">${escapeHtml(s.seo?.slug || s.id)}</td></tr>`).join('')}
+</tbody></table></div>`,
+  });
+}
+
+export function renderCollegesPage({ colleges, contentSource }) {
+  return adminShell({
+    title: 'Colleges',
+    active: 'colleges',
+    body: `
+<div class="admin-top"><div><h1>Colleges</h1><div class="admin-sub">Source: ${escapeHtml(contentSource)}. Read-only table.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Name</th><th>University</th><th>Type</th><th>District</th><th>Website</th></tr></thead><tbody>
+${colleges.map(c => `<tr><td><span class="pill">${escapeHtml(c.source?.status || '')}</span></td><td>${escapeHtml(c.name)}</td><td>${escapeHtml(c.affiliated_to)}</td><td>${escapeHtml(c.type)}</td><td>${escapeHtml(c.location?.district || '')}</td><td class="mono">${c.official_website ? escapeHtml(c.official_website) : ''}</td></tr>`).join('')}
+</tbody></table></div>`,
+  });
+}
+
+export function renderBranchProfilesPage({ branchProfiles, contentSource }) {
+  return adminShell({
+    title: 'Branch profiles',
+    active: 'branch_profiles',
+    body: `
+<div class="admin-top"><div><h1>Branch profiles</h1><div class="admin-sub">Source: ${escapeHtml(contentSource)}. Read-only table.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Branch</th><th>Tagline</th><th>Career paths</th></tr></thead><tbody>
+${branchProfiles.map(p => `<tr><td><span class="pill">${escapeHtml(p.source?.status || '')}</span></td><td>${escapeHtml(p.branch)}</td><td>${escapeHtml(p.tagline)}</td><td>${escapeHtml((p.career_paths || []).join(', '))}</td></tr>`).join('')}
+</tbody></table></div>`,
+  });
+}
+
+export function renderSourceEvidencePage({ sources, contentSource }) {
+  return adminShell({
+    title: 'Source evidence',
+    active: 'source_evidence',
+    body: `
+<div class="admin-top"><div><h1>Source evidence</h1><div class="admin-sub">Source: ${escapeHtml(contentSource)}. Distinct source evidence found in loaded content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Entity type</th><th>Status</th><th>Retrieved</th><th>URL</th><th>Note</th></tr></thead><tbody>
+${sources.map(s => `<tr><td>${escapeHtml(s.entityType)}</td><td><span class="pill">${escapeHtml(s.status)}</span></td><td>${escapeHtml(s.retrievedDate || '')}</td><td class="mono">${escapeHtml(s.originUrl || '')}</td><td>${escapeHtml(s.note || '')}</td></tr>`).join('')}
+</tbody></table></div>`,
+  });
+}
+
+export function renderSourceUnavailablePage({ message }) {
+  return adminShell({
+    title: 'Sources',
+    active: 'sources',
+    body: `
+<div class="admin-top"><div><h1>Sources</h1><div class="admin-sub">DB-backed source registry.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="notice">${escapeHtml(message)}</div>`,
+  });
+}
+
+export function renderSourceRegistryPage({ sources }) {
+  return adminShell({
+    title: 'Sources',
+    active: 'sources',
+    body: `
+<div class="admin-top"><div><h1>Sources</h1><div class="admin-sub">Trusted source registry. No crawling, fetching, parsing, or proposal automation is connected here.</div></div><div><a class="logout" href="/admin/sources/new">Create source</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Name</th><th>Kind</th><th>Trust</th><th>Base URL</th><th>Last checked</th><th>Last success</th><th></th></tr></thead><tbody>
+${sources.length ? sources.map(s => `<tr><td><span class="pill">${s.enabled ? 'enabled' : 'disabled'}</span></td><td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.sourceKind)}</td><td>${escapeHtml(s.trustLevel)}</td><td class="mono">${escapeHtml(s.baseUrl)}</td><td>${escapeHtml(s.lastCheckedAt || '')}</td><td>${escapeHtml(s.lastSuccessAt || '')}</td><td><a href="/admin/sources/${s.id}">View</a></td></tr>`).join('') : '<tr><td colspan="8">No discovery sources configured yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderSourceFormPage({ values = {}, sourceKinds = [], trustLevels = [], error = null, mode = 'create', source = null } = {}) {
+  const action = mode === 'edit' && source ? `/admin/sources/${escapeHtml(source.id)}/edit` : '/admin/sources/new';
+  const title = mode === 'edit' && source ? `Edit source ${source.id}` : 'Create source';
+  const value = key => values[key] ?? values[key.replace(/[A-Z]/g, letter => `_${letter.toLowerCase()}`)] ?? '';
+  const selectedKind = value('source_kind') || 'other';
+  const selectedTrust = value('trust_level') || 'unknown';
+  const enabled = values.enabled === undefined ? true : ['true', '1', 'on', true, 1].includes(values.enabled);
+  const crawlEnabled = ['true', '1', 'on', true, 1].includes(values.crawl_enabled);
+  return adminShell({
+    title,
+    active: 'sources',
+    body: `
+<div class="admin-top"><div><h1>${escapeHtml(title)}</h1><div class="admin-sub">Configuration only. Saving a source does not fetch, parse, create proposals, or publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<form class="action-box" method="post" action="${action}">
+  <label for="source_key"><strong>Source key</strong></label>
+  <input id="source_key" name="source_key" value="${escapeHtml(value('source_key'))}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="jntuk-official">
+
+  <label for="name" style="display:block;margin-top:12px;"><strong>Name</strong></label>
+  <input id="name" name="name" value="${escapeHtml(value('name'))}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+
+  <label for="base_url" style="display:block;margin-top:12px;"><strong>Base URL</strong></label>
+  <input id="base_url" name="base_url" value="${escapeHtml(value('base_url'))}" required type="url" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px;">
+    <label><strong>University ID</strong> <span class="admin-sub">optional</span><input name="university_id" value="${escapeHtml(value('university_id'))}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;"></label>
+    <label><strong>Branch ID</strong> <span class="admin-sub">optional</span><input name="branch_id" value="${escapeHtml(value('branch_id'))}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;"></label>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:12px;">
+    <label><strong>Source kind</strong><select name="source_kind" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">${sourceKinds.map(kind => `<option value="${escapeHtml(kind)}"${selectedKind === kind ? ' selected' : ''}>${escapeHtml(kind)}</option>`).join('')}</select></label>
+    <label><strong>Trust level</strong><select name="trust_level" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">${trustLevels.map(level => `<option value="${escapeHtml(level)}"${selectedTrust === level ? ' selected' : ''}>${escapeHtml(level)}</option>`).join('')}</select></label>
+  </div>
+
+  <label for="parser_key" style="display:block;margin-top:12px;"><strong>Parser key</strong> <span class="admin-sub">optional</span></label>
+  <input id="parser_key" name="parser_key" value="${escapeHtml(value('parser_key'))}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+
+  <div style="display:flex;gap:18px;flex-wrap:wrap;margin-top:12px;">
+    <label><input type="checkbox" name="enabled" value="1"${enabled ? ' checked' : ''}> Enabled</label>
+    <label><input type="checkbox" name="crawl_enabled" value="1"${crawlEnabled ? ' checked' : ''}> Crawl enabled flag</label>
+  </div>
+
+  <label for="notes" style="display:block;margin-top:12px;"><strong>Notes</strong></label>
+  <textarea id="notes" name="notes" style="width:100%;min-height:110px;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;margin-top:6px;">${escapeHtml(value('notes'))}</textarea>
+
+  <button type="submit">${mode === 'edit' ? 'Save source' : 'Create source'}</button>
+</form>`,
+  });
+}
+
+export function renderSourceDetailPage({ source, error = null, fetchError = null, fetchValues = {} }) {
+  return adminShell({
+    title: `Source ${source.id}`,
+    active: 'sources',
+    body: `
+<div class="admin-top"><div><h1>${escapeHtml(source.name)}</h1><div class="admin-sub"><span class="mono">${escapeHtml(source.sourceKey)}</span></div></div><div><a class="logout" href="/admin/sources/${source.id}/edit">Edit</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${fetchError ? `<div class="error">${escapeHtml(fetchError)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${source.enabled ? 'enabled' : 'disabled'}</div></div>
+  <div class="metric"><div class="metric-label">Trust</div><div class="metric-value">${escapeHtml(source.trustLevel)}</div></div>
+  <div class="metric"><div class="metric-label">Kind</div><div class="metric-value">${escapeHtml(source.sourceKind)}</div></div>
+  <div class="metric"><div class="metric-label">Crawl flag</div><div class="metric-value">${source.crawlEnabled ? 'enabled' : 'disabled'}</div></div>
+</section>
+
+<h2>Metadata</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th>Base URL</th><td class="mono">${escapeHtml(source.baseUrl)}</td></tr>
+<tr><th>University</th><td>${escapeHtml(source.universityCode || source.universityId || '')}</td></tr>
+<tr><th>Branch</th><td>${escapeHtml(source.branchCode || source.branchId || '')}</td></tr>
+<tr><th>Parser key</th><td class="mono">${escapeHtml(source.parserKey || '')}</td></tr>
+<tr><th>Last checked</th><td>${escapeHtml(source.lastCheckedAt || '')}</td></tr>
+<tr><th>Last success</th><td>${escapeHtml(source.lastSuccessAt || '')}</td></tr>
+<tr><th>Notes</th><td>${escapeHtml(source.notes || '')}</td></tr>
+</tbody></table></div>
+
+<h2>Source actions</h2>
+<form class="action-box" method="post" action="/admin/sources/${escapeHtml(source.id)}/enabled">
+  <input type="hidden" name="enabled" value="${source.enabled ? '0' : '1'}">
+  <button type="submit">${source.enabled ? 'Disable source' : 'Enable source'}</button>
+</form>
+
+<h2>Fetch URL</h2>
+<form class="action-box" method="post" action="/admin/sources/${escapeHtml(source.id)}/fetch">
+  <strong>Manual fetch</strong>
+  <div class="admin-sub">Stores one URL as immutable source evidence. It does not parse, extract, create proposals, or publish content.</div>
+  <label for="source_url" style="display:block;margin-top:12px;"><strong>URL</strong></label>
+  <input id="source_url" name="source_url" type="url" value="${escapeHtml(fetchValues.source_url || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(source.baseUrl)}">
+  <button type="submit">Fetch URL</button>
+</form>
+
+<h2>Crawl runs</h2>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Started</th><th>Finished</th><th>Items</th><th>Assets</th><th>Error</th></tr></thead><tbody>
+${source.crawlRuns?.length ? source.crawlRuns.map(run => `<tr><td><span class="pill">${escapeHtml(run.status)}</span></td><td>${escapeHtml(run.startedAt || '')}</td><td>${escapeHtml(run.finishedAt || '')}</td><td>${escapeHtml(run.itemsDiscovered)}</td><td>${escapeHtml(run.assetsCreated)}</td><td>${escapeHtml(run.errorMessage || '')}</td></tr>`).join('') : '<tr><td colspan="6">No crawl runs recorded. Crawling is not implemented yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderAssetsUnavailablePage({ message }) {
+  return adminShell({
+    title: 'Assets',
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Assets</h1><div class="admin-sub">DB-backed raw source material registry.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="notice">${escapeHtml(message)}</div>`,
+  });
+}
+
+export function renderAssetsPage({ assets }) {
+  return adminShell({
+    title: 'Assets',
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Assets</h1><div class="admin-sub">Raw source material only. Assets are stored before parsing and never publish content.</div></div><div><a class="logout" href="/admin/assets/new">Upload asset</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Filename</th><th>Size</th><th>Type</th><th>Source</th><th>Downloaded</th><th>Checksum</th><th></th></tr></thead><tbody>
+${assets.length ? assets.map(asset => `<tr><td><span class="pill">${escapeHtml(asset.downloadStatus || '')}</span></td><td>${escapeHtml(asset.originalFilename || '')}</td><td>${escapeHtml(formatBytes(asset.fileSize))}</td><td>${escapeHtml(asset.contentType || '')}</td><td>${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</td><td>${escapeHtml(asset.downloadedAt || '')}</td><td class="mono">${escapeHtml(asset.sha256Checksum ? `${asset.sha256Checksum.slice(0, 16)}...` : '')}</td><td><a href="/admin/assets/${asset.id}">View</a></td></tr>`).join('') : '<tr><td colspan="8">No source assets stored yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderAssetUploadPage({ sources = [], values = {}, error = null } = {}) {
+  return adminShell({
+    title: 'Upload asset',
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Upload asset</h1><div class="admin-sub">Upload stores immutable raw material only. It does not parse, crawl, create proposals, or modify public content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<form class="action-box" method="post" action="/admin/assets/new" enctype="multipart/form-data">
+  <label for="discovery_source_id"><strong>Discovery source</strong></label>
+  <select id="discovery_source_id" name="discovery_source_id" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    <option value="">Select source</option>
+    ${sources.map(source => `<option value="${escapeHtml(source.id)}"${String(values.discovery_source_id || '') === String(source.id) ? ' selected' : ''}>${escapeHtml(source.name)} (${escapeHtml(source.sourceKey)})</option>`).join('')}
+  </select>
+
+  <label for="source_url" style="display:block;margin-top:12px;"><strong>Source URL</strong> <span class="admin-sub">optional</span></label>
+  <input id="source_url" name="source_url" value="${escapeHtml(values.source_url || '')}" type="url" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+
+  <label for="asset_file" style="display:block;margin-top:12px;"><strong>File</strong></label>
+  <input id="asset_file" name="asset_file" required type="file" accept=".pdf,.html,.htm,.zip,image/*" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;background:#fff;">
+
+  <button type="submit">Store asset</button>
+</form>`,
+  });
+}
+
+export function renderAssetDetailPage({
+  asset,
+  parsers = [],
+  parseResults = [],
+  pipelineRuns = [],
+  error = null,
+  pipelineError = null,
+  pipelineValues = {},
+}) {
+  const selectedParser = pipelineValues.parser_key || parsers.find(parser => parser.suggested && parser.available)?.key || parsers.find(parser => parser.available)?.key || '';
+  return adminShell({
+    title: `Asset ${asset.id}`,
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>${escapeHtml(asset.originalFilename || `Asset ${asset.id}`)}</h1><div class="admin-sub">Raw source asset. No parser or publishing action is available.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${pipelineError ? `<div class="error">${escapeHtml(pipelineError)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(asset.downloadStatus || '')}</div></div>
+  <div class="metric"><div class="metric-label">Size</div><div class="metric-value">${escapeHtml(formatBytes(asset.fileSize) || '-')}</div></div>
+  <div class="metric"><div class="metric-label">Source</div><div class="metric-value">${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</div></div>
+</section>
+
+<h2>Metadata</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th>Filename</th><td>${escapeHtml(asset.originalFilename || '')}</td></tr>
+<tr><th>Content type</th><td>${escapeHtml(asset.contentType || '')}</td></tr>
+<tr><th>SHA-256</th><td class="mono">${escapeHtml(asset.sha256Checksum || '')}</td></tr>
+<tr><th>Source URL</th><td class="mono">${escapeHtml(asset.sourceUrl || '')}</td></tr>
+<tr><th>Storage path</th><td class="mono">${escapeHtml(asset.localStoragePath || '')}</td></tr>
+<tr><th>Downloaded at</th><td>${escapeHtml(asset.downloadedAt || '')}</td></tr>
+<tr><th>Duplicate of</th><td>${asset.duplicateOfAssetId ? `<a href="/admin/assets/${escapeHtml(asset.duplicateOfAssetId)}">${escapeHtml(asset.duplicateOfAssetId)}</a>` : ''}</td></tr>
+<tr><th>ETag</th><td class="mono">${escapeHtml(asset.etag || '')}</td></tr>
+<tr><th>Last modified</th><td>${escapeHtml(asset.lastModified || '')}</td></tr>
+<tr><th>Error</th><td>${escapeHtml(asset.downloadError || '')}</td></tr>
+</tbody></table></div>
+
+<h2>Parsers</h2>
+<div class="proposal-actions">
+${parsers.length ? parsers.map(parser => `<form class="action-box" method="post" action="/admin/assets/${escapeHtml(asset.id)}/parse">
+  <strong>${escapeHtml(parser.label)}</strong>${parser.suggested ? ' <span class="pill">suggested</span>' : ''}${parser.sourceSpecific ? ' <span class="pill">source-specific</span>' : ''}
+  <div class="admin-sub">${escapeHtml(parser.description || '')}</div>
+  <div class="mono" style="margin-top:8px;">${escapeHtml(parser.key)} v${escapeHtml(parser.version)}</div>
+  <input type="hidden" name="parser_key" value="${escapeHtml(parser.key)}">
+  ${parser.available ? '<button type="submit">Run parser</button>' : `<div class="notice" style="margin-top:10px;">${escapeHtml(parser.unavailableReason || 'Parser unavailable.')}</div>`}
+</form>`).join('') : '<div class="notice">No registered parser matches this asset type.</div>'}
+</div>
+
+<h2>Run manual pipeline</h2>
+<form class="action-box" method="post" action="/admin/assets/${escapeHtml(asset.id)}/pipeline">
+  <div class="admin-sub">Runs parser, extraction, validation, and optional diff/proposal steps for this one asset. It does not publish or write JSON files.</div>
+  <label for="pipeline_parser_key"><strong>Parser</strong></label>
+  <select id="pipeline_parser_key" name="parser_key" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${parsers.filter(parser => parser.available).map(parser => `<option value="${escapeHtml(parser.key)}"${selectedParser === parser.key ? ' selected' : ''}>${escapeHtml(parser.label)} (${escapeHtml(parser.key)})${parser.suggested ? ' - suggested' : ''}</option>`).join('')}
+  </select>
+
+  <label for="pipeline_entity_type" style="display:block;margin-top:12px;"><strong>Entity type</strong></label>
+  <select id="pipeline_entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${pipelineValues.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+  </select>
+
+  <label for="pipeline_entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong> <span class="admin-sub">optional</span></label>
+  <input id="pipeline_entity_key" name="entity_key" value="${escapeHtml(pipelineValues.entity_key || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="existing subject slug, college key, or branch code">
+
+  <label for="pipeline_candidate_index" style="display:block;margin-top:12px;"><strong>Candidate index</strong> <span class="admin-sub">optional</span></label>
+  <input id="pipeline_candidate_index" name="candidate_index" value="${escapeHtml(pipelineValues.candidate_index || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="0">
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px;">
+    <label><strong>University</strong><input name="university" value="${escapeHtml(pipelineValues.university || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="JNTUK"></label>
+    <label><strong>Regulation</strong><input name="regulation" value="${escapeHtml(pipelineValues.regulation || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="R23"></label>
+    <label><strong>Branch</strong><input name="branch" value="${escapeHtml(pipelineValues.branch || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="CSE"></label>
+    <label><strong>Year</strong><input name="year" value="${escapeHtml(pipelineValues.year || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="3"></label>
+    <label><strong>Semester</strong><input name="semester" value="${escapeHtml(pipelineValues.semester || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="1"></label>
+  </div>
+
+  <label style="display:block;margin-top:12px;"><input type="checkbox" name="create_proposal" value="1"${pipelineValues.create_proposal ? ' checked' : ''}> Create proposal from diff</label>
+  <div class="admin-sub">Default is off. Proposal creation is skipped if extraction validation fails.</div>
+  <button type="submit">Run manual pipeline</button>
+</form>
+
+<h2>Pipeline history</h2>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Entity</th><th>Key</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${pipelineRuns.length ? pipelineRuns.map(run => `<tr><td><span class="pill">${escapeHtml(run.status)}</span></td><td>${escapeHtml(run.parserKey)}</td><td>${escapeHtml(run.entityType)}</td><td class="mono">${escapeHtml(run.entityKey || '')}</td><td>${escapeHtml(run.createdAt || '')}</td><td>${escapeHtml(run.errorMessage || '')}</td><td><a href="/admin/pipeline-runs/${escapeHtml(run.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No pipeline runs yet.</td></tr>'}
+</tbody></table></div>
+
+<h2>Parse history</h2>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Version</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${parseResults.length ? parseResults.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td>${escapeHtml(result.parserKey)}</td><td>${escapeHtml(result.parserVersion)}</td><td>${escapeHtml(result.createdAt || '')}</td><td>${escapeHtml(result.errorMessage || '')}</td><td><a href="/admin/parse-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="6">No parse results yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderPipelineRunDetailPage({ result }) {
+  return adminShell({
+    title: `Pipeline run ${result.id}`,
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Pipeline run ${escapeHtml(result.id)}</h1><div class="admin-sub">Manual evidence pipeline. This run does not publish content or mark anything verified.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Parser</div><div class="metric-value">${escapeHtml(result.parserKey)}</div></div>
+  <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
+  <div class="metric"><div class="metric-label">Asset</div><div class="metric-value"><a href="/admin/assets/${escapeHtml(result.assetId)}">${escapeHtml(result.assetFilename || result.assetId)}</a></div></div>
+</section>
+
+<h2>Summary</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th>Entity key</th><td class="mono">${escapeHtml(result.entityKey || '')}</td></tr>
+<tr><th>Created by</th><td>${escapeHtml(result.createdBy || '')}</td></tr>
+<tr><th>Created</th><td>${escapeHtml(result.createdAt || '')}</td></tr>
+<tr><th>Finished</th><td>${escapeHtml(result.finishedAt || '')}</td></tr>
+<tr><th>Error</th><td>${escapeHtml(result.errorMessage || '')}</td></tr>
+</tbody></table></div>
+
+<h2>Steps</h2>
+<div class="table-wrap"><table><thead><tr><th>Step</th><th>Status</th><th>Details</th><th>At</th></tr></thead><tbody>
+${result.steps?.length ? result.steps.map(step => {
+  const { step: stepName, status, at, ...details } = step;
+  return `<tr><td>${escapeHtml(stepName || '')}</td><td><span class="pill">${escapeHtml(status || '')}</span></td><td><pre class="mono" style="white-space:pre-wrap;margin:0;">${escapeHtml(JSON.stringify(details, null, 2))}</pre></td><td>${escapeHtml(at || '')}</td></tr>`;
+}).join('') : '<tr><td colspan="4">No steps recorded.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderParseResultDetailPage({
+  result,
+  diffResults = [],
+  extractionResults = [],
+  values = {},
+  error = null,
+  extractionValues = {},
+  extractionError = null,
+}) {
+  const candidates = Array.isArray(result.parsedPayload?.candidates) ? result.parsedPayload.candidates : [];
+  return adminShell({
+    title: `Parse result ${result.id}`,
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Parse result ${escapeHtml(result.id)}</h1><div class="admin-sub">Evidence extraction only. This result does not publish content or create proposals.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${extractionError ? `<div class="error">${escapeHtml(extractionError)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Parser</div><div class="metric-value">${escapeHtml(result.parserKey)}</div></div>
+  <div class="metric"><div class="metric-label">Asset</div><div class="metric-value"><a href="/admin/assets/${escapeHtml(result.assetId)}">${escapeHtml(result.assetFilename || result.assetId)}</a></div></div>
+</section>
+
+<h2>Error</h2>
+<div class="notice">${escapeHtml(result.errorMessage || 'No parser error recorded.')}</div>
+
+<h2>Parsed payload</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.parsedPayload, null, 2) || 'null')}</pre>
+
+<h2>Confidence</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.confidence, null, 2) || 'null')}</pre>
+
+${candidates.length ? `<h2>Subject candidates</h2>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Name</th><th>Regulation</th><th>Branch</th><th>Year/Sem</th><th>Category</th><th>Type</th><th></th></tr></thead><tbody>
+${candidates.map((candidate, index) => `<tr>
+  <td>${escapeHtml(candidate.candidate_index ?? index)}</td>
+  <td>${escapeHtml(candidate.name || '')}</td>
+  <td>${escapeHtml(candidate.regulation || '')}</td>
+  <td>${escapeHtml(candidate.branch || '')}</td>
+  <td>${escapeHtml(candidate.year_sem_label || [candidate.year, candidate.semester].filter(Boolean).join('-'))}</td>
+  <td>${escapeHtml(candidate.category || '')}</td>
+  <td>${escapeHtml(candidate.type || '')}</td>
+  <td>
+    <form method="post" action="/admin/parse-results/${escapeHtml(result.id)}/extract">
+      <input type="hidden" name="entity_type" value="subject">
+      <input type="hidden" name="candidate_index" value="${escapeHtml(index)}">
+      <input type="hidden" name="entity_key" value="${escapeHtml(candidate.name || '')}">
+      <input type="hidden" name="regulation" value="${escapeHtml(candidate.regulation || '')}">
+      <input type="hidden" name="branch" value="${escapeHtml(candidate.branch || '')}">
+      <input type="hidden" name="year" value="${escapeHtml(candidate.year || '')}">
+      <input type="hidden" name="semester" value="${escapeHtml(candidate.semester || '')}">
+      <button type="submit">Extract this candidate</button>
+    </form>
+  </td>
+</tr>`).join('')}
+</tbody></table></div>` : ''}
+
+<h2>Extract entity payload</h2>
+<form class="action-box" method="post" action="/admin/parse-results/${escapeHtml(result.id)}/extract">
+  <div class="admin-sub">Extraction turns raw parsed evidence into an entity-shaped candidate. Missing fields stay missing and validation remains required.</div>
+  <label for="extract_entity_type"><strong>Entity type</strong></label>
+  <select id="extract_entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${extractionValues.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+  </select>
+  <label for="extract_entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong> <span class="admin-sub">optional</span></label>
+  <input id="extract_entity_key" name="entity_key" value="${escapeHtml(extractionValues.entity_key || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="existing subject slug, college key, or branch code">
+  <input type="hidden" name="candidate_index" value="${escapeHtml(extractionValues.candidate_index || '')}">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:10px;margin-top:12px;">
+    <label><strong>University</strong><input name="university" value="${escapeHtml(extractionValues.university || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="JNTUK"></label>
+    <label><strong>Regulation</strong><input name="regulation" value="${escapeHtml(extractionValues.regulation || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="R23"></label>
+    <label><strong>Branch</strong><input name="branch" value="${escapeHtml(extractionValues.branch || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="CSE"></label>
+    <label><strong>Year</strong><input name="year" value="${escapeHtml(extractionValues.year || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="3"></label>
+    <label><strong>Semester</strong><input name="semester" value="${escapeHtml(extractionValues.semester || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="1"></label>
+  </div>
+  <button type="submit">Extract entity payload</button>
+</form>
+
+<h2>Extraction history</h2>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Validation</th><th>Entity</th><th>Key</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span class="pill">${escapeHtml(extraction.status)}</span></td><td><span class="pill">${escapeHtml(extraction.validationStatus)}</span></td><td>${escapeHtml(extraction.entityType)}</td><td class="mono">${escapeHtml(extraction.entityKey || '')}</td><td>${escapeHtml(extraction.createdAt || '')}</td><td>${escapeHtml(extraction.errorMessage || '')}</td><td><a href="/admin/extraction-results/${escapeHtml(extraction.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No extraction results yet.</td></tr>'}
+</tbody></table></div>
+
+<h2>Run diff</h2>
+<form class="action-box" method="post" action="/admin/parse-results/${escapeHtml(result.id)}/diff">
+  <label for="entity_type"><strong>Entity type</strong></label>
+  <select id="entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+  </select>
+  <label for="entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong></label>
+  <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="subject id, slug, college key, or branch code">
+  <button type="submit">Run diff</button>
+</form>
+
+<h2>Diff history</h2>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Changes</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${escapeHtml(diff.status)}</span></td><td>${escapeHtml(diff.entityType)}</td><td class="mono">${escapeHtml(diff.entityKey)}</td><td>${escapeHtml(diff.diff?.change_count ?? '')}</td><td>${escapeHtml(diff.createdAt || '')}</td><td>${escapeHtml(diff.errorMessage || '')}</td><td><a href="/admin/diff-results/${escapeHtml(diff.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No diff results yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderExtractionResultDetailPage({ result, error = null }) {
+  const validationErrors = Array.isArray(result.validationErrors) ? result.validationErrors : [];
+  return adminShell({
+    title: `Extraction result ${result.id}`,
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Extraction result ${escapeHtml(result.id)}</h1><div class="admin-sub">Entity-shaped candidate only. This does not create proposals or publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(result.validationStatus)}</div></div>
+  <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
+  <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value"><a href="/admin/parse-results/${escapeHtml(result.parseResultId)}">${escapeHtml(result.parseResultId)}</a></div></div>
+</section>
+
+<h2>Diff action</h2>
+${result.status === 'success' ? `<form class="action-box" method="post" action="/admin/extraction-results/${escapeHtml(result.id)}/diff">
+  <strong>Create diff from this extraction</strong>
+  <div class="admin-sub">Uses the extracted entity payload for comparison. It does not create proposals or publish content.</div>
+  <button type="submit">Create diff from extraction</button>
+</form>` : '<div class="notice">Only successful extraction results can be diffed.</div>'}
+
+<h2>Error</h2>
+<div class="notice">${escapeHtml(result.errorMessage || 'No extraction error recorded.')}</div>
+
+<h2>Validation errors</h2>
+${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th><th>Rule</th></tr></thead><tbody>${validationErrors.map(err => `<tr><td class="mono">${escapeHtml(err.path || '')}</td><td>${escapeHtml(err.message || '')}</td><td class="mono">${escapeHtml(err.keyword || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice">No validation errors stored.</div>'}
+
+<h2>Extracted payload</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.extractedPayload, null, 2) || 'null')}</pre>
+
+<h2>Confidence</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.confidence, null, 2) || 'null')}</pre>`,
+  });
+}
+
+export function renderDiffResultDetailPage({ result, existingProposal = null, error = null }) {
+  const canCreateProposal = result.status === 'success' && !existingProposal;
+  return adminShell({
+    title: `Diff result ${result.id}`,
+    active: 'assets',
+    body: `
+<div class="admin-top"><div><h1>Diff result ${escapeHtml(result.id)}</h1><div class="admin-sub">Comparison evidence only. Proposal creation is manual and still does not publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
+  <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value"><a href="/admin/parse-results/${escapeHtml(result.parseResultId)}">${escapeHtml(result.parseResultId)}</a></div></div>
+  <div class="metric"><div class="metric-label">Extraction result</div><div class="metric-value">${result.extractionResultId ? `<a href="/admin/extraction-results/${escapeHtml(result.extractionResultId)}">${escapeHtml(result.extractionResultId)}</a>` : '-'}</div></div>
+</section>
+
+<h2>Proposal</h2>
+${existingProposal ? `<div class="notice">A proposal already exists for this diff: <a href="/admin/proposals/${escapeHtml(existingProposal.id)}">proposal ${escapeHtml(existingProposal.id)}</a>.</div>` : ''}
+${canCreateProposal ? `<form class="action-box" method="post" action="/admin/diff-results/${escapeHtml(result.id)}/proposal">
+  <strong>Create proposal from this diff</strong>
+  <div class="admin-sub">Creates a needs_review proposal in the review queue. It does not write public content or mark anything verified.</div>
+  <label for="note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong> <span class="admin-sub">optional</span></label>
+  <textarea id="note" name="note" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;margin-top:6px;"></textarea>
+  <button type="submit">Create proposal from this diff</button>
+</form>` : ''}
+${!existingProposal && result.status !== 'success' ? '<div class="notice">Only successful diff results can be converted into proposals.</div>' : ''}
+
+<h2>Error</h2>
+<div class="notice">${escapeHtml(result.errorMessage || 'No diff error recorded.')}</div>
+
+<h2>Existing payload</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.existingPayload, null, 2) || 'null')}</pre>
+
+<h2>Proposed / parsed payload</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.proposedPayload, null, 2) || 'null')}</pre>
+
+<h2>Structured diff</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.diff, null, 2) || 'null')}</pre>
+
+<h2>Confidence</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.confidence, null, 2) || 'null')}</pre>`,
+  });
+}
+
+export function renderProposalUnavailablePage({ message }) {
+  return adminShell({
+    title: 'Review queue',
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Review queue</h1><div class="admin-sub">DB-backed proposal workflow</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="notice">${escapeHtml(message)}</div>`,
+  });
+}
+
+export function renderProposalsPage({ proposals }) {
+  return adminShell({
+    title: 'Review queue',
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Review queue</h1><div class="admin-sub">Human review only. No proposal action publishes verified content.</div></div><div><a class="logout" href="/admin/proposals/new">Create proposal</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Source</th><th>Updated</th><th></th></tr></thead><tbody>
+${proposals.length ? proposals.map(p => `<tr><td><span class="pill">${escapeHtml(p.status)}</span></td><td>${escapeHtml(p.entityType)}</td><td class="mono">${escapeHtml(p.entityKey)}</td><td class="mono">${escapeHtml(p.source?.originUrl || '')}</td><td>${escapeHtml(p.updatedAt || '')}</td><td><a href="/admin/proposals/${p.id}">View</a></td></tr>`).join('') : '<tr><td colspan="6">No content proposals yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderProposalCreatePage({ values = {}, error = null } = {}) {
+  const payload = values.proposed_payload_json || '{\n  "source": {\n    "status": "needs_verification"\n  }\n}';
+  return adminShell({
+    title: 'Create proposal',
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Create proposal</h1><div class="admin-sub">Manual proposal only. This does not write to public content or mark anything verified.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<form class="action-box" method="post" action="/admin/proposals/new">
+  <label for="entity_type"><strong>Proposal type</strong></label>
+  <select id="entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+  </select>
+
+  <label for="entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong></label>
+  <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="stable id, college key, or branch code">
+
+  <label for="source_id" style="display:block;margin-top:12px;"><strong>Source ID</strong> <span class="admin-sub">optional</span></label>
+  <input id="source_id" name="source_id" value="${escapeHtml(values.source_id || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="numeric source id">
+
+  <label for="proposed_payload_json" style="display:block;margin-top:12px;"><strong>Proposed payload JSON</strong></label>
+  <textarea id="proposed_payload_json" name="proposed_payload_json" required style="width:100%;min-height:280px;border:1px solid var(--line);border-radius:6px;padding:10px;font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin-top:6px;">${escapeHtml(payload)}</textarea>
+
+  <label for="note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong> <span class="admin-sub">optional</span></label>
+  <textarea id="note" name="note" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;margin-top:6px;">${escapeHtml(values.note || '')}</textarea>
+
+  <button type="submit">Create proposal</button>
+</form>`,
+  });
+}
+
+export function renderProposalDetailPage({ proposal, exports = [], error = null }) {
+  const payload = JSON.stringify(proposal.proposedPayload, null, 2);
+  const diff = proposal.diff ? JSON.stringify(proposal.diff, null, 2) : 'No diff payload stored for this proposal.';
+  const normalized = proposal.normalizedPayload ? JSON.stringify(proposal.normalizedPayload, null, 2) : 'No normalized payload stored yet.';
+  const validationErrors = Array.isArray(proposal.validationErrors) ? proposal.validationErrors : [];
+  const source = proposal.source;
+  return adminShell({
+    title: `Proposal ${proposal.id}`,
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Proposal ${escapeHtml(proposal.id)}</h1><div class="admin-sub">${escapeHtml(proposal.entityType)} / <span class="mono">${escapeHtml(proposal.entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(proposal.status)}</div></div>
+  <div class="metric"><div class="metric-label">Created by</div><div class="metric-value">${escapeHtml(proposal.createdBy || '-')}</div></div>
+  <div class="metric"><div class="metric-label">Reviewed by</div><div class="metric-value">${escapeHtml(proposal.reviewedBy || '-')}</div></div>
+  <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value">${proposal.parseResultId ? `<a href="/admin/parse-results/${escapeHtml(proposal.parseResultId)}">${escapeHtml(proposal.parseResultId)}</a>` : '-'}</div></div>
+  <div class="metric"><div class="metric-label">Diff result</div><div class="metric-value">${proposal.diffResultId ? `<a href="/admin/diff-results/${escapeHtml(proposal.diffResultId)}">${escapeHtml(proposal.diffResultId)}</a>` : '-'}</div></div>
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(proposal.validationStatus || 'not_validated')}</div></div>
+</section>
+
+<h2>Validation</h2>
+<div class="action-box">
+  <strong>Status: ${escapeHtml(proposal.validationStatus || 'not_validated')}</strong>
+  <div class="admin-sub">Validation is review-only. It does not publish content, approve verification, or write JSON files.</div>
+  <form method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/validate">
+    <button type="submit">Re-run validation</button>
+  </form>
+</div>
+${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th><th>Rule</th></tr></thead><tbody>${validationErrors.map(err => `<tr><td class="mono">${escapeHtml(err.path || '')}</td><td>${escapeHtml(err.message || '')}</td><td class="mono">${escapeHtml(err.keyword || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice">No validation errors stored.</div>'}
+
+<h2>Source evidence</h2>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Status</th><th>Retrieved</th><th>URL</th><th>Asset</th></tr></thead><tbody>
+${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="pill">${escapeHtml(source.status || '')}</span></td><td>${escapeHtml(source.retrievedAt || '')}</td><td class="mono">${escapeHtml(source.originUrl || '')}</td><td class="mono">${escapeHtml(source.rawAssetPath || '')}</td></tr>` : '<tr><td colspan="5">No source linked to this proposal.</td></tr>'}
+</tbody></table></div>
+
+<h2>Proposed payload</h2>
+<pre class="json-block">${escapeHtml(payload)}</pre>
+
+<h2>Normalized payload</h2>
+<pre class="json-block">${escapeHtml(normalized)}</pre>
+
+<h2>Diff</h2>
+<pre class="json-block">${escapeHtml(diff)}</pre>
+
+<h2>Publishing export</h2>
+<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/export">
+  <strong>Export proposal for review</strong>
+  <div class="admin-sub">Writes review artifacts under tmp/proposal-exports only. It does not publish, mark verified, or write data files.</div>
+  <button type="submit">Export proposal for review</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
+${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="5">No exports yet.</td></tr>'}
+</tbody></table></div>
+
+<h2>Review actions</h2>
+<div class="proposal-actions">
+  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+    <strong>Request changes</strong>
+    <textarea name="note" required placeholder="Describe what needs to change."></textarea>
+    <input type="hidden" name="action" value="request_changes">
+    <button class="warn" type="submit">Request changes</button>
+  </form>
+  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+    <strong>Mark needs verification</strong>
+    <textarea name="note" placeholder="Optional reviewer note."></textarea>
+    <input type="hidden" name="action" value="mark_needs_verification">
+    <button type="submit">Mark needs verification</button>
+  </form>
+  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+    <strong>Reject proposal</strong>
+    <textarea name="note" placeholder="Optional rejection note."></textarea>
+    <input type="hidden" name="action" value="reject">
+    <button class="reject" type="submit">Reject</button>
+  </form>
+</div>
+
+<h2>Review history</h2>
+<div class="table-wrap"><table><thead><tr><th>Action</th><th>From</th><th>To</th><th>Actor</th><th>Note</th><th>When</th></tr></thead><tbody>
+${proposal.events?.length ? proposal.events.map(e => `<tr><td>${escapeHtml(e.action)}</td><td>${escapeHtml(e.fromStatus || '')}</td><td>${escapeHtml(e.toStatus || '')}</td><td>${escapeHtml(e.actor || '')}</td><td>${escapeHtml(e.note || '')}</td><td>${escapeHtml(e.createdAt || '')}</td></tr>`).join('') : '<tr><td colspan="6">No review events yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderProposalExportDetailPage({ result, draftApplies = [], error = null }) {
+  const patch = result.exportPayload?.patch || [];
+  const replacement = result.exportPayload?.replacement || null;
+  const validationErrors = Array.isArray(result.validationErrors) ? result.validationErrors : [];
+  return adminShell({
+    title: `Proposal export ${result.id}`,
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Proposal export ${escapeHtml(result.id)}</h1><div class="admin-sub">Review artifact only. This does not publish content or write data files.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(result.validationStatus)}</div></div>
+  <div class="metric"><div class="metric-label">Proposal</div><div class="metric-value"><a href="/admin/proposals/${escapeHtml(result.proposalId)}">${escapeHtml(result.proposalId)}</a></div></div>
+  <div class="metric"><div class="metric-label">Created by</div><div class="metric-value">${escapeHtml(result.createdBy || '-')}</div></div>
+</section>
+
+<h2>Export path</h2>
+<div class="notice mono">${escapeHtml(result.exportPath)}</div>
+
+<h2>Draft workspace</h2>
+<form class="action-box" method="post" action="/admin/proposal-exports/${escapeHtml(result.id)}/apply-draft">
+  <strong>Apply to draft workspace</strong>
+  <div class="admin-sub">Copies data/ into tmp/content-drafts and applies this export there only. NOT PUBLISHED.</div>
+  <button type="submit">Apply to draft workspace</button>
+</form>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
+${draftApplies.length ? draftApplies.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.draftPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-draft-applies/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="5">No draft applies yet.</td></tr>'}
+</tbody></table></div>
+
+<h2>Validation errors</h2>
+${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th><th>Rule</th></tr></thead><tbody>${validationErrors.map(err => `<tr><td class="mono">${escapeHtml(err.path || '')}</td><td>${escapeHtml(err.message || '')}</td><td class="mono">${escapeHtml(err.keyword || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice">No validation errors stored.</div>'}
+
+<h2>Patch preview</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(patch, null, 2))}</pre>
+
+<h2>Replacement object</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(replacement, null, 2) || 'null')}</pre>
+
+<h2>Full export payload</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(result.exportPayload, null, 2) || 'null')}</pre>`,
+  });
+}
+
+export function renderProposalDraftApplyDetailPage({ result }) {
+  const summary = result.summary || {};
+  const validationErrors = Array.isArray(result.validationErrors) ? result.validationErrors : [];
+  const changedFiles = Array.isArray(summary.changed_files) ? summary.changed_files : [];
+  return adminShell({
+    title: `Draft apply ${result.id}`,
+    active: 'proposals',
+    body: `
+<div class="admin-top"><div><h1>Draft apply ${escapeHtml(result.id)}</h1><div class="admin-sub">Draft workspace only. NOT PUBLISHED.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(result.validationStatus)}</div></div>
+  <div class="metric"><div class="metric-label">Proposal export</div><div class="metric-value"><a href="/admin/proposal-exports/${escapeHtml(result.proposalExportId)}">${escapeHtml(result.proposalExportId)}</a></div></div>
+  <div class="metric"><div class="metric-label">Proposal</div><div class="metric-value"><a href="/admin/proposals/${escapeHtml(result.proposalId)}">${escapeHtml(result.proposalId)}</a></div></div>
+  <div class="metric"><div class="metric-label">Revision</div><div class="metric-value">${summary.revision_id ? `<a href="/admin/revisions/${escapeHtml(summary.revision_id)}">${escapeHtml(summary.revision_id)}</a>` : '-'}</div></div>
+  <div class="metric"><div class="metric-label">Created by</div><div class="metric-value">${escapeHtml(result.createdBy || '-')}</div></div>
+</section>
+
+<h2>Draft path</h2>
+<div class="notice mono">${escapeHtml(result.draftPath)}</div>
+<div class="notice">This workspace is under tmp/content-drafts and is not part of public output.</div>
+
+<h2>Changed files</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th></tr></thead><tbody>
+${changedFiles.length ? changedFiles.map(file => `<tr><td class="mono">${escapeHtml(file)}</td></tr>`).join('') : '<tr><td>No JSON file changes were detected in the draft.</td></tr>'}
+</tbody></table></div>
+
+<h2>Validation errors</h2>
+${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th><th>Rule</th></tr></thead><tbody>${validationErrors.map(err => `<tr><td class="mono">${escapeHtml(err.path || '')}</td><td>${escapeHtml(err.message || '')}</td><td class="mono">${escapeHtml(err.keyword || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice">No validation errors stored.</div>'}
+
+<h2>Summary</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(summary, null, 2) || '{}')}</pre>`,
+  });
+}
+
+function revisionEntityHref(revision) {
+  return `/admin/revisions/entity/${encodeURIComponent(revision.entityType)}/${encodeURIComponent(revision.entityKey)}`;
+}
+
+function renderRevisionProvenanceRows(revision) {
+  return `
+<tr><td>Proposal</td><td>${revision.proposalId ? `<a href="/admin/proposals/${escapeHtml(revision.proposalId)}">${escapeHtml(revision.proposalId)}</a>` : '-'}</td></tr>
+<tr><td>Export</td><td>${revision.exportId ? `<a href="/admin/proposal-exports/${escapeHtml(revision.exportId)}">${escapeHtml(revision.exportId)}</a>` : '-'}</td></tr>
+<tr><td>Draft apply</td><td>${revision.draftApplyId ? `<a href="/admin/proposal-draft-applies/${escapeHtml(revision.draftApplyId)}">${escapeHtml(revision.draftApplyId)}</a>` : '-'}</td></tr>
+<tr><td>Parent revision</td><td>${revision.parentRevisionId ? `<a href="/admin/revisions/${escapeHtml(revision.parentRevisionId)}">${escapeHtml(revision.parentRevisionId)}</a>` : '-'}</td></tr>
+<tr><td>Source status</td><td><span class="pill">${escapeHtml(revision.sourceStatus)}</span></td></tr>`;
+}
+
+function renderRevisionCompareForm({ revision, revisions }) {
+  const options = revisions
+    .filter(item => item.id !== revision.id)
+    .map(item => `<option value="${escapeHtml(item.id)}">#${escapeHtml(item.revisionNumber)} (${escapeHtml(item.createdAt || '')})</option>`)
+    .join('');
+  if (!options) return '<div class="notice">No other revision exists for this entity yet.</div>';
+  return `
+<form class="action-box" method="get" action="/admin/revisions/compare">
+  <strong>Compare revisions</strong>
+  <div class="admin-sub">Compares immutable JSON snapshots. This does not publish or write content.</div>
+  <input type="hidden" name="left" value="${escapeHtml(revision.id)}">
+  <label for="right_revision" style="display:block;margin-top:12px;"><strong>Compare with</strong></label>
+  <select id="right_revision" name="right" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">${options}</select>
+  <button type="submit">Compare</button>
+</form>`;
+}
+
+export function renderRevisionsPage({ revisions }) {
+  return adminShell({
+    title: 'Content revisions',
+    active: 'revisions',
+    body: `
+<div class="admin-top"><div><h1>Content revisions</h1><div class="admin-sub">Immutable revision history. Review-only; no publishing or JSON writes.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Entity</th><th>Key</th><th>Latest revision</th><th>Status</th><th>Draft</th><th>Created</th><th></th></tr></thead><tbody>
+${revisions.length ? revisions.map(revision => `<tr><td>${escapeHtml(revision.entityType)}</td><td class="mono">${escapeHtml(revision.entityKey)}</td><td><a href="/admin/revisions/${escapeHtml(revision.id)}">#${escapeHtml(revision.revisionNumber)}</a></td><td><span class="pill">${escapeHtml(revision.sourceStatus)}</span></td><td>${revision.draftApplyId ? `<a href="/admin/proposal-draft-applies/${escapeHtml(revision.draftApplyId)}">${escapeHtml(revision.draftApplyId)}</a>` : '-'}</td><td>${escapeHtml(revision.createdAt || '')}</td><td><a href="${revisionEntityHref(revision)}">History</a></td></tr>`).join('') : '<tr><td colspan="7">No content revisions yet.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderRevisionEntityPage({ entityType, entityKey, revisions }) {
+  return adminShell({
+    title: 'Entity revisions',
+    active: 'revisions',
+    body: `
+<div class="admin-top"><div><h1>Entity revisions</h1><div class="admin-sub">${escapeHtml(entityType)} / <span class="mono">${escapeHtml(entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="table-wrap"><table><thead><tr><th>Revision</th><th>Status</th><th>Proposal</th><th>Export</th><th>Draft</th><th>Parent</th><th>Created</th><th></th></tr></thead><tbody>
+${revisions.length ? revisions.map(revision => `<tr><td><a href="/admin/revisions/${escapeHtml(revision.id)}">#${escapeHtml(revision.revisionNumber)}</a></td><td><span class="pill">${escapeHtml(revision.sourceStatus)}</span></td><td>${revision.proposalId ? `<a href="/admin/proposals/${escapeHtml(revision.proposalId)}">${escapeHtml(revision.proposalId)}</a>` : '-'}</td><td>${revision.exportId ? `<a href="/admin/proposal-exports/${escapeHtml(revision.exportId)}">${escapeHtml(revision.exportId)}</a>` : '-'}</td><td>${revision.draftApplyId ? `<a href="/admin/proposal-draft-applies/${escapeHtml(revision.draftApplyId)}">${escapeHtml(revision.draftApplyId)}</a>` : '-'}</td><td>${revision.parentRevisionId ? `<a href="/admin/revisions/${escapeHtml(revision.parentRevisionId)}">${escapeHtml(revision.parentRevisionId)}</a>` : '-'}</td><td>${escapeHtml(revision.createdAt || '')}</td><td>${revision.parentRevisionId ? `<a href="/admin/revisions/compare?left=${escapeHtml(revision.parentRevisionId)}&right=${escapeHtml(revision.id)}">Compare to parent</a>` : ''}</td></tr>`).join('') : '<tr><td colspan="8">No revisions for this entity.</td></tr>'}
+</tbody></table></div>`,
+  });
+}
+
+export function renderRevisionDetailPage({ revision, revisions = [] }) {
+  return adminShell({
+    title: `Revision ${revision.id}`,
+    active: 'revisions',
+    body: `
+<div class="admin-top"><div><h1>Revision ${escapeHtml(revision.id)}</h1><div class="admin-sub">${escapeHtml(revision.entityType)} / <span class="mono">${escapeHtml(revision.entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Revision</div><div class="metric-value">#${escapeHtml(revision.revisionNumber)}</div></div>
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(revision.sourceStatus)}</div></div>
+  <div class="metric"><div class="metric-label">Created by</div><div class="metric-value">${escapeHtml(revision.createdBy || '-')}</div></div>
+  <div class="metric"><div class="metric-label">History</div><div class="metric-value"><a href="${revisionEntityHref(revision)}">View</a></div></div>
+</section>
+
+<h2>Provenance</h2>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Reference</th></tr></thead><tbody>${renderRevisionProvenanceRows(revision)}</tbody></table></div>
+
+<h2>Compare</h2>
+${renderRevisionCompareForm({ revision, revisions })}
+
+<h2>Content snapshot</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(revision.content, null, 2) || 'null')}</pre>`,
+  });
+}
+
+export function renderRevisionComparisonPage({ comparison }) {
+  const { left, right, diff } = comparison;
+  return adminShell({
+    title: 'Revision comparison',
+    active: 'revisions',
+    body: `
+<div class="admin-top"><div><h1>Revision comparison</h1><div class="admin-sub">${escapeHtml(left.entityType)} / <span class="mono">${escapeHtml(left.entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">From</div><div class="metric-value"><a href="/admin/revisions/${escapeHtml(left.id)}">#${escapeHtml(left.revisionNumber)}</a></div></div>
+  <div class="metric"><div class="metric-label">To</div><div class="metric-value"><a href="/admin/revisions/${escapeHtml(right.id)}">#${escapeHtml(right.revisionNumber)}</a></div></div>
+  <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(diff.change_count)}</div></div>
+  <div class="metric"><div class="metric-label">Entity history</div><div class="metric-value"><a href="${revisionEntityHref(right)}">View</a></div></div>
+</section>
+
+<h2>Changes</h2>
+<div class="table-wrap"><table><thead><tr><th>Path</th><th>Before</th><th>After</th></tr></thead><tbody>
+${diff.changes.length ? diff.changes.map(change => `<tr><td class="mono">${escapeHtml(change.path)}</td><td><pre class="mono">${escapeHtml(JSON.stringify(change.before, null, 2))}</pre></td><td><pre class="mono">${escapeHtml(JSON.stringify(change.after, null, 2))}</pre></td></tr>`).join('') : '<tr><td colspan="3">No JSON differences.</td></tr>'}
+</tbody></table></div>
+
+<h2>Structured diff</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(diff, null, 2) || 'null')}</pre>`,
+  });
+}

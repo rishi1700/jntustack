@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateData } from '../lib/validate.js';
-import { loadDataset, loadMergedColleges } from '../lib/dataset.js';
+import { loadContent } from '../lib/content-store/index.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
@@ -19,10 +19,11 @@ const SITE_URL = 'https://jntustack.com';
 // globs them, so no filename is hardcoded here. The merged object is then
 // validated against schema.json exactly as the single file was.
 const dataDir = path.join(ROOT, 'data');
-const { files: subjectFiles, data: mergedData } = loadDataset(dataDir);
-const data = validateData(path.join(dataDir, 'schema.json'), mergedData);
+const content = await loadContent({ root: ROOT });
+const data = validateData(path.join(dataDir, 'schema.json'), content.data);
 console.log('Schema validation passed.');
-console.log(`Merged ${subjectFiles.length} subject file(s): ${subjectFiles.join(', ')}`);
+console.log(`Content source: ${content.source}`);
+console.log(`Merged ${content.subjectFiles.length} subject file(s): ${content.subjectFiles.join(', ')}`);
 
 const branchByCode = Object.fromEntries(data.branches.map(b => [b.code, b]));
 const regulationByCode = Object.fromEntries(data.regulations.map(r => [r.code, r]));
@@ -130,7 +131,7 @@ if (fs.existsSync(publicDir)) {
 let branchGuidePublished = 0;
 const branchGuidePath = path.join(ROOT, 'data/branch-guide-data.json');
 if (fs.existsSync(branchGuidePath)) {
-  const { branch_profiles } = JSON.parse(fs.readFileSync(branchGuidePath, 'utf-8'));
+  const branch_profiles = content.branchProfiles;
   const verifiedProfiles = branch_profiles.filter(b => b.source.status === 'verified');
   if (verifiedProfiles.length === branch_profiles.length && verifiedProfiles.length > 0) {
     const html = layout({
@@ -162,7 +163,7 @@ let collegesPublished = 0;
 let collegeUniversitySummary = null;
 // Merged across every data/colleges-*.json -- drop in a new campus file and it
 // auto-loads, same glob convention as subjects-*.json (see lib/dataset.js).
-const { colleges: allColleges, coverageNotes } = loadMergedColleges(dataDir);
+const { colleges: allColleges, coverageNotes } = content;
 if (allColleges.length > 0) {
   const verifiedColleges = allColleges.filter(c => c.source.status === 'verified');
   if (verifiedColleges.length === allColleges.length && verifiedColleges.length > 0) {

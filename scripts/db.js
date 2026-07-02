@@ -19,6 +19,12 @@ function usage() {
   console.log('Usage: node scripts/db.js <migrate|status>');
 }
 
+function printSetupHelp() {
+  console.error('');
+  console.error('MySQL is required for this command.');
+  console.error('Set DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, and optionally DB_PORT.');
+}
+
 function checksum(text) {
   return crypto.createHash('sha256').update(text).digest('hex');
 }
@@ -160,6 +166,7 @@ async function main() {
     if (command === 'migrate') await migrate();
   } catch (err) {
     console.error('Database command failed:', JSON.stringify(describeDbError(err), null, 2));
+    if (err?.name === 'DatabaseConfigError') printSetupHelp();
     process.exitCode = 1;
   } finally {
     await closeDbPool();

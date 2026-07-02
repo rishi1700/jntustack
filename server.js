@@ -8,6 +8,7 @@ import express from 'express';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
+import { getAdminConfig } from './lib/config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
@@ -22,6 +23,12 @@ loadSearchIndex(DIST_DIR);
 // API routes before static serving, so /api/ask is never shadowed by a
 // same-named static file.
 app.use(askRouter);
+
+const adminConfig = getAdminConfig();
+if (adminConfig.enabled) {
+  const { createAdminRouter } = await import('./routes/admin.js');
+  app.use('/admin', createAdminRouter({ root: __dirname }));
+}
 
 // The generated site itself.
 app.use(express.static(DIST_DIR));
