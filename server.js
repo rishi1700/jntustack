@@ -40,6 +40,11 @@ app.use(express.static(DIST_DIR));
 // and for confirming the app is actually up after a deploy.
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(`JNTUStack server listening on port ${PORT}`);
+});
+
+server.on('error', (err) => {
+  console.error('JNTUStack server failed to start:', err);
+  process.exitCode = 1;
 });
