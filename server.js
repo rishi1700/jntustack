@@ -13,7 +13,6 @@ import { getAdminConfig, getAskConfig } from './lib/config.js';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
 const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always defer to it, never hardcode
-const HOST = process.env.HOST || '127.0.0.1';
 
 const app = express();
 app.use(express.json({ limit: '10kb' })); // small limit -- this only ever needs to carry one short question
@@ -41,8 +40,8 @@ app.use(express.static(DIST_DIR));
 // and for confirming the app is actually up after a deploy.
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-const server = app.listen(PORT, HOST, () => {
-  console.log(`JNTUStack server listening on ${HOST}:${PORT}`);
+const server = app.listen(PORT, () => {
+  console.log(`JNTUStack server listening on port ${PORT}`);
 });
 
 server.on('error', (err) => {
