@@ -6,7 +6,7 @@
 import 'dotenv/config'; // loads .env locally; no-op in production where hPanel injects env vars directly
 import express from 'express';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
 import { getAdminConfig, getAskConfig } from './lib/config.js';
 
@@ -16,6 +16,16 @@ const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always d
 
 const app = express();
 app.use(express.json({ limit: '10kb' })); // small limit -- this only ever needs to carry one short question
+
+process.on('uncaughtException', (err) => {
+  console.error('JNTUStack uncaught exception:', err);
+  process.exitCode = 1;
+});
+
+process.on('unhandledRejection', (err) => {
+  console.error('JNTUStack unhandled rejection:', err);
+  process.exitCode = 1;
+});
 
 const askConfig = getAskConfig();
 if (askConfig.enabled) {
@@ -40,11 +50,15 @@ app.use(express.static(DIST_DIR));
 // and for confirming the app is actually up after a deploy.
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
 
-const server = app.listen(PORT, () => {
-  console.log(`JNTUStack server listening on port ${PORT}`);
-});
+export default app;
 
-server.on('error', (err) => {
-  console.error('JNTUStack server failed to start:', err);
-  process.exitCode = 1;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  const server = app.listen(PORT, () => {
+    console.log(`JNTUStack server listening on port ${PORT}`);
+  });
+
+  server.on('error', (err) => {
+    console.error('JNTUStack server failed to start:', err);
+    process.exitCode = 1;
+  });
+}
