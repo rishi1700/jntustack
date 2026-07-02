@@ -6,7 +6,7 @@
 import 'dotenv/config'; // loads .env locally; no-op in production where hPanel injects env vars directly
 import express from 'express';
 import path from 'node:path';
-import { fileURLToPath, pathToFileURL } from 'node:url';
+import { fileURLToPath } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
 import { getAdminConfig, getAskConfig } from './lib/config.js';
 
@@ -61,15 +61,14 @@ app.get('/health', (req, res) => res.json({ status: 'ok' }));
 // The generated site itself.
 app.use(express.static(DIST_DIR));
 
+export { app };
 export default app;
 
-if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
-  const server = app.listen(PORT, () => {
-    console.log(`JNTUStack server listening on port ${PORT}`);
-  });
+const server = app.listen(PORT, () => {
+  console.log(`JNTUStack server listening on port ${PORT}`);
+});
 
-  server.on('error', (err) => {
-    console.error('JNTUStack server failed to start:', err);
-    process.exitCode = 1;
-  });
-}
+server.on('error', (err) => {
+  console.error('JNTUStack server failed to start:', err);
+  process.exitCode = 1;
+});
