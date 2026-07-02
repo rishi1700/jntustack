@@ -10,6 +10,7 @@ storage/
 # Secrets / environment
 .env
 .env.*
+hostinger-env.txt
 *.key
 
 # Logs
