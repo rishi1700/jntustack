@@ -31,6 +31,10 @@ npm run build      # generates dist/ AND dist/search-index.json
 npm start          # boots server.js on process.env.PORT (defaults to 3000)
 ```
 
+Database utilities are present, but the public site still builds from JSON by
+default. Leave `CONTENT_SOURCE` unset, or set `CONTENT_SOURCE=json`, unless you
+are explicitly testing a future database-backed content adapter.
+
 Tested and confirmed working: static file serving, /health, and /api/ask's
 validation + graceful no-key error handling all checked with real curl
 requests during this build. Only the live Anthropic call itself is
@@ -55,6 +59,39 @@ untested, since there's no API key yet.
    the app's build command in hPanel.
 6. Connect jntustack.com to the deployed app (done -- DNS now resolves to
    Hostinger; the app just needs the build step above to actually serve).
+
+## Database foundation
+
+MySQL support is scaffolded for future admin/review workflows. It is CLI-only
+in this phase and is not used by the public build or server boot path.
+
+Environment variables:
+
+```
+CONTENT_SOURCE=json   # default; production should keep this for now
+DB_HOST=...
+DB_USER=...
+DB_PASSWORD=...
+DB_NAME=...
+DB_PORT=3306          # optional; defaults to 3306
+```
+
+Hostinger setup:
+
+1. Create a MySQL database in hPanel.
+2. Add the `DB_*` values to the Node.js app's Environment Variables.
+3. Keep `CONTENT_SOURCE=json` until a later PR adds and verifies a DB-backed
+   dataset adapter.
+4. Run migrations manually when needed:
+
+```
+npm run db:status
+npm run db:migrate
+```
+
+Migrations are intentionally not run automatically during `npm start` or
+`npm run build`. This keeps deploys from breaking the public JSON-backed site
+if database credentials are missing or the database is temporarily unavailable.
 
 ## What's real vs. what's scaffolding
 
