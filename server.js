@@ -8,7 +8,7 @@ import express from 'express';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
-import { getAdminConfig } from './lib/config.js';
+import { getAdminConfig, getAskConfig } from './lib/config.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
@@ -17,12 +17,15 @@ const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always d
 const app = express();
 app.use(express.json({ limit: '10kb' })); // small limit -- this only ever needs to carry one short question
 
-// Load the grounding index once at boot, not per-request.
-loadSearchIndex(DIST_DIR);
+const askConfig = getAskConfig();
+if (askConfig.enabled) {
+  // Load the grounding index once at boot, not per-request.
+  loadSearchIndex(DIST_DIR);
 
-// API routes before static serving, so /api/ask is never shadowed by a
-// same-named static file.
-app.use(askRouter);
+  // API routes before static serving, so /api/ask is never shadowed by a
+  // same-named static file.
+  app.use(askRouter);
+}
 
 const adminConfig = getAdminConfig();
 if (adminConfig.enabled) {
