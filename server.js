@@ -39,16 +39,27 @@ if (askConfig.enabled) {
 
 const adminConfig = getAdminConfig();
 if (adminConfig.enabled) {
-  const { createAdminRouter } = await import('./routes/admin.js');
-  app.use('/admin', createAdminRouter({ root: __dirname }));
+  let adminRouterPromise = null;
+  app.use('/admin', async (req, res, next) => {
+    try {
+      if (!adminRouterPromise) {
+        adminRouterPromise = import('./routes/admin.js')
+          .then(({ createAdminRouter }) => createAdminRouter({ root: __dirname }));
+      }
+      const adminRouter = await adminRouterPromise;
+      adminRouter(req, res, next);
+    } catch (err) {
+      next(err);
+    }
+  });
 }
-
-// The generated site itself.
-app.use(express.static(DIST_DIR));
 
 // Basic health check -- useful for Hostinger/UptimeRobot-style monitoring,
 // and for confirming the app is actually up after a deploy.
 app.get('/health', (req, res) => res.json({ status: 'ok' }));
+
+// The generated site itself.
+app.use(express.static(DIST_DIR));
 
 export default app;
 
