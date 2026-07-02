@@ -78,7 +78,6 @@ ${bodyHtml}
       <nav class="footer-links" aria-label="Footer">
         <a href="/colleges/">Colleges</a>
         <a href="/branch-guide/">Choosing a Branch?</a>
-        <a class="telegram-cta" href="#" target="_blank" rel="noopener">Join the Telegram channel for new uploads &rarr;</a>
       </nav>
     </div>
     <p class="footer-note">&copy; ${new Date().getFullYear()} JNTUStack &middot; Independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV &middot; No fabricated placement or salary stats</p>

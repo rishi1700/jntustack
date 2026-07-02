@@ -32,7 +32,7 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject, 
 
   const resourcesHtml = resourceLinks
     ? resourceLinks
-    : `<div class="empty-state">Notes for this subject haven't been uploaded yet. Check back soon or use the Telegram channel link below to ask.</div>`;
+    : `<div class="empty-state">Notes for this subject haven't been uploaded yet. Check back soon.</div>`;
 
   // Right rail: verification card (the redesign's signature element) when the
   // page is verified; the draft badge stays in the status row either way.

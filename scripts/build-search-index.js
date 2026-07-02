@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSearchIndex } from '../lib/retrieve.js';
-import { loadMergedSubjects } from '../lib/dataset.js';
+import { loadMergedColleges, loadMergedSubjects } from '../lib/dataset.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
@@ -11,8 +11,9 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 // stays in sync the moment a new branch file is dropped in.
 const { subjects } = loadMergedSubjects(path.join(ROOT, 'data'));
 const { branch_profiles } = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/branch-guide-data.json'), 'utf-8'));
+const { colleges } = loadMergedColleges(path.join(ROOT, 'data'));
 
-const index = buildSearchIndex({ subjects, branchProfiles: branch_profiles });
+const index = buildSearchIndex({ subjects, branchProfiles: branch_profiles, colleges });
 
 const outDir = path.join(ROOT, 'dist');
 fs.mkdirSync(outDir, { recursive: true });
