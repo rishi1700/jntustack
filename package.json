@@ -19,7 +19,7 @@
     "postinstall": "npm run build"
   },
   "engines": {
-    "node": ">=20"
+    "node": "20.x"
   },
   "dependencies": {
     "ajv": "^8.17.1",
