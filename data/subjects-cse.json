@@ -11,9 +11,65 @@
       "subject_code": null,
       "name": "Data Warehousing and Data Mining",
       "category": "ProfessionalCore",
-      "credits": null,
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Data Warehousing and OLAP",
+          "topics": [
+            "Data warehousing basic concepts; data warehouse modeling with data cube and OLAP; comparison of OLAP with OLTP",
+            "Data warehouse design and usage; data warehouse implementation; cloud data warehouse",
+            "Data mining and pattern mining, technologies, the KDD process, applications and major issues",
+            "Data objects and attribute types; measuring data similarity and dissimilarity"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Preprocessing",
+          "topics": [
+            "Overview of data preprocessing",
+            "Data cleaning and data integration",
+            "Data reduction",
+            "Data transformation and data discretization"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Classification",
+          "topics": [
+            "Basic concepts and the general approach to solving a classification problem",
+            "Decision tree induction: attribute selection measures, tree pruning, scalability and decision tree induction",
+            "Bayesian classification methods: Bayes theorem, Naive Bayes classification",
+            "Rule-based classification"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Association Analysis",
+          "topics": [
+            "Problem definition and frequent itemset generation",
+            "Concept of hierarchy generation",
+            "Rule generation: confidence-based pruning, rule generation in the Apriori algorithm",
+            "Compact representation of frequent itemsets; FP-Growth algorithm"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Cluster Analysis",
+          "topics": [
+            "Overview, basics and importance of cluster analysis; clustering techniques and different types of clusters",
+            "K-means: the basic K-means algorithm, additional issues, bisecting K-means",
+            "Agglomerative hierarchical clustering: the basic agglomerative hierarchical clustering algorithm",
+            "DBSCAN: traditional density center-based approach, DBSCAN algorithm, strengths and weaknesses"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -22,49 +78,17 @@
       },
       "seo": {
         "slug": "data-warehousing-and-data-mining-jntuk-r23-cse-3-1",
-        "title": "Data Warehousing & Data Mining Notes - JNTUK R23 CSE 3-1",
-        "meta_description": "JNTUK R23 CSE 3-1 Data Warehousing and Data Mining lecture notes, unit-wise topics, and previous question papers."
+        "title": "Data Warehousing & Data Mining - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Data Warehousing and Data Mining: OLAP & warehousing, preprocessing, classification, association analysis, cluster analysis."
       },
-      "legacy_equivalent_id": "r16-cse-3-2-data-warehousing-and-mining",
+      "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.scribd.com/document/880014947/R23-3rd-Year-B-Tech-CSE",
-        "retrieved_date": "2026-06-30",
-        "status": "needs_verification"
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
-      "notes": "Subject's presence in R23 CSE III-year course structure is confirmed. Credits, L-T-P split, and unit breakdown are NOT yet confirmed -- pull and parse the official 'JNTUK R23 B.Tech CSE Syllabus.pdf' before generating page content."
-    },
-    {
-      "id": "r23-cse-3-2-computer-networks",
-      "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
-      "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": null,
-      "name": "Computer Networks",
-      "category": "ProfessionalCore",
-      "credits": null,
-      "type": "theory",
-      "units": [],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "computer-networks-jntuk-r23-cse-3-2",
-        "title": "Computer Networks Notes - JNTUK R23 CSE 3-2",
-        "meta_description": "JNTUK R23 CSE 3-2 Computer Networks lecture notes, unit-wise topics, and previous question papers."
-      },
-      "legacy_equivalent_id": "r16-cse-3-2-computer-networks",
-      "source": {
-        "origin_url": "https://www.scribd.com/document/880014947/R23-3rd-Year-B-Tech-CSE",
-        "retrieved_date": "2026-06-30",
-        "status": "needs_verification"
-      },
-      "notes": "Same caveat as Data Warehousing and Data Mining: semester slot confirmed, detail not yet sourced from the primary syllabus PDF."
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
     {
       "id": "r23-cse-1-1-engineering-physics",
@@ -1626,6 +1650,2279 @@
         "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
       },
       "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a ‘Mandatory Community Service Project Internship of 08 weeks duration during summer vacation’, but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-1-computer-networks",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Networks",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Networks and the Physical Layer",
+          "topics": [
+            "Network types: LAN, MAN, WAN and network topologies",
+            "Reference models: the OSI reference model, the TCP/IP reference model, comparison of OSI and TCP/IP",
+            "Physical layer: introduction to guided media - twisted-pair cable, coaxial cable and fibre optic cable",
+            "Introduction to unguided media"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Link Layer",
+          "topics": [
+            "Design issues; framing: fixed-size and variable-size framing; flow control and error control",
+            "Error detection and correction codes: CRC, checksum idea and one's complement internet checksum; services provided to the network layer",
+            "Elementary data link layer protocols: simplex protocol, simplex stop-and-wait, simplex protocol for a noisy channel",
+            "Sliding window protocols: one-bit, Go-Back-N, Selective Repeat; data link layer in HDLC and Point-to-Point Protocol (PPP)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Media Access Control",
+          "topics": [
+            "Random access: ALOHA, Carrier Sense Multiple Access (CSMA), CSMA with Collision Detection, CSMA with Collision Avoidance",
+            "Controlled access: reservation, polling, token passing",
+            "Channelization: FDMA, TDMA, CDMA",
+            "Wired LANs: Ethernet protocol, Standard Ethernet, Fast Ethernet (100 Mbps), Gigabit Ethernet, 10 Gigabit Ethernet"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Network Layer, Routing and Internetworking",
+          "topics": [
+            "Network layer design issues: store-and-forward packet switching, services to the transport layer, connectionless vs connection-oriented service implementation, virtual circuit vs datagram networks",
+            "Routing algorithms: the optimality principle, shortest path, flooding, distance vector, link state, hierarchical routing",
+            "Congestion control: general principles, prevention policies, traffic-aware routing, admission control, traffic throttling, load shedding; leaky bucket and token bucket traffic control",
+            "Internetworking: how networks differ and connect, tunnelling, internetwork routing, fragmentation",
+            "IP protocols: IPv4 header format, IP addresses, classful addressing, CIDR, subnets; IPv6 header, IPv4-to-IPv6 transition and comparison"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transport and Application Layers",
+          "topics": [
+            "Transport layer protocols: introduction, services, port numbers; User Datagram Protocol and UDP applications",
+            "Transmission Control Protocol: TCP services and features, segment, TCP connection, windows in TCP, flow control, error control, congestion control in TCP",
+            "Application layer: World Wide Web and HTTP; electronic mail architecture, web-based mail, email security",
+            "TELNET, local versus remote logging, and the Domain Name System"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-networks-jntuk-r23-cse-3-1",
+        "title": "Computer Networks - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Computer Networks: intro & physical layer, data link layer, media access control, network layer/routing, transport & application layers."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-formal-languages-and-automata-theory",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Formal Languages and Automata Theory",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Finite Automata",
+          "topics": [
+            "Need for automata theory and central concepts of automata theory; transition systems and acceptance of a string",
+            "DFA: design of DFAs; NFA: design of NFAs; equivalence of DFA and NFA and conversion of NFA into DFA",
+            "Finite automata with epsilon-transitions; minimization of finite automata",
+            "Finite automata with output: Mealy and Moore machines; applications and limitations of finite automata"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Regular Expressions and Grammars",
+          "topics": [
+            "Regular expressions, regular sets, identity rules, equivalence of two REs, manipulation of REs",
+            "Finite automata and regular expressions: inter-conversion and equivalence between FA and RE",
+            "Pumping lemma of regular sets; closure properties of regular sets",
+            "Grammars: classification of grammars, Chomsky hierarchy theorem",
+            "Right and left linear regular grammars; equivalence between RG and FA and inter-conversion"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Context-Free Grammars",
+          "topics": [
+            "Formal languages; context-free grammars; leftmost and rightmost derivations; parse trees; ambiguous grammars",
+            "Simplification of context-free grammars: elimination of useless symbols, epsilon-productions and unit productions",
+            "Normal forms: Chomsky Normal Form and Greibach Normal Form",
+            "Pumping lemma and closure properties; applications of context-free grammars"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Pushdown Automata",
+          "topics": [
+            "Definition, model, graphical notation and instantaneous description of pushdown automata",
+            "Language acceptance and design of pushdown automata",
+            "Deterministic and non-deterministic pushdown automata",
+            "Equivalence of pushdown automata and context-free grammars, and conversion between them",
+            "Two-stack pushdown automata and applications of pushdown automata"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Turing Machines and Decidability",
+          "topics": [
+            "Turing machine definition, model and representation: instantaneous descriptions, transition tables and transition diagrams",
+            "Language of a TM; design of TMs; types of TMs; Church's thesis; universal and restricted TM",
+            "Decidable and undecidable problems; halting problem of TMs",
+            "Post's correspondence problem and modified PCP",
+            "Classes of P and NP; NP-hard and NP-complete problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "formal-languages-and-automata-theory-jntuk-r23-cse-3-1",
+        "title": "Formal Languages & Automata Theory - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Formal Languages and Automata Theory: finite automata, regular expressions & grammars, CFGs, pushdown automata, Turing machines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-object-oriented-analysis-and-design",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Object Oriented Analysis and Design",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Complex Systems",
+          "topics": [
+            "The structure of complex systems and the inherent complexity of software",
+            "Attributes of a complex system; organized and disorganized complexity",
+            "Bringing order to chaos; designing complex systems",
+            "Case study: system architecture of a satellite-based navigation system"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Introduction to UML and Basic Structural Modeling",
+          "topics": [
+            "Importance and principles of modeling; object-oriented modeling; conceptual model of the UML",
+            "UML architecture and the software development life cycle",
+            "Basic structural modeling: classes, relationships, common mechanisms and diagrams",
+            "Case study: traffic management control system"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Class & Object Diagrams and Advanced Structural Modeling",
+          "topics": [
+            "Class and object diagrams: terms, concepts and modeling techniques",
+            "Advanced structural modeling: advanced classes and advanced relationships",
+            "Interfaces, types and roles; packages",
+            "Case study: cryptanalysis in AI"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Basic Behavioral Modeling",
+          "topics": [
+            "Interactions and interaction diagrams",
+            "Use cases and use case diagrams",
+            "Activity diagrams",
+            "Case study: vacation tracking system web application"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Advanced Behavioral and Architectural Modeling",
+          "topics": [
+            "Events and signals, state machines, processes and threads, time and space",
+            "State chart diagrams",
+            "Architectural modeling: component and deployment concepts",
+            "Component diagrams and deployment diagrams",
+            "Case study: weather forecasting"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "object-oriented-analysis-and-design-jntuk-r23-cse-3-1",
+        "title": "Object Oriented Analysis & Design - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Object Oriented Analysis and Design: complex systems, UML & structural modeling, class diagrams, behavioral & architectural modeling."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 1 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-artificial-intelligence",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Artificial Intelligence",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to AI and Intelligent Agents",
+          "topics": [
+            "AI problems, foundations of AI and history of AI",
+            "Intelligent agents: agents and environments, the concept of rationality, the nature of environments",
+            "Structure of agents",
+            "Problem-solving agents and problem formulation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Searching and Game Playing",
+          "topics": [
+            "Searching for solutions; uninformed search strategies: breadth-first search, depth-first search",
+            "Search with partial information (heuristic search): hill climbing, A*, AO* algorithms; problem reduction",
+            "Game playing: adversarial search, games, minimax algorithm, optimal decisions in multiplayer games",
+            "Problems in game playing: alpha-beta pruning and evaluation functions"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Knowledge Representation and Reasoning Under Uncertainty",
+          "topics": [
+            "Knowledge representation issues; predicate logic and logic programming",
+            "Semantic nets, frames and inheritance; constraint propagation",
+            "Representing knowledge using rules; rule-based deduction systems",
+            "Reasoning under uncertainty: review of probability, Bayes' probabilistic inference and Dempster-Shafer theory"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "First Order Logic and Learning",
+          "topics": [
+            "First order logic; inference in first order logic; propositional vs first order inference",
+            "Unification and lifting, forward chaining, backward chaining, resolution",
+            "Learning from observation: inductive learning, decision trees, explanation-based learning",
+            "Statistical learning methods and reinforcement learning"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Expert Systems",
+          "topics": [
+            "Architecture of expert systems",
+            "Roles of expert systems: knowledge acquisition, meta-knowledge, heuristics",
+            "Typical expert systems: MYCIN, DART, XCON",
+            "Expert system shells"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "artificial-intelligence-jntuk-r23-cse-3-1",
+        "title": "Artificial Intelligence - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Artificial Intelligence: intelligent agents, search & game playing, knowledge representation, first order logic, expert systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 2 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-microprocessors-and-microcontrollers",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Microprocessors & Microcontrollers",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-jntuk-r23-cse-3-1",
+        "title": "Microprocessors & Microcontrollers - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Microprocessors & Microcontrollers (Professional Elective-I) - listed in the course structure with no syllabus content found."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (page 2 course-structure table only) -- only the name 'Microprocessors & Microcontrollers' with 3-0-0-3 credits, no course objectives, outcomes, units or textbooks found anywhere in the document. The other three Professional Elective-I options (Object Oriented Analysis and Design, Artificial Intelligence, Quantum Computing) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-1-quantum-computing",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Quantum Computing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "History and Introduction to Quantum Computing",
+          "topics": [
+            "History of quantum computing; importance of mathematics, physics and biology",
+            "Introduction to quantum computing: bits vs qubits",
+            "Classical vs quantum logical operations"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Background Mathematics, Physics and Biology",
+          "topics": [
+            "Background mathematics: basics of linear algebra, Hilbert space, probabilities and measurements",
+            "Background physics: Pauli's exclusion principle, superposition, entanglement and super-symmetry",
+            "Density operators and correlation; basics of quantum mechanics; measurements in bases other than the computational basis",
+            "Background biology: basic concepts of genomics and proteomics (central dogma)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Qubits and Quantum Circuits",
+          "topics": [
+            "Physical implementations of the qubit; qubit as a quantum unit of information",
+            "The Bloch sphere",
+            "Quantum circuits: single-qubit gates, multiple-qubit gates, designing quantum circuits",
+            "Bell states"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Quantum Algorithms",
+          "topics": [
+            "Classical computation on quantum computers; relationship between quantum and classical complexity classes",
+            "Deutsch's algorithm and Deutsch-Jozsa algorithm",
+            "Shor's factorization algorithm",
+            "Grover's search algorithm"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Noise, Error Correction and Quantum Cryptography",
+          "topics": [
+            "Noise and error correction: graph states and codes, quantum error correction, fault-tolerant computation",
+            "Quantum information and cryptography: comparison between classical and quantum information theory",
+            "Quantum cryptography",
+            "Quantum teleportation"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "quantum-computing-jntuk-r23-cse-3-1",
+        "title": "Quantum Computing - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Quantum Computing: history & fundamentals, background math/physics/biology, qubits & circuits, quantum algorithms, error correction."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 4 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-data-mining-lab",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Data Mining Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Creation of a data warehouse: building a data warehouse/data mart, designing star, snowflake and fact constellation schemas, writing ETL scripts and performing OLAP operations (slice, dice, roll-up, drill-down, pivot)",
+            "Exploring the WEKA data mining/machine learning toolkit and its Explorer, Knowledge Flow and Experimenter interfaces",
+            "Data preprocessing and association rule mining using Apriori on Weka datasets with different support/confidence values",
+            "Classification using ID3, J48, Naive Bayes and k-Nearest Neighbour, comparing classifier performance and plotting RoC curves",
+            "Clustering using the simple k-means algorithm and exploring other clustering techniques in Weka/R",
+            "Knowledge flow application for association rule mining and cross-validation using J48",
+            "Python programs to generate frequent itemsets/association rules using Apriori and to calculate chi-square values",
+            "Programs for Naive Bayesian classification, k-means cluster analysis, dissimilarity matrix computation and data visualization using matplotlib"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "data-mining-lab-jntuk-r23-cse-3-1",
+        "title": "Data Mining Lab - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Data Mining Lab: data warehouse creation, WEKA exploration, preprocessing/association rules, classification, clustering, Python/R."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of 16 experiments covering data warehouse creation, WEKA toolkit exploration, preprocessing, association rule mining, classification, clustering and Python/R data mining tasks read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-computer-networks-lab",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Networks Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Study of network devices and connecting computers in a Local Area Network",
+            "Data link layer framing methods: character stuffing and bit stuffing; and checksum-based framing",
+            "Hamming code generation for error detection and correction; CRC polynomials (CRC-12, CRC-16, CRC-CCITT)",
+            "Sliding window protocols: Go-Back-N and Selective Repeat; and the Stop-and-Wait protocol",
+            "Congestion control using the leaky bucket algorithm",
+            "Dijkstra's shortest path algorithm; distance vector routing algorithm; broadcast tree over a subnet",
+            "Packet capture and traffic analysis using Wireshark; network/OS scanning using Nmap",
+            "NS2 simulator experiments: packet drop counts, TCP/UDP and congestion-related drops, data rate and throughput comparison"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-networks-lab-jntuk-r23-cse-3-1",
+        "title": "Computer Networks Lab - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Computer Networks Lab: LAN setup, framing & error control, sliding window protocols, routing algorithms, Wireshark, Nmap, NS2."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of 16 experiments covering LAN setup, data link layer framing/error control, sliding window protocols, congestion control, routing algorithms, Wireshark, Nmap and NS2 simulation read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-full-stack-development-2",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Full Stack Development-2",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "full-stack-development-2-jntuk-r23-cse-3-1",
+        "title": "Full Stack Development-2 - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Full Stack Development-2 (skill course): ExpressJS routing/middleware/auth/REST APIs, ReactJS components/hooks/router, MongoDB CRUD."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Skill Enhancement Course delivered as experiments covering: ExpressJS (routing, HTTP methods, middleware, templating, form data, cookies, sessions, authentication, RESTful APIs, database connectivity via Mongoose); ReactJS (rendering HTML/JSX, function & class components, props/state, styles, events, conditional rendering, rendering lists, React forms, React Router, hooks, sharing data between components); MongoDB (installation, configuration, CRUD operations, databases, collections and records); plus augmented programs (to-do list app, quiz app, MongoDB certification). Name, 0-1-2-2 credits and topic/experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
+    },
+    {
+      "id": "r23-cse-3-1-user-interface-design-using-flutter",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "User Interface Design using Flutter",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Installing the Flutter and Dart SDK and writing a simple Dart program",
+            "Exploring Flutter widgets (Text, Image, Container) and implementing layouts with Row, Column and Stack",
+            "Designing a responsive UI with media queries and breakpoints for different screen sizes",
+            "Setting up navigation between screens using Navigator and named routes",
+            "Working with stateful and stateless widgets and state management using setState and Provider",
+            "Creating custom widgets and applying styling using themes and custom styles",
+            "Designing a form with input fields, validation and error handling",
+            "Adding animations (fade, slide, etc.), fetching data from a REST API and displaying it in the UI, and writing unit tests using Flutter's debugging tools"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "user-interface-design-using-flutter-jntuk-r23-cse-3-1",
+        "title": "UI Design using Flutter - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 User Interface Design using Flutter: widgets & layouts, responsive UI, navigation, state management, forms, animations, REST APIs."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Engineering Science lab (0-0-2-1). List of 10 experiments (with sub-parts) covering Flutter/Dart setup, widgets and layouts, responsive UI, navigation, state management, custom widgets and theming, forms and validation, animations, REST API data fetching and unit testing/debugging, read from the source PDF. The course-structure table lists an alternative title 'SWAYAM Plus - Android Application Development (with Flutter)'; the detail page itself is headed 'User Interface Design using Flutter', used here as the canonical name."
+    },
+    {
+      "id": "r23-cse-3-1-principles-of-operating-systems",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Principles of Operating Systems",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Operating Systems Overview and System Structures",
+          "topics": [
+            "Operating systems overview: introduction, OS functions, OS operations, computing environments, free and open-source operating systems",
+            "System structures: operating system services, user and operating-system interface, system calls and types of system calls",
+            "System programs; operating system design and implementation; operating system structure",
+            "Building and booting an operating system; operating system debugging"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Processes, Threads and CPU Scheduling",
+          "topics": [
+            "Processes: process concept, process scheduling, operations on processes, inter-process communication",
+            "Threads and concurrency: multithreading models, thread libraries, threading issues",
+            "CPU scheduling: basic concepts, scheduling criteria, scheduling algorithms",
+            "Multiple-processor scheduling"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Process Synchronization and Deadlocks",
+          "topics": [
+            "Synchronization tools: the critical section problem and Peterson's solution",
+            "Mutex locks, semaphores, monitors and classic problems of synchronization",
+            "Deadlocks: system model and deadlock characterization",
+            "Methods for handling deadlocks"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Memory Management and Storage",
+          "topics": [
+            "Memory-management strategies: contiguous memory allocation, paging, structure of the page table, swapping",
+            "Virtual memory management: demand paging, copy-on-write, page replacement",
+            "Allocation of frames and thrashing",
+            "Storage management: overview of mass storage structure and HDD scheduling"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "File Systems",
+          "topics": [
+            "File system interface: file concept, access methods, directory structure",
+            "File system implementation: file-system structure and operations, directory implementation",
+            "Allocation methods and free space management",
+            "File-system internals: file-system mounting, partitions and mounting, file sharing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "principles-of-operating-systems-jntuk-r23-cse-3-1",
+        "title": "Principles of Operating Systems - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Principles of Operating Systems: OS overview & structures, processes/threads/scheduling, synchronization & deadlocks, memory, files."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Open Elective-I option 1 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-computer-organization-and-architecture",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Organization and Architecture",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Structure of Computers and Logic Gates",
+          "topics": [
+            "Basic structure of computers: computer types, functional units, basic operational concepts, bus structures",
+            "Software, performance, multiprocessors and multicomputers",
+            "Digital logic gates; two-level realizations using gates: AND-OR, OR-AND, NAND-NAND and NOR-NOR"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Sequential Circuits and Register Transfer",
+          "topics": [
+            "Sequential circuits: classification (synchronous and asynchronous), basic flip-flops, truth and excitation tables (NAND RS latch, NOR RS latch, RS, JK, T and D flip-flops)",
+            "Conversion of flip-flop to flip-flop, race-around condition, master J-K flip-flop",
+            "Register transfer language: register transfer, bus and memory transfers, arithmetic and logic micro-operations, shift micro-operations, arithmetic logic shift unit",
+            "Instruction codes, computer registers, computer instructions, instruction cycle"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Micro-Programmed Control and CPU Organization",
+          "topics": [
+            "Micro-programmed control: control memory, address sequencing, microprogram example, design of control unit",
+            "Central processing unit: general register organization, instruction formats",
+            "Addressing modes",
+            "Data transfer and manipulation, program control"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Microprocessors and Memory Organization",
+          "topics": [
+            "Microprocessors: evolution of microprocessors, CISC and RISC, characteristics of microprocessors",
+            "Memory organization: memory hierarchy, main memory, auxiliary memory, associative memory",
+            "Cache memory and cache memory performance considerations",
+            "Virtual memories; introduction to shift registers and RAID"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Input-Output Organization",
+          "topics": [
+            "Peripheral devices and the input-output interface",
+            "Asynchronous data transfer and modes of transfer",
+            "Priority interrupts, DMA, input-output processor",
+            "Serial communication"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-organization-and-architecture-jntuk-r23-cse-3-1",
+        "title": "Computer Organization & Architecture - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Computer Organization and Architecture: computer structure & logic gates, sequential circuits, CPU & control unit, microprocessors, I/O."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Open Elective-I option 2 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-1-entrepreneurship-development-and-venture-creation",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Entrepreneurship Development & Venture Creation",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-cse-3-1",
+        "title": "Entrepreneurship Dev & Venture Creation - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Entrepreneurship Development & Venture Creation (Open Elective-I alternative) - listed with no detailed syllabus content found."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this course is listed in the III-I course structure table (page 2) as an OR-alternative to Open Elective-I with 3-0-0-3 credits, but the source document contains no syllabus section for it -- no course objectives, outcomes, units or textbooks (unlike the two Open Elective-I options Principles of Operating Systems and Computer Organization and Architecture, which are complete). Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-1-evaluation-of-community-service-internship",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Evaluation of Community Service Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-community-service-internship-jntuk-r23-cse-3-1",
+        "title": "Community Service Internship - CSE 3-1",
+        "meta_description": "Tirumala R23 CSE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-2-compiler-design",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Compiler Design",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Lexical Analysis and Syntax Analysis Basics",
+          "topics": [
+            "Language processors, structure of a compiler, role of the lexical analyzer, bootstrapping and input buffering",
+            "Specification and recognition of tokens; lexical analyzer generator LEX",
+            "Finite automata, regular expressions and finite automata; design of a lexical analyzer generator",
+            "Syntax analysis: role of the parser, context-free grammars, derivations and parse trees",
+            "Ambiguity, left recursion and left factoring"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Top-Down and Bottom-Up Parsing",
+          "topics": [
+            "Pre-processing steps of top-down parsing, backtracking, recursive descent parsing",
+            "LL(1) grammars, non-recursive predictive parsing, error recovery in predictive parsing",
+            "Bottom-up parsing: LR vs LL parsers, types of LR parsers, shift-reduce parsing",
+            "SLR parsers, construction of SLR parsing tables, CLR(1) and LALR parsing tables",
+            "Dangling-else ambiguity, error recovery in LR parsing, handling ambiguous grammars with LR parsers"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Syntax-Directed Translation and Intermediate Code Generation",
+          "topics": [
+            "Syntax-directed definitions, evaluation orders for SDDs, applications of syntax-directed translation",
+            "Syntax-directed translation schemes and implementing L-attributed SDDs",
+            "Variants of syntax trees, three address code, types and declarations",
+            "Translation of expressions, type checking, control flow and backpatching",
+            "Intermediate code for procedures"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Code Optimization",
+          "topics": [
+            "Principal sources of optimization; basic blocks and optimization of basic blocks",
+            "Structure-preserving transformations and flow graphs",
+            "Loop optimization and data-flow analysis",
+            "Peephole optimization"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Run-Time Environments and Code Generation",
+          "topics": [
+            "Storage organization, run-time storage allocation, activation records",
+            "Procedure calls and displays",
+            "Issues in the design of a code generator; object code forms",
+            "Code generation algorithm; register allocation and assignment"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "compiler-design-jntuk-r23-cse-3-2",
+        "title": "Compiler Design - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Compiler Design: lexical & syntax analysis, top-down/bottom-up parsing, syntax-directed translation, optimization, run-time environments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-cloud-computing",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cloud Computing",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Cloud Computing Fundamentals",
+          "topics": [
+            "Cloud computing at a glance; defining a cloud; cloud computing reference model",
+            "Types of services: IaaS, PaaS, SaaS",
+            "Cloud deployment models: public, private, hybrid; utility computing",
+            "Cloud computing characteristics and benefits",
+            "Cloud service providers: Amazon Web Services, Microsoft Azure, Google AppEngine"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Cloud Enabling Technologies",
+          "topics": [
+            "Ubiquitous internet; parallel and distributed computing; elements of parallel computing",
+            "Hardware architectures for parallel computing: SISD, SIMD, MISD, MIMD",
+            "Elements of distributed computing; inter-process communication; technologies for distributed computing",
+            "Remote procedure calls (RPC); service-oriented architecture (SOA); web services",
+            "Virtualization"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Virtualization and Containers",
+          "topics": [
+            "Characteristics of virtualized environments; taxonomy of virtualization techniques",
+            "Virtualization and cloud computing; pros and cons of virtualization; technology examples (XEN, VMware)",
+            "Building blocks of containers; container platforms (LXC, Docker)",
+            "Container orchestration: Docker Swarm and Kubernetes",
+            "Public cloud VM (e.g. Amazon EC2) and container (e.g. Amazon Elastic Container Service) offerings"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Cloud Computing Challenges",
+          "topics": [
+            "Economics of the cloud; cloud interoperability and standards",
+            "Scalability and fault tolerance; energy efficiency in clouds; federated clouds",
+            "Cloud computing security; fundamentals of computer security",
+            "Cloud security architecture; cloud shared responsibility model; security in cloud deployment models"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Advanced Concepts in Cloud Computing",
+          "topics": [
+            "Serverless computing, Function-as-a-Service, serverless computing architecture",
+            "Public cloud (e.g. AWS Lambda) and open-source (e.g. OpenFaaS) serverless platforms",
+            "Internet of Things (IoT): applications, cloud-centric IoT and layers",
+            "Edge and fog computing; DevOps; infrastructure-as-code",
+            "Quantum cloud computing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cloud-computing-jntuk-r23-cse-3-2",
+        "title": "Cloud Computing - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Cloud Computing: service/deployment models, enabling technologies, virtualization & containers, cloud challenges, serverless & IoT."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-cryptography-and-network-security",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cryptography & Network Security",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Principles",
+          "topics": [
+            "Security goals, cryptographic attacks, services and mechanisms",
+            "Mathematics of cryptography: integer arithmetic, modular arithmetic",
+            "Matrices and linear congruence"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Symmetric Encryption",
+          "topics": [
+            "Mathematics of symmetric key cryptography: algebraic structures, GF(2^n) fields",
+            "Introduction to modern symmetric key ciphers: modern block ciphers, modern stream ciphers",
+            "Data Encryption Standard: DES structure, DES analysis, security of DES, multiple DES",
+            "Advanced Encryption Standard: transformations, key expansions, AES ciphers, analysis of AES"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Asymmetric Encryption",
+          "topics": [
+            "Mathematics of asymmetric key cryptography: primes, primality testing, factorization, CRT",
+            "Asymmetric key cryptography: RSA cryptosystem",
+            "Rabin cryptosystem and Elgamal cryptosystem",
+            "Elliptic curve cryptography (ECC)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Data Integrity, Digital Signature Schemes & Key Management",
+          "topics": [
+            "Message integrity and message authentication; random oracle model",
+            "Cryptographic hash functions: Whirlpool, SHA-512",
+            "Digital signatures: process, services, attacks, schemes, applications",
+            "Key management: symmetric key distribution, Kerberos"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Network Security",
+          "topics": [
+            "Security at the application layer: PGP and S/MIME",
+            "Security at the transport layer: SSL and TLS",
+            "Security at the network layer: IPSec (two modes, two security protocols, security association, IKE, ISAKMP)",
+            "System security: users, trust, trusted systems, buffer overflow, malicious software",
+            "Worms, viruses, IDS, firewalls"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cryptography-and-network-security-jntuk-r23-cse-3-2",
+        "title": "Cryptography & Network Security - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Cryptography & Network Security: crypto math, symmetric/asymmetric encryption, hashing, digital signatures, PGP/SSL/IPSec, firewalls."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-software-testing-methodologies",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Software Testing Methodologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Path Testing",
+          "topics": [
+            "Purpose of testing, dichotomies, model for testing, consequences of bugs, taxonomy of bugs",
+            "Basic concepts of path testing; predicates, path predicates and achievable paths",
+            "Path sensitizing and path instrumentation; application of path testing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Transaction Flow, Data Flow and Domain Testing",
+          "topics": [
+            "Transaction flows and transaction flow testing techniques",
+            "Basics of data flow testing; strategies and application of data flow testing",
+            "Domains and paths; nice and ugly domains; domain testing",
+            "Domains and interface testing; domains and testability"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Paths, Path Products and Logic-Based Testing",
+          "topics": [
+            "Path products and path expressions; reduction procedure and applications",
+            "Regular expressions and flow anomaly detection",
+            "Logic-based testing: decision tables, path expressions, KV charts, specifications"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "State, State Graphs and Transition Testing",
+          "topics": [
+            "State graphs; good and bad state graphs",
+            "State testing",
+            "Testability tips"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Graph Matrices and Application",
+          "topics": [
+            "Motivational overview; matrix of a graph; relations",
+            "Power of a matrix; node reduction algorithm; building tools",
+            "Exposure to a tool like JMeter/Selenium/SoapUI/Catalon"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-testing-methodologies-jntuk-r23-cse-3-2",
+        "title": "Software Testing Methodologies - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Software Testing Methodologies: path/transaction/data flow testing, domain testing, logic-based testing, state graphs, graph matrices."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-II option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-cyber-security",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cyber Security",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Cybercrime",
+          "topics": [
+            "Cybercrime: definition and origins of the word; cybercrime and information security",
+            "Cybercriminals; classifications of cybercrime; cyberstalking; cybercafe and cybercrimes; botnets",
+            "Attack vector; proliferation of mobile and wireless devices",
+            "Security challenges posed by mobile devices; attacks on mobile/cell phones",
+            "Network and computer attacks"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Tools and Methods",
+          "topics": [
+            "Proxy servers and anonymizers; phishing; password cracking; keyloggers and spywares",
+            "Viruses and worms; trojan horses and backdoors; steganography; sniffers; spoofing; session hijacking",
+            "Buffer overflow; DoS and DDoS attacks; SQL injection",
+            "Attacks on wireless networks; identity theft (ID theft)",
+            "Foot printing and social engineering; port scanning; enumeration"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Cybercrime Investigation",
+          "topics": [
+            "Investigation tools; eDiscovery; digital evidence collection; evidence preservation",
+            "E-mail investigation, e-mail tracking, IP tracking, e-mail recovery; hands-on case studies",
+            "Encryption and decryption methods",
+            "Search and seizure of computers; recovering deleted evidence; password cracking"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Computer Forensics and Investigations",
+          "topics": [
+            "Understanding computer forensics; preparing for computer investigations",
+            "Current computer forensics tools: evaluating tools, forensics software and hardware tools",
+            "Validating and testing forensics software; face, iris and fingerprint recognition; audio-video analysis",
+            "Windows and Linux system forensics; graphics and network forensics",
+            "E-mail investigations; cell phone and mobile device forensics"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Cyber Crime Legal Perspectives",
+          "topics": [
+            "Cybercrime and the legal landscape around the world; the Indian IT Act",
+            "Challenges to Indian law and the cybercrime scenario in India",
+            "Consequences of not addressing weaknesses in the Information Technology Act",
+            "Digital signatures and the Indian IT Act; amendments to the Indian IT Act",
+            "Cybercrime and punishment; cyberlaw, technology and students: Indian scenario"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cyber-security-jntuk-r23-cse-3-2",
+        "title": "Cyber Security - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Cyber Security: cybercrime tools & attacks, cybercrime investigation, computer forensics, and cyber law/legal perspectives."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-II option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-devops",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "DevOps",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to DevOps",
+          "topics": [
+            "Introduction to SDLC, Agile model, introduction to DevOps",
+            "DevOps features, DevOps architecture, DevOps lifecycle; understanding workflow and principles",
+            "Introduction to DevOps tools; build automation; delivery automation",
+            "Understanding code quality; automation of CI/CD; release management",
+            "Scrum, Kanban, delivery pipeline, bottlenecks, examples"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Source Code Management (GIT)",
+          "topics": [
+            "The need for source code control; history of source code management; roles and code",
+            "Source code management systems and migrations; version control and GIT; GIT installation",
+            "GIT features, workflow, working with remote repository, GIT commands, branching, staging and collaboration",
+            "Unit testing and code coverage: JUnit, nUnit and code coverage with SonarQube",
+            "SonarQube code quality analysis"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Build Automation - Continuous Integration (CI)",
+          "topics": [
+            "Build automation; what is CI and why CI is required; CI tools",
+            "Introduction to Jenkins with architecture; Jenkins workflow; Jenkins master-slave architecture",
+            "Jenkins pipelines; pipeline basics: Jenkins master, node, agent and executor",
+            "Freestyle projects and pipelines; Jenkins for continuous integration",
+            "Create and manage builds; user management in Jenkins; schedule builds; launch builds on slave nodes"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Continuous Delivery (CD)",
+          "topics": [
+            "Importance of continuous delivery; continuous deployment CD flow",
+            "Containerization with Docker: introduction, installation, Docker commands",
+            "Images and containers; DockerFile; running containers",
+            "Working with containers and publishing to Docker Hub",
+            "Testing tools: introduction to Selenium and its features; JavaScript testing"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Configuration Management and Kubernetes Containerization",
+          "topics": [
+            "Configuration management with Ansible: introduction, tasks, roles, Jinja templating, vaults, deployments",
+            "Containerization using Kubernetes (OpenShift): introduction to Kubernetes namespaces and resources",
+            "CI/CD on OCP: BC, DC and ConfigMaps",
+            "Deploying apps on OpenShift container pods",
+            "Introduction to Puppet master and Chef"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "devops-jntuk-r23-cse-3-2",
+        "title": "DevOps - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 DevOps: DevOps lifecycle, GIT source control, Jenkins CI, Docker-based continuous delivery, Ansible & Kubernetes configuration mgmt."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-II option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-machine-learning",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Machine Learning",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Machine Learning",
+          "topics": [
+            "Evolution of machine learning; paradigms for ML; learning by rote, learning by induction, reinforcement learning",
+            "Types of data, matching, stages in machine learning",
+            "Data acquisition, feature engineering, data representation",
+            "Model selection, model learning, model evaluation, model prediction",
+            "Search and learning; data sets"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Nearest Neighbor-Based Models",
+          "topics": [
+            "Introduction to proximity measures; distance measures; non-metric similarity functions",
+            "Proximity between binary patterns; classification algorithms based on distance measures",
+            "K-nearest neighbor classifier; radius distance nearest neighbor algorithm; KNN regression",
+            "Performance of classifiers and of regression algorithms"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Models Based on Decision Trees and the Bayes Classifier",
+          "topics": [
+            "Decision trees for classification; impurity measures and properties",
+            "Regression based on decision trees; bias-variance trade-off; random forests for classification and regression",
+            "Introduction to the Bayes classifier; Bayes' rule and inference",
+            "The Bayes classifier and its optimality; multi-class classification",
+            "Class conditional independence and Naive Bayes classifier (NBC)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Linear Discriminants for Machine Learning",
+          "topics": [
+            "Introduction to linear discriminants; linear discriminants for classification",
+            "Perceptron classifier and perceptron learning algorithm",
+            "Support vector machines; linearly non-separable case; non-linear SVM; kernel trick",
+            "Logistic regression and linear regression",
+            "Multi-layer perceptrons (MLPs); backpropagation for training an MLP"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Clustering",
+          "topics": [
+            "Introduction to clustering; partitioning of data; matrix factorization",
+            "Clustering of patterns: divisive, agglomerative and partitional clustering",
+            "K-means clustering; soft partitioning and soft clustering; fuzzy C-means clustering",
+            "Rough clustering and rough K-means clustering algorithm",
+            "Expectation maximization-based clustering; spectral clustering"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-learning-jntuk-r23-cse-3-2",
+        "title": "Machine Learning - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Machine Learning: ML stages, nearest-neighbor models, decision trees & Bayes classifier, linear discriminants/SVM, clustering."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-II option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-software-project-management",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Software Project Management",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Conventional Software Management and Software Economics",
+          "topics": [
+            "The waterfall model; conventional software management performance",
+            "Software economics; pragmatic software cost estimation",
+            "Improving software economics: reducing product size, improving processes, team effectiveness, automation",
+            "Achieving required quality; peer inspections",
+            "The old way and the new: conventional vs modern software management; transitioning to an iterative process"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Life Cycle Phases and Artifacts",
+          "topics": [
+            "Engineering and production stages; inception, elaboration, construction, transition phases",
+            "The artifact sets",
+            "Management artifacts",
+            "Engineering artifacts and programmatic artifacts"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Model-Based Software Architecture and Iterative Process Planning",
+          "topics": [
+            "Model-based software architecture: management and technical perspectives",
+            "Workflows of the process: software process workflows, iteration workflows",
+            "Checkpoints of the process: major milestones, minor milestones, periodic status assessments",
+            "Iterative process planning: work breakdown structures, planning guidelines, cost and schedule estimating",
+            "Iteration planning process; pragmatic planning"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Project Organizations and Process Automation",
+          "topics": [
+            "Project organizations and responsibilities: line-of-business organizations, project organizations, evolution of organizations",
+            "Process automation: automation building blocks, the project environment",
+            "Project control and process instrumentation: the seven core metrics",
+            "Management indicators, quality indicators, life cycle expectations",
+            "Pragmatic software metrics; metrics automation"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Agile Methodology and DevOps",
+          "topics": [
+            "Agile methodology; ADAPTing to Scrum; patterns for adopting Scrum; iterating towards agility",
+            "Fundamentals of DevOps: architecture, deployments, orchestration, need, instance of applications",
+            "DevOps delivery pipeline and DevOps ecosystem",
+            "DevOps adoption in projects: technology aspects, agiling capabilities, tool stack implementation, people aspect, processes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-project-management-jntuk-r23-cse-3-2",
+        "title": "Software Project Management - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Software Project Management: software economics, life cycle phases & artifacts, iterative planning, process control, Agile & DevOps."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-III option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-mobile-adhoc-networks",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mobile Adhoc Networks",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Ad Hoc Wireless Networks",
+          "topics": [
+            "Cellular and ad hoc wireless networks; characteristics of MANETs",
+            "Applications of MANETs; issues and challenges of MANETs",
+            "Ad hoc wireless internet",
+            "MAC protocols for ad hoc wireless networks: issues, design goals and classifications of the MAC protocols"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Routing and Transport Protocols for Ad Hoc Wireless Networks",
+          "topics": [
+            "Issues in designing a routing protocol; classifications of routing protocols",
+            "Topology-based versus position-based approaches",
+            "Issues and design goals of a transport layer protocol; classification of transport layer solutions",
+            "TCP over ad hoc wireless networks; solutions for TCP over ad hoc wireless networks",
+            "Other transport layer protocols"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Security Protocols for Ad Hoc Wireless Networks",
+          "topics": [
+            "Security in ad hoc wireless networks; network security requirements",
+            "Issues and challenges in security provisioning; network security attacks",
+            "Key management; secure routing in ad hoc wireless networks",
+            "Cooperation in MANETs; intrusion detection systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Wireless Sensors and Data Retrieval",
+          "topics": [
+            "The Mica Mote; sensing and communication range; design issues",
+            "Energy consumption; clustering of sensors; applications",
+            "Data retrieval in sensor networks: classification of WSNs, MAC layer, routing layer",
+            "Transport layer and high-level application layer support",
+            "Adapting to the inherent dynamic nature of WSNs"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Security in WSNs and Sensor Network Hardware",
+          "topics": [
+            "Security in WSNs; key management in WSNs; secure data aggregation in WSNs",
+            "Sensor network hardware: components of a sensor mote",
+            "Sensor network operating systems: TinyOS, LA-TinyOS, SOS, RETOS",
+            "Imperative language nesC; dataflow style language TinyGALS",
+            "Node-level simulators: NS-2 and its sensor network extension, TOSSIM"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mobile-adhoc-networks-jntuk-r23-cse-3-2",
+        "title": "Mobile Adhoc Networks - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Mobile Adhoc Networks: MANET MAC & routing/transport protocols, ad hoc security, wireless sensor networks, WSN hardware & OS."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-III option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-natural-language-processing",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Natural Language Processing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Origins and challenges of NLP; language modeling: grammar-based LM, statistical LM",
+            "Regular expressions and finite-state automata",
+            "English morphology; transducers for lexicon and rules; tokenization",
+            "Detecting and correcting spelling errors; minimum edit distance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Word Level Analysis",
+          "topics": [
+            "Unsmoothed N-grams; evaluating N-grams; smoothing, interpolation and backoff",
+            "Word classes and part-of-speech tagging",
+            "Rule-based, stochastic and transformation-based tagging; issues in PoS tagging",
+            "Hidden Markov and maximum entropy models"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Syntactic Analysis",
+          "topics": [
+            "Context-free grammars, grammar rules for English, treebanks, normal forms for grammar",
+            "Dependency grammar; syntactic parsing, ambiguity, dynamic programming parsing",
+            "Shallow parsing; probabilistic CFG, probabilistic CYK, probabilistic lexicalized CFGs",
+            "Feature structures and unification of feature structures"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Semantics and Pragmatics",
+          "topics": [
+            "Requirements for representation; first-order logic; description logics",
+            "Syntax-driven semantic analysis; semantic attachments",
+            "Word senses, relations between senses, thematic roles, selectional restrictions",
+            "Word sense disambiguation: supervised, dictionary & thesaurus, bootstrapping methods",
+            "Word similarity using thesaurus and distributional methods"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Discourse Analysis and Lexical Resources",
+          "topics": [
+            "Discourse segmentation and coherence",
+            "Reference phenomena; anaphora resolution using Hobbs and Centering algorithms; coreference resolution",
+            "Resources: Porter stemmer, lemmatizer, Penn Treebank, Brill's tagger",
+            "WordNet, PropBank, FrameNet, Brown Corpus, British National Corpus (BNC)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "natural-language-processing-jntuk-r23-cse-3-2",
+        "title": "Natural Language Processing - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 NLP: language modeling, N-grams & POS tagging, syntactic parsing, semantics/pragmatics & WSD, discourse analysis & lexical resources."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-III option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-distributed-operating-system",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Distributed Operating System",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals and Message Passing",
+          "topics": [
+            "What is a distributed computing system? Evolution and models of distributed computing systems",
+            "What is a distributed operating system? Issues in designing a distributed OS; introduction to DCE",
+            "Desirable features of a good message passing system; issues in IPC by message passing",
+            "Synchronization, buffering, multi-datagram messages, encoding and decoding of message data",
+            "Process addressing, failure handling, group communication; case study: 4.3 BSD UNIX IPC mechanism"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Remote Procedure Calls",
+          "topics": [
+            "The RPC model, transparency of RPC, implementing RPC mechanism, stub generation",
+            "RPC messages, marshaling arguments and results, server management, parameter-passing semantics",
+            "Call semantics, communication protocols for RPCs, complicated RPCs, client-server binding",
+            "Exception handling, security, special types of RPCs, RPC in heterogeneous environments",
+            "Lightweight RPC, optimization for better performance; case study: Sun RPC"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Distributed Shared Memory and Synchronization",
+          "topics": [
+            "General architecture of DSM systems; design and implementation issues of DSM; granularity",
+            "Structure of shared memory space, consistency models, replacement strategy, thrashing",
+            "Other approaches to DSM; heterogeneous DSM; advantages of DSM",
+            "Clock synchronization, event ordering, mutual exclusion, deadlock, election algorithms"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Resource and Process Management",
+          "topics": [
+            "Desirable features of a good global scheduling algorithm",
+            "Task assignment approach, load-balancing approach, load-sharing approach",
+            "Process management: process migration",
+            "Threads"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Distributed File Systems",
+          "topics": [
+            "Desirable features of a good distributed file system; file models",
+            "File-accessing models; file-sharing semantics",
+            "File-caching schemes; file replication",
+            "Fault tolerance, atomic transactions and design principles"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "distributed-operating-system-jntuk-r23-cse-3-2",
+        "title": "Distributed Operating System - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Distributed OS: message passing, RPC, distributed shared memory & synchronization, resource/process management, distributed file systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-III option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-cloud-computing-lab",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cloud Computing Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Lab on web services, and on IPC, messaging and publish/subscribe",
+            "Install VirtualBox/VMware Workstation with different Linux/Windows flavours; install a C compiler in the VM and run programs",
+            "Create an Amazon EC2 instance, set up a web-server, associate an IP address and configure a security group for port 80 (or the same with OpenStack)",
+            "Install Google App Engine and create a hello-world app and simple web applications using Python/Java",
+            "Start a Docker container, set up a web-server, and map the host directory as a data volume for the container",
+            "Transfer files between virtual machines and between containers; launch a virtual machine using TryStack",
+            "Install a Hadoop single-node cluster and run a simple word count application",
+            "Use OpenFaaS to demonstrate event-driven function invocation, and simulate a cloud scenario using CloudSim with a scheduling algorithm not present in CloudSim"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cloud-computing-lab-jntuk-r23-cse-3-2",
+        "title": "Cloud Computing Lab - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Cloud Computing Lab: web services/IPC, VM & Docker setup, EC2/OpenStack, Google App Engine, Hadoop, OpenFaaS, CloudSim experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of Experiments read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-cryptography-and-network-security-lab",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cryptography & Network Security Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "XOR, and AND/XOR, each character of a string with a constant value (C programs)",
+            "Encryption and decryption using Caesar cipher, substitution cipher and Hill cipher (Java)",
+            "Implement the DES algorithm logic (Java)",
+            "Implement the BlowFish and Rijndael algorithm logic (C/Java)",
+            "Encrypt text using BlowFish with Java Cryptography, generating a key with the Java keytool",
+            "Implement the RSA algorithm (Java)",
+            "Implement the Diffie-Hellman key exchange mechanism using HTML and JavaScript",
+            "Calculate the message digest of a text using the SHA-1 algorithm (Java)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cryptography-and-network-security-lab-jntuk-r23-cse-3-2",
+        "title": "Cryptography & Network Security Lab - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Cryptography & Network Security Lab: XOR ciphers, Caesar/substitution/Hill cipher, DES, BlowFish, Rijndael, RSA, Diffie-Hellman, SHA-1."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of Experiments read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-principles-of-database-management-systems",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Principles of Database Management Systems",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Database systems; characteristics (database vs file system); database users",
+            "Advantages of database systems; database applications",
+            "Brief introduction of different data models; concepts of schema, instance and data independence",
+            "Three-tier schema architecture for data independence",
+            "Database system structure and environment; centralized and client-server architecture for the database"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Entity Relationship Model and Relational Model",
+          "topics": [
+            "Representation of entities, attributes, entity set, relationship, relationship set, constraints",
+            "Sub classes, super class, inheritance, specialization, generalization using ER diagrams",
+            "Introduction to relational model: concepts of domain, attribute, tuple, relation",
+            "Importance of null values; constraints (domain, key, integrity constraints) and their importance"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Basic SQL",
+          "topics": [
+            "Simple database schema, data types, table definitions (create, alter); DML operations (insert, delete, update)",
+            "Basic SQL querying (select and project) using where clause, arithmetic and logical operations",
+            "SQL functions (date and time, numeric, string conversion)",
+            "Creating tables with relationships; implementation of key and integrity constraints; nested and sub queries",
+            "Grouping, aggregation, ordering; different types of joins; updatable/non-updatable views; relational set operations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Schema Refinement (Normalization)",
+          "topics": [
+            "Purpose of normalization or schema refinement; concept of functional dependency",
+            "Normal forms based on functional dependency; lossless join and dependency-preserving decomposition (1NF, 2NF, 3NF)",
+            "Concept of surrogate key",
+            "Boyce-Codd normal form (BCNF)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transaction Concept",
+          "topics": [
+            "Transaction state, ACID properties, concurrent executions",
+            "Serializability, recoverability, implementation of isolation, testing for serializability",
+            "Lock-based, timestamp-based and optimistic concurrency protocols; deadlocks",
+            "Failure classification, storage, recovery and atomicity; recovery algorithm"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "principles-of-database-management-systems-jntuk-r23-cse-3-2",
+        "title": "Principles of DBMS - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Open Elective-II Principles of DBMS: data models, ER & relational model, SQL, normalization (1NF-BCNF), transactions & recovery."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Open Elective-II (single named option). 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-cse-3-2-soft-skills-swayam-plus-21st-century-employability-skills",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Soft Skills / SWAYAM Plus - 21st Century Employability Skills",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "soft-skills-swayam-plus-21st-century-employability-skills-jntuk-r23-cse-3-2",
+        "title": "Soft Skills - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Skill Enhancement Course 'Soft Skills / SWAYAM Plus - 21st Century Employability Skills' (0-1-2-2) - no detailed syllabus in the source."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this Skill Enhancement course appears only in the III-II course structure table (0-1-2-2) with no course objectives, outcomes, unit content or textbooks anywhere else in the source document. Source the unit-wise content from an official document before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-2-technical-paper-writing-and-ipr",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Technical Paper Writing & IPR",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "technical-paper-writing-and-ipr-jntuk-r23-cse-3-2",
+        "title": "Technical Paper Writing & IPR - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Audit Course Technical Paper Writing & IPR (2-0-0, credits shown as '-') - no detailed syllabus found in this source document."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: listed as Audit Course 'Technical Paper Writing & IPR' in the III-II course structure table (L-T-P 2-0-0, credits shown as '-'), but this CSE document has no detail page for it -- no course objectives, outcomes, units or textbooks -- unlike other Tirumala/LBRCE branch documents where this course has full content. Source the unit-wise content from an official document before flipping to verified."
+    },
+    {
+      "id": "r23-cse-3-2-mandatory-industry-internship-mini-project",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mandatory Industry Internship / Mini Project",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mandatory-industry-internship-mini-project-jntuk-r23-cse-3-2",
+        "title": "Industry Internship / Mini Project - CSE 3-2",
+        "meta_description": "Tirumala R23 CSE 3-2 Mandatory Industry Internship / Mini Project (08 weeks, summer vacation) - a course-structure footnote with no unit content."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship / Mini Project of 08 weeks duration during summer vacation' as a bare footnote (not a numbered/coded course row), with no evaluation scheme, credits or unit content given. A footnote adds that interested students may pursue SWAYAM Plus courses (e.g. Hands-on Masterclass on Data Analytics OR AI for Real-World Application) under Industry Internship. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
     }
   ]
 }

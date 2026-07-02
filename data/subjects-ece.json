@@ -553,6 +553,2275 @@
       "legacy_equivalent_id": null,
       "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "needs_verification", "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline." },
       "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+    },
+    {
+      "id": "r23-ece-3-1-analog-and-digital-ic-applications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Analog & Digital IC Applications",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Operational Amplifiers",
+          "topics": [
+            "Ideal and practical op-amp characteristics: DC and AC characteristics, features of the 741 op-amp",
+            "Modes of operation - inverting, non-inverting, differential, instrumentation and AC amplifier",
+            "Differentiators, integrators, comparators and the Schmitt trigger",
+            "Voltage regulators: introduction, features of the 723 regulator, three-terminal voltage regulators"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Op-Amp, IC555 and IC565 Applications",
+          "topics": [
+            "Active filters: characteristics of band-pass, band-reject and all-pass filters; 1st order LPF/HPF Butterworth filter analysis",
+            "Waveform generators - triangular, sawtooth and square wave",
+            "IC555 timer: functional diagram, monostable and astable operation, applications",
+            "IC565 PLL: block schematic, principle and applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Data Converters",
+          "topics": [
+            "Basic DAC techniques and specifications",
+            "DAC types - weighted resistor DAC, R-2R ladder DAC, inverted R-2R DAC",
+            "ADC types - parallel comparator, counter type, successive approximation and dual slope ADC",
+            "DAC and ADC specifications"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Combinational Logic ICs",
+          "topics": [
+            "Specifications and applications of TTL 74XX and CMOS 40XX series ICs",
+            "Code converters, decoders, LED/LCD decoders with drivers, encoders and priority encoders",
+            "Multiplexers, de-multiplexers and priority generators/checkers",
+            "Parallel binary adder/subtractor and magnitude comparators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Sequential Logic ICs and Memories",
+          "topics": [
+            "Commonly available 74XX and CMOS 40XX series flip-flops, synchronous counters, decade counters and shift registers",
+            "ROM architecture, types of ROMs and applications",
+            "RAM architecture",
+            "Static and dynamic RAMs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-and-digital-ic-applications-jntuk-r23-ece-3-1",
+        "title": "Analog & Digital IC Applications - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital IC Applications: op-amp circuits, 555/565 ICs, data converters, combinational & sequential logic ICs, memories."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-digital-communications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Digital Communications",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Pulse Digital Modulation",
+          "topics": [
+            "Elements and advantages of digital communication systems",
+            "PCM: sampling, quantization and coding, quantization error, companding",
+            "Differential PCM (DPCM) and delta modulation, its drawbacks, adaptive delta modulation",
+            "Comparison of PCM and DM systems, noise in PCM and DM systems, TDM and FDM"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Digital Modulation Techniques",
+          "topics": [
+            "Introduction to ASK, FSK and PSK",
+            "DPSK, DEPSK, QPSK and M-ary PSK",
+            "Similarity of BFSK and BPSK"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Data Transmission",
+          "topics": [
+            "Baseband signal receiver and probability of error",
+            "Optimum filter and matched filter; probability of error using matched filter",
+            "Coherent reception and non-coherent detection of FSK",
+            "Calculation of error probability of ASK, BPSK, BFSK and QPSK"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Linear Block Codes",
+          "topics": [
+            "Matrix description of linear block codes",
+            "Error detection and error correction capabilities of linear block codes",
+            "Hamming codes",
+            "Binary cyclic codes: algebraic structure, encoding, syndrome calculation, BCH codes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Convolution Codes",
+          "topics": [
+            "Encoding of convolution codes - time domain and transform domain approach",
+            "Graphical approach: state, tree and trellis diagrams",
+            "Decoding using the Viterbi algorithm",
+            "Turbo codes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-communications-jntuk-r23-ece-3-1",
+        "title": "Digital Communications - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Digital Communications: PCM/DPCM/delta modulation, digital modulation techniques, matched-filter receivers, block & convolution codes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-antennas-and-wave-propagation",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Antennas and Wave Propagation",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Antenna Fundamentals",
+          "topics": [
+            "Radiation mechanism - single wire, two-wire, dipoles; current distribution on a thin wire antenna",
+            "Radiation patterns, principal planes, field regions, main and side lobes, beamwidth, radiation intensity",
+            "Directivity, antenna efficiency, gain, beam efficiency, bandwidth, polarization, input impedance",
+            "Beam area and resolution, antenna apertures, aperture efficiency, effective height"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Thin Linear Wire Antennas",
+          "topics": [
+            "Retarded potentials; radiation from a small electric dipole",
+            "Quarter wave monopole and half wave dipole - current distributions, field components, power radiated, radiation resistance",
+            "Natural current distributions, fields and patterns of thin linear center-fed antennas; antenna theorems",
+            "Loop antennas: small loops, field components, comparison with short dipole, D and Rr relations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Antenna Arrays",
+          "topics": [
+            "Two-element arrays and principle of pattern multiplication",
+            "N-element uniform linear arrays - broadside and end-fire arrays, EFA with increased directivity",
+            "Concept of scanning arrays and directivity relations",
+            "Binomial arrays, uniform and non-uniform amplitude distributions",
+            "Arrays with parasitic elements, Yagi-Uda arrays and folded dipoles"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Broadband, UHF and Microwave Antennas",
+          "topics": [
+            "Log periodic antennas; helical antennas - geometry, basic properties, axial and normal mode design",
+            "Horn antennas - types, optimum horns, design characteristics of pyramidal horns",
+            "Paraboloidal reflectors - geometry, feed types, F/D ratio, spill over, back lobes, aperture blocking, offset and cassegrain feeds",
+            "Microstrip antennas - features, advantages and limitations; rectangular patch antenna geometry and parameters"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Antenna Measurements and Wave Propagation",
+          "topics": [
+            "FRIIS transmission equation; directivity and gain measurements - comparison, absolute and 3-antenna methods",
+            "Types of wave propagation",
+            "Sky wave propagation - ionospheric layers, reflection/refraction mechanism, critical frequency, MUF and skip distance",
+            "Space wave propagation - mechanism, LOS, radio horizon, field strength equation"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "antennas-and-wave-propagation-jntuk-r23-ece-3-1",
+        "title": "Antennas and Wave Propagation - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Antennas & Wave Propagation: radiation mechanism, wire antennas, arrays, broadband/microwave antennas, measurements, propagation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-digital-system-design-through-hdl",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Digital System Design through HDL",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Verilog HDL and Gate-Level Modelling",
+          "topics": [
+            "Verilog as an HDL; levels of design description; data types, system tasks and compiler directives",
+            "Modules and ports; AND gate primitive and module structure",
+            "Other gate primitives, tri-state gates and arrays of instances of primitives",
+            "Design of flip-flops with gate primitives; delay"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Behavioural Modelling",
+          "topics": [
+            "Structured processes and procedural assignments",
+            "Timing controls, conditional statements, multi-way branching and loops",
+            "Sequential and parallel blocks, generate blocks",
+            "Design of decoders, multiplexers, flip-flops, registers and counters in behavioral model"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Modelling at Data Flow Level",
+          "topics": [
+            "Continuous assignment structures; delays and continuous assignments; assignment to vectors and operators",
+            "Design of decoders, multiplexers, flip-flops, registers and counters in dataflow model",
+            "Switch level modelling: basic transistor switches, CMOS switch, bi-directional gates",
+            "Time delays with switch primitives"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "FSM Design",
+          "topics": [
+            "Functions, tasks and user-defined primitives (UDP)",
+            "FSM design - Moore and Mealy machines; encoding style from binary to one-hot",
+            "Introduction to synthesis; synthesis of combinational logic",
+            "Synthesis of sequential logic with latches and flip-flops; synthesis of explicit and implicit state machines"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Components Test and Verification",
+          "topics": [
+            "Test bench for combinational circuits testing",
+            "Test bench for sequential circuits testing",
+            "Test bench techniques",
+            "Design verification and assertion verification"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-system-design-through-hdl-jntuk-r23-ece-3-1",
+        "title": "Digital System Design through HDL - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Digital System Design through HDL (PE-I): gate-level, behavioural & dataflow Verilog modelling, FSM design, test benches."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-optical-communications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Optical Communications",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Overview of Optical Fiber Communication and Waveguides",
+          "topics": [
+            "Historical development, general system and advantages of optical fiber communication",
+            "Optical fiber waveguides: ray theory transmission, total internal reflection, acceptance angle, numerical aperture, skew rays",
+            "Cylindrical fibers - modes, V-number, mode coupling; step index and graded index fibers",
+            "Single mode fibers - cutoff wavelength, mode field diameter, effective refractive index"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fiber Materials and Signal Distortion",
+          "topics": [
+            "Fiber materials - glass, halide, active glass, chalcogenide glass, plastic optical fibers",
+            "Attenuation - absorption, scattering and bending losses; core and cladding losses; information capacity determination",
+            "Types of dispersion - material, waveguide, polarization-mode and intermodal dispersion",
+            "Pulse broadening in graded index fiber"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Optical Fiber Connectors and Splicing",
+          "topics": [
+            "Connector types, single mode fiber connectors and connector return loss",
+            "Fiber splicing techniques and splicing single mode fibers",
+            "Fiber alignment and joint loss - multimode fiber joints",
+            "Single mode fiber joints"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Optical Sources and Detectors",
+          "topics": [
+            "LEDs - structures, materials, quantum efficiency, power, modulation, power bandwidth product",
+            "Injection laser diodes - modes, threshold conditions, external quantum efficiency, rate equations, resonant frequencies",
+            "Reliability of LEDs and ILDs",
+            "Optical detectors - physical principles of PIN and APD, detector response time, comparison of photodetectors"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Optical Receivers and System Design",
+          "topics": [
+            "Source to fiber power launching - output patterns, power coupling, equilibrium numerical aperture, laser diode to fiber coupling",
+            "Optical receiver operation - digital signal transmission, error sources, receiver configuration, digital receiver performance, probability of error, quantum limit; analog receivers",
+            "Point-to-point links - component choice, link power budget, rise time budget",
+            "Line coding in optical links, WDM necessity and principles, measurement of attenuation/dispersion, eye pattern"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "optical-communications-jntuk-r23-ece-3-1",
+        "title": "Optical Communications - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Optical Communications (PE-I): fiber waveguides, dispersion, connectors/splicing, sources/detectors, receiver & system design."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF; the course title/L-T-P-C label appears after the unit content in the source (a PDF extraction quirk), used here to confirm scope."
+    },
+    {
+      "id": "r23-ece-3-1-electronic-measurements-and-instrumentation",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Electronic Measurements and Instrumentation",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Measuring Instruments and Digital Instruments",
+          "topics": [
+            "Errors in measurement - accuracy, precision, resolution and significant figures",
+            "Basic PMMC meter construction and working; DC/AC voltmeters, DC ammeter and multimeter",
+            "Digital voltmeters - DVMs based on V-T, V-F and successive approximation principles, resolution and sensitivity",
+            "Digital multimeters, digital frequency meters and digital measurement of time"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Oscilloscopes",
+          "topics": [
+            "Block diagram of CRO and basic principle/construction of CRT",
+            "Vertical amplifiers and horizontal deflection system - sweep, trigger pulse, delay line, sync selector circuits",
+            "Dual beam and dual trace CROs",
+            "Sampling and digital storage oscilloscopes"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Bridges",
+          "topics": [
+            "DC bridges for resistance measurement - Wheatstone bridge and Kelvin's bridge",
+            "AC bridges for inductance measurement - Maxwell's bridge, Hay's bridge, Anderson bridge",
+            "Capacitance measurement - Schering bridge and Wien bridge",
+            "Errors and precautions in using bridges"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Signal Generators",
+          "topics": [
+            "Fixed and variable AF oscillator; standard and laboratory type signal generators",
+            "AF sine and square wave generator",
+            "Function generator",
+            "Square and pulse generator; sweep frequency generator"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transducers and Intelligent Sensors",
+          "topics": [
+            "Types of electrical transducers; resistive transducers, strain gauges, piezoelectric and photoelectric transducers",
+            "Photovoltaic transducers; temperature transducers - RTD, LVDT",
+            "Intelligent sensors - definition, classification, smart and cogent sensors, soft/virtual sensors",
+            "Self-adaptive and self-validating sensors, temperature compensating intelligent sensors, pressure sensor, indirect sensing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electronic-measurements-and-instrumentation-jntuk-r23-ece-3-1",
+        "title": "Electronic Measurements & Instrumentation - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Electronic Measurements & Instrumentation (PE-I): meters, oscilloscopes, bridges, signal generators, transducers & smart sensors."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-computer-organization-and-architecture",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Organization and Architecture",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction, Data Representation and Register Transfer",
+          "topics": [
+            "Digital computers, Von Neumann computers and basic organization of a computer",
+            "Data types, complements, fixed-point and floating-point representation, conversion of fractions",
+            "Register transfer language, register/bus/memory transfers",
+            "Arithmetic, logic and shift micro operations; arithmetic logic shift unit"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Basic Computer Organization, Design and Programming",
+          "topics": [
+            "Instruction codes, computer registers, computer instructions, timing and control, instruction cycle",
+            "Memory-reference instructions, input-output and interrupt, design of the basic computer",
+            "Programming the basic computer - machine and assembly language, the assembler, program loops, arithmetic/logic operations",
+            "Micro programmed control - control memory, address sequencing, micro program example, design of control unit"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Central Processing Unit and Computer Arithmetic",
+          "topics": [
+            "General register organization, stack organization, instruction formats and addressing modes",
+            "Data transfer and manipulation, program control, reduced instruction set computer",
+            "Addition, subtraction, multiplication and division algorithms",
+            "Floating-point arithmetic operations, decimal arithmetic unit and operations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Input-Output Organization",
+          "topics": [
+            "Peripheral devices and input-output interface",
+            "Asynchronous data transfer and modes of transfer",
+            "Priority interrupt",
+            "Direct memory access (DMA), input-output processor (IOP) and serial communication"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Memory Organization",
+          "topics": [
+            "Memory hierarchy and main memory",
+            "Auxiliary memory and associative memory",
+            "Cache memory and virtual memory",
+            "Memory management hardware"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-organization-and-architecture-jntuk-r23-ece-3-1",
+        "title": "Computer Organization & Architecture - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Computer Organization & Architecture (PE-I): data representation, basic computer design, CPU, I/O organization, memory hierarchy."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Professional Elective-I option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-entrepreneurship-development-and-venture-creation",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Entrepreneurship Development & Venture Creation",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-ece-3-1",
+        "title": "Entrepreneurship Dev. & Venture Creation - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Entrepreneurship Development & Venture Creation (Open Elective-I alternative), 3-0-0-3 credits - no syllabus content in the source."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: this Open Elective-I alternative is listed only in the III-I course-structure table (page 1: 'Open Elective-I OR Entrepreneurship Development & Venture Creation', 3-0-0-3) -- no course objectives, outcomes, units or textbooks appear anywhere else in the source document. Source the unit-wise content from an official document before flipping to verified."
+    },
+    {
+      "id": "r23-ece-3-1-analog-and-digital-ic-applications-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Analog & Digital IC Applications Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "OP-AMP applications - adder, subtractor, comparator circuits; integrator and differentiator using IC 741",
+            "Active filter applications - LPF, HPF, BPF, band-reject (wideband) and notch filters",
+            "IC 741 oscillator circuits - phase shift and Wien bridge oscillators; function generator using op-amps",
+            "IC 555 timer astable and monostable circuits; Schmitt trigger circuits using IC 741 and IC 555",
+            "IC 565 PLL and IC 566 VCO applications; 4-bit DAC using op-amp",
+            "Realization of logic gates; 3-to-8 decoder (74138); 8x1 multiplexer (74151) and 2x1 de-multiplexer (74155)",
+            "4-bit comparator (7485), D flip-flop (7474) and decade counter (7490)",
+            "Universal shift register (74194/195) and 16x4 RAM (74189) read/write operations, designed and HDL-verified"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-and-digital-ic-applications-lab-jntuk-r23-ece-3-1",
+        "title": "Analog & Digital IC Applications Lab - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital IC Applications Lab: OP-AMP/IC555/IC565 circuits and digital ICs designed and HDL-verified."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "0-0-3-1.5 credits; two-part experiment list (Part-A analog OP-AMP/IC circuits, Part-B digital ICs designed and verified via HDL) read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-analog-and-digital-communications-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Analog and Digital Communications Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Amplitude modulation and demodulation; AM-DSBSC modulation and demodulation; diode detector",
+            "Pre-emphasis and de-emphasis; frequency modulation and demodulation",
+            "Verification of sampling theorem; pulse amplitude modulation and demodulation; PWM/PPM modulation and demodulation",
+            "Time division multiplexing and frequency division multiplexing",
+            "Pulse code modulation, differential pulse code modulation and delta modulation",
+            "Frequency shift keying, phase shift keying and differential phase shift keying",
+            "Companding; source encoder and decoder",
+            "Linear block code and binary cyclic code encoder/decoder; convolution code encoder/decoder"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-and-digital-communications-lab-jntuk-r23-ece-3-1",
+        "title": "Analog & Digital Communications Lab - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital Communications Lab: AM/FM modulation, sampling, PCM/DPCM/delta modulation, ASK/PSK/FSK, coding experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "0-0-3-1.5 credits; hardware, MATLAB Simulink and MATLAB Communication toolbox experiment list (Part-A analog, Part-B digital/coding) read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-applications-of-lab-view-for-instrumentation-and-communications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Applications of Lab View for Instrumentation & Communications",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to LabVIEW and Virtual Instrumentation",
+          "topics": [
+            "Overview of LabVIEW - graphical programming paradigm",
+            "LabVIEW environment - front panel, block diagram and data flow programming",
+            "Creating simple virtual instruments (VIs); debugging and troubleshooting techniques",
+            "Implementing loops, case structures, arrays and clusters"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Acquisition and Signal Processing",
+          "topics": [
+            "Interfacing sensors (temperature, pressure, light, etc.) with LabVIEW",
+            "Real-time data acquisition using NI DAQ hardware",
+            "Signal generation - sine, square and triangular waves; Fourier transform (FFT) for frequency analysis",
+            "Filtering techniques - low-pass, high-pass and band-pass filters"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Communication System Implementation",
+          "topics": [
+            "AM and FM modulation/demodulation using LabVIEW",
+            "Simulation of digital modulation schemes - ASK, PSK, FSK",
+            "Eye diagrams and constellation plots for digital signals",
+            "Error detection and correction - parity, CRC, Hamming code"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Instrumentation and Automation Applications",
+          "topics": [
+            "Real-time data logging and file handling (Excel/CSV)",
+            "PID controller design for automation and process control",
+            "Motor speed control using LabVIEW and DAQ",
+            "Signal visualization and user interface design"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Advanced Applications",
+          "topics": [
+            "Image processing using LabVIEW",
+            "Wireless communication using Bluetooth and Wi-Fi in LabVIEW",
+            "IoT integration - cloud-based monitoring and remote data access",
+            "Project-based learning"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "applications-of-lab-view-for-instrumentation-and-communications-jntuk-r23-ece-3-1",
+        "title": "LabVIEW for Instrumentation & Comms - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Applications of LabVIEW for Instrumentation & Communications: VIs, DAQ/signal processing, modulation, automation, IoT."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Skill Enhancement course; 0-1-2-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-design-of-pcb-and-antennas-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Design of PCB & Antennas Lab",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "In-house PCB prototype manufacturing on a CNC-based machine - etching, engraving and drilling",
+            "Converting simulation results into real-time electronic boards/projects; multi-material support (carbon fiber sheets, drone frames, acrylic, aluminium engraving)",
+            "Generation of an EM wave; impedance matching using Smith chart; phase and group velocity calculation",
+            "Radiation pattern of dipole, monopole and uniform linear array antennas",
+            "Measurement of radiation pattern of wired, aperture, planar, reflector and array antennas",
+            "Analysis of co-polarization and cross-polarization",
+            "Performance analysis of Yagi-Uda and Helix antennas",
+            "Radio wave propagation path loss calculations"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-of-pcb-and-antennas-lab-jntuk-r23-ece-3-1",
+        "title": "Design of PCB & Antennas Lab - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Design of PCB & Antennas Lab: CNC PCB prototyping scope plus antenna simulation experiments (radiation patterns, arrays, path loss)."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Engineering Science lab; 0-0-2-1 credits. Content covers CNC PCB-machine prototyping scope plus an antennas-lab experiment list, read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-1-evaluation-of-community-service-internship",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Evaluation of Community Service Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-community-service-internship-jntuk-r23-ece-3-1",
+        "title": "Community Service Internship - ECE 3-1",
+        "meta_description": "Tirumala R23 ECE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content anywhere in the source document. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-ece-3-2-vlsi-design",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "VLSI Design",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Basic Electrical Properties of MOS Circuits",
+          "topics": [
+            "VLSI design flow and introduction to IC technology; nMOS, pMOS and CMOS fabrication process",
+            "Ids-Vds relationships, MOS transistor threshold voltage, transconductance, output conductance and figure of merit",
+            "nMOS inverter and pull-up to pull-down ratio, alternative forms of pull-up, the CMOS inverter",
+            "Latch-up in CMOS circuits, Bi-CMOS inverter and comparison of CMOS with BiCMOS technology",
+            "MOS layers, stick diagrams, design rules and layout, layout diagrams for MOS circuits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Basic Circuit Concepts and Scaling",
+          "topics": [
+            "Sheet resistance and its application to MOS transistors and inverters",
+            "Area capacitance of layers, standard unit of capacitance and area capacitance calculations",
+            "Delay unit, inverter delays, driving large capacitive loads, propagation delays, wiring capacitances, choice of layers",
+            "Scaling models and scaling factors for device parameters; limitations of scaling",
+            "Limits due to sub-threshold currents and limits on logic levels/supply voltage due to noise and current density"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Basic Building Blocks of Analog IC Design",
+          "topics": [
+            "Regions of operation of MOSFET, modelling of the transistor and the body bias effect",
+            "Biasing styles for single-stage amplifiers with resistive load and diode-connected load",
+            "Common source, common drain and common gate amplifier configurations",
+            "Current sources and current sinks"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "CMOS Combinational and Sequential Logic Circuit Design",
+          "topics": [
+            "Static CMOS design: complementary CMOS, rationed logic, pass-transistor logic",
+            "Design of half adder, full adder, multiplexer and decoder using static CMOS logic",
+            "Dynamic CMOS design: basic principles, speed and power dissipation, issues in dynamic design, cascading dynamic gates",
+            "Sequential circuit design examples: cross-coupled NAND/NOR flip-flops, D flip-flop, SR/JK flip-flop, SR master-slave flip-flop"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "FPGA Design and Advanced Technologies",
+          "topics": [
+            "FPGA design flow, basic FPGA architecture, FPGA technologies and introduction to FPGA families",
+            "Giga-scale dilemma and short channel effects in advanced technologies",
+            "High-k metal gate technology",
+            "FinFET and TFET devices"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "vlsi-design-jntuk-r23-ece-3-2",
+        "title": "VLSI Design - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 VLSI Design: MOS fabrication and inverters, sheet resistance and scaling, analog building blocks, CMOS logic design, FPGA design."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-2-microprocessors-and-microcontrollers",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microprocessors & Microcontrollers",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and 8086 Architecture",
+          "topics": [
+            "Basic microprocessor architecture; Harvard and Von Neumann architectures with examples",
+            "Microprocessor unit versus microcontroller unit; history and classification of microprocessors and microcontrollers",
+            "8086 register organization and internal architecture, pin description of 8086",
+            "Minimum mode and maximum mode of 8086 operation and timing diagrams"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "8086 Programming",
+          "topics": [
+            "Instruction set, addressing modes and assembler directives",
+            "Programming with an assembler and writing simple programs with an assembler",
+            "Stack and stack structure",
+            "Interrupts and interrupt service routines of the 8086 system"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "8086 Interfacing",
+          "topics": [
+            "Semiconductor memory interfacing (RAM, ROM) and Intel 8255 programmable peripheral interface",
+            "Interfacing switches, LEDs and seven-segment displays",
+            "Intel 8251 USART architecture and interfacing, Intel 8237A DMA controller",
+            "Stepper motor, A/D and D/A converter interfacing, and need for the 8259 programmable interrupt controller"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Intel 8051 Microcontroller and Interfacing",
+          "topics": [
+            "8051 architecture, hardware concepts, I/O ports and circuits, external memory, counters/timers, serial data I/O, interrupts",
+            "Assembly language programming instructions, addressing modes and simple programs",
+            "Interfacing 8051 to A/D and D/A converters and a stepper motor",
+            "Interfacing 8051 to a keyboard, LCD, and traffic light control"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "ARM Architectures and Processors",
+          "topics": [
+            "Introduction to CISC and RISC architectures; ARM architecture and ARM processor families",
+            "ARM Cortex-M series family and ARM Cortex-M3 processor functional description",
+            "Instruction set summary, system address map, write buffer and bit-banding",
+            "Programmer's model: modes of operation and execution, stack pointer, exceptions and interrupt handling"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-jntuk-r23-ece-3-2",
+        "title": "Microprocessors & Microcontrollers - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, 8051 microcontroller, ARM Cortex-M3."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF (source heads this course \"MICROPROCESSOR AND MICROCONTROLLERS\")."
+    },
+    {
+      "id": "r23-ece-3-2-digital-signal-processing",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Digital Signal Processing",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Discrete-Time Signals, Systems and the z-Transform",
+          "topics": [
+            "Signals, systems and signal processing; discrete-time signals and systems, analysis of discrete-time LTI systems",
+            "Discrete-time systems described by difference equations, implementation of discrete-time systems, correlation of signals",
+            "Frequency analysis of continuous-time and discrete-time signals; frequency response of LTI systems",
+            "The z-transform and its properties, rational z-transforms, inversion of the z-transform, analysis of LTI systems in the z-domain, the one-sided z-transform"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Discrete Fourier Transform and FFT",
+          "topics": [
+            "Frequency domain sampling and the discrete Fourier transform (DFT) and its properties",
+            "Linear filtering methods based on the DFT; frequency analysis of signals using the DFT",
+            "Direct computation of the DFT",
+            "Radix-2 FFT algorithms for efficient DFT computation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Design of IIR Filters",
+          "topics": [
+            "IIR filter design by approximation of derivatives, impulse invariance, and the bilinear transformation",
+            "Frequency transformations in the analog and digital domains",
+            "Structures for IIR systems: direct form structures, signal flow graphs and transposed structures",
+            "Cascade form and parallel form structures for IIR systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Design of Digital Filters and FIR Systems",
+          "topics": [
+            "Causality and its implications; characteristics of practical frequency-selective filters",
+            "Symmetric and antisymmetric FIR filters; design of linear-phase FIR filters using windows",
+            "Design of linear-phase FIR filters by the frequency sampling method",
+            "Structures for the realization of discrete-time and FIR systems: direct form, cascade form and frequency sampling structures"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Programmable DSP Architectures",
+          "topics": [
+            "Multiplier and multiplier-accumulator, modified bus structures and memory access schemes in P-DSPs",
+            "Multiple access memory, multiported memory, VLIW architecture, pipelining, special addressing modes, on-chip peripherals",
+            "Architecture of TMS320C5X: bus structure, central arithmetic logic unit, auxiliary register ALU, index register",
+            "TMS320C5X memory-mapped registers, program controller, status register flags, on-chip memory/peripherals and assembly language instructions"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "digital-signal-processing-jntuk-r23-ece-3-2",
+        "title": "Digital Signal Processing - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 DSP: discrete-time signals and z-transform, DFT/FFT, IIR and FIR filter design, programmable DSP architectures."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-2-analog-ic-design",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Analog IC Design",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "MOS Devices and Modelling",
+          "topics": [
+            "The MOS transistor and passive components: capacitor and resistor, integrated circuit layout",
+            "CMOS device modelling: simple MOS large-signal model and other model parameters",
+            "Small-signal model for the MOS transistor",
+            "Computer simulation models and the sub-threshold MOS model"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Analog CMOS Sub-Circuits",
+          "topics": [
+            "MOS switch, MOS diode and MOS active resistor",
+            "Current sinks and sources",
+            "Current mirrors: current mirror with beta helper, degeneration, cascode current mirror and Wilson current mirror",
+            "Current and voltage references, band gap reference"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "CMOS Amplifiers",
+          "topics": [
+            "Inverters, differential amplifiers, cascode amplifiers, current amplifiers, output amplifiers, high-gain amplifier architectures",
+            "Design of CMOS op-amps and compensation of op-amps",
+            "Design of two-stage op-amps and power-supply rejection ratio of two-stage op-amps",
+            "Cascode op-amps and measurement techniques of op-amps"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Comparators",
+          "topics": [
+            "Characterization of the comparator",
+            "Two-stage, open-loop comparators",
+            "Other open-loop comparators and improving the performance of open-loop comparators",
+            "Discrete-time comparators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Oscillators and Phase-Locked Loops",
+          "topics": [
+            "General considerations for oscillators; ring oscillators and LC oscillators",
+            "Voltage-controlled oscillators",
+            "Simple PLL, charge pump PLLs and non-ideal effects in PLLs",
+            "Delay-locked loops and their applications"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-ic-design-jntuk-r23-ece-3-2",
+        "title": "Analog IC Design - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Analog IC Design: MOS device modelling, CMOS sub-circuits, CMOS amplifiers and op-amps, comparators, oscillators and PLLs."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 1 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-satellite-communication",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Satellite Communication",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction, Orbital Mechanics and Launchers",
+          "topics": [
+            "Origin and historical background of satellite communications; basic concepts and frequency allocations for satellite services",
+            "Applications and future trends of satellite communications",
+            "Orbital mechanics, look angle determination and orbital perturbations",
+            "Orbit determination, launches and launch vehicles; orbital effects on communication system performance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Satellite Subsystems",
+          "topics": [
+            "Attitude and orbit control system",
+            "Telemetry, tracking, command and monitoring system",
+            "Power systems, communication subsystems and satellite antennas",
+            "Equipment reliability and space qualification"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Satellite Link Design",
+          "topics": [
+            "Basic transmission theory and the link equation",
+            "C/N ratio, system noise temperature and G/T ratio",
+            "Design of down links and up links",
+            "Design of satellite links for a specified C/N; system design example"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Multiple Access and Earth Station Technology",
+          "topics": [
+            "Frequency Division Multiple Access (FDMA): intermodulation and calculation of C/N",
+            "Time Division Multiple Access (TDMA): frame structure and examples",
+            "Code Division Multiple Access (CDMA): spread spectrum transmission and reception",
+            "Earth station technology: basic architecture, transmitters, receivers, antennas, tracking systems, terrestrial interface, primary power test methods"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "LEO/GEO Systems and GNSS",
+          "topics": [
+            "Low earth orbit and geo-stationary satellite systems: orbit, coverage, frequency, delay and throughput considerations, operational NGSO constellation designs",
+            "Global Navigation Satellite System (GNSS) overview: GPS, GLONASS, GALILEO, BeiDou, QZSS, IRNSS",
+            "GPS location principle, navigation message, receiver operation and differential GPS",
+            "IRNSS satellites, constellation, configuration, services, navigation data and applications; multi-GNSS"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "satellite-communication-jntuk-r23-ece-3-2",
+        "title": "Satellite Communication - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Satellite Communication: orbital mechanics, satellite subsystems, link design, multiple access, earth stations, GNSS."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 2 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-smart-and-wireless-instrumentation",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Smart and Wireless Instrumentation",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Smart Instrumentation and WSN",
+          "topics": [
+            "Smart instrumentation: materials, automation systems, design and sensors; sensor classifications",
+            "Wireless sensor networks (WSN) and their history",
+            "Communication in a WSN",
+            "Design constraints of a WSN: energy, self-management, wireless networking, decentralized management and security"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Node Architecture",
+          "topics": [
+            "The sensing subsystem and analog-to-digital converter",
+            "The processor subsystem: architectural overview, microcontroller, digital signal processor, ASIC and FPGA, and their comparison",
+            "Communication interfaces: serial peripheral interface and inter-integrated circuit",
+            "The IMote, XYZ and Hogthrob node architectures"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Fundamentals of Wireless Digital Communication",
+          "topics": [
+            "Basic components and source encoding; efficiency of a source encoder",
+            "Pulse code modulation and delta modulation",
+            "Channel encoding, types of channels, information transmission over a channel, error recognition and correction",
+            "Modulation and modulation types including quadratic amplitude modulation; signal propagation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Wireless Communication Frequency and Power Sources",
+          "topics": [
+            "Development of a WSN based on a microcontroller and Zigbee communication device",
+            "Energy harvesting from solar and lead-acid batteries",
+            "RF energy harvesting and energy harvesting from vibration and thermal sources",
+            "Energy management techniques and calculation for battery selection"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Applications",
+          "topics": [
+            "Structural health monitoring: sensing seismic events and single/multiple damage detection using natural frequencies and mode shapes",
+            "Coherence and the piezoelectric effect; traffic control applications",
+            "Health care sensors and pipeline monitoring",
+            "Precision agriculture, active volcano monitoring and underground mining applications"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "smart-and-wireless-instrumentation-jntuk-r23-ece-3-2",
+        "title": "Smart & Wireless Instrumentation - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Smart & Wireless Instrumentation: WSN fundamentals, node architecture, wireless digital communication, power sources, applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 3 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-machine-learning",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Machine Learning",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Machine Learning",
+          "topics": [
+            "What is machine learning; traditional programming versus machine learning approach; history and evolution of ML",
+            "Paradigms for ML: supervised, unsupervised and reinforcement learning",
+            "Datatypes in ML: quantitative and qualitative data, nominal, ordinal, interval and ratio data; stages and challenges of ML",
+            "IDEs for ML programming (Jupyter, Spyder, PyCharm, Colab, VS Code) and basic packages: NumPy, SciPy, Pandas, Scikit-learn, Matplotlib, Seaborn"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Exploratory Data Analysis (EDA)",
+          "topics": [
+            "What EDA is and why it matters; univariate, bivariate and multivariate analysis",
+            "Data cleaning: data acquisition, dealing with duplicate data, missing values and outliers",
+            "Feature scaling and transformation, and dimensionality reduction with Principal Component Analysis (PCA)",
+            "Feature engineering with one-hot encoding, feature expansion with interactions/polynomials, and automatic feature selection"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Supervised Machine Learning",
+          "topics": [
+            "General architecture of supervised ML; classification versus regression",
+            "Classification algorithms: KNN, linear models, logistic regression, naive Bayes, decision trees",
+            "Ensemble learning: voting, bagging, pasting, random forests, AdaBoost, gradient boosting, stacking, support vector classifier and neural networks",
+            "Regression algorithms: K-neighbors, linear, ridge, lasso and polynomial regression, support vector regressor, decision tree and random forest regressor"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unsupervised Machine Learning",
+          "topics": [
+            "General architecture and challenges of unsupervised ML",
+            "Introduction to clustering; soft clustering versus hard clustering",
+            "K-Means clustering algorithm and centroid-based clustering",
+            "Divisive clustering, agglomerative clustering and DBSCAN"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Model Evaluation and Visualization",
+          "topics": [
+            "Evaluation metrics for classification: confusion matrices, accuracy, precision, recall, F1-score, precision-recall and ROC curves",
+            "Evaluation metrics for regression (R2, MSE, MAE, RMSE) and clustering (ARI, NMI)",
+            "Cross-validation in scikit-learn, stratified k-fold cross-validation, and grid search including randomized search",
+            "Visualization techniques: univariate (bar, box, count, density plots, histogram, pie plot), bivariate and multivariate (heat maps) analysis"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-learning-jntuk-r23-ece-3-2",
+        "title": "Machine Learning - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning: ML fundamentals, exploratory data analysis, supervised and unsupervised learning, model evaluation metrics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 4 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-bio-medical-instrumentation",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Bio-Medical Instrumentation",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Medical Instrumentation",
+          "topics": [
+            "Factors and basic objectives in the design of medical instrumentation systems; physiological systems of the human body",
+            "Sources of bioelectric potentials: resting and action potentials, propagation of action potentials",
+            "Electrode theory and bio-potential electrodes",
+            "Biochemical transducers and an introduction to bio-medical signals"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "The Cardiovascular System",
+          "topics": [
+            "The heart and cardiovascular system, blood pressure, characteristics of blood flow and heart sounds",
+            "Cardiovascular measurements: electrocardiography, measurement of blood pressure, blood flow and cardiac output, plethysmography",
+            "Event detection: PQRST waves in ECG, first and second heart beats, ECG rhythm analysis, dicrotic notch in the carotid pulse",
+            "Analysis of exercise ECG and event-related potentials; correlation analysis of EEG channels and muscular contraction"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Patient Care Monitoring and Respiratory Measurements",
+          "topics": [
+            "Elements of intensive care monitoring, diagnosis, calibration and repairability of patient monitoring equipment",
+            "Other instrumentation for monitoring patients: pacemakers and defibrillators",
+            "Physiology of the respiratory system",
+            "Tests and instrumentation for the mechanics of breathing, respiratory therapy equipment and analysis of respiration"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Bio-Telemetry and Clinical Laboratory Instrumentation",
+          "topics": [
+            "Introduction to bio-telemetry and physiological parameters adaptable to bio-telemetry",
+            "Components of a bio-telemetry system and implantable units",
+            "Applications of telemetry in patient care",
+            "Blood tests: tests on blood cells, chemical tests, and automation of chemical tests"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "X-ray, Radioisotope Instrumentation and Electrical Safety",
+          "topics": [
+            "Generation of ionizing radiation and instrumentation for diagnostic X-rays",
+            "Instrumentation for the medical use of radioisotopes and radiation therapy",
+            "Physiological effects of electrical current, shock hazards and methods of accident prevention",
+            "Modern imaging systems: tomography, MRI, ultrasonic imaging and medical thermography"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "bio-medical-instrumentation-jntuk-r23-ece-3-2",
+        "title": "Bio-Medical Instrumentation - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Bio-Medical Instrumentation: bioelectric potentials, cardiovascular measurement, patient monitoring, telemetry, X-ray/imaging."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 1 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-microwave-engineering",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microwave Engineering",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Microwave Transmission Lines",
+          "topics": [
+            "Microwave spectrum, bands and applications of microwaves",
+            "Rectangular waveguides: TE/TM mode analysis, field expressions, characteristic equation and cut-off frequencies, filter characteristics",
+            "Dominant and degenerate modes, mode characteristics (phase/group velocity, wavelength, impedance), power transmission and losses",
+            "Microstrip lines: Zo relations, effective dielectric constant, losses and Q factor"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Microwave Tubes",
+          "topics": [
+            "Limitations and losses of conventional tubes at microwave frequencies; O-type and M-type tube classifications",
+            "Two-cavity klystrons: structure, reentrant cavities, velocity modulation, Applegate diagram, bunching process and small-signal theory",
+            "Reflex klystrons: structure, Applegate diagram, mathematical theory of bunching, power output and efficiency",
+            "Electronic admittance, oscillating modes and output characteristics; electronic and mechanical tuning, applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Helix TWTs and M-Type Tubes",
+          "topics": [
+            "Slow wave structures: significance, types and characteristics",
+            "Structure of the TWT and the amplification process; suppression of oscillations",
+            "Nature of the four propagation constants and gain considerations",
+            "Magnetrons: cross-field effects, the 8-cavity cylindrical travelling wave magnetron, Hull cut-off and Hartree conditions, PI-mode operation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Waveguide Components and Applications",
+          "topics": [
+            "Coupling mechanisms (probe, loop, aperture) and waveguide discontinuities (irises, tuning screws, matched loads)",
+            "Waveguide attenuators (resistive card, rotary vane) and phase shifters (dielectric, rotary vane)",
+            "Scattering matrix formulation and S-matrix calculations for E-plane/H-plane tees, magic tee and hybrid ring",
+            "Directional couplers (2-hole, Bethe hole) and ferrite components: Faraday rotation, gyrator, isolator, circulator"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Microwave Solid-State Devices and Measurements",
+          "topics": [
+            "Classification and applications of microwave solid-state devices; TEDs and Gunn diode principle",
+            "RWH theory, Gunn diode characteristics and basic modes of oscillation",
+            "Description of the microwave test bench and its blocks",
+            "Microwave power measurement (bolometer method) and measurement of attenuation, frequency, Q-factor, phase shift, VSWR and impedance"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microwave-engineering-jntuk-r23-ece-3-2",
+        "title": "Microwave Engineering - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Microwave Engineering: waveguide transmission lines, microwave tubes, TWTs/magnetrons, waveguide components, solid-state devices."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 2 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-embedded-systems",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Embedded Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Embedded Systems",
+          "topics": [
+            "Embedded system definition, history, classification, application areas and purpose",
+            "The typical embedded system: core, memory, sensors and actuators, communication interface, embedded firmware, PCB and passive components",
+            "Characteristics and quality attributes of embedded systems; application-specific and domain-specific examples",
+            "Main processing elements of an embedded system; hardware and software partitions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Embedded Hardware Design",
+          "topics": [
+            "Analog and digital electronic components; I/O types and examples",
+            "Serial communication devices and parallel device ports",
+            "Wireless devices and timer/counting devices",
+            "Watchdog timer and real-time clock"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Embedded Firmware Design",
+          "topics": [
+            "Embedded firmware design approaches and development languages",
+            "ISR concept, interrupt sources and interrupt servicing mechanism, multiple interrupts",
+            "DMA and device driver programming",
+            "Concepts of C versus Embedded C, and compiler versus cross-compiler"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Real-Time Operating Systems and Co-Design",
+          "topics": [
+            "Operating system basics, types of operating systems, tasks/process/threads, multiprocessing and multitasking",
+            "Task scheduling, communication, synchronization, device drivers and how to choose an RTOS",
+            "Fundamental issues in hardware-software co-design and computational models in embedded design",
+            "Hardware-software trade-offs, integration of hardware and firmware, and in-circuit emulation (ICE)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Embedded System Development, Implementation and Testing",
+          "topics": [
+            "Integrated development environment; types of files generated on cross-compilation",
+            "Disassembler/de-compiler, simulators, emulators and debugging; target hardware debugging and boundary scan",
+            "Embedded software development process and tools; translation tools (pre-processors, interpreters, compilers, linkers)",
+            "Quality assurance and testing of the design; testing on host machine, simulators, laboratory tools, and built-in self-test"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "embedded-systems-jntuk-r23-ece-3-2",
+        "title": "Embedded Systems - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Embedded Systems: embedded hardware and firmware design, RTOS concepts, hardware-software co-design, development and testing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 3 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-artificial-intelligence",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Artificial Intelligence",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to AI and Search Techniques",
+          "topics": [
+            "The AI problem, underlying assumptions, AI techniques, level of the model and criteria for success",
+            "Defining problems as a state space search; production systems and their characteristics",
+            "Generate-and-test, hill climbing and best-first search",
+            "Problem reduction, constraint satisfaction and means-ends analysis"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Knowledge Representation",
+          "topics": [
+            "Representations and mappings; approaches to knowledge representation",
+            "Representing simple facts, instance and isa relationships using predicate logic",
+            "Computable functions and predicates, and resolution",
+            "Representing knowledge using rules: procedural versus declarative knowledge, logic programming, forward versus backward reasoning"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Reasoning Under Uncertainty",
+          "topics": [
+            "Introduction to non-monotonic reasoning and logics for non-monotonic reasoning",
+            "Probability and Bayes' theorem",
+            "Factors and rule-based systems",
+            "Bayesian networks and Dempster-Shafer theory"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Fuzzy Logic and Slot-and-Filler Structures",
+          "topics": [
+            "Fuzzy logic",
+            "Weak slot-and-filler structures: semantic nets and frames",
+            "Strong slot-and-filler structures: conceptual dependency and scripts",
+            "CYC knowledge base"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Game Playing, Planning, Understanding and Connectionist Models",
+          "topics": [
+            "Game playing: mini-max, alpha-beta cut-off, refinements and iterative deepening",
+            "Planning: the blocks world, components of a planning system, goal stack planning, hierarchical and reactive planning",
+            "Understanding as constraint satisfaction; natural language processing (syntactic, semantic, discourse and pragmatic processing, spell checking)",
+            "Connectionist models: Hopfield network, learning in neural networks, recurrent networks, distributed representations"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "artificial-intelligence-jntuk-r23-ece-3-2",
+        "title": "Artificial Intelligence - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 AI: state space and heuristic search, knowledge representation, reasoning under uncertainty, fuzzy logic, game playing, NLP."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 4 of 4."
+    },
+    {
+      "id": "r23-ece-3-2-vlsi-design-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "VLSI Design Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Design and implementation of an inverter",
+            "Design and implementation of universal gates",
+            "Design and implementation of a full adder and full subtractor",
+            "Design and implementation of an RS-latch and D-latch",
+            "Design and implementation of an asynchronous counter",
+            "Design and implementation of a static RAM cell",
+            "Design and implementation of a differential amplifier",
+            "Design and implementation of a ring oscillator"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "vlsi-design-lab-jntuk-r23-ece-3-2",
+        "title": "VLSI Design Lab - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 VLSI Design Lab: CMOS schematic and layout design of digital/analog circuits using EDA tools (Cadence/Synopsys/Tanner)."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "0-0-3-1.5 credits; experiment-based lab, single Experiments unit listed per instructions."
+    },
+    {
+      "id": "r23-ece-3-2-microprocessors-and-microcontrollers-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microprocessors & Microcontrollers Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "8086 assembly programs for 16-bit arithmetic operations using various addressing modes (BCD addition/subtraction, multiplication/division, array addition with overflow detection)",
+            "8086 programs for sorting an array and computing the factorial of n numbers",
+            "Interfacing ADC, DAC, stepper motor and seven-segment display to 8086",
+            "8051 assembly programs for counting number of 1s/0s in an 8-bit number, averaging n numbers, and timer/counter verification",
+            "Interfacing traffic light controller, UART, LCD, temperature sensor (LM35) and stepper motor to 8051",
+            "ARM Cortex-M3 (Keil MDK-ARM) assembly programs for 16-bit multiplication and sum of first 10 integers",
+            "ARM Cortex-M3 LED toggling using a timer interrupt and PWM signal generation",
+            "ARM Cortex-M3 analog signal measurement (ADC) and serial communication (UART) interfacing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-lab-jntuk-r23-ece-3-2",
+        "title": "Microprocessors & Microcontrollers Lab - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Microprocessors & Microcontrollers Lab: 8086 and 8051 assembly/interfacing experiments plus ARM Cortex-M3 programming."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "0-0-3-1.5 credits; experiment-based lab (Part A: 8086, Part B: 8051, Part C: ARM Cortex-M3), single Experiments unit listed per instructions."
+    },
+    {
+      "id": "r23-ece-3-2-machine-learning-lab",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Machine Learning Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals of Machine Learning and Linear Regression",
+          "topics": [
+            "Learning from experience, machine learning tasks, training/test data, performance measures, bias and variance",
+            "Introduction to scikit-learn: installation on Windows/Linux/OS X and installing pandas and matplotlib",
+            "Simple linear regression, cost functions, ordinary least squares and model evaluation",
+            "Multiple linear regression, polynomial regression, regularization, and fitting models with gradient descent"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Feature Extraction and Classification Metrics",
+          "topics": [
+            "Extracting features from categorical variables and from text (bag-of-words, stop-word filtering, stemming/lemmatization, TF-IDF, hashing trick)",
+            "Extracting features from images (pixel intensities, SIFT and SURF points of interest) and data standardization",
+            "Binary classification with logistic regression for spam filtering; accuracy, precision, recall, F1 measure and ROC AUC",
+            "Tuning models with grid search; multi-class and multi-label classification and their performance metrics"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Decision Trees and K-Means Clustering",
+          "topics": [
+            "Training decision trees, selecting questions, information gain and Gini impurity",
+            "Decision trees with scikit-learn, tree ensembles, and advantages/disadvantages of decision trees",
+            "Clustering with the K-Means algorithm, local optima and the elbow method",
+            "Evaluating clusters, image quantization, and clustering to learn features"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Principal Component Analysis",
+          "topics": [
+            "Overview of PCA and performing principal component analysis",
+            "Variance, covariance and covariance matrices",
+            "Eigenvectors and eigenvalues; dimensionality reduction with PCA",
+            "Using PCA to visualize high-dimensional data and face recognition with PCA"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Support Vector Machines and Neural Networks",
+          "topics": [
+            "Kernels and the kernel trick; maximum margin classification and support vectors",
+            "Classifying characters and handwritten digits in scikit-learn",
+            "Nonlinear decision boundaries; feed-forward and feedback artificial neural networks, multilayer perceptron",
+            "Minimizing the cost function via forward and back propagation; approximating XOR with a multilayer perceptron"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-learning-lab-jntuk-r23-ece-3-2",
+        "title": "Machine Learning Lab - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning Lab: scikit-learn basics, regression, feature extraction, classification, decision trees, PCA, SVM, neural nets."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "0-1-2-2 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-2-research-methodology-and-ipr",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Research Methodology and IPR",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Research Problem Formulation",
+          "topics": [
+            "Meaning and sources of a research problem",
+            "Criteria and characteristics of a good research problem; errors in selecting a research problem",
+            "Scope and objectives of a research problem; approaches to investigation of solutions",
+            "Data collection, analysis and interpretation; necessary instrumentation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Literature Review and Technical Writing",
+          "topics": [
+            "Effective literature study approaches and analysis",
+            "Plagiarism and research ethics",
+            "Effective technical writing; how to write a report and a paper",
+            "Developing a research proposal, format of a research proposal, presentation and assessment by a review committee"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Nature of Intellectual Property",
+          "topics": [
+            "Intellectual property: patents, designs, trademarks and copyright",
+            "Process of patenting and development: technological research, innovation, patenting, development",
+            "International scenario: international cooperation on intellectual property",
+            "Procedure for grant of patents; patenting under PCT"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Patent Rights",
+          "topics": [
+            "Scope of patent rights",
+            "Licensing and transfer of technology",
+            "Patent information and databases",
+            "Geographical indications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "New Developments in IPR",
+          "topics": [
+            "Administration of the patent system",
+            "New developments in IPR; IPR of biological systems and computer software",
+            "Traditional knowledge case studies",
+            "IPR and IITs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "research-methodology-and-ipr-jntuk-r23-ece-3-2",
+        "title": "Research Methodology and IPR - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2 Research Methodology and IPR (audit): research problem formulation, literature and ethics, patents, patent rights, IPR developments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '-' in the source). 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-ece-3-2-mandatory-industry-internship",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mandatory Industry Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mandatory-industry-internship-jntuk-r23-ece-3-2",
+        "title": "Mandatory Industry Internship - ECE 3-2",
+        "meta_description": "Tirumala R23 ECE 3-2: footnote entry for a mandatory 08-week industry internship during summer vacation; no detailed syllabus given."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship of 08 weeks duration during summer vacation' as a bare footnote row (no S.No., category, or L-T-P-C entry), not a numbered course row, and the source PDF gives no evaluation scheme, guidelines or unit content. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
     }
   ]
 }

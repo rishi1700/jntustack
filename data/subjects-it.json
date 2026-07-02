@@ -1449,6 +1449,364 @@
         "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
       },
       "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. This mirrors the same gap seen in the CSE and ECE Tirumala documents (a structural feature of how the college publishes these syllabi). Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-it-3-1-advanced-java",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Advanced Java",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "JDBC Programming",
+          "topics": [
+            "JDBC architecture and types of JDBC drivers",
+            "Introduction to major JDBC classes and interfaces; creating a simple JDBC application",
+            "Types of Statement (Statement interface, Prepared Statement, Callable Statement); exploring Result Set operations",
+            "Batch updates in JDBC; creating a CRUD application; using RowSet objects; managing database transactions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "J2EE and Web Development",
+          "topics": [
+            "J2EE architecture types and J2EE containers",
+            "Types of servers in a J2EE application",
+            "HTTP protocols and API; request processing in a web application",
+            "Web application structure, web containers and web architecture models"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Servlet API and Overview",
+          "topics": [
+            "Servlet introduction, Servlet Life Cycle (SLC), types of servlet",
+            "Servlet configuration with deployment descriptor; working with ServletContext and ServletConfig objects; attributes in servlets",
+            "Response and redirection using Request Dispatcher and sendRedirect method",
+            "Session tracking: cookies, HTTPSession, hidden form fields and URL rewriting; types of servlet events (context-level and session-level)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Java Server Pages (JSP)",
+          "topics": [
+            "Introduction to JSP and comparison with Servlet; JSP architecture and JSP life cycle",
+            "Scripting elements, directives, action tags, implicit objects",
+            "Expression Language (EL), JSP Standard Tag Libraries (JSTL), custom tags",
+            "Session management, exception handling, and a CRUD application"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Java Web Frameworks: Spring MVC",
+          "topics": [
+            "Spring introduction and architecture; Spring MVC module",
+            "Life cycle of a Bean Factory",
+            "Database transaction management",
+            "CRUD operations using DAO and Spring API"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-java-jntuk-r23-it-3-1",
+        "title": "Advanced Java - R23 IT 3-1",
+        "meta_description": "Tirumala R23 IT 3-1 Advanced Java: JDBC programming, J2EE & web development, Servlet API, JSP, and Spring MVC web frameworks."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-it-3-1-automata-theory-and-compiler-design",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Automata Theory & Compiler Design",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Regular Expressions, Languages and Finite Automata",
+          "topics": [
+            "Formal languages and the Chomsky hierarchy; regular expressions and regular languages; algebraic laws for regular expressions and their applications",
+            "Abstract model of a finite automaton; transition tables and transition graphs",
+            "Deterministic (DFA) and nondeterministic (NFA) finite automata; converting NFA to DFA",
+            "Finite automata with epsilon transitions (NFA-epsilon); converting NFA-epsilon to NFA/DFA; minimization of finite automata; equivalence of FA and regular expressions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Context Free Grammars and Push Down Automata",
+          "topics": [
+            "Context free grammars (CFG) and context free languages (CFL); design of CFGs",
+            "Leftmost and rightmost derivations, parse trees, applications of CFGs, ambiguity in grammars and languages",
+            "Push down automata (PDA) and the language of a PDA",
+            "Equivalence of PDAs and CFGs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Lexical Analysis and Top-Down Parsing",
+          "topics": [
+            "Structure of a compiler; role of the lexical analyzer; input buffering; specification and recognition of tokens",
+            "The lexical analyzer generator LEX",
+            "Introduction to syntax analysis; eliminating ambiguity and left recursion from a CFG",
+            "Recursive descent parsing; LL(1) grammars; nonrecursive predictive parsing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Bottom-Up Parsing and Syntax Directed Translation",
+          "topics": [
+            "Shift-reduce parsing, simple LR parsing, canonical LR(1) parsing, LALR parsing, parser generators",
+            "Syntax directed definitions and evaluation orders for SDDs",
+            "Syntax directed translation schemes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Intermediate Code Generation, Code Generation and Optimization",
+          "topics": [
+            "Three address code, types and declarations, translation of expressions, type checking, control flow",
+            "Issues in the design of a code generator; the target language; a simple code generator",
+            "Basic blocks and flow graphs; optimization of basic blocks; peephole optimization"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "automata-theory-and-compiler-design-jntuk-r23-it-3-1",
+        "title": "Automata Theory & Compiler Design - IT 3-1",
+        "meta_description": "Tirumala R23 IT 3-1 Automata Theory & Compiler Design: regular languages & FA, CFGs & PDAs, lexical/top-down/bottom-up parsing, code generation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-it-3-1-computer-networks",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Networks",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Physical Layer",
+          "topics": [
+            "Network types (LAN, MAN, WAN) and network topologies",
+            "Reference models: OSI reference model, TCP/IP reference model, comparison of OSI and TCP/IP, OSI vs TCP/IP",
+            "Physical layer: guided media (twisted-pair, coaxial and fiber optic cable)",
+            "Introduction to unguided media"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Link Layer",
+          "topics": [
+            "Design issues; framing (fixed size and variable size); flow control; error control; error detection and correction codes; CRC and checksum",
+            "Services provided to the network layer; elementary data link layer protocols (simplex protocol, simplex stop-and-wait, simplex protocol for a noisy channel)",
+            "Sliding window protocols: one bit, go-back-N, selective repeat, stop-and-wait",
+            "Data link layer in HDLC; Point-to-Point Protocol (PPP)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Media Access Control",
+          "topics": [
+            "Random access: ALOHA, CSMA, CSMA/CD, CSMA/CA",
+            "Controlled access: reservation, polling, token passing; channelization: FDMA, TDMA, CDMA",
+            "Wired LANs: Ethernet, Ethernet protocol, standard/fast/gigabit/10-gigabit Ethernet",
+            "Network layer design issues: store-and-forward packet switching, services to the transport layer, implementation of connectionless and connection-oriented service"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Network Layer and Internetworking",
+          "topics": [
+            "Routing algorithms: optimality principle, shortest path, flooding, distance vector, link state, hierarchical routing",
+            "Congestion control algorithms and congestion prevention policies; traffic control algorithms (leaky bucket, token bucket)",
+            "Internetworking: tunnelling, fragmentation; network layer in the internet",
+            "IP protocols: IPv4 header format, IP addresses, classful addressing, CIDR, subnets; IPv6 main header; transition from IPv4 to IPv6; comparison of IPv4 and IPv6"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transport and Application Layer",
+          "topics": [
+            "Transport layer protocols: services, port numbers, user datagram protocol (UDP) and UDP applications",
+            "Transmission Control Protocol (TCP): services and features",
+            "Application layer: World Wide Web (HTTP), electronic mail (architecture, web-based mail, email security)",
+            "TELNET (local vs remote logging), Domain Name System"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-networks-jntuk-r23-it-3-1",
+        "title": "Computer Networks - R23 IT 3-1",
+        "meta_description": "Tirumala R23 IT 3-1 Computer Networks: OSI/TCP-IP models, data link layer & MAC, network layer routing/IP, transport & application layer."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-it-3-1-data-warehousing-and-data-mining",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Data Warehousing & Data Mining",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Data Warehousing and Online Analytical Processing",
+          "topics": [
+            "Basic concepts; data warehouse modeling: data cube and OLAP; OLAP vs OLTP",
+            "Data warehouse design and usage; data warehouse implementation; cloud data warehouse",
+            "Data mining and pattern mining, KDD process, technologies, applications and major issues",
+            "Data objects and attribute types; basic statistical descriptions of data; data mining system architecture"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Preprocessing",
+          "topics": [
+            "Overview of data preprocessing",
+            "Data cleaning and data integration",
+            "Data reduction",
+            "Data transformation and data discretization; concept of hierarchy generation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Classification",
+          "topics": [
+            "Basic concepts and the general approach to solving a classification problem",
+            "Decision tree induction: attribute selection measures, tree pruning",
+            "Bayesian classification methods: Bayes theorem, Naive Bayes classification",
+            "Rule-based classification; model evaluation and selection"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Association Analysis",
+          "topics": [
+            "Problem definition and frequent itemset generation",
+            "Rule generation: confidence-based pruning, rule generation in the Apriori algorithm",
+            "Compact representation of frequent itemsets",
+            "FP-Growth algorithm"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Cluster Analysis",
+          "topics": [
+            "Overview, basics and importance of cluster analysis; different types of clusters",
+            "K-means: the basic K-means algorithm, additional issues, bisecting K-means",
+            "Agglomerative hierarchical clustering: basic agglomerative hierarchical clustering algorithm",
+            "DBSCAN: traditional density center-based approach, DBSCAN algorithm, strengths and weaknesses"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "data-warehousing-and-data-mining-jntuk-r23-it-3-1",
+        "title": "Data Warehousing & Data Mining - IT 3-1",
+        "meta_description": "Tirumala R23 IT 3-1 Data Warehousing & Data Mining: OLAP & data warehousing, preprocessing, classification, association analysis, cluster analysis."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+      },
+      "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     }
   ]
 }
