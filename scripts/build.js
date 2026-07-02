@@ -7,7 +7,7 @@ import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
 import { renderBranchHubPage } from '../templates/branch-hub.js';
-import { renderCollegeDirectoryPage, collegeDirectoryUniversitySummary } from '../templates/college-directory.js';
+import { renderCollegeDirectoryPage, collegeDirectoryUniversitySummary, campusesFromData } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
@@ -134,7 +134,7 @@ if (fs.existsSync(branchGuidePath)) {
   const verifiedProfiles = branch_profiles.filter(b => b.source.status === 'verified');
   if (verifiedProfiles.length === branch_profiles.length && verifiedProfiles.length > 0) {
     const html = layout({
-      title: 'Choosing a Branch? CSE vs ECE vs EEE vs Civil vs Mechanical vs IT - JNTUStack',
+      title: 'Choosing a Branch? A Six-Way Comparison - JNTUStack',
       description: 'An honest, no-fabricated-stats guide to picking an engineering branch -- core focus, real fit signals, and an optional 5-question narrowing quiz.',
       canonical: `${SITE_URL}/branch-guide/`,
       jsonLd: null,
@@ -152,20 +152,25 @@ if (fs.existsSync(branchGuidePath)) {
   }
 }
 
-// College directory: JNTUK colleges, a separate dataset, same verified-only
-// discipline as the branch guide -- the page is generated only if every record
-// is verified, so an unverified college can never reach dist/.
+// College directory: colleges across every JNTU campus present in the merged
+// data, same verified-only discipline as the branch guide -- the page is
+// generated only if every record is verified, so an unverified college can
+// never reach dist/.
 let collegesPublished = 0;
+// collegeUniversitySummary feeds the homepage teaser too, so that copy can
+// never go stale relative to what /colleges/ actually covers (see home.js).
+let collegeUniversitySummary = null;
 // Merged across every data/colleges-*.json -- drop in a new campus file and it
 // auto-loads, same glob convention as subjects-*.json (see lib/dataset.js).
 const { colleges: allColleges, coverageNotes } = loadMergedColleges(dataDir);
 if (allColleges.length > 0) {
   const verifiedColleges = allColleges.filter(c => c.source.status === 'verified');
   if (verifiedColleges.length === allColleges.length && verifiedColleges.length > 0) {
-    const universitySummary = collegeDirectoryUniversitySummary(verifiedColleges);
+    collegeUniversitySummary = collegeDirectoryUniversitySummary(verifiedColleges);
+    const campusCount = campusesFromData(verifiedColleges).length;
     const html = layout({
-      title: `${universitySummary} College Directory - Engineering Colleges - JNTUStack`,
-      description: `A directory of ${universitySummary} constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.`,
+      title: `JNTU Engineering College Directory - ${campusCount} Campuses - JNTUStack`,
+      description: `A directory of ${collegeUniversitySummary} constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.`,
       canonical: `${SITE_URL}/colleges/`,
       jsonLd: null,
       bodyHtml: renderCollegeDirectoryPage(verifiedColleges, coverageNotes),
@@ -196,8 +201,8 @@ for (const branch of data.branches) {
   }
   const code = branch.code.toLowerCase();
   const html = layout({
-    title: `${branch.name} (${branch.code}) Notes & Materials - JNTUK - JNTUStack`,
-    description: `Verified JNTUK ${branch.code} subject notes and previous question papers, grouped by year and semester.`,
+    title: `${branch.code} Notes & Materials - JNTUStack`,
+    description: `Verified ${branch.name} (${branch.code}) subject notes and previous question papers, grouped by year and semester.`,
     canonical: `${SITE_URL}/${code}/`,
     jsonLd: null,
     bodyHtml: renderBranchHubPage(branch, branchVerified),
@@ -214,11 +219,11 @@ for (const branch of data.branches) {
 // Homepage -- the most basic requirement of a live site, generated last so
 // it can honestly reflect what actually got published above.
 const homeHtml = layout({
-  title: 'JNTUStack - JNTU Materials, Branch Guide & College Directory',
+  title: 'JNTUStack - JNTU Notes, Branch Guide & College Directory',
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
   jsonLd: null,
-  bodyHtml: renderHomePage({ branches: navBranches }),
+  bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary }),
   navBranches,
   stamp: null,
 });

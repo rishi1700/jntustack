@@ -1,13 +1,16 @@
 import { escapeHtml } from './layout.js';
 
-export function renderHomePage({ branches = [] }) {
+export function renderHomePage({ branches = [], collegeUniversitySummary = null }) {
   // Hero: light-first, loud teal. Copy keeps the honest framing -- verified
   // before it ships, no scraped dumps.
+  const collegeDirectoryPhrase = collegeUniversitySummary
+    ? `a college directory covering ${collegeUniversitySummary}`
+    : 'a college directory';
   const hero = `
 <section class="home-hero">
   <span class="hero-badge">&#9679; Verified before it ships</span>
   <h1 class="hero-title">Course material you can <span class="text-brand">actually trust</span>.</h1>
-  <p class="hero-sub">A clean, fast resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and a JNTUK college directory. Built page by page, verified before it goes live, not scraped together.</p>
+  <p class="hero-sub">A clean, fast resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and ${escapeHtml(collegeDirectoryPhrase)}. Built page by page, verified before it goes live, not scraped together.</p>
   <div class="btn-row">
     <a class="btn-primary" href="/branch-guide/">Open the branch guide</a>
     <a class="btn-secondary" href="/colleges/">Browse colleges</a>
@@ -64,7 +67,7 @@ export function renderHomePage({ branches = [] }) {
     </a>
     <a class="home-cta-card" href="/colleges/">
       <h3>College directory</h3>
-      <p class="tagline">Constituent, autonomous, and affiliated colleges across JNTUK, JNTU-GV, and JNTUH, grouped by university and filterable by district.</p>
+      <p class="tagline">Constituent, autonomous, and affiliated colleges${collegeUniversitySummary ? ` across ${escapeHtml(collegeUniversitySummary)}` : ''}, grouped by university and filterable by district.</p>
       <span class="home-cta-go">Open the directory &rarr;</span>
     </a>
     <div class="home-cta-card home-cta-card--soon" aria-disabled="true">

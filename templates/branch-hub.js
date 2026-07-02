@@ -49,7 +49,7 @@ export function renderBranchHubPage(branch, subjects) {
 <div class="hub-head">
   <div>
     <h1 class="subject-title">${escapeHtml(branch.name || branch.code)}</h1>
-    <p class="guide-intro">Every verified JNTUK ${escapeHtml(branch.code)} subject currently live on JNTUStack, grouped by year and semester. This hub lists only pages that have been checked against an official source -- ${count} so far, with more added page by page, never dumped in unverified.</p>
+    <p class="guide-intro">Every verified ${escapeHtml(branch.code)} subject currently live on JNTUStack, grouped by year and semester. This hub lists only pages that have been checked against an official source -- ${count} so far, with more added page by page, never dumped in unverified.</p>
   </div>
   <div class="stat-chip"><b>${count}</b><span>VERIFIED<br>SUBJECT${count === 1 ? '' : 'S'}</span></div>
 </div>

@@ -29,7 +29,7 @@ const CAMPUS_META = {
 };
 const CAMPUS_ORDER = ['JNTUK', 'JNTUGV', 'JNTUH', 'JNTUA'];
 
-function campusesFromData(colleges) {
+export function campusesFromData(colleges) {
   const present = new Set(colleges.map((c) => c.affiliated_to));
   const ordered = CAMPUS_ORDER.filter((code) => present.has(code));
   // Any enum value present in the data but missing from CAMPUS_ORDER (should
