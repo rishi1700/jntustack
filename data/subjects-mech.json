@@ -1386,6 +1386,2129 @@
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
       "notes": "NEEDS VERIFICATION: the IV-semester course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation' but gives no credits, evaluation scheme or detailed guidelines. Mirrors the same gap seen in the Tirumala CSE/ECE/IT documents. Confirm credits and requirements before flipping to verified."
+    },
+    {
+      "id": "r23-mech-3-1-machine-tools-and-metrology",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME10",
+      "name": "Machine Tools and Metrology",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction, Fundamentals of Machining and Lathe Machines",
+          "topics": [
+            "Elementary treatment of metal cutting theory: elements of the cutting process, single point cutting tools, tool nomenclature and tool signature",
+            "Mechanism of metal cutting, types of chips, Taylor's tool life equation, simple problems",
+            "Introduction and types of lathes; engine lathe principle of working, construction and specification",
+            "Lathe accessories and attachments, lathe operations, taper turning methods and thread cutting, drilling on lathes"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Shaper, Slotter, Planar, Drilling and Boring Machines",
+          "topics": [
+            "Shaping, slotting and planning machines: introduction, principle of working, principal parts, specifications",
+            "Operations performed on shaping/slotting/planning machines; slider crank mechanism",
+            "Drilling machines: introduction, construction, types, principles of working, specifications, types of drills, operations performed",
+            "Boring machines and their types"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Milling Machines, Finishing Processes",
+          "topics": [
+            "Milling machines: introduction, principle of working, specifications, milling methods, classification of milling machines",
+            "Types of milling cutters and methods of indexing",
+            "Finishing processes: classification of grinding machines, types of abrasives and bonds, specification and selection of a grinding wheel",
+            "Lapping, honing and broaching operations, comparison to grinding"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Limits, Fits and Linear Measurement",
+          "topics": [
+            "Systems of limits and fits: types of fits, unilateral and bilateral tolerance systems, hole and shaft basis systems",
+            "Interchangeability and selective assembly, international standard system of tolerances, simple problems on limits and fits",
+            "Taylor's principle and design of go and no-go gauges: plug, ring, snap, gap, taper, profile and position gauges",
+            "Linear measurement: length standards, end standards, slip gauges and their calibration, dial indicators, micrometers"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Angular Measurement, Surface Roughness Measurement, Optical Measuring Instruments",
+          "topics": [
+            "Angular measurement: bevel protractor, angle slip gauges, angle dekkor, spirit levels, sine bar, sine table",
+            "Surface roughness measurement: differences between roughness and waviness, numerical assessment of surface finish, profilograph, Talysurf, ISI symbols",
+            "Optical measuring instruments: tool maker's microscope, autocollimators, optical projector",
+            "Optical flats and optical comparators: working principle, construction, merits, demerits and uses"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-tools-and-metrology-jntuk-r23-mech-3-1",
+        "title": "Machine Tools & Metrology - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Machine Tools & Metrology: lathe/cutting basics, shaper-drilling-boring, milling & finishing, limits & fits, angular/optical measurement."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME10, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-thermal-engineering",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME11",
+      "name": "Thermal Engineering",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "I.C. Engines, Combustion in I.C. Engines",
+          "topics": [
+            "IC engine components and nomenclature, classification of IC engines, ideal and actual working cycles",
+            "Working principles of 2-stroke and 4-stroke SI and CI engines; comparison of 2-stroke vs 4-stroke, and of CI vs SI engines",
+            "Valve timing and port timing diagrams, engine performance and testing parameters, heat balance test",
+            "Combustion in IC engines: normal and abnormal combustion, stages of combustion in SI and CI engines",
+            "Knocking and factors affecting knocking, octane number and cetane number, firing order"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Vapour Power Cycles, Boilers and Draught System",
+          "topics": [
+            "Vapour power cycles: Carnot vapour power cycle, Rankine cycle, actual vapour power cycle",
+            "Methods to improve efficiency of the Rankine cycle - reheating and regeneration; fuels used in steam power plants",
+            "Boilers: function and classification, fire tube boilers (Cochran, Cornish, Lancashire), water tube boilers (Babcock and Wilcox), comparison of fire and water tube boilers",
+            "High pressure boilers - Benson, Lamont and Loeffler boilers; mountings and accessories",
+            "Draught systems - natural and artificial draught"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Steam Nozzles, Steam Condensers",
+          "topics": [
+            "Steam nozzles: introduction, types of nozzle, flow through nozzles - thermodynamic analysis",
+            "Velocity of nozzle at exit, condition for maximum discharge, critical pressure ratio, ideal and actual expansion in a nozzle, velocity coefficient",
+            "Steam condensers: introduction, elements of a condenser plant",
+            "Types of condensers - jet condensers and surface condensers, their working principles and comparison, condenser performance parameters"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Steam Turbines, Gas Turbines and Jet Propulsion Systems",
+          "topics": [
+            "Steam turbines: introduction, classification, impulse turbine working principle",
+            "Velocity diagrams - effect of friction, power developed, axial thrust, blade/diagram efficiency, condition for maximum efficiency; De-Laval turbine features",
+            "Methods to reduce rotor speed - velocity compounding (Curtis turbine), pressure compounding (Rateau turbine), pressure and velocity compounding; reaction turbines - Parson's reaction turbine, degree of reaction, condition for maximum efficiency",
+            "Gas turbines: classification, working and applications, ideal and actual cycles, methods to improve performance - intercooling, reheating, regeneration",
+            "Jet propulsion systems: introduction, classification - turbojet, turbo propeller, rocket engines (theory only)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Compressors",
+          "topics": [
+            "Reciprocating compressors: introduction, classification, single/double/multistage compressors and their working principle",
+            "Power requirement of reciprocating compressors, volumetric efficiency, condition for maximum efficiency in a multistage compressor",
+            "Rotary, axial and centrifugal compressors: general classification, working principle of Root's, Vane's and Lysholm compressors",
+            "Axial and centrifugal compressors - surging and choking in compressors, their comparisons and applications (theory)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "thermal-engineering-jntuk-r23-mech-3-1",
+        "title": "Thermal Engineering - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Thermal Engineering: IC engines & combustion, vapour cycles & boilers, steam nozzles & condensers, steam/gas turbines, compressors."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME11, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-design-of-machine-elements",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME12",
+      "name": "Design of Machine Elements",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design, Design for Static and Dynamic Loads",
+          "topics": [
+            "Mechanical engineering design: classification of machine design, basic procedure of machine design, basic considerations of machine elements",
+            "Codes and standards for designation of materials, selection of materials",
+            "Design for static loads: modes of failure, factor of safety, theories of failure - maximum principal stress, maximum shear stress and distortion energy theories",
+            "Design of components subjected to axial, bending and torsional loads",
+            "Design for dynamic loads: stress concentration and stress concentration factors, notch sensitivity, fluctuating stresses, fatigue failure, endurance limit, S-N diagram, Soderberg and Goodman theories, design for infinite life"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design of Bolted and Welded Joints",
+          "topics": [
+            "Design of bolted joints: threaded fasteners, preload of bolts, various stresses induced in the bolts",
+            "Torque requirement for bolt tightening, gasketed joints",
+            "Design of welded joints: strength of lap and butt welds",
+            "Joints subjected to bending and torsion"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Power Transmission Shafts, Keys and Couplings",
+          "topics": [
+            "Power transmission shafts: shaft design on strength basis, shafts subjected to combined twisting moment and bending moment",
+            "Design of shafts carrying gears and pulleys with flat belts, design of shafts based on rigidity",
+            "Keys: types of keys, key failures by shear and compression, design of saddle and sunk keys",
+            "Couplings: types of couplings, design of flange and bushed pin couplings"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Design of Gears and Springs",
+          "topics": [
+            "Design of gears: introduction, spur gears, Lewis equation, beam strength of gear tooth",
+            "Design of spur gears - design for dynamic and wear loads",
+            "Design of springs: types of springs",
+            "Design of helical compression, tension and leaf springs"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design of Bearings",
+          "topics": [
+            "Design of journal bearings: types of journal bearings, theory of lubrication, selection of bearing modulus from design tables, Mc Kee's equation",
+            "Heat generation and heat dissipation of bearings, bearing materials, journal bearing design, bearing failures",
+            "Design of ball bearings: static load carrying capacity, dynamic load carrying capacity, load factors, equivalent bearing load",
+            "Selection of bearing life, design for cyclic loads and speeds, selection of bearings from manufacturer's catalogue"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-of-machine-elements-jntuk-r23-mech-3-1",
+        "title": "Design of Machine Elements - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Design of Machine Elements: static/dynamic load design, bolted & welded joints, shafts/keys/couplings, gears & springs, bearings."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME12, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-design-for-manufacturing",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME13",
+      "name": "Design for Manufacturing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design for Manufacturing",
+          "topics": [
+            "Introduction to DFM and DFMA: how DFMA works, reasons for not implementing DFMA",
+            "Advantages of applying DFMA during product design, typical DFMA case studies, overall impact of DFMA on industry",
+            "Design for manual assembly: general design guidelines for manual assembly, development of the systematic DFA methodology",
+            "Assembly efficiency, effect of part symmetry, thickness and weight on handling time",
+            "Effects of combinations of factors and application of the DFA methodology"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Considerations of Machine Parts",
+          "topics": [
+            "Overview of various machining processes, general design rules for machining dimensional tolerance and surface roughness",
+            "Design for machining ease, redesigning of components for machining ease with suitable examples",
+            "General design recommendations for machined parts"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Design Aspects of Casting and Extrusion Processes",
+          "topics": [
+            "Metal casting: appraisal of various casting processes, selection of casting process, general design considerations for casting",
+            "Casting tolerance, use of solidification simulation in casting design, product design rules for sand casting",
+            "Extrusion and sheet metal work: design guidelines, extruded sections",
+            "Design principles for punching, blanking, bending and deep drawing, Keeler Goodman forging line diagram, component design for blanking"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Design Considerations of Metal Joining Processes",
+          "topics": [
+            "Metal joining: appraisal of various welding processes, factors in the design of weldments, general design guidelines",
+            "Pre- and post-treatment of welds, effects of thermal stresses in weld joints, design of brazed joints",
+            "Forging: design factors for forging, closed die forging design, parting lines of dies, drop forging die design, general design recommendations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Designing for Assembly Automation and Design for Additive Manufacturing",
+          "topics": [
+            "Design for assembly automation: fundamentals of automated assembly systems, system configurations, parts delivery system at workstations",
+            "Escapement and placement devices used in automated assembly systems, quantitative analysis of assembly systems, multi-station and single-station assembly lines",
+            "Design for additive manufacturing: introduction to AM, DFMA concepts and objectives, AM unique capabilities, exploring design freedoms",
+            "Design tools for AM: part orientation, removal of supports, hollowing out parts, inclusion of undercuts and other manufacturing constraining features",
+            "Interlocking features, reduction of part count in an assembly, identification of markings/numbers"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-for-manufacturing-jntuk-r23-mech-3-1",
+        "title": "Design for Manufacturing - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Design for Manufacturing: DFM/DFMA & manual assembly, machining design, casting & extrusion, metal joining, assembly automation & AM."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-I option 1 of 4. Course code 23ME13, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-conventional-and-futuristic-vehicle-technology",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME14",
+      "name": "Conventional and Futuristic Vehicle Technology",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Advanced Engine Technology",
+          "topics": [
+            "Gasoline direct injection, common rail direct injection, variable compression ratio turbocharged engines",
+            "Electric turbochargers, VVT (variable valve timing), intelligent cylinder de-activation",
+            "After treatment technologies, electric EGR, current EMS architecture"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Combustion Technology",
+          "topics": [
+            "Spark ignition combustion, compression ignition combustion, conventional dual fuel combustion",
+            "Low temperature combustion concepts - controlled auto ignition, homogeneous charge compression ignition, premixed charge compression ignition",
+            "Partially premixed compression ignition, reactivity controlled compression ignition, gasoline direct injection compression ignition"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Low Carbon Fuel Technology",
+          "topics": [
+            "Alcohol fuels, ammonia fuel and combustion",
+            "Methane technology, dimethyl ether",
+            "Hydrogen fuel technology, challenges and way forward"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Hybrid and Electric Vehicle (Battery Powered)",
+          "topics": [
+            "Conventional hybrids (conventional ICE + battery)",
+            "Modern hybrids (RCCI/GDCI engine + battery)",
+            "Pure electric vehicle technology - challenges and way forward"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Fuel Cell Technology",
+          "topics": [
+            "Fuel cells for automotive applications, technology advances in fuel cell vehicle systems",
+            "Onboard hydrogen storage - liquid hydrogen and compressed hydrogen, metal hydrides",
+            "Fuel cell control system, alkaline fuel cell",
+            "Road map to market"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "conventional-and-futuristic-vehicle-technology-jntuk-r23-mech-3-1",
+        "title": "Conventional & Futuristic Vehicle Tech - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Conventional & Futuristic Vehicle Technology: advanced engines, combustion tech, low carbon fuels, hybrid/electric vehicles, fuel cells."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-I option 2 of 4. Course code 23ME14, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-micro-electro-mechanical-systems",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME15",
+      "name": "Micro Electro Mechanical Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction, Mechanical Sensors and Actuators",
+          "topics": [
+            "Definition of MEMS, MEMS history and development, micro machining, lithography principles and methods",
+            "Structural and sacrificial materials, thin film deposition, impurity doping, etching, surface micro machining, wafer bonding, LIGA",
+            "Mechanical sensors and actuators: principles of sensing and actuation - beam and cantilever, capacitive, piezo-electric, strain, pressure, flow",
+            "Pressure measurement by microphone, MEMS gyroscopes, shear mode and gripping piezo actuators, inchworm technology"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Thermal Sensors and Actuators",
+          "topics": [
+            "Thermal energy basics and heat transfer processes, thermistors, thermo devices, thermocouple, micro machined thermocouple probe",
+            "Peltier effect heat pumps, thermal flow sensors, micro hot plate gas sensors, MEMS thermo vessels, pyro electricity",
+            "Shape memory alloys (SMA), U-shaped horizontal and vertical electro thermal actuator",
+            "Thermally activated MEMS relay, micro spring thermal actuator, data storage cantilever"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Micro-Opto-Electro Mechanical Systems, Magnetic Sensors and Actuators",
+          "topics": [
+            "Micro-opto-electro mechanical systems: principle of MOEMS technology, properties of light, light modulators, beam splitter, micro lens, micro mirrors",
+            "Digital micro mirror device (DMD), light detectors, grating light valve (GLV), optical switch, wave guide and tuning, shear stress measurement",
+            "Magnetic sensors and actuators: magnetic materials for MEMS and properties, magnetic sensing and detection, magneto resistive sensor, hall effect",
+            "Magneto diodes, magneto transistor, MEMS magnetic sensor, pressure sensor utilizing MOKE, mag MEMS actuators",
+            "Bi-directional micro actuator, feedback circuit integrated magnetic actuator, large force reluctance actuator, magnetic probe based storage device"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Micro Fluidic Systems, Radio Frequency (RF) MEMS",
+          "topics": [
+            "Micro fluidic systems: applications, considerations on micro scale fluid, fluid actuation methods",
+            "Dielectrophoresis (DEP), electrowetting, electrothermal flow, thermocapillary effect, electro osmosis flow, opto electro wetting (OEW)",
+            "Tuning using microfluidics, typical microfluidic channel, micro fluid dispenser, micro needle, molecular gate, micro pumps",
+            "RF MEMS: RF-based communication systems, MEMS inductors, tuner/filter, resonator, MEMS switches, phase shifter"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Chemical and Bio Medical Micro Systems",
+          "topics": [
+            "Chemical and bio medical micro systems: sensing mechanism and principle, membrane-transducer materials",
+            "Chem-lab-on-a-chip (CLOC), chemo-resistors, chemo-capacitors, chemo-transistors",
+            "Electronic nose (E-nose), mass sensitive chemo-sensors",
+            "Fluorescence detection, calorimetric spectroscopy"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "micro-electro-mechanical-systems-jntuk-r23-mech-3-1",
+        "title": "Micro Electro Mechanical Systems - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 MEMS: MEMS basics & mechanical sensors, thermal actuators, MOEMS & magnetic sensors, microfluidics & RF MEMS, bio-chemical microsystems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-I option 3 of 4. Course code 23ME15, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-industrial-robotics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME16",
+      "name": "Industrial Robotics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Robot Anatomy",
+          "topics": [
+            "Automation and robotics, CAD/CAM and robotics, overview of robotics - present and future applications",
+            "Classification by coordinate system and control system",
+            "Components of industrial robotics: robot anatomy, work volume, components, number of degrees of freedom",
+            "Robot drive systems, function line diagram representation of robot arms, common types of arms",
+            "Requirements and challenges of end effectors, determination of the end effectors"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Robot Actuators and Feedback Components",
+          "topics": [
+            "Actuators: pneumatic, hydraulic actuators, electric and stepper motors",
+            "Comparison of electric, hydraulic and pneumatic types of actuation devices",
+            "Feedback components: position sensors - potentiometers, resolvers, encoders",
+            "Velocity sensors"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Manipulator Kinematics",
+          "topics": [
+            "Motion analysis: homogeneous transformations as applicable to rotation and translation, problems",
+            "Manipulator kinematics: specifications of matrices, D-H notation",
+            "Joint coordinates and world coordinates",
+            "Forward and inverse kinematics, problems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "General Considerations in Path Description and Generation",
+          "topics": [
+            "Trajectory planning and avoidance of obstacles, path planning",
+            "Skew motion, joint interpolated motion, straight line motion",
+            "Robot programming, languages and software packages",
+            "Description of paths with a robot programming language"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Image Processing and Machine Vision",
+          "topics": [
+            "Introduction to machine vision",
+            "Sensing and digitizing function in machine vision",
+            "Training and vision system",
+            "Robotic applications"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "industrial-robotics-jntuk-r23-mech-3-1",
+        "title": "Industrial Robotics - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Industrial Robotics: robot anatomy, actuators & feedback, manipulator kinematics, path planning & programming, machine vision."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-I option 4 of 4. Course code 23ME16, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-thermal-engineering-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME58",
+      "name": "Thermal Engineering Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Study of valve and port timing diagrams of diesel and petrol engines",
+            "Test on a single cylinder 4-stroke diesel engine using a mechanical dynamometer",
+            "Evaluation of engine friction power by conducting a Morse test on a multi-cylinder diesel engine",
+            "Heat balance of a 4-stroke single cylinder diesel engine",
+            "Performance test on a reciprocating air compressor",
+            "Determination of COP of a vapour compression refrigeration unit",
+            "Performance test on an air conditioning unit",
+            "Measurement of exhaust emissions and smoke of a diesel engine"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "thermal-engineering-lab-jntuk-r23-mech-3-1",
+        "title": "Thermal Engineering Lab - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Thermal Engineering Lab: IC engine timing & performance tests, Morse test, heat balance, air compressor, refrigeration/AC tests."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME58). Any 10 of 14 listed experiments covering IC engine valve/port timing, single/twin-cylinder diesel and 2-stroke petrol engine performance, Morse test, heat balance, reciprocating air compressor, VCR unit COP, air conditioning, emissions/smoke, combustion analysis, solar PV cell installation and VCR-engine testing. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-theory-of-machines-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23ME59",
+      "name": "Theory of Machines Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Determination of gyroscopic couple on a motorized gyroscope",
+            "Determination of centrifugal forces and characteristic curves of Watt, Porter, Proell and Hartnell governors",
+            "Study of cam jump phenomenon of various cams and followers",
+            "Dynamic balancing of a given rotor system using the force polygon and couple polygon",
+            "Balancing of reciprocating masses on a slider crank mechanism",
+            "Determination of whirling speed of a rotating shaft with various boundary conditions",
+            "Determination of natural frequency of spring-mass damped/undamped systems and of torsional vibrations of a single rotor system",
+            "Verification of Dunkerley's formula for transverse vibrations of beams with different end conditions"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "theory-of-machines-lab-jntuk-r23-mech-3-1",
+        "title": "Theory of Machines Lab - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Theory of Machines Lab: gyroscopic couple, governor curves, cam jump, rotor/reciprocating balancing, whirling speed, vibrations."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5, course code 23ME59). At least 10 of 14 listed experiments covering gyroscopic couple, Watt/Porter/Proell/Hartnell governor characteristic curves, cam jump phenomenon, dynamic balancing of rotors and reciprocating masses, whirling speed of shafts, natural frequency of spring-mass and torsional-vibration systems, Dunkerley's formula, damped/undamped forced vibrations, and gear types and mechanisms/inversions. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-machine-tools-and-metrology-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23MES2",
+      "name": "Machine Tools and Metrology Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 4,
+        "C": 2
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Part A: Machine Tools Lab",
+          "topics": [
+            "Introduction to general purpose machines - lathe, drilling machine, milling machine, shaper, planing machine, slotting machine, cylindrical grinder, surface grinder, tool and cutter grinder",
+            "Operations on lathe machines - step turning, knurling, taper turning, thread cutting and drilling",
+            "Operations on drilling machine - drilling, reaming, tapping, rectangular drilling and circumferential drilling",
+            "Operations on shaping machine - round to square, round to hexagonal",
+            "Operations on slotter - keyway (T-slot), keyway cutting",
+            "Operations on milling machines - indexing, gear manufacturing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Part B: Metrology Lab",
+          "topics": [
+            "Calibration of vernier calipers, micrometers, vernier height gauge and dial gauges",
+            "Measurement of bores by internal micrometers and dial bore indicators",
+            "Use of gear tooth vernier caliper for tooth thickness inspection and flange micrometer for checking chordal thickness of spur gears",
+            "Machine tool alignment tests on the lathe, drilling machine and milling machine",
+            "Angle and taper measurements with bevel protractor, sine bar, rollers and balls",
+            "Use of a spirit level in finding the straightness of a bed and the flatness of a surface",
+            "Thread inspection with the two-wire/three-wire method and tool maker's microscope",
+            "Surface roughness measurement with a roughness measuring instrument by Talysurf"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-tools-and-metrology-lab-jntuk-r23-mech-3-1",
+        "title": "Machine Tools & Metrology Lab - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Machine Tools & Metrology Lab: lathe/drilling/shaper/slotter/milling operations plus calibration, bore, alignment, angle & roughness tests."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill Enhancement lab (0-0-4-2, course code 23MES2). Part A (machine tools, at least 5 experiments): general-purpose machine familiarization plus lathe, drilling, shaping, slotting and milling operations. Part B (metrology, at least 5 experiments): instrument calibration, bore/angle/taper/thread measurement, machine tool alignment tests and surface roughness measurement. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-tinkering-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": "23EM01",
+      "name": "Tinkering Lab",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Making parallel and series circuits using a breadboard for an application of choice, and demonstrating a traffic light circuit",
+            "Building and demonstrating an automatic street light using an LDR",
+            "Simulating an Arduino LED blinking activity in Tinkercad and building it using the Arduino IDE",
+            "Interfacing an IR sensor and a servo motor with Arduino",
+            "Blinking an LED and interfacing an LDR using ESP32; controlling an LED using a mobile app",
+            "Designing and 3D printing a walking robot and a rocket",
+            "Building a live soil moisture monitoring project and monitoring soil moisture levels of a remote plant on a computer dashboard",
+            "Demonstrating the steps in design thinking to redesign a motor bike"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "tinkering-lab-jntuk-r23-mech-3-1",
+        "title": "Tinkering Lab - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Tinkering Lab: breadboard circuits, Arduino/ESP32 LED & sensor interfacing, 3D-printed robot/rocket, soil moisture monitoring."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Engineering Science lab. The V semester course-structure table lists 23EM01 as 0-0-2-1 credits, while the detail-page header in the source PDF shows 0-0-3-1.5 -- a known PDF formatting inconsistency -- so the structure-table value (0-0-2-1) is used here. Hands-on experiments on breadboard circuits, LDR/IR/servo interfacing, Arduino IDE and ESP32 programming, 3D printing and a soil-moisture monitoring dashboard, drawn from the 13-item experiment list. Read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-1-evaluation-of-community-service-internship",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Evaluation of Community Service Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-community-service-internship-jntuk-r23-mech-3-1",
+        "title": "Community Service Internship - MECH 3-1",
+        "meta_description": "LBRCE R23 MECH 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "needs_verification",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "NEEDS VERIFICATION: the V semester course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content in the source PDF. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-mech-3-2-heat-transfer",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME17",
+      "name": "Heat Transfer",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction & One-Dimensional Steady State Conduction",
+          "topics": [
+            "Modes of heat transfer, basic laws and governing equations, applications, and steady, unsteady and periodic heat transfer",
+            "Heat conduction: Fourier's equation, thermal conductivity, general heat conduction equation in Cartesian, cylindrical and spherical coordinates, initial and boundary conditions",
+            "One-dimensional heat flow through plane walls and cylinders with constant thermal conductivity; electrical analogy, thermal resistance, overall heat transfer coefficient",
+            "Heat flow through composite wall and cylinder; critical radius of insulation for cylinder and sphere"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Steady State Conduction with Variable k & Transient Conduction",
+          "topics": [
+            "Heat flow through plane wall and cylinder with variable thermal conductivity; uniform internal heat generation in slabs and cylinders",
+            "Extended surfaces: analysis of long fin and short fin with insulated tip; fin efficiency and effectiveness",
+            "One-dimensional transient heat conduction: systems with negligible internal resistance, lumped heat analysis for planes, cylinders and sphere",
+            "Significance of Biot and Fourier numbers; systems with finite surface and internal resistance using Heisler chart for planes"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Forced and Natural Convection",
+          "topics": [
+            "Forced convection: convective heat transfer coefficient, significance of non-dimensional numbers, boundary layer concept, velocity and thermal boundary layer",
+            "External flow: laminar and turbulent flow over a flat plate; internal flow through a circular pipe (laminar and turbulent), entry length and fully developed flow, Reynolds-Colburn analogy",
+            "Natural convection: development of hydrodynamic and thermal boundary layer along a vertical plate",
+            "Empirical correlations for vertical plate, vertical cylinder, horizontal plate and horizontal cylinder"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Thermal Radiation, Boiling and Condensation",
+          "topics": [
+            "Thermal radiation: nature of thermal radiation, emissive power, absorption, reflection and transmission, concept of black body, laws of black body radiation",
+            "Radiation from non-black surfaces: emissivity, Kirchhoff's law, radiation heat exchange between two black isothermal surfaces, shape factor, exchange between non-black infinite parallel plates",
+            "Boiling heat transfer: pool boiling, boiling regimes, critical heat flux",
+            "Condensation: film-wise and drop-wise condensation, laminar film-wise condensation on a vertical plate"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Heat Exchangers",
+          "topics": [
+            "Classification of heat exchangers, flow arrangement, temperature distribution, overall heat transfer coefficient, fouling factor",
+            "LMTD method of heat exchanger analysis for parallel, counter and cross flow heat exchangers",
+            "Effectiveness-NTU method of heat exchanger analysis for parallel and counter flow heat exchangers",
+            "Applications of heat exchangers"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "heat-transfer-jntuk-r23-mech-3-2",
+        "title": "Heat Transfer - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Heat Transfer: conduction & Biot/Fourier, forced & natural convection, radiation, boiling/condensation, heat exchangers."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME17, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-artificial-intelligence-and-machine-learning",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME18",
+      "name": "Artificial Intelligence and Machine Learning",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Artificial Intelligence",
+          "topics": [
+            "Definition of artificial intelligence, evolution, need, and applications in the real world",
+            "Intelligent agents, agents and environments; good behaviour, concept of rationality, nature of environments, structure of agents",
+            "Knowledge representation and reasoning: logical agents, knowledge-based agents, the Wumpus world, logic",
+            "Patterns in propositional logic; inference in first-order logic, propositional vs first-order inference, unification"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Introduction to Machine Learning & Supervised Learning",
+          "topics": [
+            "Introduction to machine learning: definition, evolution, need, applications of ML in industry and the real world",
+            "Regression and classification problems, performance metrics, differences between supervised and unsupervised learning, bias, variance, overfitting and underfitting",
+            "Supervised learning: linear regression, logistic regression, distance-based methods, nearest-neighbours",
+            "Decision trees, support vector machines, nonlinearity and kernel methods"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unsupervised, Bayesian and Computational Learning",
+          "topics": [
+            "Unsupervised learning: clustering, K-means, dimensionality reduction, PCA and kernel methods",
+            "Bayesian and computational learning: Bayes theorem, concept learning",
+            "Maximum likelihood of normal, binomial, exponential and Poisson distributions; minimum description length principle",
+            "Naive Bayes classifier; instance-based learning, K-nearest neighbour learning"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Neural Networks and Genetic Algorithms",
+          "topics": [
+            "Neural network representation and problems; perceptron, multilayer networks and backpropagation, steepest descent method",
+            "Convolutional neural networks and their applications; recurrent neural networks and their applications",
+            "Local vs global optima",
+            "Genetic algorithms: binary coded GA, operators, convergence criteria"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Deep Learning and ML Algorithm Analytics",
+          "topics": [
+            "Deep learning: deep generative models, deep Boltzmann machines, deep auto-encoders, applications of deep networks",
+            "Machine learning algorithm analytics: evaluating machine learning algorithms, model selection",
+            "Ensemble methods: boosting, bagging and random forests"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "artificial-intelligence-and-machine-learning-jntuk-r23-mech-3-2",
+        "title": "AI & Machine Learning - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 AI & ML: AI foundations, supervised & unsupervised learning, Bayesian learning, neural nets & GA, deep learning analytics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME18, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-finite-element-methods",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME19",
+      "name": "Finite Element Methods",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to FEM & One-Dimensional Problems",
+          "topics": [
+            "Introduction to finite element method: advantages and disadvantages, applications, stress and equilibrium, strain-displacement relations, stress-strain relations",
+            "Plane stress and plane strain conditions; potential energy approach",
+            "One-dimensional problem: bar element formulation, discretization of domain, element shapes, discretization procedures",
+            "Assembly of global stiffness matrix, node numbering, mesh generation, interpolation functions, local and global coordinates, convergence requirements, boundary conditions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Analysis of Trusses",
+          "topics": [
+            "Finite element modeling of trusses; coordinates and shape functions",
+            "Assembly of global stiffness matrix and load vector; finite element equations",
+            "Treatment of boundary conditions",
+            "Stress, strain and support reaction calculations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Analysis of Beams",
+          "topics": [
+            "Element stiffness matrix for the Hermite beam element",
+            "Derivation of the load vector for concentrated load and UDL",
+            "Simple problems on beams"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Constant Strain Triangle & Axisymmetric Loading",
+          "topics": [
+            "Constant strain triangle: finite element modelling of two-dimensional stress analysis with constant strain triangles and treatment of boundary conditions",
+            "Axisymmetric loading: finite element modelling of axisymmetric solids subjected to axisymmetric loading with triangular elements",
+            "Two-dimensional four-noded isoparametric elements",
+            "Problems with isoparametric formulation of four-noded quadrilateral elements"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Steady State Heat Transfer & Dynamic Analysis",
+          "topics": [
+            "Steady state heat transfer analysis: heat conduction in plane walls, one-dimensional analysis of a fin",
+            "Dynamic analysis: formulation of finite element model, lumped and consistent mass matrices",
+            "Evaluation of eigenvalues and eigenvectors for a bar and beams",
+            "Free vibration analysis"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "finite-element-methods-jntuk-r23-mech-3-2",
+        "title": "Finite Element Methods - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Finite Element Methods: 1-D bar elements, truss & beam analysis, CST & axisymmetric elements, heat transfer & dynamic analysis."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Course code 23ME19, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-mechanical-vibrations",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME20",
+      "name": "Mechanical Vibrations",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction & Single Degree of Freedom Undamped Systems",
+          "topics": [
+            "Relevance of and need for vibrational analysis; basics of simple harmonic motion (SHM)",
+            "Mathematical modelling of vibrating systems; discrete and continuous systems",
+            "Governing equation of single degree of freedom systems for undamped systems",
+            "Free and forced vibrations"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Single Degree of Freedom Damped Systems",
+          "topics": [
+            "Introduction, types of damping",
+            "Free vibrations with viscous damping: over-damped, critically damped and under-damped systems",
+            "Damping ratio, logarithmic decrement",
+            "Viscous dampers, slosh dampers"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Multi-Degree of Freedom Systems",
+          "topics": [
+            "Free and forced vibrations of multi-degree-of-freedom systems in longitudinal, torsional and lateral modes",
+            "Matrix methods of solution, normal modes, orthogonality principle",
+            "Energy methods, eigenvalues and eigenvectors",
+            "Modal analysis"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Vibrations in Continuous Systems",
+          "topics": [
+            "Torsional vibrations, longitudinal vibration of rods, transverse vibrations of beams",
+            "Governing equations of motion, natural frequencies and normal modes",
+            "Energy methods",
+            "Introduction to non-linear and random vibrations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Vibration Measurement and Critical Speeds of Shafts",
+          "topics": [
+            "Vibration measuring instruments: vibrometers, accelerometer, frequency measuring instruments and problems",
+            "Critical speed of a light shaft having a single disc without damping",
+            "Critical speed of a light shaft having a single disc with damping"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mechanical-vibrations-jntuk-r23-mech-3-2",
+        "title": "Mechanical Vibrations - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Mechanical Vibrations: SDOF undamped & damped systems, multi-DOF systems, continuous system vibrations, measurement & critical speeds."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-II option 1 of 4. Course code 23ME20, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-advanced-manufacturing-processes",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME21",
+      "name": "Advanced Manufacturing Processes",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Advanced Machining Processes",
+          "topics": [
+            "Need for advanced machining processes",
+            "Abrasive jet machining (AJM), water jet machining (WJM), electric discharge machining (EDM) and wire-EDM",
+            "Electrochemical machining (ECM), laser beam machining (LBM), electron beam machining (EBM) and plasma arc machining (PAM)",
+            "Principle, working, advantages, limitations, process parameters, capabilities and applications of each process"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Additive Manufacturing",
+          "topics": [
+            "Working principles and methods of additive manufacturing",
+            "Stereolithography, laser engineered net shaping (LENS), laminated object manufacturing (LOM)",
+            "Laser sintering, fused deposition method, 3D printing",
+            "Applications and limitations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Surface Treatment",
+          "topics": [
+            "Scope of surface treatment, cleaners and methods of cleaning, surface coating types",
+            "Electroforming, chemical vapour deposition, physical vapour deposition, thermal spraying methods",
+            "Ion implantation, diffusion coating, ceramic and organic methods of coating, cladding methods",
+            "Industrial applications for surface treatment of materials"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Processing of Composites and Nanomaterials",
+          "topics": [
+            "Processing of composites: composite layers, particulate and fibre reinforced composites, elastomers, reinforced plastics",
+            "Processing methods for MMC, CMC and polymer matrix composites",
+            "Processing of nanomaterials: top-down vs bottom-up techniques, ball milling, lithography",
+            "Plasma arc discharge, pulsed laser deposition, sputtering, sol-gel"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Fabrication of Microelectronic Devices",
+          "topics": [
+            "Crystal growth and wafer preparation",
+            "Film deposition, oxidation, lithography",
+            "Bonding and packaging, reliability and yield",
+            "Printed circuit boards"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-manufacturing-processes-jntuk-r23-mech-3-2",
+        "title": "Advanced Manufacturing Processes - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Adv. Manufacturing: advanced machining, additive manufacturing, surface treatment, composites/nanomaterials, microelectronics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-II option 2 of 4. Course code 23ME21, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-renewable-energy-technologies",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME22",
+      "name": "Renewable Energy Technologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Solar Radiation",
+          "topics": [
+            "Role and potential of new and renewable sources; the solar energy option; environmental impact of solar power",
+            "Structure of the sun, the solar constant, sun-earth relationships, coordinate systems and coordinates of the sun",
+            "Extraterrestrial and terrestrial solar radiation, solar radiation on a tilted surface",
+            "Instruments for measuring solar radiation and sunshine, solar radiation data"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Solar PV Modules and PV Systems",
+          "topics": [
+            "PV module circuit diagram, module structure, packing density, interconnections, mismatch and temperature effects",
+            "Electrical and mechanical insulation, lifetime of PV modules, degradation and failure, PV module parameters, efficiency of PV module",
+            "Solar PV systems, battery operation, types of batteries, battery parameters",
+            "Application and selection of batteries for solar PV systems"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Solar Energy Collection, Storage and Applications",
+          "topics": [
+            "Solar energy collection: flat plate and concentrating collectors, classification of concentrating collectors, orientation",
+            "Solar energy storage: different methods, sensible, latent heat and stratified storage, solar ponds",
+            "Solar applications: solar heating/cooling technique, solar distillation and drying, solar cookers",
+            "Central power tower concept and solar chimney"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Wind Energy and Biomass",
+          "topics": [
+            "Wind energy: sources and potentials, horizontal and vertical axis windmills, performance characteristics",
+            "Betz's criteria, types of winds, wind data measurement",
+            "Biomass: principles of bio-conversion, anaerobic/aerobic digestion",
+            "Types of bio-gas digesters, gas yield, gasifiers, applications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Geothermal, Ocean and Green Energy",
+          "topics": [
+            "Geothermal energy: origin, applications, types of geothermal resources, geothermal power generation, relative merits and demerits",
+            "Ocean energy: ocean thermal energy, open cycle and closed cycle OTEC plants, environmental impacts, challenges and applications",
+            "Green energy: fuel cells, applications, classification, different types (phosphoric acid, alkaline, PEM, MC fuel cells)",
+            "Hydrogen: zero energy concepts, benefits, production technologies (electrolysis method), storage, applications and associated problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "renewable-energy-technologies-jntuk-r23-mech-3-2",
+        "title": "Renewable Energy Technologies - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Renewable Energy Tech: solar radiation & PV, solar collection/storage, wind & biomass, geothermal/ocean/fuel cells."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-II option 3 of 4. Course code 23ME22, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-sensors-and-instrumentation",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME23",
+      "name": "Sensors and Instrumentation",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Basics of measurement, classification of errors, error analysis",
+            "Static and dynamic characteristics of transducers",
+            "Performance measures of sensors, classification of sensors",
+            "Sensor calibration techniques, sensor output signal types"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Motion, Proximity and Ranging Sensors",
+          "topics": [
+            "Motion sensors: potentiometers, resolver, encoders (optical, magnetic, inductive, capacitive)",
+            "LVDT, RVDT, synchro, microsyn, accelerometer, GPS, Bluetooth",
+            "Range sensors: RF beacons, ultrasonic ranging, reflective beacons",
+            "Laser range sensor (LIDAR)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Force, Magnetic and Heading Sensors",
+          "topics": [
+            "Strain gage, load cell",
+            "Magnetic sensors: types, principle, requirement and advantages of magneto-resistive, Hall effect and current sensors",
+            "Heading sensors: compass, gyroscope, inclinometers"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Optical, Pressure and Temperature Sensors",
+          "topics": [
+            "Optical sensors: photoconductive cell, photovoltaic, photoresistive, LDR, fibre optic sensors",
+            "Pressure sensors: diaphragm, bellows, piezoelectric, tactile sensors",
+            "Temperature sensors: IC, thermistor, RTD, thermocouple",
+            "Acoustic sensors for flow and level measurement; radiation sensors; smart sensors, film sensor, MEMS & nano sensors, LASER sensors"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Signal Conditioning and DAQ Systems",
+          "topics": [
+            "Amplification, filtering, sample and hold circuits",
+            "Data acquisition: single channel and multi-channel data acquisition, data logging",
+            "Applications: automobile, aerospace, home appliances, manufacturing, environmental monitoring"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "sensors-and-instrumentation-jntuk-r23-mech-3-2",
+        "title": "Sensors and Instrumentation - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Sensors & Instrumentation: measurement basics, motion/range sensors, force/magnetic/heading sensors, optical/pressure/temp sensors, DAQ."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-II option 4 of 4. Course code 23ME23, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-energy-storage-technologies",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME24",
+      "name": "Energy Storage Technologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Energy Storage Systems Overview",
+          "topics": [
+            "Scope of energy storage, needs and opportunities, technology overview and key disciplines",
+            "Comparison of time scale of storage and applications; energy storage in the power and transportation sectors",
+            "Importance of energy storage systems in electric vehicles, current electric vehicle market",
+            "Thermal storage systems: heat pumps, hot water storage tank, solar thermal collector, phase change materials, efficiencies and economic evaluation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Chemical and Electromagnetic Storage Systems",
+          "topics": [
+            "Chemical storage system: hydrogen, methane, etc.; concept of chemical storage of solar energy",
+            "Applications, advantages, limitations, challenges and future prospects of chemical energy storage",
+            "Electromagnetic storage systems: double layer capacitors with electrostatic charge storage, superconducting magnetic energy storage (SMES)",
+            "Concepts, advantages, limitations and future prospects of electromagnetic/electrochemical storage systems"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Electrochemical Storage System",
+          "topics": [
+            "Batteries: working principle of a battery, primary and secondary (flow) batteries",
+            "Battery performance evaluation methods",
+            "Major battery chemistries and their voltages: Li-ion battery, metal hydride battery vs lead-acid battery"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Super Capacitors and Fuel Cells",
+          "topics": [
+            "Super capacitors: working principle, types of super capacitors, cycling and performance characteristics",
+            "Difference between battery and super capacitors; introduction to hybrid electrochemical super capacitors",
+            "Fuel cell: operational principle, types of fuel cells",
+            "Hybrid fuel cell-battery systems and hybrid fuel cell-super capacitor systems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Battery Design for Transportation",
+          "topics": [
+            "Mechanical design and packaging of battery packs for electric vehicles",
+            "Advanced battery-assisted quick charger for electric vehicles; charging optimization methods for lithium-ion batteries",
+            "Thermal runaway and thermal management of battery systems",
+            "State of charge and state of health estimation over the battery lifespan; recycling of batteries from electric vehicles"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "energy-storage-technologies-jntuk-r23-mech-3-2",
+        "title": "Energy Storage Technologies - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Energy Storage Tech: storage overview, chemical/electromagnetic storage, electrochemical storage, super capacitors/fuel cells, EV batteries."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-III option 1 of 4. Course code 23ME24, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-industrial-hydraulics-and-pneumatics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME25",
+      "name": "Industrial Hydraulics and Pneumatics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fluid Power",
+          "topics": [
+            "Power transmission modes: hydraulic systems, pneumatic systems",
+            "Laws governing fluid flow: Pascal's law, continuity equation, Bernoulli's theorem, Boyle's, Charles' and Gay-Lussac's laws",
+            "Flow through pipes: types, pressure drop in pipes",
+            "Working fluids used in hydraulic and pneumatic systems: types, ISO/BIS standards and designations, properties"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Hydraulic and Pneumatic Elements",
+          "topics": [
+            "Hydraulic pipes: types, standards, designation methods, specifications, pressure ratings, applications and selection criteria; pumping theory",
+            "Hydraulic pumps: types, construction, working principle, applications, selection criteria and comparison; hydraulic actuators, control valves and accessories",
+            "Pneumatic pipes: materials, designations, standards, properties and piping layout; air compressors, air receivers, air dryers",
+            "Air filters, regulators, lubricators (FRL unit): types, construction, working, specifications and selection criteria; pneumatic actuators and control valves"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hydraulic and Pneumatic Circuits",
+          "topics": [
+            "ISO symbols used in hydraulic and pneumatic circuits",
+            "Basic hydraulic circuits: intensifier, regenerative, synchronizing, sequencing, speed control, safety circuits - diagram, components, working and applications",
+            "Basic pneumatic circuits: speed control, two-step feed control, automatic cylinder reciprocation, time delay, quick exhaust - diagram, components, working and applications",
+            "Pneumatic logic circuit design: classic method, cascade method, step counter method, Karnaugh-Veitch maps and combinational circuit design"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Hydraulic and Pneumatic Devices",
+          "topics": [
+            "Concept, applications, construction, working principle, major elements and performance variables of hydraulic and pneumatic devices",
+            "Automotive hydraulic brake, industrial forklift, hydraulic jack, hydraulic press, automotive power steering",
+            "Automotive pneumatic brake, automotive air suspension, pneumatic drill, pneumatic gun"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Installation, Maintenance and Trouble-Shooting",
+          "topics": [
+            "Installation of hydraulic and pneumatic systems",
+            "Causes and remedies for common troubles arising in hydraulic elements; maintenance of hydraulic systems",
+            "Causes and remedies for troubles arising in pneumatic elements; maintenance of pneumatic systems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "industrial-hydraulics-and-pneumatics-jntuk-r23-mech-3-2",
+        "title": "Industrial Hydraulics & Pneumatics - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Industrial Hydraulics & Pneumatics: fluid power, hydraulic/pneumatic elements, circuits, devices, installation & maintenance."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-III option 2 of 4. Course code 23ME25, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-non-destructive-evaluation",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME26",
+      "name": "Non-Destructive Evaluation",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Non-Destructive Testing",
+          "topics": [
+            "Span of NDE activities: railways, nuclear, non-nuclear and chemical industries, aircraft and aerospace industries, automotive industries",
+            "Offshore gas and petroleum projects, coal mining industry, NDE of pressure vessels, castings, welded constructions",
+            "Radiographic test: sources of X and gamma rays and their interaction with matter, radiographic equipment",
+            "Radiographic techniques, safety aspects of industrial radiography, neutron ray radiography"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ultrasonic Test",
+          "topics": [
+            "Principle of wave propagation: reflection, refraction, diffraction, mode conversion and attenuation, sound field, piezoelectric effect",
+            "Ultrasonic transducers and their characteristics",
+            "Ultrasonic equipment and variables affecting ultrasonic test",
+            "Ultrasonic testing, interpretations and guidelines for acceptance/rejection, effectiveness and limitations of ultrasonic testing"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Liquid Penetrant and Eddy Current Test",
+          "topics": [
+            "Liquid penetrant test: basic concepts, liquid penetrant system, test procedure, effectiveness",
+            "DPI, FPI, limitations of liquid penetrant testing",
+            "Eddy current test: principle of eddy current, eddy current test system",
+            "Applications and effectiveness of eddy current testing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Magnetic Particle Test",
+          "topics": [
+            "Magnetic materials, magnetization and demagnetization of materials",
+            "Principle of magnetic particle test, magnetic particle test equipment",
+            "Magnetic particle test procedure, standardization and calibration",
+            "Interpretation and evaluation, effective applications and limitations of the magnetic particle test"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Infrared and Thermal Testing",
+          "topics": [
+            "Introduction and fundamentals to infrared and thermal testing; heat transfer, active and passive techniques, lock-in and pulse thermography, tomography",
+            "Contact and non-contact thermal inspection methods; heat sensitive paints and papers, thermally quenched phosphors, liquid crystals and other coatings",
+            "Inspection methods, infrared radiation and infrared detectors, thermo-mechanical behaviour of materials",
+            "IR imaging in aerospace applications, electronic components, honeycomb and sandwich structures; case studies"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "non-destructive-evaluation-jntuk-r23-mech-3-2",
+        "title": "Non-Destructive Evaluation - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 NDE: NDE intro & radiography, ultrasonic test, liquid penetrant & eddy current, magnetic particle test, infrared/thermal testing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-III option 3 of 4. Course code 23ME26, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-refrigeration-and-air-conditioning",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME27",
+      "name": "Refrigeration and Air Conditioning",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals of Refrigeration",
+          "topics": [
+            "Introduction: necessity and applications, unit of refrigeration and COP, heat engine, refrigerator and heat pump, types of refrigeration systems and applications",
+            "Refrigerants: classification, desirable properties, nomenclature, commonly used refrigerants, alternate refrigerants",
+            "Greenhouse effect, global warming and ozone layer depletion, global warming potential",
+            "Air refrigeration system: working on reversed Carnot cycle and Bell-Coleman cycle, COP, open and dense air systems, applications"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Vapour Compression Refrigeration System",
+          "topics": [
+            "Working principle, simple vapour compression refrigeration cycle, COP, representation of cycle on T-s and P-h charts",
+            "Effect of sub-cooling and superheating; actual vapour compression cycle and its applications",
+            "VCR system components: compressors, condensers, evaporators (classification and working), expansion devices (types and working)",
+            "Introduction to cryogenics: Joule-Thomson expansion, refrigerant mixtures, multi-stage vapour compression refrigeration"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Vapour Absorption and Non-Conventional Refrigeration Systems",
+          "topics": [
+            "Vapour absorption refrigeration system: description and working of aqua-ammonia system, calculation of maximum COP",
+            "Lithium bromide-water system, principle of operation of three-fluid absorption systems, applications",
+            "Steam jet refrigeration system: principle of working, analysis, applications",
+            "Non-conventional refrigeration systems: thermoelectric refrigeration, vortex tube refrigeration, adiabatic demagnetization refrigeration"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Psychrometry and Human Comfort",
+          "topics": [
+            "Psychrometry: introduction, psychrometric properties and relations, psychrometric chart",
+            "Psychrometric processes: sensible, latent and total heat, sensible heat factor and bypass factor",
+            "Human comfort: thermodynamics of the human body, effective temperature, comfort chart"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Air Conditioning Systems",
+          "topics": [
+            "Introduction, components of an air conditioning system, classification of air conditioning systems, filters, grills and registers, fans and blowers",
+            "Central and unitary systems, packaged air conditioning systems, summer/winter/year-round systems, comfort and industrial air conditioning requirements, cooling load estimation",
+            "Design of air conditioning systems: summer air conditioning, ADP, system with ventilated and re-circulated air with and without bypass factor",
+            "RSHF, GSHF and ESHF, infiltration design conditions"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "refrigeration-and-air-conditioning-jntuk-r23-mech-3-2",
+        "title": "Refrigeration & Air Conditioning - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Refrigeration & AC: refrigeration fundamentals, VCR system, vapour absorption systems, psychrometry & comfort, AC system design."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Program Elective-III option 4 of 4. Course code 23ME27, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-heat-transfer-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME60",
+      "name": "Heat Transfer Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Determine the thermal conductivity of a lagged pipe, a concentric sphere and a metal rod",
+            "Test on a pin-fin apparatus to find efficiency and effectiveness",
+            "Determine the heat transfer rate in transient heat conduction",
+            "Find the heat transfer coefficient in forced convection and natural convection apparatus",
+            "Determine the LMTD and effectiveness in parallel and counter flow heat exchangers",
+            "Find the emissivity of a grey surface",
+            "Compare the rate of heat transfer in different pipe materials; evaluate the thermal conductivity of liquids"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "heat-transfer-lab-jntuk-r23-mech-3-2",
+        "title": "Heat Transfer Lab - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Heat Transfer Lab: thermal conductivity, fin efficiency, transient conduction, convection coefficients, heat exchanger LMTD, emissivity."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of Experiments (12 total, at least 10 to be conducted) read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-artificial-intelligence-and-machine-learning-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23ME61",
+      "name": "Artificial Intelligence and Machine Learning Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Learn Python libraries for ML - NumPy, Pandas, Matplotlib, Seaborn and TensorFlow - with numerical examples",
+            "Data preprocessing and data cleaning using Python",
+            "Implement linear regression and logistic regression",
+            "Implement an artificial neural network (ANN)",
+            "Implement a convolutional neural network (CNN) and a recurrent neural network (RNN)",
+            "Build a decision tree and a Naive Bayes classifier",
+            "Implement a support vector machine (SVM) and an auto-encoder"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "artificial-intelligence-and-machine-learning-lab-jntuk-r23-mech-3-2",
+        "title": "AI & ML Lab - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 AI & ML Lab: Python ML libraries, data preprocessing, regression, ANN/CNN/RNN, decision tree & Naive Bayes, SVM & auto-encoder."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core lab (0-0-3-1.5). List of Experiments (12 total) read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-robotics-and-drone-technologies-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23MES3",
+      "name": "Robotics and Drone Technologies Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 4,
+        "C": 2
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Simulate the mathematical model of a robot; forward and inverse dynamic analysis of a 2-DOF robotic manipulator using software tools",
+            "Build and program a simple Arduino-based robot for basic movement, maze navigation and obstacle avoidance",
+            "Construct a robotic arm using servo or stepper motors to pick objects, sort by colour and draw shapes; build a line-following robot",
+            "Design a 3D model of a robotic arm and grippers using software; implement a PID controller for a robotic arm or mobile robot",
+            "Demonstrate the parts, functions and control mechanisms (roll, pitch, yaw) of a drone",
+            "Demonstrate the sensors and battery management used in drones",
+            "Build a prototype drone to record videos and photos, and a drone to carry a given payload"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "robotics-and-drone-technologies-lab-jntuk-r23-mech-3-2",
+        "title": "Robotics & Drone Tech Lab - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Robotics & Drone Lab: robot modelling & Arduino robots, arm/line-following robots, PID control, drone parts, sensors, prototypes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill Enhancement lab (0-0-4-2). List of Experiments across robotics and drone technologies read from the source PDF."
+    },
+    {
+      "id": "r23-mech-3-2-technical-paper-writing-and-ipr",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": "23MC04",
+      "name": "Technical Paper Writing and IPR",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Planning and Preparation",
+          "topics": [
+            "Planning and preparation, word order, breaking up long sentences",
+            "Structuring paragraphs and sentences, being concise and removing redundancy, avoiding ambiguity and vagueness",
+            "Clarifying who did what, highlighting findings, hedging and criticizing, paraphrasing and plagiarism",
+            "Sections of a paper: abstracts, introduction"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Literature Review",
+          "topics": [
+            "Review of the literature, methods, results, discussion, conclusions, the final check",
+            "Key skills needed when writing a title, abstract, introduction, review of the literature, methods, results, discussion and conclusions",
+            "Useful phrases",
+            "How to ensure a paper is as good as it could possibly be for first-time submission"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Process and Development",
+          "topics": [
+            "Nature of intellectual property: patents, designs, trade and copyright",
+            "Process of patenting and development: technological research, innovation, patenting, development",
+            "International scenario: international cooperation on intellectual property",
+            "Procedure for grant of patents; patenting under PCT"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Patent Rights",
+          "topics": [
+            "Scope of patent rights",
+            "Licensing and transfer of technology",
+            "Patent information and databases",
+            "Geographical indications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "New Developments in IPR",
+          "topics": [
+            "New developments in IPR: administration of the patent system",
+            "IPR of biological systems, computer software, etc.",
+            "Traditional knowledge case studies"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "technical-paper-writing-and-ipr-jntuk-r23-mech-3-2",
+        "title": "Technical Paper Writing & IPR - MECH 3-2",
+        "meta_description": "LBRCE R23 MECH 3-2 Technical Paper Writing & IPR: paper planning, literature review, patenting process, patent rights, new developments in IPR."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
+        "retrieved_date": "2026-07-02",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Audit course - no credit (L-T-P-C 2-0-0-0 as shown in the source). 5-unit syllabus read from the source PDF."
     }
   ]
 }
