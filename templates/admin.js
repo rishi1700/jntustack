@@ -1163,6 +1163,14 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 </form>
 ${renderReleaseReviewSummary(reviewSummary)}
 
+<h2>Apply plan</h2>
+${release.status === 'ready_for_review' ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/apply-plan">
+  <strong>Generate apply plan</strong>
+  <div class="admin-sub">Writes a final human-reviewable plan under tmp/release-apply-plans only. NOT APPLIED and NOT PUBLISHED.</div>
+  <button type="submit"${reviewSummary?.has_blocking_warnings ? ' disabled' : ''}>Generate apply plan</button>
+  ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary warnings exist.</div>' : ''}
+</form>` : '<div class="notice">Apply plans can only be generated after the release candidate reaches ready_for_review.</div>'}
+
 <h2>Add approved proposal</h2>
 ${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/items">
   <label for="proposal_id"><strong>Approved proposal</strong></label>
@@ -1187,6 +1195,50 @@ ${items.length ? items.map(item => {
   return `<tr><td><a href="/admin/proposals/${escapeHtml(item.proposalId)}">Proposal ${escapeHtml(item.proposalId)}</a></td><td>${escapeHtml(item.proposal?.entityType || '')}<br><span class="mono">${escapeHtml(item.proposal?.entityKey || '')}</span></td><td><span class="pill">${escapeHtml(item.proposal?.status || '')}</span></td><td><span class="pill">${escapeHtml(item.proposal?.validationStatus || '')}</span></td><td>${actions.exportAction}</td><td>${actions.draftAction}</td><td>${actions.revisionAction}</td><td>${actions.removeAction}</td></tr>`;
 }).join('') : `<tr><td colspan="8">${emptyState('No proposals in this release', 'Add approved_for_draft proposals before marking the release ready for review.')}</td></tr>`}
 </tbody></table></div>`,
+  });
+}
+
+export function renderReleaseApplyPlanDetailPage({ plan }) {
+  const warnings = plan.final_warnings || [];
+  const changes = plan.changes || [];
+  return adminShell({
+    title: `Release apply plan ${plan.release_candidate_id}`,
+    active: 'release_candidates',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Dashboard' },
+      { href: '/admin/release-candidates', label: 'Releases' },
+      { href: `/admin/release-candidates/${escapeHtml(plan.release_candidate_id)}`, label: `Release ${plan.release_candidate_id}` },
+      { label: 'Apply plan' },
+    ],
+    body: `
+<div class="admin-top"><div><h1>Release apply plan ${escapeHtml(plan.release_candidate_id)}</h1><div class="admin-sub">NOT APPLIED / NOT PUBLISHED. Review artifact only.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('release')}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
+  <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
+  <div class="metric"><div class="metric-label">Warnings</div><div class="metric-value ${warnings.length ? 'status-bad' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
+  <div class="metric"><div class="metric-label">Generated</div><div class="metric-value" style="font-size:15px;">${escapeHtml(plan.generated_at || '')}</div></div>
+</section>
+<div class="notice" style="margin-top:14px;">This apply plan only writes review files under <span class="mono">${escapeHtml(plan.plan_path)}</span>. It does not write live data/*.json, modify dist/, deploy, publish, or mark content verified.</div>
+
+<h2>Ordered file changes</h2>
+<div class="table-wrap"><table><thead><tr><th>Order</th><th>File</th><th>Operation</th><th>Entity</th><th>Proposal</th><th>Revision</th></tr></thead><tbody>
+${plan.ordered_file_changes?.length ? plan.ordered_file_changes.map(change => `<tr><td>${escapeHtml(change.order)}</td><td class="mono">${escapeHtml(change.file)}</td><td><span class="pill">${escapeHtml(change.operation)}</span></td><td>${escapeHtml(change.entity_type)}<br><span class="mono">${escapeHtml(change.entity_key)}</span></td><td><a href="/admin/proposals/${escapeHtml(change.proposal_id)}">${escapeHtml(change.proposal_id)}</a></td><td>${change.revision_id ? `<a href="/admin/revisions/${escapeHtml(change.revision_id)}">${escapeHtml(change.revision_id)}</a>` : '-'}</td></tr>`).join('') : '<tr><td colspan="6">No changes in this plan.</td></tr>'}
+</tbody></table></div>
+
+<h2>Warnings</h2>
+<div class="table-wrap"><table><thead><tr><th>Code</th><th>Message</th></tr></thead><tbody>
+${warnings.length ? warnings.map(warning => `<tr><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td></tr>`).join('') : '<tr><td colspan="2"><span class="status-ok">No final warnings.</span></td></tr>'}
+</tbody></table></div>
+
+<h2>Before / after entity preview</h2>
+${changes.map(change => `<div class="action-box"><strong>${escapeHtml(change.operation)} ${escapeHtml(change.entity_type)} / <span class="mono">${escapeHtml(change.entity_key)}</span></strong><div class="admin-sub">${escapeHtml(change.file)}</div><h2>Before</h2><pre class="json-block">${escapeHtml(JSON.stringify(change.before_json, null, 2) || 'null')}</pre><h2>After</h2><pre class="json-block">${escapeHtml(JSON.stringify(change.after_json, null, 2) || 'null')}</pre></div>`).join('') || '<div class="notice">No entity previews available.</div>'}
+
+<h2>Combined patch</h2>
+<pre class="json-block">${escapeHtml(JSON.stringify(plan.combined_patch || [], null, 2))}</pre>
+
+<h2>Rollback notes</h2>
+<div class="notice">Rollback notes are written to <span class="mono">${escapeHtml(plan.rollback_notes_file || 'rollback-notes.md')}</span> inside the apply-plan folder. Because this plan is not applied, rollback means no production action is needed unless a human later applies these changes manually.</div>`,
   });
 }
 

@@ -298,6 +298,20 @@ summary has no blocking warnings. Blocked attempts record
 `release_candidate.ready_for_review`. This is still review state only and does
 not publish or write live JSON files.
 
+Release apply plans are the final human-review artifact before any future manual
+apply step. A plan can only be generated for a release candidate already in
+`ready_for_review`, and generation is blocked if the current release review
+summary has warnings. The plan writes only to
+`tmp/release-apply-plans/<release-candidate-id>/` and includes ordered file
+changes, add/replace operations, before/after entity JSON previews, combined
+patch JSON, rollback notes, validation summary, and final warnings.
+
+Apply plans are explicitly `NOT APPLIED` and `NOT PUBLISHED`. They do not modify
+live `data/*.json`, do not modify `dist/`, do not deploy, and do not mark
+content verified. Apply-plan generation records `release_apply_plan.generate`;
+blocked and error paths record `release_apply_plan.blocked` and
+`release_apply_plan.error`.
+
 Admin test tools are disabled by default and only appear when
 `ADMIN_TEST_TOOLS=true`. The test page can create a clearly marked release dry
 run using an entity key that starts with `test-`, then run the full controlled
@@ -344,10 +358,11 @@ Asset
   -> Proposal
   -> Approve for Draft
   -> Release Candidate
-  -> Release Review Summary
   -> Export
   -> Draft Apply
   -> Revision
+  -> Release Review Summary
+  -> Release Apply Plan
   -> (Future Publish)
 ```
 

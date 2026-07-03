@@ -88,6 +88,11 @@ import {
   releaseReviewErrorSummary,
 } from '../lib/release-review.js';
 import {
+  generateReleaseApplyPlan,
+  getReleaseApplyPlan,
+  releaseApplyPlanErrorSummary,
+} from '../lib/release-apply-plan.js';
+import {
   cleanupTestFixtures,
   runReleaseCandidateDryRun,
   testFixtureErrorSummary,
@@ -109,6 +114,7 @@ import {
   renderAdminConfigError,
   renderAdminChecksPage,
   renderAdminTestToolsPage,
+  renderReleaseApplyPlanDetailPage,
   renderAssetDetailPage,
   renderAssetUploadPage,
   renderAssetsPage,
@@ -959,6 +965,48 @@ export function createAdminRouter({ root }) {
       res.send(renderReleaseCandidateDetailPage({ release, approvedProposals, reviewSummary }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-candidates/:id/apply-plan', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await generateReleaseApplyPlan({
+        root,
+        releaseCandidateId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-apply-plans/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        const reviewSummary = release
+          ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
+          : null;
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          reviewSummary,
+          error: releaseApplyPlanErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseApplyPlanErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.get('/release-apply-plans/:id', async (req, res) => {
+    try {
+      const plan = await getReleaseApplyPlan({ root, releaseCandidateId: req.params.id });
+      if (!plan) {
+        res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release apply plan not found. Generate it from a ready_for_review release candidate.' }));
+        return;
+      }
+      res.send(renderReleaseApplyPlanDetailPage({ plan }));
+    } catch (err) {
+      res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseApplyPlanErrorSummary(err) }));
     }
   });
 
