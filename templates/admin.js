@@ -1536,7 +1536,15 @@ export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROL
   }
   const canVerify = ['files_written', 'verification_running', 'partial_applied', 'recovered_applied', 'manual_rollback_required', 'published_pending_deploy', 'published_pending_deploy_recovered'].includes(result.status);
   const canRollback = Boolean(result.backupExists && result.backupPath && ['files_written', 'partial_applied', 'recovered_applied', 'published_pending_deploy', 'published_pending_deploy_recovered', 'failed'].includes(result.status));
-  const manualRollback = !result.backupExists && ['manual_rollback_required', 'recovered_applied', 'partial_applied'].includes(result.status);
+  const manualRollback = !result.backupExists && result.changedFiles.length > 0 && [
+    'files_written',
+    'partial_applied',
+    'recovered_applied',
+    'manual_rollback_required',
+    'published_pending_deploy',
+    'published_pending_deploy_recovered',
+    'failed',
+  ].includes(result.status);
   return adminShell({
     title: `Live apply ${result.id}`,
     active: 'release_candidates',

@@ -345,21 +345,62 @@ detail page. It requires:
 - reviewer note
 - exact confirmation phrase `APPLY LIVE JSON`
 
-Before writing, changed files are backed up under
-`tmp/live-release-backups/<release-candidate-id>/<timestamp>/`. The service then
-writes the planned JSON changes to live `data/*.json`, runs `npm run build`,
-`npm run test:retrieve`, and `npm run audit:site`, records
-`release_live_apply.success`, and marks the release candidate
-`published_pending_deploy`. This still does not deploy. A human must review the
-working tree, commit the changed JSON/build output, and push to GitHub for the
-normal Hostinger auto-deploy.
+The apply action is deliberately split into short, recoverable phases so
+Hostinger request timeouts do not leave an untracked write:
 
-If validation/build/retrieval/audit fails after writing, the service restores
-the changed files from backup and records a failed apply. Rollback is also
-available for the latest `published_pending_deploy` apply using the exact
-confirmation phrase `ROLLBACK LIVE JSON`; it restores the backup and reruns the
-verification checks. Rollback does not commit, push, deploy, crawl, schedule, or
-switch content source.
+1. Create a `release_live_applies` row before writing any JSON.
+2. Record the release candidate, apply-plan path, planned changed files, reviewer
+   note, actor, `started_at`, and a generated backup path.
+3. Copy backups under
+   `tmp/live-release-backups/<release-candidate-id>/<timestamp>/` and persist
+   `backup_exists=1`.
+4. Write the planned `data/*.json` changes and mark the apply `files_written`.
+5. Stop the request and show the live apply detail page.
+6. Start verification from that page. Verification runs as a background worker
+   and records build/retrieval/audit output on the same live apply row.
+
+Successful verification marks the apply and release candidate
+`published_pending_deploy`. Recovered applies use
+`published_pending_deploy_recovered`. Neither status deploys the site by itself.
+A human must review the changed JSON, commit to Git, and push to GitHub for the
+normal Hostinger auto-deploy. Do not run a second live apply while an apply is in
+`started`, `backup_created`, `files_written`, or `verification_running`.
+
+If Hostinger times out after the live apply row is created, open the latest live
+apply record from the release/apply-plan page and continue from its visible
+state:
+
+- `started` or `backup_created`: inspect before retrying; no JSON should be
+  assumed written until `files_written`.
+- `files_written`: start or resume verification.
+- `verification_running`: refresh the page; if it does not finish, start
+  verification again. The row and backup path remain recorded.
+- `failed`: if a backup exists, rollback can restore the changed JSON files.
+- `manual_rollback_required`: no backup was recorded; use the recovery details
+  to remove or restore the exact changed file/entity manually.
+
+If Hostinger times out before any `release_live_applies` row is created but the
+live JSON file changed, use the incident recovery form on the release candidate
+or apply-plan page. Type `RECOVER PARTIAL APPLY`. Recovery does not write JSON;
+it inspects the current live `data/*.json`, confirms the expected entity is
+present, searches for a backup under `tmp/live-release-backups/`, creates a
+recovery apply row, records `release_live_apply.recovered_partial`, and moves
+the release candidate to `partial_applied_needs_review`. Then run verification
+from the recovered live apply page.
+
+Rollback is available only when a backup path exists and the operator types
+`ROLLBACK LIVE JSON`. It restores the recorded files from backup and reruns
+verification. If no backup exists, the UI shows manual rollback required with
+the changed path and the recovery metadata identifies the entity key. Rollback
+does not commit, push, deploy, crawl, schedule, expose `/api/ask`, or switch
+`CONTENT_SOURCE`.
+
+`needs_verification` records can be committed to JSON as draft content, but they
+do not publish. `scripts/build.js` renders them only under `drafts/`, excludes
+them from `dist/`, and `scripts/build-search-index.js` excludes them from
+`dist/search-index.json`. A release that only adds `needs_verification` content
+should keep the public verified subject count and search document count
+unchanged.
 
 Admin test tools are disabled by default and only appear when
 `ADMIN_TEST_TOOLS=true`. The test page can create a clearly marked release dry
