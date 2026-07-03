@@ -28,6 +28,20 @@ process.on('unhandledRejection', (err) => {
 });
 
 const askConfig = getAskConfig();
+const adminConfig = getAdminConfig();
+
+console.log('JNTUStack runtime config:', JSON.stringify({
+  contentSource: process.env.CONTENT_SOURCE || 'json',
+  adminEnabled: adminConfig.enabled,
+  adminConfigured: Boolean(adminConfig.email && (adminConfig.passwordHash || adminConfig.password)),
+  askEnabled: askConfig.enabled,
+  nodeVersion: process.version,
+}));
+
+if (adminConfig.enabled && !(adminConfig.email && (adminConfig.passwordHash || adminConfig.password))) {
+  console.error('JNTUStack admin configuration error: ADMIN_ENABLED=true requires ADMIN_EMAIL and ADMIN_PASSWORD_HASH or ADMIN_PASSWORD.');
+}
+
 if (askConfig.enabled) {
   // Load the grounding index once at boot, not per-request.
   loadSearchIndex(DIST_DIR);
@@ -37,7 +51,6 @@ if (askConfig.enabled) {
   app.use(askRouter);
 }
 
-const adminConfig = getAdminConfig();
 if (adminConfig.enabled) {
   let adminRouterPromise = null;
   app.use('/admin', async (req, res, next) => {

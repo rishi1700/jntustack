@@ -8,20 +8,18 @@ via GitHub. Not Cloudflare Pages -- that was the original plan, changed
 mid-build, and the architecture below reflects the current (Hostinger)
 target.
 
-**Live status (2026-06-30):** deployed to Hostinger as a Node.js/Express app
-(three completed git deploys, entry `server.js`, Node 24) and DNS for
-jntustack.com points at Hostinger (A 217.21.87.84). BUT
-https://jntustack.com currently returns **404** -- the deploy ran without a
-build step (`build_script: null`), so `dist/` was never generated on the
-server and Express has nothing to serve at `/`. Not publicly accessible
-until that's fixed: set the app's build command to `npm run build` and
-redeploy (see "Deploying to Hostinger" #5).
+**Live status (2026-07-03):** deployed to Hostinger as a Node.js/Express app
+via GitHub auto-deploy, entry `server.js`, Node 24. `CONTENT_SOURCE=json`
+remains the production-safe public content source. `https://jntustack.com/`
+and `/health` return 200, and `/admin` is protected behind login when
+`ADMIN_ENABLED=true`.
 
 ## What this is
 
-A custom Node.js site: a static-site generator (no framework, plain
+A custom Node.js site: a static-site generator (no frontend framework, plain
 template literals driven by `data/*.json`) plus a thin Express server that
-serves the generated output and handles one dynamic route, `/api/ask`.
+serves the generated output and private admin workflows. `/api/ask` is
+feature-gated and must remain disabled unless explicitly approved.
 
 ## Quick start (local)
 
@@ -35,10 +33,9 @@ Database utilities are present, but the public site still builds from JSON by
 default. Leave `CONTENT_SOURCE` unset, or set `CONTENT_SOURCE=json`, unless you
 are explicitly testing a future database-backed content adapter.
 
-Tested and confirmed working: static file serving, /health, and /api/ask's
-validation + graceful no-key error handling all checked with real curl
-requests during this build. Only the live Anthropic call itself is
-untested, since there's no API key yet.
+Tested and confirmed working: static file serving, `/health`, JSON content
+builds, retrieval checks, and the admin login gate. `/api/ask` is not exposed
+while `ASK_ENABLED=false`.
 
 ## Deploying to Hostinger
 
@@ -46,19 +43,15 @@ untested, since there's no API key yet.
 2. hPanel -> Websites -> Add Website -> Node.js Apps -> connect the repo.
    Hostinger should auto-detect Express from package.json; if not, select
    "Other" manually.
-3. Set the **ANTHROPIC_API_KEY** environment variable in hPanel (Node.js
-   app -> Environment Variables) once you have a key -- never commit it to
-   the repo. The app runs fine without it; /api/ask just returns a clean
-   error until it's set.
+3. Keep `ASK_ENABLED=false` unless `/api/ask` is explicitly approved for
+   production. Do not set or expose model API keys until that happens.
 4. Hostinger sets `PORT` itself -- server.js already defers to
    `process.env.PORT`, don't hardcode a port anywhere.
-5. Build step on deploy MUST run `npm run build` before `npm start` (the
-   homepage `dist/index.html` and the search index have to exist before the
-   server boots, or Express serves nothing and the site 404s -- this is
-   exactly the bug that left the first deploys returning 404). Set this as
-   the app's build command in hPanel.
-6. Connect jntustack.com to the deployed app (done -- DNS now resolves to
-   Hostinger; the app just needs the build step above to actually serve).
+5. The `postinstall` script runs `npm run build`, which generates `dist/` and
+   `dist/search-index.json` on Hostinger deploy. Do not remove this unless the
+   hPanel build command is configured to run the same build explicitly.
+6. Connect jntustack.com to the deployed app. Current production uses GitHub
+   auto-deploy, not manual archive upload.
 
 ## Database foundation
 
@@ -81,6 +74,40 @@ The private admin dashboard is disabled by default and is read-only when enabled
 It shows content counts and tables for subjects, colleges, branch profiles, and
 source evidence. It does not expose editing, status changes, publishing, or
 automation.
+
+Runtime/admin hardening:
+
+- `server.js` logs startup status for `contentSource`, `adminEnabled`,
+  `adminConfigured`, `askEnabled`, and Node version only. It never logs
+  passwords, hashes, database hosts, or other secret values.
+- If `ADMIN_ENABLED=true` but credentials are incomplete, startup logs a clear
+  admin configuration error and `/admin` shows a protected configuration error.
+- DB-backed admin pages show clear unavailable states when DB env is missing or
+  the connection fails. The public JSON-backed site still boots with
+  `CONTENT_SOURCE=json`.
+- Protected admin checks live at `/admin/checks`. The page reports DB
+  connection/migration status, content source, admin/ask flags, storage
+  writability, and latest JSON/search-index counts.
+
+Live admin verification checklist:
+
+```
+curl -I https://jntustack.com/
+curl -I https://jntustack.com/health
+curl -I https://jntustack.com/admin
+curl -I https://jntustack.com/admin/sources
+curl -I https://jntustack.com/admin/assets
+curl -I https://jntustack.com/admin/proposals
+curl -I https://jntustack.com/admin/revisions
+```
+
+Expected unauthenticated behavior:
+
+- `/` returns 200.
+- `/health` returns 200.
+- `/admin` and protected admin pages redirect to `/admin/login`.
+- After login, check `/admin/checks` first, then `/admin/sources`,
+  `/admin/assets`, `/admin/proposals`, and `/admin/revisions`.
 
 The admin review queue is also gated behind `ADMIN_ENABLED=true`, but it is
 DB-backed and requires the MySQL migrations to be applied. Review actions only
@@ -370,21 +397,17 @@ renders to `drafts/` with a visible orange watermark instead.
 
 ## Immediate next steps, roughly in order
 
-1. **Make the site actually load.** jntustack.com is registered and DNS +
-   the Express deploy are in place, but the live URL 404s because no build
-   step ran -- set the app's build command to `npm run build` and redeploy
-   so `dist/` exists on the server. (jntustack.in still unregistered.)
-2. Get an Anthropic API key (console.anthropic.com) when ready to test
-   the ask widget for real -- not required to launch without it.
-3. Source the official R23 syllabus PDFs (see notes in
+1. Review the live admin UI with `ADMIN_ENABLED=true`, starting at
+   `/admin/checks`, and keep `CONTENT_SOURCE=json`.
+2. Source the official R23 syllabus PDFs (see notes in
    `data/subjects-cse.json`) to flip subject records to `verified`.
-4. Finish the JNTUK private-college list, then JNTUH/JNTUA/JNTUGV
+3. Finish the JNTUK private-college list, then JNTUH/JNTUA/JNTUGV
    (`data/colleges-jntuk.json` coverage note has the blocker: the source
    page is JS-rendered, needs a browser-automation pass, not a plain fetch).
-5. Branch hub / semester hub page templates don't exist yet -- only
+4. Branch hub / semester hub page templates don't exist yet -- only
    individual subject pages and the branch guide do.
-6. Decide free-vs-rate-limited access model for the ask widget before
-   linking `routes/ask.js` (/api/ask) from a live page.
+5. Decide free-vs-rate-limited access model for the ask widget before
+   enabling `ASK_ENABLED=true` or linking `/api/ask` from a live page.
 
 ## Design constraints worth preserving as this grows
 

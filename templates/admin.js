@@ -6,9 +6,10 @@ function escapeHtml(value = '') {
     .replaceAll('"', '&quot;');
 }
 
-function adminShell({ title, active = 'dashboard', body }) {
+function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
   const nav = [
     ['dashboard', '/admin/', 'Dashboard'],
+    ['checks', '/admin/checks', 'Checks'],
     ['subjects', '/admin/subjects', 'Subjects'],
     ['colleges', '/admin/colleges', 'Colleges'],
     ['branch_profiles', '/admin/branch-profiles', 'Branch profiles'],
@@ -40,7 +41,7 @@ h1{font-size:24px;margin:0}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color
 .table-wrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px}
 th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#f0f5f7}
 tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:12px;background:#f8fbfc}
-.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}
+.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 8px;text-decoration:none;background:#fff;color:var(--muted);font-size:12px}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:#e7f3f1;color:var(--accent);border-color:#9acdc7}
 .login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px}
 .login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-top:5px;font:inherit}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.error{border:1px solid #f0b8b8;color:var(--bad);background:#fff5f5;border-radius:6px;padding:9px;margin:12px 0 0}
 @media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top{align-items:flex-start;flex-direction:column}}
@@ -56,6 +57,7 @@ tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,M
     </nav>
   </aside>
   <main class="admin-main">
+    ${breadcrumbs.length ? `<div class="breadcrumbs">${breadcrumbs.map((crumb, index) => crumb.href ? `<a href="${crumb.href}">${escapeHtml(crumb.label)}</a>${index < breadcrumbs.length - 1 ? ' / ' : ''}` : `<span>${escapeHtml(crumb.label)}</span>`).join('')}</div>` : ''}
     ${body}
   </main>
 </div>
@@ -69,6 +71,31 @@ function formatBytes(value) {
   if (bytes < 1024) return `${bytes} B`;
   if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
   return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
+}
+
+function emptyState(title, message, action = '') {
+  return `<div class="empty-state"><strong>${escapeHtml(title)}</strong><div>${escapeHtml(message)}</div>${action ? `<div style="margin-top:8px;">${action}</div>` : ''}</div>`;
+}
+
+function workflowNav(active) {
+  const steps = [
+    ['asset', 'Asset', '/admin/assets'],
+    ['parse', 'Parse', null],
+    ['extraction', 'Extraction', null],
+    ['diff', 'Diff', null],
+    ['proposal', 'Proposal', '/admin/proposals'],
+    ['export', 'Export', null],
+    ['draft', 'Draft', null],
+    ['revision', 'Revision', '/admin/revisions'],
+  ];
+  return `<div class="workflow" aria-label="Evidence workflow">${steps.map(([key, label, href]) => {
+    const attrs = key === active ? ' aria-current="step"' : '';
+    return href ? `<a href="${href}"${attrs}>${label}</a>` : `<span${attrs}>${label}</span>`;
+  }).join('')}</div>`;
+}
+
+function passFail(value) {
+  return value ? '<span class="status-ok">ok</span>' : '<span class="status-bad">needs attention</span>';
 }
 
 export function renderLoginPage({ error = null } = {}) {
@@ -115,6 +142,81 @@ export function renderDashboard({ counts, contentSource }) {
     body: `
 <div class="admin-top"><div><h1>Dashboard</h1><div class="admin-sub">Visibility only. No edits, publishing, or automation are available here.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 <section class="metric-grid">${metrics.map(([label, value, cls]) => `<div class="metric"><div class="metric-label">${escapeHtml(label)}</div><div class="metric-value ${cls || ''}">${escapeHtml(value)}</div></div>`).join('')}</section>`,
+  });
+}
+
+export function renderAdminChecksPage({ checks }) {
+  const dbRows = [
+    ['Configured', checks.db.configured ? 'yes' : 'no'],
+    ['Connection', checks.db.skipped ? 'skipped' : checks.db.connected ? 'connected' : 'failed'],
+    ['Migrations expected', checks.db.expectedMigrations],
+    ['Migrations applied', checks.db.appliedMigrations ?? 'unknown'],
+    ['Pending migrations', Array.isArray(checks.db.pendingMigrations) ? checks.db.pendingMigrations.length : 'unknown'],
+    ['Message', checks.db.message || ''],
+  ];
+  const searchRows = [
+    ['Status', checks.searchIndex.ok ? 'readable' : 'missing/error'],
+    ['Total docs', checks.searchIndex.total ?? 'unknown'],
+    ['Subjects', checks.searchIndex.byType?.subject ?? 'unknown'],
+    ['Colleges', checks.searchIndex.byType?.college ?? 'unknown'],
+    ['Branch profiles', checks.searchIndex.byType?.branch_profile ?? 'unknown'],
+    ['Path', checks.searchIndex.path],
+  ];
+  const runtimeRows = [
+    ['Generated at', checks.generatedAt],
+    ['Node', checks.runtime.nodeVersion],
+    ['Content source', checks.runtime.contentSource],
+    ['Admin enabled', checks.runtime.adminEnabled ? 'yes' : 'no'],
+    ['Admin configured', checks.runtime.adminConfigured ? 'yes' : 'no'],
+    ['Ask enabled', checks.runtime.askEnabled ? 'yes' : 'no'],
+  ];
+  return adminShell({
+    title: 'Runtime checks',
+    active: 'checks',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Checks' }],
+    body: `
+<div class="admin-top"><div><h1>Runtime checks</h1><div class="admin-sub">Protected diagnostics. Values are status-only and never include secrets.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Public content</div><div class="metric-value">${passFail(checks.content.subjectsVerified > 0 && checks.content.collegesTotal > 0)}</div></div>
+  <div class="metric"><div class="metric-label">Search index</div><div class="metric-value">${passFail(checks.searchIndex.ok && checks.searchIndex.total === 619)}</div></div>
+  <div class="metric"><div class="metric-label">Storage</div><div class="metric-value">${passFail(checks.storage.ok)}</div></div>
+  <div class="metric"><div class="metric-label">Database</div><div class="metric-value">${checks.db.skipped ? '<span class="status-warn">not configured</span>' : passFail(checks.db.ok)}</div></div>
+</section>
+
+<h2>Runtime</h2>
+<div class="table-wrap"><table><tbody>
+${runtimeRows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`).join('')}
+</tbody></table></div>
+
+<h2>Database</h2>
+<div class="table-wrap"><table><tbody>
+${dbRows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value)}</td></tr>`).join('')}
+${checks.db.missing?.length ? `<tr><th>Missing env keys</th><td class="mono">${escapeHtml(checks.db.missing.join(', '))}</td></tr>` : ''}
+${checks.db.error ? `<tr><th>Error</th><td><pre class="mono" style="white-space:pre-wrap;margin:0;">${escapeHtml(JSON.stringify(checks.db.error, null, 2))}</pre></td></tr>` : ''}
+</tbody></table></div>
+
+<h2>Storage</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th>Status</th><td>${checks.storage.ok ? 'readable and writable' : 'needs attention'}</td></tr>
+<tr><th>Path</th><td class="mono">${escapeHtml(checks.storage.path)}</td></tr>
+<tr><th>Message</th><td>${escapeHtml(checks.storage.message || '')}</td></tr>
+</tbody></table></div>
+
+<h2>Content counts</h2>
+<div class="table-wrap"><table><tbody>
+<tr><th>Source</th><td>${escapeHtml(checks.content.source)}</td></tr>
+<tr><th>Subjects total</th><td>${escapeHtml(checks.content.subjectsTotal)}</td></tr>
+<tr><th>Verified subjects</th><td>${escapeHtml(checks.content.subjectsVerified)}</td></tr>
+<tr><th>Needs verification</th><td>${escapeHtml(checks.content.subjectsNeedsVerification)}</td></tr>
+<tr><th>Placeholder</th><td>${escapeHtml(checks.content.subjectsPlaceholder)}</td></tr>
+<tr><th>Colleges</th><td>${escapeHtml(checks.content.collegesTotal)}</td></tr>
+<tr><th>Branch profiles</th><td>${escapeHtml(checks.content.branchProfilesTotal)}</td></tr>
+</tbody></table></div>
+
+<h2>Search index</h2>
+<div class="table-wrap"><table><tbody>
+${searchRows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${typeof value === 'object' ? `<pre class="mono" style="white-space:pre-wrap;margin:0;">${escapeHtml(JSON.stringify(value, null, 2))}</pre>` : escapeHtml(value)}</td></tr>`).join('')}
+</tbody></table></div>`,
   });
 }
 
@@ -183,7 +285,7 @@ export function renderSourceRegistryPage({ sources }) {
     body: `
 <div class="admin-top"><div><h1>Sources</h1><div class="admin-sub">Trusted source registry. No crawling, fetching, parsing, or proposal automation is connected here.</div></div><div><a class="logout" href="/admin/sources/new">Create source</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Name</th><th>Kind</th><th>Trust</th><th>Base URL</th><th>Last checked</th><th>Last success</th><th></th></tr></thead><tbody>
-${sources.length ? sources.map(s => `<tr><td><span class="pill">${s.enabled ? 'enabled' : 'disabled'}</span></td><td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.sourceKind)}</td><td>${escapeHtml(s.trustLevel)}</td><td class="mono">${escapeHtml(s.baseUrl)}</td><td>${escapeHtml(s.lastCheckedAt || '')}</td><td>${escapeHtml(s.lastSuccessAt || '')}</td><td><a href="/admin/sources/${s.id}">View</a></td></tr>`).join('') : '<tr><td colspan="8">No discovery sources configured yet.</td></tr>'}
+${sources.length ? sources.map(s => `<tr><td><span class="pill">${s.enabled ? 'enabled' : 'disabled'}</span></td><td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.sourceKind)}</td><td>${escapeHtml(s.trustLevel)}</td><td class="mono">${escapeHtml(s.baseUrl)}</td><td>${escapeHtml(s.lastCheckedAt || '')}</td><td>${escapeHtml(s.lastSuccessAt || '')}</td><td><a href="/admin/sources/${s.id}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No discovery sources configured', 'Add trusted source metadata before fetching or uploading source evidence.', '<a href="/admin/sources/new">Create source</a>')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -303,7 +405,7 @@ export function renderAssetsPage({ assets }) {
     body: `
 <div class="admin-top"><div><h1>Assets</h1><div class="admin-sub">Raw source material only. Assets are stored before parsing and never publish content.</div></div><div><a class="logout" href="/admin/assets/new">Upload asset</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Filename</th><th>Size</th><th>Type</th><th>Source</th><th>Downloaded</th><th>Checksum</th><th></th></tr></thead><tbody>
-${assets.length ? assets.map(asset => `<tr><td><span class="pill">${escapeHtml(asset.downloadStatus || '')}</span></td><td>${escapeHtml(asset.originalFilename || '')}</td><td>${escapeHtml(formatBytes(asset.fileSize))}</td><td>${escapeHtml(asset.contentType || '')}</td><td>${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</td><td>${escapeHtml(asset.downloadedAt || '')}</td><td class="mono">${escapeHtml(asset.sha256Checksum ? `${asset.sha256Checksum.slice(0, 16)}...` : '')}</td><td><a href="/admin/assets/${asset.id}">View</a></td></tr>`).join('') : '<tr><td colspan="8">No source assets stored yet.</td></tr>'}
+${assets.length ? assets.map(asset => `<tr><td><span class="pill">${escapeHtml(asset.downloadStatus || '')}</span></td><td>${escapeHtml(asset.originalFilename || '')}</td><td>${escapeHtml(formatBytes(asset.fileSize))}</td><td>${escapeHtml(asset.contentType || '')}</td><td>${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</td><td>${escapeHtml(asset.downloadedAt || '')}</td><td class="mono">${escapeHtml(asset.sha256Checksum ? `${asset.sha256Checksum.slice(0, 16)}...` : '')}</td><td><a href="/admin/assets/${asset.id}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No source assets stored', 'Upload or manually fetch evidence from a configured source. Assets remain raw evidence and do not publish content.', '<a href="/admin/assets/new">Upload asset</a>')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -347,7 +449,8 @@ export function renderAssetDetailPage({
     title: `Asset ${asset.id}`,
     active: 'assets',
     body: `
-<div class="admin-top"><div><h1>${escapeHtml(asset.originalFilename || `Asset ${asset.id}`)}</h1><div class="admin-sub">Raw source asset. No parser or publishing action is available.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><h1>${escapeHtml(asset.originalFilename || `Asset ${asset.id}`)}</h1><div class="admin-sub">Raw source asset. Parser and pipeline actions remain manual and never publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('asset')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${pipelineError ? `<div class="error">${escapeHtml(pipelineError)}</div>` : ''}
 <section class="metric-grid">
@@ -378,7 +481,7 @@ ${parsers.length ? parsers.map(parser => `<form class="action-box" method="post"
   <div class="mono" style="margin-top:8px;">${escapeHtml(parser.key)} v${escapeHtml(parser.version)}</div>
   <input type="hidden" name="parser_key" value="${escapeHtml(parser.key)}">
   ${parser.available ? '<button type="submit">Run parser</button>' : `<div class="notice" style="margin-top:10px;">${escapeHtml(parser.unavailableReason || 'Parser unavailable.')}</div>`}
-</form>`).join('') : '<div class="notice">No registered parser matches this asset type.</div>'}
+</form>`).join('') : `<div class="notice">${emptyState('No parser matches this asset', 'Upload HTML for html-basic/source-specific parsers, or wait for a future PDF parser dependency before parsing PDF assets.')}</div>`}
 </div>
 
 <h2>Run manual pipeline</h2>
@@ -415,12 +518,12 @@ ${parsers.length ? parsers.map(parser => `<form class="action-box" method="post"
 
 <h2>Pipeline history</h2>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Entity</th><th>Key</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
-${pipelineRuns.length ? pipelineRuns.map(run => `<tr><td><span class="pill">${escapeHtml(run.status)}</span></td><td>${escapeHtml(run.parserKey)}</td><td>${escapeHtml(run.entityType)}</td><td class="mono">${escapeHtml(run.entityKey || '')}</td><td>${escapeHtml(run.createdAt || '')}</td><td>${escapeHtml(run.errorMessage || '')}</td><td><a href="/admin/pipeline-runs/${escapeHtml(run.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No pipeline runs yet.</td></tr>'}
+${pipelineRuns.length ? pipelineRuns.map(run => `<tr><td><span class="pill">${escapeHtml(run.status)}</span></td><td>${escapeHtml(run.parserKey)}</td><td>${escapeHtml(run.entityType)}</td><td class="mono">${escapeHtml(run.entityKey || '')}</td><td>${escapeHtml(run.createdAt || '')}</td><td>${escapeHtml(run.errorMessage || '')}</td><td><a href="/admin/pipeline-runs/${escapeHtml(run.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No pipeline runs yet', 'Run the manual pipeline only after choosing a parser and target entity. Proposal creation remains opt-in.')}</td></tr>`}
 </tbody></table></div>
 
 <h2>Parse history</h2>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Version</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
-${parseResults.length ? parseResults.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td>${escapeHtml(result.parserKey)}</td><td>${escapeHtml(result.parserVersion)}</td><td>${escapeHtml(result.createdAt || '')}</td><td>${escapeHtml(result.errorMessage || '')}</td><td><a href="/admin/parse-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="6">No parse results yet.</td></tr>'}
+${parseResults.length ? parseResults.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td>${escapeHtml(result.parserKey)}</td><td>${escapeHtml(result.parserVersion)}</td><td>${escapeHtml(result.createdAt || '')}</td><td>${escapeHtml(result.errorMessage || '')}</td><td><a href="/admin/parse-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="6">${emptyState('No parse results yet', 'Run a parser manually from this page. Parsing extracts evidence only and creates no proposals by itself.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -431,6 +534,7 @@ export function renderPipelineRunDetailPage({ result }) {
     active: 'assets',
     body: `
 <div class="admin-top"><div><h1>Pipeline run ${escapeHtml(result.id)}</h1><div class="admin-sub">Manual evidence pipeline. This run does not publish content or mark anything verified.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('parse')}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
   <div class="metric"><div class="metric-label">Parser</div><div class="metric-value">${escapeHtml(result.parserKey)}</div></div>
@@ -472,6 +576,7 @@ export function renderParseResultDetailPage({
     active: 'assets',
     body: `
 <div class="admin-top"><div><h1>Parse result ${escapeHtml(result.id)}</h1><div class="admin-sub">Evidence extraction only. This result does not publish content or create proposals.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('parse')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${extractionError ? `<div class="error">${escapeHtml(extractionError)}</div>` : ''}
 <section class="metric-grid">
@@ -536,7 +641,7 @@ ${candidates.map((candidate, index) => `<tr>
 
 <h2>Extraction history</h2>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Validation</th><th>Entity</th><th>Key</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
-${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span class="pill">${escapeHtml(extraction.status)}</span></td><td><span class="pill">${escapeHtml(extraction.validationStatus)}</span></td><td>${escapeHtml(extraction.entityType)}</td><td class="mono">${escapeHtml(extraction.entityKey || '')}</td><td>${escapeHtml(extraction.createdAt || '')}</td><td>${escapeHtml(extraction.errorMessage || '')}</td><td><a href="/admin/extraction-results/${escapeHtml(extraction.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No extraction results yet.</td></tr>'}
+${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span class="pill">${escapeHtml(extraction.status)}</span></td><td><span class="pill">${escapeHtml(extraction.validationStatus)}</span></td><td>${escapeHtml(extraction.entityType)}</td><td class="mono">${escapeHtml(extraction.entityKey || '')}</td><td>${escapeHtml(extraction.createdAt || '')}</td><td>${escapeHtml(extraction.errorMessage || '')}</td><td><a href="/admin/extraction-results/${escapeHtml(extraction.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No extraction results yet', 'Extract an entity-shaped candidate from the parsed evidence before running a structured diff.')}</td></tr>`}
 </tbody></table></div>
 
 <h2>Run diff</h2>
@@ -552,7 +657,7 @@ ${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span 
 
 <h2>Diff history</h2>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Changes</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
-${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${escapeHtml(diff.status)}</span></td><td>${escapeHtml(diff.entityType)}</td><td class="mono">${escapeHtml(diff.entityKey)}</td><td>${escapeHtml(diff.diff?.change_count ?? '')}</td><td>${escapeHtml(diff.createdAt || '')}</td><td>${escapeHtml(diff.errorMessage || '')}</td><td><a href="/admin/diff-results/${escapeHtml(diff.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="7">No diff results yet.</td></tr>'}
+${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${escapeHtml(diff.status)}</span></td><td>${escapeHtml(diff.entityType)}</td><td class="mono">${escapeHtml(diff.entityKey)}</td><td>${escapeHtml(diff.diff?.change_count ?? '')}</td><td>${escapeHtml(diff.createdAt || '')}</td><td>${escapeHtml(diff.errorMessage || '')}</td><td><a href="/admin/diff-results/${escapeHtml(diff.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No diff results yet', 'Run a diff after choosing an exact existing entity key. Fuzzy matching is intentionally not automatic.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -564,6 +669,7 @@ export function renderExtractionResultDetailPage({ result, error = null }) {
     active: 'assets',
     body: `
 <div class="admin-top"><div><h1>Extraction result ${escapeHtml(result.id)}</h1><div class="admin-sub">Entity-shaped candidate only. This does not create proposals or publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('extraction')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
@@ -600,6 +706,7 @@ export function renderDiffResultDetailPage({ result, existingProposal = null, er
     active: 'assets',
     body: `
 <div class="admin-top"><div><h1>Diff result ${escapeHtml(result.id)}</h1><div class="admin-sub">Comparison evidence only. Proposal creation is manual and still does not publish content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('diff')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
@@ -653,7 +760,7 @@ export function renderProposalsPage({ proposals }) {
     body: `
 <div class="admin-top"><div><h1>Review queue</h1><div class="admin-sub">Human review only. No proposal action publishes verified content.</div></div><div><a class="logout" href="/admin/proposals/new">Create proposal</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Source</th><th>Updated</th><th></th></tr></thead><tbody>
-${proposals.length ? proposals.map(p => `<tr><td><span class="pill">${escapeHtml(p.status)}</span></td><td>${escapeHtml(p.entityType)}</td><td class="mono">${escapeHtml(p.entityKey)}</td><td class="mono">${escapeHtml(p.source?.originUrl || '')}</td><td>${escapeHtml(p.updatedAt || '')}</td><td><a href="/admin/proposals/${p.id}">View</a></td></tr>`).join('') : '<tr><td colspan="6">No content proposals yet.</td></tr>'}
+${proposals.length ? proposals.map(p => `<tr><td><span class="pill">${escapeHtml(p.status)}</span></td><td>${escapeHtml(p.entityType)}</td><td class="mono">${escapeHtml(p.entityKey)}</td><td class="mono">${escapeHtml(p.source?.originUrl || '')}</td><td>${escapeHtml(p.updatedAt || '')}</td><td><a href="/admin/proposals/${p.id}">View</a></td></tr>`).join('') : `<tr><td colspan="6">${emptyState('No content proposals yet', 'Create proposals manually or from reviewed diffs. Nothing publishes directly from the queue.', '<a href="/admin/proposals/new">Create proposal</a>')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -700,6 +807,7 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
     active: 'proposals',
     body: `
 <div class="admin-top"><div><h1>Proposal ${escapeHtml(proposal.id)}</h1><div class="admin-sub">${escapeHtml(proposal.entityType)} / <span class="mono">${escapeHtml(proposal.entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('proposal')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(proposal.status)}</div></div>
@@ -741,7 +849,7 @@ ${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="
   <button type="submit">Export proposal for review</button>
 </form>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
-${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="5">No exports yet.</td></tr>'}
+${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="5">${emptyState('No exports yet', 'Export creates review artifacts in tmp/proposal-exports only. It does not modify data/ or dist/.')}</td></tr>`}
 </tbody></table></div>
 
 <h2>Review actions</h2>
@@ -782,6 +890,7 @@ export function renderProposalExportDetailPage({ result, draftApplies = [], erro
     active: 'proposals',
     body: `
 <div class="admin-top"><div><h1>Proposal export ${escapeHtml(result.id)}</h1><div class="admin-sub">Review artifact only. This does not publish content or write data files.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('export')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(result.validationStatus)}</div></div>
@@ -799,7 +908,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <button type="submit">Apply to draft workspace</button>
 </form>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
-${draftApplies.length ? draftApplies.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.draftPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-draft-applies/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="5">No draft applies yet.</td></tr>'}
+${draftApplies.length ? draftApplies.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.draftPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-draft-applies/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="5">${emptyState('No draft applies yet', 'Apply a passed export to a temporary draft workspace for review. Live data files stay untouched.')}</td></tr>`}
 </tbody></table></div>
 
 <h2>Validation errors</h2>
@@ -825,6 +934,7 @@ export function renderProposalDraftApplyDetailPage({ result }) {
     active: 'proposals',
     body: `
 <div class="admin-top"><div><h1>Draft apply ${escapeHtml(result.id)}</h1><div class="admin-sub">Draft workspace only. NOT PUBLISHED.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('draft')}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(result.validationStatus)}</div></div>
   <div class="metric"><div class="metric-label">Proposal export</div><div class="metric-value"><a href="/admin/proposal-exports/${escapeHtml(result.proposalExportId)}">${escapeHtml(result.proposalExportId)}</a></div></div>
@@ -887,7 +997,7 @@ export function renderRevisionsPage({ revisions }) {
     body: `
 <div class="admin-top"><div><h1>Content revisions</h1><div class="admin-sub">Immutable revision history. Review-only; no publishing or JSON writes.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 <div class="table-wrap"><table><thead><tr><th>Entity</th><th>Key</th><th>Latest revision</th><th>Status</th><th>Draft</th><th>Created</th><th></th></tr></thead><tbody>
-${revisions.length ? revisions.map(revision => `<tr><td>${escapeHtml(revision.entityType)}</td><td class="mono">${escapeHtml(revision.entityKey)}</td><td><a href="/admin/revisions/${escapeHtml(revision.id)}">#${escapeHtml(revision.revisionNumber)}</a></td><td><span class="pill">${escapeHtml(revision.sourceStatus)}</span></td><td>${revision.draftApplyId ? `<a href="/admin/proposal-draft-applies/${escapeHtml(revision.draftApplyId)}">${escapeHtml(revision.draftApplyId)}</a>` : '-'}</td><td>${escapeHtml(revision.createdAt || '')}</td><td><a href="${revisionEntityHref(revision)}">History</a></td></tr>`).join('') : '<tr><td colspan="7">No content revisions yet.</td></tr>'}
+${revisions.length ? revisions.map(revision => `<tr><td>${escapeHtml(revision.entityType)}</td><td class="mono">${escapeHtml(revision.entityKey)}</td><td><a href="/admin/revisions/${escapeHtml(revision.id)}">#${escapeHtml(revision.revisionNumber)}</a></td><td><span class="pill">${escapeHtml(revision.sourceStatus)}</span></td><td>${revision.draftApplyId ? `<a href="/admin/proposal-draft-applies/${escapeHtml(revision.draftApplyId)}">${escapeHtml(revision.draftApplyId)}</a>` : '-'}</td><td>${escapeHtml(revision.createdAt || '')}</td><td><a href="${revisionEntityHref(revision)}">History</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No content revisions yet', 'Revisions appear after a successful draft apply creates an immutable snapshot. They are not public publishing events.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -910,6 +1020,7 @@ export function renderRevisionDetailPage({ revision, revisions = [] }) {
     active: 'revisions',
     body: `
 <div class="admin-top"><div><h1>Revision ${escapeHtml(revision.id)}</h1><div class="admin-sub">${escapeHtml(revision.entityType)} / <span class="mono">${escapeHtml(revision.entityKey)}</span></div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('revision')}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Revision</div><div class="metric-value">#${escapeHtml(revision.revisionNumber)}</div></div>
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(revision.sourceStatus)}</div></div>

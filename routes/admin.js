@@ -6,6 +6,7 @@ import {
   listAssets,
   registerAsset,
 } from '../lib/assets.js';
+import { getAdminChecks } from '../lib/admin-checks.js';
 import {
   adminCookieName,
   adminIsConfigured,
@@ -85,6 +86,7 @@ import {
 } from '../lib/content-revisions.js';
 import {
   renderAdminConfigError,
+  renderAdminChecksPage,
   renderAssetDetailPage,
   renderAssetUploadPage,
   renderAssetsPage,
@@ -272,6 +274,15 @@ export function createAdminRouter({ root }) {
           branchProfilesTotal: content.branchProfiles.length,
         },
       }));
+    } catch (err) {
+      next(err);
+    }
+  });
+
+  router.get('/checks', async (req, res, next) => {
+    try {
+      const checks = await getAdminChecks({ root });
+      res.send(renderAdminChecksPage({ checks }));
     } catch (err) {
       next(err);
     }
