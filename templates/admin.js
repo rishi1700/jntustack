@@ -50,7 +50,7 @@ h1{font-size:24px;margin:0}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color
 .table-wrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px}
 th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#f0f5f7}
 tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:12px;background:#f8fbfc}
-.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 8px;text-decoration:none;background:#fff;color:var(--muted);font-size:12px}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:#e7f3f1;color:var(--accent);border-color:#9acdc7}
+.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.danger-zone{border:2px solid var(--bad);background:#fff5f5}.danger-zone strong{color:var(--bad)}.danger-copy{border:1px solid #efb5bd;background:#fff;color:var(--bad);border-radius:6px;padding:10px;margin-top:10px;font-weight:700}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}.evidence-warning{border-color:#efcf8a;background:#fffaf0;color:#6d4c00}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 8px;text-decoration:none;background:#fff;color:var(--muted);font-size:12px}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:#e7f3f1;color:var(--accent);border-color:#9acdc7}
 .login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px}
 .login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-top:5px;font:inherit}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.error{border:1px solid #f0b8b8;color:var(--bad);background:#fff5f5;border-radius:6px;padding:9px;margin:12px 0 0}
 @media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top{align-items:flex-start;flex-direction:column}}
@@ -738,6 +738,29 @@ ${result.steps?.length ? result.steps.map(step => {
   });
 }
 
+function candidateConfidence(candidate) {
+  const level = candidate?.confidence?.level || 'unknown';
+  const reason = candidate?.confidence?.reason || 'No confidence reason recorded.';
+  return { level, reason };
+}
+
+function candidateHeading(candidates) {
+  const allHighConfidence = candidates.length && candidates.every(candidate => candidateConfidence(candidate).level === 'high');
+  return allHighConfidence ? 'High-confidence subject candidates' : 'Parsed candidate rows';
+}
+
+function renderPdfExtractionSummary(payload = {}) {
+  if (!payload || !['pdf_text', 'tirumala_r23_syllabus_pdf'].includes(payload.evidence_type)) return '';
+  return `<h2>PDF text extraction summary</h2>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Evidence type</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.evidence_type)}</div></div>
+  <div class="metric"><div class="metric-label">Pages</div><div class="metric-value">${escapeHtml(payload.page_count || 0)}</div></div>
+  <div class="metric"><div class="metric-label">Text length</div><div class="metric-value">${escapeHtml(payload.full_text_length || (payload.text_preview || '').length || 0)}</div></div>
+  <div class="metric"><div class="metric-label">Context</div><div class="metric-value" style="font-size:15px;">${escapeHtml(payload.detected_context ? JSON.stringify(payload.detected_context) : 'raw text')}</div></div>
+</section>
+<div class="notice evidence-warning" style="margin-top:10px;">PDF text extraction is evidence only. Layout and table detection still require human review before any proposal or draft release work.</div>`;
+}
+
 export function renderParseResultDetailPage({
   result,
   diffResults = [],
@@ -748,6 +771,8 @@ export function renderParseResultDetailPage({
   extractionError = null,
 }) {
   const candidates = Array.isArray(result.parsedPayload?.candidates) ? result.parsedPayload.candidates : [];
+  const lowConfidenceCandidates = Array.isArray(result.parsedPayload?.low_confidence_candidates) ? result.parsedPayload.low_confidence_candidates : [];
+  const ignoredRows = Array.isArray(result.parsedPayload?.ignored_table_rows) ? result.parsedPayload.ignored_table_rows : [];
   return adminShell({
     title: `Parse result ${result.id}`,
     active: 'assets',
@@ -771,9 +796,14 @@ ${extractionError ? `<div class="error">${escapeHtml(extractionError)}</div>` : 
 <h2>Confidence</h2>
 <pre class="json-block">${escapeHtml(JSON.stringify(result.confidence, null, 2) || 'null')}</pre>
 
-${candidates.length ? `<h2>Subject candidates</h2>
-<div class="table-wrap"><table><thead><tr><th>#</th><th>Name</th><th>Regulation</th><th>Branch</th><th>Year/Sem</th><th>Category</th><th>Type</th><th></th></tr></thead><tbody>
-${candidates.map((candidate, index) => `<tr>
+${renderPdfExtractionSummary(result.parsedPayload)}
+
+${candidates.length ? `<h2>${escapeHtml(candidateHeading(candidates))}</h2>
+<div class="notice evidence-warning" style="margin-bottom:10px;">Parsed rows are unverified evidence. Extract only rows that clearly match the source document and still run validation before review.</div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Name</th><th>Regulation</th><th>Branch</th><th>Year/Sem</th><th>Category</th><th>Type</th><th>Confidence</th><th></th></tr></thead><tbody>
+${candidates.map((candidate, index) => {
+  const confidence = candidateConfidence(candidate);
+  return `<tr>
   <td>${escapeHtml(candidate.candidate_index ?? index)}</td>
   <td>${escapeHtml(candidate.name || '')}</td>
   <td>${escapeHtml(candidate.regulation || '')}</td>
@@ -781,8 +811,9 @@ ${candidates.map((candidate, index) => `<tr>
   <td>${escapeHtml(candidate.year_sem_label || [candidate.year, candidate.semester].filter(Boolean).join('-'))}</td>
   <td>${escapeHtml(candidate.category || '')}</td>
   <td>${escapeHtml(candidate.type || '')}</td>
+  <td><span class="pill">${escapeHtml(confidence.level)}</span><div class="admin-sub">${escapeHtml(confidence.reason)}</div></td>
   <td>
-    <form method="post" action="/admin/parse-results/${escapeHtml(result.id)}/extract">
+    ${confidence.level === 'high' ? `<form method="post" action="/admin/parse-results/${escapeHtml(result.id)}/extract">
       <input type="hidden" name="entity_type" value="subject">
       <input type="hidden" name="candidate_index" value="${escapeHtml(index)}">
       <input type="hidden" name="entity_key" value="${escapeHtml(candidate.name || '')}">
@@ -791,9 +822,25 @@ ${candidates.map((candidate, index) => `<tr>
       <input type="hidden" name="year" value="${escapeHtml(candidate.year || '')}">
       <input type="hidden" name="semester" value="${escapeHtml(candidate.semester || '')}">
       <button type="submit">Extract this candidate</button>
-    </form>
+    </form>` : '<span class="admin-sub">Not extractable until confidence is high.</span>'}
   </td>
-</tr>`).join('')}
+</tr>`;
+}).join('')}
+</tbody></table></div>` : ''}
+
+${lowConfidenceCandidates.length ? `<h2>Low-confidence candidate rows</h2>
+<div class="notice evidence-warning" style="margin-bottom:10px;">These rows were not promoted to subject candidates because the parser could not verify enough subject-table structure.</div>
+<div class="table-wrap"><table><thead><tr><th>#</th><th>Possible name</th><th>Reason</th><th>Row evidence</th></tr></thead><tbody>
+${lowConfidenceCandidates.slice(0, 50).map((candidate, index) => {
+  const confidence = candidateConfidence(candidate);
+  return `<tr><td>${escapeHtml(candidate.candidate_index ?? index)}</td><td>${escapeHtml(candidate.name || '')}</td><td>${escapeHtml(confidence.reason)}</td><td class="mono">${escapeHtml(candidate.evidence?.row_text || '')}</td></tr>`;
+}).join('')}
+</tbody></table></div>` : ''}
+
+${ignoredRows.length ? `<h2>Ignored table rows</h2>
+<div class="notice" style="margin-bottom:10px;">The parser ignored these rows because they looked like contact, staff, navigation, department, address, or otherwise non-syllabus table content.</div>
+<div class="table-wrap"><table><thead><tr><th>Table</th><th>Row</th><th>Reason</th><th>Row evidence</th></tr></thead><tbody>
+${ignoredRows.slice(0, 50).map(row => `<tr><td>${escapeHtml(row.table_index ?? '')}</td><td>${escapeHtml(row.row_index ?? '')}</td><td>${escapeHtml(row.reason || '')}</td><td class="mono">${escapeHtml(row.row_text || '')}</td></tr>`).join('')}
 </tbody></table></div>` : ''}
 
 <h2>Extract entity payload</h2>
@@ -1373,16 +1420,17 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <div class="notice" style="margin-top:14px;">This apply plan only writes review files under <span class="mono">${escapeHtml(plan.plan_path)}</span>. It does not write live data/*.json, modify dist/, deploy, publish, or mark content verified.</div>
 
 <h2>Final live JSON apply</h2>
-<form class="action-box" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
+<form class="action-box danger-zone" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
   <strong>Apply to live JSON</strong>
-  <div class="admin-sub">This writes live data/*.json, creates backups, runs build/retrieval/audit checks, and leaves deployment as a manual Git commit/push step. It does not auto-deploy.</div>
+  <div class="danger-copy">Danger: this is the first step that writes to live data/*.json. Use only after final human review of the apply plan, release summary, proposal validations, backups, and rollback path.</div>
+  <div class="admin-sub">This writes live data/*.json, creates backups, runs build/retrieval/audit checks, and leaves deployment as a manual Git commit/push step. It does not auto-deploy, crawl, schedule jobs, or switch CONTENT_SOURCE.</div>
   ${latestApply ? `<div class="notice" style="margin-top:10px;">Latest apply: <a href="/admin/release-live-applies/${escapeHtml(latestApply.id)}">#${escapeHtml(latestApply.id)}</a> <span class="pill">${escapeHtml(latestApply.status)}</span></div>` : ''}
   <label for="reviewer_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
   <textarea id="reviewer_note" name="reviewer_note" required placeholder="Record final human review and why this release can be applied."></textarea>
   <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
   <input id="confirmation_phrase" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(confirmationPhrase)}">
-  <button class="warn" type="submit"${canApplyLive ? '' : ' disabled'}>Apply to live JSON</button>
-  ${canApplyLive ? `<div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. This does not push to GitHub or deploy.</div>` : '<div class="notice" style="margin-top:10px;">Live apply is blocked unless the release is ready_for_review and the apply plan has zero warnings.</div>'}
+  <button class="reject" type="submit"${canApplyLive ? '' : ' disabled'}>Apply to live JSON</button>
+  ${canApplyLive ? `<div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. After this write, inspect changed files locally before any Git commit or deploy.</div>` : '<div class="notice" style="margin-top:10px;">Live apply is blocked unless the release is ready_for_review and the apply plan has zero warnings.</div>'}
 </form>
 
 <h2>Ordered file changes</h2>

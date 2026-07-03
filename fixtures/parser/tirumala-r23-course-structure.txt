@@ -1,0 +1,20 @@
+B.Tech CSE (R23- 2nd Year COURSE STRUCTURE & SYLLABUS)
+B.Tech.- II Year I Semester
+S.No. Category Title L T P Credits
+1 BS&H Discrete Mathematics &
+Graph Theory
+3 0 0 3
+2 Professional Core Advanced Data Structures &
+Algorithm Analysis
+3 0 0 3
+3 Professional Core Advanced Data Structures and
+Algorithm Analysis Lab
+0 0 3 1.5
+Total 6 0 3 7.5
+B.Tech.- II Year II Semester
+S.No. Category Title L T P Credits
+1 BS&H Design Thinking
+&Innovation 1 0 2 2
+2 Skill Enhancement
+Course Full Stack Development - I 0 1 2 2
+Total 1 1 4 4

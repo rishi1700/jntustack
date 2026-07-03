@@ -209,21 +209,39 @@ explicit parser keys and may be suggested from `discovery_sources.parser_key`.
 They still run only when an admin manually starts them against an already stored
 asset. Source-specific parser output remains evidence, not verified content.
 
+PDF parsing uses `unpdf` for Node/serverless-friendly text extraction without
+OS-level binaries. `pdf-parse` was evaluated first, but its current npm package
+pulls in `@napi-rs/canvas`, which is riskier for Hostinger-style managed Node
+hosting. `pdf-text-basic` extracts page text only; it does not create proposals
+or publish content.
+
 The first source-specific parser emits:
 
 ```
 evidence_type: source_specific_subject_index
 candidates: []
+low_confidence_candidates: []
+ignored_table_rows: []
 source_url
 parser_version
 evidence_status: needs_review
 ```
 
-Admins can inspect candidate rows and manually extract one candidate into an
-`extraction_results` row. Candidate extraction records audit evidence and still
-uses validation; missing category/type/year/branch/regulation fields remain
-missing unless they are clearly present in the uploaded evidence or supplied as
-reviewer hints.
+Admins can inspect parsed candidate rows and manually extract one high-confidence
+candidate into an `extraction_results` row. Source-specific parsers must keep
+generic contact, staff, department, address, navigation, or unclear table rows
+out of subject candidates. Unclear rows belong in `low_confidence_candidates` or
+`ignored_table_rows` with a reason. Candidate extraction records audit evidence
+and still uses validation; missing category/type/year/branch/regulation fields
+remain missing unless they are clearly present in the uploaded evidence or
+supplied as reviewer hints.
+
+`tirumala-r23-syllabus-pdf` is the first syllabus-specific PDF parser. It reads
+already stored PDF assets, extracts text, then looks only for clear
+course-structure tables with `S.No`, `Category`, `Title`, `L`, `T`, `P`, and
+`Credits` columns. High-confidence candidates require a clear title, category,
+type, regulation, branch, year/semester context, and L/T/P values. Ambiguous
+rows remain low-confidence or ignored evidence.
 
 Manual source fetch is an evidence-ingestion path for one URL at a time. From a
 discovery source detail page, an admin can fetch a URL that belongs to that
@@ -289,8 +307,11 @@ marked ready for review. A summary includes item count, affected entity types,
 files that would change, validation status per item, proposal/export/draft/
 revision links, a combined diff summary, and blocking warnings for failed
 validation, missing draft applies, missing revisions, duplicate entity keys, or
-the same file being touched by multiple proposals. Generating a summary records
-`release_review.generate` and `release_review.warning` audit entries.
+the same file being touched by multiple proposals. Warning codes distinguish
+`missing_export`, `missing_draft_apply`, `missing_revision`, and
+`validation_failed` so operators can tell missing review artifacts from payload
+validation failures. Generating a summary records `release_review.generate` and
+`release_review.warning` audit entries.
 
 A release candidate can move to `ready_for_review` only when the generated
 summary has no blocking warnings. Blocked attempts record
