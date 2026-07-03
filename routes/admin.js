@@ -1,3 +1,4 @@
+import { spawn } from 'node:child_process';
 import express, { Router } from 'express';
 import { getAdminConfig, getAdminTestConfig } from '../lib/config.js';
 import {
@@ -112,7 +113,6 @@ import {
   recoverPartialLiveApply,
   releaseLiveApplyErrorSummary,
   rollbackReleaseLiveApply,
-  runReleaseLiveApplyVerification,
 } from '../lib/release-live-apply.js';
 import {
   cleanupTestFixtures,
@@ -183,6 +183,16 @@ function statusCounts(subjects) {
     acc[status] = (acc[status] || 0) + 1;
     return acc;
   }, {});
+}
+
+function startBackgroundScript(root, script, args = []) {
+  const child = spawn(process.execPath, [script, ...args.map(String)], {
+    cwd: root,
+    env: { ...process.env },
+    detached: true,
+    stdio: 'ignore',
+  });
+  child.unref();
 }
 
 function collectSources(content) {
@@ -1197,11 +1207,12 @@ export function createAdminRouter({ root }) {
 
   router.post('/release-live-applies/:id/verify', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const result = await runReleaseLiveApplyVerification({
-        root,
-        applyId: req.params.id,
-        actor: config.email,
-      });
+      const result = await getReleaseLiveApply(req.params.id);
+      if (!result) {
+        res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release live apply result not found.' }));
+        return;
+      }
+      startBackgroundScript(root, 'scripts/verify-release-live-apply.js', [req.params.id, config.email]);
       res.redirect(`/admin/release-live-applies/${result.id}`);
     } catch (err) {
       try {

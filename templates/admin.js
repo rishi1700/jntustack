@@ -1579,10 +1579,10 @@ ${verificationRows(result.verification)}
 
 <h2>Run / resume verification</h2>
 <form class="action-box" method="post" action="/admin/release-live-applies/${escapeHtml(result.id)}/verify">
-  <strong>Run build, retrieval, and site audit checks</strong>
-  <div class="admin-sub">This is resumable. If Hostinger times out while checks run, return to this page and run verification again; the DB row and backup path remain recorded.</div>
-  <button type="submit"${canVerify ? '' : ' disabled'}>Run verification</button>
-  ${canVerify ? '<div class="notice evidence-warning" style="margin-top:10px;">Do not commit or deploy until verification passes.</div>' : '<div class="notice" style="margin-top:10px;">Verification is unavailable for this status.</div>'}
+  <strong>Start background build, retrieval, and site audit checks</strong>
+  <div class="admin-sub">Starts a detached verification worker and returns immediately. Refresh this page to watch status. If the worker is interrupted, run verification again; the DB row remains recorded.</div>
+  <button type="submit"${canVerify ? '' : ' disabled'}>Start verification</button>
+  ${canVerify ? '<div class="notice evidence-warning" style="margin-top:10px;">Do not commit or deploy until verification passes and the status is published_pending_deploy or published_pending_deploy_recovered.</div>' : '<div class="notice" style="margin-top:10px;">Verification is unavailable for this status.</div>'}
 </form>
 
 <h2>Rollback</h2>
