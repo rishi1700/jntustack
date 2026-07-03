@@ -20,6 +20,9 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
     ['assets', '/admin/assets', 'Assets'],
     ['source_evidence', '/admin/source-evidence', 'Evidence'],
   ];
+  if (String(process.env.ADMIN_TEST_TOOLS || '').trim().toLowerCase() === 'true') {
+    nav.push(['test_tools', '/admin/test-tools', 'Test tools']);
+  }
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -126,6 +129,46 @@ ${adminShell({ title: 'Login', body: '' }).match(/<style>[\s\S]*<\/style>/)[0]}
 
 export function renderAdminConfigError({ message }) {
   return `<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Admin not configured</title></head><body><h1>Admin not configured</h1><p>${escapeHtml(message)}</p></body></html>`;
+}
+
+export function renderAdminTestToolsPage({ enabled, result = null, cleanup = null, error = null }) {
+  if (!enabled) {
+    return adminShell({
+      title: 'Test tools',
+      active: 'test_tools',
+      body: `
+<div class="admin-top"><div><h1>Test tools</h1><div class="admin-sub">Disabled</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="notice">Admin test tools are disabled. Set ADMIN_TEST_TOOLS=true only for controlled dry-run testing.</div>`,
+    });
+  }
+  return adminShell({
+    title: 'Test tools',
+    active: 'test_tools',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Test tools' }],
+    body: `
+<div class="admin-top"><div><h1>Test tools</h1><div class="admin-sub">Controlled dry-run fixtures only. Not public content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<div class="notice">These actions create and clean up records whose entity_key starts with <span class="mono">test-</span>. They do not write live data/*.json, modify dist/, publish, crawl, schedule jobs, or expose /api/ask.</div>
+
+<section class="proposal-actions">
+  <form class="action-box" method="post" action="/admin/test-tools/release-dry-run">
+    <strong>Run release candidate dry run</strong>
+    <div class="admin-sub">Runs proposal -> approve_for_draft -> release candidate -> export -> draft apply -> revision -> review summary -> ready_for_review.</div>
+    <button type="submit">Run dry run</button>
+  </form>
+  <form class="action-box" method="post" action="/admin/test-tools/cleanup">
+    <strong>Cleanup test fixtures</strong>
+    <div class="admin-sub">Removes test proposals, release candidates, exports, draft applies, revisions, and tmp fixture folders.</div>
+    <button class="reject" type="submit">Cleanup fixtures</button>
+  </form>
+</section>
+
+<h2>Last dry-run result</h2>
+${result ? `<pre class="json-block">${escapeHtml(JSON.stringify(result, null, 2))}</pre>` : '<div class="notice">No dry-run result in this request.</div>'}
+
+<h2>Last cleanup result</h2>
+${cleanup ? `<pre class="json-block">${escapeHtml(JSON.stringify(cleanup, null, 2))}</pre>` : '<div class="notice">No cleanup result in this request.</div>'}`,
+  });
 }
 
 export function renderDashboard({ counts, contentSource }) {

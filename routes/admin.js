@@ -1,5 +1,5 @@
 import express, { Router } from 'express';
-import { getAdminConfig } from '../lib/config.js';
+import { getAdminConfig, getAdminTestConfig } from '../lib/config.js';
 import {
   assetErrorSummary,
   getAsset,
@@ -88,6 +88,11 @@ import {
   releaseReviewErrorSummary,
 } from '../lib/release-review.js';
 import {
+  cleanupTestFixtures,
+  runReleaseCandidateDryRun,
+  testFixtureErrorSummary,
+} from '../lib/test-fixtures.js';
+import {
   applyProposalExportToDraft,
   getProposalDraftApply,
   listProposalDraftApplies,
@@ -103,6 +108,7 @@ import {
 import {
   renderAdminConfigError,
   renderAdminChecksPage,
+  renderAdminTestToolsPage,
   renderAssetDetailPage,
   renderAssetUploadPage,
   renderAssetsPage,
@@ -234,6 +240,7 @@ async function getContent(root) {
 export function createAdminRouter({ root }) {
   const router = Router();
   const config = getAdminConfig();
+  const testConfig = getAdminTestConfig();
 
   router.use((req, res, next) => {
     if (!config.enabled) {
@@ -305,6 +312,46 @@ export function createAdminRouter({ root }) {
       res.send(renderAdminChecksPage({ checks }));
     } catch (err) {
       next(err);
+    }
+  });
+
+  router.get('/test-tools', async (req, res) => {
+    if (!testConfig.enabled) {
+      res.status(404).send('Not found');
+      return;
+    }
+    res.send(renderAdminTestToolsPage({ enabled: true }));
+  });
+
+  router.post('/test-tools/release-dry-run', express.urlencoded({ extended: false }), async (req, res) => {
+    if (!testConfig.enabled) {
+      res.status(404).send('Not found');
+      return;
+    }
+    try {
+      const result = await runReleaseCandidateDryRun({ root, actor: config.email });
+      res.send(renderAdminTestToolsPage({ enabled: true, result }));
+    } catch (err) {
+      res.status(400).send(renderAdminTestToolsPage({
+        enabled: true,
+        error: testFixtureErrorSummary(err),
+      }));
+    }
+  });
+
+  router.post('/test-tools/cleanup', express.urlencoded({ extended: false }), async (req, res) => {
+    if (!testConfig.enabled) {
+      res.status(404).send('Not found');
+      return;
+    }
+    try {
+      const cleanup = await cleanupTestFixtures({ root, actor: config.email });
+      res.send(renderAdminTestToolsPage({ enabled: true, cleanup }));
+    } catch (err) {
+      res.status(400).send(renderAdminTestToolsPage({
+        enabled: true,
+        error: testFixtureErrorSummary(err),
+      }));
     }
   });
 

@@ -298,6 +298,23 @@ summary has no blocking warnings. Blocked attempts record
 `release_candidate.ready_for_review`. This is still review state only and does
 not publish or write live JSON files.
 
+Admin test tools are disabled by default and only appear when
+`ADMIN_TEST_TOOLS=true`. The test page can create a clearly marked release dry
+run using an entity key that starts with `test-`, then run the full controlled
+path:
+
+```
+test proposal -> approve_for_draft -> release candidate -> export
+  -> draft apply -> revision -> review summary -> ready_for_review
+```
+
+Test fixtures never write live `data/*.json`, never modify `dist/`, and are not
+included in the public JSON-backed build. The cleanup action removes test
+proposals, test release candidates, test exports, draft applies, revision
+metadata, and the matching `tmp/proposal-exports/` and `tmp/content-drafts/`
+fixture folders. Fixture create and cleanup operations record
+`test_fixture.create` and `test_fixture.cleanup` audit entries.
+
 Draft apply is the next controlled review step. From a proposal export detail
 page, an admin can apply a passed export into
 `tmp/content-drafts/<proposal-id>/`. This creates a full copied `data/` snapshot
@@ -341,6 +358,7 @@ ADMIN_ENABLED=false
 ADMIN_EMAIL=admin@jntustack.com
 ADMIN_PASSWORD_HASH=sha256:<hex>
 # ADMIN_PASSWORD=... is accepted for local setup, but prefer a hash.
+ADMIN_TEST_TOOLS=false
 ```
 
 Generate a simple SHA-256 hash locally:
