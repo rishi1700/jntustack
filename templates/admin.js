@@ -1534,7 +1534,7 @@ export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROL
   if (!result) {
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release live apply result not found.' });
   }
-  const canVerify = ['files_written', 'verification_running', 'partial_applied', 'recovered_applied', 'manual_rollback_required'].includes(result.status);
+  const canVerify = ['files_written', 'verification_running', 'partial_applied', 'recovered_applied', 'manual_rollback_required', 'published_pending_deploy', 'published_pending_deploy_recovered'].includes(result.status);
   const canRollback = Boolean(result.backupExists && result.backupPath && ['files_written', 'partial_applied', 'recovered_applied', 'published_pending_deploy', 'published_pending_deploy_recovered', 'failed'].includes(result.status));
   const manualRollback = !result.backupExists && ['manual_rollback_required', 'recovered_applied', 'partial_applied'].includes(result.status);
   return adminShell({
