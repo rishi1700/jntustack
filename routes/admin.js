@@ -104,12 +104,15 @@ import {
 } from '../lib/release-apply-plan.js';
 import {
   LIVE_APPLY_CONFIRMATION,
+  LIVE_RECOVERY_CONFIRMATION,
   LIVE_ROLLBACK_CONFIRMATION,
   applyReleaseToLiveJson,
   getLatestReleaseLiveApply,
   getReleaseLiveApply,
+  recoverPartialLiveApply,
   releaseLiveApplyErrorSummary,
   rollbackReleaseLiveApply,
+  runReleaseLiveApplyVerification,
 } from '../lib/release-live-apply.js';
 import {
   cleanupTestFixtures,
@@ -1115,6 +1118,7 @@ export function createAdminRouter({ root }) {
         plan,
         latestApply,
         confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+        recoveryPhrase: LIVE_RECOVERY_CONFIRMATION,
       }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseApplyPlanErrorSummary(err) }));
@@ -1139,6 +1143,34 @@ export function createAdminRouter({ root }) {
           plan,
           latestApply,
           confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+          recoveryPhrase: LIVE_RECOVERY_CONFIRMATION,
+          error: releaseLiveApplyErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.post('/release-candidates/:id/recover-live-apply', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await recoverPartialLiveApply({
+        root,
+        releaseCandidateId: req.params.id,
+        confirmationPhrase: req.body?.confirmation_phrase,
+        reviewerNote: req.body?.reviewer_note,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-live-applies/${result.id}`);
+    } catch (err) {
+      try {
+        const plan = await getReleaseApplyPlan({ root, releaseCandidateId: req.params.id });
+        const latestApply = await getLatestReleaseLiveApply(req.params.id);
+        res.status(400).send(renderReleaseApplyPlanDetailPage({
+          plan,
+          latestApply,
+          confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+          recoveryPhrase: LIVE_RECOVERY_CONFIRMATION,
           error: releaseLiveApplyErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1160,6 +1192,28 @@ export function createAdminRouter({ root }) {
       }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-live-applies/:id/verify', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await runReleaseLiveApplyVerification({
+        root,
+        applyId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-live-applies/${result.id}`);
+    } catch (err) {
+      try {
+        const result = await getReleaseLiveApply(req.params.id);
+        res.status(400).send(renderReleaseLiveApplyDetailPage({
+          result,
+          rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
+          error: releaseLiveApplyErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(innerErr) }));
+      }
     }
   });
 

@@ -1403,6 +1403,18 @@ ${release.status === 'ready_for_review' ? `<form class="action-box" method="post
   ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary warnings exist.</div>' : ''}
 </form>` : '<div class="notice">Apply plans can only be generated after the release candidate reaches ready_for_review.</div>'}
 
+<h2>Partial live apply recovery</h2>
+<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/recover-live-apply">
+  <strong>Recover timeout/partial live apply</strong>
+  <div class="admin-sub">Use only if a previous live apply request timed out after writing data/*.json but before a live apply record was created. This inspects the current live data file, searches for a backup, and creates recovery bookkeeping. It does not write data/*.json.</div>
+  <label for="candidate_recovery_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="candidate_recovery_note" name="reviewer_note" required placeholder="Record the incident and why recovery is needed."></textarea>
+  <label for="candidate_recovery_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="candidate_recovery_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="RECOVER PARTIAL APPLY">
+  <button type="submit">Recover partial apply</button>
+  <div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">RECOVER PARTIAL APPLY</span> exactly. This is for incident recovery only.</div>
+</form>
+
 <h2>Add approved proposal</h2>
 ${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/items">
   <label for="proposal_id"><strong>Approved proposal</strong></label>
@@ -1440,6 +1452,7 @@ export function renderReleaseApplyPlanDetailPage({
   plan,
   latestApply = null,
   confirmationPhrase = 'APPLY LIVE JSON',
+  recoveryPhrase = 'RECOVER PARTIAL APPLY',
   error = null,
 }) {
   if (!plan) {
@@ -1447,7 +1460,8 @@ export function renderReleaseApplyPlanDetailPage({
   }
   const warnings = plan.final_warnings || [];
   const changes = plan.changes || [];
-  const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0;
+  const activeApply = latestApply && !['rolled_back', 'failed'].includes(latestApply.status);
+  const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0 && !activeApply;
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -1472,15 +1486,27 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <h2>Final live JSON apply</h2>
 <form class="action-box danger-zone" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
   <strong>Apply to live JSON</strong>
-  <div class="danger-copy">Danger: this is the first step that writes to live data/*.json. Use only after final human review of the apply plan, release summary, proposal validations, backups, and rollback path.</div>
-  <div class="admin-sub">This writes live data/*.json, creates backups, runs build/retrieval/audit checks, and leaves deployment as a manual Git commit/push step. It does not auto-deploy, crawl, schedule jobs, or switch CONTENT_SOURCE.</div>
+  <div class="danger-copy">Danger: this writes live data/*.json. The write request records a DB row first, creates backups, writes files, then stops for separate verification.</div>
+  <div class="admin-sub">This does not run long build/retrieval/audit checks inside the write request. After files are written, open the live apply record and run verification from there. It does not auto-deploy, crawl, schedule jobs, or switch CONTENT_SOURCE.</div>
   ${latestApply ? `<div class="notice" style="margin-top:10px;">Latest apply: <a href="/admin/release-live-applies/${escapeHtml(latestApply.id)}">#${escapeHtml(latestApply.id)}</a> <span class="pill">${escapeHtml(latestApply.status)}</span></div>` : ''}
   <label for="reviewer_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
   <textarea id="reviewer_note" name="reviewer_note" required placeholder="Record final human review and why this release can be applied."></textarea>
   <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
   <input id="confirmation_phrase" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(confirmationPhrase)}">
   <button class="reject" type="submit"${canApplyLive ? '' : ' disabled'}>Apply to live JSON</button>
-  ${canApplyLive ? `<div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. After this write, inspect changed files locally before any Git commit or deploy.</div>` : '<div class="notice" style="margin-top:10px;">Live apply is blocked unless the release is ready_for_review and the apply plan has zero warnings.</div>'}
+  ${canApplyLive ? `<div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. After this write, run verification from the live apply page before any Git commit or deploy.</div>` : `<div class="notice" style="margin-top:10px;">Live apply is blocked unless the release is ready_for_review, the apply plan has zero warnings, and no active live apply already exists.${activeApply ? ' Use the latest live apply page to verify, recover, or roll back.' : ''}</div>`}
+</form>
+
+<h2>Recover partial apply</h2>
+<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(plan.release_candidate_id)}/recover-live-apply">
+  <strong>Recover an already-written live JSON change</strong>
+  <div class="admin-sub">Use only after a prior apply request timed out after writing live JSON. This inspects the live data file, searches for a backup directory, creates a recovery record, and makes verification/rollback state visible.</div>
+  <label for="recovery_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="recovery_note" name="reviewer_note" required placeholder="Record why this partial apply is being recovered."></textarea>
+  <label for="recovery_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="recovery_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(recoveryPhrase)}">
+  <button type="submit"${activeApply ? ' disabled' : ''}>Recover partial apply</button>
+  <div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(recoveryPhrase)}</span> exactly. This does not write data/*.json; it records the observed partial state.</div>
 </form>
 
 <h2>Ordered file changes</h2>
@@ -1508,7 +1534,9 @@ export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROL
   if (!result) {
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release live apply result not found.' });
   }
-  const canRollback = result.status === 'published_pending_deploy';
+  const canVerify = ['files_written', 'verification_running', 'partial_applied', 'recovered_applied', 'manual_rollback_required'].includes(result.status);
+  const canRollback = Boolean(result.backupExists && result.backupPath && ['files_written', 'partial_applied', 'recovered_applied', 'published_pending_deploy', 'published_pending_deploy_recovered', 'failed'].includes(result.status));
+  const manualRollback = !result.backupExists && ['manual_rollback_required', 'recovered_applied', 'partial_applied'].includes(result.status);
   return adminShell({
     title: `Live apply ${result.id}`,
     active: 'release_candidates',
@@ -1523,11 +1551,14 @@ export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROL
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Phase</div><div class="metric-value">${escapeHtml(result.phase || 'unknown')}</div></div>
   <div class="metric"><div class="metric-label">Release</div><div class="metric-value"><a href="/admin/release-candidates/${escapeHtml(result.releaseCandidateId)}">${escapeHtml(result.releaseCandidateId)}</a></div></div>
   <div class="metric"><div class="metric-label">Files changed</div><div class="metric-value">${escapeHtml(result.changedFiles.length)}</div></div>
   <div class="metric"><div class="metric-label">Verification</div><div class="metric-value ${result.verification?.status === 'passed' ? 'status-ok' : 'status-bad'}">${escapeHtml(result.verification?.status || 'unknown')}</div></div>
+  <div class="metric"><div class="metric-label">Backup</div><div class="metric-value ${result.backupExists ? 'status-ok' : 'status-bad'}">${escapeHtml(result.backupExists ? 'yes' : 'no')}</div></div>
 </section>
-<div class="notice" style="margin-top:14px;">Live JSON was updated only if this status is <span class="mono">published_pending_deploy</span>. The next production step is manual Git review, commit, and push. This page does not deploy.</div>
+<div class="notice" style="margin-top:14px;">Live JSON is considered safely ready for Git review only after status is <span class="mono">published_pending_deploy</span> or <span class="mono">published_pending_deploy_recovered</span> and verification is passed. This page does not deploy.</div>
+${result.errorMessage ? `<div class="error">${escapeHtml(result.errorMessage)}</div>` : ''}
 
 <h2>Changed files</h2>
 <div class="table-wrap"><table><thead><tr><th>File</th></tr></thead><tbody>
@@ -1535,23 +1566,35 @@ ${result.changedFiles.length ? result.changedFiles.map(file => `<tr><td class="m
 </tbody></table></div>
 
 <h2>Backup</h2>
-<div class="notice mono">${escapeHtml(result.backupPath)}</div>
+<div class="notice mono">${result.backupPath ? escapeHtml(result.backupPath) : 'No backup path recorded.'}</div>
+${manualRollback ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Manual rollback required.</strong><br>Automatic rollback is unavailable because no backup path was found. Changed file(s): <span class="mono">${escapeHtml(result.changedFiles.join(', '))}</span>. Recovery details identify the applied entity keys.</div>` : ''}
+
+<h2>Recovery details</h2>
+${result.recovery ? `<pre class="json-block">${escapeHtml(JSON.stringify(result.recovery, null, 2))}</pre>` : '<div class="notice">No recovery metadata recorded.</div>'}
 
 <h2>Verification output</h2>
 <div class="table-wrap"><table><thead><tr><th>Command</th><th>Status</th><th>Exit</th><th>Output</th></tr></thead><tbody>
 ${verificationRows(result.verification)}
 </tbody></table></div>
 
+<h2>Run / resume verification</h2>
+<form class="action-box" method="post" action="/admin/release-live-applies/${escapeHtml(result.id)}/verify">
+  <strong>Run build, retrieval, and site audit checks</strong>
+  <div class="admin-sub">This is resumable. If Hostinger times out while checks run, return to this page and run verification again; the DB row and backup path remain recorded.</div>
+  <button type="submit"${canVerify ? '' : ' disabled'}>Run verification</button>
+  ${canVerify ? '<div class="notice evidence-warning" style="margin-top:10px;">Do not commit or deploy until verification passes.</div>' : '<div class="notice" style="margin-top:10px;">Verification is unavailable for this status.</div>'}
+</form>
+
 <h2>Rollback</h2>
 <form class="action-box" method="post" action="/admin/release-live-applies/${escapeHtml(result.id)}/rollback">
   <strong>Restore backed-up JSON files</strong>
-  <div class="admin-sub">Allowed only while status is published_pending_deploy. Restores files from backup and reruns verification. It does not commit, push, or deploy.</div>
+  <div class="admin-sub">Allowed only when a backup path exists. Restores files from backup and reruns verification. It does not commit, push, or deploy.</div>
   <label for="rollback_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
   <textarea id="rollback_note" name="reviewer_note" required placeholder="Record why this live JSON apply is being rolled back."${canRollback ? '' : ' disabled'}></textarea>
   <label for="rollback_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
   <input id="rollback_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(rollbackPhrase)}"${canRollback ? '' : ' disabled'}>
   <button class="reject" type="submit"${canRollback ? '' : ' disabled'}>Rollback live JSON apply</button>
-  ${canRollback ? `<div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(rollbackPhrase)}</span> exactly.</div>` : '<div class="notice" style="margin-top:10px;">Rollback is unavailable for this status.</div>'}
+  ${canRollback ? `<div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(rollbackPhrase)}</span> exactly.</div>` : '<div class="notice" style="margin-top:10px;">Automatic rollback is unavailable for this status or no backup path is recorded.</div>'}
 </form>`,
   });
 }

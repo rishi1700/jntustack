@@ -2196,6 +2196,43 @@
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
       "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-eee-2-1-complex-variables-and-numerical-methods",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Complex Variables & Numerical Methods",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-complex-variables-and-numerical-methods",
+        "title": "Complex Variables & Numerical Methods",
+        "meta_description": "Complex Variables & Numerical Methods extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     }
   ]
 }
