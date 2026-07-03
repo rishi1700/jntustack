@@ -180,7 +180,7 @@ export function renderAdminChecksPage({ checks }) {
   <div class="metric"><div class="metric-label">Public content</div><div class="metric-value">${passFail(checks.content.subjectsVerified > 0 && checks.content.collegesTotal > 0)}</div></div>
   <div class="metric"><div class="metric-label">Search index</div><div class="metric-value">${passFail(checks.searchIndex.ok && checks.searchIndex.total === 619)}</div></div>
   <div class="metric"><div class="metric-label">Storage</div><div class="metric-value">${passFail(checks.storage.ok)}</div></div>
-  <div class="metric"><div class="metric-label">Database</div><div class="metric-value">${checks.db.skipped ? '<span class="status-warn">not configured</span>' : passFail(checks.db.ok)}</div></div>
+  <div class="metric"><div class="metric-label">Database</div><div class="metric-value">${checks.db.skipped ? '<span class="status-warn">not configured</span>' : checks.db.connected ? passFail(checks.db.ok) : '<span class="status-bad">connection failed</span>'}</div></div>
 </section>
 
 <h2>Runtime</h2>
