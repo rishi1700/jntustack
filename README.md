@@ -312,6 +312,34 @@ content verified. Apply-plan generation records `release_apply_plan.generate`;
 blocked and error paths record `release_apply_plan.blocked` and
 `release_apply_plan.error`.
 
+Final live JSON apply is a guarded admin action from the release apply-plan
+detail page. It requires:
+
+- release candidate status `ready_for_review`
+- an existing generated apply plan
+- zero apply-plan/release-review warnings
+- every proposal still `approved_for_draft`
+- every proposal/export/draft validation still `passed`
+- no duplicate entity keys or conflicting file changes
+- reviewer note
+- exact confirmation phrase `APPLY LIVE JSON`
+
+Before writing, changed files are backed up under
+`tmp/live-release-backups/<release-candidate-id>/<timestamp>/`. The service then
+writes the planned JSON changes to live `data/*.json`, runs `npm run build`,
+`npm run test:retrieve`, and `npm run audit:site`, records
+`release_live_apply.success`, and marks the release candidate
+`published_pending_deploy`. This still does not deploy. A human must review the
+working tree, commit the changed JSON/build output, and push to GitHub for the
+normal Hostinger auto-deploy.
+
+If validation/build/retrieval/audit fails after writing, the service restores
+the changed files from backup and records a failed apply. Rollback is also
+available for the latest `published_pending_deploy` apply using the exact
+confirmation phrase `ROLLBACK LIVE JSON`; it restores the backup and reruns the
+verification checks. Rollback does not commit, push, deploy, crawl, schedule, or
+switch content source.
+
 Admin test tools are disabled by default and only appear when
 `ADMIN_TEST_TOOLS=true`. The test page can create a clearly marked release dry
 run using an entity key that starts with `test-`, then run the full controlled
@@ -363,6 +391,8 @@ Asset
   -> Revision
   -> Release Review Summary
   -> Release Apply Plan
+  -> Apply Live JSON
+  -> Manual Git Commit/Push
   -> (Future Publish)
 ```
 

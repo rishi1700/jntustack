@@ -1198,9 +1198,24 @@ ${items.length ? items.map(item => {
   });
 }
 
-export function renderReleaseApplyPlanDetailPage({ plan }) {
+function verificationRows(verification) {
+  const checks = verification?.checks || [];
+  if (!checks.length) return '<tr><td colspan="4">No verification checks recorded.</td></tr>';
+  return checks.map(check => `<tr><td class="mono">${escapeHtml(check.command)}</td><td><span class="pill">${escapeHtml(check.status)}</span></td><td>${escapeHtml(check.exit_code)}</td><td><details><summary>Output</summary><pre class="mono" style="white-space:pre-wrap;">${escapeHtml([check.stdout, check.stderr].filter(Boolean).join('\n'))}</pre></details></td></tr>`).join('');
+}
+
+export function renderReleaseApplyPlanDetailPage({
+  plan,
+  latestApply = null,
+  confirmationPhrase = 'APPLY LIVE JSON',
+  error = null,
+}) {
+  if (!plan) {
+    return renderReleaseCandidateUnavailablePage({ message: error || 'Release apply plan not found.' });
+  }
   const warnings = plan.final_warnings || [];
   const changes = plan.changes || [];
+  const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0;
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -1213,6 +1228,7 @@ export function renderReleaseApplyPlanDetailPage({ plan }) {
     body: `
 <div class="admin-top"><div><h1>Release apply plan ${escapeHtml(plan.release_candidate_id)}</h1><div class="admin-sub">NOT APPLIED / NOT PUBLISHED. Review artifact only.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('release')}
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
@@ -1220,6 +1236,19 @@ ${workflowNav('release')}
   <div class="metric"><div class="metric-label">Generated</div><div class="metric-value" style="font-size:15px;">${escapeHtml(plan.generated_at || '')}</div></div>
 </section>
 <div class="notice" style="margin-top:14px;">This apply plan only writes review files under <span class="mono">${escapeHtml(plan.plan_path)}</span>. It does not write live data/*.json, modify dist/, deploy, publish, or mark content verified.</div>
+
+<h2>Final live JSON apply</h2>
+<form class="action-box" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
+  <strong>Apply to live JSON</strong>
+  <div class="admin-sub">This writes live data/*.json, creates backups, runs build/retrieval/audit checks, and leaves deployment as a manual Git commit/push step. It does not auto-deploy.</div>
+  ${latestApply ? `<div class="notice" style="margin-top:10px;">Latest apply: <a href="/admin/release-live-applies/${escapeHtml(latestApply.id)}">#${escapeHtml(latestApply.id)}</a> <span class="pill">${escapeHtml(latestApply.status)}</span></div>` : ''}
+  <label for="reviewer_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="reviewer_note" name="reviewer_note" required placeholder="Record final human review and why this release can be applied."></textarea>
+  <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="confirmation_phrase" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(confirmationPhrase)}">
+  <button class="warn" type="submit"${canApplyLive ? '' : ' disabled'}>Apply to live JSON</button>
+  ${canApplyLive ? `<div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. This does not push to GitHub or deploy.</div>` : '<div class="notice" style="margin-top:10px;">Live apply is blocked unless the release is ready_for_review and the apply plan has zero warnings.</div>'}
+</form>
 
 <h2>Ordered file changes</h2>
 <div class="table-wrap"><table><thead><tr><th>Order</th><th>File</th><th>Operation</th><th>Entity</th><th>Proposal</th><th>Revision</th></tr></thead><tbody>
@@ -1239,6 +1268,58 @@ ${changes.map(change => `<div class="action-box"><strong>${escapeHtml(change.ope
 
 <h2>Rollback notes</h2>
 <div class="notice">Rollback notes are written to <span class="mono">${escapeHtml(plan.rollback_notes_file || 'rollback-notes.md')}</span> inside the apply-plan folder. Because this plan is not applied, rollback means no production action is needed unless a human later applies these changes manually.</div>`,
+  });
+}
+
+export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROLLBACK LIVE JSON', error = null }) {
+  if (!result) {
+    return renderReleaseCandidateUnavailablePage({ message: error || 'Release live apply result not found.' });
+  }
+  const canRollback = result.status === 'published_pending_deploy';
+  return adminShell({
+    title: `Live apply ${result.id}`,
+    active: 'release_candidates',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Dashboard' },
+      { href: '/admin/release-candidates', label: 'Releases' },
+      { href: `/admin/release-candidates/${escapeHtml(result.releaseCandidateId)}`, label: `Release ${result.releaseCandidateId}` },
+      { label: `Live apply ${result.id}` },
+    ],
+    body: `
+<div class="admin-top"><div><h1>Live apply ${escapeHtml(result.id)}</h1><div class="admin-sub">Manual deploy pending. No auto-deploy was triggered by this action.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Release</div><div class="metric-value"><a href="/admin/release-candidates/${escapeHtml(result.releaseCandidateId)}">${escapeHtml(result.releaseCandidateId)}</a></div></div>
+  <div class="metric"><div class="metric-label">Files changed</div><div class="metric-value">${escapeHtml(result.changedFiles.length)}</div></div>
+  <div class="metric"><div class="metric-label">Verification</div><div class="metric-value ${result.verification?.status === 'passed' ? 'status-ok' : 'status-bad'}">${escapeHtml(result.verification?.status || 'unknown')}</div></div>
+</section>
+<div class="notice" style="margin-top:14px;">Live JSON was updated only if this status is <span class="mono">published_pending_deploy</span>. The next production step is manual Git review, commit, and push. This page does not deploy.</div>
+
+<h2>Changed files</h2>
+<div class="table-wrap"><table><thead><tr><th>File</th></tr></thead><tbody>
+${result.changedFiles.length ? result.changedFiles.map(file => `<tr><td class="mono">${escapeHtml(file)}</td></tr>`).join('') : '<tr><td>No files recorded.</td></tr>'}
+</tbody></table></div>
+
+<h2>Backup</h2>
+<div class="notice mono">${escapeHtml(result.backupPath)}</div>
+
+<h2>Verification output</h2>
+<div class="table-wrap"><table><thead><tr><th>Command</th><th>Status</th><th>Exit</th><th>Output</th></tr></thead><tbody>
+${verificationRows(result.verification)}
+</tbody></table></div>
+
+<h2>Rollback</h2>
+<form class="action-box" method="post" action="/admin/release-live-applies/${escapeHtml(result.id)}/rollback">
+  <strong>Restore backed-up JSON files</strong>
+  <div class="admin-sub">Allowed only while status is published_pending_deploy. Restores files from backup and reruns verification. It does not commit, push, or deploy.</div>
+  <label for="rollback_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="rollback_note" name="reviewer_note" required placeholder="Record why this live JSON apply is being rolled back."${canRollback ? '' : ' disabled'}></textarea>
+  <label for="rollback_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="rollback_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(rollbackPhrase)}"${canRollback ? '' : ' disabled'}>
+  <button class="reject" type="submit"${canRollback ? '' : ' disabled'}>Rollback live JSON apply</button>
+  ${canRollback ? `<div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(rollbackPhrase)}</span> exactly.</div>` : '<div class="notice" style="margin-top:10px;">Rollback is unavailable for this status.</div>'}
+</form>`,
   });
 }
 

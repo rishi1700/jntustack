@@ -93,6 +93,15 @@ import {
   releaseApplyPlanErrorSummary,
 } from '../lib/release-apply-plan.js';
 import {
+  LIVE_APPLY_CONFIRMATION,
+  LIVE_ROLLBACK_CONFIRMATION,
+  applyReleaseToLiveJson,
+  getLatestReleaseLiveApply,
+  getReleaseLiveApply,
+  releaseLiveApplyErrorSummary,
+  rollbackReleaseLiveApply,
+} from '../lib/release-live-apply.js';
+import {
   cleanupTestFixtures,
   runReleaseCandidateDryRun,
   testFixtureErrorSummary,
@@ -115,6 +124,7 @@ import {
   renderAdminChecksPage,
   renderAdminTestToolsPage,
   renderReleaseApplyPlanDetailPage,
+  renderReleaseLiveApplyDetailPage,
   renderAssetDetailPage,
   renderAssetUploadPage,
   renderAssetsPage,
@@ -1004,9 +1014,80 @@ export function createAdminRouter({ root }) {
         res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release apply plan not found. Generate it from a ready_for_review release candidate.' }));
         return;
       }
-      res.send(renderReleaseApplyPlanDetailPage({ plan }));
+      const latestApply = await getLatestReleaseLiveApply(req.params.id);
+      res.send(renderReleaseApplyPlanDetailPage({
+        plan,
+        latestApply,
+        confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+      }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseApplyPlanErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-apply-plans/:id/apply-live', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await applyReleaseToLiveJson({
+        root,
+        releaseCandidateId: req.params.id,
+        confirmationPhrase: req.body?.confirmation_phrase,
+        reviewerNote: req.body?.reviewer_note,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-live-applies/${result.id}`);
+    } catch (err) {
+      try {
+        const plan = await getReleaseApplyPlan({ root, releaseCandidateId: req.params.id });
+        const latestApply = await getLatestReleaseLiveApply(req.params.id);
+        res.status(400).send(renderReleaseApplyPlanDetailPage({
+          plan,
+          latestApply,
+          confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+          error: releaseLiveApplyErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.get('/release-live-applies/:id', async (req, res) => {
+    try {
+      const result = await getReleaseLiveApply(req.params.id);
+      if (!result) {
+        res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release live apply result not found.' }));
+        return;
+      }
+      res.send(renderReleaseLiveApplyDetailPage({
+        result,
+        rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
+      }));
+    } catch (err) {
+      res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-live-applies/:id/rollback', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await rollbackReleaseLiveApply({
+        root,
+        applyId: req.params.id,
+        confirmationPhrase: req.body?.confirmation_phrase,
+        reviewerNote: req.body?.reviewer_note,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-live-applies/${result.id}`);
+    } catch (err) {
+      try {
+        const result = await getReleaseLiveApply(req.params.id);
+        res.status(400).send(renderReleaseLiveApplyDetailPage({
+          result,
+          rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
+          error: releaseLiveApplyErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseLiveApplyErrorSummary(innerErr) }));
+      }
     }
   });
 
