@@ -84,6 +84,10 @@ import {
   removeProposalFromReleaseCandidate,
 } from '../lib/release-candidates.js';
 import {
+  generateReleaseReviewSummary,
+  releaseReviewErrorSummary,
+} from '../lib/release-review.js';
+import {
   applyProposalExportToDraft,
   getProposalDraftApply,
   listProposalDraftApplies,
@@ -904,9 +908,35 @@ export function createAdminRouter({ root }) {
       const approvedProposals = release.status === 'draft'
         ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
         : [];
-      res.send(renderReleaseCandidateDetailPage({ release, approvedProposals }));
+      const reviewSummary = await generateReleaseReviewSummary({ releaseCandidateId: release.id });
+      res.send(renderReleaseCandidateDetailPage({ release, approvedProposals, reviewSummary }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-candidates/:id/review-summary', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await generateReleaseReviewSummary({
+        releaseCandidateId: req.params.id,
+        actor: config.email,
+        auditEvents: true,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}#review-summary`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          error: releaseReviewErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseReviewErrorSummary(innerErr) }));
+      }
     }
   });
 
@@ -924,9 +954,13 @@ export function createAdminRouter({ root }) {
         const approvedProposals = release?.status === 'draft'
           ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
           : [];
+        const reviewSummary = release
+          ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
+          : null;
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
+          reviewSummary,
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -961,9 +995,13 @@ export function createAdminRouter({ root }) {
         const approvedProposals = release?.status === 'draft'
           ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
           : [];
+        const reviewSummary = release
+          ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
+          : null;
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
+          reviewSummary,
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -987,9 +1025,13 @@ export function createAdminRouter({ root }) {
         const approvedProposals = release?.status === 'draft'
           ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
           : [];
+        const reviewSummary = release
+          ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
+          : null;
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
+          reviewSummary,
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1013,9 +1055,13 @@ export function createAdminRouter({ root }) {
         const approvedProposals = release?.status === 'draft'
           ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
           : [];
+        const reviewSummary = release
+          ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
+          : null;
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
+          reviewSummary,
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {

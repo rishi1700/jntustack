@@ -1045,12 +1045,52 @@ function releaseItemActionForms({ release, item }) {
   return { exportAction, draftAction, revisionAction, removeAction };
 }
 
-export function renderReleaseCandidateDetailPage({ release, approvedProposals = [], error = null }) {
+function renderReleaseReviewSummary(summary) {
+  if (!summary) {
+    return '<div class="notice">Review summary is unavailable. Generate the summary before marking a release ready.</div>';
+  }
+  const warnings = summary.warnings || [];
+  const items = summary.items || [];
+  const files = summary.files_that_would_change || [];
+  const entityTypes = summary.entity_types_affected || [];
+  return `
+<section id="review-summary">
+  <h2>Review summary</h2>
+  <section class="metric-grid">
+    <div class="metric"><div class="metric-label">Items</div><div class="metric-value">${escapeHtml(summary.item_count)}</div></div>
+    <div class="metric"><div class="metric-label">Entity types</div><div class="metric-value">${escapeHtml(entityTypes.length)}</div></div>
+    <div class="metric"><div class="metric-label">Files</div><div class="metric-value">${escapeHtml(files.length)}</div></div>
+    <div class="metric"><div class="metric-label">Blocking warnings</div><div class="metric-value ${summary.has_blocking_warnings ? 'status-bad' : 'status-ok'}">${escapeHtml(summary.blocking_warning_count)}</div></div>
+  </section>
+
+  <h2>Warnings</h2>
+  <div class="table-wrap"><table><thead><tr><th>Severity</th><th>Code</th><th>Message</th><th>Proposal</th><th>File</th></tr></thead><tbody>
+  ${warnings.length ? warnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity)}</span></td><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td><td>${warning.proposal_id ? `<a href="/admin/proposals/${escapeHtml(warning.proposal_id)}">${escapeHtml(warning.proposal_id)}</a>` : '-'}</td><td class="mono">${escapeHtml(warning.file || '')}</td></tr>`).join('') : '<tr><td colspan="5"><span class="status-ok">No blocking warnings.</span></td></tr>'}
+  </tbody></table></div>
+
+  <h2>Files that would change</h2>
+  <div class="table-wrap"><table><thead><tr><th>File</th></tr></thead><tbody>
+  ${files.length ? files.map(file => `<tr><td class="mono">${escapeHtml(file)}</td></tr>`).join('') : '<tr><td>No changed files detected yet.</td></tr>'}
+  </tbody></table></div>
+
+  <h2>Validation and provenance</h2>
+  <div class="table-wrap"><table><thead><tr><th>Proposal</th><th>Entity</th><th>Proposal validation</th><th>Export</th><th>Draft</th><th>Revision</th></tr></thead><tbody>
+  ${items.length ? items.map(item => `<tr><td><a href="${escapeHtml(item.links.proposal)}">Proposal ${escapeHtml(item.proposal_id)}</a></td><td>${escapeHtml(item.entity_type)}<br><span class="mono">${escapeHtml(item.entity_key)}</span></td><td><span class="pill">${escapeHtml(item.proposal_validation_status)}</span></td><td>${item.links.export ? `<a href="${escapeHtml(item.links.export)}">${escapeHtml(item.proposal_export_id)}</a><br><span class="pill">${escapeHtml(item.export_validation_status)}</span>` : '<span class="status-bad">missing</span>'}</td><td>${item.links.draft_apply ? `<a href="${escapeHtml(item.links.draft_apply)}">${escapeHtml(item.draft_apply_id)}</a><br><span class="pill">${escapeHtml(item.draft_validation_status)}</span>` : '<span class="status-bad">missing</span>'}</td><td>${item.links.revision ? `<a href="${escapeHtml(item.links.revision)}">${escapeHtml(item.revision_id)}</a>` : '<span class="status-bad">missing</span>'}</td></tr>`).join('') : '<tr><td colspan="6">No release items yet.</td></tr>'}
+  </tbody></table></div>
+
+  <h2>Combined diff summary</h2>
+  <pre class="json-block">${escapeHtml(JSON.stringify(summary.combined_diff_summary || {}, null, 2))}</pre>
+</section>`;
+}
+
+export function renderReleaseCandidateDetailPage({ release, approvedProposals = [], reviewSummary = null, error = null }) {
   if (!release) {
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release candidate not found.' });
   }
   const items = release.items || [];
   const canEdit = release.status === 'draft';
+  const canMarkReady = ['draft', 'applied_to_draft'].includes(release.status);
+  const readyBlocked = !reviewSummary || Boolean(reviewSummary.has_blocking_warnings);
   return adminShell({
     title: `Release candidate ${release.id}`,
     active: 'release_candidates',
@@ -1072,6 +1112,14 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 </section>
 <div class="notice" style="margin-top:14px;">Release candidates only group approved proposals and help create review artifacts. They do not write live data/*.json, modify dist/, publish, crawl, schedule jobs, or expose /api/ask.</div>
 
+<h2>Generate review summary</h2>
+<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/review-summary">
+  <strong>Generate review summary</strong>
+  <div class="admin-sub">Audits a combined release review summary with validation state, changed files, links, diffs, and blocking warnings. It does not write public content.</div>
+  <button type="submit">Generate review summary</button>
+</form>
+${renderReleaseReviewSummary(reviewSummary)}
+
 <h2>Add approved proposal</h2>
 ${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/items">
   <label for="proposal_id"><strong>Approved proposal</strong></label>
@@ -1082,11 +1130,12 @@ ${canEdit ? `<form class="action-box" method="post" action="/admin/release-candi
 </form>` : '<div class="notice">Only draft release candidates can accept new items.</div>'}
 
 <h2>Release readiness</h2>
-${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/ready">
+${canMarkReady ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/ready">
   <strong>Mark ready for review</strong>
-  <div class="admin-sub">Requires at least one item. This records review readiness only; it does not publish.</div>
-  <button type="submit"${items.length ? '' : ' disabled'}>Mark ready for review</button>
-</form>` : '<div class="notice">This release candidate is no longer in draft item-editing state.</div>'}
+  <div class="admin-sub">Requires a generated review summary with no blocking warnings. This records review readiness only; it does not publish.</div>
+  <button type="submit"${items.length && !readyBlocked ? '' : ' disabled'}>Mark ready for review</button>
+  ${readyBlocked ? '<div class="notice" style="margin-top:10px;">Ready for review is blocked until the release summary has no blocking warnings.</div>' : ''}
+</form>` : '<div class="notice">This release candidate is no longer in a readiness-editing state.</div>'}
 
 <h2>Items</h2>
 <div class="table-wrap"><table><thead><tr><th>Proposal</th><th>Entity</th><th>Status</th><th>Validation</th><th>Export</th><th>Draft</th><th>Revision</th><th></th></tr></thead><tbody>

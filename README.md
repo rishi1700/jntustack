@@ -284,6 +284,20 @@ schedulers, and do not expose `/api/ask`. Export and draft-apply actions still
 write only to `tmp/proposal-exports/` and `tmp/content-drafts/` for human
 inspection.
 
+Release review summaries give admins a combined view before any release is
+marked ready for review. A summary includes item count, affected entity types,
+files that would change, validation status per item, proposal/export/draft/
+revision links, a combined diff summary, and blocking warnings for failed
+validation, missing draft applies, missing revisions, duplicate entity keys, or
+the same file being touched by multiple proposals. Generating a summary records
+`release_review.generate` and `release_review.warning` audit entries.
+
+A release candidate can move to `ready_for_review` only when the generated
+summary has no blocking warnings. Blocked attempts record
+`release_candidate.ready_blocked`; successful readiness records
+`release_candidate.ready_for_review`. This is still review state only and does
+not publish or write live JSON files.
+
 Draft apply is the next controlled review step. From a proposal export detail
 page, an admin can apply a passed export into
 `tmp/content-drafts/<proposal-id>/`. This creates a full copied `data/` snapshot
@@ -313,6 +327,7 @@ Asset
   -> Proposal
   -> Approve for Draft
   -> Release Candidate
+  -> Release Review Summary
   -> Export
   -> Draft Apply
   -> Revision
