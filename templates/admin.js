@@ -238,7 +238,7 @@ ${cleanupRows(candidates.revisions, [['id', 'ID'], ['entity_type', 'Entity'], ['
 
 <h2>Other candidate metadata</h2>
 <div class="table-wrap"><table><thead><tr><th>Type</th><th>Count</th></tr></thead><tbody>
-${['exports', 'drafts', 'releases'].map(key => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(counts[key] || 0)}</td></tr>`).join('')}
+${['parseResults', 'extractionResults', 'diffResults', 'pipelineRuns', 'exports', 'drafts', 'releases'].map(key => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(counts[key] || 0)}</td></tr>`).join('')}
 </tbody></table></div>`,
   });
 }
