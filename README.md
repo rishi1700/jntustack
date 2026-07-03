@@ -270,6 +270,20 @@ not switch `CONTENT_SOURCE` to `db`. It only says the proposal is ready for the
 existing export and draft-apply review steps. Final publishing remains a future
 manual workflow.
 
+Release candidates group proposals that were already approved for draft
+preparation. From `/admin/release-candidates`, an admin can create a draft
+release candidate, add only `approved_for_draft` proposals with passed
+validation, export each item, apply each export to a temporary draft workspace,
+and mark the candidate `ready_for_review`. These actions record audit events
+such as `release_candidate.create`, `release_candidate.add_item`,
+`release_candidate.remove_item`, and `release_candidate.ready_for_review`.
+
+Release candidates are still not a publishing path. They do not modify live
+`data/*.json`, do not modify `dist/`, do not commit code, do not run crawlers or
+schedulers, and do not expose `/api/ask`. Export and draft-apply actions still
+write only to `tmp/proposal-exports/` and `tmp/content-drafts/` for human
+inspection.
+
 Draft apply is the next controlled review step. From a proposal export detail
 page, an admin can apply a passed export into
 `tmp/content-drafts/<proposal-id>/`. This creates a full copied `data/` snapshot
@@ -298,6 +312,7 @@ Asset
   -> Diff
   -> Proposal
   -> Approve for Draft
+  -> Release Candidate
   -> Export
   -> Draft Apply
   -> Revision

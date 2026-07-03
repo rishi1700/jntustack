@@ -72,6 +72,18 @@ import {
   proposalExportErrorSummary,
 } from '../lib/proposal-export.js';
 import {
+  addProposalToReleaseCandidate,
+  applyReleaseCandidateItemDraft,
+  createReleaseCandidate,
+  exportReleaseCandidateItem,
+  getReleaseCandidate,
+  listApprovedProposalsForRelease,
+  listReleaseCandidates,
+  markReleaseCandidateReady,
+  releaseCandidateErrorSummary,
+  removeProposalFromReleaseCandidate,
+} from '../lib/release-candidates.js';
+import {
   applyProposalExportToDraft,
   getProposalDraftApply,
   listProposalDraftApplies,
@@ -104,6 +116,10 @@ import {
   renderProposalDetailPage,
   renderProposalUnavailablePage,
   renderProposalsPage,
+  renderReleaseCandidateCreatePage,
+  renderReleaseCandidateDetailPage,
+  renderReleaseCandidateUnavailablePage,
+  renderReleaseCandidatesPage,
   renderParseResultDetailPage,
   renderRevisionComparisonPage,
   renderRevisionDetailPage,
@@ -846,6 +862,165 @@ export function createAdminRouter({ root }) {
       res.send(renderProposalDetailPage({ proposal, exports }));
     } catch (err) {
       res.status(503).send(renderProposalUnavailablePage({ message: proposalErrorSummary(err) }));
+    }
+  });
+
+  router.get('/release-candidates', async (req, res) => {
+    try {
+      const releases = await listReleaseCandidates();
+      res.send(renderReleaseCandidatesPage({ releases }));
+    } catch (err) {
+      res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
+    }
+  });
+
+  router.get('/release-candidates/new', (req, res) => {
+    res.send(renderReleaseCandidateCreatePage());
+  });
+
+  router.post('/release-candidates/new', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    const values = req.body || {};
+    try {
+      const id = await createReleaseCandidate({
+        title: values.title,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${id}`);
+    } catch (err) {
+      res.status(400).send(renderReleaseCandidateCreatePage({
+        values,
+        error: releaseCandidateErrorSummary(err),
+      }));
+    }
+  });
+
+  router.get('/release-candidates/:id', async (req, res) => {
+    try {
+      const release = await getReleaseCandidate(req.params.id);
+      if (!release) {
+        res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release candidate not found.' }));
+        return;
+      }
+      const approvedProposals = release.status === 'draft'
+        ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+        : [];
+      res.send(renderReleaseCandidateDetailPage({ release, approvedProposals }));
+    } catch (err) {
+      res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-candidates/:id/items', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await addProposalToReleaseCandidate({
+        releaseCandidateId: req.params.id,
+        proposalId: req.body?.proposal_id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          error: releaseCandidateErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.post('/release-candidates/:id/items/:itemId/remove', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await removeProposalFromReleaseCandidate({
+        releaseCandidateId: req.params.id,
+        itemId: req.params.itemId,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      res.status(400).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-candidates/:id/ready', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await markReleaseCandidateReady({
+        releaseCandidateId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          error: releaseCandidateErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.post('/release-candidates/:id/items/:itemId/export', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await exportReleaseCandidateItem({
+        root,
+        releaseCandidateId: req.params.id,
+        itemId: req.params.itemId,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          error: releaseCandidateErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(innerErr) }));
+      }
+    }
+  });
+
+  router.post('/release-candidates/:id/items/:itemId/apply-draft', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      await applyReleaseCandidateItemDraft({
+        root,
+        releaseCandidateId: req.params.id,
+        itemId: req.params.itemId,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-candidates/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const release = await getReleaseCandidate(req.params.id);
+        const approvedProposals = release?.status === 'draft'
+          ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
+          : [];
+        res.status(400).send(renderReleaseCandidateDetailPage({
+          release,
+          approvedProposals,
+          error: releaseCandidateErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(innerErr) }));
+      }
     }
   });
 

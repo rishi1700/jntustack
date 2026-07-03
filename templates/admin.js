@@ -14,6 +14,7 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
     ['colleges', '/admin/colleges', 'Colleges'],
     ['branch_profiles', '/admin/branch-profiles', 'Branch profiles'],
     ['proposals', '/admin/proposals', 'Review queue'],
+    ['release_candidates', '/admin/release-candidates', 'Releases'],
     ['revisions', '/admin/revisions', 'Revisions'],
     ['sources', '/admin/sources', 'Sources'],
     ['assets', '/admin/assets', 'Assets'],
@@ -84,6 +85,7 @@ function workflowNav(active) {
     ['extraction', 'Extraction', null],
     ['diff', 'Diff', null],
     ['proposal', 'Proposal', '/admin/proposals'],
+    ['release', 'Release', '/admin/release-candidates'],
     ['export', 'Export', null],
     ['draft', 'Draft', null],
     ['revision', 'Revision', '/admin/revisions'],
@@ -975,6 +977,124 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 
 <h2>Summary</h2>
 <pre class="json-block">${escapeHtml(JSON.stringify(summary, null, 2) || '{}')}</pre>`,
+  });
+}
+
+export function renderReleaseCandidateUnavailablePage({ message }) {
+  return adminShell({
+    title: 'Release candidates',
+    active: 'release_candidates',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Releases' }],
+    body: `
+<div class="admin-top"><div><h1>Release candidates</h1><div class="admin-sub">DB-backed release preparation workflow</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="notice">${escapeHtml(message)}</div>`,
+  });
+}
+
+export function renderReleaseCandidatesPage({ releases }) {
+  return adminShell({
+    title: 'Release candidates',
+    active: 'release_candidates',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Releases' }],
+    body: `
+<div class="admin-top"><div><h1>Release candidates</h1><div class="admin-sub">Group approved proposals for final human review. No live JSON writes or publishing happen here.</div></div><div><a class="logout" href="/admin/release-candidates/new">Create release</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Title</th><th>Items</th><th>Exports</th><th>Draft applies</th><th>Revisions</th><th>Updated</th><th></th></tr></thead><tbody>
+${releases.length ? releases.map(release => `<tr><td><span class="pill">${escapeHtml(release.status)}</span></td><td>${escapeHtml(release.title)}</td><td>${escapeHtml(release.itemCount)}</td><td>${escapeHtml(release.exportedCount)}</td><td>${escapeHtml(release.draftAppliedCount)}</td><td>${escapeHtml(release.revisionCount)}</td><td>${escapeHtml(release.updatedAt || '')}</td><td><a href="/admin/release-candidates/${escapeHtml(release.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No release candidates yet', 'Create a release candidate after proposals have been approved for draft preparation.', '<a href="/admin/release-candidates/new">Create release</a>')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+export function renderReleaseCandidateCreatePage({ values = {}, error = null } = {}) {
+  return adminShell({
+    title: 'Create release candidate',
+    active: 'release_candidates',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Dashboard' },
+      { href: '/admin/release-candidates', label: 'Releases' },
+      { label: 'Create' },
+    ],
+    body: `
+<div class="admin-top"><div><h1>Create release candidate</h1><div class="admin-sub">Release candidates are review groupings only. They do not publish or write live content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<form class="action-box" method="post" action="/admin/release-candidates/new">
+  <label for="title"><strong>Title</strong></label>
+  <input id="title" name="title" value="${escapeHtml(values.title || '')}" required maxlength="255" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="July verified content draft">
+  <div class="notice" style="margin-top:12px;">This creates an empty draft release candidate. Add only approved_for_draft proposals from the detail page.</div>
+  <button type="submit">Create release candidate</button>
+</form>`,
+  });
+}
+
+function releaseItemActionForms({ release, item }) {
+  const releaseId = escapeHtml(release.id);
+  const itemId = escapeHtml(item.id);
+  const exportAction = item.proposalExportId
+    ? `<a href="/admin/proposal-exports/${escapeHtml(item.proposalExportId)}">Export ${escapeHtml(item.proposalExportId)}</a>`
+    : `<form method="post" action="/admin/release-candidates/${releaseId}/items/${itemId}/export"><button type="submit">Export</button></form>`;
+  const draftAction = item.draftApplyId
+    ? `<a href="/admin/proposal-draft-applies/${escapeHtml(item.draftApplyId)}">Draft ${escapeHtml(item.draftApplyId)}</a>`
+    : item.proposalExportId
+      ? `<form method="post" action="/admin/release-candidates/${releaseId}/items/${itemId}/apply-draft"><button type="submit">Apply draft</button></form>`
+      : '<span class="admin-sub">Export first</span>';
+  const revisionAction = item.revisionId
+    ? `<a href="/admin/revisions/${escapeHtml(item.revisionId)}">Revision ${escapeHtml(item.revisionId)}</a>`
+    : '-';
+  const removeAction = release.status === 'draft'
+    ? `<form method="post" action="/admin/release-candidates/${releaseId}/items/${itemId}/remove"><button class="reject" type="submit">Remove</button></form>`
+    : '';
+  return { exportAction, draftAction, revisionAction, removeAction };
+}
+
+export function renderReleaseCandidateDetailPage({ release, approvedProposals = [], error = null }) {
+  if (!release) {
+    return renderReleaseCandidateUnavailablePage({ message: error || 'Release candidate not found.' });
+  }
+  const items = release.items || [];
+  const canEdit = release.status === 'draft';
+  return adminShell({
+    title: `Release candidate ${release.id}`,
+    active: 'release_candidates',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Dashboard' },
+      { href: '/admin/release-candidates', label: 'Releases' },
+      { label: `Release ${release.id}` },
+    ],
+    body: `
+<div class="admin-top"><div><h1>${escapeHtml(release.title)}</h1><div class="admin-sub">Release candidate ${escapeHtml(release.id)}. NOT PUBLISHED.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('release')}
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(release.status)}</div></div>
+  <div class="metric"><div class="metric-label">Items</div><div class="metric-value">${escapeHtml(release.itemCount)}</div></div>
+  <div class="metric"><div class="metric-label">Exports</div><div class="metric-value">${escapeHtml(release.exportedCount)}</div></div>
+  <div class="metric"><div class="metric-label">Draft applies</div><div class="metric-value">${escapeHtml(release.draftAppliedCount)}</div></div>
+  <div class="metric"><div class="metric-label">Revisions</div><div class="metric-value">${escapeHtml(release.revisionCount)}</div></div>
+</section>
+<div class="notice" style="margin-top:14px;">Release candidates only group approved proposals and help create review artifacts. They do not write live data/*.json, modify dist/, publish, crawl, schedule jobs, or expose /api/ask.</div>
+
+<h2>Add approved proposal</h2>
+${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/items">
+  <label for="proposal_id"><strong>Approved proposal</strong></label>
+  <select id="proposal_id" name="proposal_id" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    ${approvedProposals.map(proposal => `<option value="${escapeHtml(proposal.id)}">#${escapeHtml(proposal.id)} ${escapeHtml(proposal.entityType)} / ${escapeHtml(proposal.entityKey)}</option>`).join('')}
+  </select>
+  ${approvedProposals.length ? '<button type="submit">Add to release</button>' : '<div class="notice" style="margin-top:10px;">No approved_for_draft proposals are available to add.</div>'}
+</form>` : '<div class="notice">Only draft release candidates can accept new items.</div>'}
+
+<h2>Release readiness</h2>
+${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/ready">
+  <strong>Mark ready for review</strong>
+  <div class="admin-sub">Requires at least one item. This records review readiness only; it does not publish.</div>
+  <button type="submit"${items.length ? '' : ' disabled'}>Mark ready for review</button>
+</form>` : '<div class="notice">This release candidate is no longer in draft item-editing state.</div>'}
+
+<h2>Items</h2>
+<div class="table-wrap"><table><thead><tr><th>Proposal</th><th>Entity</th><th>Status</th><th>Validation</th><th>Export</th><th>Draft</th><th>Revision</th><th></th></tr></thead><tbody>
+${items.length ? items.map(item => {
+  const actions = releaseItemActionForms({ release, item });
+  return `<tr><td><a href="/admin/proposals/${escapeHtml(item.proposalId)}">Proposal ${escapeHtml(item.proposalId)}</a></td><td>${escapeHtml(item.proposal?.entityType || '')}<br><span class="mono">${escapeHtml(item.proposal?.entityKey || '')}</span></td><td><span class="pill">${escapeHtml(item.proposal?.status || '')}</span></td><td><span class="pill">${escapeHtml(item.proposal?.validationStatus || '')}</span></td><td>${actions.exportAction}</td><td>${actions.draftAction}</td><td>${actions.revisionAction}</td><td>${actions.removeAction}</td></tr>`;
+}).join('') : `<tr><td colspan="8">${emptyState('No proposals in this release', 'Add approved_for_draft proposals before marking the release ready for review.')}</td></tr>`}
+</tbody></table></div>`,
   });
 }
 
