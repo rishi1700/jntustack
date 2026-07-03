@@ -322,10 +322,19 @@ not publish or write live JSON files.
 Release apply plans are the final human-review artifact before any future manual
 apply step. A plan can only be generated for a release candidate already in
 `ready_for_review`, and generation is blocked if the current release review
-summary has warnings. The plan writes only to
-`tmp/release-apply-plans/<release-candidate-id>/` and includes ordered file
-changes, add/replace operations, before/after entity JSON previews, combined
-patch JSON, rollback notes, validation summary, and final warnings.
+summary has warnings. MySQL is the canonical storage for apply plans in
+`release_apply_plans`; each row stores the full plan payload, changed files,
+warnings, validation summary, and rollback notes.
+
+The generator may also write convenience artifacts under
+`tmp/release-apply-plans/<release-candidate-id>/`, including ordered file
+changes, before/after file snapshots, combined patch JSON, and rollback notes.
+Those `tmp/` files are not canonical and may disappear after deploy/runtime
+cleanup. The admin apply-plan page loads from MySQL first, so deploy cleanup
+must not break review history. If an older plan exists only under `tmp/`, the
+admin loader imports it into MySQL. If both DB and tmp are missing for a
+recovered release, the page reconstructs a durable view from release, proposal,
+export, and live-apply metadata and labels it as recovered.
 
 Apply plans are explicitly `NOT APPLIED` and `NOT PUBLISHED`. They do not modify
 live `data/*.json`, do not modify `dist/`, do not deploy, and do not mark

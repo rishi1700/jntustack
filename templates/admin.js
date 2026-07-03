@@ -1398,7 +1398,7 @@ ${renderReleaseReviewSummary(reviewSummary)}
 <h2>Apply plan</h2>
 ${release.status === 'ready_for_review' ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/apply-plan">
   <strong>Generate apply plan</strong>
-  <div class="admin-sub">Writes a final human-reviewable plan under tmp/release-apply-plans only. NOT APPLIED and NOT PUBLISHED.</div>
+  <div class="admin-sub">Stores a final human-reviewable plan in MySQL and may write tmp convenience files. NOT APPLIED and NOT PUBLISHED.</div>
   <button type="submit"${reviewSummary?.has_blocking_warnings ? ' disabled' : ''}>Generate apply plan</button>
   ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary warnings exist.</div>' : ''}
 </form>` : '<div class="notice">Apply plans can only be generated after the release candidate reaches ready_for_review.</div>'}
@@ -1462,6 +1462,8 @@ export function renderReleaseApplyPlanDetailPage({
   const changes = plan.changes || [];
   const activeApply = latestApply && !['rolled_back', 'failed'].includes(latestApply.status);
   const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0 && !activeApply;
+  const storage = plan.storage || {};
+  const tmpStatusClass = storage.tmp_artifact_status === 'available' ? 'status-ok' : 'status-warn';
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -1480,8 +1482,13 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
   <div class="metric"><div class="metric-label">Warnings</div><div class="metric-value ${warnings.length ? 'status-bad' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
   <div class="metric"><div class="metric-label">Generated</div><div class="metric-value" style="font-size:15px;">${escapeHtml(plan.generated_at || '')}</div></div>
+  <div class="metric"><div class="metric-label">Canonical storage</div><div class="metric-value status-ok">DB</div></div>
+  <div class="metric"><div class="metric-label">Tmp artifacts</div><div class="metric-value ${tmpStatusClass}">${escapeHtml(storage.tmp_artifact_status || 'unknown')}</div></div>
 </section>
-<div class="notice" style="margin-top:14px;">This apply plan only writes review files under <span class="mono">${escapeHtml(plan.plan_path)}</span>. It does not write live data/*.json, modify dist/, deploy, publish, or mark content verified.</div>
+<div class="notice" style="margin-top:14px;">The canonical apply plan is stored in MySQL${storage.db_plan_id ? ` as <span class="mono">release_apply_plans #${escapeHtml(storage.db_plan_id)}</span>` : ''}. Tmp files under <span class="mono">${escapeHtml(plan.plan_path || 'tmp/release-apply-plans')}</span> are convenience artifacts only and may be missing after deploy cleanup without invalidating this page.</div>
+${storage.tmp_artifact_message ? `<div class="notice evidence-warning" style="margin-top:10px;">${escapeHtml(storage.tmp_artifact_message)}</div>` : ''}
+${plan.reconstructed_from_metadata ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Recovered apply-plan view.</strong><br>This plan was reconstructed from durable release, proposal, export, and live-apply metadata because the original tmp artifact was unavailable.</div>` : ''}
+${plan.recovered_context ? `<h2>Recovered apply context</h2><pre class="json-block">${escapeHtml(JSON.stringify(plan.recovered_context, null, 2))}</pre>` : ''}
 
 <h2>Final live JSON apply</h2>
 <form class="action-box danger-zone" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
