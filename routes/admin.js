@@ -865,7 +865,8 @@ export function createAdminRouter({ root }) {
           res.status(404).send(renderProposalUnavailablePage({ message: 'Content proposal not found.' }));
           return;
         }
-        res.status(400).send(renderProposalDetailPage({ proposal, error: proposalErrorSummary(err) }));
+        const exports = await listProposalExports(proposal.id);
+        res.status(400).send(renderProposalDetailPage({ proposal, exports, error: proposalErrorSummary(err) }));
       } catch (innerErr) {
         res.status(503).send(renderProposalUnavailablePage({ message: proposalErrorSummary(innerErr) }));
       }

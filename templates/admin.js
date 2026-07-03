@@ -802,6 +802,8 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const normalized = proposal.normalizedPayload ? JSON.stringify(proposal.normalizedPayload, null, 2) : 'No normalized payload stored yet.';
   const validationErrors = Array.isArray(proposal.validationErrors) ? proposal.validationErrors : [];
   const source = proposal.source;
+  const validationPassed = proposal.validationStatus === 'passed';
+  const approvalEvents = (proposal.events || []).filter(event => event.action === 'approve_for_draft');
   return adminShell({
     title: `Proposal ${proposal.id}`,
     active: 'proposals',
@@ -815,7 +817,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <div class="metric"><div class="metric-label">Reviewed by</div><div class="metric-value">${escapeHtml(proposal.reviewedBy || '-')}</div></div>
   <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value">${proposal.parseResultId ? `<a href="/admin/parse-results/${escapeHtml(proposal.parseResultId)}">${escapeHtml(proposal.parseResultId)}</a>` : '-'}</div></div>
   <div class="metric"><div class="metric-label">Diff result</div><div class="metric-value">${proposal.diffResultId ? `<a href="/admin/diff-results/${escapeHtml(proposal.diffResultId)}">${escapeHtml(proposal.diffResultId)}</a>` : '-'}</div></div>
-  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value">${escapeHtml(proposal.validationStatus || 'not_validated')}</div></div>
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value ${validationPassed ? 'status-ok' : 'status-bad'}">${escapeHtml(proposal.validationStatus || 'not_validated')}</div></div>
 </section>
 
 <h2>Validation</h2>
@@ -827,6 +829,22 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   </form>
 </div>
 ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th><th>Rule</th></tr></thead><tbody>${validationErrors.map(err => `<tr><td class="mono">${escapeHtml(err.path || '')}</td><td>${escapeHtml(err.message || '')}</td><td class="mono">${escapeHtml(err.keyword || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice">No validation errors stored.</div>'}
+
+<h2>Approval for draft</h2>
+<div class="proposal-actions">
+  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+    <strong>Approve for draft/release preparation</strong>
+    <div class="admin-sub">Requires passed validation. This does not publish, write live data files, mark content verified, or change CONTENT_SOURCE.</div>
+    <textarea name="note" required placeholder="Record what was reviewed and why this can move to draft preparation."${validationPassed ? '' : ' disabled'}></textarea>
+    <input type="hidden" name="action" value="approve_for_draft">
+    <button type="submit"${validationPassed ? '' : ' disabled'}>Approve for draft</button>
+    ${validationPassed ? '' : '<div class="notice" style="margin-top:10px;">Approval is blocked until proposal validation passes.</div>'}
+  </form>
+  <div class="action-box">
+    <strong>Approval history</strong>
+    ${approvalEvents.length ? `<div class="table-wrap" style="margin-top:10px;"><table><thead><tr><th>Reviewer</th><th>Note</th><th>When</th></tr></thead><tbody>${approvalEvents.map(event => `<tr><td>${escapeHtml(event.actor || '')}</td><td>${escapeHtml(event.note || '')}</td><td>${escapeHtml(event.createdAt || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice" style="margin-top:10px;">No draft approval has been recorded for this proposal.</div>'}
+  </div>
+</div>
 
 <h2>Source evidence</h2>
 <div class="table-wrap"><table><thead><tr><th>Type</th><th>Status</th><th>Retrieved</th><th>URL</th><th>Asset</th></tr></thead><tbody>

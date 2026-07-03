@@ -257,6 +257,19 @@ and include validation errors when present. They never modify `data/*.json`,
 never modify `dist/`, never mark anything verified, and are intended only for
 manual repo review.
 
+Proposal approval is a reviewer accountability state, not a publishing path. A
+proposal can be moved to `approved_for_draft` only after validation has passed
+and the reviewer provides a note. Approval records the reviewer, timestamp,
+validation status, proposal provenance, a `review_events` row, and
+`proposal.approve_for_draft` audit evidence. If validation has not passed, the
+approval is blocked and `proposal.approval_blocked` is recorded.
+
+Approval still does not modify live `data/*.json`, does not modify `dist/`,
+does not mark public content as verified, does not publish the site, and does
+not switch `CONTENT_SOURCE` to `db`. It only says the proposal is ready for the
+existing export and draft-apply review steps. Final publishing remains a future
+manual workflow.
+
 Draft apply is the next controlled review step. From a proposal export detail
 page, an admin can apply a passed export into
 `tmp/content-drafts/<proposal-id>/`. This creates a full copied `data/` snapshot
@@ -284,6 +297,7 @@ Asset
   -> Validate
   -> Diff
   -> Proposal
+  -> Approve for Draft
   -> Export
   -> Draft Apply
   -> Revision
