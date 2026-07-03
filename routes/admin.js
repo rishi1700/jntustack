@@ -8,6 +8,12 @@ import {
 } from '../lib/assets.js';
 import { getAdminChecks } from '../lib/admin-checks.js';
 import {
+  CLEAN_TEST_ARTIFACTS_CONFIRMATION,
+  adminCleanupErrorSummary,
+  cleanupProductionTestArtifacts,
+  previewProductionTestArtifacts,
+} from '../lib/admin-cleanup.js';
+import {
   adminCookieName,
   adminIsConfigured,
   createAdminCookie,
@@ -32,17 +38,20 @@ import {
   createDiffFromExtractionResult,
   diffResultErrorSummary,
   getDiffResult,
+  listDiffResults,
   listDiffResultsForParseResult,
 } from '../lib/diff-results.js';
 import {
   extractionResultErrorSummary,
   getExtractionResult,
+  listExtractionResults,
   listExtractionResultsForParseResult,
   runEntityExtraction,
 } from '../lib/extraction-results.js';
 import { parseMultipartForm, readRequestBuffer } from '../lib/multipart.js';
 import {
   getPipelineRun,
+  listPipelineRuns,
   listPipelineRunsForAsset,
   pipelineErrorSummary,
   runManualEvidencePipeline,
@@ -50,6 +59,7 @@ import {
 import { fetchSourceUrl, sourceFetchErrorSummary } from '../lib/source-fetcher.js';
 import {
   getParseResult,
+  listParseResults,
   listParseResultsForAsset,
   parseResultErrorSummary,
   runParser,
@@ -121,6 +131,7 @@ import {
 } from '../lib/content-revisions.js';
 import {
   renderAdminConfigError,
+  renderAdminCleanupPage,
   renderAdminChecksPage,
   renderAdminTestToolsPage,
   renderReleaseApplyPlanDetailPage,
@@ -133,9 +144,12 @@ import {
   renderCollegesPage,
   renderDashboard,
   renderDiffResultDetailPage,
+  renderDiffResultsPage,
   renderExtractionResultDetailPage,
+  renderExtractionResultsPage,
   renderLoginPage,
   renderPipelineRunDetailPage,
+  renderPipelineRunsPage,
   renderProposalExportDetailPage,
   renderProposalDraftApplyDetailPage,
   renderProposalCreatePage,
@@ -147,6 +161,7 @@ import {
   renderReleaseCandidateUnavailablePage,
   renderReleaseCandidatesPage,
   renderParseResultDetailPage,
+  renderParseResultsPage,
   renderRevisionComparisonPage,
   renderRevisionDetailPage,
   renderRevisionEntityPage,
@@ -328,6 +343,50 @@ export function createAdminRouter({ root }) {
       res.send(renderAdminChecksPage({ checks }));
     } catch (err) {
       next(err);
+    }
+  });
+
+  router.get('/cleanup', async (req, res) => {
+    try {
+      const preview = await previewProductionTestArtifacts();
+      res.send(renderAdminCleanupPage({
+        preview,
+        confirmationPhrase: CLEAN_TEST_ARTIFACTS_CONFIRMATION,
+      }));
+    } catch (err) {
+      res.status(503).send(renderAdminCleanupPage({
+        preview: null,
+        confirmationPhrase: CLEAN_TEST_ARTIFACTS_CONFIRMATION,
+        error: adminCleanupErrorSummary(err),
+      }));
+    }
+  });
+
+  router.post('/cleanup/test-artifacts', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await cleanupProductionTestArtifacts({
+        root,
+        confirmationPhrase: req.body?.confirmation_phrase,
+        actor: config.email,
+      });
+      const preview = await previewProductionTestArtifacts();
+      res.send(renderAdminCleanupPage({
+        preview,
+        result,
+        confirmationPhrase: CLEAN_TEST_ARTIFACTS_CONFIRMATION,
+      }));
+    } catch (err) {
+      let preview = null;
+      try {
+        preview = await previewProductionTestArtifacts();
+      } catch {
+        // The cleanup error is the useful one for the operator.
+      }
+      res.status(400).send(renderAdminCleanupPage({
+        preview,
+        confirmationPhrase: CLEAN_TEST_ARTIFACTS_CONFIRMATION,
+        error: adminCleanupErrorSummary(err),
+      }));
     }
   });
 
@@ -551,6 +610,15 @@ export function createAdminRouter({ root }) {
     }
   });
 
+  router.get('/pipeline-runs', async (req, res) => {
+    try {
+      const results = await listPipelineRuns();
+      res.send(renderPipelineRunsPage({ results }));
+    } catch (err) {
+      res.status(503).send(renderAssetsUnavailablePage({ message: pipelineErrorSummary(err) }));
+    }
+  });
+
   router.get('/pipeline-runs/:id', async (req, res) => {
     try {
       const result = await getPipelineRun(req.params.id);
@@ -561,6 +629,15 @@ export function createAdminRouter({ root }) {
       res.send(renderPipelineRunDetailPage({ result }));
     } catch (err) {
       res.status(503).send(renderAssetsUnavailablePage({ message: pipelineErrorSummary(err) }));
+    }
+  });
+
+  router.get('/parse-results', async (req, res) => {
+    try {
+      const results = await listParseResults();
+      res.send(renderParseResultsPage({ results }));
+    } catch (err) {
+      res.status(503).send(renderAssetsUnavailablePage({ message: parseResultErrorSummary(err) }));
     }
   });
 
@@ -653,6 +730,15 @@ export function createAdminRouter({ root }) {
     }
   });
 
+  router.get('/diff-results', async (req, res) => {
+    try {
+      const results = await listDiffResults();
+      res.send(renderDiffResultsPage({ results }));
+    } catch (err) {
+      res.status(503).send(renderAssetsUnavailablePage({ message: diffResultErrorSummary(err) }));
+    }
+  });
+
   router.get('/diff-results/:id', async (req, res) => {
     try {
       const result = await getDiffResult(req.params.id);
@@ -664,6 +750,15 @@ export function createAdminRouter({ root }) {
       res.send(renderDiffResultDetailPage({ result, existingProposal }));
     } catch (err) {
       res.status(503).send(renderAssetsUnavailablePage({ message: diffResultErrorSummary(err) }));
+    }
+  });
+
+  router.get('/extraction-results', async (req, res) => {
+    try {
+      const results = await listExtractionResults();
+      res.send(renderExtractionResultsPage({ results }));
+    } catch (err) {
+      res.status(503).send(renderAssetsUnavailablePage({ message: extractionResultErrorSummary(err) }));
     }
   });
 
@@ -824,6 +919,7 @@ export function createAdminRouter({ root }) {
       await setDiscoverySourceEnabled({
         id: req.params.id,
         enabled: req.body?.enabled,
+        note: req.body?.note || '',
         actor: config.email,
       });
       res.redirect(`/admin/sources/${encodeURIComponent(req.params.id)}`);

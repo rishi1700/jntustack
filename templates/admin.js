@@ -18,7 +18,12 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
     ['revisions', '/admin/revisions', 'Revisions'],
     ['sources', '/admin/sources', 'Sources'],
     ['assets', '/admin/assets', 'Assets'],
+    ['parse_results', '/admin/parse-results', 'Parse results'],
+    ['extraction_results', '/admin/extraction-results', 'Extractions'],
+    ['diff_results', '/admin/diff-results', 'Diffs'],
+    ['pipeline_runs', '/admin/pipeline-runs', 'Pipelines'],
     ['source_evidence', '/admin/source-evidence', 'Evidence'],
+    ['cleanup', '/admin/cleanup', 'Cleanup'],
   ];
   if (String(process.env.ADMIN_TEST_TOOLS || '').trim().toLowerCase() === 'true') {
     nav.push(['test_tools', '/admin/test-tools', 'Test tools']);
@@ -55,7 +60,7 @@ tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,M
 <div class="admin-frame">
   <aside class="admin-rail">
     <div class="admin-brand">JNTUStack Admin</div>
-    <div class="admin-source">Read-only content view</div>
+    <div class="admin-source">Controlled content operations</div>
     <nav class="admin-nav" aria-label="Admin navigation">
       ${nav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
     </nav>
@@ -115,7 +120,7 @@ ${adminShell({ title: 'Login', body: '' }).match(/<style>[\s\S]*<\/style>/)[0]}
 <body class="login-page">
   <form class="login-box" method="post" action="/admin/login">
     <h1>Admin login</h1>
-    <div class="admin-sub">Private read-only dashboard</div>
+    <div class="admin-sub">Private controlled operations dashboard</div>
     ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
     <label for="email">Email</label>
     <input id="email" name="email" type="email" autocomplete="username" required>
@@ -168,6 +173,73 @@ ${result ? `<pre class="json-block">${escapeHtml(JSON.stringify(result, null, 2)
 
 <h2>Last cleanup result</h2>
 ${cleanup ? `<pre class="json-block">${escapeHtml(JSON.stringify(cleanup, null, 2))}</pre>` : '<div class="notice">No cleanup result in this request.</div>'}`,
+  });
+}
+
+function cleanupRows(rows, columns) {
+  if (!rows?.length) return `<tr><td colspan="${escapeHtml(columns.length)}">No matching records.</td></tr>`;
+  return rows.map(row => `<tr>${columns.map(([key, label]) => {
+    const value = typeof key === 'function' ? key(row) : row[key];
+    return `<td${label === 'ID' ? ' class="mono"' : ''}>${escapeHtml(value ?? '')}</td>`;
+  }).join('')}</tr>`).join('');
+}
+
+export function renderAdminCleanupPage({
+  preview,
+  result = null,
+  confirmationPhrase = 'CLEAN TEST ARTIFACTS',
+  error = null,
+} = {}) {
+  const counts = preview?.counts || {};
+  const candidates = preview?.candidates || {};
+  const total = Object.values(counts).reduce((sum, value) => sum + Number(value || 0), 0);
+  return adminShell({
+    title: 'Admin cleanup',
+    active: 'cleanup',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Cleanup' }],
+    body: `
+<div class="admin-top"><div><h1>Admin cleanup</h1><div class="admin-sub">Production safety cleanup for known test-only admin records. This never writes live data/*.json.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<div class="notice"><strong>Scope:</strong> only records matching test/pr entity keys, known PR test filenames, <span class="mono">example.edu</span> evidence, or old test actors are eligible. Public JSON content is not touched.</div>
+
+<section class="metric-grid" style="margin-top:14px;">
+  <div class="metric"><div class="metric-label">Candidate rows</div><div class="metric-value">${escapeHtml(total)}</div></div>
+  <div class="metric"><div class="metric-label">Assets</div><div class="metric-value">${escapeHtml(counts.assets || 0)}</div></div>
+  <div class="metric"><div class="metric-label">Proposals</div><div class="metric-value">${escapeHtml(counts.proposals || 0)}</div></div>
+  <div class="metric"><div class="metric-label">Revisions</div><div class="metric-value">${escapeHtml(counts.revisions || 0)}</div></div>
+</section>
+
+<h2>Run cleanup</h2>
+<form class="action-box" method="post" action="/admin/cleanup/test-artifacts">
+  <strong>Clean known test artifacts</strong>
+  <div class="admin-sub">Deletes matching DB records and safe matching test storage files only. It does not touch public JSON, dist, crawlers, schedulers, or releases.</div>
+  <label for="cleanup_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="cleanup_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(confirmationPhrase)}">
+  <button class="reject" type="submit"${total ? '' : ' disabled'}>Clean test artifacts</button>
+  <div class="notice" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. Review the candidates below first.</div>
+</form>
+
+${result ? `<h2>Last cleanup result</h2><pre class="json-block">${escapeHtml(JSON.stringify(result, null, 2))}</pre>` : ''}
+
+<h2>Candidate assets</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Filename</th><th>Status</th><th>Storage path</th><th>Source URL</th></tr></thead><tbody>
+${cleanupRows(candidates.assets, [['id', 'ID'], ['original_filename', 'Filename'], ['download_status', 'Status'], ['local_storage_path', 'Storage'], ['source_url', 'URL']])}
+</tbody></table></div>
+
+<h2>Candidate proposals</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Entity</th><th>Key</th><th>Status</th><th>Validation</th><th>Created by</th></tr></thead><tbody>
+${cleanupRows(candidates.proposals, [['id', 'ID'], [row => `${row.entity_type}`, 'Entity'], ['entity_key', 'Key'], ['status', 'Status'], ['validation_status', 'Validation'], ['created_by', 'Created']])}
+</tbody></table></div>
+
+<h2>Candidate revisions</h2>
+<div class="table-wrap"><table><thead><tr><th>ID</th><th>Entity</th><th>Key</th><th>Revision</th><th>Proposal</th><th>Draft</th></tr></thead><tbody>
+${cleanupRows(candidates.revisions, [['id', 'ID'], ['entity_type', 'Entity'], ['entity_key', 'Key'], ['revision_number', 'Revision'], ['proposal_id', 'Proposal'], ['draft_apply_id', 'Draft']])}
+</tbody></table></div>
+
+<h2>Other candidate metadata</h2>
+<div class="table-wrap"><table><thead><tr><th>Type</th><th>Count</th></tr></thead><tbody>
+${['exports', 'drafts', 'releases'].map(key => `<tr><td>${escapeHtml(key)}</td><td>${escapeHtml(counts[key] || 0)}</td></tr>`).join('')}
+</tbody></table></div>`,
   });
 }
 
@@ -414,6 +486,10 @@ ${fetchError ? `<div class="error">${escapeHtml(fetchError)}</div>` : ''}
 <h2>Source actions</h2>
 <form class="action-box" method="post" action="/admin/sources/${escapeHtml(source.id)}/enabled">
   <input type="hidden" name="enabled" value="${source.enabled ? '0' : '1'}">
+  <strong>${source.enabled ? 'Disable source' : 'Enable source'}</strong>
+  ${source.enabled
+    ? '<div class="admin-sub">Disabling a source stops admins from treating it as active evidence configuration. It does not delete assets, proposals, or public content.</div><textarea name="note" required placeholder="Required: explain why this source is being disabled."></textarea>'
+    : '<div class="admin-sub">Enabling restores this source for manual evidence operations. It does not crawl or fetch automatically.</div>'}
   <button type="submit">${source.enabled ? 'Disable source' : 'Enable source'}</button>
 </form>
 
@@ -451,6 +527,62 @@ export function renderAssetsPage({ assets }) {
 <div class="admin-top"><div><h1>Assets</h1><div class="admin-sub">Raw source material only. Assets are stored before parsing and never publish content.</div></div><div><a class="logout" href="/admin/assets/new">Upload asset</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Filename</th><th>Size</th><th>Type</th><th>Source</th><th>Downloaded</th><th>Checksum</th><th></th></tr></thead><tbody>
 ${assets.length ? assets.map(asset => `<tr><td><span class="pill">${escapeHtml(asset.downloadStatus || '')}</span></td><td>${escapeHtml(asset.originalFilename || '')}</td><td>${escapeHtml(formatBytes(asset.fileSize))}</td><td>${escapeHtml(asset.contentType || '')}</td><td>${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</td><td>${escapeHtml(asset.downloadedAt || '')}</td><td class="mono">${escapeHtml(asset.sha256Checksum ? `${asset.sha256Checksum.slice(0, 16)}...` : '')}</td><td><a href="/admin/assets/${asset.id}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No source assets stored', 'Upload or manually fetch evidence from a configured source. Assets remain raw evidence and do not publish content.', '<a href="/admin/assets/new">Upload asset</a>')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+export function renderParseResultsPage({ results }) {
+  return adminShell({
+    title: 'Parse results',
+    active: 'parse_results',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Parse results' }],
+    body: `
+<div class="admin-top"><div><h1>Parse results</h1><div class="admin-sub">Parser output history. Evidence extraction only; no proposal or publishing happens from this list.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('parse')}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Asset</th><th>Version</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td class="mono">${escapeHtml(result.parserKey)}</td><td>${result.assetId ? `<a href="/admin/assets/${escapeHtml(result.assetId)}">${escapeHtml(result.assetFilename || result.assetId)}</a>` : '-'}</td><td>${escapeHtml(result.parserVersion || '')}</td><td>${escapeHtml(result.createdAt || '')}</td><td>${escapeHtml(result.errorMessage || '')}</td><td><a href="/admin/parse-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No parse results yet', 'Run a parser manually from an asset detail page. Parsers only create evidence.')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+export function renderExtractionResultsPage({ results }) {
+  return adminShell({
+    title: 'Extraction results',
+    active: 'extraction_results',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Extractions' }],
+    body: `
+<div class="admin-top"><div><h1>Extraction results</h1><div class="admin-sub">Entity-shaped candidates derived from parse results. Validation is still required before proposal use.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('extraction')}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Validation</th><th>Entity</th><th>Key</th><th>Parser</th><th>Created</th><th></th></tr></thead><tbody>
+${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td><span class="pill">${escapeHtml(result.validationStatus)}</span></td><td>${escapeHtml(result.entityType)}</td><td class="mono">${escapeHtml(result.entityKey || '')}</td><td class="mono">${escapeHtml(result.parserKey || '')}</td><td>${escapeHtml(result.createdAt || '')}</td><td><a href="/admin/extraction-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No extraction results yet', 'Open a parse result and extract an entity-shaped payload.')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+export function renderDiffResultsPage({ results }) {
+  return adminShell({
+    title: 'Diff results',
+    active: 'diff_results',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Diffs' }],
+    body: `
+<div class="admin-top"><div><h1>Diff results</h1><div class="admin-sub">Comparison evidence against current JSON-backed content. Diffs do not create proposals unless an admin explicitly does so.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('diff')}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Parser</th><th>Changes</th><th>Created</th><th></th></tr></thead><tbody>
+${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td>${escapeHtml(result.entityType)}</td><td class="mono">${escapeHtml(result.entityKey || '')}</td><td class="mono">${escapeHtml(result.parserKey || '')}</td><td>${escapeHtml(result.diff?.change_count ?? '')}</td><td>${escapeHtml(result.createdAt || '')}</td><td><a href="/admin/diff-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No diff results yet', 'Run a diff from a parse or extraction result after choosing an exact entity key.')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+export function renderPipelineRunsPage({ results }) {
+  return adminShell({
+    title: 'Pipeline runs',
+    active: 'pipeline_runs',
+    breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Pipelines' }],
+    body: `
+<div class="admin-top"><div><h1>Pipeline runs</h1><div class="admin-sub">Manual evidence pipeline history. Pipelines never publish and proposal creation remains opt-in.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('parse')}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Parser</th><th>Entity</th><th>Key</th><th>Asset</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td class="mono">${escapeHtml(result.parserKey)}</td><td>${escapeHtml(result.entityType)}</td><td class="mono">${escapeHtml(result.entityKey || '')}</td><td>${result.assetId ? `<a href="/admin/assets/${escapeHtml(result.assetId)}">${escapeHtml(result.assetFilename || result.assetId)}</a>` : '-'}</td><td>${escapeHtml(result.createdAt || '')}</td><td>${escapeHtml(result.errorMessage || '')}</td><td><a href="/admin/pipeline-runs/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No pipeline runs yet', 'Run the manual pipeline from an asset detail page only after reviewing the source evidence.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -557,7 +689,7 @@ ${parsers.length ? parsers.map(parser => `<form class="action-box" method="post"
   </div>
 
   <label style="display:block;margin-top:12px;"><input type="checkbox" name="create_proposal" value="1"${pipelineValues.create_proposal ? ' checked' : ''}> Create proposal from diff</label>
-  <div class="admin-sub">Default is off. Proposal creation is skipped if extraction validation fails.</div>
+  <div class="notice" style="margin-top:10px;">Leave proposal creation off unless you have reviewed the source asset, parser choice, candidate index, and entity key. If checked, the pipeline can create a review-queue proposal, but it still cannot publish or mark anything verified.</div>
   <button type="submit">Run manual pipeline</button>
 </form>
 
@@ -848,6 +980,7 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const validationErrors = Array.isArray(proposal.validationErrors) ? proposal.validationErrors : [];
   const source = proposal.source;
   const validationPassed = proposal.validationStatus === 'passed';
+  const exportEligible = validationPassed && proposal.status === 'approved_for_draft';
   const approvalEvents = (proposal.events || []).filter(event => event.action === 'approve_for_draft');
   return adminShell({
     title: `Proposal ${proposal.id}`,
@@ -909,7 +1042,8 @@ ${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="
 <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/export">
   <strong>Export proposal for review</strong>
   <div class="admin-sub">Writes review artifacts under tmp/proposal-exports only. It does not publish, mark verified, or write data files.</div>
-  <button type="submit">Export proposal for review</button>
+  <button type="submit"${exportEligible ? '' : ' disabled'}>Export proposal for review</button>
+  ${exportEligible ? '' : '<div class="notice" style="margin-top:10px;">Export is available only after validation passes and the proposal is approved_for_draft.</div>'}
 </form>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
 ${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="5">${emptyState('No exports yet', 'Export creates review artifacts in tmp/proposal-exports only. It does not modify data/ or dist/.')}</td></tr>`}
@@ -925,13 +1059,13 @@ ${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(
   </form>
   <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Mark needs verification</strong>
-    <textarea name="note" placeholder="Optional reviewer note."></textarea>
+    <textarea name="note" required placeholder="Required: record why this needs verification before further review."></textarea>
     <input type="hidden" name="action" value="mark_needs_verification">
     <button type="submit">Mark needs verification</button>
   </form>
   <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Reject proposal</strong>
-    <textarea name="note" placeholder="Optional rejection note."></textarea>
+    <textarea name="note" required placeholder="Required: record why this proposal is being rejected."></textarea>
     <input type="hidden" name="action" value="reject">
     <button class="reject" type="submit">Reject</button>
   </form>
@@ -968,6 +1102,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <form class="action-box" method="post" action="/admin/proposal-exports/${escapeHtml(result.id)}/apply-draft">
   <strong>Apply to draft workspace</strong>
   <div class="admin-sub">Copies data/ into tmp/content-drafts and applies this export there only. NOT PUBLISHED.</div>
+  <div class="notice" style="margin-top:10px;">Use this only after reviewing the export payload and patch preview. This creates or replaces a temporary draft workspace for this proposal; live JSON and dist remain untouched.</div>
   <button type="submit">Apply to draft workspace</button>
 </form>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
