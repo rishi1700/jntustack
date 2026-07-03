@@ -104,6 +104,38 @@ function workflowNav(active) {
   }).join('')}</div>`;
 }
 
+function diffOperation(diff = {}) {
+  return diff?.operation || diff?.safety?.operation || 'unknown';
+}
+
+function diffOperationLabel(diff = {}) {
+  const operation = diffOperation(diff);
+  if (operation === 'add') return 'add';
+  if (operation === 'merge_update') return 'merge/update';
+  if (operation === 'replace') return 'replace';
+  if (operation === 'no_change') return 'no change';
+  return operation;
+}
+
+function diffSafetyWarnings(diff = {}) {
+  const warnings = diff?.safety?.warnings;
+  return Array.isArray(warnings) ? warnings : [];
+}
+
+function blockingSafetyWarnings(diff = {}) {
+  return diffSafetyWarnings(diff).filter(warning => warning?.blocking);
+}
+
+function renderDiffSafetyWarnings(diff = {}) {
+  const warnings = diffSafetyWarnings(diff);
+  if (!warnings.length) {
+    return '<div class="notice"><span class="status-ok">No destructive-change safety warnings recorded.</span></div>';
+  }
+  return `<div class="table-wrap"><table><thead><tr><th>Severity</th><th>Code</th><th>Path</th><th>Action</th><th>Message</th></tr></thead><tbody>
+${warnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity || 'warning')}</span></td><td class="mono">${escapeHtml(warning.code || '')}</td><td class="mono">${escapeHtml(warning.path || '')}</td><td>${escapeHtml(warning.action || '')}</td><td>${escapeHtml(warning.message || '')}</td></tr>`).join('')}
+</tbody></table></div>`;
+}
+
 function passFail(value) {
   return value ? '<span class="status-ok">ok</span>' : '<span class="status-bad">needs attention</span>';
 }
@@ -567,8 +599,8 @@ export function renderDiffResultsPage({ results }) {
     body: `
 <div class="admin-top"><div><h1>Diff results</h1><div class="admin-sub">Comparison evidence against current JSON-backed content. Diffs do not create proposals unless an admin explicitly does so.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('diff')}
-<div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Parser</th><th>Changes</th><th>Created</th><th></th></tr></thead><tbody>
-${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td>${escapeHtml(result.entityType)}</td><td class="mono">${escapeHtml(result.entityKey || '')}</td><td class="mono">${escapeHtml(result.parserKey || '')}</td><td>${escapeHtml(result.diff?.change_count ?? '')}</td><td>${escapeHtml(result.createdAt || '')}</td><td><a href="/admin/diff-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No diff results yet', 'Run a diff from a parse or extraction result after choosing an exact entity key.')}</td></tr>`}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Operation</th><th>Entity</th><th>Key</th><th>Parser</th><th>Changes</th><th>Warnings</th><th>Created</th><th></th></tr></thead><tbody>
+${results.length ? results.map(result => `<tr><td><span class="pill">${escapeHtml(result.status)}</span></td><td><span class="pill">${escapeHtml(diffOperationLabel(result.diff))}</span></td><td>${escapeHtml(result.entityType)}</td><td class="mono">${escapeHtml(result.entityKey || '')}</td><td class="mono">${escapeHtml(result.parserKey || '')}</td><td>${escapeHtml(result.diff?.change_count ?? '')}</td><td>${escapeHtml(diffSafetyWarnings(result.diff).length)}</td><td>${escapeHtml(result.createdAt || '')}</td><td><a href="/admin/diff-results/${escapeHtml(result.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="9">${emptyState('No diff results yet', 'Run a diff from a parse or extraction result. Missing exact keys now produce add-mode diffs for review.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -880,8 +912,8 @@ ${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span 
 </form>
 
 <h2>Diff history</h2>
-<div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Changes</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
-${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${escapeHtml(diff.status)}</span></td><td>${escapeHtml(diff.entityType)}</td><td class="mono">${escapeHtml(diff.entityKey)}</td><td>${escapeHtml(diff.diff?.change_count ?? '')}</td><td>${escapeHtml(diff.createdAt || '')}</td><td>${escapeHtml(diff.errorMessage || '')}</td><td><a href="/admin/diff-results/${escapeHtml(diff.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="7">${emptyState('No diff results yet', 'Run a diff after choosing an exact existing entity key. Fuzzy matching is intentionally not automatic.')}</td></tr>`}
+<div class="table-wrap"><table><thead><tr><th>Status</th><th>Operation</th><th>Entity</th><th>Key</th><th>Changes</th><th>Warnings</th><th>Created</th><th>Error</th><th></th></tr></thead><tbody>
+${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${escapeHtml(diff.status)}</span></td><td><span class="pill">${escapeHtml(diffOperationLabel(diff.diff))}</span></td><td>${escapeHtml(diff.entityType)}</td><td class="mono">${escapeHtml(diff.entityKey)}</td><td>${escapeHtml(diff.diff?.change_count ?? '')}</td><td>${escapeHtml(diffSafetyWarnings(diff.diff).length)}</td><td>${escapeHtml(diff.createdAt || '')}</td><td>${escapeHtml(diff.errorMessage || '')}</td><td><a href="/admin/diff-results/${escapeHtml(diff.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="9">${emptyState('No diff results yet', 'Run a diff after choosing an entity key. Missing exact keys produce add-mode diffs; fuzzy matching is intentionally not automatic.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -925,6 +957,8 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 
 export function renderDiffResultDetailPage({ result, existingProposal = null, error = null }) {
   const canCreateProposal = result.status === 'success' && !existingProposal;
+  const warnings = diffSafetyWarnings(result.diff);
+  const blockingWarnings = blockingSafetyWarnings(result.diff);
   return adminShell({
     title: `Diff result ${result.id}`,
     active: 'assets',
@@ -934,16 +968,22 @@ ${workflowNav('diff')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(result.status)}</div></div>
+  <div class="metric"><div class="metric-label">Operation</div><div class="metric-value">${escapeHtml(diffOperationLabel(result.diff))}</div></div>
+  <div class="metric"><div class="metric-label">Safety warnings</div><div class="metric-value ${blockingWarnings.length ? 'status-bad' : warnings.length ? 'status-warn' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
   <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
   <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value"><a href="/admin/parse-results/${escapeHtml(result.parseResultId)}">${escapeHtml(result.parseResultId)}</a></div></div>
   <div class="metric"><div class="metric-label">Extraction result</div><div class="metric-value">${result.extractionResultId ? `<a href="/admin/extraction-results/${escapeHtml(result.extractionResultId)}">${escapeHtml(result.extractionResultId)}</a>` : '-'}</div></div>
 </section>
 
+<h2>Safety warnings</h2>
+${renderDiffSafetyWarnings(result.diff)}
+${blockingWarnings.length ? '<div class="notice evidence-warning" style="margin-top:10px;">Blocking warnings must be reviewed. Draft approval will require an explicit safety override checkbox and reviewer note.</div>' : ''}
+
 <h2>Proposal</h2>
 ${existingProposal ? `<div class="notice">A proposal already exists for this diff: <a href="/admin/proposals/${escapeHtml(existingProposal.id)}">proposal ${escapeHtml(existingProposal.id)}</a>.</div>` : ''}
 ${canCreateProposal ? `<form class="action-box" method="post" action="/admin/diff-results/${escapeHtml(result.id)}/proposal">
   <strong>Create proposal from this diff</strong>
-  <div class="admin-sub">Creates a needs_review proposal in the review queue. It does not write public content or mark anything verified.</div>
+  <div class="admin-sub">Creates a needs_review proposal in the review queue. Operation: ${escapeHtml(diffOperationLabel(result.diff))}. It does not write public content or mark anything verified.</div>
   <label for="note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong> <span class="admin-sub">optional</span></label>
   <textarea id="note" name="note" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;margin-top:6px;"></textarea>
   <button type="submit">Create proposal from this diff</button>
@@ -1029,6 +1069,8 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const validationPassed = proposal.validationStatus === 'passed';
   const exportEligible = validationPassed && proposal.status === 'approved_for_draft';
   const approvalEvents = (proposal.events || []).filter(event => event.action === 'approve_for_draft');
+  const safetyWarnings = diffSafetyWarnings(proposal.diff);
+  const safetyBlockingWarnings = blockingSafetyWarnings(proposal.diff);
   return adminShell({
     title: `Proposal ${proposal.id}`,
     active: 'proposals',
@@ -1038,12 +1080,18 @@ ${workflowNav('proposal')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(proposal.status)}</div></div>
+  <div class="metric"><div class="metric-label">Operation</div><div class="metric-value">${escapeHtml(diffOperationLabel(proposal.diff))}</div></div>
+  <div class="metric"><div class="metric-label">Safety warnings</div><div class="metric-value ${safetyBlockingWarnings.length ? 'status-bad' : safetyWarnings.length ? 'status-warn' : 'status-ok'}">${escapeHtml(safetyWarnings.length)}</div></div>
   <div class="metric"><div class="metric-label">Created by</div><div class="metric-value">${escapeHtml(proposal.createdBy || '-')}</div></div>
   <div class="metric"><div class="metric-label">Reviewed by</div><div class="metric-value">${escapeHtml(proposal.reviewedBy || '-')}</div></div>
   <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value">${proposal.parseResultId ? `<a href="/admin/parse-results/${escapeHtml(proposal.parseResultId)}">${escapeHtml(proposal.parseResultId)}</a>` : '-'}</div></div>
   <div class="metric"><div class="metric-label">Diff result</div><div class="metric-value">${proposal.diffResultId ? `<a href="/admin/diff-results/${escapeHtml(proposal.diffResultId)}">${escapeHtml(proposal.diffResultId)}</a>` : '-'}</div></div>
   <div class="metric"><div class="metric-label">Validation</div><div class="metric-value ${validationPassed ? 'status-ok' : 'status-bad'}">${escapeHtml(proposal.validationStatus || 'not_validated')}</div></div>
 </section>
+
+<h2>Safety warnings</h2>
+${renderDiffSafetyWarnings(proposal.diff)}
+${safetyBlockingWarnings.length ? '<div class="notice evidence-warning" style="margin-top:10px;">This proposal has blocking safety warnings. Approval is blocked by default and requires the explicit safety override checkbox plus a reviewer note.</div>' : ''}
 
 <h2>Validation</h2>
 <div class="action-box">
@@ -1060,6 +1108,8 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
   <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Approve for draft/release preparation</strong>
     <div class="admin-sub">Requires passed validation. This does not publish, write live data files, mark content verified, or change CONTENT_SOURCE.</div>
+    ${safetyBlockingWarnings.length ? `<div class="danger-copy">Blocking diff safety warnings detected. Check the override only after confirming the proposed payload is safe for draft preparation.</div>
+    <label style="display:block;margin-top:10px;"><input type="checkbox" name="safety_override" value="yes"${validationPassed ? '' : ' disabled'}> I reviewed the blocking safety warnings and approve this safe merge/add for draft preparation.</label>` : ''}
     <textarea name="note" required placeholder="Record what was reviewed and why this can move to draft preparation."${validationPassed ? '' : ' disabled'}></textarea>
     <input type="hidden" name="action" value="approve_for_draft">
     <button type="submit"${validationPassed ? '' : ' disabled'}>Approve for draft</button>

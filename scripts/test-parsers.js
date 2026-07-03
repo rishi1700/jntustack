@@ -3,6 +3,8 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractEntityPayload } from '../lib/entity-extractors/index.js';
+import { normalizeCourseTitle } from '../lib/entity-extractors/subject-extractor.js';
+import { createStructuredDiff } from '../lib/diff-engine.js';
 import { getParser, parseTirumalaR23SyllabusTextForTest } from '../lib/parsers/index.js';
 import { validateProposalPayload } from '../lib/proposal-validation.js';
 
@@ -93,7 +95,128 @@ async function testTirumalaHtmlIgnoresContactRows() {
   assert.ok(result.parsedPayload.ignored_table_rows.length >= 1);
 }
 
+function subjectPayload(overrides = {}) {
+  return {
+    id: 'r23-cse-3-1-new-parser-subject',
+    regulation: 'R23',
+    branch: 'CSE',
+    specialization: null,
+    year: 3,
+    semester: 1,
+    year_sem_label: '3-1',
+    subject_code: null,
+    name: 'New Parser Subject',
+    category: 'ProfessionalCore',
+    credits: { L: 3, T: 0, P: 0, C: 3 },
+    type: 'theory',
+    course_outcomes: [],
+    resources: {
+      lecture_notes_pdf: null,
+      previous_question_papers_pdf: null,
+      lab_manual_pdf: null,
+    },
+    seo: {
+      slug: 'new-parser-subject-jntuk-r23-cse-3-1',
+      title: 'New Parser Subject',
+      meta_description: 'New Parser Subject extracted candidate. Needs human verification before publishing.',
+    },
+    legacy_equivalent_id: null,
+    source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: null,
+      status: 'needs_verification',
+    },
+    notes: 'Extracted candidate from parsed source evidence. Requires human verification.',
+    ...overrides,
+  };
+}
+
+function testAddModeDiff() {
+  const proposed = subjectPayload();
+  const diff = createStructuredDiff({
+    content: { data: { subjects: [] }, colleges: [], branchProfiles: [] },
+    entityType: 'subject',
+    entityKey: proposed.id,
+    proposedPayload: proposed,
+  });
+
+  assert.equal(diff.existingPayload, null);
+  assert.equal(diff.diff.operation, 'add');
+  assert.equal(diff.diff.change_count, 1);
+  assert.equal(diff.proposedPayload.id, proposed.id);
+  const validation = validateProposalPayload({ root, entityType: 'subject', payload: diff.proposedPayload });
+  assert.equal(validation.status, 'passed', JSON.stringify(validation.errors, null, 2));
+}
+
+function testSafeMergePreservesRichExistingFields() {
+  const existing = subjectPayload({
+    id: 'r23-cse-3-1-existing-rich-subject',
+    name: 'Existing Rich Subject',
+    units: [{ number: 1, title: 'Existing Unit', topics: ['Keep this'] }],
+    course_outcomes: ['Keep outcome'],
+    resources: { lecture_notes_pdf: 'https://example.com/notes.pdf' },
+    seo: {
+      slug: 'existing-rich-subject',
+      title: 'Existing Rich Subject - Verified',
+      meta_description: 'Keep verified SEO.',
+    },
+    source: {
+      origin_url: 'https://verified.example/source.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'verified',
+    },
+    notes: 'Keep verified notes.',
+  });
+  const thinParserPayload = subjectPayload({
+    id: existing.id,
+    name: 'Existing Rich Subject',
+    units: [],
+    course_outcomes: [],
+    resources: {
+      lecture_notes_pdf: null,
+      previous_question_papers_pdf: null,
+      lab_manual_pdf: null,
+    },
+    seo: {
+      slug: 'parser-thin-seo',
+      title: 'Parser Thin SEO',
+      meta_description: 'Parser thin metadata.',
+    },
+    source: {
+      origin_url: 'https://parser.example/source.pdf',
+      retrieved_date: null,
+      status: 'needs_verification',
+    },
+    notes: 'Parser thin notes.',
+  });
+  const diff = createStructuredDiff({
+    content: { data: { subjects: [existing] }, colleges: [], branchProfiles: [] },
+    entityType: 'subject',
+    entityKey: existing.id,
+    proposedPayload: thinParserPayload,
+  });
+
+  assert.equal(diff.diff.operation, 'no_change');
+  assert.deepEqual(diff.proposedPayload.units, existing.units);
+  assert.deepEqual(diff.proposedPayload.course_outcomes, existing.course_outcomes);
+  assert.deepEqual(diff.proposedPayload.resources, existing.resources);
+  assert.deepEqual(diff.proposedPayload.seo, existing.seo);
+  assert.equal(diff.proposedPayload.notes, existing.notes);
+  assert.equal(diff.proposedPayload.source.status, 'verified');
+  assert.ok(diff.diff.safety.warnings.some(warning => warning.code === 'thin_parser_field_preserved'));
+  assert.ok(diff.diff.safety.warnings.some(warning => warning.code === 'verified_source_downgrade_blocked' && warning.blocking));
+}
+
+function testTitleNormalization() {
+  assert.equal(normalizeCourseTitle('Full Stack development-2'), 'Full Stack Development-2');
+  assert.equal(normalizeCourseTitle('AI and ML for IoT systems'), 'AI and ML for IoT Systems');
+  assert.equal(normalizeCourseTitle('DBMS using SQL'), 'DBMS using SQL');
+}
+
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
+testAddModeDiff();
+testSafeMergePreservesRichExistingFields();
+testTitleNormalization();
 
 console.log('Parser regression checks passed.');

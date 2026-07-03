@@ -1348,6 +1348,7 @@ export function createAdminRouter({ root }) {
         id: req.params.id,
         action: req.body?.action,
         note: req.body?.note || '',
+        safetyOverride: req.body?.safety_override === 'yes',
         actor: config.email,
       });
       res.redirect(`/admin/proposals/${encodeURIComponent(req.params.id)}`);
