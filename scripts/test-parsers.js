@@ -12,6 +12,7 @@ import {
   parseTirumalaR23SyllabusTextForTest,
 } from '../lib/parsers/index.js';
 import { validateProposalPayload } from '../lib/proposal-validation.js';
+import { buildReleaseReviewWarningsForTest } from '../lib/release-review.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -319,11 +320,77 @@ function testTitleNormalization() {
   assert.equal(normalizeCourseTitle('DBMS using SQL'), 'DBMS using SQL');
 }
 
+function releaseReviewItem(overrides = {}) {
+  return {
+    item_id: 1,
+    proposal_id: 101,
+    proposal_export_id: 201,
+    draft_apply_id: 301,
+    revision_id: 401,
+    entity_type: 'subject',
+    entity_key: 'r23-eee-2-1-example-subject',
+    proposal_validation_status: 'passed',
+    export_validation_status: 'passed',
+    draft_validation_status: 'passed',
+    files: ['data/subjects-eee.json'],
+    diff: {
+      operation: 'add',
+      target_file: 'data/subjects-eee.json',
+      patch_count: 1,
+      patch_paths: ['/subjects/-'],
+    },
+    ...overrides,
+  };
+}
+
+function testReleaseReviewSameFileSafeAdds() {
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem(),
+    releaseReviewItem({
+      item_id: 2,
+      proposal_id: 102,
+      proposal_export_id: 202,
+      draft_apply_id: 302,
+      revision_id: 402,
+      entity_key: 'r23-eee-2-1-second-example-subject',
+    }),
+  ]);
+
+  assert.equal(warnings.length, 1, JSON.stringify(warnings, null, 2));
+  assert.equal(warnings[0].code, 'same_file_multiple_safe_adds');
+  assert.equal(warnings[0].blocking, false);
+  assert.equal(warnings[0].severity, 'info');
+}
+
+function testReleaseReviewSameFileMixedOpsBlock() {
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem(),
+    releaseReviewItem({
+      item_id: 2,
+      proposal_id: 102,
+      proposal_export_id: 202,
+      draft_apply_id: 302,
+      revision_id: 402,
+      entity_key: 'r23-eee-2-1-existing-subject',
+      diff: {
+        operation: 'replace',
+        target_file: 'data/subjects-eee.json',
+        patch_count: 1,
+        patch_paths: ['/subjects/8'],
+      },
+    }),
+  ]);
+
+  assert.ok(warnings.some(warning => warning.code === 'same_file_multiple_proposals' && warning.blocking), JSON.stringify(warnings, null, 2));
+}
+
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
 await testLbrcePdfTextFixture();
 testAddModeDiff();
 testSafeMergePreservesRichExistingFields();
 testTitleNormalization();
+testReleaseReviewSameFileSafeAdds();
+testReleaseReviewSameFileMixedOpsBlock();
 
 console.log('Parser regression checks passed.');

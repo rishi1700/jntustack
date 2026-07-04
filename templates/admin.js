@@ -1400,6 +1400,8 @@ function renderReleaseReviewSummary(summary) {
     return '<div class="notice">Review summary is unavailable. Generate the summary before marking a release ready.</div>';
   }
   const warnings = summary.warnings || [];
+  const blockingWarnings = summary.blocking_warnings || warnings.filter(warning => warning.blocking);
+  const informationalWarnings = summary.informational_warnings || warnings.filter(warning => !warning.blocking);
   const items = summary.items || [];
   const files = summary.files_that_would_change || [];
   const entityTypes = summary.entity_types_affected || [];
@@ -1411,11 +1413,17 @@ function renderReleaseReviewSummary(summary) {
     <div class="metric"><div class="metric-label">Entity types</div><div class="metric-value">${escapeHtml(entityTypes.length)}</div></div>
     <div class="metric"><div class="metric-label">Files</div><div class="metric-value">${escapeHtml(files.length)}</div></div>
     <div class="metric"><div class="metric-label">Blocking warnings</div><div class="metric-value ${summary.has_blocking_warnings ? 'status-bad' : 'status-ok'}">${escapeHtml(summary.blocking_warning_count)}</div></div>
+    <div class="metric"><div class="metric-label">Info warnings</div><div class="metric-value ${informationalWarnings.length ? 'status-warn' : 'status-ok'}">${escapeHtml(summary.informational_warning_count || informationalWarnings.length)}</div></div>
   </section>
 
-  <h2>Warnings</h2>
+  <h2>Blocking warnings</h2>
   <div class="table-wrap"><table><thead><tr><th>Severity</th><th>Code</th><th>Message</th><th>Proposal</th><th>File</th></tr></thead><tbody>
-  ${warnings.length ? warnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity)}</span></td><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td><td>${warning.proposal_id ? `<a href="/admin/proposals/${escapeHtml(warning.proposal_id)}">${escapeHtml(warning.proposal_id)}</a>` : '-'}</td><td class="mono">${escapeHtml(warning.file || '')}</td></tr>`).join('') : '<tr><td colspan="5"><span class="status-ok">No blocking warnings.</span></td></tr>'}
+  ${blockingWarnings.length ? blockingWarnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity)}</span></td><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td><td>${warning.proposal_id ? `<a href="/admin/proposals/${escapeHtml(warning.proposal_id)}">${escapeHtml(warning.proposal_id)}</a>` : '-'}</td><td class="mono">${escapeHtml(warning.file || '')}</td></tr>`).join('') : '<tr><td colspan="5"><span class="status-ok">No blocking warnings.</span></td></tr>'}
+  </tbody></table></div>
+
+  <h2>Informational warnings</h2>
+  <div class="table-wrap"><table><thead><tr><th>Severity</th><th>Code</th><th>Message</th><th>Proposal</th><th>File</th></tr></thead><tbody>
+  ${informationalWarnings.length ? informationalWarnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity)}</span></td><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td><td>${warning.proposal_id ? `<a href="/admin/proposals/${escapeHtml(warning.proposal_id)}">${escapeHtml(warning.proposal_id)}</a>` : '-'}</td><td class="mono">${escapeHtml(warning.file || '')}</td></tr>`).join('') : '<tr><td colspan="5"><span class="status-ok">No informational warnings.</span></td></tr>'}
   </tbody></table></div>
 
   <h2>Files that would change</h2>
@@ -1475,7 +1483,7 @@ ${release.status === 'ready_for_review' ? `<form class="action-box" method="post
   <strong>Generate apply plan</strong>
   <div class="admin-sub">Stores a final human-reviewable plan in MySQL and may write tmp convenience files. NOT APPLIED and NOT PUBLISHED.</div>
   <button type="submit"${reviewSummary?.has_blocking_warnings ? ' disabled' : ''}>Generate apply plan</button>
-  ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary warnings exist.</div>' : ''}
+  ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary blocking warnings exist.</div>' : ''}
 </form>` : '<div class="notice">Apply plans can only be generated after the release candidate reaches ready_for_review.</div>'}
 
 <h2>Partial live apply recovery</h2>
@@ -1534,6 +1542,7 @@ export function renderReleaseApplyPlanDetailPage({
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release apply plan not found.' });
   }
   const warnings = plan.final_warnings || [];
+  const informationalWarnings = plan.informational_warnings || [];
   const changes = plan.changes || [];
   const activeApply = latestApply && !['rolled_back', 'failed'].includes(latestApply.status);
   const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0 && !activeApply;
@@ -1555,7 +1564,8 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
-  <div class="metric"><div class="metric-label">Warnings</div><div class="metric-value ${warnings.length ? 'status-bad' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
+  <div class="metric"><div class="metric-label">Blocking warnings</div><div class="metric-value ${warnings.length ? 'status-bad' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
+  <div class="metric"><div class="metric-label">Info warnings</div><div class="metric-value ${informationalWarnings.length ? 'status-warn' : 'status-ok'}">${escapeHtml(informationalWarnings.length)}</div></div>
   <div class="metric"><div class="metric-label">Generated</div><div class="metric-value" style="font-size:15px;">${escapeHtml(plan.generated_at || '')}</div></div>
   <div class="metric"><div class="metric-label">Canonical storage</div><div class="metric-value status-ok">DB</div></div>
   <div class="metric"><div class="metric-label">Tmp artifacts</div><div class="metric-value ${tmpStatusClass}">${escapeHtml(storage.tmp_artifact_status || 'unknown')}</div></div>
@@ -1599,6 +1609,11 @@ ${plan.ordered_file_changes?.length ? plan.ordered_file_changes.map(change => `<
 <h2>Warnings</h2>
 <div class="table-wrap"><table><thead><tr><th>Code</th><th>Message</th></tr></thead><tbody>
 ${warnings.length ? warnings.map(warning => `<tr><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td></tr>`).join('') : '<tr><td colspan="2"><span class="status-ok">No final warnings.</span></td></tr>'}
+</tbody></table></div>
+
+<h2>Informational warnings</h2>
+<div class="table-wrap"><table><thead><tr><th>Code</th><th>Message</th></tr></thead><tbody>
+${informationalWarnings.length ? informationalWarnings.map(warning => `<tr><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td></tr>`).join('') : '<tr><td colspan="2"><span class="status-ok">No informational warnings.</span></td></tr>'}
 </tbody></table></div>
 
 <h2>Before / after entity preview</h2>
