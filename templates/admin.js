@@ -918,7 +918,61 @@ ${diffResults.length ? diffResults.map(diff => `<tr><td><span class="pill">${esc
   });
 }
 
-export function renderExtractionResultDetailPage({ result, error = null }) {
+function renderCredits(credits = {}) {
+  if (!credits || typeof credits !== 'object') return '';
+  return ['L', 'T', 'P', 'C']
+    .filter(key => credits[key] != null)
+    .map(key => `${key}:${credits[key]}`)
+    .join(' ');
+}
+
+function validationMissingCategory(result) {
+  return (result.validationErrors || []).some(error => error.params?.missingProperty === 'category' || error.path === '/category');
+}
+
+function renderCategoryMappingHelper(result, categoryOptions = []) {
+  if (result.entityType !== 'subject') return '';
+  const payload = result.extractedPayload || {};
+  const evidence = result.categoryEvidence || result.mappingEvidence || {};
+  const showHelper = result.parserKey === 'lbrce-r23-syllabus-pdf' || validationMissingCategory(result) || result.mappedCategory;
+  if (!showHelper) return '';
+  return `<h2>Reviewer category mapping</h2>
+<div class="notice evidence-warning" style="margin-bottom:10px;"><strong>Reviewer-supplied metadata.</strong><br>Choose a category only when the source evidence and reviewer judgment support it. Do not infer or guess categories from convenience alone. This keeps <span class="mono">source.status</span> as <span class="mono">needs_verification</span> and does not publish anything.</div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Course code</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.subject_code || evidence.subject_code || '')}</div></div>
+  <div class="metric"><div class="metric-label">Title</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.name || evidence.title || '')}</div></div>
+  <div class="metric"><div class="metric-label">Year/Sem</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.year_sem_label || evidence.year_sem_label || [payload.year, payload.semester].filter(Boolean).join('-'))}</div></div>
+  <div class="metric"><div class="metric-label">L/T/P/C</div><div class="metric-value" style="font-size:16px;">${escapeHtml(renderCredits(payload.credits || evidence.credits))}</div></div>
+  <div class="metric"><div class="metric-label">Category</div><div class="metric-value ${payload.category ? 'status-ok' : 'status-bad'}" style="font-size:16px;">${escapeHtml(payload.category || 'missing')}</div></div>
+  <div class="metric"><div class="metric-label">Source status</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.source?.status || '')}</div></div>
+</section>
+<div class="table-wrap" style="margin-top:10px;"><table><tbody>
+<tr><th>Parse result</th><td>${evidence.parse_result_id ? `<a href="/admin/parse-results/${escapeHtml(evidence.parse_result_id)}">${escapeHtml(evidence.parse_result_id)}</a>` : escapeHtml(result.parseResultId || '')}</td></tr>
+<tr><th>Parser</th><td class="mono">${escapeHtml(evidence.parser_key || result.parserKey || '')}</td></tr>
+<tr><th>Source URL</th><td class="mono">${escapeHtml(evidence.source_url || payload.source?.origin_url || '')}</td></tr>
+<tr><th>Page</th><td>${escapeHtml(evidence.page_number || '')}</td></tr>
+<tr><th>Section</th><td>${escapeHtml(evidence.section_label || '')}</td></tr>
+<tr><th>Semester heading</th><td>${escapeHtml(evidence.semester_heading || '')}</td></tr>
+<tr><th>Source row/snippet</th><td class="mono">${escapeHtml(evidence.row_text || '')}</td></tr>
+<tr><th>Parser category note</th><td>${escapeHtml(evidence.category_reason || '')}</td></tr>
+${result.mappedCategory ? `<tr><th>Mapped category</th><td>${escapeHtml(result.mappedCategory)} by ${escapeHtml(result.mappedBy || '')} at ${escapeHtml(result.mappedAt || '')}</td></tr>
+<tr><th>Mapping note</th><td>${escapeHtml(result.mappingNote || '')}</td></tr>` : ''}
+</tbody></table></div>
+<form class="action-box" method="post" action="/admin/extraction-results/${escapeHtml(result.id)}/category-mapping" style="margin-top:12px;">
+  <strong>${result.mappedCategory ? 'Update category mapping' : 'Create category mapping'}</strong>
+  <div class="admin-sub">The selected category is written only to this extraction result, then validation is rerun. It does not create a proposal, mark content verified, or publish.</div>
+  <label for="mapped_category" style="display:block;margin-top:12px;"><strong>Category</strong></label>
+  <select id="mapped_category" name="mapped_category" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+    <option value="">Select schema category</option>
+    ${categoryOptions.map(category => `<option value="${escapeHtml(category)}"${(result.mappedCategory || payload.category || '') === category ? ' selected' : ''}>${escapeHtml(category)}</option>`).join('')}
+  </select>
+  <label for="mapping_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="mapping_note" name="mapping_note" required placeholder="Required: explain the source/evidence used for this category mapping.">${escapeHtml(result.mappingNote || '')}</textarea>
+  <button type="submit">${result.mappedCategory ? 'Update mapping and revalidate' : 'Save mapping and revalidate'}</button>
+</form>`;
+}
+
+export function renderExtractionResultDetailPage({ result, categoryOptions = [], error = null }) {
   const validationErrors = Array.isArray(result.validationErrors) ? result.validationErrors : [];
   return adminShell({
     title: `Extraction result ${result.id}`,
@@ -933,6 +987,8 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
   <div class="metric"><div class="metric-label">Parse result</div><div class="metric-value"><a href="/admin/parse-results/${escapeHtml(result.parseResultId)}">${escapeHtml(result.parseResultId)}</a></div></div>
 </section>
+
+${renderCategoryMappingHelper(result, categoryOptions)}
 
 <h2>Diff action</h2>
 ${result.status === 'success' ? `<form class="action-box" method="post" action="/admin/extraction-results/${escapeHtml(result.id)}/diff">

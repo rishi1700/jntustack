@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { extractEntityPayload } from '../lib/entity-extractors/index.js';
+import { applyReviewerCategoryMappingToPayload } from '../lib/extraction-results.js';
 import { normalizeCourseTitle } from '../lib/entity-extractors/subject-extractor.js';
 import { createStructuredDiff } from '../lib/diff-engine.js';
 import {
@@ -159,6 +160,45 @@ async function testLbrcePdfTextFixture() {
     validation.errors.some(error => error.params?.missingProperty === 'category'),
     JSON.stringify(validation.errors, null, 2)
   );
+
+  assert.throws(
+    () => applyReviewerCategoryMappingToPayload({
+      root,
+      entityType: 'subject',
+      extractedPayload: validation.normalizedPayload,
+      mappedCategory: 'NotARealCategory',
+      mappingNote: 'Fixture reviewer note.',
+      mappedBy: 'test',
+    }),
+    /Invalid category/
+  );
+  assert.throws(
+    () => applyReviewerCategoryMappingToPayload({
+      root,
+      entityType: 'subject',
+      extractedPayload: validation.normalizedPayload,
+      mappedCategory: 'BasicScience',
+      mappingNote: '',
+      mappedBy: 'test',
+    }),
+    /Reviewer note is required/
+  );
+
+  const mapped = applyReviewerCategoryMappingToPayload({
+    root,
+    entityType: 'subject',
+    extractedPayload: validation.normalizedPayload,
+    mappedCategory: 'BasicScience',
+    mappingNote: 'Fixture maps this row to BasicScience for validation coverage only.',
+    mappedBy: 'test',
+    evidenceReference: {
+      row_text: graphTheory.evidence.row_text,
+      page_number: graphTheory.evidence.page_number,
+    },
+  });
+  assert.equal(mapped.validation.status, 'passed', JSON.stringify(mapped.validation.errors, null, 2));
+  assert.equal(mapped.mappedPayload.category, 'BasicScience');
+  assert.equal(mapped.mappedPayload.source.status, 'needs_verification');
 }
 
 function subjectPayload(overrides = {}) {

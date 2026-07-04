@@ -47,7 +47,9 @@ import {
   getExtractionResult,
   listExtractionResults,
   listExtractionResultsForParseResult,
+  mapExtractionResultCategory,
   runEntityExtraction,
+  subjectCategoryOptions,
 } from '../lib/extraction-results.js';
 import { parseMultipartForm, readRequestBuffer } from '../lib/multipart.js';
 import {
@@ -782,9 +784,40 @@ export function createAdminRouter({ root }) {
         res.status(404).send(renderAssetsUnavailablePage({ message: 'Extraction result not found.' }));
         return;
       }
-      res.send(renderExtractionResultDetailPage({ result }));
+      res.send(renderExtractionResultDetailPage({
+        result,
+        categoryOptions: subjectCategoryOptions(root),
+      }));
     } catch (err) {
       res.status(503).send(renderAssetsUnavailablePage({ message: extractionResultErrorSummary(err) }));
+    }
+  });
+
+  router.post('/extraction-results/:id/category-mapping', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const result = await mapExtractionResultCategory({
+        root,
+        extractionResultId: req.params.id,
+        mappedCategory: req.body?.mapped_category,
+        mappingNote: req.body?.mapping_note,
+        actor: config.email,
+      });
+      res.redirect(`/admin/extraction-results/${result.id}`);
+    } catch (err) {
+      try {
+        const result = await getExtractionResult(req.params.id);
+        if (!result) {
+          res.status(404).send(renderAssetsUnavailablePage({ message: 'Extraction result not found.' }));
+          return;
+        }
+        res.status(400).send(renderExtractionResultDetailPage({
+          result,
+          categoryOptions: subjectCategoryOptions(root),
+          error: extractionResultErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderAssetsUnavailablePage({ message: extractionResultErrorSummary(innerErr) }));
+      }
     }
   });
 
@@ -805,6 +838,7 @@ export function createAdminRouter({ root }) {
         }
         res.status(400).send(renderExtractionResultDetailPage({
           result,
+          categoryOptions: subjectCategoryOptions(root),
           error: diffResultErrorSummary(err),
         }));
       } catch (innerErr) {
