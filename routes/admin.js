@@ -80,6 +80,15 @@ import {
   validateContentProposal,
 } from '../lib/proposals.js';
 import {
+  PROMOTION_CHECKLIST,
+  createVerifiedPromotionProposal,
+  getVerificationReviewSubject,
+  listNeedsVerificationSubjects,
+  normalizePromotionChecklist,
+  recordVerificationReviewStarted,
+  verificationReviewErrorSummary,
+} from '../lib/verification-review.js';
+import {
   exportProposalForReview,
   getProposalExport,
   listProposalExports,
@@ -178,6 +187,8 @@ import {
   renderSourceRegistryPage,
   renderSourceUnavailablePage,
   renderSubjectsPage,
+  renderVerificationReviewPage,
+  renderVerificationSubjectsPage,
 } from '../templates/admin.js';
 
 function statusCounts(subjects) {
@@ -452,6 +463,110 @@ export function createAdminRouter({ root }) {
       res.send(renderSubjectsPage({ subjects: content.data.subjects, contentSource: content.source }));
     } catch (err) {
       next(err);
+    }
+  });
+
+  router.get('/verification-reviews', async (req, res) => {
+    try {
+      const result = await listNeedsVerificationSubjects({
+        root,
+        filters: {
+          branch: req.query.branch || '',
+          year: req.query.year || '',
+          semester: req.query.semester || '',
+          source: req.query.source || '',
+        },
+      });
+      res.send(renderVerificationSubjectsPage(result));
+    } catch (err) {
+      res.status(503).send(renderVerificationSubjectsPage({
+        subjects: [],
+        totalDrafts: 0,
+        filters: req.query || {},
+        filterOptions: {},
+        contentSource: 'unavailable',
+        error: verificationReviewErrorSummary(err),
+      }));
+    }
+  });
+
+  router.get('/verification-reviews/:id', async (req, res) => {
+    try {
+      const review = await getVerificationReviewSubject({ root, subjectId: req.params.id });
+      if (!review) {
+        res.status(404).send(renderVerificationSubjectsPage({
+          subjects: [],
+          totalDrafts: 0,
+          filters: {},
+          filterOptions: {},
+          contentSource: 'json',
+          error: 'Needs-verification subject draft not found.',
+        }));
+        return;
+      }
+      await recordVerificationReviewStarted({ subjectId: review.subject.id, actor: config.email });
+      res.send(renderVerificationReviewPage({
+        review,
+        checklistItems: PROMOTION_CHECKLIST,
+      }));
+    } catch (err) {
+      res.status(503).send(renderVerificationSubjectsPage({
+        subjects: [],
+        totalDrafts: 0,
+        filters: {},
+        filterOptions: {},
+        contentSource: 'unavailable',
+        error: verificationReviewErrorSummary(err),
+      }));
+    }
+  });
+
+  router.post('/verification-reviews/:id/propose', express.urlencoded({ extended: false, limit: '50kb' }), async (req, res) => {
+    const values = {
+      checklist: normalizePromotionChecklist(req.body || {}),
+      reviewer_note: req.body?.reviewer_note || '',
+      confirmation_phrase: req.body?.confirmation_phrase || '',
+    };
+    try {
+      const result = await createVerifiedPromotionProposal({
+        root,
+        subjectId: req.params.id,
+        checklist: values.checklist,
+        reviewerNote: values.reviewer_note,
+        confirmationPhrase: values.confirmation_phrase,
+        actor: config.email,
+      });
+      res.redirect(`/admin/proposals/${encodeURIComponent(result.proposalId)}`);
+    } catch (err) {
+      try {
+        const review = await getVerificationReviewSubject({ root, subjectId: req.params.id });
+        if (!review) {
+          res.status(404).send(renderVerificationSubjectsPage({
+            subjects: [],
+            totalDrafts: 0,
+            filters: {},
+            filterOptions: {},
+            contentSource: 'json',
+            error: 'Needs-verification subject draft not found.',
+          }));
+          return;
+        }
+        res.status(400).send(renderVerificationReviewPage({
+          review,
+          checklistItems: PROMOTION_CHECKLIST,
+          values,
+          error: verificationReviewErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderVerificationSubjectsPage({
+          subjects: [],
+          totalDrafts: 0,
+          filters: {},
+          filterOptions: {},
+          contentSource: 'unavailable',
+          error: verificationReviewErrorSummary(innerErr),
+        }));
+      }
     }
   });
 

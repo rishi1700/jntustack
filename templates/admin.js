@@ -11,6 +11,7 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
     ['dashboard', '/admin/', 'Dashboard'],
     ['checks', '/admin/checks', 'Checks'],
     ['subjects', '/admin/subjects', 'Subjects'],
+    ['verification_reviews', '/admin/verification-reviews', 'Verify drafts'],
     ['colleges', '/admin/colleges', 'Colleges'],
     ['branch_profiles', '/admin/branch-profiles', 'Branch profiles'],
     ['proposals', '/admin/proposals', 'Review queue'],
@@ -378,6 +379,170 @@ export function renderSubjectsPage({ subjects, contentSource }) {
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Subject</th><th>Branch</th><th>Regulation</th><th>Semester</th><th>Slug</th></tr></thead><tbody>
 ${subjects.map(s => `<tr><td><span class="pill">${escapeHtml(s.source?.status || '')}</span></td><td>${escapeHtml(s.name)}</td><td>${escapeHtml(s.branch)}</td><td>${escapeHtml(s.regulation)}</td><td>${escapeHtml(s.year_sem_label)}</td><td class="mono">${escapeHtml(s.seo?.slug || s.id)}</td></tr>`).join('')}
 </tbody></table></div>`,
+  });
+}
+
+function selectedAttr(left, right) {
+  return String(left || '') === String(right || '') ? ' selected' : '';
+}
+
+function checkedAttr(value) {
+  return value ? ' checked' : '';
+}
+
+function renderPresence(value) {
+  return value ? '<span class="status-ok">present</span>' : '<span class="status-warn">missing</span>';
+}
+
+function sourceHost(url) {
+  try {
+    return new URL(url).hostname;
+  } catch {
+    return url || '';
+  }
+}
+
+export function renderVerificationSubjectsPage({
+  subjects,
+  totalDrafts,
+  filters = {},
+  filterOptions = {},
+  contentSource,
+  message = null,
+  error = null,
+}) {
+  const branchOptions = filterOptions.branches || [];
+  const yearOptions = filterOptions.years || [];
+  const semesterOptions = filterOptions.semesters || [];
+  return adminShell({
+    title: 'Verified promotion reviews',
+    active: 'verification_reviews',
+    body: `
+<div class="admin-top"><div><h1>Verify drafts</h1><div class="admin-sub">Source: ${escapeHtml(contentSource)}. ${escapeHtml(totalDrafts)} needs_verification subject drafts require human source review before publication.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${message ? `<div class="notice">${escapeHtml(message)}</div>` : ''}
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<form class="action-box" method="get" action="/admin/verification-reviews">
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;">
+    <label><strong>Branch</strong>
+      <select name="branch" style="display:block;width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;margin-top:5px;">
+        <option value="">All branches</option>
+        ${branchOptions.map(value => `<option value="${escapeHtml(value)}"${selectedAttr(filters.branch, value)}>${escapeHtml(value)}</option>`).join('')}
+      </select>
+    </label>
+    <label><strong>Year</strong>
+      <select name="year" style="display:block;width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;margin-top:5px;">
+        <option value="">All years</option>
+        ${yearOptions.map(value => `<option value="${escapeHtml(value)}"${selectedAttr(filters.year, value)}>${escapeHtml(value)}</option>`).join('')}
+      </select>
+    </label>
+    <label><strong>Semester</strong>
+      <select name="semester" style="display:block;width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;margin-top:5px;">
+        <option value="">All semesters</option>
+        ${semesterOptions.map(value => `<option value="${escapeHtml(value)}"${selectedAttr(filters.semester, value)}>${escapeHtml(value)}</option>`).join('')}
+      </select>
+    </label>
+    <label><strong>Source</strong>
+      <input name="source" value="${escapeHtml(filters.source || '')}" placeholder="PDF host or URL text" style="display:block;width:100%;padding:8px;border:1px solid var(--line);border-radius:6px;margin-top:5px;">
+    </label>
+  </div>
+  <button type="submit">Filter</button>
+  <a class="logout" style="margin-left:10px;" href="/admin/verification-reviews">Clear</a>
+</form>
+
+<div class="table-wrap" style="margin-top:14px;"><table><thead><tr><th>Subject</th><th>Branch</th><th>Year/Sem</th><th>Source</th><th>Evidence fields</th><th></th></tr></thead><tbody>
+${subjects.length ? subjects.map(subject => `<tr>
+  <td><strong>${escapeHtml(subject.name)}</strong><div class="mono">${escapeHtml(subject.id || '')}</div></td>
+  <td>${escapeHtml(subject.branch || '')}<div class="admin-sub">${escapeHtml(subject.regulation || '')}</div></td>
+  <td>${escapeHtml(subject.yearSemLabel || `${subject.year || ''}-${subject.semester || ''}`)}</td>
+  <td class="mono">${subject.source?.origin_url ? `<a href="${escapeHtml(subject.source.origin_url)}" target="_blank" rel="noopener">${escapeHtml(sourceHost(subject.source.origin_url))}</a>` : '<span class="status-bad">missing source</span>'}<div class="admin-sub">${escapeHtml(subject.source?.college_source_note || subject.source?.retrieved_date || '')}</div></td>
+  <td>credits ${renderPresence(subject.hasCredits)}<br>units ${renderPresence(subject.hasUnits)}<br>outcomes ${renderPresence(subject.hasOutcomes)}</td>
+  <td><a href="/admin/verification-reviews/${encodeURIComponent(subject.id)}">Review</a></td>
+</tr>`).join('') : `<tr><td colspan="6">${emptyState('No matching drafts', 'Adjust filters or confirm there are needs_verification subjects in the loaded content.')}</td></tr>`}
+</tbody></table></div>`,
+  });
+}
+
+function checklistInputs(items, values = {}) {
+  return items.map(item => `
+    <label style="display:block;margin:8px 0;">
+      <input type="checkbox" name="${escapeHtml(item.key)}" value="yes"${checkedAttr(values[item.key])}>
+      ${escapeHtml(item.label)}
+    </label>`).join('');
+}
+
+function subjectFieldRows(subject) {
+  const rows = [
+    ['Title', subject.name],
+    ['Regulation', subject.regulation],
+    ['Branch', subject.branch],
+    ['Year/Semester', subject.year_sem_label || `${subject.year || ''}-${subject.semester || ''}`],
+    ['Category', subject.category],
+    ['Type', subject.type],
+    ['Credits', JSON.stringify(subject.credits || {})],
+    ['Units present', Array.isArray(subject.units) && subject.units.length ? `${subject.units.length}` : 'no'],
+    ['Outcomes present', Array.isArray(subject.course_outcomes) && subject.course_outcomes.length ? `${subject.course_outcomes.length}` : 'no'],
+    ['Caveat/source note', subject.source?.college_source_note || ''],
+    ['Draft notes', subject.notes || ''],
+  ];
+  return rows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeHtml(value ?? '')}</td></tr>`).join('');
+}
+
+export function renderVerificationReviewPage({
+  review,
+  checklistItems,
+  values = {},
+  error = null,
+}) {
+  const subject = review.subject;
+  const source = subject.source || {};
+  const validationErrors = review.validation?.errors || [];
+  return adminShell({
+    title: `Verify ${subject.name}`,
+    active: 'verification_reviews',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Dashboard' },
+      { href: '/admin/verification-reviews', label: 'Verify drafts' },
+      { label: subject.name },
+    ],
+    body: `
+<div class="admin-top"><div><h1>${escapeHtml(subject.name)}</h1><div class="admin-sub">Human source review for a needs_verification subject draft. This creates a proposal only.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${workflowNav('proposal')}
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${!source.origin_url ? '<div class="error">This draft is missing source/provenance and cannot be promoted.</div>' : ''}
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Current status</div><div class="metric-value">${escapeHtml(source.status || '')}</div></div>
+  <div class="metric"><div class="metric-label">Validation</div><div class="metric-value ${review.validation?.status === 'passed' ? 'status-ok' : 'status-bad'}">${escapeHtml(review.validation?.status || 'not_validated')}</div></div>
+  <div class="metric"><div class="metric-label">Proposed change</div><div class="metric-value">verified</div></div>
+  <div class="metric"><div class="metric-label">Diff operation</div><div class="metric-value">${escapeHtml(review.diff?.diff?.operation || 'unknown')}</div></div>
+</section>
+
+<h2>Source evidence</h2>
+<div class="action-box">
+  <strong>Origin</strong>
+  <div class="mono">${source.origin_url ? `<a href="${escapeHtml(source.origin_url)}" target="_blank" rel="noopener">${escapeHtml(source.origin_url)}</a>` : 'missing'}</div>
+  <div class="admin-sub">Retrieved: ${escapeHtml(source.retrieved_date || '-')} ${source.college_source_note ? ` / ${escapeHtml(source.college_source_note)}` : ''}</div>
+</div>
+
+<h2>Extracted fields</h2>
+<div class="table-wrap"><table><tbody>${subjectFieldRows(subject)}</tbody></table></div>
+
+${Array.isArray(subject.units) && subject.units.length ? `<h2>Units</h2><pre class="json-block">${escapeHtml(JSON.stringify(subject.units, null, 2))}</pre>` : ''}
+${Array.isArray(subject.course_outcomes) && subject.course_outcomes.length ? `<h2>Course outcomes</h2><pre class="json-block">${escapeHtml(JSON.stringify(subject.course_outcomes, null, 2))}</pre>` : ''}
+
+<h2>Validation</h2>
+${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th></tr></thead><tbody>${validationErrors.map(item => `<tr><td class="mono">${escapeHtml(item.path || '')}</td><td>${escapeHtml(item.message || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice"><span class="status-ok">Promotion payload passes schema validation.</span></div>'}
+
+<h2>Create promotion proposal</h2>
+<form class="action-box danger-zone" method="post" action="/admin/verification-reviews/${encodeURIComponent(subject.id)}/propose">
+  <strong>Checklist</strong>
+  <div class="admin-sub">Every item must be checked after opening and comparing the source evidence. Submission creates one proposal; it does not edit JSON or publish the subject.</div>
+  ${checklistInputs(checklistItems, values.checklist || {})}
+  <label for="reviewer_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
+  <textarea id="reviewer_note" name="reviewer_note" required>${escapeHtml(values.reviewer_note || '')}</textarea>
+  <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="confirmation_phrase" name="confirmation_phrase" required value="${escapeHtml(values.confirmation_phrase || '')}" placeholder="PROMOTE TO VERIFIED" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+  <button class="warn" type="submit">Create verified promotion proposal</button>
+</form>`,
   });
 }
 

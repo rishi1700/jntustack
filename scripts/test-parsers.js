@@ -13,6 +13,11 @@ import {
 } from '../lib/parsers/index.js';
 import { validateProposalPayload } from '../lib/proposal-validation.js';
 import { buildReleaseReviewWarningsForTest } from '../lib/release-review.js';
+import {
+  PROMOTE_TO_VERIFIED_CONFIRMATION,
+  buildVerifiedPromotionPayload,
+  validatePromotionReview,
+} from '../lib/verification-review.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -255,6 +260,65 @@ function testAddModeDiff() {
   assert.equal(validation.status, 'passed', JSON.stringify(validation.errors, null, 2));
 }
 
+function promotionChecklist(overrides = {}) {
+  return {
+    source_opened_reviewed: true,
+    title_matches_source: true,
+    category_type_correct: true,
+    credits_correct: true,
+    year_semester_correct: true,
+    no_fabricated_units_outcomes: true,
+    caveat_text_correct: true,
+    ...overrides,
+  };
+}
+
+function testVerifiedPromotionReviewGuardrails() {
+  const draft = subjectPayload();
+  const promoted = buildVerifiedPromotionPayload(draft);
+  assert.equal(draft.source.status, 'needs_verification');
+  assert.equal(promoted.source.status, 'verified');
+
+  const defaultValidation = validateProposalPayload({
+    root,
+    entityType: 'subject',
+    payload: promoted,
+  });
+  assert.equal(defaultValidation.status, 'passed', JSON.stringify(defaultValidation.errors, null, 2));
+  assert.equal(defaultValidation.normalizedPayload.source.status, 'needs_verification');
+
+  const review = validatePromotionReview({
+    root,
+    subject: draft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked against source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(review.status, 'passed', JSON.stringify(review.errors, null, 2));
+  assert.equal(review.validation.status, 'passed', JSON.stringify(review.validation.errors, null, 2));
+  assert.equal(review.validation.normalizedPayload.source.status, 'verified');
+
+  const incomplete = validatePromotionReview({
+    root,
+    subject: draft,
+    checklist: promotionChecklist({ credits_correct: false }),
+    reviewerNote: 'Checked against source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(incomplete.status, 'failed');
+  assert.ok(incomplete.errors.some(error => error.includes('Credits correct')));
+
+  const missingSource = validatePromotionReview({
+    root,
+    subject: subjectPayload({ source: { status: 'needs_verification' } }),
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked against source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(missingSource.status, 'failed');
+  assert.ok(missingSource.errors.some(error => error.includes('origin_url')));
+}
+
 function testSafeMergePreservesRichExistingFields() {
   const existing = subjectPayload({
     id: 'r23-cse-3-1-existing-rich-subject',
@@ -388,6 +452,7 @@ await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
 await testLbrcePdfTextFixture();
 testAddModeDiff();
+testVerifiedPromotionReviewGuardrails();
 testSafeMergePreservesRichExistingFields();
 testTitleNormalization();
 testReleaseReviewSameFileSafeAdds();
