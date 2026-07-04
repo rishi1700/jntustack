@@ -15,6 +15,14 @@ const DIST_DIR = path.join(__dirname, 'dist');
 const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always defer to it, never hardcode
 
 const app = express();
+app.use((req, res, next) => {
+  const host = String(req.headers.host || '').toLowerCase().split(':')[0];
+  if (host === 'www.jntustack.com') {
+    res.redirect(301, `https://jntustack.com${req.originalUrl || req.url || '/'}`);
+    return;
+  }
+  next();
+});
 app.use(express.json({ limit: '10kb' })); // small limit -- this only ever needs to carry one short question
 
 process.on('uncaughtException', (err) => {

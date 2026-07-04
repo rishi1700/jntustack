@@ -7,6 +7,13 @@ import { loadMergedColleges, loadMergedSubjects } from '../lib/dataset.js';
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DIST = path.join(ROOT, 'dist');
 const DATA = path.join(ROOT, 'data');
+const SITE_URL = 'https://jntustack.com';
+const DRAFT_META_PATTERNS = [
+  /needs human verification/i,
+  /before publishing/i,
+  /\bdraft\b/i,
+  /\bunverified\b/i,
+];
 
 function walk(dir, predicate = () => true) {
   if (!fs.existsSync(dir)) return [];
@@ -54,12 +61,47 @@ function isInternalHref(href) {
   return href.startsWith('/') && !href.startsWith('//');
 }
 
+function htmlFiles() {
+  return walk(DIST, f => f.endsWith('.html'));
+}
+
+function pathForHtmlFile(file) {
+  const relative = path.relative(DIST, file).replaceAll(path.sep, '/');
+  if (relative === 'index.html') return '/';
+  if (relative.endsWith('/index.html')) return `/${relative.slice(0, -'index.html'.length)}`;
+  return `/${relative}`;
+}
+
+function canonicalSubjectPath(subject) {
+  return `/${subject.seo?.slug || subject.id}/`;
+}
+
+function parseSitemapUrls() {
+  const sitemapPath = path.join(DIST, 'sitemap.xml');
+  if (!fs.existsSync(sitemapPath)) return null;
+  const xml = fs.readFileSync(sitemapPath, 'utf-8');
+  return [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1].trim());
+}
+
+function collectInternalHrefs() {
+  const hrefs = new Set();
+  const anchorRe = /<a\b[^>]*\bhref\s*=\s*(['"])(.*?)\1/gi;
+  for (const file of htmlFiles()) {
+    const html = fs.readFileSync(file, 'utf-8');
+    for (const match of html.matchAll(anchorRe)) {
+      const href = match[2].trim();
+      if (!isInternalHref(href)) continue;
+      hrefs.add(new URL(href, SITE_URL).pathname);
+    }
+  }
+  return hrefs;
+}
+
 function findMissingInternalLinks() {
-  const htmlFiles = walk(DIST, f => f.endsWith('.html'));
   const missing = [];
   const anchorRe = /<a\b[^>]*\bhref\s*=\s*(['"])(.*?)\1/gi;
 
-  for (const file of htmlFiles) {
+  for (const file of htmlFiles()) {
     const html = fs.readFileSync(file, 'utf-8');
     for (const match of html.matchAll(anchorRe)) {
       const href = match[2].trim();
@@ -88,6 +130,116 @@ function findMissingInternalLinks() {
   }
 
   return missing;
+}
+
+function auditIndexingReadiness() {
+  const failures = [];
+  const warnings = [];
+  const files = htmlFiles();
+  const sitemapUrls = parseSitemapUrls();
+  const sitemapSet = new Set(sitemapUrls || []);
+  const canonicalUrls = new Set();
+
+  if (!sitemapUrls) {
+    failures.push('dist/sitemap.xml is missing. Run npm run build before auditing.');
+  }
+
+  for (const file of files) {
+    const html = fs.readFileSync(file, 'utf-8');
+    const publicPath = pathForHtmlFile(file);
+    const expectedUrl = `${SITE_URL}${publicPath}`;
+    const title = html.match(/<title>(.*?)<\/title>/is)?.[1]?.trim();
+    const description = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i)?.[1]?.trim();
+    const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1]?.trim();
+    const noindex = /<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
+    const mainHasContent = /<main\b[\s\S]*?<\/main>/i.test(html) && html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().length > 300;
+
+    if (!title) failures.push(`${rel(file)} missing <title>`);
+    if (!description) failures.push(`${rel(file)} missing meta description`);
+    if (!canonical) failures.push(`${rel(file)} missing canonical link`);
+    if (canonical && canonical !== expectedUrl) failures.push(`${rel(file)} canonical ${canonical} does not match generated URL ${expectedUrl}`);
+    if (canonical) canonicalUrls.add(canonical);
+    if (noindex) failures.push(`${rel(file)} contains a robots noindex meta tag`);
+    if (!mainHasContent) warnings.push(`${rel(file)} main content looks thin or missing`);
+  }
+
+  if (sitemapUrls) {
+    for (const url of sitemapUrls) {
+      if (!url.startsWith(`${SITE_URL}/`)) failures.push(`sitemap URL is outside ${SITE_URL}: ${url}`);
+      const target = distTargetForPathname(new URL(url).pathname);
+      if (!fs.existsSync(target)) failures.push(`sitemap URL has no generated dist target: ${url}`);
+      if (!canonicalUrls.has(url)) failures.push(`sitemap URL has no matching page canonical: ${url}`);
+    }
+    for (const canonical of canonicalUrls) {
+      if (!sitemapSet.has(canonical)) failures.push(`canonical URL missing from sitemap: ${canonical}`);
+    }
+  }
+
+  const { subjects } = loadMergedSubjects(DATA);
+  const searchIndexPath = path.join(DIST, 'search-index.json');
+  const searchDocs = fs.existsSync(searchIndexPath)
+    ? JSON.parse(fs.readFileSync(searchIndexPath, 'utf-8'))
+    : [];
+  const searchSubjectUrls = new Set(searchDocs.filter(doc => doc.type === 'subject').map(doc => doc.url));
+  const internalHrefs = collectInternalHrefs();
+  const homeHtml = fs.existsSync(path.join(DIST, 'index.html'))
+    ? fs.readFileSync(path.join(DIST, 'index.html'), 'utf-8')
+    : '';
+  const branchGuideHtml = fs.existsSync(path.join(DIST, 'branch-guide/index.html'))
+    ? fs.readFileSync(path.join(DIST, 'branch-guide/index.html'), 'utf-8')
+    : '';
+
+  const verifiedSubjects = subjects.filter(subject => subject.source?.status === 'verified');
+  const verifiedBranches = new Set(verifiedSubjects.map(subject => subject.branch));
+
+  for (const subject of subjects) {
+    const canonicalPath = canonicalSubjectPath(subject);
+    const canonicalUrl = `${SITE_URL}${canonicalPath}`;
+    const entityPath = `/${subject.id}/`;
+
+    if (subject.source?.status === 'needs_verification') {
+      if (sitemapSet.has(canonicalUrl)) failures.push(`needs_verification subject appears in sitemap: ${subject.id} -> ${canonicalPath}`);
+      if (searchSubjectUrls.has(canonicalPath)) failures.push(`needs_verification subject appears in search index: ${subject.id} -> ${canonicalPath}`);
+      if (fs.existsSync(distTargetForPathname(canonicalPath))) failures.push(`needs_verification subject was rendered to dist: ${subject.id} -> ${canonicalPath}`);
+    }
+
+    if (subject.source?.status === 'verified') {
+      const metaDescription = subject.seo?.meta_description || '';
+      const stalePattern = DRAFT_META_PATTERNS.find(pattern => pattern.test(metaDescription));
+      if (stalePattern) failures.push(`verified subject has stale draft-style meta description: ${subject.id}`);
+    }
+
+    if (subject.source?.status === 'verified' && subject.seo?.slug && subject.seo.slug !== subject.id) {
+      if (sitemapSet.has(`${SITE_URL}${entityPath}`)) failures.push(`sitemap uses entity-key URL instead of seo.slug: ${subject.id}`);
+      if (searchSubjectUrls.has(entityPath)) failures.push(`search index uses entity-key URL instead of seo.slug: ${subject.id}`);
+      if (internalHrefs.has(entityPath)) failures.push(`internal link uses entity-key URL instead of seo.slug: ${subject.id}`);
+    }
+  }
+
+  for (const branch of verifiedBranches) {
+    const branchPath = `/${String(branch).toLowerCase()}/`;
+    if (!homeHtml.includes(`href="${branchPath}"`)) failures.push(`homepage does not link verified branch hub: ${branchPath}`);
+    if (!branchGuideHtml.includes(`href="${branchPath}"`)) failures.push(`branch guide does not link verified branch hub: ${branchPath}`);
+
+    const hubPath = path.join(DIST, String(branch).toLowerCase(), 'index.html');
+    if (fs.existsSync(hubPath)) {
+      const hubHtml = fs.readFileSync(hubPath, 'utf-8');
+      const branchSubject = verifiedSubjects.find(subject => subject.branch === branch);
+      const subjectPath = canonicalSubjectPath(branchSubject);
+      if (!hubHtml.includes(`href="${subjectPath}"`)) failures.push(`${branchPath} does not link a verified subject page: ${subjectPath}`);
+    }
+  }
+
+  if (!homeHtml.includes('href="/colleges/"')) failures.push('homepage/header does not link /colleges/');
+  if (!homeHtml.includes('href="/branch-guide/"')) failures.push('homepage/header does not link /branch-guide/');
+
+  return {
+    ok: failures.length === 0,
+    failures,
+    warnings,
+    sitemapCount: sitemapUrls?.length || 0,
+    canonicalCount: canonicalUrls.size,
+  };
 }
 
 function countByType(docs) {
@@ -144,6 +296,7 @@ const sourceFiles = [
 const hashHrefHits = findHashHref(sourceFiles);
 const missingInternalLinks = findMissingInternalLinks();
 const coverage = auditSearchCoverage();
+const indexing = auditIndexingReadiness();
 
 console.log('Site audit');
 console.log('----------');
@@ -151,6 +304,9 @@ console.log(`href="#" placeholders       : ${hashHrefHits.length}`);
 console.log(`Missing internal links       : ${missingInternalLinks.length}`);
 console.log(`Search index expected counts : ${JSON.stringify(coverage.expected)}`);
 console.log(`Search index actual counts   : ${JSON.stringify(coverage.actual)}`);
+console.log(`Sitemap URLs                 : ${indexing.sitemapCount}`);
+console.log(`Canonical public pages       : ${indexing.canonicalCount}`);
+console.log(`Indexing warnings            : ${indexing.warnings.length}`);
 
 const failures = [];
 if (hashHrefHits.length) failures.push(['href="#" placeholders', hashHrefHits]);
@@ -161,6 +317,7 @@ if (!coverage.ok) {
   if (coverage.extra?.length) details.push(`Extra index docs: ${coverage.extra.join(', ')}`);
   failures.push(['search-index coverage', details]);
 }
+if (!indexing.ok) failures.push(['indexing readiness', indexing.failures]);
 
 if (failures.length) {
   for (const [label, items] of failures) {
@@ -169,5 +326,9 @@ if (failures.length) {
   }
   process.exitCode = 1;
 } else {
+  if (indexing.warnings.length) {
+    console.warn('\nindexing warnings:');
+    for (const item of indexing.warnings) console.warn(`  - ${item}`);
+  }
   console.log('Audit passed.');
 }
