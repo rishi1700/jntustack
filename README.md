@@ -520,11 +520,39 @@ After migrations are applied, the current JSON content can be round-tripped
 through MySQL for parity testing without changing the public build source:
 
 ```
-npm run db:import-json   # upsert current data/*.json into MySQL
+npm run db:import-json -- --verify # upsert current data/*.json into MySQL, then run parity
 npm run db:export-json   # write JSON-compatible files to tmp/db-export/data/
 npm run db:parity        # compare current JSON vs DB export counts/slugs/status
 npm run test:content-store # verify json adapter counts; db adapter when env exists
 ```
+
+The JSON import command is idempotent and logs each import phase:
+universities, regulations, branches, subjects, colleges, branch profiles, and a
+completion summary. Each phase runs in its own transaction with query timeouts,
+so failures should report the current phase and last completed phase instead of
+leaving an ambiguous hang.
+
+For operational recovery or focused mirror syncs, use scoped imports:
+
+```
+npm run db:import-json -- --subjects --verify
+npm run db:import-json -- --colleges --verify
+npm run db:import-json -- --branch-profiles --verify
+npm run db:import-json -- --file=data/subjects-cse.json --verify
+```
+
+`--file` currently supports `data/subjects-*.json`, `data/colleges-*.json`, and
+`data/branch-guide-data.json`. Scoped imports still use the same upsert paths and
+should be followed by parity verification when the DB mirror is expected to
+match JSON.
+
+If an import fails midway, do not manually edit DB rows. Re-run the same import
+after fixing the reported cause; completed phases are upserts and can be safely
+replayed. For Hostinger remote DB failures, first confirm the app/user/password
+values, then check remote MySQL allowlisting for the current machine IP. Access
+denied errors that include the client host usually mean the IP allowlist changed
+or an IPv6 privacy address rotated. Keep `CONTENT_SOURCE=json` until DB-backed
+serving is separately approved and verified.
 
 The export command never overwrites `data/` by default. It writes to
 `tmp/db-export/`, which is ignored by git. If database credentials are missing,
