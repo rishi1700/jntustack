@@ -274,7 +274,14 @@ function promotionChecklist(overrides = {}) {
 }
 
 function testVerifiedPromotionReviewGuardrails() {
-  const draft = subjectPayload();
+  const draft = subjectPayload({
+    source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'needs_verification',
+      college_source_note: 'Subject names, credits, and semester placement are cross-confirmed against source evidence; autonomous-college caveat is shown publicly.',
+    },
+  });
   const promoted = buildVerifiedPromotionPayload(draft);
   assert.equal(draft.source.status, 'needs_verification');
   assert.equal(promoted.source.status, 'verified');
@@ -317,6 +324,22 @@ function testVerifiedPromotionReviewGuardrails() {
   });
   assert.equal(missingSource.status, 'failed');
   assert.ok(missingSource.errors.some(error => error.includes('origin_url')));
+
+  const missingPublicMetadata = validatePromotionReview({
+    root,
+    subject: subjectPayload({
+      source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        status: 'needs_verification',
+      },
+    }),
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked against source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(missingPublicMetadata.status, 'failed');
+  assert.ok(missingPublicMetadata.errors.some(error => error.includes('missing_source_retrieved_date')));
+  assert.ok(missingPublicMetadata.errors.some(error => error.includes('missing_public_source_caveat')));
 }
 
 function testSafeMergePreservesRichExistingFields() {
@@ -448,6 +471,46 @@ function testReleaseReviewSameFileMixedOpsBlock() {
   assert.ok(warnings.some(warning => warning.code === 'same_file_multiple_proposals' && warning.blocking), JSON.stringify(warnings, null, 2));
 }
 
+function testReleaseReviewVerifiedPromotionSourceMetadataBlockers() {
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      diff: {
+        operation: 'replace',
+        target_file: 'data/subjects-eee.json',
+        patch_count: 1,
+        patch_paths: ['/subjects/8'],
+      },
+      workflow_type: 'verified_promotion',
+      public_source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        status: 'verified',
+      },
+    }),
+  ]);
+
+  assert.ok(warnings.some(warning => warning.code === 'missing_source_retrieved_date' && warning.blocking), JSON.stringify(warnings, null, 2));
+  assert.ok(warnings.some(warning => warning.code === 'missing_public_source_caveat' && warning.blocking), JSON.stringify(warnings, null, 2));
+
+  const completeWarnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      diff: {
+        operation: 'replace',
+        target_file: 'data/subjects-eee.json',
+        patch_count: 1,
+        patch_paths: ['/subjects/8'],
+      },
+      workflow_type: 'verified_promotion',
+      public_source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        retrieved_date: '2026-07-01',
+        status: 'verified',
+        college_source_note: 'Subject names, credits, and semester placement are cross-confirmed against source evidence; autonomous-college caveat is shown publicly.',
+      },
+    }),
+  ]);
+  assert.equal(completeWarnings.length, 0, JSON.stringify(completeWarnings, null, 2));
+}
+
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
 await testLbrcePdfTextFixture();
@@ -457,5 +520,6 @@ testSafeMergePreservesRichExistingFields();
 testTitleNormalization();
 testReleaseReviewSameFileSafeAdds();
 testReleaseReviewSameFileMixedOpsBlock();
+testReleaseReviewVerifiedPromotionSourceMetadataBlockers();
 
 console.log('Parser regression checks passed.');
