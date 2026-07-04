@@ -4,6 +4,7 @@ import { getAdminConfig, getAdminTestConfig } from '../lib/config.js';
 import {
   assetErrorSummary,
   getAsset,
+  getAssetFileStatus,
   listAssets,
   registerAsset,
 } from '../lib/assets.js';
@@ -59,7 +60,7 @@ import {
   pipelineErrorSummary,
   runManualEvidencePipeline,
 } from '../lib/evidence-pipeline.js';
-import { fetchSourceUrl, sourceFetchErrorSummary } from '../lib/source-fetcher.js';
+import { fetchSourceUrl, repairMissingAssetFile, sourceFetchErrorSummary } from '../lib/source-fetcher.js';
 import {
   getParseResult,
   listParseResults,
@@ -532,19 +533,51 @@ export function createAdminRouter({ root }) {
     }
   });
 
+  async function loadAssetDetail(assetId) {
+    const asset = await getAsset(assetId);
+    if (!asset) return null;
+    const fileStatus = await getAssetFileStatus(root, asset);
+    const parsers = listParsersForAsset(asset);
+    const parseResults = await listParseResultsForAsset(asset.id);
+    const pipelineRuns = await listPipelineRunsForAsset(asset.id);
+    return { asset, fileStatus, parsers, parseResults, pipelineRuns };
+  }
+
   router.get('/assets/:id', async (req, res) => {
     try {
-      const asset = await getAsset(req.params.id);
-      if (!asset) {
+      const detail = await loadAssetDetail(req.params.id);
+      if (!detail) {
         res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
         return;
       }
-      const parsers = listParsersForAsset(asset);
-      const parseResults = await listParseResultsForAsset(asset.id);
-      const pipelineRuns = await listPipelineRunsForAsset(asset.id);
-      res.send(renderAssetDetailPage({ asset, parsers, parseResults, pipelineRuns }));
+      res.send(renderAssetDetailPage(detail));
     } catch (err) {
       res.status(503).send(renderAssetsUnavailablePage({ message: assetErrorSummary(err) }));
+    }
+  });
+
+  router.post('/assets/:id/repair', express.urlencoded({ extended: false }), async (req, res) => {
+    try {
+      const result = await repairMissingAssetFile({
+        root,
+        assetId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/assets/${result.asset.id}`);
+    } catch (err) {
+      try {
+        const detail = await loadAssetDetail(req.params.id);
+        if (!detail) {
+          res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
+          return;
+        }
+        res.status(400).send(renderAssetDetailPage({
+          ...detail,
+          error: sourceFetchErrorSummary(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderAssetsUnavailablePage({ message: sourceFetchErrorSummary(innerErr) }));
+      }
     }
   });
 
@@ -559,19 +592,13 @@ export function createAdminRouter({ root }) {
       res.redirect(`/admin/parse-results/${result.id}`);
     } catch (err) {
       try {
-        const asset = await getAsset(req.params.id);
-        if (!asset) {
+        const detail = await loadAssetDetail(req.params.id);
+        if (!detail) {
           res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
           return;
         }
-        const parsers = listParsersForAsset(asset);
-        const parseResults = await listParseResultsForAsset(asset.id);
-        const pipelineRuns = await listPipelineRunsForAsset(asset.id);
         res.status(400).send(renderAssetDetailPage({
-          asset,
-          parsers,
-          parseResults,
-          pipelineRuns,
+          ...detail,
           error: parseResultErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -603,19 +630,13 @@ export function createAdminRouter({ root }) {
       res.redirect(`/admin/pipeline-runs/${result.id}`);
     } catch (err) {
       try {
-        const asset = await getAsset(req.params.id);
-        if (!asset) {
+        const detail = await loadAssetDetail(req.params.id);
+        if (!detail) {
           res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
           return;
         }
-        const parsers = listParsersForAsset(asset);
-        const parseResults = await listParseResultsForAsset(asset.id);
-        const pipelineRuns = await listPipelineRunsForAsset(asset.id);
         res.status(400).send(renderAssetDetailPage({
-          asset,
-          parsers,
-          parseResults,
-          pipelineRuns,
+          ...detail,
           pipelineValues: values,
           pipelineError: pipelineErrorSummary(err),
         }));

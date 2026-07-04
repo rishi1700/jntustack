@@ -646,6 +646,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 
 export function renderAssetDetailPage({
   asset,
+  fileStatus = null,
   parsers = [],
   parseResults = [],
   pipelineRuns = [],
@@ -654,6 +655,20 @@ export function renderAssetDetailPage({
   pipelineValues = {},
 }) {
   const selectedParser = pipelineValues.parser_key || parsers.find(parser => parser.suggested && parser.available)?.key || parsers.find(parser => parser.available)?.key || '';
+  const fileState = fileStatus?.status || 'missing';
+  const fileStateLabel = fileState === 'repaired' ? 'repaired' : fileState === 'present' ? 'present' : 'missing';
+  const missingWarning = fileState === 'missing'
+    ? `<div class="error"><strong>Stored file missing.</strong> This asset has database metadata but the physical file is not present under storage/source-assets. Parsers and pipeline runs will fail until the file is repaired or re-uploaded.</div>`
+    : '';
+  const repairAction = fileStatus?.repairAvailable
+    ? `<form class="action-box" method="post" action="/admin/assets/${escapeHtml(asset.id)}/repair">
+        <strong>Repair missing asset file</strong>
+        <div class="admin-sub">Safely re-fetches the original source URL, reuses this asset row, refreshes checksum/size/content type/storage metadata, and records audit events. It does not parse, create proposals, publish content, or change CONTENT_SOURCE.</div>
+        <button type="submit">Repair missing file</button>
+      </form>`
+    : fileState === 'missing'
+      ? `<div class="notice">Repair action unavailable: this asset does not have both a source URL and discovery source.</div>`
+      : '';
   return adminShell({
     title: `Asset ${asset.id}`,
     active: 'assets',
@@ -662,11 +677,14 @@ export function renderAssetDetailPage({
 ${workflowNav('asset')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${pipelineError ? `<div class="error">${escapeHtml(pipelineError)}</div>` : ''}
+${missingWarning}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(asset.downloadStatus || '')}</div></div>
+  <div class="metric"><div class="metric-label">File</div><div class="metric-value">${escapeHtml(fileStateLabel)}</div></div>
   <div class="metric"><div class="metric-label">Size</div><div class="metric-value">${escapeHtml(formatBytes(asset.fileSize) || '-')}</div></div>
   <div class="metric"><div class="metric-label">Source</div><div class="metric-value">${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || '')}</div></div>
 </section>
+${repairAction}
 
 <h2>Metadata</h2>
 <div class="table-wrap"><table><tbody>
@@ -675,6 +693,7 @@ ${pipelineError ? `<div class="error">${escapeHtml(pipelineError)}</div>` : ''}
 <tr><th>SHA-256</th><td class="mono">${escapeHtml(asset.sha256Checksum || '')}</td></tr>
 <tr><th>Source URL</th><td class="mono">${escapeHtml(asset.sourceUrl || '')}</td></tr>
 <tr><th>Storage path</th><td class="mono">${escapeHtml(asset.localStoragePath || '')}</td></tr>
+<tr><th>File existence</th><td>${escapeHtml(fileStateLabel)}${fileStatus?.repairedAt ? ` <span class="admin-sub">(repaired ${escapeHtml(fileStatus.repairedAt)})</span>` : ''}</td></tr>
 <tr><th>Downloaded at</th><td>${escapeHtml(asset.downloadedAt || '')}</td></tr>
 <tr><th>Duplicate of</th><td>${asset.duplicateOfAssetId ? `<a href="/admin/assets/${escapeHtml(asset.duplicateOfAssetId)}">${escapeHtml(asset.duplicateOfAssetId)}</a>` : ''}</td></tr>
 <tr><th>ETag</th><td class="mono">${escapeHtml(asset.etag || '')}</td></tr>
