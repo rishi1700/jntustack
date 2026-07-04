@@ -3923,6 +3923,43 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship / Mini Project of 08 weeks duration during summer vacation' as a bare footnote (not a numbered/coded course row), with no evaluation scheme, credits or unit content given. A footnote adds that interested students may pursue SWAYAM Plus courses (e.g. Hands-on Masterclass on Data Analytics OR AI for Real-World Application) under Industry Internship. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-cse-1-1-chemistry",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": null,
+      "year": 1,
+      "semester": 1,
+      "year_sem_label": "1-1",
+      "subject_code": "23FE02",
+      "name": "Chemistry",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-cse-1-1-chemistry",
+        "title": "Chemistry",
+        "meta_description": "Chemistry extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_CSE_Syllabus1.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification.",
+      "category": "BasicScience"
     }
   ]
 }

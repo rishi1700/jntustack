@@ -2822,6 +2822,43 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship of 08 weeks duration during summer vacation' as a bare footnote row (no S.No., category, or L-T-P-C entry), not a numbered course row, and the source PDF gives no evaluation scheme, guidelines or unit content. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-ece-2-1-universal-human-values-understanding-harmony-and-ethical-human-conduct",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Universal Human Values– Understanding Harmony and Ethical Human Conduct",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-ece-2-1-universal-human-values-understanding-harmony-and-ethical-human-conduct",
+        "title": "Universal Human Values - ECE R23 2-1",
+        "meta_description": "Universal Human Values– Understanding Harmony and Ethical Human Conduct extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     }
   ]
 }

@@ -2233,6 +2233,43 @@
         "status": "needs_verification"
       },
       "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-2-power-systems-i",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Power Systems-I",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-2-power-systems-i",
+        "title": "Power Systems-I",
+        "meta_description": "Power Systems-I extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     }
   ]
 }
