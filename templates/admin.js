@@ -6,6 +6,36 @@ function escapeHtml(value = '') {
     .replaceAll('"', '&quot;');
 }
 
+function canonicalSubjectPath(subject, fallbackId = '') {
+  if (!subject) return '';
+  const slug = subject.seo?.slug || subject.id || fallbackId;
+  return slug ? `/${slug}/` : '';
+}
+
+function canonicalSubjectPathForChange(change = {}) {
+  if (change.entity_type !== 'subject') return '';
+  return canonicalSubjectPath(change.after_json, change.entity_key);
+}
+
+function canonicalSubjectPathForProposal(proposal = {}) {
+  if (proposal.entityType !== 'subject') return '';
+  return canonicalSubjectPath(proposal.normalizedPayload || proposal.proposedPayload, proposal.entityKey);
+}
+
+function canonicalSubjectPathRows(changes = []) {
+  const rows = changes
+    .filter(change => change.entity_type === 'subject')
+    .map(change => ({
+      entityKey: change.entity_key,
+      path: canonicalSubjectPathForChange(change),
+      status: change.after_json?.source?.status || '',
+    }))
+    .filter(row => row.path);
+
+  if (!rows.length) return '<tr><td colspan="3">No subject canonical URLs recorded.</td></tr>';
+  return rows.map(row => `<tr><td class="mono">${escapeHtml(row.entityKey)}</td><td class="mono">${escapeHtml(row.path)}</td><td><span class="pill">${escapeHtml(row.status)}</span></td></tr>`).join('');
+}
+
 function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
   const nav = [
     ['dashboard', '/admin/', 'Dashboard'],
@@ -449,15 +479,16 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <a class="logout" style="margin-left:10px;" href="/admin/verification-reviews">Clear</a>
 </form>
 
-<div class="table-wrap" style="margin-top:14px;"><table><thead><tr><th>Subject</th><th>Branch</th><th>Year/Sem</th><th>Source</th><th>Evidence fields</th><th></th></tr></thead><tbody>
+<div class="table-wrap" style="margin-top:14px;"><table><thead><tr><th>Subject</th><th>Canonical path</th><th>Branch</th><th>Year/Sem</th><th>Source</th><th>Evidence fields</th><th></th></tr></thead><tbody>
 ${subjects.length ? subjects.map(subject => `<tr>
   <td><strong>${escapeHtml(subject.name)}</strong><div class="mono">${escapeHtml(subject.id || '')}</div></td>
+  <td class="mono">${escapeHtml(canonicalSubjectPath(subject))}</td>
   <td>${escapeHtml(subject.branch || '')}<div class="admin-sub">${escapeHtml(subject.regulation || '')}</div></td>
   <td>${escapeHtml(subject.yearSemLabel || `${subject.year || ''}-${subject.semester || ''}`)}</td>
   <td class="mono">${subject.source?.origin_url ? `<a href="${escapeHtml(subject.source.origin_url)}" target="_blank" rel="noopener">${escapeHtml(sourceHost(subject.source.origin_url))}</a>` : '<span class="status-bad">missing source</span>'}<div class="admin-sub">${escapeHtml(subject.source?.college_source_note || subject.source?.retrieved_date || '')}</div></td>
   <td>credits ${renderPresence(subject.hasCredits)}<br>units ${renderPresence(subject.hasUnits)}<br>outcomes ${renderPresence(subject.hasOutcomes)}</td>
   <td><a href="/admin/verification-reviews/${encodeURIComponent(subject.id)}">Review</a></td>
-</tr>`).join('') : `<tr><td colspan="6">${emptyState('No matching drafts', 'Adjust filters or confirm there are needs_verification subjects in the loaded content.')}</td></tr>`}
+</tr>`).join('') : `<tr><td colspan="7">${emptyState('No matching drafts', 'Adjust filters or confirm there are needs_verification subjects in the loaded content.')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
@@ -473,6 +504,7 @@ function checklistInputs(items, values = {}) {
 function subjectFieldRows(subject) {
   const rows = [
     ['Title', subject.name],
+    ['Canonical public path', canonicalSubjectPath(subject)],
     ['Regulation', subject.regulation],
     ['Branch', subject.branch],
     ['Year/Semester', subject.year_sem_label || `${subject.year || ''}-${subject.semester || ''}`],
@@ -1311,6 +1343,7 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const approvalEvents = (proposal.events || []).filter(event => event.action === 'approve_for_draft');
   const safetyWarnings = diffSafetyWarnings(proposal.diff);
   const safetyBlockingWarnings = blockingSafetyWarnings(proposal.diff);
+  const canonicalPath = canonicalSubjectPathForProposal(proposal);
   return adminShell({
     title: `Proposal ${proposal.id}`,
     active: 'proposals',
@@ -1328,6 +1361,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <div class="metric"><div class="metric-label">Diff result</div><div class="metric-value">${proposal.diffResultId ? `<a href="/admin/diff-results/${escapeHtml(proposal.diffResultId)}">${escapeHtml(proposal.diffResultId)}</a>` : '-'}</div></div>
   <div class="metric"><div class="metric-label">Validation</div><div class="metric-value ${validationPassed ? 'status-ok' : 'status-bad'}">${escapeHtml(proposal.validationStatus || 'not_validated')}</div></div>
 </section>
+${canonicalPath ? `<div class="notice" style="margin-top:14px;"><strong>Canonical public path:</strong> <span class="mono">${escapeHtml(canonicalPath)}</span><br><span class="admin-sub">Generated subject URLs use <span class="mono">seo.slug || id</span>. Do not assume the entity key is the public URL slug.</span></div>` : ''}
 
 <h2>Safety warnings</h2>
 ${renderDiffSafetyWarnings(proposal.diff)}
@@ -1709,6 +1743,7 @@ export function renderReleaseApplyPlanDetailPage({
   const warnings = plan.final_warnings || [];
   const informationalWarnings = plan.informational_warnings || [];
   const changes = plan.changes || [];
+  const changePreviewByKey = new Map(changes.map(change => [`${change.entity_type}:${change.entity_key}`, change]));
   const activeApply = latestApply && !['rolled_back', 'failed'].includes(latestApply.status);
   const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0 && !activeApply;
   const storage = plan.storage || {};
@@ -1767,8 +1802,18 @@ ${plan.recovered_context ? `<h2>Recovered apply context</h2><pre class="json-blo
 </form>
 
 <h2>Ordered file changes</h2>
-<div class="table-wrap"><table><thead><tr><th>Order</th><th>File</th><th>Operation</th><th>Entity</th><th>Proposal</th><th>Revision</th></tr></thead><tbody>
-${plan.ordered_file_changes?.length ? plan.ordered_file_changes.map(change => `<tr><td>${escapeHtml(change.order)}</td><td class="mono">${escapeHtml(change.file)}</td><td><span class="pill">${escapeHtml(change.operation)}</span></td><td>${escapeHtml(change.entity_type)}<br><span class="mono">${escapeHtml(change.entity_key)}</span></td><td><a href="/admin/proposals/${escapeHtml(change.proposal_id)}">${escapeHtml(change.proposal_id)}</a></td><td>${change.revision_id ? `<a href="/admin/revisions/${escapeHtml(change.revision_id)}">${escapeHtml(change.revision_id)}</a>` : '-'}</td></tr>`).join('') : '<tr><td colspan="6">No changes in this plan.</td></tr>'}
+<div class="table-wrap"><table><thead><tr><th>Order</th><th>File</th><th>Operation</th><th>Entity</th><th>Canonical path</th><th>Proposal</th><th>Revision</th></tr></thead><tbody>
+${plan.ordered_file_changes?.length ? plan.ordered_file_changes.map(change => {
+  const preview = changePreviewByKey.get(`${change.entity_type}:${change.entity_key}`) || change;
+  const canonicalPath = canonicalSubjectPathForChange(preview);
+  return `<tr><td>${escapeHtml(change.order)}</td><td class="mono">${escapeHtml(change.file)}</td><td><span class="pill">${escapeHtml(change.operation)}</span></td><td>${escapeHtml(change.entity_type)}<br><span class="mono">${escapeHtml(change.entity_key)}</span></td><td class="mono">${escapeHtml(canonicalPath || '')}</td><td><a href="/admin/proposals/${escapeHtml(change.proposal_id)}">${escapeHtml(change.proposal_id)}</a></td><td>${change.revision_id ? `<a href="/admin/revisions/${escapeHtml(change.revision_id)}">${escapeHtml(change.revision_id)}</a>` : '-'}</td></tr>`;
+}).join('') : '<tr><td colspan="7">No changes in this plan.</td></tr>'}
+</tbody></table></div>
+
+<h2>Canonical public URL checks</h2>
+<div class="notice" style="margin-bottom:10px;">After live apply and deploy, verify generated subject URLs from <span class="mono">seo.slug || id</span>. Entity keys are stable content identifiers and are not always URL slugs.</div>
+<div class="table-wrap"><table><thead><tr><th>Entity key</th><th>Expected path</th><th>Post-apply status</th></tr></thead><tbody>
+${canonicalSubjectPathRows(changes)}
 </tbody></table></div>
 
 <h2>Warnings</h2>
@@ -1792,7 +1837,7 @@ ${changes.map(change => `<div class="action-box"><strong>${escapeHtml(change.ope
   });
 }
 
-export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROLLBACK LIVE JSON', error = null }) {
+export function renderReleaseLiveApplyDetailPage({ result, plan = null, rollbackPhrase = 'ROLLBACK LIVE JSON', error = null }) {
   if (!result) {
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release live apply result not found.' });
   }
@@ -1807,6 +1852,7 @@ export function renderReleaseLiveApplyDetailPage({ result, rollbackPhrase = 'ROL
     'published_pending_deploy_recovered',
     'failed',
   ].includes(result.status);
+  const changes = plan?.changes || [];
   return adminShell({
     title: `Live apply ${result.id}`,
     active: 'release_candidates',
@@ -1833,6 +1879,12 @@ ${result.errorMessage ? `<div class="error">${escapeHtml(result.errorMessage)}</
 <h2>Changed files</h2>
 <div class="table-wrap"><table><thead><tr><th>File</th></tr></thead><tbody>
 ${result.changedFiles.length ? result.changedFiles.map(file => `<tr><td class="mono">${escapeHtml(file)}</td></tr>`).join('') : '<tr><td>No files recorded.</td></tr>'}
+</tbody></table></div>
+
+<h2>Canonical public URL checks</h2>
+<div class="notice" style="margin-bottom:10px;">Verify public subject pages with the generated path from <span class="mono">seo.slug || id</span>. Do not assume the entity key is the URL slug.</div>
+<div class="table-wrap"><table><thead><tr><th>Entity key</th><th>Expected path</th><th>Post-apply status</th></tr></thead><tbody>
+${canonicalSubjectPathRows(changes)}
 </tbody></table></div>
 
 <h2>Backup</h2>

@@ -1366,8 +1366,15 @@ export function createAdminRouter({ root }) {
         res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release live apply result not found.' }));
         return;
       }
+      let plan = null;
+      try {
+        plan = await getReleaseApplyPlan({ root, releaseCandidateId: result.releaseCandidateId });
+      } catch {
+        plan = null;
+      }
       res.send(renderReleaseLiveApplyDetailPage({
         result,
+        plan,
         rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
       }));
     } catch (err) {
@@ -1389,6 +1396,7 @@ export function createAdminRouter({ root }) {
         const result = await getReleaseLiveApply(req.params.id);
         res.status(400).send(renderReleaseLiveApplyDetailPage({
           result,
+          plan: result ? await getReleaseApplyPlan({ root, releaseCandidateId: result.releaseCandidateId }).catch(() => null) : null,
           rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
           error: releaseLiveApplyErrorSummary(err),
         }));
@@ -1413,6 +1421,7 @@ export function createAdminRouter({ root }) {
         const result = await getReleaseLiveApply(req.params.id);
         res.status(400).send(renderReleaseLiveApplyDetailPage({
           result,
+          plan: result ? await getReleaseApplyPlan({ root, releaseCandidateId: result.releaseCandidateId }).catch(() => null) : null,
           rollbackPhrase: LIVE_ROLLBACK_CONFIRMATION,
           error: releaseLiveApplyErrorSummary(err),
         }));

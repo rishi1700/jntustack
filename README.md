@@ -368,6 +368,12 @@ Hostinger request timeouts do not leave an untracked write:
 6. Start verification from that page. Verification runs as a background worker
    and records build/retrieval/audit output on the same live apply row.
 
+For subject promotions, the public URL is generated from `seo.slug || id`, the
+same rule used by `scripts/build.js`, `dist/sitemap.xml`, and
+`dist/search-index.json`. Post-apply URL checks must use the canonical path shown
+on the proposal, verification review, release apply-plan, or live-apply admin
+page. Do not assume `entity_key` is the public URL slug.
+
 Successful verification marks the apply and release candidate
 `published_pending_deploy`. Recovered applies use
 `published_pending_deploy_recovered`. Neither status deploys the site by itself.

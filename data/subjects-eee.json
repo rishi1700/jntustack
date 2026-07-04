@@ -2377,8 +2377,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
+        "retrieved_date": "2026-07-01",
+        "status": "verified",
+        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     },
