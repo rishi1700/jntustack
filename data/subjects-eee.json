@@ -2270,6 +2270,228 @@
         "status": "needs_verification"
       },
       "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-electromagnetic-field-theory",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Electromagnetic Field Theory",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-electromagnetic-field-theory",
+        "title": "Electromagnetic Field Theory",
+        "meta_description": "Electromagnetic Field Theory extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-electrical-circuit-analysis-ii",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Electrical Circuit Analysis-II",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-electrical-circuit-analysis-ii",
+        "title": "Electrical Circuit Analysis-II",
+        "meta_description": "Electrical Circuit Analysis-II extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-dc-machines-and-transformers",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "DC Machines & Transformers",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-dc-machines-and-transformers",
+        "title": "DC Machines & Transformers",
+        "meta_description": "DC Machines & Transformers extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-electrical-circuit-analysis-ii-and-simulation-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Electrical Circuit Analysis-II and Simulation Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-electrical-circuit-analysis-ii-and-simulation-lab",
+        "title": "Electrical Circuit Analysis-II and Simulation Lab",
+        "meta_description": "Electrical Circuit Analysis-II and Simulation Lab extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-dc-machines-and-transformers-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "DC Machines & Transformers Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-dc-machines-and-transformers-lab",
+        "title": "DC Machines & Transformers Lab",
+        "meta_description": "DC Machines & Transformers Lab extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+    },
+    {
+      "id": "r23-eee-2-1-data-structures-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Data Structures Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "r23-eee-2-1-data-structures-lab",
+        "title": "Data Structures Lab",
+        "meta_description": "Data Structures Lab extracted candidate. Needs human verification before publishing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": null,
+        "status": "needs_verification"
+      },
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     }
   ]
 }
