@@ -1,0 +1,47 @@
+LAKIREDDY BALI REDDY COLLEGE OF ENGINEERING (AUTONOMOUS), MYLAVARAM
+R23-COURSE STRUCTURE
+(CSE)
+III SEMESTER
+S.No Course
+code Course Title
+Contact
+hours/week Credits
+Scheme of
+Valuation
+L T P CIE SEE Total
+Theory Courses
+1 23FE11 Discrete Mathematics &
+Graph Theory 3 0 0 3 30 70 100
+2
+23HS01 UHV 2- understanding
+harmony and ethical human
+conduct
+2 1 0 3 30 70 100
+3 23IT01 Digital Logic & Computer
+Organization 3 0 0 3 30 70 100
+Laboratory Courses
+4 23CS53 Advanced data structures &
+Algorithm Analysis lab 0 0 3 1.5 30 70 100
+Total 14 02 08 20 240 560 800
+V SEMESTER
+S.No Course
+code Course Title
+Contact
+hours/week Credits
+Scheme of
+Valuation
+L T P CIE SEE Total
+Theory Courses
+1 23AD04 Data Warehousing and Data
+Mining 3 0 0 3 30 70 100
+2 23CS07 Computer Networks 3 0 0 3 30 70 100
+3
+Program Elective-I
+23IT03 Object Oriented Analysis
+and Design
+3 0 0 3 30 70 100
+23AD02 Artificial Intelligence
+4 Open Elective-I 3 0 0 3 30 70 100
+Laboratory Courses
+5 23AD55 Data Mining Lab 0 0 3 1.5 30 70 100
+Total 15 01 10 23 270 680 950

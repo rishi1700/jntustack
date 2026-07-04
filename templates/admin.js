@@ -782,7 +782,7 @@ function candidateHeading(candidates) {
 }
 
 function renderPdfExtractionSummary(payload = {}) {
-  if (!payload || !['pdf_text', 'tirumala_r23_syllabus_pdf'].includes(payload.evidence_type)) return '';
+  if (!payload || !['pdf_text', 'tirumala_r23_syllabus_pdf', 'lbrce_r23_syllabus_pdf'].includes(payload.evidence_type)) return '';
   return `<h2>PDF text extraction summary</h2>
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Evidence type</div><div class="metric-value" style="font-size:16px;">${escapeHtml(payload.evidence_type)}</div></div>

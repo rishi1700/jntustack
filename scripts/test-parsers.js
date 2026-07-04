@@ -5,7 +5,11 @@ import { fileURLToPath } from 'node:url';
 import { extractEntityPayload } from '../lib/entity-extractors/index.js';
 import { normalizeCourseTitle } from '../lib/entity-extractors/subject-extractor.js';
 import { createStructuredDiff } from '../lib/diff-engine.js';
-import { getParser, parseTirumalaR23SyllabusTextForTest } from '../lib/parsers/index.js';
+import {
+  getParser,
+  parseLbrceR23SyllabusTextForTest,
+  parseTirumalaR23SyllabusTextForTest,
+} from '../lib/parsers/index.js';
 import { validateProposalPayload } from '../lib/proposal-validation.js';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -93,6 +97,68 @@ async function testTirumalaHtmlIgnoresContactRows() {
   assert.equal(result.parsedPayload.candidates[0].name, 'Data Structures');
   assert.equal(result.parsedPayload.low_confidence_candidates.length, 0);
   assert.ok(result.parsedPayload.ignored_table_rows.length >= 1);
+}
+
+async function testLbrcePdfTextFixture() {
+  const text = await fs.readFile(path.join(root, 'fixtures/parser/lbrce-r23-course-structure.txt'), 'utf-8');
+  const payload = parseLbrceR23SyllabusTextForTest({
+    pageTexts: [text],
+    asset: {
+      originalFilename: 'R23_CSE_Syllabus1.pdf',
+      sourceUrl: 'https://www.lbrce.ac.in/academics/syllabus/R23/R23_CSE_Syllabus1.pdf',
+    },
+  });
+
+  assert.equal(payload.evidence_type, 'lbrce_r23_syllabus_pdf');
+  assert.equal(payload.detected_context.regulation, 'R23');
+  assert.equal(payload.detected_context.branch, 'CSE');
+  assert.equal(payload.candidates.length, 7, JSON.stringify(payload.candidates.map(summarizeCandidate), null, 2));
+  assert.equal(payload.low_confidence_candidates.length, 2);
+
+  const graphTheory = payload.candidates.find(candidate => candidate.name === 'Discrete Mathematics & Graph Theory');
+  assert.ok(graphTheory);
+  assert.equal(graphTheory.subject_code, '23FE11');
+  assert.equal(graphTheory.category, undefined);
+  assert.equal(graphTheory.type, 'theory');
+  assert.deepEqual(graphTheory.credits, { L: 3, T: 0, P: 0, C: 3 });
+  assert.equal(graphTheory.year, 2);
+  assert.equal(graphTheory.semester, 1);
+  assert.equal(graphTheory.confidence.level, 'high');
+  assert.ok(graphTheory.confidence.reason.includes('category still requires validation'));
+
+  const lab = payload.candidates.find(candidate => candidate.name === 'Advanced data structures & Algorithm Analysis lab');
+  assert.ok(lab);
+  assert.equal(lab.subject_code, '23CS53');
+  assert.equal(lab.type, 'lab');
+  assert.deepEqual(lab.credits, { L: 0, T: 0, P: 3, C: 1.5 });
+
+  const elective = payload.low_confidence_candidates.find(candidate => candidate.raw_category === 'Program Elective-I');
+  assert.ok(elective);
+  assert.equal(elective.category, 'ProfessionalElective');
+  assert.equal(elective.confidence.level, 'low');
+  assert.ok(elective.confidence.reason.includes('option group'));
+
+  const openElective = payload.low_confidence_candidates.find(candidate => candidate.raw_category === 'Open Elective-I');
+  assert.ok(openElective);
+  assert.equal(openElective.category, 'OpenElective');
+  assert.equal(openElective.confidence.level, 'low');
+
+  const extracted = extractEntityPayload({
+    parsedPayload: payload,
+    entityType: 'subject',
+    candidateIndex: 0,
+  });
+  const validation = validateProposalPayload({
+    root,
+    entityType: 'subject',
+    payload: extracted.extractedPayload,
+  });
+  assert.equal(validation.normalizedPayload.source.status, 'needs_verification');
+  assert.equal(validation.status, 'failed');
+  assert.ok(
+    validation.errors.some(error => error.params?.missingProperty === 'category'),
+    JSON.stringify(validation.errors, null, 2)
+  );
 }
 
 function subjectPayload(overrides = {}) {
@@ -215,6 +281,7 @@ function testTitleNormalization() {
 
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
+await testLbrcePdfTextFixture();
 testAddModeDiff();
 testSafeMergePreservesRichExistingFields();
 testTitleNormalization();
