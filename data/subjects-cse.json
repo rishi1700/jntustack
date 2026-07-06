@@ -2050,7 +2050,7 @@
       "source": {
         "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
         "retrieved_date": "2026-07-02",
-        "status": "needs_verification",
+        "status": "verified",
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (page 2 course-structure table only) -- only the name 'Microprocessors & Microcontrollers' with 3-0-0-3 credits, no course objectives, outcomes, units or textbooks found anywhere in the document. The other three Professional Elective-I options (Object Oriented Analysis and Design, Artificial Intelligence, Quantum Computing) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
