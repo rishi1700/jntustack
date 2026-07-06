@@ -14,6 +14,7 @@ import {
 import { validateProposalPayload } from '../lib/proposal-validation.js';
 import { buildReleaseReviewWarningsForTest } from '../lib/release-review.js';
 import {
+  AUDIT_COURSE_PUBLICATION_CONFIRMATION,
   PROMOTE_TO_VERIFIED_CONFIRMATION,
   buildVerifiedPromotionPayload,
   validatePromotionReview,
@@ -340,6 +341,37 @@ function testVerifiedPromotionReviewGuardrails() {
   assert.equal(missingPublicMetadata.status, 'failed');
   assert.ok(missingPublicMetadata.errors.some(error => error.includes('missing_source_retrieved_date')));
   assert.ok(missingPublicMetadata.errors.some(error => error.includes('missing_public_source_caveat')));
+
+  const auditDraft = subjectPayload({
+    category: 'MandatoryNonCredit',
+    type: 'theory',
+    credits: { L: 2, T: 0, P: 0, C: 0 },
+    source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'needs_verification',
+      college_source_note: 'Subject names, credits, and semester placement are cross-confirmed against source evidence; autonomous-college caveat is shown publicly.',
+    },
+  });
+  const auditBlocked = validatePromotionReview({
+    root,
+    subject: auditDraft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked against source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(auditBlocked.status, 'failed');
+  assert.ok(auditBlocked.errors.some(error => error.includes('audit_course_publication_review_required')));
+
+  const auditApproved = validatePromotionReview({
+    root,
+    subject: auditDraft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked against source PDF fixture and intentionally publishing this audit-style page because the verified metadata is useful to students.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+    auditCoursePublicationConfirmation: AUDIT_COURSE_PUBLICATION_CONFIRMATION,
+  });
+  assert.equal(auditApproved.status, 'passed', JSON.stringify(auditApproved.errors, null, 2));
 }
 
 function testSafeMergePreservesRichExistingFields() {
@@ -511,6 +543,79 @@ function testReleaseReviewVerifiedPromotionSourceMetadataBlockers() {
   assert.equal(completeWarnings.length, 0, JSON.stringify(completeWarnings, null, 2));
 }
 
+function testReleaseReviewAuditCoursePublicationBlocker() {
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      diff: {
+        operation: 'replace',
+        target_file: 'data/subjects-cse.json',
+        patch_count: 1,
+        patch_paths: ['/subjects/8'],
+      },
+      workflow_type: 'verified_promotion',
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Checked source row.',
+      },
+      public_subject: {
+        name: 'Technical Paper Writing & IPR',
+        category: 'MandatoryNonCredit',
+        type: 'theory',
+        credits: { L: 2, T: 0, P: 0, C: 0 },
+        source: {
+          origin_url: 'https://www.tecnrt.org/example.pdf',
+          retrieved_date: '2026-07-01',
+          status: 'verified',
+          college_source_note: 'Autonomous-college caveat is shown publicly.',
+        },
+      },
+      public_source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        retrieved_date: '2026-07-01',
+        status: 'verified',
+        college_source_note: 'Autonomous-college caveat is shown publicly.',
+      },
+    }),
+  ]);
+  assert.ok(warnings.some(warning => warning.code === 'audit_course_publication_review_required' && warning.blocking), JSON.stringify(warnings, null, 2));
+
+  const approvedWarnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      diff: {
+        operation: 'replace',
+        target_file: 'data/subjects-cse.json',
+        patch_count: 1,
+        patch_paths: ['/subjects/8'],
+      },
+      workflow_type: 'verified_promotion',
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Checked source row and intentionally publishing this audit-style page because the verified metadata is useful to students.',
+        audit_course_publication_confirmation: AUDIT_COURSE_PUBLICATION_CONFIRMATION,
+      },
+      public_subject: {
+        name: 'Technical Paper Writing & IPR',
+        category: 'MandatoryNonCredit',
+        type: 'theory',
+        credits: { L: 2, T: 0, P: 0, C: 0 },
+        source: {
+          origin_url: 'https://www.tecnrt.org/example.pdf',
+          retrieved_date: '2026-07-01',
+          status: 'verified',
+          college_source_note: 'Autonomous-college caveat is shown publicly.',
+        },
+      },
+      public_source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        retrieved_date: '2026-07-01',
+        status: 'verified',
+        college_source_note: 'Autonomous-college caveat is shown publicly.',
+      },
+    }),
+  ]);
+  assert.equal(approvedWarnings.length, 0, JSON.stringify(approvedWarnings, null, 2));
+}
+
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
 await testLbrcePdfTextFixture();
@@ -521,5 +626,6 @@ testTitleNormalization();
 testReleaseReviewSameFileSafeAdds();
 testReleaseReviewSameFileMixedOpsBlock();
 testReleaseReviewVerifiedPromotionSourceMetadataBlockers();
+testReleaseReviewAuditCoursePublicationBlocker();
 
 console.log('Parser regression checks passed.');

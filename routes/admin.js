@@ -526,6 +526,7 @@ export function createAdminRouter({ root }) {
       checklist: normalizePromotionChecklist(req.body || {}),
       reviewer_note: req.body?.reviewer_note || '',
       confirmation_phrase: req.body?.confirmation_phrase || '',
+      audit_course_publication_confirmation: req.body?.audit_course_publication_confirmation || '',
     };
     try {
       const result = await createVerifiedPromotionProposal({
@@ -534,6 +535,7 @@ export function createAdminRouter({ root }) {
         checklist: values.checklist,
         reviewerNote: values.reviewer_note,
         confirmationPhrase: values.confirmation_phrase,
+        auditCoursePublicationConfirmation: values.audit_course_publication_confirmation,
         actor: config.email,
       });
       res.redirect(`/admin/proposals/${encodeURIComponent(result.proposalId)}`);

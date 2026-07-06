@@ -6,6 +6,35 @@ function escapeHtml(value = '') {
     .replaceAll('"', '&quot;');
 }
 
+const AUDIT_COURSE_PUBLICATION_CONFIRMATION = 'PUBLISH AUDIT COURSE';
+
+function creditValue(subject = {}) {
+  const credits = subject.credits;
+  if (!credits || typeof credits !== 'object') return null;
+  return credits.C ?? credits.total ?? null;
+}
+
+function isAuditStylePromotionSubject(subject = {}) {
+  const category = String(subject.category || '').trim().toLowerCase();
+  const type = String(subject.type || '').trim().toLowerCase();
+  const name = String(subject.name || '').trim().toLowerCase();
+  const credits = creditValue(subject);
+  return category === 'mandatorynoncredit'
+    || category.includes('audit')
+    || type === 'internship'
+    || type === 'project'
+    || category.includes('internship')
+    || category.includes('project')
+    || name.includes('internship')
+    || name.includes('project')
+    || (credits !== null && credits !== undefined && credits !== '' && Number(credits) === 0);
+}
+
+function auditPublicationWarning(subject = {}) {
+  if (!isAuditStylePromotionSubject(subject)) return '';
+  return `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Public usefulness review required.</strong> Mandatory non-credit, audit, internship, project, and zero-credit rows need an explicit publication decision. Verified course existence does not automatically mean the page is useful enough to publish.</div>`;
+}
+
 function canonicalSubjectPath(subject, fallbackId = '') {
   if (!subject) return '';
   const slug = subject.seo?.slug || subject.id || fallbackId;
@@ -486,7 +515,7 @@ ${subjects.length ? subjects.map(subject => `<tr>
   <td>${escapeHtml(subject.branch || '')}<div class="admin-sub">${escapeHtml(subject.regulation || '')}</div></td>
   <td>${escapeHtml(subject.yearSemLabel || `${subject.year || ''}-${subject.semester || ''}`)}</td>
   <td class="mono">${subject.source?.origin_url ? `<a href="${escapeHtml(subject.source.origin_url)}" target="_blank" rel="noopener">${escapeHtml(sourceHost(subject.source.origin_url))}</a>` : '<span class="status-bad">missing source</span>'}<div class="admin-sub">${escapeHtml(subject.source?.college_source_note || subject.source?.retrieved_date || '')}</div></td>
-  <td>credits ${renderPresence(subject.hasCredits)}<br>units ${renderPresence(subject.hasUnits)}<br>outcomes ${renderPresence(subject.hasOutcomes)}</td>
+  <td>credits ${renderPresence(subject.hasCredits)}<br>units ${renderPresence(subject.hasUnits)}<br>outcomes ${renderPresence(subject.hasOutcomes)}${isAuditStylePromotionSubject(subject) ? '<br><span class="status-warn">publication review required</span>' : ''}</td>
   <td><a href="/admin/verification-reviews/${encodeURIComponent(subject.id)}">Review</a></td>
 </tr>`).join('') : `<tr><td colspan="7">${emptyState('No matching drafts', 'Adjust filters or confirm there are needs_verification subjects in the loaded content.')}</td></tr>`}
 </tbody></table></div>`,
@@ -528,6 +557,7 @@ export function renderVerificationReviewPage({
   const subject = review.subject;
   const source = subject.source || {};
   const validationErrors = review.validation?.errors || [];
+  const auditStylePromotion = isAuditStylePromotionSubject(subject);
   return adminShell({
     title: `Verify ${subject.name}`,
     active: 'verification_reviews',
@@ -560,6 +590,9 @@ ${!source.origin_url ? '<div class="error">This draft is missing source/provenan
 
 ${Array.isArray(subject.units) && subject.units.length ? `<h2>Units</h2><pre class="json-block">${escapeHtml(JSON.stringify(subject.units, null, 2))}</pre>` : ''}
 ${Array.isArray(subject.course_outcomes) && subject.course_outcomes.length ? `<h2>Course outcomes</h2><pre class="json-block">${escapeHtml(JSON.stringify(subject.course_outcomes, null, 2))}</pre>` : ''}
+${!Array.isArray(subject.units) || !subject.units.length ? '<div class="notice evidence-warning" style="margin-top:10px;">No units/topics are present in this draft. If promoted, the public page must rely on verified metadata and source caveat rather than detailed syllabus content.</div>' : ''}
+${!Array.isArray(subject.course_outcomes) || !subject.course_outcomes.length ? '<div class="notice evidence-warning" style="margin-top:10px;">No course outcomes are present in this draft.</div>' : ''}
+${auditPublicationWarning(subject)}
 
 <h2>Validation</h2>
 ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path</th><th>Message</th></tr></thead><tbody>${validationErrors.map(item => `<tr><td class="mono">${escapeHtml(item.path || '')}</td><td>${escapeHtml(item.message || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice"><span class="status-ok">Promotion payload passes schema validation.</span></div>'}
@@ -573,6 +606,9 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
   <textarea id="reviewer_note" name="reviewer_note" required>${escapeHtml(values.reviewer_note || '')}</textarea>
   <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
   <input id="confirmation_phrase" name="confirmation_phrase" required value="${escapeHtml(values.confirmation_phrase || '')}" placeholder="PROMOTE TO VERIFIED" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
+  ${auditStylePromotion ? `<label for="audit_course_publication_confirmation" style="display:block;margin-top:12px;"><strong>Audit/non-credit publication confirmation</strong></label>
+  <div class="admin-sub">Only complete this if the reviewer intentionally wants this content-light audit/non-credit page to become public. The reviewer note must explain why.</div>
+  <input id="audit_course_publication_confirmation" name="audit_course_publication_confirmation" required value="${escapeHtml(values.audit_course_publication_confirmation || '')}" placeholder="${escapeHtml(AUDIT_COURSE_PUBLICATION_CONFIRMATION)}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">` : ''}
   <button class="warn" type="submit">Create verified promotion proposal</button>
 </form>`,
   });
@@ -1648,6 +1684,7 @@ export function renderReleaseCandidateDetailPage({ release, approvedProposals = 
   const canEdit = release.status === 'draft';
   const canMarkReady = ['draft', 'applied_to_draft'].includes(release.status);
   const readyBlocked = !reviewSummary || Boolean(reviewSummary.has_blocking_warnings);
+  const blockedByCurrentPolicy = release.status === 'ready_for_review' && Boolean(reviewSummary?.has_blocking_warnings);
   return adminShell({
     title: `Release candidate ${release.id}`,
     active: 'release_candidates',
@@ -1660,6 +1697,7 @@ export function renderReleaseCandidateDetailPage({ release, approvedProposals = 
 <div class="admin-top"><div><h1>${escapeHtml(release.title)}</h1><div class="admin-sub">Release candidate ${escapeHtml(release.id)}. NOT PUBLISHED.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('release')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${blockedByCurrentPolicy ? '<div class="error"><strong>Blocked by current policy warnings.</strong><br>This release is ready_for_review in stored workflow state, but current release-review policy has blocking warnings. Do not treat it as safely publishable until the warnings are resolved and a fresh apply plan is generated.</div>' : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(release.status)}</div></div>
   <div class="metric"><div class="metric-label">Items</div><div class="metric-value">${escapeHtml(release.itemCount)}</div></div>
@@ -1748,6 +1786,7 @@ export function renderReleaseApplyPlanDetailPage({
   const canApplyLive = plan.status === 'ready_for_review' && warnings.length === 0 && !activeApply;
   const storage = plan.storage || {};
   const tmpStatusClass = storage.tmp_artifact_status === 'available' ? 'status-ok' : 'status-warn';
+  const currentPolicyBlocked = warnings.length > 0 && plan.current_review_status?.generated_from_current_policy;
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -1761,6 +1800,7 @@ export function renderReleaseApplyPlanDetailPage({
 <div class="admin-top"><div><h1>Release apply plan ${escapeHtml(plan.release_candidate_id)}</h1><div class="admin-sub">NOT APPLIED / NOT PUBLISHED. Review artifact only.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('release')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${currentPolicyBlocked ? '<div class="error"><strong>Blocked by current policy warnings.</strong><br>This stored apply plan is not safe to live-apply as-is. Current review policy found blocking warnings after the plan was generated; regenerate only after resolving those warnings.</div>' : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
@@ -1772,6 +1812,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 </section>
 <div class="notice" style="margin-top:14px;">The canonical apply plan is stored in MySQL${storage.db_plan_id ? ` as <span class="mono">release_apply_plans #${escapeHtml(storage.db_plan_id)}</span>` : ''}. Tmp files under <span class="mono">${escapeHtml(plan.plan_path || 'tmp/release-apply-plans')}</span> are convenience artifacts only and may be missing after deploy cleanup without invalidating this page.</div>
 ${storage.tmp_artifact_message ? `<div class="notice evidence-warning" style="margin-top:10px;">${escapeHtml(storage.tmp_artifact_message)}</div>` : ''}
+${plan.current_review_status?.generated_from_current_policy ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Current policy overlay.</strong><br>Warning counts on this page are recomputed from current release-review policy, not trusted only from the stored historical plan. Blocking: ${escapeHtml(plan.current_review_status.blocking_warning_count || 0)}. Info: ${escapeHtml(plan.current_review_status.informational_warning_count || 0)}.</div>` : ''}
 ${plan.reconstructed_from_metadata ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Recovered apply-plan view.</strong><br>This plan was reconstructed from durable release, proposal, export, and live-apply metadata because the original tmp artifact was unavailable.</div>` : ''}
 ${plan.recovered_context ? `<h2>Recovered apply context</h2><pre class="json-block">${escapeHtml(JSON.stringify(plan.recovered_context, null, 2))}</pre>` : ''}
 
