@@ -1,4 +1,4 @@
-# JNTUStack -- project state as of this handoff
+# JNTUStack
 
 Domain: jntustack.com (primary, **registered 2026-06-30, expires
 2027-06-30**) + jntustack.in (intended .com redirect, **not yet registered**).
@@ -8,11 +8,9 @@ via GitHub. Not Cloudflare Pages -- that was the original plan, changed
 mid-build, and the architecture below reflects the current (Hostinger)
 target.
 
-**Live status (2026-07-03):** deployed to Hostinger as a Node.js/Express app
-via GitHub auto-deploy, entry `server.js`, Node 24. `CONTENT_SOURCE=json`
-remains the production-safe public content source. `https://jntustack.com/`
-and `/health` return 200, and `/admin` is protected behind login when
-`ADMIN_ENABLED=true`.
+**Live status (2026-07-06):** deployed to Hostinger as a Node.js/Express app
+via GitHub auto-deploy, entry `server.js`, Node 24. Production remains
+`CONTENT_SOURCE=json`; `/api/ask` remains disabled.
 
 ## What this is
 
@@ -20,6 +18,16 @@ A custom Node.js site: a static-site generator (no frontend framework, plain
 template literals driven by `data/*.json`) plus a thin Express server that
 serves the generated output and private admin workflows. `/api/ask` is
 feature-gated and must remain disabled unless explicitly approved.
+
+## Documentation map
+
+- `README.md` -- setup, deployment notes, and common commands.
+- `docs/CURRENT_STATE.md` -- current production state, counts, flags, parser
+  support, and known risks.
+- `docs/CONTENT_OPS_RUNBOOK.md` -- content/admin operating procedure from
+  source evidence through Git sync, DB parity, and indexing requests.
+- Original handoff notes -- historical context only. Do not use old handoff
+  text as the source of truth for current counts or operations.
 
 ## Quick start (local)
 
@@ -55,8 +63,9 @@ while `ASK_ENABLED=false`.
 
 ## Database foundation
 
-MySQL support is scaffolded for future admin/review workflows. It is CLI-only
-in this phase and is not used by the public build or server boot path.
+MySQL support backs admin/review workflows and mirrors JSON content for parity.
+It is not used by the public build or server boot path while production remains
+`CONTENT_SOURCE=json`.
 
 The content loader now has two adapter modes:
 
@@ -70,10 +79,10 @@ approved. Do not set Hostinger production to `db` just because migrations exist.
 
 ## Admin dashboard
 
-The private admin dashboard is disabled by default and is read-only when enabled.
-It shows content counts and tables for subjects, colleges, branch profiles, and
-source evidence. It does not expose editing, status changes, publishing, or
-automation.
+The private admin dashboard is disabled by default. When enabled, it shows
+content counts and DB-backed workflows for source evidence, parser results,
+extractions, proposals, verification reviews, release candidates, durable apply
+plans, and guarded live applies.
 
 Runtime/admin hardening:
 
@@ -152,10 +161,10 @@ The parser framework is DB-backed and manual-only. Parsers are registered by
 `parser_key`, run from an asset detail page, and write extracted evidence to
 `parse_results`. Parser output is always review material: it does not create
 content proposals, does not write `data/*.json`, does not mark anything
-verified, and does not publish to the public site. `html-basic` extracts simple
-HTML title/headings/links/text preview. `pdf-text-basic` is registered as a
-future parser interface but is disabled until a safe PDF text extraction
-dependency is selected.
+verified, and does not publish to the public site. Current parser support is
+summarized in `docs/CURRENT_STATE.md`; use `pdf-text-basic` for raw PDF text
+review and the source-specific Tirumala/LBRCE PDF parsers only for conservative
+course-structure candidate extraction.
 
 Diff results are the next review-only layer. A manual admin action can compare
 a `parse_results` row against the current content loaded through the content
@@ -182,10 +191,11 @@ and proposals created from diffs are normalized and validated against the
 current `data/schema.json` definitions where practical. Validation trims strings,
 normalizes whitespace, normalizes subject slugs and branch codes, stores
 `validation_status`, `validation_errors_json`, and `normalized_payload_json`,
-and prevents proposal payloads from entering review as `verified`. Admins can
-re-run validation from a proposal detail page. A validation pass still does not
-approve verification, publish content, or write to `data/*.json`; verified
-status requires a future human approval/apply workflow.
+and prevents ordinary proposal payloads from entering review as `verified`.
+Admins can re-run validation from a proposal detail page. A validation pass
+still does not approve verification, publish content, or write to
+`data/*.json`; verified status requires the verified-promotion review workflow
+and guarded release apply path.
 
 Entity extraction sits between raw parser output and diffs. Parsing means
 capturing raw evidence from an immutable source asset, such as title text,
@@ -285,8 +295,8 @@ approval is blocked and `proposal.approval_blocked` is recorded.
 Approval still does not modify live `data/*.json`, does not modify `dist/`,
 does not mark public content as verified, does not publish the site, and does
 not switch `CONTENT_SOURCE` to `db`. It only says the proposal is ready for the
-existing export and draft-apply review steps. Final publishing remains a future
-manual workflow.
+existing export, draft-apply, release candidate, durable apply-plan, and guarded
+live-apply review steps.
 
 Release candidates group proposals that were already approved for draft
 preparation. From `/admin/release-candidates`, an admin can create a draft
@@ -442,7 +452,7 @@ snapshot only, validates the draft dataset, writes `summary.json`, and stores
 metadata in `proposal_draft_applies`. Draft apply does not modify live
 `data/*.json`, does not modify `dist/`, does not commit anything, does not mark
 content verified, and does not publish. The output is for human inspection
-before any future manual publishing workflow.
+before any guarded live apply workflow.
 
 Content revisions preserve immutable review history after a successful draft
 apply. A revision stores the entity type/key, revision number, full content JSON
@@ -469,8 +479,11 @@ Asset
   -> Release Review Summary
   -> Release Apply Plan
   -> Apply Live JSON
-  -> Manual Git Commit/Push
-  -> (Future Publish)
+  -> Live Verification
+  -> Git Sync
+  -> DB Import/Parity
+  -> Hostinger Deploy
+  -> Search Console Indexing Request
 ```
 
 Environment variables:
@@ -509,8 +522,7 @@ Hostinger setup:
 
 1. Create a MySQL database in hPanel.
 2. Add the `DB_*` values to the Node.js app's Environment Variables.
-3. Keep `CONTENT_SOURCE=json` until a later PR adds and verifies a DB-backed
-   dataset adapter.
+3. Keep `CONTENT_SOURCE=json` until DB-backed serving is explicitly approved.
 4. Run migrations manually when needed:
 
 ```
@@ -569,12 +581,12 @@ these commands fail with setup instructions instead of silently succeeding.
 | Piece | Status |
 |---|---|
 | Schema (`data/schema.json`) | Stable. Regulation/Branch/Subject/BranchProfile/College all defined, ajv-validated. |
-| CSE R23 + R16 subject data (`data/subjects-cse.json`) | Mostly `needs_verification` -- only 2 R16 records are `verified` and actually publish. See each record's `notes` field. |
+| Subject data (`data/subjects-*.json`) | Split by branch and governed by the verified-only publishing gate. Current counts live in `docs/CURRENT_STATE.md`. |
 | Data loading layer (`lib/dataset.js`) | Stable. Globs `data/subjects-*.json` and merges them with `data/shared.json` (regulations + branches) into one dataset; the merged object is then ajv-validated against the schema. Shared by `build.js`, `build-search-index.js`, and `lib/retrieve.js`. Adding a branch needs no change here -- drop in a `data/subjects-<code>.json` file and it's discovered automatically. |
-| Branch guide (6 branches) | `verified`, live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
-| JNTUK colleges | 33 real records (constituent + autonomous), sourced from jntukdaaportal.in. The larger private-affiliated list (~120+ more) and JNTUH/JNTUA/JNTUGV are NOT done -- see `_coverage_note` in `data/colleges-jntuk.json`. |
-| Ask widget UI | Built, works standalone in mock mode. |
-| `routes/ask.js` + `server.js` | Express, written correctly per Anthropic's API conventions, tested end-to-end against a real running server (validation, static serving, graceful no-key failure) -- only the actual Anthropic API call is untested, since there's no key yet. Model-calling is abstracted into `callModel()` specifically so swapping providers later doesn't touch retrieval/routing/validation code. |
+| Branch guide (6 branches) | Verified and live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
+| College directory | Live and generated from the merged college JSON files. Current count lives in `docs/CURRENT_STATE.md`. |
+| Ask widget UI | Built but not exposed in production. `/api/ask` remains disabled until rate limiting and final model testing are explicitly approved. |
+| `routes/ask.js` + `server.js` | Express route exists behind `ASK_ENABLED=true`; production keeps `ASK_ENABLED=false`, so `/api/ask` returns 404. |
 | `lib/retrieve.js` | Tested, working keyword retrieval. Has a known limitation: naive keyword overlap, no semantic search. Fine at this corpus size; revisit if it grows ~10x. |
 
 ## Data files & how they're loaded
@@ -589,7 +601,7 @@ records.
 | `data/shared.json` | `regulations` (R16/R19/R20/R23/R25) and `branches` (all six: CSE, IT, ECE, EEE, CE, MECH). Cross-branch facts that don't belong to any one subject file. |
 | `data/subjects-<code>.json` | One file per branch -- each a `{ "subjects": [...] }` object (e.g. `data/subjects-cse.json`). **Adding a branch = drop in a new `data/subjects-<code>.json` file.** The build globs `data/subjects-*.json`, so no build-script edit is needed. |
 | `data/branch-guide-data.json` | `branch_profiles` for the branch-choice guide (separate dataset, loaded on its own). |
-| `data/colleges-jntuk.json` | College directory records (separate dataset). |
+| `data/colleges-<campus>.json` | College directory records split by campus and merged by the build. |
 
 At build time `scripts/build.js` (via `lib/dataset.js`) merges `shared.json`'s
 `regulations` + `branches` with the concatenated `subjects` arrays from every
@@ -607,18 +619,19 @@ more content live faster -- the whole point is that nothing reaches a
 student without a real source behind it. `needs_verification` content
 renders to `drafts/` with a visible orange watermark instead.
 
-## Immediate next steps, roughly in order
+## Immediate next steps
+
+Use `docs/CURRENT_STATE.md` for current state and
+`docs/CONTENT_OPS_RUNBOOK.md` for operational workflow. Keep README next steps
+limited to setup-level reminders:
 
 1. Review the live admin UI with `ADMIN_ENABLED=true`, starting at
    `/admin/checks`, and keep `CONTENT_SOURCE=json`.
-2. Source the official R23 syllabus PDFs (see notes in
-   `data/subjects-cse.json`) to flip subject records to `verified`.
-3. Finish the JNTUK private-college list, then JNTUH/JNTUA/JNTUGV
-   (`data/colleges-jntuk.json` coverage note has the blocker: the source
-   page is JS-rendered, needs a browser-automation pass, not a plain fetch).
-4. Branch hub / semester hub page templates don't exist yet -- only
-   individual subject pages and the branch guide do.
-5. Decide free-vs-rate-limited access model for the ask widget before
+2. Run content work through the proposal/release/apply-plan workflow in
+   `docs/CONTENT_OPS_RUNBOOK.md`; do not bypass the verified-only gate.
+3. After any guarded live apply, sync Git and run DB import/parity before the
+   next deploy.
+4. Decide free-vs-rate-limited access model for the ask widget before
    enabling `ASK_ENABLED=true` or linking `/api/ask` from a live page.
 
 ## Design constraints worth preserving as this grows
