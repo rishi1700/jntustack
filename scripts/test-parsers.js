@@ -306,6 +306,29 @@ function testVerifiedPromotionReviewGuardrails() {
   assert.equal(review.validation.status, 'passed', JSON.stringify(review.validation.errors, null, 2));
   assert.equal(review.validation.normalizedPayload.source.status, 'verified');
 
+  const staleDraft = subjectPayload({
+    source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'needs_verification',
+      college_source_note: 'Subject names, credits, and semester placement are cross-confirmed against source evidence; autonomous-college caveat is shown publicly.',
+    },
+    notes: 'NEEDS VERIFICATION: source the unit-wise content before flipping to verified.',
+  });
+  const stalePromoted = buildVerifiedPromotionPayload(staleDraft);
+  assert.equal(stalePromoted.notes, undefined);
+  const staleValidation = validateProposalPayload({
+    root,
+    entityType: 'subject',
+    payload: {
+      ...stalePromoted,
+      notes: 'NEEDS VERIFICATION: source the unit-wise content before flipping to verified.',
+    },
+    allowVerifiedSource: true,
+  });
+  assert.equal(staleValidation.status, 'failed');
+  assert.ok(staleValidation.errors.some(error => error.keyword === 'stale_draft_copy_in_verified_promotion'));
+
   const incomplete = validatePromotionReview({
     root,
     subject: draft,
@@ -372,6 +395,36 @@ function testVerifiedPromotionReviewGuardrails() {
     auditCoursePublicationConfirmation: AUDIT_COURSE_PUBLICATION_CONFIRMATION,
   });
   assert.equal(auditApproved.status, 'passed', JSON.stringify(auditApproved.errors, null, 2));
+
+  const electiveDraft = subjectPayload({
+    name: 'Entrepreneurship Development & Venture Creation',
+    category: 'OpenElective',
+    notes: 'Listed as Open Elective-I OR Entrepreneurship Development & Venture Creation.',
+    source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'needs_verification',
+      college_source_note: 'Subject names, credits, and semester placement are cross-confirmed against source evidence; autonomous-college caveat is shown publicly.',
+    },
+  });
+  const electiveBlocked = validatePromotionReview({
+    root,
+    subject: electiveDraft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'Checked source PDF fixture.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(electiveBlocked.status, 'failed');
+  assert.ok(electiveBlocked.errors.some(error => error.includes('elective_option_review_required')));
+
+  const electiveApproved = validatePromotionReview({
+    root,
+    subject: electiveDraft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'Reviewed as a standalone elective option page. The title should be published as an elective option and the public page does not imply it is mandatory for every student.',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+  });
+  assert.equal(electiveApproved.status, 'passed', JSON.stringify(electiveApproved.errors, null, 2));
 }
 
 function testSafeMergePreservesRichExistingFields() {
@@ -448,6 +501,7 @@ function releaseReviewItem(overrides = {}) {
     revision_id: 401,
     entity_type: 'subject',
     entity_key: 'r23-eee-2-1-example-subject',
+    proposal_status: 'approved_for_draft',
     proposal_validation_status: 'passed',
     export_validation_status: 'passed',
     draft_validation_status: 'passed',
@@ -616,6 +670,86 @@ function testReleaseReviewAuditCoursePublicationBlocker() {
   assert.equal(approvedWarnings.length, 0, JSON.stringify(approvedWarnings, null, 2));
 }
 
+function testReleaseReviewStaleProposalAndCopyBlockers() {
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      proposal_status: 'changes_requested',
+      workflow_type: 'verified_promotion',
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Checked source row.',
+      },
+      public_subject: {
+        name: 'Communication Systems',
+        category: 'ProfessionalElective',
+        type: 'theory',
+        credits: { L: 3, T: 0, P: 0, C: 3 },
+        notes: 'NEEDS VERIFICATION: source unit-wise content before flipping to verified.',
+        source: {
+          origin_url: 'https://www.tecnrt.org/example.pdf',
+          retrieved_date: '2026-07-01',
+          status: 'verified',
+          college_source_note: 'Autonomous-college caveat is shown publicly.',
+        },
+      },
+      public_source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        retrieved_date: '2026-07-01',
+        status: 'verified',
+        college_source_note: 'Autonomous-college caveat is shown publicly.',
+      },
+    }),
+  ]);
+  assert.ok(warnings.some(warning => warning.code === 'proposal_not_approved_for_draft' && warning.blocking), JSON.stringify(warnings, null, 2));
+  assert.ok(warnings.some(warning => warning.code === 'stale_draft_copy_in_verified_promotion' && warning.blocking), JSON.stringify(warnings, null, 2));
+}
+
+function testReleaseReviewElectiveOptionBlocker() {
+  const base = {
+    workflow_type: 'verified_promotion',
+    public_subject: {
+      name: 'Entrepreneurship Development & Venture Creation',
+      category: 'OpenElective',
+      type: 'theory',
+      credits: { L: 3, T: 0, P: 0, C: 3 },
+      notes: 'Listed as Open Elective-I OR Entrepreneurship Development & Venture Creation.',
+      source: {
+        origin_url: 'https://www.tecnrt.org/example.pdf',
+        retrieved_date: '2026-07-01',
+        status: 'verified',
+        college_source_note: 'Autonomous-college caveat is shown publicly.',
+      },
+    },
+    public_source: {
+      origin_url: 'https://www.tecnrt.org/example.pdf',
+      retrieved_date: '2026-07-01',
+      status: 'verified',
+      college_source_note: 'Autonomous-college caveat is shown publicly.',
+    },
+  };
+  const warnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      ...base,
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Checked source row.',
+      },
+    }),
+  ]);
+  assert.ok(warnings.some(warning => warning.code === 'elective_option_review_required' && warning.blocking), JSON.stringify(warnings, null, 2));
+
+  const approvedWarnings = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      ...base,
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Reviewed as a standalone elective option page. The title should be published as an elective option and the public page does not imply it is mandatory for every student.',
+      },
+    }),
+  ]);
+  assert.equal(approvedWarnings.length, 0, JSON.stringify(approvedWarnings, null, 2));
+}
+
 await testTirumalaPdfTextFixture();
 await testTirumalaHtmlIgnoresContactRows();
 await testLbrcePdfTextFixture();
@@ -627,5 +761,7 @@ testReleaseReviewSameFileSafeAdds();
 testReleaseReviewSameFileMixedOpsBlock();
 testReleaseReviewVerifiedPromotionSourceMetadataBlockers();
 testReleaseReviewAuditCoursePublicationBlocker();
+testReleaseReviewStaleProposalAndCopyBlockers();
+testReleaseReviewElectiveOptionBlocker();
 
 console.log('Parser regression checks passed.');

@@ -35,6 +35,10 @@ function auditPublicationWarning(subject = {}) {
   return `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Public usefulness review required.</strong> Mandatory non-credit, audit, internship, project, and zero-credit rows need an explicit publication decision. Verified course existence does not automatically mean the page is useful enough to publish.</div>`;
 }
 
+function hasWarningCode(warnings = [], code) {
+  return warnings.some(warning => warning.code === code);
+}
+
 function canonicalSubjectPath(subject, fallbackId = '') {
   if (!subject) return '';
   const slug = subject.seo?.slug || subject.id || fallbackId;
@@ -1652,6 +1656,7 @@ function renderReleaseReviewSummary(summary) {
   </section>
 
   <h2>Blocking warnings</h2>
+  ${hasWarningCode(blockingWarnings, 'proposal_not_approved_for_draft') ? '<div class="error"><strong>Stale release artifacts.</strong><br>Release contains proposals that are no longer approved_for_draft. Regenerate release artifacts after proposal repair.</div>' : ''}
   <div class="table-wrap"><table><thead><tr><th>Severity</th><th>Code</th><th>Message</th><th>Proposal</th><th>File</th></tr></thead><tbody>
   ${blockingWarnings.length ? blockingWarnings.map(warning => `<tr><td><span class="pill">${escapeHtml(warning.severity)}</span></td><td class="mono">${escapeHtml(warning.code)}</td><td>${escapeHtml(warning.message)}</td><td>${warning.proposal_id ? `<a href="/admin/proposals/${escapeHtml(warning.proposal_id)}">${escapeHtml(warning.proposal_id)}</a>` : '-'}</td><td class="mono">${escapeHtml(warning.file || '')}</td></tr>`).join('') : '<tr><td colspan="5"><span class="status-ok">No blocking warnings.</span></td></tr>'}
   </tbody></table></div>
@@ -1787,6 +1792,7 @@ export function renderReleaseApplyPlanDetailPage({
   const storage = plan.storage || {};
   const tmpStatusClass = storage.tmp_artifact_status === 'available' ? 'status-ok' : 'status-warn';
   const currentPolicyBlocked = warnings.length > 0 && plan.current_review_status?.generated_from_current_policy;
+  const staleProposalBlocked = hasWarningCode(warnings, 'proposal_not_approved_for_draft');
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -1801,6 +1807,7 @@ export function renderReleaseApplyPlanDetailPage({
 ${workflowNav('release')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${currentPolicyBlocked ? '<div class="error"><strong>Blocked by current policy warnings.</strong><br>This stored apply plan is not safe to live-apply as-is. Current review policy found blocking warnings after the plan was generated; regenerate only after resolving those warnings.</div>' : ''}
+${staleProposalBlocked ? '<div class="error"><strong>Stale apply plan.</strong><br>Release contains proposals that are no longer approved_for_draft. Regenerate release artifacts after proposal repair.</div>' : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
