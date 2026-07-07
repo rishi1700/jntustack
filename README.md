@@ -494,6 +494,7 @@ ADMIN_EMAIL=admin@jntustack.com
 ADMIN_PASSWORD_HASH=sha256:<hex>
 # ADMIN_PASSWORD=... is accepted for local setup, but prefer a hash.
 ADMIN_TEST_TOOLS=false
+# ADMIN_COOKIE_INSECURE=true  # local HTTP dev only; the session cookie is Secure by default.
 ```
 
 Generate a simple SHA-256 hash locally:

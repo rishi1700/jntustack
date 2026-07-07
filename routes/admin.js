@@ -332,7 +332,10 @@ export function createAdminRouter({ root }) {
     res.cookie(adminCookieName(), cookie, {
       httpOnly: true,
       sameSite: 'lax',
-      secure: process.env.NODE_ENV === 'production',
+      // Fail-safe: secure by default. NODE_ENV is never set by this app and its
+      // presence on the host is unverified, so it must not be what gates this.
+      // Only an explicit local-dev opt-out disables it.
+      secure: process.env.ADMIN_COOKIE_INSECURE !== 'true',
       path: '/admin',
       maxAge: 1000 * 60 * 60 * 8,
     });
