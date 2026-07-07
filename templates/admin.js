@@ -39,6 +39,37 @@ function hasWarningCode(warnings = [], code) {
   return warnings.some(warning => warning.code === code);
 }
 
+// Persistent, hard-to-miss reconciliation banner (injected into every admin
+// page by routes/admin.js's res.send wrapper -- see createAdminRouter).
+// Replaces the old silent manual_git_commit_required audit flag: this makes
+// "N live-applied change(s) not yet in git / not yet pushed" impossible to
+// scroll past.
+export function renderPendingGitPushBanner(summary) {
+  const pendingPush = summary?.pendingPush || [];
+  const commitFailed = summary?.commitFailed || [];
+  if (!pendingPush.length && !commitFailed.length) return '';
+
+  const failedBlock = commitFailed.length ? `
+<div class="notice" style="margin:0 0 10px;border:2px solid var(--bad);background:#fff5f5;color:var(--bad);">
+  <strong>${escapeHtml(commitFailed.length)} live-applied change(s) FAILED to commit to git automatically.</strong>
+  <div>Data is live but NOT recorded in git at all. A redeploy from git will silently revert these. Reconcile manually now (see README "Live-apply git reconciliation"), then run <span class="mono">scripts/reconcile-live-apply.js</span> with the id(s) below.</div>
+  <ul style="margin:8px 0 0;padding-left:18px;">
+  ${commitFailed.map(row => `<li><a href="/admin/release-live-applies/${escapeHtml(row.id)}" style="color:var(--bad);">Live apply ${escapeHtml(row.id)}</a> (release ${escapeHtml(row.releaseCandidateId)}): <span class="mono">${escapeHtml((row.changedFiles || []).join(', '))}</span> -- ${escapeHtml(row.gitCommitError || 'unknown error')}</li>`).join('')}
+  </ul>
+</div>` : '';
+
+  const pendingBlock = pendingPush.length ? `
+<div class="notice evidence-warning" style="margin:0 0 10px;">
+  <strong>${escapeHtml(pendingPush.length)} live-applied change(s) committed locally, awaiting git push to origin.</strong>
+  <div>Push these to origin before the next redeploy, or the redeploy will not include them (it won't revert them either -- they're committed -- but origin/main and this server will disagree until pushed).</div>
+  <ul style="margin:8px 0 0;padding-left:18px;">
+  ${pendingPush.map(row => `<li><a href="/admin/release-live-applies/${escapeHtml(row.id)}">Live apply ${escapeHtml(row.id)}</a> (release ${escapeHtml(row.releaseCandidateId)}): <span class="mono">${escapeHtml(row.gitCommitSha || '').slice(0, 12)}</span> -- <span class="mono">${escapeHtml((row.changedFiles || []).join(', '))}</span></li>`).join('')}
+  </ul>
+</div>` : '';
+
+  return `<div style="margin-bottom:18px;">${failedBlock}${pendingBlock}</div>`;
+}
+
 function canonicalSubjectPath(subject, fallbackId = '') {
   if (!subject) return '';
   const slug = subject.seo?.slug || subject.id || fallbackId;
@@ -1890,7 +1921,7 @@ export function renderReleaseLiveApplyDetailPage({ result, plan = null, rollback
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release live apply result not found.' });
   }
   const canVerify = ['files_written', 'verification_running', 'partial_applied', 'recovered_applied', 'manual_rollback_required', 'published_pending_deploy', 'published_pending_deploy_recovered'].includes(result.status);
-  const canRollback = Boolean(result.backupExists && result.backupPath && ['files_written', 'partial_applied', 'recovered_applied', 'published_pending_deploy', 'published_pending_deploy_recovered', 'failed'].includes(result.status));
+  const canRollback = Boolean(result.backupExists && result.backupPath && ['files_written', 'partial_applied', 'recovered_applied', 'published_pending_deploy', 'published_pending_deploy_recovered', 'committed_pending_push', 'failed'].includes(result.status));
   const manualRollback = !result.backupExists && result.changedFiles.length > 0 && [
     'files_written',
     'partial_applied',
@@ -1898,6 +1929,7 @@ export function renderReleaseLiveApplyDetailPage({ result, plan = null, rollback
     'manual_rollback_required',
     'published_pending_deploy',
     'published_pending_deploy_recovered',
+    'committed_pending_push',
     'failed',
   ].includes(result.status);
   const changes = plan?.changes || [];
@@ -1922,6 +1954,8 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <div class="metric"><div class="metric-label">Backup</div><div class="metric-value ${result.backupExists ? 'status-ok' : 'status-bad'}">${escapeHtml(result.backupExists ? 'yes' : 'no')}</div></div>
 </section>
 <div class="notice" style="margin-top:14px;">Live JSON is considered safely ready for Git review only after status is <span class="mono">published_pending_deploy</span> or <span class="mono">published_pending_deploy_recovered</span> and verification is passed. This page does not deploy.</div>
+${result.status === 'committed_pending_push' ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Committed locally.</strong> git commit <span class="mono">${escapeHtml((result.gitCommitSha || '').slice(0, 12))}</span>${result.gitCommittedAt ? ` at ${escapeHtml(result.gitCommittedAt)}` : ''}. Not pushed to origin yet -- push manually when ready.</div>` : ''}
+${result.gitCommitError ? `<div class="notice" style="margin-top:10px;border:2px solid var(--bad);background:#fff5f5;color:var(--bad);"><strong>Automatic git commit failed.</strong> ${escapeHtml(result.gitCommitError)}<br>Data is live but not in git. Commit this manually, or run <span class="mono">scripts/reconcile-live-apply.js ${escapeHtml(result.id)} --note="..."</span> once you've confirmed it's reconciled some other way.</div>` : ''}
 ${result.errorMessage ? `<div class="error">${escapeHtml(result.errorMessage)}</div>` : ''}
 
 <h2>Changed files</h2>

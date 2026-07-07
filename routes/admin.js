@@ -122,6 +122,7 @@ import {
   LIVE_ROLLBACK_CONFIRMATION,
   applyReleaseToLiveJson,
   getLatestReleaseLiveApply,
+  getPendingGitPushSummary,
   getReleaseLiveApply,
   recoverPartialLiveApply,
   releaseLiveApplyErrorSummary,
@@ -188,6 +189,7 @@ import {
   renderSourceRegistryPage,
   renderSourceUnavailablePage,
   renderSubjectsPage,
+  renderPendingGitPushBanner,
   renderVerificationReviewPage,
   renderVerificationSubjectsPage,
 } from '../templates/admin.js';
@@ -359,6 +361,32 @@ export function createAdminRouter({ root }) {
   router.use((req, res, next) => {
     if (req.path === '/login') return next();
     return requireAdmin(config)(req, res, next);
+  });
+
+  // Injects the persistent git-reconciliation banner (Part C) into every
+  // authenticated admin page without threading it through every render
+  // function's signature -- adminShell's markup is consistent enough that a
+  // scoped res.send wrapper is simpler and lower-risk than touching ~30
+  // render call sites. Fails silently (no banner) rather than breaking the
+  // page if the summary query itself fails for any reason.
+  router.use(async (req, res, next) => {
+    if (req.path === '/login') return next();
+    let bannerHtml = '';
+    try {
+      bannerHtml = renderPendingGitPushBanner(await getPendingGitPushSummary());
+    } catch {
+      bannerHtml = '';
+    }
+    if (bannerHtml) {
+      const originalSend = res.send.bind(res);
+      res.send = body => {
+        if (typeof body === 'string' && body.includes('<main class="admin-main">')) {
+          body = body.replace('<main class="admin-main">', `<main class="admin-main">${bannerHtml}`);
+        }
+        return originalSend(body);
+      };
+    }
+    next();
   });
 
   router.get('/login', (req, res) => {

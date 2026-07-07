@@ -118,6 +118,61 @@ Expected unauthenticated behavior:
 - After login, check `/admin/checks` first, then `/admin/sources`,
   `/admin/assets`, `/admin/proposals`, and `/admin/revisions`.
 
+### Live-apply git reconciliation
+
+Guarded live JSON apply (`lib/release-live-apply.js`) writes straight to
+`data/*.json` on whichever host it runs on and never gets git push/remote
+credentials -- that's deliberate, to avoid widening attack surface. What it
+does do, immediately after verification passes:
+
+- Attempts a **local-only** `git commit`, scoped to exactly the files that
+  apply wrote (never `git add -A`). Message format: `Live-apply RC<id>: sync
+  <files> [<reviewer>]`.
+- On success: `release_live_applies`/`release_candidates.status` advance to
+  `committed_pending_push`, with the commit SHA recorded on the row and in
+  `audit_log`. **This is fail-safe, not fail-closed**: the apply itself
+  already succeeded and the data is already live by this point, so a commit
+  failure never unwinds anything above it.
+- On failure (most commonly: no `.git` directory on the deployed tree --
+  whether that's actually true on the current production host is
+  unconfirmed either way; this repo's primary deploy path is Hostinger's
+  GitHub auto-deploy integration, whose internal mechanism isn't documented
+  anywhere reachable): status stays at `published_pending_deploy(_recovered)`
+  exactly as before, but `git_commit_error` is recorded loudly on the row,
+  in `audit_log` (`release_live_apply.git_commit_failed`), and in a
+  persistent banner on every admin page (see below).
+
+**No deploy-time guard is possible from available tooling.** There is no
+shell/file-read access to the live Hostinger host to run `git status` before
+a redeploy, and if the host has no `.git` at all (the likely case for
+archive-based redeploys), there'd be nothing to check anyway. The
+reconciliation state in the DB (`committed_pending_push` /
+`git_commit_error`) plus the admin UI banner are the actual guard now --
+check the dashboard for a pending banner before redeploying.
+
+The admin dashboard shows a persistent banner on every page whenever any
+`release_live_applies` row is `committed_pending_push` (push these before
+redeploying) or has a `git_commit_error` recorded (louder: data is live and
+genuinely not in git anywhere -- reconcile by hand).
+
+**Six historical rows** (`release_live_applies` ids 2-7, release candidates
+7/9/10/11/12/13) predate this mechanism and are stuck at
+`published_pending_deploy(_recovered)` with no automatic commit ever
+attempted. They were manually cross-referenced against git history and the
+live site during the 2026-07-07 session and confirmed already reconciled
+(matched to commits `f69d855`/`00f38b0`/`25a8872`/`b96414d`/`6258f4b`/`29ac399`
+by exact file-set and, for one, exact content diff; live slugs for the
+verified ones confirmed HTTP 200). Nothing auto-migrates them -- run:
+
+```
+node scripts/reconcile-live-apply.js 2 3 4 5 6 7 \
+  --note="<why you're confident these are reconciled>" \
+  --actor=you@example.com
+```
+
+This only ever touches the exact ids passed in; there is no blanket/auto
+mode, by design (see the script's header comment for the fuller rationale).
+
 The admin review queue is also gated behind `ADMIN_ENABLED=true`, but it is
 DB-backed and requires the MySQL migrations to be applied. Review actions only
 update `content_proposals`, `review_events`, and `audit_log`; they do not write
