@@ -491,13 +491,21 @@ Environment variables:
 ```
 ADMIN_ENABLED=false
 ADMIN_EMAIL=admin@jntustack.com
-ADMIN_PASSWORD_HASH=sha256:<hex>
+ADMIN_PASSWORD_HASH=pbkdf2:<iterations>:<salt>:<base64url hash>
+# sha256:<hex> is still accepted but deprecated (unsalted, single-round). Migrate to pbkdf2:.
 # ADMIN_PASSWORD=... is accepted for local setup, but prefer a hash.
+ADMIN_SESSION_SECRET=<random string; required when ADMIN_ENABLED=true, no fallback>
 ADMIN_TEST_TOOLS=false
 # ADMIN_COOKIE_INSECURE=true  # local HTTP dev only; the session cookie is Secure by default.
 ```
 
-Generate a simple SHA-256 hash locally:
+Generate a pbkdf2 hash locally (recommended):
+
+```
+node -e "const c=require('node:crypto');const s=c.randomBytes(16).toString('base64url');const i=210000;const h=c.pbkdf2Sync(process.argv[1],s,i,32,'sha256').toString('base64url');console.log('pbkdf2:'+i+':'+s+':'+h)" 'your-password'
+```
+
+Or a simple SHA-256 hash (deprecated, avoid for new setups):
 
 ```
 node -e "const crypto=require('node:crypto'); console.log('sha256:'+crypto.createHash('sha256').update(process.argv[1]).digest('hex'))" 'your-password'

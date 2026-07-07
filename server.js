@@ -56,6 +56,17 @@ if (adminConfig.enabled && !(adminConfig.email && (adminConfig.passwordHash || a
   console.error('JNTUStack admin configuration error: ADMIN_ENABLED=true requires ADMIN_EMAIL and ADMIN_PASSWORD_HASH or ADMIN_PASSWORD.');
 }
 
+// ADMIN_SESSION_SECRET has no fallback (see lib/admin-auth.js adminSecret()):
+// without it, every admin route now refuses with 503 rather than silently
+// signing sessions with the password hash. This just makes that loud at boot.
+if (adminConfig.enabled && !adminConfig.sessionSecret) {
+  console.error('JNTUStack admin configuration error: ADMIN_ENABLED=true requires ADMIN_SESSION_SECRET. The admin panel will refuse all requests (503) until it is set.');
+}
+
+if (adminConfig.enabled && adminConfig.passwordHash?.startsWith('sha256:')) {
+  console.error('JNTUStack admin configuration warning: ADMIN_PASSWORD_HASH uses the deprecated sha256: scheme (unsalted, single-round -- weak if ever leaked). Still accepted so this does not lock out the current login, but regenerate it as pbkdf2:<iterations>:<salt>:<base64url hash> and update ADMIN_PASSWORD_HASH.');
+}
+
 if (askConfig.enabled) {
   // Load the grounding index once at boot, not per-request.
   loadSearchIndex(DIST_DIR);
