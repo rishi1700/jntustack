@@ -15,6 +15,12 @@ const DIST_DIR = path.join(__dirname, 'dist');
 const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always defer to it, never hardcode
 
 const app = express();
+// Hostinger terminates TLS and proxies requests to this process, so without
+// this, req.ip is always the proxy's address -- which would make IP-based
+// rate limiting either see one client (the proxy) or nothing useful.
+// '1' trusts exactly one hop (the immediate proxy) and reads the client IP
+// from the outermost trusted entry of X-Forwarded-For.
+app.set('trust proxy', 1);
 app.use((req, res, next) => {
   const host = String(req.headers.host || '').toLowerCase().split(':')[0];
   if (host === 'www.jntustack.com') {

@@ -1,5 +1,6 @@
 import { spawn } from 'node:child_process';
 import express, { Router } from 'express';
+import rateLimit from 'express-rate-limit';
 import { getAdminConfig, getAdminTestConfig } from '../lib/config.js';
 import {
   assetErrorSummary,
@@ -273,6 +274,53 @@ function sourceFormOptions() {
   };
 }
 
+// Per-IP cap: blocks a single source from brute-forcing the login endpoint.
+// Successful logins (redirect, status < 400) don't count -- only failed
+// attempts (401) do, so a legitimate admin who logs in repeatedly is never
+// throttled.
+const ADMIN_LOGIN_RATE_LIMIT_WINDOW_MS = 15 * 60 * 1000;
+const ADMIN_LOGIN_RATE_LIMIT_MAX_ATTEMPTS = 8;
+
+const adminLoginRateLimiter = rateLimit({
+  windowMs: ADMIN_LOGIN_RATE_LIMIT_WINDOW_MS,
+  limit: ADMIN_LOGIN_RATE_LIMIT_MAX_ATTEMPTS,
+  standardHeaders: true,
+  legacyHeaders: false,
+  skipSuccessfulRequests: true,
+  handler: (req, res) => {
+    res.status(429).send(renderLoginPage({
+      error: 'Too many login attempts from this network. Please wait a few minutes and try again.',
+    }));
+  },
+});
+
+// Per-account cooldown, on top of the per-IP cap above: an attacker
+// distributing guesses across many IPs would otherwise dodge the per-IP
+// limit entirely. There is exactly one admin account in this app, so this
+// is a single global counter rather than one keyed by submitted email --
+// keying on attacker-supplied email strings would let the map grow
+// unbounded. State is in-memory only: it resets on process restart, and
+// would need a shared store (e.g. Redis) if this app ever runs more than
+// one process.
+const ADMIN_LOGIN_LOCKOUT_THRESHOLD = 5;
+const ADMIN_LOGIN_LOCKOUT_COOLDOWN_MS = 5 * 60 * 1000;
+let adminLoginFailureState = { count: 0, lockedUntil: 0 };
+
+function isAdminLoginLocked() {
+  return adminLoginFailureState.lockedUntil > Date.now();
+}
+
+function recordAdminLoginFailure() {
+  adminLoginFailureState.count += 1;
+  if (adminLoginFailureState.count >= ADMIN_LOGIN_LOCKOUT_THRESHOLD) {
+    adminLoginFailureState = { count: 0, lockedUntil: Date.now() + ADMIN_LOGIN_LOCKOUT_COOLDOWN_MS };
+  }
+}
+
+function clearAdminLoginFailures() {
+  adminLoginFailureState = { count: 0, lockedUntil: 0 };
+}
+
 function requireAdmin(config) {
   return (req, res, next) => {
     if (!adminIsConfigured(config)) {
@@ -323,11 +371,17 @@ export function createAdminRouter({ root }) {
     res.send(renderLoginPage());
   });
 
-  router.post('/login', express.urlencoded({ extended: false }), (req, res) => {
+  router.post('/login', adminLoginRateLimiter, express.urlencoded({ extended: false }), (req, res) => {
+    if (isAdminLoginLocked()) {
+      res.status(429).send(renderLoginPage({ error: 'Too many failed login attempts. Please wait a few minutes and try again.' }));
+      return;
+    }
     if (!verifyAdminCredentials(req.body || {}, config)) {
+      recordAdminLoginFailure();
       res.status(401).send(renderLoginPage({ error: 'Invalid email or password.' }));
       return;
     }
+    clearAdminLoginFailures();
     const cookie = createAdminCookie(config.email, config);
     res.cookie(adminCookieName(), cookie, {
       httpOnly: true,
