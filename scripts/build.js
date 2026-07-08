@@ -63,12 +63,16 @@ fs.rmSync(distDir, { recursive: true, force: true });
 fs.rmSync(draftsDir, { recursive: true, force: true });
 
 function courseJsonLd(subject, branch, regulation) {
+  // No `provider` is claimed: JNTUStack is an independent resource that
+  // describes these courses, not the institution that offers/teaches them, and
+  // the site is explicitly not affiliated with JNTU. `publisher` accurately
+  // credits JNTUStack for the page itself without implying it provides the course.
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
     name: subject.name,
     description: subject.seo.meta_description,
-    provider: { '@type': 'Organization', name: 'JNTUStack', sameAs: SITE_URL },
+    publisher: { '@type': 'Organization', name: 'JNTUStack', url: SITE_URL },
     courseCode: subject.subject_code || undefined,
     educationalLevel: `${branch?.name || subject.branch} - ${subject.year_sem_label}`,
     inLanguage: 'en',
