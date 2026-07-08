@@ -75,6 +75,47 @@ function courseJsonLd(subject, branch, regulation) {
   };
 }
 
+// Homepage structured data: Organization + WebSite. No SearchAction is emitted
+// because the site search is client-side and has no server-rendered results URL
+// -- claiming one would be a structured-data overclaim.
+function homeJsonLd() {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'Organization',
+      name: 'JNTUStack',
+      url: SITE_URL,
+      logo: `${SITE_URL}/icon-512.png`,
+      description: 'Independent, verified study-resource directory for the four JNTU universities in Andhra Pradesh and Telangana.',
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebSite',
+      name: 'JNTUStack',
+      url: SITE_URL,
+    },
+  ];
+}
+
+// /colleges/ ItemList: the directory's actual content as a structured list.
+function collegesJsonLd(colleges) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    name: 'JNTU-affiliated engineering colleges',
+    numberOfItems: colleges.length,
+    itemListElement: colleges.map((c, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      item: {
+        '@type': 'CollegeOrUniversity',
+        name: c.name,
+        ...(c.official_website ? { url: c.official_website } : {}),
+      },
+    })),
+  };
+}
+
 let published = 0, drafted = 0, skipped = 0;
 const sitemapUrls = [];
 
@@ -173,7 +214,7 @@ if (allColleges.length > 0) {
       title: `JNTU Engineering College Directory - ${campusCount} Campuses - JNTUStack`,
       description: `A directory of ${collegeUniversitySummary} constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.`,
       canonical: `${SITE_URL}/colleges/`,
-      jsonLd: null,
+      jsonLd: collegesJsonLd(verifiedColleges),
       bodyHtml: renderCollegeDirectoryPage(verifiedColleges, coverageNotes),
       navBranches,
       stamp: 'verified',
@@ -223,7 +264,7 @@ const homeHtml = layout({
   title: 'JNTUStack - JNTU Notes, Branch Guide & College Directory',
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
-  jsonLd: null,
+  jsonLd: homeJsonLd(),
   bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary }),
   navBranches,
   stamp: null,
