@@ -44,7 +44,7 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject, 
   const notCrossConfirmed = /not\s+(been\s+)?(independently\s+)?cross-confirmed/i.test(sourceNote);
   const crossConfirmed = /cross-confirmed against/i.test(sourceNote) && !notCrossConfirmed;
   const verifyCardText = crossConfirmed
-    ? `Subject, credits and placement cross-checked against JNTUK&rsquo;s ${escapeHtml(subject.regulation)} exam records.`
+    ? `Subject, credits and placement cross-checked against JNTUK's ${escapeHtml(subject.regulation)} exam records.`
     : `Checked against a published ${escapeHtml(subject.regulation)} syllabus from a JNTUK-affiliated source.`;
   const verifyCard = isVerified
     ? `<div class="verify-card">

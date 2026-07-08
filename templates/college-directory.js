@@ -190,7 +190,7 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
   // immediately visible; anyone who wants the provenance can open it.
   const notesHtml = notes.length
     ? `<details class="coverage-notes" style="margin:1rem 0 1.25rem;border:1px solid var(--line);border-radius:8px;padding:.4rem .9rem;">
-    <summary style="cursor:pointer;font-weight:600;color:var(--text-2);padding:.35rem 0;">How this directory was compiled &mdash; sourcing &amp; coverage notes per university</summary>
+    <summary style="cursor:pointer;font-weight:600;color:var(--text-2);padding:.35rem 0;">How this directory was compiled -- sourcing &amp; coverage notes per university</summary>
     <div style="margin-top:.6rem;">
       ${notes.map((n) => `<div class="disclaimer-box"><strong>Coverage note:</strong> ${escapeHtml(typeof n === 'string' ? n : n.note)}</div>`).join('\n      ')}
     </div>

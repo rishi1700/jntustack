@@ -2260,17 +2260,17 @@
           "topics": [
             "Solutions of algebraic and transcendental equations: bisection, secant and false-position methods",
             "General iteration and Newton-Raphson methods",
-            "Interpolation: Newton’s forward and backward formulae",
-            "Interpolation with unequal intervals; Lagrange’s interpolation formula"
+            "Interpolation: Newton's forward and backward formulae",
+            "Interpolation with unequal intervals; Lagrange's interpolation formula"
           ]
         },
         {
           "number": 2,
           "title": "Numerical Integration and Solution of ODEs",
           "topics": [
-            "Trapezoidal rule; Simpson’s 1/3 and 3/8 rules",
-            "Solution of initial-value problems by Taylor’s series",
-            "Picard’s method of successive approximations; Euler’s method",
+            "Trapezoidal rule; Simpson's 1/3 and 3/8 rules",
+            "Solution of initial-value problems by Taylor's series",
+            "Picard's method of successive approximations; Euler's method",
             "Runge-Kutta methods"
           ]
         },
@@ -2280,8 +2280,8 @@
           "topics": [
             "Continuity, differentiability and analyticity; Cauchy-Riemann equations in Cartesian and polar coordinates",
             "Harmonic and conjugate harmonic functions; Milne-Thomson method",
-            "Complex integration: line integral and Cauchy’s integral theorem",
-            "Cauchy’s integral formula and the generalized integral formula"
+            "Complex integration: line integral and Cauchy's integral theorem",
+            "Cauchy's integral formula and the generalized integral formula"
           ]
         },
         {
@@ -2439,9 +2439,9 @@
           "title": "Vector Analysis and Electrostatics",
           "topics": [
             "Vector algebra and coordinate systems (rectangular, cylindrical, spherical)",
-            "Vector calculus: gradient, divergence and divergence theorem, curl and Stokes’ theorem, Laplacian",
-            "Coulomb’s law and electric field intensity; continuous charge distributions",
-            "Electric flux density, Gauss’s law and its applications; electric potential and work done"
+            "Vector calculus: gradient, divergence and divergence theorem, curl and Stokes' theorem, Laplacian",
+            "Coulomb's law and electric field intensity; continuous charge distributions",
+            "Electric flux density, Gauss's law and its applications; electric potential and work done"
           ]
         },
         {
@@ -2449,17 +2449,17 @@
           "title": "Conductors, Dielectrics and Capacitance",
           "topics": [
             "Behaviour of a conductor in an electric field; electric dipole and dipole moment",
-            "Conduction and convection current densities; Ohm’s law in point form",
+            "Conduction and convection current densities; Ohm's law in point form",
             "Polarization, dielectric constant and strength; continuity equation and boundary conditions",
             "Capacitance of parallel-plate, coaxial and spherical capacitors; energy stored in a static electric field"
           ]
         },
         {
           "number": 3,
-          "title": "Magnetostatics, Ampere’s Law and Magnetic Force",
+          "title": "Magnetostatics, Ampere's Law and Magnetic Force",
           "topics": [
-            "Biot-Savart law and its applications; magnetic flux density and Maxwell’s second equation",
-            "Ampere’s circuital law and its applications; Maxwell’s third equation",
+            "Biot-Savart law and its applications; magnetic flux density and Maxwell's second equation",
+            "Ampere's circuital law and its applications; Maxwell's third equation",
             "Lorentz force; force on a current element and on current-carrying conductors",
             "Force between parallel conductors; magnetic dipole, torque and moment"
           ]
@@ -2478,8 +2478,8 @@
           "number": 5,
           "title": "Time-Varying Fields",
           "topics": [
-            "Faraday’s laws of electromagnetic induction; Maxwell’s fourth equation",
-            "Integral and point forms of Maxwell’s equations",
+            "Faraday's laws of electromagnetic induction; Maxwell's fourth equation",
+            "Integral and point forms of Maxwell's equations",
             "Statically and dynamically induced EMF; displacement current",
             "Poynting theorem and Poynting vector"
           ]
@@ -2632,7 +2632,7 @@
         "status": "verified",
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): Part A -- measurement of active and reactive power for balanced and unbalanced loads, three-phase power by the two-wattmeter method, R-L and R-C time constants using a CRO, Z/Y and ABCD/hybrid parameters; Part B (simulation) -- verification of Kirchhoff’s laws, mesh and nodal analysis, superposition and maximum power transfer, reciprocity and compensation, Thevenin’s and Norton’s theorems, series and parallel resonance, transient response of RL/RC/RLC circuits, and self/mutual inductance. Supersedes a pipeline-extracted needs_verification draft."
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): Part A -- measurement of active and reactive power for balanced and unbalanced loads, three-phase power by the two-wattmeter method, R-L and R-C time constants using a CRO, Z/Y and ABCD/hybrid parameters; Part B (simulation) -- verification of Kirchhoff's laws, mesh and nodal analysis, superposition and maximum power transfer, reciprocity and compensation, Thevenin's and Norton's theorems, series and parallel resonance, transient response of RL/RC/RLC circuits, and self/mutual inductance. Supersedes a pipeline-extracted needs_verification draft."
     },
     {
       "id": "r23-eee-2-1-dc-machines-and-transformers-lab",
@@ -2671,7 +2671,7 @@
         "status": "verified",
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): speed control of a DC shunt motor by field-current and armature-voltage control; brake test on DC shunt and compound motors; Swinburne’s, Hopkinson’s and field tests; load tests on DC shunt and compound generators; OC and SC tests, Sumpner’s test, Scott connection, parallel operation and separation of core losses of single-phase transformers. Supersedes a pipeline-extracted needs_verification draft."
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): speed control of a DC shunt motor by field-current and armature-voltage control; brake test on DC shunt and compound motors; Swinburne's, Hopkinson's and field tests; load tests on DC shunt and compound generators; OC and SC tests, Sumpner's test, Scott connection, parallel operation and separation of core losses of single-phase transformers. Supersedes a pipeline-extracted needs_verification draft."
     },
     {
       "id": "r23-eee-2-1-data-structures-lab",
@@ -2851,7 +2851,7 @@
         "status": "verified",
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Mandatory Non-Credit / audit course (2-0-0, no credits). Published as verified because it carries substantive syllabus content, consistent with the site’s other Environmental Science pages. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Mandatory Non-Credit / audit course (2-0-0, no credits). Published as verified because it carries substantive syllabus content, consistent with the site's other Environmental Science pages. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
     },
     {
       "id": "r23-eee-2-2-managerial-economics-and-financial-analysis",
@@ -3239,7 +3239,7 @@
             "Open-loop vs closed-loop systems and feedback characteristics",
             "Transfer function of linear systems; differential equations of electrical and mechanical systems",
             "Transfer function of an armature-controlled DC servo motor",
-            "Block-diagram algebra and signal-flow graphs (Mason’s gain formula)"
+            "Block-diagram algebra and signal-flow graphs (Mason's gain formula)"
           ]
         },
         {
@@ -3248,7 +3248,7 @@
           "topics": [
             "Standard test signals; time response of first- and second-order systems; time-domain specifications",
             "Steady-state errors and error constants; P, PI, PD and PID actions",
-            "Concept of stability and Routh’s stability criterion",
+            "Concept of stability and Routh's stability criterion",
             "Root-locus concept and construction; effect of adding poles and zeros"
           ]
         },
@@ -3379,7 +3379,7 @@
         "status": "verified",
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): transfer function of a DC motor; characteristics of AC and DC servo motors, magnetic amplifiers and synchros; second-order system time-domain analysis; effect of P/PD/PI/PID controllers; temperature control using a PID controller; root-locus, Bode and Nyquist plots in MATLAB; lag and lead compensation design; Kalman’s test of controllability and observability in MATLAB; and verification of logic-gate truth tables and Boolean expressions using a PLC."
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): transfer function of a DC motor; characteristics of AC and DC servo motors, magnetic amplifiers and synchros; second-order system time-domain analysis; effect of P/PD/PI/PID controllers; temperature control using a PID controller; root-locus, Bode and Nyquist plots in MATLAB; lag and lead compensation design; Kalman's test of controllability and observability in MATLAB; and verification of logic-gate truth tables and Boolean expressions using a PLC."
     },
     {
       "id": "r23-eee-2-2-python-programming-lab",
@@ -3494,7 +3494,7 @@
           "number": 1,
           "title": "Introduction to Design Thinking",
           "topics": [
-            "Elements and principles of design; basics — dot, line, shape and form",
+            "Elements and principles of design; basics -- dot, line, shape and form",
             "Principles of design",
             "Introduction to design thinking and its history",
             "New materials in industry"
