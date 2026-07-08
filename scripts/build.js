@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateData } from '../lib/validate.js';
 import { loadContent } from '../lib/content-store/index.js';
+import { subjectBranchCodes } from '../lib/dataset.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
@@ -31,8 +32,10 @@ const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
 
 // Verified subjects are the only ones that get published pages, so they're also
 // the only ones that count toward whether a branch hub is worth generating.
+// A shared subject (branchCodes set) counts toward every branch it lists --
+// subjectBranchCodes() resolves branch/branchCodes into one array either way.
 const verifiedSubjects = data.subjects.filter(s => s.source.status === 'verified');
-const publishedBranchCodes = new Set(verifiedSubjects.map(s => s.branch));
+const publishedBranchCodes = new Set(verifiedSubjects.flatMap(subjectBranchCodes));
 
 // Single source of truth for the nav + homepage branch grid: ALL six branches,
 // each annotated with whether its hub is published (has >=1 verified subject)
@@ -43,7 +46,9 @@ const publishedBranchCodes = new Set(verifiedSubjects.map(s => s.branch));
 // The moment a branch gains a verified subject it flips to published automatically.
 const verifiedCountByBranch = {};
 for (const s of verifiedSubjects) {
-  verifiedCountByBranch[s.branch] = (verifiedCountByBranch[s.branch] || 0) + 1;
+  for (const code of subjectBranchCodes(s)) {
+    verifiedCountByBranch[code] = (verifiedCountByBranch[code] || 0) + 1;
+  }
 }
 const navBranches = data.branches.map(b => {
   const verifiedCount = verifiedCountByBranch[b.code] || 0;
@@ -62,11 +67,17 @@ const draftsDir = path.join(ROOT, 'drafts');
 fs.rmSync(distDir, { recursive: true, force: true });
 fs.rmSync(draftsDir, { recursive: true, force: true });
 
-function courseJsonLd(subject, branch, regulation) {
+function courseJsonLd(subject, branches, regulation) {
   // No `provider` is claimed: JNTUStack is an independent resource that
   // describes these courses, not the institution that offers/teaches them, and
   // the site is explicitly not affiliated with JNTU. `publisher` accurately
   // credits JNTUStack for the page itself without implying it provides the course.
+  // `branches` is always an array (length 1 for an ordinary per-branch subject,
+  // 2+ for a shared subject rendered at one branch-neutral URL) so this reads
+  // the same either way instead of special-casing the shared case.
+  const levelLabel = branches.length > 1
+    ? `Common First Year (${branches.map(b => b.code).join(', ')}) - ${subject.year_sem_label}`
+    : `${branches[0]?.name || subject.branch} - ${subject.year_sem_label}`;
   return {
     '@context': 'https://schema.org',
     '@type': 'Course',
@@ -74,7 +85,7 @@ function courseJsonLd(subject, branch, regulation) {
     description: subject.seo.meta_description,
     publisher: { '@type': 'Organization', name: 'JNTUStack', url: SITE_URL },
     courseCode: subject.subject_code || undefined,
-    educationalLevel: `${branch?.name || subject.branch} - ${subject.year_sem_label}`,
+    educationalLevel: levelLabel,
     inLanguage: 'en',
   };
 }
@@ -124,7 +135,7 @@ let published = 0, drafted = 0, skipped = 0;
 const sitemapUrls = [];
 
 for (const subject of data.subjects) {
-  const branch = branchByCode[subject.branch];
+  const branches = subjectBranchCodes(subject).map(code => branchByCode[code]);
   const regulation = regulationByCode[subject.regulation];
   const legacySubject = subject.legacy_equivalent_id ? subjectById[subject.legacy_equivalent_id] : null;
   const slug = subject.seo.slug || subject.id;
@@ -133,8 +144,8 @@ for (const subject of data.subjects) {
     title: subject.seo.title || subject.name,
     description: subject.seo.meta_description || '',
     canonical: `${SITE_URL}/${slug}/`,
-    jsonLd: courseJsonLd(subject, branch, regulation),
-    bodyHtml: renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished: publishedBranchCodes.has(subject.branch) }),
+    jsonLd: courseJsonLd(subject, branches, regulation),
+    bodyHtml: renderSubjectPage(subject, { branches, regulation, legacySubject, branchHubPublished: branches.length === 1 && publishedBranchCodes.has(branches[0]?.code) }),
     navBranches,
     stamp: subject.source.status,
   });
@@ -240,7 +251,7 @@ if (allColleges.length > 0) {
 let branchHubsPublished = 0;
 let branchHubsSkipped = 0;
 for (const branch of data.branches) {
-  const branchVerified = verifiedSubjects.filter(s => s.branch === branch.code);
+  const branchVerified = verifiedSubjects.filter(s => subjectBranchCodes(s).includes(branch.code));
   if (branchVerified.length === 0) {
     branchHubsSkipped++;
     continue;

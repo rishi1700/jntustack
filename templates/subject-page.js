@@ -1,6 +1,11 @@
 import { escapeHtml } from './layout.js';
 
-export function renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished }) {
+export function renderSubjectPage(subject, { branches = [], regulation, legacySubject, branchHubPublished }) {
+  // branches is always an array: length 1 for an ordinary per-branch subject
+  // (identical to the old single-branch behavior below), length 2+ for a
+  // subject shared across branches and rendered once at a branch-neutral URL.
+  const isShared = branches.length > 1;
+  const branch = branches[0];
   const isVerified = subject.source.status === 'verified';
   const badgeClass = isVerified ? 'badge--verified' : 'badge--draft';
   const badgeLabel = isVerified ? 'Verified vs. published syllabus' : 'Needs verification';
@@ -57,8 +62,17 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject, 
   // Back-link to the branch hub, but only when that hub was actually published
   // (i.e. the branch has at least one verified subject). Never link to a hub
   // URL that the verified-only gate didn't generate -- that would be a 404.
-  const hubBreadcrumb = branchHubPublished && branch
+  // A shared subject has no single hub to point back to (it's listed on all
+  // of them), so it gets no hub breadcrumb rather than an arbitrary one.
+  const hubBreadcrumb = !isShared && branchHubPublished && branch
     ? `<a class="crumb" href="/${escapeHtml(branch.code.toLowerCase())}/">&larr; All ${escapeHtml(branch.name || branch.code)} subjects</a>`
+    : '';
+
+  // Reuses the same disclaimer-box styling as the source caveat below -- no
+  // new UI, just another instance of the existing "why this page looks the
+  // way it does" callout, for the other reason a page might need one.
+  const sharedNoteHtml = isShared
+    ? `<div class="disclaimer-box">Common to ${branches.map(b => escapeHtml(b?.code || '')).join(', ')} B.Tech first-year (R23) -- this page isn't branch-specific, which is why it isn't listed under a single branch hub.</div>`
     : '';
 
   const legacyHtml = legacySubject
@@ -81,7 +95,9 @@ ${hubBreadcrumb}
   <div class="subject-main">
     <div class="form-strip">
       <span>Regulation: <b>${escapeHtml(subject.regulation)}</b></span>
-      <span>Branch: <b>${escapeHtml(branch?.name || subject.branch)}</b></span>
+      ${isShared
+        ? `<span>Branches: <b>${branches.map(b => escapeHtml(b?.code || '')).join(', ')}</b></span>`
+        : `<span>Branch: <b>${escapeHtml(branch?.name || subject.branch)}</b></span>`}
       <span>Semester: <b>${escapeHtml(subject.year_sem_label)}</b></span>
       ${subject.subject_code ? `<span>Code: <b>${escapeHtml(subject.subject_code)}</b></span>` : ''}
     </div>
@@ -92,7 +108,7 @@ ${hubBreadcrumb}
       ${subject.source.retrieved_date ? `<span>Checked ${escapeHtml(subject.source.retrieved_date)}</span>` : ''}
     </div>
 
-    ${sourceCaveatHtml}
+    ${sharedNoteHtml}${sourceCaveatHtml}
 
     ${legacyHtml}
 

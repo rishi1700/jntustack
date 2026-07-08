@@ -152,14 +152,22 @@
     },
     "Subject": {
       "type": "object",
-      "required": ["id", "regulation", "branch", "year", "semester", "name", "category", "type", "seo", "source"],
+      "required": ["id", "regulation", "year", "semester", "name", "category", "type", "seo", "source"],
       "properties": {
         "id": {
           "type": "string",
           "description": "Stable unique slug, e.g. r23-cse-3-1-data-warehousing-and-data-mining"
         },
         "regulation": { "type": "string", "description": "Regulation.code" },
-        "branch": { "type": "string", "description": "Branch.code" },
+        "branch": {
+          "type": ["string", "null"],
+          "description": "Branch.code. Null when branchCodes is set -- this subject is common to multiple branches and renders at one branch-neutral URL instead of a per-branch one. Exactly one of branch / branchCodes must be set."
+        },
+        "branchCodes": {
+          "type": ["array", "null"],
+          "items": { "type": "string" },
+          "description": "Set (2+ Branch.codes) instead of branch when a subject is common to multiple branches and should render once at a branch-neutral URL, listed from every one of these branches' hubs. Null/absent for ordinary per-branch subjects."
+        },
         "specialization": { "type": ["string", "null"], "description": "Specialization.code, null if the branch has no variants" },
         "year": { "type": "integer", "minimum": 1, "maximum": 4 },
         "semester": { "type": "integer", "enum": [1, 2] },

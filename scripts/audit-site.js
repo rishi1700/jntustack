@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSearchIndex } from '../lib/retrieve.js';
-import { loadMergedColleges, loadMergedSubjects } from '../lib/dataset.js';
+import { loadMergedColleges, loadMergedSubjects, subjectBranchCodes } from '../lib/dataset.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DIST = path.join(ROOT, 'dist');
@@ -190,7 +190,9 @@ function auditIndexingReadiness() {
     : '';
 
   const verifiedSubjects = subjects.filter(subject => subject.source?.status === 'verified');
-  const verifiedBranches = new Set(verifiedSubjects.map(subject => subject.branch));
+  // A shared subject (branchCodes set) counts toward every branch it lists,
+  // same resolution build.js uses for hub membership and nav counts.
+  const verifiedBranches = new Set(verifiedSubjects.flatMap(subjectBranchCodes));
 
   for (const subject of subjects) {
     const canonicalPath = canonicalSubjectPath(subject);
@@ -224,7 +226,7 @@ function auditIndexingReadiness() {
     const hubPath = path.join(DIST, String(branch).toLowerCase(), 'index.html');
     if (fs.existsSync(hubPath)) {
       const hubHtml = fs.readFileSync(hubPath, 'utf-8');
-      const branchSubject = verifiedSubjects.find(subject => subject.branch === branch);
+      const branchSubject = verifiedSubjects.find(subject => subjectBranchCodes(subject).includes(branch));
       const subjectPath = canonicalSubjectPath(branchSubject);
       if (!hubHtml.includes(`href="${subjectPath}"`)) failures.push(`${branchPath} does not link a verified subject page: ${subjectPath}`);
     }

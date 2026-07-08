@@ -9,6 +9,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
 import { getAdminConfig, getAskConfig } from './lib/config.js';
+import { LEGACY_REDIRECTS } from './lib/legacy-redirects.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
@@ -25,6 +26,14 @@ app.use((req, res, next) => {
   const host = String(req.headers.host || '').toLowerCase().split(':')[0];
   if (host === 'www.jntustack.com') {
     res.redirect(301, `https://jntustack.com${req.originalUrl || req.url || '/'}`);
+    return;
+  }
+  next();
+});
+app.use((req, res, next) => {
+  const target = LEGACY_REDIRECTS[req.path];
+  if (target) {
+    res.redirect(301, target);
     return;
   }
   next();
