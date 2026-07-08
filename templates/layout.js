@@ -13,7 +13,7 @@ export function escapeHtml(str = '') {
 // visible on the page itself, not just in a JSON field nobody sees.
 function stampMarkup(status) {
   if (status === 'verified') {
-    return `<div class="stamp stamp--verified" aria-hidden="true">VERIFIED<span>vs. official syllabus</span></div>`;
+    return `<div class="stamp stamp--verified" aria-hidden="true">VERIFIED<span>vs. published syllabus</span></div>`;
   }
   if (status === 'needs_verification') {
     return `<div class="stamp stamp--draft" aria-hidden="true">DRAFT<span>not yet verified &mdash; internal preview only</span></div>`;

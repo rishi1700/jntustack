@@ -3,7 +3,7 @@ import { escapeHtml } from './layout.js';
 export function renderSubjectPage(subject, { branch, regulation, legacySubject, branchHubPublished }) {
   const isVerified = subject.source.status === 'verified';
   const badgeClass = isVerified ? 'badge--verified' : 'badge--draft';
-  const badgeLabel = isVerified ? 'Verified vs. official syllabus' : 'Needs verification';
+  const badgeLabel = isVerified ? 'Verified vs. published syllabus' : 'Needs verification';
 
   // Units as registry-style rows with a mono UNIT nn tag column.
   const unitsHtml = subject.units && subject.units.length > 0
@@ -36,10 +36,20 @@ export function renderSubjectPage(subject, { branch, regulation, legacySubject, 
 
   // Right rail: verification card (the redesign's signature element) when the
   // page is verified; the draft badge stays in the status row either way.
+  // Tier-aware verify-card text. The strong tier (subject/credits/placement
+  // cross-confirmed against JNTUK's own exam records) may say so; autonomous-only
+  // sources must NOT imply an official JNTU document -- they are a published
+  // syllabus from a JNTUK-affiliated college, as the caveat box states.
+  const sourceNote = subject.source.college_source_note || '';
+  const notCrossConfirmed = /not\s+(been\s+)?(independently\s+)?cross-confirmed/i.test(sourceNote);
+  const crossConfirmed = /cross-confirmed against/i.test(sourceNote) && !notCrossConfirmed;
+  const verifyCardText = crossConfirmed
+    ? `Subject, credits and placement cross-checked against JNTUK&rsquo;s ${escapeHtml(subject.regulation)} exam records.`
+    : `Checked against a published ${escapeHtml(subject.regulation)} syllabus from a JNTUK-affiliated source.`;
   const verifyCard = isVerified
     ? `<div class="verify-card">
         <div><span class="check" aria-hidden="true">&#10003;</span> <strong style="color:var(--accent);">Verified</strong></div>
-        <p style="font-size:.82rem;line-height:1.55;color:var(--text-2);margin:.5rem 0;">Checked against the official ${escapeHtml(subject.regulation)} course structure.</p>
+        <p style="font-size:.82rem;line-height:1.55;color:var(--text-2);margin:.5rem 0;">${verifyCardText}</p>
         ${subject.source.retrieved_date ? `<div class="mono" style="font-size:.68rem;color:var(--muted);">Checked ${escapeHtml(subject.source.retrieved_date)}</div>` : ''}
       </div>`
     : '';
