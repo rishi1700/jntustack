@@ -1,33 +1,12 @@
+import { isAuditStylePromotionSubject } from '../lib/verification-review.js';
+import { hasElectiveOptionAmbiguity } from '../lib/verified-promotion-guardrails.js';
+
 function escapeHtml(value = '') {
   return String(value)
     .replaceAll('&', '&amp;')
     .replaceAll('<', '&lt;')
     .replaceAll('>', '&gt;')
     .replaceAll('"', '&quot;');
-}
-
-const AUDIT_COURSE_PUBLICATION_CONFIRMATION = 'PUBLISH AUDIT COURSE';
-
-function creditValue(subject = {}) {
-  const credits = subject.credits;
-  if (!credits || typeof credits !== 'object') return null;
-  return credits.C ?? credits.total ?? null;
-}
-
-function isAuditStylePromotionSubject(subject = {}) {
-  const category = String(subject.category || '').trim().toLowerCase();
-  const type = String(subject.type || '').trim().toLowerCase();
-  const name = String(subject.name || '').trim().toLowerCase();
-  const credits = creditValue(subject);
-  return category === 'mandatorynoncredit'
-    || category.includes('audit')
-    || type === 'internship'
-    || type === 'project'
-    || category.includes('internship')
-    || category.includes('project')
-    || name.includes('internship')
-    || name.includes('project')
-    || (credits !== null && credits !== undefined && credits !== '' && Number(credits) === 0);
 }
 
 function auditPublicationWarning(subject = {}) {
@@ -593,6 +572,7 @@ export function renderVerificationReviewPage({
   const source = subject.source || {};
   const validationErrors = review.validation?.errors || [];
   const auditStylePromotion = isAuditStylePromotionSubject(subject);
+  const electiveOptionAmbiguous = hasElectiveOptionAmbiguity(subject);
   return adminShell({
     title: `Verify ${subject.name}`,
     active: 'verification_reviews',
@@ -639,11 +619,11 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
   ${checklistInputs(checklistItems, values.checklist || {})}
   <label for="reviewer_note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong></label>
   <textarea id="reviewer_note" name="reviewer_note" required>${escapeHtml(values.reviewer_note || '')}</textarea>
+  ${auditStylePromotion || electiveOptionAmbiguous ? `<div class="admin-sub">This subject needs an explicit publication decision below. Record a brief reason (at least 30 characters) here explaining why it is safe to publish — no fixed wording required.</div>` : ''}
   <label for="confirmation_phrase" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
   <input id="confirmation_phrase" name="confirmation_phrase" required value="${escapeHtml(values.confirmation_phrase || '')}" placeholder="PROMOTE TO VERIFIED" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
-  ${auditStylePromotion ? `<label for="audit_course_publication_confirmation" style="display:block;margin-top:12px;"><strong>Audit/non-credit publication confirmation</strong></label>
-  <div class="admin-sub">Only complete this if the reviewer intentionally wants this content-light audit/non-credit page to become public. The reviewer note must explain why.</div>
-  <input id="audit_course_publication_confirmation" name="audit_course_publication_confirmation" required value="${escapeHtml(values.audit_course_publication_confirmation || '')}" placeholder="${escapeHtml(AUDIT_COURSE_PUBLICATION_CONFIRMATION)}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">` : ''}
+  ${auditStylePromotion ? `<label style="display:flex;align-items:flex-start;gap:8px;margin-top:12px;"><input type="checkbox" id="audit_course_publication_confirmed" name="audit_course_publication_confirmed" required ${values.audit_course_publication_confirmed ? 'checked' : ''} style="margin-top:4px;"><span><strong>Publish this audit/non-credit page.</strong> Mandatory non-credit, audit, internship, project, and zero-credit rows need an explicit publication decision — verified course existence alone does not make the page worth publishing. Tick this and give a brief reason in the reviewer note above.</span></label>` : ''}
+  ${electiveOptionAmbiguous ? `<label style="display:flex;align-items:flex-start;gap:8px;margin-top:12px;"><input type="checkbox" id="elective_option_confirmed" name="elective_option_confirmed" required ${values.elective_option_confirmed ? 'checked' : ''} style="margin-top:4px;"><span><strong>Confirm standalone elective page.</strong> This subject has OR/elective-option wording. Confirm the public copy does not imply the course is mandatory for every student, and give a brief reason in the reviewer note above.</span></label>` : ''}
   <button class="warn" type="submit">Create verified promotion proposal</button>
 </form>`,
   });

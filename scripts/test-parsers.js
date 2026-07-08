@@ -14,7 +14,7 @@ import {
 import { validateProposalPayload } from '../lib/proposal-validation.js';
 import { buildReleaseReviewWarningsForTest } from '../lib/release-review.js';
 import {
-  AUDIT_COURSE_PUBLICATION_CONFIRMATION,
+  AUDIT_ELECTIVE_MIN_NOTE_LENGTH,
   PROMOTE_TO_VERIFIED_CONFIRMATION,
   buildVerifiedPromotionPayload,
   validatePromotionReview,
@@ -392,9 +392,21 @@ function testVerifiedPromotionReviewGuardrails() {
     checklist: promotionChecklist(),
     reviewerNote: 'Checked against source PDF fixture and intentionally publishing this audit-style page because the verified metadata is useful to students.',
     confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
-    auditCoursePublicationConfirmation: AUDIT_COURSE_PUBLICATION_CONFIRMATION,
+    auditCoursePublicationConfirmed: true,
   });
   assert.equal(auditApproved.status, 'passed', JSON.stringify(auditApproved.errors, null, 2));
+
+  // Checkbox ticked but reviewer note too short -> still blocked (middle-ground gate).
+  const auditConfirmedShortNote = validatePromotionReview({
+    root,
+    subject: auditDraft,
+    checklist: promotionChecklist(),
+    reviewerNote: 'ok',
+    confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+    auditCoursePublicationConfirmed: true,
+  });
+  assert.equal(auditConfirmedShortNote.status, 'failed');
+  assert.ok(auditConfirmedShortNote.errors.some(error => error.includes('audit_course_publication_review_required') && error.includes(String(AUDIT_ELECTIVE_MIN_NOTE_LENGTH))));
 
   const electiveDraft = subjectPayload({
     name: 'Entrepreneurship Development & Venture Creation',
@@ -421,8 +433,9 @@ function testVerifiedPromotionReviewGuardrails() {
     root,
     subject: electiveDraft,
     checklist: promotionChecklist(),
-    reviewerNote: 'Reviewed as a standalone elective option page. The title should be published as an elective option and the public page does not imply it is mandatory for every student.',
+    reviewerNote: 'Reviewed against source PDF fixture.',
     confirmationPhrase: PROMOTE_TO_VERIFIED_CONFIRMATION,
+    electiveOptionConfirmed: true,
   });
   assert.equal(electiveApproved.status, 'passed', JSON.stringify(electiveApproved.errors, null, 2));
 }
@@ -645,7 +658,7 @@ function testReleaseReviewAuditCoursePublicationBlocker() {
       workflow: {
         type: 'verified_promotion',
         reviewer_note: 'Checked source row and intentionally publishing this audit-style page because the verified metadata is useful to students.',
-        audit_course_publication_confirmation: AUDIT_COURSE_PUBLICATION_CONFIRMATION,
+        audit_course_publication_confirmed: true,
       },
       public_subject: {
         name: 'Technical Paper Writing & IPR',
@@ -743,11 +756,24 @@ function testReleaseReviewElectiveOptionBlocker() {
       ...base,
       workflow: {
         type: 'verified_promotion',
-        reviewer_note: 'Reviewed as a standalone elective option page. The title should be published as an elective option and the public page does not imply it is mandatory for every student.',
+        reviewer_note: 'Checked source row; standalone elective page, copy does not imply it is mandatory.',
+        elective_option_confirmed: true,
       },
     }),
   ]);
   assert.equal(approvedWarnings.length, 0, JSON.stringify(approvedWarnings, null, 2));
+
+  const confirmedButShortNote = buildReleaseReviewWarningsForTest([
+    releaseReviewItem({
+      ...base,
+      workflow: {
+        type: 'verified_promotion',
+        reviewer_note: 'Checked.',
+        elective_option_confirmed: true,
+      },
+    }),
+  ]);
+  assert.ok(confirmedButShortNote.some(warning => warning.code === 'elective_option_review_required' && warning.blocking), JSON.stringify(confirmedButShortNote, null, 2));
 }
 
 await testTirumalaPdfTextFixture();
