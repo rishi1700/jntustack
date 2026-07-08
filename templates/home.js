@@ -24,7 +24,7 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null 
   <div class="pipeline-step">
     <div class="pipeline-num">STEP 01</div>
     <h3>Sourced</h3>
-    <p>Every page starts from an official JNTUK syllabus document.</p>
+    <p>Every page starts from a published, JNTUK-affiliated syllabus document.</p>
   </div>
   <div class="pipeline-step">
     <div class="pipeline-num">STEP 02</div>
@@ -93,6 +93,6 @@ ${pipeline}
 
 ${toolsBand}
 
-<div class="disclaimer-box">JNTUStack is an independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV. New content is added only after it's checked against an official source -- see the "Verified" stamp on each page.</div>
+<div class="disclaimer-box">JNTUStack is an independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV. New content is added only after it's checked against a published source -- see the "Verified" stamp on each page.</div>
 `;
 }
