@@ -2198,154 +2198,6 @@
       "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
     {
-      "id": "r23-eee-2-1-complex-variables-and-numerical-methods",
-      "regulation": "R23",
-      "branch": "EEE",
-      "specialization": null,
-      "year": 2,
-      "semester": 1,
-      "year_sem_label": "2-1",
-      "subject_code": null,
-      "name": "Complex Variables & Numerical Methods",
-      "category": "BasicScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "r23-eee-2-1-complex-variables-and-numerical-methods",
-        "title": "Complex Variables & Numerical Methods",
-        "meta_description": "Complex Variables & Numerical Methods extracted candidate. Needs human verification before publishing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
-      },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
-    },
-    {
-      "id": "r23-eee-2-2-power-systems-i",
-      "regulation": "R23",
-      "branch": "EEE",
-      "specialization": null,
-      "year": 2,
-      "semester": 2,
-      "year_sem_label": "2-2",
-      "subject_code": null,
-      "name": "Power Systems-I",
-      "category": "ProfessionalCore",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "r23-eee-2-2-power-systems-i",
-        "title": "Power Systems-I",
-        "meta_description": "Power Systems-I extracted candidate. Needs human verification before publishing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
-      },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
-    },
-    {
-      "id": "r23-eee-2-1-electromagnetic-field-theory",
-      "regulation": "R23",
-      "branch": "EEE",
-      "specialization": null,
-      "year": 2,
-      "semester": 1,
-      "year_sem_label": "2-1",
-      "subject_code": null,
-      "name": "Electromagnetic Field Theory",
-      "category": "EngineeringScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "r23-eee-2-1-electromagnetic-field-theory",
-        "title": "Electromagnetic Field Theory",
-        "meta_description": "Electromagnetic Field Theory extracted candidate. Needs human verification before publishing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
-      },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
-    },
-    {
-      "id": "r23-eee-2-1-electrical-circuit-analysis-ii",
-      "regulation": "R23",
-      "branch": "EEE",
-      "specialization": null,
-      "year": 2,
-      "semester": 1,
-      "year_sem_label": "2-1",
-      "subject_code": null,
-      "name": "Electrical Circuit Analysis-II",
-      "category": "ProfessionalCore",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "r23-eee-2-1-electrical-circuit-analysis-ii",
-        "title": "Electrical Circuit Analysis-II",
-        "meta_description": "Electrical Circuit Analysis-II extracted candidate. Needs human verification before publishing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
-      },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
-    },
-    {
       "id": "r23-eee-2-1-dc-machines-and-transformers",
       "regulation": "R23",
       "branch": "EEE",
@@ -2384,6 +2236,366 @@
       "notes": "Extracted candidate from parsed source evidence. Requires human verification."
     },
     {
+      "id": "r23-eee-2-1-complex-variables-and-numerical-methods",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Complex Variables & Numerical Methods",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Iterative Methods and Interpolation",
+          "topics": [
+            "Solutions of algebraic and transcendental equations: bisection, secant and false-position methods",
+            "General iteration and Newton-Raphson methods",
+            "Interpolation: Newton’s forward and backward formulae",
+            "Interpolation with unequal intervals; Lagrange’s interpolation formula"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Numerical Integration and Solution of ODEs",
+          "topics": [
+            "Trapezoidal rule; Simpson’s 1/3 and 3/8 rules",
+            "Solution of initial-value problems by Taylor’s series",
+            "Picard’s method of successive approximations; Euler’s method",
+            "Runge-Kutta methods"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Complex Variables and Complex Integration",
+          "topics": [
+            "Continuity, differentiability and analyticity; Cauchy-Riemann equations in Cartesian and polar coordinates",
+            "Harmonic and conjugate harmonic functions; Milne-Thomson method",
+            "Complex integration: line integral and Cauchy’s integral theorem",
+            "Cauchy’s integral formula and the generalized integral formula"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Series Expansions and the Residue Theorem",
+          "topics": [
+            "Radius of convergence; Taylor, Maclaurin and Laurent series",
+            "Types of singularities: isolated, removable, essential and pole",
+            "Residues and the residue theorem",
+            "Evaluation of real integrals using residues"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Conformal Mapping",
+          "topics": [
+            "Transformations by e^z, ln z, z^2, sin z and cos z",
+            "Translation, rotation and inversion",
+            "Bilinear transformation, fixed points and cross ratio",
+            "Inversion of circles and determination of a bilinear transformation mapping given points"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "complex-variables-and-numerical-methods-jntuk-r23-eee-2-1",
+        "title": "Complex Variables & Numerical Methods - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Complex Variables & Numerical Methods: iterative methods, numerical integration & ODEs, complex integration and conformal mapping."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Basic Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-1-universal-human-values",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Universal Human Values - Understanding Harmony and Ethical Human Conduct",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right understanding, relationship and physical facility; the role of education",
+            "Understanding value education and self-exploration as its process",
+            "Continuous happiness and prosperity as basic human aspirations",
+            "Method to fulfil the basic human aspirations; natural acceptance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "The human being as co-existence of the self and the body",
+            "Distinguishing the needs of the self and the body; the body as an instrument of the self",
+            "Understanding harmony in the self",
+            "Harmony of the self with the body; self-regulation and health"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the family as the basic unit of human interaction",
+            "Trust and respect as foundational values in relationships",
+            "Justice in human-to-human relationships",
+            "Understanding harmony in society; vision for the universal human order"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in Nature and Existence",
+          "topics": [
+            "Understanding harmony in nature",
+            "Interconnectedness, self-regulation and mutual fulfilment among the four orders of nature",
+            "Realizing existence as co-existence at all levels",
+            "The holistic perception of harmony in existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications and Professional Ethics",
+          "topics": [
+            "Natural acceptance of human values; definitiveness of ethical human conduct",
+            "A basis for humanistic education, constitution and universal human order",
+            "Competence in professional ethics",
+            "Holistic technologies and management models; strategies for value-based living"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "universal-human-values-jntuk-r23-eee-2-1",
+        "title": "Universal Human Values - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Universal Human Values: value education, harmony in the human being, family & society, nature/existence, and professional ethics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "HSMC theory (2-1-0-3). AICTE Universal Human Values (UHV-II) module list read from Tirumala R23 EEE II-I & II-II PDF; content is the standard cross-branch UHV course."
+    },
+    {
+      "id": "r23-eee-2-1-electromagnetic-field-theory",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Electromagnetic Field Theory",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Vector Analysis and Electrostatics",
+          "topics": [
+            "Vector algebra and coordinate systems (rectangular, cylindrical, spherical)",
+            "Vector calculus: gradient, divergence and divergence theorem, curl and Stokes’ theorem, Laplacian",
+            "Coulomb’s law and electric field intensity; continuous charge distributions",
+            "Electric flux density, Gauss’s law and its applications; electric potential and work done"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Conductors, Dielectrics and Capacitance",
+          "topics": [
+            "Behaviour of a conductor in an electric field; electric dipole and dipole moment",
+            "Conduction and convection current densities; Ohm’s law in point form",
+            "Polarization, dielectric constant and strength; continuity equation and boundary conditions",
+            "Capacitance of parallel-plate, coaxial and spherical capacitors; energy stored in a static electric field"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Magnetostatics, Ampere’s Law and Magnetic Force",
+          "topics": [
+            "Biot-Savart law and its applications; magnetic flux density and Maxwell’s second equation",
+            "Ampere’s circuital law and its applications; Maxwell’s third equation",
+            "Lorentz force; force on a current element and on current-carrying conductors",
+            "Force between parallel conductors; magnetic dipole, torque and moment"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Self and Mutual Inductance",
+          "topics": [
+            "Self-inductance of a solenoid, toroid and coaxial cable",
+            "Mutual inductance between a straight wire and a square loop",
+            "Energy stored in a magnetic field",
+            "Energy density in a magnetic field"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Time-Varying Fields",
+          "topics": [
+            "Faraday’s laws of electromagnetic induction; Maxwell’s fourth equation",
+            "Integral and point forms of Maxwell’s equations",
+            "Statically and dynamically induced EMF; displacement current",
+            "Poynting theorem and Poynting vector"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electromagnetic-field-theory-jntuk-r23-eee-2-1",
+        "title": "Electromagnetic Field Theory - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Electromagnetic Field Theory: electrostatics, conductors & dielectrics, magnetostatics, inductance and time-varying fields."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Engineering Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-1-electrical-circuit-analysis-ii",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Electrical Circuit Analysis-II",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Three-Phase Circuits",
+          "topics": [
+            "Phase sequence; star and delta connection of sources and loads",
+            "Relation between line and phase quantities; analysis of balanced three-phase circuits",
+            "Measurement of active and reactive power",
+            "Unbalanced circuits: loop method, star-delta transformation and the two-wattmeter method"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Laplace Transforms and Transient Analysis",
+          "topics": [
+            "Laplace transforms of standard functions; shifting theorem",
+            "Transforms of derivatives and integrals; inverse Laplace transforms",
+            "Transient response of R-L, R-C and R-L-C circuits for DC and sinusoidal excitation",
+            "Solution using the differential-equation and Laplace-transform approaches"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Network Parameters",
+          "topics": [
+            "Impedance and admittance parameters",
+            "Hybrid and transmission (ABCD) parameters; conversion between parameter forms",
+            "Conditions for reciprocity and symmetry",
+            "Interconnection of two-port networks in series, parallel and cascade"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Circuits with Periodic Excitation",
+          "topics": [
+            "Fourier series and evaluation of Fourier coefficients",
+            "Trigonometric and complex Fourier series for periodic waveforms",
+            "Effective and average values of non-sinusoidal periodic waveforms",
+            "Power factor and the effect of harmonics"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Filters",
+          "topics": [
+            "Classification of filters: low-pass, high-pass, band-pass and band-elimination",
+            "Constant-k filters",
+            "Low-pass and high-pass constant-k filter design",
+            "Design of filters"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electrical-circuit-analysis-ii-jntuk-r23-eee-2-1",
+        "title": "Electrical Circuit Analysis-II - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Electrical Circuit Analysis-II: three-phase circuits, Laplace & transient analysis, network parameters, Fourier analysis and filters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft of the same subject."
+    },
+    {
       "id": "r23-eee-2-1-electrical-circuit-analysis-ii-and-simulation-lab",
       "regulation": "R23",
       "branch": "EEE",
@@ -2401,6 +2613,7 @@
         "C": 1.5
       },
       "type": "lab",
+      "units": [],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2408,17 +2621,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "r23-eee-2-1-electrical-circuit-analysis-ii-and-simulation-lab",
-        "title": "Electrical Circuit Analysis-II and Simulation Lab",
-        "meta_description": "Electrical Circuit Analysis-II and Simulation Lab extracted candidate. Needs human verification before publishing."
+        "slug": "electrical-circuit-analysis-ii-and-simulation-lab-jntuk-r23-eee-2-1",
+        "title": "Circuit Analysis-II & Simulation Lab - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Electrical Circuit Analysis-II & Simulation Lab: 3-phase power, transients, two-port parameters, and network-theorem simulations."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): Part A -- measurement of active and reactive power for balanced and unbalanced loads, three-phase power by the two-wattmeter method, R-L and R-C time constants using a CRO, Z/Y and ABCD/hybrid parameters; Part B (simulation) -- verification of Kirchhoff’s laws, mesh and nodal analysis, superposition and maximum power transfer, reciprocity and compensation, Thevenin’s and Norton’s theorems, series and parallel resonance, transient response of RL/RC/RLC circuits, and self/mutual inductance. Supersedes a pipeline-extracted needs_verification draft."
     },
     {
       "id": "r23-eee-2-1-dc-machines-and-transformers-lab",
@@ -2438,6 +2652,7 @@
         "C": 1.5
       },
       "type": "lab",
+      "units": [],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2445,17 +2660,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "r23-eee-2-1-dc-machines-and-transformers-lab",
-        "title": "DC Machines & Transformers Lab",
-        "meta_description": "DC Machines & Transformers Lab extracted candidate. Needs human verification before publishing."
+        "slug": "dc-machines-and-transformers-lab-jntuk-r23-eee-2-1",
+        "title": "DC Machines & Transformers Lab - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 DC Machines & Transformers Lab: speed control, brake/Swinburne/Hopkinson tests, and single-phase transformer OC/SC & Sumpner tests."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): speed control of a DC shunt motor by field-current and armature-voltage control; brake test on DC shunt and compound motors; Swinburne’s, Hopkinson’s and field tests; load tests on DC shunt and compound generators; OC and SC tests, Sumpner’s test, Scott connection, parallel operation and separation of core losses of single-phase transformers. Supersedes a pipeline-extracted needs_verification draft."
     },
     {
       "id": "r23-eee-2-1-data-structures-lab",
@@ -2475,6 +2691,58 @@
         "C": 2
       },
       "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Arrays, Searching and Sorting",
+          "topics": [
+            "Definition and importance of data structures; abstract data types (ADTs)",
+            "1-D and 2-D arrays; row-major and column-major storage",
+            "Searching techniques: linear and binary search",
+            "Sorting techniques: bubble, selection and quick sort"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Linked Lists",
+          "topics": [
+            "Singly linked lists: representation and operations",
+            "Doubly linked lists and circular linked lists",
+            "Comparing arrays and linked lists",
+            "Applications of linked lists, including polynomial addition"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Stacks",
+          "topics": [
+            "Introduction to stacks: properties and operations",
+            "Implementing stacks using arrays and linked lists",
+            "Applications: expression evaluation and infix-to-postfix conversion",
+            "Backtracking and reversing a list using a stack"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Queues and Deques",
+          "topics": [
+            "Introduction to queues: properties and operations",
+            "Circular queues; implementing queues using arrays and linked lists",
+            "Applications of queues such as scheduling",
+            "Double-ended queues (deques) and their operations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Trees",
+          "topics": [
+            "Introduction to trees",
+            "Binary trees and traversals",
+            "Binary search tree: insertion, deletion and traversal",
+            "Implementing tree operations using linked lists"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2482,17 +2750,816 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "r23-eee-2-1-data-structures-lab",
-        "title": "Data Structures Lab",
-        "meta_description": "Data Structures Lab extracted candidate. Needs human verification before publishing."
+        "slug": "data-structures-lab-jntuk-r23-eee-2-1",
+        "title": "Data Structures Lab - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Data Structures Lab: arrays, searching & sorting, linked lists, stacks, queues & deques, and binary trees."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+      "notes": "Skill Enhancement Course (0-1-2-2). Five-unit syllabus with sample experiments read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft."
+    },
+    {
+      "id": "r23-eee-2-1-environmental-science",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 1,
+      "year_sem_label": "2-1",
+      "subject_code": null,
+      "name": "Environmental Science",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Natural Resources",
+          "topics": [
+            "Multidisciplinary nature, scope and importance of environmental studies; need for public awareness",
+            "Renewable and non-renewable resources; forest resources and deforestation",
+            "Water and mineral resources: use, over-utilization and environmental effects",
+            "Food and energy resources; effects of modern agriculture"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ecosystems and Biodiversity",
+          "topics": [
+            "Concept, structure and function of an ecosystem; producers, consumers and decomposers",
+            "Energy flow, ecological succession, food chains, food webs and ecological pyramids",
+            "Forest, grassland, desert and aquatic ecosystems",
+            "Biodiversity: values, threats and in-situ and ex-situ conservation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Environmental Pollution and Waste",
+          "topics": [
+            "Air, water, soil, marine, noise and thermal pollution and nuclear hazards",
+            "Causes, effects and control measures",
+            "Solid-waste management of urban and industrial wastes",
+            "Disaster management: floods, earthquakes, cyclones and landslides"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Social Issues and the Environment",
+          "topics": [
+            "From unsustainable to sustainable development; water conservation and watershed management",
+            "Resettlement and rehabilitation; environmental ethics",
+            "Climate change, global warming, acid rain and ozone-layer depletion",
+            "Environmental legislation: Environment Protection, Air, Water, Wildlife and Forest Acts"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Population and the Environment",
+          "topics": [
+            "Population growth and variation among nations; population explosion and family welfare",
+            "Environment and human health; human rights and value education",
+            "Role of information technology in environment and human health",
+            "Field work: study of local environmental assets and polluted sites"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "environmental-science-jntuk-r23-eee-2-1",
+        "title": "Environmental Science - R23 EEE 2-1",
+        "meta_description": "Tirumala R23 EEE 2-1 Environmental Science: natural resources, ecosystems & biodiversity, pollution, social issues and human population."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Mandatory Non-Credit / audit course (2-0-0, no credits). Published as verified because it carries substantive syllabus content, consistent with the site’s other Environmental Science pages. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-managerial-economics-and-financial-analysis",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Managerial Economics and Financial Analysis",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Managerial Economics",
+          "topics": [
+            "Nature, meaning, significance and functions of managerial economics",
+            "Demand: concept, law of demand and demand elasticity (types and measurement)",
+            "Demand forecasting: governing factors and methods",
+            "Relation between managerial economics, financial accounting and management"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Production and Cost Analysis",
+          "topics": [
+            "Production function, least-cost combination, short-run and long-run production",
+            "Isoquants and isocosts",
+            "Cost concepts and cost behaviour",
+            "Break-even analysis and determination of the break-even point"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Business Organizations and Markets",
+          "topics": [
+            "Forms of business organizations: sole proprietary, partnership, joint-stock companies, public-sector enterprises",
+            "Types of markets: perfect and imperfect competition",
+            "Monopoly, monopolistic competition and oligopoly",
+            "Price-output determination, pricing methods and strategies"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Capital Budgeting",
+          "topics": [
+            "Types, components and sources of working capital",
+            "Estimating working-capital requirements",
+            "Capital budgeting: features, proposals and methods",
+            "Project evaluation: payback, ARR, NPV and IRR"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Financial Accounting and Analysis",
+          "topics": [
+            "Concepts and conventions; double-entry bookkeeping",
+            "Journal, ledger and trial balance",
+            "Final accounts: trading account, profit and loss account and balance sheet",
+            "Financial analysis: liquidity, activity, capital-structure and profitability ratios"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "managerial-economics-and-financial-analysis-jntuk-r23-eee-2-2",
+        "title": "Managerial Economics & Financial Analysis - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Managerial Economics & Financial Analysis: demand & elasticity, production & cost, markets, capital budgeting and accounting."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "HSMC theory (2-0-0-2). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-analog-circuits",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Analog Circuits",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Clipping, Clamping and BJT Biasing",
+          "topics": [
+            "Diode clippers and clamping circuits; clipping at two independent levels; transfer characteristics",
+            "DC biasing of BJTs: load lines, operating point and bias stability",
+            "Collector-to-base and self-bias; bias compensation",
+            "Thermal runaway and thermal stability"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Small-Signal Modelling and Feedback Amplifiers",
+          "topics": [
+            "Transistor amplifier analysis using h-parameters; simplified CE hybrid model",
+            "Analysis of CE, CC and CB configurations; frequency response of CE and CC amplifiers",
+            "Classification of amplifiers and the feedback concept",
+            "Characteristics of negative-feedback amplifiers and effect on input/output resistance"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Oscillators and Operational Amplifiers",
+          "topics": [
+            "Barkhausen criterion and oscillator operation",
+            "RC phase-shift, Wien-bridge and crystal oscillators",
+            "Op-amp basics, the ideal op-amp and block-diagram representation",
+            "Op-amp DC and AC characteristics; the 741 op-amp"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Op-Amp Applications",
+          "topics": [
+            "Basic op-amp applications; instrumentation and AC amplifiers",
+            "V-to-I and I-to-V converters; sample-and-hold circuit",
+            "Log and antilog amplifiers; multiplier and divider",
+            "Differentiator and integrator"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Data Converters",
+          "topics": [
+            "DAC techniques: weighted-resistor, R-2R and inverted R-2R ladder DACs",
+            "ADCs: parallel-comparator and counter types",
+            "Successive-approximation and dual-slope ADCs",
+            "DAC and ADC specifications"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "analog-circuits-jntuk-r23-eee-2-2",
+        "title": "Analog Circuits - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Analog Circuits: clippers & BJT biasing, small-signal modelling, feedback, oscillators, op-amps and data converters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Engineering Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-power-systems-i",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Power Systems-I",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Hydro and Thermal Power Stations",
+          "topics": [
+            "Hydroelectric power plant: site selection, general layout and major components",
+            "Thermal power plant: site selection and general layout",
+            "Boilers, superheaters, economizers and electrostatic precipitators",
+            "Steam turbines (impulse and reaction), condensers, cooling towers and chimney"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Nuclear Power Stations",
+          "topics": [
+            "Location and working principle; nuclear fission, fuels and chain reaction",
+            "Reactor components: moderators, control rods, reflectors and coolants",
+            "Types of reactors: PWR, BWR and FBR",
+            "Radiation hazards, shielding and nuclear-waste disposal"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Substations",
+          "topics": [
+            "Air-insulated substations: indoor and outdoor; 33/11 kV substation layout",
+            "Busbar arrangements: single, sectionalized single and double busbar",
+            "Main-and-transfer busbar system",
+            "Gas-insulated substations: advantages, construction and comparison with air-insulated substations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Underground Cables and Distribution",
+          "topics": [
+            "Cable types, construction and insulating materials",
+            "Insulation resistance, stress in insulation and cable power factor; capacitance of single- and 3-core cables",
+            "Grading of cables: capacitance and inter-sheath grading",
+            "Distribution systems: classification, AC distribution, overhead vs underground, connection schemes and design considerations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Economic Aspects and Tariffs",
+          "topics": [
+            "Load curve, load-duration and integrated load-duration curves",
+            "Connected load, maximum demand, demand/load/diversity factors and plant factors",
+            "Base and peak load plants",
+            "Cost of generation and tariff methods: simple, flat, block, two-part, three-part and power-factor tariffs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-systems-i-jntuk-r23-eee-2-2",
+        "title": "Power Systems-I - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Power Systems-I: hydro & thermal stations, nuclear stations, substations, underground cables & distribution, and economics & tariffs."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft of the same subject."
+    },
+    {
+      "id": "r23-eee-2-2-induction-and-synchronous-machines",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Induction and Synchronous Machines",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Three-Phase Induction Motors",
+          "topics": [
+            "Construction of squirrel-cage and slip-ring induction motors",
+            "Production of rotating magnetic field; principle of operation",
+            "Rotor EMF and frequency; rotor current and power factor at standstill and running",
+            "Rotor power, copper loss and mechanical power; equivalent circuit and phasor diagram"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Performance of Induction Motors",
+          "topics": [
+            "Torque equation; maximum and starting torque; torque-slip characteristics",
+            "Double-cage and deep-bar rotors; no-load, brake and blocked-rotor tests; circle diagram",
+            "Starting methods and starting current/torque calculations",
+            "Speed control (V/f, rotor resistance, EMF injection); crawling, cogging and induction-generator operation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Single-Phase Motors",
+          "topics": [
+            "Single-phase induction motors: construction and double revolving-field theory",
+            "Equivalent circuit",
+            "Starting methods: capacitor-start capacitor-run, capacitor-start induction-run, split-phase and shaded-pole",
+            "AC series motor"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Synchronous Generators",
+          "topics": [
+            "Non-salient and salient-pole alternators; armature windings; distribution and pitch factors",
+            "EMF equation and armature reaction",
+            "Voltage regulation by synchronous-impedance, MMF and Potier-triangle methods",
+            "Two-reaction analysis; synchronization, slip test and parallel operation"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Synchronous Motors",
+          "topics": [
+            "Principle and theory of operation",
+            "Effect of excitation on current and power factor; synchronous condenser",
+            "Expression for power developed",
+            "Hunting and its suppression; methods of starting"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "induction-and-synchronous-machines-jntuk-r23-eee-2-2",
+        "title": "Induction and Synchronous Machines - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Induction and Synchronous Machines: 3-phase induction motors, performance, single-phase motors, synchronous generators and motors."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-control-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Control Systems",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Mathematical Modelling of Control Systems",
+          "topics": [
+            "Open-loop vs closed-loop systems and feedback characteristics",
+            "Transfer function of linear systems; differential equations of electrical and mechanical systems",
+            "Transfer function of an armature-controlled DC servo motor",
+            "Block-diagram algebra and signal-flow graphs (Mason’s gain formula)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Time Response and Stability",
+          "topics": [
+            "Standard test signals; time response of first- and second-order systems; time-domain specifications",
+            "Steady-state errors and error constants; P, PI, PD and PID actions",
+            "Concept of stability and Routh’s stability criterion",
+            "Root-locus concept and construction; effect of adding poles and zeros"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Frequency Response Analysis",
+          "topics": [
+            "Frequency-domain specifications",
+            "Bode diagrams and transfer function from the Bode diagram",
+            "Polar plots",
+            "Nyquist stability criterion; stability from Bode plots (gain and phase margins)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Classical Control Design",
+          "topics": [
+            "Lag compensators",
+            "Lead compensators",
+            "Lag-lead compensators and their physical realization",
+            "Design of compensators using Bode plots"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "State-Space Analysis of LTI Systems",
+          "topics": [
+            "Concept of state; state variables and state model",
+            "State-space representation of transfer functions: controllable, observable and diagonal canonical forms",
+            "Solving time-invariant state equations; state transition matrix and its properties",
+            "Concepts of controllability and observability"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "control-systems-jntuk-r23-eee-2-2",
+        "title": "Control Systems - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Control Systems: mathematical modelling, time response & stability, frequency response, compensator design and state-space analysis."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-induction-and-synchronous-machines-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Induction and Synchronous Machines Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "induction-and-synchronous-machines-lab-jntuk-r23-eee-2-2",
+        "title": "Induction & Synchronous Machines Lab - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Induction & Synchronous Machines Lab: induction-motor tests, single-phase motor tests, and alternator regulation experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): brake test and circle diagram of a three-phase induction motor; V/f speed control; equivalent circuit, power-factor improvement and load test on a single-phase induction motor; regulation of a three-phase alternator by synchronous-impedance, MMF and Potier-triangle methods; V and inverted-V curves; Xd/Xq and regulation of a salient-pole alternator; efficiency and parallel operation of alternators; and brake test on a single-phase AC series motor."
+    },
+    {
+      "id": "r23-eee-2-2-control-systems-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Control Systems Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "control-systems-lab-jntuk-r23-eee-2-2",
+        "title": "Control Systems Lab - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Control Systems Lab: DC/AC servo motors, magnetic amplifiers, synchros, PID control, and MATLAB root-locus/Bode/Nyquist experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): transfer function of a DC motor; characteristics of AC and DC servo motors, magnetic amplifiers and synchros; second-order system time-domain analysis; effect of P/PD/PI/PID controllers; temperature control using a PID controller; root-locus, Bode and Nyquist plots in MATLAB; lag and lead compensation design; Kalman’s test of controllability and observability in MATLAB; and verification of logic-gate truth tables and Boolean expressions using a PLC."
+    },
+    {
+      "id": "r23-eee-2-2-python-programming-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Python Programming Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Python Basics and Control Flow",
+          "topics": [
+            "History and thrust areas of Python; Anaconda distribution and Jupyter Notebook",
+            "Identifiers, keywords, statements, variables, operators, precedence and data types",
+            "Indentation, comments, input/output and type conversions",
+            "Control-flow statements: if/elif/else, while and for loops, break/continue, try/except"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Functions, Strings and Lists",
+          "topics": [
+            "Built-in functions and commonly used modules; function definition and calling",
+            "Return statement, scope and lifetime, default and keyword arguments, *args and **kwargs",
+            "Strings: operations, indexing, slicing, methods and formatting",
+            "Lists: operations, indexing and slicing, built-in functions and methods"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Dictionaries, Tuples and Sets",
+          "topics": [
+            "Dictionaries: creating, accessing and modifying key:value pairs, built-in functions and methods",
+            "Tuples: creating, operations, indexing and slicing",
+            "Sets and set methods; the zip() function",
+            "Relation between tuples, lists and frozensets"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Files and Object-Oriented Programming",
+          "topics": [
+            "File types; reading and writing text and binary files; the pickle module",
+            "Reading and writing CSV files; os and os.path modules",
+            "Classes and objects; constructor method; class vs data attributes",
+            "Encapsulation, inheritance and polymorphism"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Introduction to Data Science",
+          "topics": [
+            "Functional programming in Python",
+            "JSON and XML in Python",
+            "NumPy arrays with Python",
+            "Pandas data frames"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "python-programming-lab-jntuk-r23-eee-2-2",
+        "title": "Python Programming Lab - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Python Programming Lab: basics & control flow, functions, strings & lists, collections, files & OOP, and data science."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2). Five-unit syllabus with sample experiments read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-2-2-design-thinking-and-innovation",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Design Thinking & Innovation",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 1,
+        "T": 0,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Design Thinking",
+          "topics": [
+            "Elements and principles of design; basics — dot, line, shape and form",
+            "Principles of design",
+            "Introduction to design thinking and its history",
+            "New materials in industry"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Thinking Process",
+          "topics": [
+            "The design-thinking process: empathize, analyze, ideate and prototype",
+            "Implementing the process to drive inventions",
+            "Design thinking in social innovations",
+            "Tools: persona, customer journey map, brainstorming and product development"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Innovation",
+          "topics": [
+            "The art of innovation; difference between innovation and creativity",
+            "Role of creativity and innovation in organizations",
+            "Teams for innovation",
+            "Measuring the impact and value of creativity"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Product Design",
+          "topics": [
+            "Problem formation and introduction to product design",
+            "Product strategies and product value",
+            "Product planning and specifications",
+            "Innovation towards product design; case studies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design Thinking in Business Processes",
+          "topics": [
+            "Design thinking in business and strategic innovation",
+            "Principles that redefine business; meeting corporate needs",
+            "Design thinking for startups",
+            "Defining and testing business models and prototypes"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-thinking-and-innovation-jntuk-r23-eee-2-2",
+        "title": "Design Thinking & Innovation - R23 EEE 2-2",
+        "meta_description": "Tirumala R23 EEE 2-2 Design Thinking & Innovation: design fundamentals, design-thinking process, innovation, product design, and business processes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+      },
+      "notes": "Engineering Science, theory-cum-lab (1-0-2-2), common to all branches. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
     }
   ]
 }

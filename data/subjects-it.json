@@ -1807,6 +1807,1899 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-it-3-2-cloud-computing",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cloud Computing",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Cloud Computing Fundamentals",
+          "topics": [
+            "Defining a cloud and the cloud computing reference model",
+            "Types of services: IaaS, PaaS and SaaS; deployment models: public, private and hybrid",
+            "Utility computing, cloud characteristics and benefits",
+            "Cloud service providers: Amazon Web Services, Microsoft Azure and Google App Engine"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Cloud Enabling Technologies",
+          "topics": [
+            "Ubiquitous internet; parallel and distributed computing",
+            "Hardware architectures for parallel computing: SISD, SIMD, MISD, MIMD",
+            "Elements of distributed computing and inter-process communication",
+            "Remote procedure calls (RPC), service-oriented architecture (SOA) and web services"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Virtualization and Containers",
+          "topics": [
+            "Characteristics and taxonomy of virtualization techniques; pros and cons",
+            "Technology examples: XEN and VMware",
+            "Building blocks of containers and container platforms (LXC, Docker)",
+            "Container orchestration with Docker Swarm and Kubernetes; public cloud VM (Amazon EC2) and container (Amazon ECS) offerings"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Cloud Computing Challenges",
+          "topics": [
+            "Economics of the cloud; interoperability and standards",
+            "Scalability, fault tolerance and energy efficiency; federated clouds",
+            "Cloud computing security, fundamentals of computer security and cloud security architecture",
+            "Cloud shared responsibility model and security across deployment models"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Advanced Concepts in Cloud Computing",
+          "topics": [
+            "Serverless computing and Function-as-a-Service architecture",
+            "Public-cloud (AWS Lambda) and open-source (OpenFaaS) serverless platforms",
+            "Cloud-centric IoT; edge, fog and cloud computing compared",
+            "Introduction to DevOps (CI/CD, infrastructure-as-code) and Quantum-as-a-Service (QaaS)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cloud-computing-jntuk-r23-it-3-2",
+        "title": "Cloud Computing - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Cloud Computing: IaaS/PaaS/SaaS models, enabling technologies, virtualization & containers, cloud challenges, and serverless computing."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3201; college code not stored to avoid implying a JNTUK code)."
+    },
+    {
+      "id": "r23-it-3-2-cryptography-and-network-security",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cryptography & Network Security",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Number Theory and Security Basics",
+          "topics": [
+            "Prime numbers, Fermat’s and Euler’s theorems, testing for primality",
+            "The Chinese Remainder Theorem and the Euclidean theorem",
+            "The need for security, security approaches and principles of security",
+            "Plaintext and ciphertext; types of attacks"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Cryptography Concepts and Symmetric Algorithms",
+          "topics": [
+            "Substitution and transposition techniques; encryption and decryption",
+            "Symmetric vs asymmetric cryptography; steganography",
+            "Feistel cipher structure; Data Encryption Standard (DES) and Triple DES",
+            "Stream ciphers and RC4"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Asymmetric Key Cryptographic Algorithms",
+          "topics": [
+            "Overview of asymmetric key cryptography",
+            "Diffie-Hellman key exchange and the RSA algorithm",
+            "Using symmetric and asymmetric cryptography together",
+            "Message digest, MAC, HMAC and digital signatures"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Public Key Infrastructure and Authentication",
+          "topics": [
+            "Public key infrastructure, digital certificates and the PKIX model",
+            "User authentication basics; password and authentication-token mechanisms",
+            "Certificate-based and biometric authentication",
+            "Key Distribution Center (KDC) and Kerberos"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Internet Security Protocols",
+          "topics": [
+            "SSL, S-HTTP and SET; SSL versus SET",
+            "Email security: Simple SMTP, Privacy Enhanced Mail (PEM)",
+            "Pretty Good Privacy (PGP) and S/MIME",
+            "Firewalls, IP security and Virtual Private Networks"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cryptography-and-network-security-jntuk-r23-it-3-2",
+        "title": "Cryptography & Network Security - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Cryptography & Network Security: number theory, symmetric & asymmetric algorithms, PKI, authentication, and internet security protocols."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3202)."
+    },
+    {
+      "id": "r23-it-3-2-machine-learning",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Machine Learning",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Machine Learning",
+          "topics": [
+            "Definition and the relation between AI, ML and DL; need for machine learning",
+            "Types of machine learning, applications and challenges; data acquisition",
+            "Feature selection and feature extraction",
+            "Overfitting vs underfitting; bias and variance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Regression",
+          "topics": [
+            "Linear regression and non-linear regression",
+            "Regularization and its types",
+            "Ridge regression vs Lasso regression",
+            "Logistic regression and binary classification"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Classification",
+          "topics": [
+            "Types of learners; binary, multi-class, multi-label and imbalanced classification",
+            "Decision trees: representation and the ID3 learning algorithm",
+            "Metrics for evaluating classifier performance",
+            "Naive Bayes classification and K-Nearest Neighbors with distance metrics"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Support Vectors, Ensembles and Clustering",
+          "topics": [
+            "Support vector machines: linear SVM, non-linear SVM and SVR",
+            "Ensemble learning: bagging, boosting, stacking and random forest",
+            "Cluster analysis and measures of similarity and dissimilarity",
+            "Partitioning methods: K-Means and K-Medoids"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Dimensionality Reduction and Neural Networks",
+          "topics": [
+            "Random forest and an introduction to reinforcement learning",
+            "Dimensionality reduction using Principal Component Analysis (PCA)",
+            "Artificial neural networks: biological vs artificial neurons, perceptron and multi-layer perceptron",
+            "Feedforward networks and the backpropagation algorithm"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-learning-jntuk-r23-it-3-2",
+        "title": "Machine Learning - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Machine Learning: ML foundations, regression, classification, SVM, ensembles & clustering, dimensionality reduction and neural networks."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3203)."
+    },
+    {
+      "id": "r23-it-3-2-cloud-computing-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Cloud Computing Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cloud-computing-lab-jntuk-r23-it-3-2",
+        "title": "Cloud Computing Lab - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Cloud Computing Lab: AWS VPC, Lambda, Elastic Beanstalk, IAM, RDS, CloudFormation, SQS, serverless architecture and Storage Gateway."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-2 PDF (B23IT3214): build a VPC and launch a web server; AWS Lambda and Elastic Beanstalk; IAM; Amazon RDS database; Virtual Private Cloud; highly available environment; securing applications with Amazon Cognito; encrypting data at rest; automating infrastructure with CloudFormation; decoupled applications with SQS; serverless architecture on AWS; hybrid storage and migration with Storage Gateway S3 File Gateway; static website hosting; migrating a database to Amazon RDS."
+    },
+    {
+      "id": "r23-it-3-2-machine-learning-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Machine Learning Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "machine-learning-lab-jntuk-r23-it-3-2",
+        "title": "Machine Learning Lab - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Machine Learning Lab: preprocessing, encoding, regression, regularization, decision trees, Naive Bayes, KNN, clustering, PCA, perceptrons."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-2 PDF (B23IT3215): data preprocessing on CSV data; categorical and one-hot encoding; bias-variance analysis; linear and multiple regression; logistic regression for binary and multiclass classification; Lasso and Ridge regularization; ID3 decision tree; Naive Bayes; K-NN with different distance metrics; K-Means and hierarchical clustering; PCA dimensionality reduction; single- and multi-layer perceptrons using scikit-learn/TensorFlow."
+    },
+    {
+      "id": "r23-it-3-2-soft-skills",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Soft Skills",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Soft Skills",
+          "topics": [
+            "Introduction to soft skills: definition and meaning",
+            "Importance and need in personal and professional settings",
+            "Soft skills versus hard skills",
+            "Personality development"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Intra-Personal and Inter-Personal Communication",
+          "topics": [
+            "Significance of inter- and intra-personal communication; SWOT analysis",
+            "Goal setting and guidelines for goal setting; emotional intelligence",
+            "Creativity and problem solving; stress and time management",
+            "Leadership and teamwork; building a positive attitude and social consciousness"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Written Communication",
+          "topics": [
+            "Resume preparation: common resume blunders and tips for betterment",
+            "Resume review",
+            "Report writing",
+            "Writing a Statement of Purpose (SOP)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Presentation Skills",
+          "topics": [
+            "Importance of presentation skills",
+            "Just A Minute (JAM)",
+            "Essential guidelines for group discussions and debates",
+            "Role plays and PowerPoint presentations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Interview Skills",
+          "topics": [
+            "Employability skills and knowing the selection process",
+            "Interview skills and types of interviews, including e-interviews",
+            "Do’s and don’ts of interviews and frequently asked questions",
+            "Mock interviews; awareness of industries and researching the prospective workplace"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "soft-skills-jntuk-r23-it-3-2",
+        "title": "Soft Skills - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 Soft Skills: soft-skills foundations, intra/inter-personal communication, written communication, presentation skills and interview skills."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2). Five modules read from SRKR R23 IT 3-2 PDF (B23BS3201; offered commonly to AIML, CSBS, CSE, IT and MECH)."
+    },
+    {
+      "id": "r23-it-3-2-software-testing-methodologies",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Software Testing Methodologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Path Testing",
+          "topics": [
+            "Purpose of testing, dichotomies and a model for testing",
+            "Consequences of bugs and a taxonomy of bugs",
+            "Flow graphs and basic concepts of path testing; predicates and achievable paths",
+            "Path sensitizing, path instrumentation and applications of path testing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Transaction, Data Flow and Domain Testing",
+          "topics": [
+            "Transaction flows and transaction-flow testing techniques",
+            "Data flow testing: basics, strategies and applications",
+            "Domain testing: domains and paths, nice and ugly domains",
+            "Domain and interface testing; domains and testability"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Path Expressions and Logic-Based Testing",
+          "topics": [
+            "Path products and path expressions; the reduction procedure",
+            "Regular expressions and flow-anomaly detection",
+            "Logic-based testing overview; decision tables",
+            "Path expressions, KV charts and specifications"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "State Graphs and Transition Testing",
+          "topics": [
+            "State graphs and finite state machines; state tables",
+            "Good state graphs and bad state graphs",
+            "State testing and principles of state testing",
+            "Limitations, extensions and testability tips"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Graph Matrices and Applications",
+          "topics": [
+            "Motivational overview and the matrix of a graph",
+            "Relations and the power of a matrix",
+            "Node reduction algorithm and building tools",
+            "Exposure to tools such as JMeter, Selenium, SoapUI and Katalon"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-testing-methodologies-jntuk-r23-it-3-2",
+        "title": "Software Testing Methodologies - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Software Testing Methodologies: path testing, data-flow & domain testing, logic-based testing, state graphs and graph matrices."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3204)."
+    },
+    {
+      "id": "r23-it-3-2-augmented-reality-and-virtual-reality",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Augmented Reality & Virtual Reality",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Augmented Reality",
+          "topics": [
+            "Defining augmented reality, its history, examples and related fields",
+            "Displays: multimodal displays, visual perception and the spatial display model",
+            "Tracking, calibration and registration; coordinate systems",
+            "Characteristics of tracking technology; stationary and mobile tracking systems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Computer Vision and AR Software Architectures",
+          "topics": [
+            "Marker tracking, multiple-camera infrared tracking, natural feature tracking and outdoor tracking",
+            "Interaction: output and input modalities, tangible interfaces and augmented paper",
+            "Multi-view and haptic interfaces",
+            "AR software architectures: distributed object systems, dataflow and scene graphs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Introduction to Virtual Reality and Geometry",
+          "topics": [
+            "Defining virtual reality, its history and human physiology and perception",
+            "The geometry of virtual worlds: geometric models and axis-angle rotations",
+            "Viewing transformations",
+            "Light and optics: behavior of light, lenses, the human eye, cameras and displays"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Human Vision and Visual Rendering",
+          "topics": [
+            "Physiology of human vision: from the cornea to photoreceptors to the visual cortex; eye movements",
+            "Visual perception of depth, motion and color",
+            "Visual rendering: ray tracing, shading models and rasterization",
+            "Correcting optical distortions, improving latency and frame rates, immersive photos and videos"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Motion, Interaction and Audio",
+          "topics": [
+            "Motion in real and virtual worlds: velocities, accelerations and the vestibular system",
+            "Physics in the virtual world; mismatched motion and vection",
+            "Interaction: motor programs and remapping, locomotion and social interaction",
+            "Audio: physics of sound, physiology of hearing, auditory perception and rendering"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "augmented-reality-and-virtual-reality-jntuk-r23-it-3-2",
+        "title": "Augmented Reality & Virtual Reality - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective AR & VR: AR foundations & tracking, computer vision, VR geometry & optics, human vision & rendering, motion and audio."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3205)."
+    },
+    {
+      "id": "r23-it-3-2-devops",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "DevOps",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to DevOps",
+          "topics": [
+            "Introduction to SDLC and the Agile model; introduction to DevOps",
+            "DevOps features, architecture and lifecycle; workflow and principles",
+            "DevOps tools, build automation, delivery automation and code quality",
+            "Automation of CI/CD, release management, Scrum, Kanban, delivery pipeline and bottlenecks"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Source Code Management with Git",
+          "topics": [
+            "The need for and history of source code control; roles and migrations",
+            "Version control and Git: installation, features and workflow",
+            "Working with remote repositories, Git commands, branching, staging and collaboration",
+            "Unit testing and code coverage with JUnit, NUnit and SonarQube code-quality analysis"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Continuous Integration with Jenkins",
+          "topics": [
+            "Build automation and why continuous integration is required; CI tools",
+            "Introduction to Jenkins and its architecture; Jenkins workflow",
+            "Master-slave architecture and Jenkins pipelines; freestyle projects and pipelines",
+            "Creating and managing builds, user management, scheduling and building on slave nodes"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Continuous Delivery and Containerization",
+          "topics": [
+            "Importance of continuous delivery; CD flow and continuous deployment",
+            "Containerization with Docker: installation, commands, images and containers",
+            "Dockerfile, running containers and publishing to Docker Hub",
+            "Testing tools: introduction to Selenium and JavaScript testing"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Configuration Management and Orchestration",
+          "topics": [
+            "Ansible: tasks, roles, Jinja templating, vaults and deployments",
+            "Kubernetes and OpenShift: namespaces and resources",
+            "CI/CD on OpenShift; deploying apps on container pods",
+            "Introduction to Puppet and Chef"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "devops-jntuk-r23-it-3-2",
+        "title": "DevOps - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective DevOps: DevOps lifecycle, Git source-code management, CI with Jenkins, continuous delivery with Docker, and Ansible/Kubernetes."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3206)."
+    },
+    {
+      "id": "r23-it-3-2-generative-ai",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Generative AI",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Generative AI",
+          "topics": [
+            "Historical overview of generative modelling; generative vs discriminative modelling",
+            "Importance of generative models in AI and machine learning",
+            "Types of generative models: GANs, VAEs, autoregressive and vector-quantized diffusion models",
+            "Probabilistic modelling, challenges, ethics, responsible AI and use cases"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Generative Models for Text",
+          "topics": [
+            "Language model basics and building blocks; transformer architecture, encoder and decoder",
+            "Attention mechanisms and text generation; BERT and GPT models",
+            "Prompt engineering and Reinforcement Learning from Human Feedback (RLHF)",
+            "Retrieval-augmented generation, multimodal LLMs and hallucination issues"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Generation of Images",
+          "topics": [
+            "Generative Adversarial Networks, the adversarial training process and Nash equilibrium",
+            "Variational autoencoders and encoder-decoder architectures",
+            "Stable diffusion models and transformer-based image generation; CLIP and Vision Transformers",
+            "DALL-E 2/3 and GPT-4V; mode collapse and stability issues"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Generation of Painting, Music and Play",
+          "topics": [
+            "Variants and types of GAN; Cyclic GAN for generating paintings",
+            "Neural style transfer",
+            "Music-generating RNNs and MuseGAN",
+            "Autonomous agents, the Deep Q algorithm and actor-critic networks"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Open-Source Models and Programming Frameworks",
+          "topics": [
+            "Training and fine-tuning generative models; GPT4All",
+            "Transfer learning, pretrained models and training vision models",
+            "Copilot and LangChain; programming LLMs",
+            "Open-source models such as Llama; deployment and Hugging Face"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "generative-ai-jntuk-r23-it-3-2",
+        "title": "Generative AI - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Generative AI: generative modelling, text generation with transformers, image generation with GANs & diffusion, open-source tools."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3207)."
+    },
+    {
+      "id": "r23-it-3-2-software-project-management",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Software Project Management",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Software Management and Economics",
+          "topics": [
+            "Conventional software management and the waterfall model",
+            "Evolution of software economics and pragmatic software cost estimation",
+            "Improving software economics: reducing product size, improving processes, teams and automation",
+            "Conventional vs modern principles of software management; transitioning to an iterative process"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Life-Cycle Phases and Artifacts",
+          "topics": [
+            "Engineering and production stages",
+            "Inception, elaboration, construction and transition phases",
+            "The artifact sets",
+            "Management, engineering and programmatic artifacts"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Architecture, Workflows and Planning",
+          "topics": [
+            "Model-based software architectures: management and technical perspectives",
+            "Workflows of the process: software process and iteration workflows",
+            "Checkpoints of the process: major and minor milestones and periodic status assessments",
+            "Iterative process planning: work breakdown structures, cost and schedule estimating, iteration planning"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Project Organization and Process Control",
+          "topics": [
+            "Project organizations and responsibilities: line-of-business and project organizations",
+            "Evolution of organizations",
+            "Process automation building blocks and the project environment",
+            "Project control and instrumentation: the seven core metrics, management and quality indicators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Agile Methodology and DevOps",
+          "topics": [
+            "Agile methodology; adapting to Scrum and patterns for adopting Scrum",
+            "Iterating towards agility",
+            "Fundamentals of DevOps: architecture, deployment and orchestration",
+            "DevOps delivery pipeline, ecosystem and adoption in projects"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-project-management-jntuk-r23-it-3-2",
+        "title": "Software Project Management - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Software Project Management: software economics, life-cycle phases & artifacts, planning, process control, Agile and DevOps."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3209)."
+    },
+    {
+      "id": "r23-it-3-2-mobile-adhoc-networks",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mobile Adhoc Networks",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Ad Hoc Wireless Networks",
+          "topics": [
+            "Cellular and ad hoc wireless networks; characteristics of MANETs",
+            "Applications of MANETs; issues and challenges",
+            "Ad hoc wireless internet",
+            "MAC protocols for ad hoc networks: issues, design goals and classification"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Routing and Transport Protocols",
+          "topics": [
+            "Issues in designing a routing protocol and classification of routing protocols",
+            "Topology-based versus position-based approaches",
+            "Transport layer: design goals and classification of solutions",
+            "TCP over ad hoc wireless networks and other transport-layer protocols"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Security in Ad Hoc Wireless Networks",
+          "topics": [
+            "Security requirements and challenges in security provisioning",
+            "Network security attacks and key management",
+            "Secure routing in ad hoc wireless networks",
+            "Cooperation in MANETs and intrusion detection systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Basics of Wireless Sensor Networks",
+          "topics": [
+            "The Mica mote; sensing and communication range and design issues",
+            "Energy consumption and clustering of sensors; applications",
+            "Data retrieval and classification of WSNs across MAC, routing and transport layers",
+            "High-level application-layer support and the dynamic nature of WSNs"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Security and Operating Systems in WSNs",
+          "topics": [
+            "Security and key management in WSNs; secure data aggregation",
+            "Sensor-mote hardware components",
+            "Sensor-network operating systems: TinyOS, SOS, RETOS and nesC",
+            "Dataflow languages (TinyGALS) and node-level simulators (NS-2 and TOSSIM)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mobile-adhoc-networks-jntuk-r23-it-3-2",
+        "title": "Mobile Adhoc Networks - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Mobile Adhoc Networks: MANET fundamentals & MAC, routing & transport protocols, ad-hoc security, WSN basics and WSN security."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3210)."
+    },
+    {
+      "id": "r23-it-3-2-natural-language-processing",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Natural Language Processing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Language Modelling",
+          "topics": [
+            "Origins and challenges of NLP",
+            "Language modelling: grammar-based and statistical language models",
+            "Regular expressions, finite-state automata and English morphology; transducers for lexicon and rules",
+            "Tokenization, detecting and correcting spelling errors and minimum edit distance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Word-Level Analysis",
+          "topics": [
+            "Unsmoothed N-grams, evaluating N-grams and smoothing",
+            "Interpolation and backoff; word classes",
+            "Part-of-speech tagging: rule-based, stochastic and transformation-based",
+            "Issues in POS tagging; hidden Markov and maximum entropy models"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Syntactic Analysis",
+          "topics": [
+            "Context-free grammars and grammar rules for English; treebanks and normal forms",
+            "Dependency grammar and syntactic parsing; ambiguity",
+            "Dynamic-programming parsing, shallow parsing and probabilistic CFG and CYK",
+            "Feature structures and unification of feature structures"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Semantics and Pragmatics",
+          "topics": [
+            "Requirements for representation; first-order logic and description logics",
+            "Syntax-driven semantic analysis and semantic attachments",
+            "Word senses and relations between senses; thematic roles and selectional restrictions",
+            "Word sense disambiguation and word similarity using thesaurus and distributional methods"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Discourse Analysis and Lexical Resources",
+          "topics": [
+            "Discourse segmentation, coherence and reference phenomena",
+            "Anaphora resolution using Hobbs and centering algorithms; coreference resolution",
+            "Resources: Porter stemmer, lemmatizer and Penn Treebank",
+            "Brill’s tagger, WordNet, PropBank, FrameNet, Brown Corpus and the British National Corpus"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "natural-language-processing-jntuk-r23-it-3-2",
+        "title": "Natural Language Processing - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Natural Language Processing: language modelling, word-level analysis, POS tagging, syntactic analysis, semantics and discourse."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3211)."
+    },
+    {
+      "id": "r23-it-3-2-distributed-operating-system",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Distributed Operating System",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Message Passing",
+          "topics": [
+            "Distributed computing systems, their evolution and models",
+            "Distributed operating systems and issues in designing them; Distributed Computing Environment (DCE)",
+            "Message passing: desirable features, synchronization and buffering",
+            "Multi-datagram messages, encoding/decoding, process addressing, failure handling and group communication"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Remote Procedure Calls",
+          "topics": [
+            "The RPC model and transparency of RPC; implementing the RPC mechanism",
+            "Stub generation, RPC messages and marshaling of arguments and results",
+            "Server management, parameter-passing and call semantics; communication protocols",
+            "Client-server binding, lightweight and heterogeneous RPC; Sun RPC case study"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Distributed Shared Memory and Synchronization",
+          "topics": [
+            "DSM architecture and design and implementation issues; granularity and shared-memory structure",
+            "Consistency models, replacement strategy and thrashing; heterogeneous DSM",
+            "Synchronization: clock synchronization and event ordering",
+            "Mutual exclusion, deadlock and election algorithms"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Resource and Process Management",
+          "topics": [
+            "Resource management and desirable features of a good global scheduling algorithm",
+            "Task assignment approach",
+            "Load-balancing and load-sharing approaches",
+            "Process management: process migration and threads"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Distributed File Systems",
+          "topics": [
+            "Desirable features of a good distributed file system",
+            "File models and file-accessing models; file-sharing semantics",
+            "File-caching schemes and file replication",
+            "Fault tolerance, atomic transactions and design principles"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "distributed-operating-system-jntuk-r23-it-3-2",
+        "title": "Distributed Operating System - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 elective Distributed Operating System: message passing, RPC, distributed shared memory, resource management and distributed file systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3212)."
+    },
+    {
+      "id": "r23-it-3-2-technical-paper-writing-and-ipr",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Technical Paper Writing & IPR",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction, Planning and Structuring",
+          "topics": [
+            "Introduction to writing technical reports; forming technical sentences and using transitions",
+            "Using tenses for technical writing",
+            "Planning the report and identifying readers; voice, formatting and structuring",
+            "Sections of a technical report and writing minutes of a meeting"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Drafting and Final Edits",
+          "topics": [
+            "The use of drafts; illustrations and graphics",
+            "Grammar, spelling and readability; writing in plain English",
+            "Jargon and final layout issues",
+            "Spelling, punctuation, grammar, padding, paragraphs and ambiguity"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Proofreading and Presenting Reports",
+          "topics": [
+            "Proofreading and writing summaries",
+            "Activities on summaries",
+            "Presenting final reports: printed presentation",
+            "Verbal presentation skills and an introduction to proposals"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Using a Word Processor",
+          "topics": [
+            "Adding, updating and deleting a table of contents; adding an index and creating an outline",
+            "Adding comments; tracking, viewing, accepting and rejecting changes",
+            "Working with footnotes and endnotes; inserting citations and bibliography",
+            "Comparing and combining documents; marking final, read-only and password protection; using macros"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Intellectual Property Rights",
+          "topics": [
+            "Nature of intellectual property: patents, designs, trade and copyright",
+            "Process of patenting and development",
+            "Technological research, innovation, patenting and development",
+            "International scenario and cooperation on intellectual property"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "technical-paper-writing-and-ipr-jntuk-r23-it-3-2",
+        "title": "Technical Paper Writing & IPR - R23 IT 3-2",
+        "meta_description": "SRKR R23 IT 3-2 audit course Technical Paper Writing & IPR: technical report writing, drafting & editing, proofreading, word processing and IPR."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "needs_verification",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+      },
+      "notes": "HELD as needs_verification (not published). Audit course / Mandatory Non-Credit (2-0-0-0, no credits) from SRKR R23 IT 3-2 PDF (B23AC3201, common to several branches). Per the project’s audit-course discipline, content-light non-credit/audit rows require an explicit publication decision before going public, so this is retained as a draft rather than published."
+    },
+    {
+      "id": "r23-it-3-1-object-oriented-analysis-and-design",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Object Oriented Analysis and Design",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Complexity",
+          "topics": [
+            "The structure of complex systems and the inherent complexity of software",
+            "Attributes of a complex system; organized and disorganized complexity",
+            "Bringing order to chaos; designing complex systems",
+            "Case study: satellite-based navigation system architecture"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Introduction to UML and Structural Modeling",
+          "topics": [
+            "Importance and principles of modeling; object-oriented modeling",
+            "Conceptual model of the UML, architecture and the software development life cycle",
+            "Basic structural modeling: classes, relationships, common mechanisms and diagrams",
+            "Case study: traffic management control system"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Class and Object Diagrams",
+          "topics": [
+            "Terms, concepts and modeling techniques for class and object diagrams",
+            "Advanced structural modeling: advanced classes and relationships",
+            "Interfaces, types and roles; packages",
+            "Case study: cryptanalysis"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Basic Behavioral Modeling",
+          "topics": [
+            "Interactions and interaction diagrams",
+            "Use cases and use-case diagrams",
+            "Activity diagrams",
+            "Case study: vacation tracking system"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Advanced Behavioral and Architectural Modeling",
+          "topics": [
+            "Events and signals, state machines, processes and threads",
+            "Statechart diagrams",
+            "Architectural modeling: component and deployment diagrams",
+            "Case study: weather forecasting"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "object-oriented-analysis-and-design-jntuk-r23-it-3-1",
+        "title": "Object Oriented Analysis and Design - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 elective Object Oriented Analysis and Design: complexity, UML modelling, class & object diagrams, behavioral and architectural modelling."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3104)."
+    },
+    {
+      "id": "r23-it-3-1-cyber-security",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Cyber Security",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Cyber Threats and Attacks",
+          "topics": [
+            "Types of cyber threats; social engineering and defending against deception",
+            "Types of cyber attacks; wireless, mobile and application attacks",
+            "Securing networks: IP, ICMP, TCP/UDP vulnerabilities; ARP, DNS and DHCP attacks; HTTP exploits, SQL injection and cross-site scripting",
+            "Wireless LAN threats and security; network security infrastructure and services"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Defense-in-Depth",
+          "topics": [
+            "Windows OS vulnerabilities, architecture, configuration and security",
+            "Operating-system security: patch management, endpoint security, host encryption and boot integrity",
+            "Endpoint and malware protection; host-based firewalls and intrusion detection",
+            "The cyber security cube and CIA triad; policies, standards and network hardening"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Access Control and AAA",
+          "topics": [
+            "Wireless, mobile, embedded and IoT device security",
+            "Access control types; identity management, authentication and authorization",
+            "Zero-trust security, Network Access Control and account management; AAA usage and operation",
+            "Access control lists and configuration; firewalls and zone-based policy firewalls"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Cloud Security, IT Security and Governance",
+          "topics": [
+            "Cloud security domains: infrastructure, application and data security; protecting virtual machines",
+            "Security monitoring, security data and logs; evaluating alerts",
+            "Governance, security policies, ethics and cyber law",
+            "IT security management frameworks (ISO 27000, CIS controls); network security testing and penetration testing"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "CVSS, Risk and Incident Response",
+          "topics": [
+            "Threat intelligence; network and server profiling and anomaly detection",
+            "Common Vulnerability Scoring System (CVSS); secure device management",
+            "Risk management and risk assessment; security controls",
+            "Evidence handling and attack attribution; the Cyber Kill Chain, the Diamond Model, incident response and disaster recovery"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cyber-security-jntuk-r23-it-3-1",
+        "title": "Cyber Security - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 elective Cyber Security: threats & attacks, defense-in-depth, access control & AAA, cloud security & governance, and incident response."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3105)."
+    },
+    {
+      "id": "r23-it-3-1-artificial-intelligence",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Artificial Intelligence",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction and Intelligent Agents",
+          "topics": [
+            "Introduction, history and foundations of AI; intelligent systems",
+            "Agents and environments; the concept of rationality and the nature of environments",
+            "Structure of agents; problem-solving agents and problem formulation",
+            "Applications; tic-tac-toe game playing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Problem Solving and Game Playing",
+          "topics": [
+            "State-space search and control strategies; general problem solving",
+            "Characteristics of problems; exhaustive and heuristic search; iterative deepening A*; constraint satisfaction",
+            "Problem reduction",
+            "Game playing, alpha-beta pruning and two-player perfect-information games"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Logic and Uncertainty",
+          "topics": [
+            "Propositional calculus and propositional logic",
+            "Natural deduction and axiomatic systems; semantic tableau and resolution refutation",
+            "Predicate logic",
+            "Uncertainty; fuzzy logic, membership functions and fuzzy set operations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Knowledge Representation",
+          "topics": [
+            "Approaches to knowledge representation; semantic networks and extended semantic networks",
+            "Knowledge representation using frames",
+            "Advanced techniques: conceptual dependency theory and script structure",
+            "Reasoning under uncertainty; probability, Bayes’ theorem and Dempster-Shafer theory"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Planning and Expert Systems",
+          "topics": [
+            "Components of a planning system; goal-stack planning",
+            "Non-linear planning with constraint posting; hierarchical and reactive planning",
+            "Expert systems: phases in building, architecture, knowledge acquisition, meta-knowledge and heuristics",
+            "Typical expert systems (MYCIN, DART, XCON) and expert-system shells"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "artificial-intelligence-jntuk-r23-it-3-1",
+        "title": "Artificial Intelligence - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 elective AI: intelligent agents, search & game playing, logic & fuzzy sets, knowledge representation, planning and expert systems."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3106)."
+    },
+    {
+      "id": "r23-it-3-1-microprocessors-and-microcontrollers",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Microprocessors & Microcontrollers",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to the 8085 Microprocessor",
+          "topics": [
+            "Internal architecture and functional/signal description of the 8085",
+            "Instruction set",
+            "Addressing modes",
+            "Programming in 8085"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Programming Techniques",
+          "topics": [
+            "Timing diagrams",
+            "Counters and delays",
+            "Stacks and subroutines",
+            "Interrupts in the 8085"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Interfacing with the 8085",
+          "topics": [
+            "Memory structure and requirements; basic memory interfacing and address decoding",
+            "Interfacing circuits (2732 EPROM, read/write memory)",
+            "Parallel I/O interface 8255 and timer interface 8253/54",
+            "Programmable interrupt controller 8259A and its interrupt operation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "The 8086 Microprocessor and Programming",
+          "topics": [
+            "The 8086 microprocessor architecture and functional/signal description",
+            "Segmented memory",
+            "Maximum and minimum mode of the 8086",
+            "Instruction set and addressing modes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Introduction to Microcontrollers",
+          "topics": [
+            "Comparison between microprocessors and microcontrollers",
+            "8051 hardware: block diagram and oscillator clock",
+            "8051 programming model: program counter, data pointer, CPU registers, flags and program status word",
+            "Internal RAM and ROM, special function registers, stack and stack pointer"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-jntuk-r23-it-3-1",
+        "title": "Microprocessors & Microcontrollers - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 elective Microprocessors & Microcontrollers: 8085 architecture & programming, interfacing, the 8086, and 8051 microcontroller basics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option — not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3107)."
+    },
+    {
+      "id": "r23-it-3-1-advanced-java-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Advanced Java Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-java-lab-jntuk-r23-it-3-1",
+        "title": "Advanced Java Lab - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 Advanced Java Lab: JDBC CRUD, servlets & sessions, JSP & JSTL, and Spring MVC/JDBC/AOP/Security experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3110): JDBC CRUD using Statement, PreparedStatement and CallableStatement; scrollable and updatable ResultSets; servlets, deployment descriptors and session management with cookies, HttpSession and URL rewriting; JSP and JSTL (core, format, function and SQL tags) with database access; Spring MVC, Spring JDBC template and transactions, Spring AOP logging and Spring Security authentication."
+    },
+    {
+      "id": "r23-it-3-1-computer-networks-lab",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Computer Networks Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-networks-lab-jntuk-r23-it-3-1",
+        "title": "Computer Networks Lab - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 Computer Networks Lab: error detection, sliding-window protocols, routing (RIP/OSPF), VLANs, Wireshark, Nmap and NS2 experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3111): error detection with checksum and CRC; sliding-window protocols (Go-Back-N and Selective Repeat); distance-vector routing; switch and router configuration, static and dynamic routing (RIP v1/v2, OSPF), VLANs and inter-VLAN routing on Packet Tracer; leaky-bucket congestion control; packet capture with Wireshark; OS detection with Nmap; and NS2 simulation of packet drops and throughput."
+    },
+    {
+      "id": "r23-it-3-1-full-stack-development-i",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Full Stack Development-I",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "full-stack-development-i-jntuk-r23-it-3-1",
+        "title": "Full Stack Development-I - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 Full Stack Development-I: HTML, CSS, HTML5 and JavaScript practicals covering forms, selectors, the box model, objects and validation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Skill Enhancement Course (0-1-2-2), a hands-on practical. Module list from SRKR R23 IT 3-1 PDF (B23IT3112): HTML lists, links and images; tables, forms and frames; HTML5 and cascading style sheets with types of CSS; selector forms; CSS color, background, font, text and the box model; applying internal and external JavaScript with I/O and type conversion; predefined and user-defined JavaScript objects; conditional statements and loops; and JavaScript functions, events and form validation."
+    },
+    {
+      "id": "r23-it-3-1-user-interface-design-using-flutter",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "User Interface Design Using Flutter",
+      "category": "EngineeringScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "user-interface-design-using-flutter-jntuk-r23-it-3-1",
+        "title": "User Interface Design Using Flutter - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 UI Design Using Flutter: Flutter/Dart widgets, layouts, responsive UI, navigation, state management, forms, animations and REST data."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "verified",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "Tinkering Lab / Engineering Science (0-0-2-1). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3113): install Flutter and Dart SDK and Dart basics; Flutter widgets (Text, Image, Container) and layouts (Row, Column, Stack); responsive UI with media queries; navigation with Navigator and named routes; stateful and stateless widgets with state management (setState, Provider); custom widgets and themes; forms with validation and error handling; animations; fetching and displaying data from a REST API; and unit testing and debugging of UI components."
+    },
+    {
+      "id": "r23-it-3-1-evaluation-of-community-service-internship",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Evaluation of Community Service Internship",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-community-service-internship-jntuk-r23-it-3-1",
+        "title": "Evaluation of Community Service Internship - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 Community Service Internship (evaluation): summer community-service internship assessed as a project row; held pending review."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "needs_verification",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "HELD as needs_verification (not published). Evaluation of Community Service Internship (B23IT3114, PR, 2 credits) from SRKR R23 IT 3-1 PDF -- a content-less activity/evaluation row with no gradeable syllabus, so it is retained as a draft rather than published, consistent with the project’s treatment of internship/project rows."
+    },
+    {
+      "id": "r23-it-3-1-employability-skills",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Employability Skills",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Vocabulary and Grammar",
+          "topics": [
+            "Synonyms, antonyms and frequently confused words",
+            "Foreign phrases, idioms and phrasal verbs, collocations",
+            "Spotting errors",
+            "Sentence improvement"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Quantitative Aptitude",
+          "topics": [
+            "Time and work; pipes and cisterns",
+            "Time and distance; problems on boats and streams",
+            "Percentages; profit and loss",
+            "Simple and compound interest; discount problems"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Logical Reasoning",
+          "topics": [
+            "Analogies and odd one out",
+            "Number, letter and alphanumeric series",
+            "Order and ranking, directions",
+            "Data sufficiency and syllogisms"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Verbal Ability",
+          "topics": [
+            "Sentence completion and sentence equivalence",
+            "Cloze test",
+            "Reading comprehension",
+            "Para jumbles"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Number System",
+          "topics": [
+            "Divisibility tests",
+            "Finding remainders in various cases",
+            "Problems related to numbers",
+            "Methods to find LCM and HCF"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "employability-skills-jntuk-r23-it-3-1",
+        "title": "Employability Skills - R23 IT 3-1",
+        "meta_description": "SRKR R23 IT 3-1 Employability Skills (non-credit): vocabulary, grammar, quantitative aptitude, reasoning and verbal ability for competitive exams."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
+        "retrieved_date": "2026-07-08",
+        "status": "needs_verification",
+        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+      },
+      "notes": "HELD as needs_verification (not published). Employability Skills (B23MC3101, Mandatory Non-Credit, no credits) from SRKR R23 IT 3-1 PDF (common to several branches). Per the project’s audit/non-credit discipline, non-credit rows require an explicit publication decision before going public, so this is retained as a draft."
     }
   ]
 }
