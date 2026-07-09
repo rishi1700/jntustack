@@ -142,7 +142,13 @@
       },
       "type": "theory",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand phases in building a Data Warehouse",
+        "Understand the need and significance of preprocessing strategies",
+        "Understand the need and significance of Similarity and dissimilarity strategies",
+        "Analyze and evaluate performance of algorithms for Association Rules.",
+        "Analyze Classification and Clustering algorithms"
+      ],
       "resources": {
         "lecture_notes_pdf": "https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/",
         "previous_question_papers_pdf": null,
@@ -264,7 +270,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Build skills in solving mathematical problems",
+        "Comprehend mathematical principles and logic",
+        "Demonstrate knowledge of mathematical modeling and proficiency in using mathematical software",
+        "Manipulate and analyze data numerically and/or graphically appropriate software",
+        "Communicate effectively mathematical ideas/results verbally or in writing"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -354,7 +366,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society, nature)",
+        "Apply what they have learnt to their own self in different day-to-day settings in real life",
+        "Relate human values with human relationship and human society",
+        "Justify the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -533,7 +552,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze the complexity of algorithms and apply asymptotic notations",
+        "Apply non-linear data structures and their operations",
+        "Understand and apply greedy, divide and conquer algorithms",
+        "Develop dynamic programming algorithms for various real-time applications",
+        "Illustrate Back Tracking algorithms for various applications"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -623,7 +648,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Classify object oriented programming and procedural programming",
+        "Apply Java features such as composition of objects, operator overloads, dynamic memory allocation, inheritance and polymorphism, file I/O, exception handling",
+        "Build Java classes using appropriate encapsulation and design principles",
+        "Apply object oriented or non-object oriented techniques to solve bigger computing problems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -662,7 +692,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand and apply data structure operations",
+        "Understand and apply non-linear data structure operations",
+        "Apply Greedy, divide and conquer algorithms",
+        "Develop dynamic programming algorithms for various real-time applications",
+        "Illustrate and apply backtracking algorithms, further able to understand non-deterministic algorithms"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -701,7 +737,14 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify classes, objects, members of a class and the relationship among them needed for a specific problem",
+        "Implement programs to distinguish different forms of inheritance",
+        "Create packages and to reuse them",
+        "Develop programs using Exception Handling mechanism",
+        "Develop multithreaded application using synchronization concept",
+        "Design GUI based applications using Swings and AWT"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -791,7 +834,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Write, Test and Debug Python Programs",
+        "Use Conditionals and Loops for Python Programs",
+        "Use functions and represent Compound data using Lists, Tuples and Dictionaries",
+        "Use various applications using python"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -877,7 +925,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Grasp multi disciplinary nature of environmental studies and various renewable and non-renewable resources",
+        "Understand flow and bio-geo-chemical cycles and ecological pyramids",
+        "Understand various causes of pollution and solid waste management and related preventive measures",
+        "Understand the rainwater harvesting, watershed management, ozone layer depletion and waste land reclamation",
+        "Illustrate the causes of population explosion, value education and welfare programmes"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -967,7 +1021,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to Managerial Economics, financial accounting and management",
+        "Understand the fundamentals of Economics viz., Demand, Production, cost, revenue and markets",
+        "Apply the Concept of Production cost and revenues for effective Business decision",
+        "Analyze how to invest their capital and maximize returns",
+        "Evaluate the capital budgeting techniques",
+        "Develop the accounting statements and evaluate the financial performance of business entity"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1056,7 +1117,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Classify the concepts of data science and its importance",
+        "Interpret the association of characteristics and through correlation and regression tools",
+        "Apply discrete and continuous probability distributions",
+        "Design the components of a classical hypothesis test",
+        "Infer the statistical inferential methods based on small and large sampling tests"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1146,7 +1213,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe various generations of Operating System and functions of Operating System",
+        "Describe the concept of program, process and thread and analyze various CPU Scheduling Algorithms and compare their performance",
+        "Solve Inter Process Communication problems using Mathematical Equations by various methods",
+        "Compare various Memory Management Schemes especially paging and Segmentation in Operating System and apply various Page Replacement Techniques",
+        "Outline File Systems in Operating System like UNIX/Linux and Windows"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1236,7 +1309,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe a relational database and object-oriented database",
+        "Create, maintain and manipulate a relational database using SQL",
+        "Describe ER model and normalization for database design",
+        "Examine issues in data storage and query processing and can formulate appropriate solution",
+        "Outline the role and issues in management of data such as efficiency, privacy, security, ethical responsibility, and strategic advantage"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1326,7 +1405,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Ability to transform an Object-Oriented Design into high quality, executable code",
+        "Skills to design, implement, and execute test cases at the Unit and Integration level",
+        "Compare conventional and agile software methods"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1365,7 +1448,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Use Unix utilities and perform basic shell control of the utilities",
+        "Use the Unix file system and file access control",
+        "Use of an operating system to develop software",
+        "Use Linux environment efficiently",
+        "Solve problems using bash for shell scripting"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1404,7 +1493,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Utilize SQL to execute queries for creating database and performing data manipulation operations",
+        "Examine integrity constraints to build efficient databases",
+        "Apply Queries using Advanced Concepts of SQL",
+        "Build PL/SQL programs including stored procedures, functions, cursors and triggers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1443,7 +1537,12 @@
       },
       "type": "theory_cum_lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze a web page and identify its elements and attributes",
+        "Demonstrate the important HTML tags for designing static pages and separate design from content using Cascading Style Sheets",
+        "Implement MVC and responsive design to scale well across PC, tablet and Mobile Phone",
+        "Create web pages using HTML and Cascading Style Sheets"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1532,7 +1631,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to design thinking",
+        "Explain the fundamentals of Design Thinking and innovation",
+        "Apply the design thinking techniques for solving problems in various sectors",
+        "Analyse to work in a multidisciplinary environment",
+        "Evaluate the value of creativity"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3581,7 +3686,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate various service types, delivery models and technologies of a cloud computing environment",
+        "Distinguish the services based on virtual machines and containers in the cloud offerings",
+        "Assess the challenges associated with a cloud-based application",
+        "Discuss advanced cloud concepts such as serverless computing and cloud simulation",
+        "Examine various programming paradigms suitable to solve real world and scientific problems using cloud services"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
