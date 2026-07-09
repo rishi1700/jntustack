@@ -70,7 +70,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Build skills in solving mathematical problems.",
+        "Comprehend mathematical principles and logic.",
+        "Demonstrate knowledge of mathematical modeling and proficiency in using mathematical software.",
+        "Manipulate and analyze data numerically and/or graphically appropriate Software.",
+        "Communicate effectively mathematical ideas/results verbally or in writing."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -160,7 +166,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Apply what they have learnt to their own self in different day-to-day settings in real life",
+        "Relate human values with human relationship and human society.",
+        "Justify the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -688,7 +701,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Grasp the multi disciplinary nature of environmental studies and various renewable and non-renewable resources.",
+        "Understand flow and bio-geo-chemical cycles and ecological pyramids.",
+        "Understand various causes of pollution and solid waste management and related preventive measures.",
+        "Understand the rainwater harvesting, watershed management, ozone layer depletion and waste land reclamation.",
+        "Illustrate the causes of population explosion, value education and welfare programmes."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -778,7 +797,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "State and formulate the optimization problem, without and with constraints, by using design variables from an engineering design problem.",
+        "Apply classical optimization techniques to minimize or maximize a multi-variable objective function, without or with constraints, and arrive at an optimal solution.",
+        "Apply and Solve transportation and assignment problem by using Linear programming Simplex method.",
+        "Solve decision theory problems through the application of game theory Apply the replacement and queuing models to increase the efficiency of the system",
+        "Model the project management problems through CPM and PERT"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -868,7 +893,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Classify the concepts of data science and its importance.",
+        "Interpret the association of characteristics and through correlation and regression tools.",
+        "Apply discrete and continuous probability distributions.",
+        "Design the components of a classical hypothesis test.",
+        "Infer the statistical inferential methods based on small and large sampling tests."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1396,7 +1427,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to design thinking.",
+        "Explain the fundamentals of Design Thinking and innovation.",
+        "Apply the design thinking techniques for solving problems in various sectors.",
+        "Analyse to work in a multidisciplinary environment.",
+        "Evaluate the value of creativity."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1878,7 +1915,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Interpret the fundamental concepts and challenges associated with cloud computing.",
+        "Analyze the economic, financial, and technological factors influencing the adoption of cloud solutions in organizations.",
+        "Assess virtualization techniques and resource management strategies for deploying cloud-based applications.",
+        "Evaluate organizational requirements related to scalability, capacity planning, and security in cloud environments.",
+        "Develop real-time cloud applications using leading platforms such as AWS, Google Cloud, and Microsoft Azure."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1968,7 +2011,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the mathematical background required for cryptography.",
+        "Analyze the algorithms on security problems",
+        "Analyze symmetric and asymmetric approaches for cryptography.",
+        "Understand authentication mechanisms for internet security.",
+        "Understand the principles of Internet security protocols for Internet applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2058,7 +2107,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain Core Machine Learning concepts, types, challenges and key principles.",
+        "Apply regression techniques for predictive modeling.",
+        "Utilize classification algorithms to measure its performance.",
+        "Apply ensemble learning and clustering techniques to measure similarities.",
+        "Make use of reinforcement learning and Artificial neural network techniques to solve real world problems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2097,7 +2152,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate various service types, delivery models and technologies of a cloud computing environment.",
+        "Distinguish the services based on virtual machines and containers in the cloud offerings.",
+        "Assess the challenges associated with a cloud-based application.",
+        "Discuss advanced cloud concepts such as serverless computing and cloud simulation.",
+        "Examine various programming paradigms suitable to solve real world and scientific problems using cloud services"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2136,7 +2197,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply preprocessing techniques on custom data sets.",
+        "Apply dimensional reduction techniques on custom datasets",
+        "Develop, evaluate and save the different clustering & classification models",
+        "Develop regression models, and reduce the regression model complexity using Lasso and Ridge Regularization",
+        "Develop neural networks for structured, and unstructured data classification and regression"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2226,7 +2293,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Interpret the essence of key soft skills such as creativity & problem solving, emotional intelligence, leadership qualities, etc.",
+        "Outline interview essentials for graduate-job prospects.",
+        "Apply presentation skills in academic and professional settings.",
+        "Demonstrate knowledge about domain specific industry and the prospective workplace."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2316,7 +2388,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify various bugs and correcting them after knowing the consequences of the bug.",
+        "Illustrate the functional testing using Transaction flow and domain testing",
+        "Use of program's control flow as a paths and logic-based testing.",
+        "Understand the State Graphs and Transition testing.",
+        "Analyze the needs of software test automation and management using the latest tools."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2406,7 +2484,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe how AR systems work and list the applications of AR.",
+        "Understand the software architectures of AR",
+        "Understand the Visual perception and rendering in VR",
+        "Understand the interaction, auditory perception and rendering in VR"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2496,7 +2579,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify components of Devops environment",
+        "Describe Software development models and architectures of DevOps",
+        "Apply different project management, integration, testing and code deployment tool.",
+        "Investigate different DevOps Software development models.",
+        "Assess, Collaborate and adopt various Devops in real-time projects"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2586,7 +2675,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the basic concepts of generative models in AI and use cases",
+        "Illustrate the various Generative Models for Text and prompt designing.",
+        "Use of Generative Models For images",
+        "Discuss various generative models for Painting, Music, and Play",
+        "Apply various Open-Source Models and Programming Frameworks"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2676,7 +2771,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the process to be followed in the software development life-cycle models",
+        "Apply the concepts of project management & planning",
+        "Implement the project plans through managing people, communications and change",
+        "Conduct activities necessary to successfully complete and close the Software projects.",
+        "Implement communication, modeling, and construction & deployment practices in software development"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2766,7 +2867,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Discuss the characteristics, applications, and challenges of MANETs and design of MAC protocols.",
+        "Demonstrate the application of different routing protocols in various ad-hoc network topologies and scenarios.",
+        "Explain the different secure routing protocols used to protect against attacks in ad hoc networks.",
+        "Demonstrate the effects of different factors on the sensing and communication range by applying them to real-world scenarios.",
+        "Describe the key management techniques used in WSNs and their role in securing communication in the network."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2856,7 +2963,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate a given text with basic Language features",
+        "Execute an innovative application using NLP components",
+        "Explain a rule based system to tackle morphology/syntax of a language",
+        "Design a tag set to be used for statistical processing for real-time applications",
+        "Execute different statistical approaches for different types of NLP applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2946,7 +3059,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the ways of communication in a distributed environment.",
+        "Illustrate issues related to communication among processors in distributed systems.",
+        "Describe working of various shared memory systems.",
+        "Illustrate issues and ways related to resource allocation.",
+        "Classify file system design and implementation for distributed systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3036,7 +3155,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Construct grammatically sound and concise technical write-ups.",
+        "Prepare the outline and structure of a technical paper with essential sections.",
+        "Develop a project proposal and dissertation framework aligned with academic conventions.",
+        "Use a word processor effectively for document formatting, citations, and version control.",
+        "Identify appropriate IPR mechanisms for protecting various types of intellectual creations."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3126,7 +3251,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Ability to find solutions to the complex problems using object oriented",
+        "Represent classes, responsibilities and states using UML notation",
+        "Identify classes and responsibilities of the problem domain",
+        "Develop robust object-based models for Systems",
+        "Inculcate necessary skills to handle complexity in software design"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3216,7 +3347,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain various threats, mitigate common attacks, apply security services.",
+        "Use a layered defense-in-depth cyber security strategy.",
+        "Summarize wireless, mobile, IoT security issues, along with usage and operation of AAA services.",
+        "Determine cloud and data security technologies, evaluate alerts, create policy documents that cover governance and compliance. Test and assess network security.",
+        "Explain network and systems vulnerabilities, risk management plan, forensic investigation, disaster recovery methods."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3306,7 +3443,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the basic foundations and applications of AI",
+        "Apply the problem-solving strategies to generate best AI solutions using state space search for real time problems",
+        "Use propositional, predicate & Fuzzy logic concepts to process knowledge Base",
+        "Illustrate Knowledge representation and uncertainty techniques to represent real time knowledge base problems",
+        "Classify various planning mechanisms, expert systems and its applications"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3396,7 +3539,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the knowledge of 8085 architecture and instruction set.",
+        "Use the knowledge of microprocessor for counter designing and interrupts signaling.",
+        "Design interfacing circuits between 8085 with different peripheral and memory components.",
+        "Apply the knowledge of 8086 architecture and instruction set.",
+        "Illustrate the basic concepts of 8051 Microcontroller."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3435,7 +3584,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze JDBC operations to perform CRUD and transaction Management efficiently",
+        "Examine servlet request handling and session management Techniques to understand their role in web applications",
+        "Differentiate JSP elements and JSTL tags to design dynamic web pages with Database connectivity.",
+        "Integrate Spring MVC features with JDBC Template and transactions Management to Build Scalable applications"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3474,7 +3628,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze data link layer services. Functions like error detection",
+        "Understand sliding window protocol mechanisms",
+        "Analyze Shortest distance algorithms for given topology",
+        "Understand Work on various network simulators"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3513,7 +3672,12 @@
       },
       "type": "theory_cum_lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply HTML and CSS concepts to construct static web pages",
+        "Apply JavaScript to implement form validation on a dynamic web page",
+        "Apply Node.js concepts to build and run a basic web server",
+        "Apply JavaScript functions and event handling techniques to create interactive web pages"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3552,7 +3716,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Develop mobile user interfaces using Flutter widgets like Text, Image, Container, Row, and Column.",
+        "Implement responsive layouts using Flutter's layout widgets and media queries to support multiple screen sizes.",
+        "Use Flutter's navigation system to create multi-screen applications with both direct and named route navigation.",
+        "Apply appropriate widget types (stateless or stateful) in Flutter applications to manage UI updates based on user interactions.",
+        "Apply navigation techniques and basic state management using set State and named routes in Flutter applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3681,7 +3851,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Match various vocabulary items that appear in competitive examinations with their contextual meanings accurately.",
+        "Identify grammatical and ungrammatical usage of English language in all the grammar related questions asked in various competitive examinations like CAT, GRE, IBPS.",
+        "Infer meaning from complex texts that are set as questions in different competitive examinations held for higher education or employment",
+        "Find solutions to complex arithmetic problems set as questions in the competitive examinations held for employment or higher education",
+        "Apply logical thinking abilities in solving the problems of reasoning that appear in the examinations like CAT, GRE, GATE, IBPS."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,

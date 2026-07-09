@@ -70,7 +70,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Evaluate the approximate roots of polynomial and transcendental equations by different algorithms. Apply Newton's forward & backward interpolation and Lagrange's formulae for equal and unequal intervals",
+        "Apply numerical integral techniques to different Engineering problems. Apply different algorithms for approximating the solutions of ordinary differential equations with initial conditions to its analytical computations",
+        "Apply the Laplace transform for solving differential equations",
+        "Find or compute the Fourier series of periodic signals",
+        "Know and be able to apply integral expressions for the forwards and inverse Fourier transform to a range of non-periodic waveforms"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -160,7 +166,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basic concepts of thermodynamics and can distinguish the forms of heat and work.",
+        "Apply first of law of thermodynamics to flow and non-flow processes of thermodynamic systems",
+        "Apply the second law of thermodynamics to solve second law parameters of thermal systems",
+        "Analyze the non-reactive mixture of gases, t-s and h-s diagrams, Mollier charts, and Phase Transformations using steam tables data hand book.",
+        "Compute the performance parameters of various thermodynamic cycles."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -250,7 +262,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts of basic structural members subjected to uni-axial and bi-axial loads.",
+        "Construct the shear force and bending moment diagrams along the length of beam.",
+        "Compute the stresses of a member subjected to flexural and torsional loads.",
+        "Determine the transverse shear stresses and deflections of beams due to bending loads.",
+        "Estimate the stresses in pressure vessels and analyze the columns for buckling"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -340,7 +358,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the crystalline structure of different metals",
+        "Recognize the stability of phases in different alloy systems",
+        "Explain the behavior of ferrous and non-ferrous metals and alloys and their application in different domains.",
+        "Study the heat treatment and age hardening process.",
+        "Identify the properties and applications of ceramic, composites and other advanced methods."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -430,7 +454,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Relate human values with human relationship and human society.",
+        "Illustrate the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -520,7 +550,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "The necessity of resources, their exploitation and sustainable management",
+        "The interactions of human and ecosystems and their role in the food web in the natural world and the global biodiversity, threats to biodiversity and its conservation.",
+        "Environmental problems like pollution, disasters and possible solutions.",
+        "The importance of environmental decision making in organizations through understanding the environmental law and environmental audits.",
+        "Environmental issues like over population, human health etc related to local, regional and global levels."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -559,7 +595,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Estimate the behaviour of various materials under different loading.",
+        "Calculate the hardness of different materials.",
+        "Evaluate the mechanical properties of materials by conducting various tests.",
+        "Identify the material by observing the microstructure.",
+        "Evaluate hardness of treated and untreated steels."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -598,7 +640,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the conventional representations of materials and machine components.",
+        "Model riveted, welded and key joints using CAD system.",
+        "Create solid models and sectional views of machine components.",
+        "Assemble the solid models of machine parts.",
+        "Generate part drawings from assembly."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -637,7 +685,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand Python programming Constructs, Syntax, and Semantics.",
+        "Develop Applications using Python Libraries.",
+        "Implement Different Data Structures, Web Scrapping and Database programming using Python.",
+        "Improve individual / teamwork skills, communication & report writing skills with ethical values"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -676,7 +729,13 @@
       },
       "type": "theory_cum_lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Comprehend Microcontroller-Transducers Interface techniques.",
+        "Identify the programming concepts of IOT.",
+        "Develop real time applications using Internet of Things.",
+        "Demonstrate the integration of sensors with IOT.",
+        "Adapt effective Communication, presentation and report writing skills."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -766,7 +825,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply Cauchy-Riemann equations to complex functions in order to determine whether a given continuous function is analytic.",
+        "Make use of Cauchy residue theorem to evaluate certain integrals",
+        "Infer the statistical inferential methods based on small and large sample tests",
+        "Find the differentiation and integration of complex functions used in engineering problems",
+        "Design the components of a classical hypothesis test."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -856,7 +921,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Recognize the patterns and core boxes for metal casting processes.",
+        "Understand the different welding processes.",
+        "Explain the different types of bulk forming processes.",
+        "Understand sheet metal forming processes.",
+        "Differentiate different types of powder metallurgy processes."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -946,7 +1017,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the fundamentals of fluid mechanics and summarize the properties of fluid flows.",
+        "Calculate the properties of fluids in static and dynamic conditions.",
+        "Apply the boundary layer theory to determine flow separation in fluid flow systems.",
+        "Solve the hydrodynamic forces of jet on vanes in different positions and turbine performance parameters.",
+        "Distinguishes the performance parameters of turbines and pumps."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1036,7 +1113,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand different mechanisms and their inversions.",
+        "Analyze velocity and acceleration of different links in a mechanism.",
+        "Apply the gear kinematics in various machines and Gyroscopic principles in various vehicles.",
+        "Evaluate unbalance mass in rotating machines and draw various cam profiles.",
+        "Analyze vibrations of single degree freedom systems and turning moment diagrams of various engines."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1126,7 +1209,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Design the key factors and techniques for optimizing and maintaining plant layouts.",
+        "Demonstrate various work study techniques and evaluate the principles of ergonomics and tools.",
+        "Investigate statistical quality control methods and value the concepts of total quality management.",
+        "Investigate the scope and nature of financial management techniques.",
+        "Integrate human resource management, personnel management, and industrial relations concepts and functions."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1165,7 +1254,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the devices used for measuring flow.",
+        "Compute major losses in pipes.",
+        "Illustrate the operating parameters of turbines.",
+        "Explain the working of different types of pumps.",
+        "Explain the devices used for measuring flow."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1204,7 +1299,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Make moulds for sand casting.",
+        "Fabricate different types of components using various manufacturing techniques.",
+        "Adapt conventional manufacturing methods.",
+        "Develop Different Weld joints."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1294,7 +1394,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply fundamental design components, principles, and new materials to create and improve design projects.",
+        "Apply the design thinking process to develop and present innovative product solutions.",
+        "Analyze the relationship between creativity and innovation, evaluate their roles in organizations, and develop strategic plans for transforming creative ideas into innovative solutions.",
+        "Analyze to work in a multidisciplinary environment.",
+        "Apply design thinking principles to address business challenges, develop and test business models and prototypes, and evaluate the value of creativity."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1333,7 +1439,12 @@
       },
       "type": "theory_cum_lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basics and fundamentals related to Finite Element Method.",
+        "Comprehend the ANSYS utilities to solve the engineering problems.",
+        "Perform the static structural analysis in 1D, 2D and 3D using ANSYS work bench.",
+        "Analyze the mode shapes of structures and machine elements."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1457,7 +1568,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the principles of metal cutting, chip formation, tool nomenclature, and tool life, and demonstrate basic lathe operations.",
+        "Identify the construction, working principles, specifications, and operations of shaping, slotting, planning, drilling, and boring machines, including their key components and mechanisms.",
+        "Operate drilling, boring, and milling machines to perform machining processes, and demonstrate the ability to produce keyways and gears using milling machines by applying indexing mechanisms.",
+        "Select suitable finishing processes, grinding wheels, and apply concepts of limits, fits, and gauge design for quality control and dimensional accuracy.",
+        "Apply suitable instruments for angular, surface roughness, and optical measurements, and interpret the measurement data for quality inspection of components."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1550,7 +1667,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Discuss the fundamental concepts of IC engines and combustion phenomenon.",
+        "Describe the functioning of a vapour power cycle, boilers and draught systems.",
+        "Apply thermodynamic principles to find the performance parameters of steam nozzles and steam condensers.",
+        "Determine the power output from steam and gas turbines.",
+        "Demonstrate the working of different compressors and their comparisons"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1641,7 +1764,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply various theories of failure to the mechanical systems under static and dynamic loading.",
+        "Estimate the strength of joints subjected to various types of loads.",
+        "Design the shafts and couplings for transmitting the power.",
+        "Design the gears and springs for various applications of engineering.",
+        "Select suitable bearings under various loading conditions."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1731,7 +1860,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the fundamental concepts and principles of design for manual assembly.",
+        "Identify and explain the basic design procedures involved in various machining processes.",
+        "Illustrate the design considerations in metal casting, extrusion, and sheet metal forming processes.",
+        "Interpret the key design aspects of various metal joining processes, including welding and mechanical fastening.",
+        "Understand the core design concepts related to assembly automation systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1817,7 +1952,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the latest trends in engine technology.",
+        "Describe the need of advanced combustion technologies and its impact on reducing carbon foot-print on the environment.",
+        "Compare the basic characteristics of low carbon fuels, its impact over conventional fuels and in achieving sustainable development goals.",
+        "Illustrate the working and energy flow in various hybrid and electric configurations.",
+        "Interpret the need for fuel cell technology in automotive applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1908,7 +2049,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand basics of Micro Electro Mechanical Systems (MEMS), mechanical sensors and actuators.",
+        "Illustrate thermal sensors and actuators used in MEMS.",
+        "Apply the principle and various devices of Micro-Opto-Electro Mechanical Systems (MOEMS), magnetic sensors and actuators.",
+        "Analyze applications and considerations on micro fluidic systems.",
+        "Illustrate the principles of chemical and bio medical micro systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1999,7 +2146,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Comprehend the anatomy of a robot and identify the components, configurations, and industrial applications of robotic systems.",
+        "Describe the types, characteristics, and selection criteria of actuators and sensors used in robotic systems.",
+        "Analyze and solve problems related to forward and inverse kinematics of robotic manipulators.",
+        "Demonstrate the principles of trajectory planning, learn robot programming, and utilize programming languages for robot control.",
+        "Describe the principles and applications of image processing and machine vision in robotics."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2053,7 +2206,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Find the performance characteristics of an internal combustion engines.",
+        "Estimate the energy distribution and frictional power of diesel engine using heat balance and Morse test.",
+        "Compute the performance parameters of refrigeration systems.",
+        "Determine the reciprocating air compressor performance characteristics."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2107,7 +2265,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the dynamics of cams, gyroscopes for any practical problems.",
+        "Evaluate the speed regulations in governors.",
+        "Verify the balancing for rotating and reciprocating parts of a machine.",
+        "Determine the vibration parameters of oscillating bodies."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2173,7 +2336,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify the components and working principles of general-purpose machine tools, and perform basic operations such as step turning, taper turning, and gear cutting.",
+        "Perform indexing and keyway cutting operations on milling and slotting machines to manufacture specific shapes and features.",
+        "Calibrate and use precision instruments such as vernier calipers, micrometers, and height gauges to measure linear and angular dimensions.",
+        "Conduct machine tool alignment tests and surface roughness measurements using appropriate instruments to assess machine accuracy and component quality."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2227,7 +2395,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Turn ideas into reality by brainstorming, modelling and prototyping.",
+        "Inculcate innovative and entrepreneurial mind-set through Design thinking and Hands-on Learning.",
+        "Develop basic knowledge in electrical and mechanical engineering principles.",
+        "Develop skills of using hand tools to construct a prototype of an engineering design."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2351,7 +2524,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basic heat transfer principles, mechanisms and its practical relevance in Planes, cylinders and spherical components.",
+        "Apply the laws of governing equations to solve the steady and unsteady state one dimensional heat transfer problems.",
+        "Solve free and forced convection problems related to external and internal flows using empirical correlations.",
+        "Compute the heat transfer in boiling, condensation and radiation thermal systems.",
+        "Compare the LMTD, NTU parameters in different heat exchangers for engineering applications using the data handbook."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2440,7 +2619,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the fundamental concepts and techniques of artificial intelligence.",
+        "Apply the principles of supervised learning methods to solve classification and regression problems.",
+        "Apply unsupervised learning techniques and Bayesian algorithms for data clustering and probabilistic inference.",
+        "Apply neural networks and genetic algorithms to solve optimization and pattern recognition problems.",
+        "Apply machine learning analytics and implement basic deep learning techniques for real- world applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2529,7 +2714,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Formulate the equilibrium equations for solving static engineering problems.",
+        "Analyze structural behavior of Plane Truss Elements.",
+        "Compute the characteristics of flexural elements under different loading conditions.",
+        "Analyze 2-D structures with iso-parametric elements along with Axi-symmetric problems.",
+        "Apply finite element techniques to solve thermal problems and dynamic analysis of bar and beam elements."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2618,7 +2809,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Formulate the governing equations for single degree of freedom vibrating systems.",
+        "Calculate the damped parameters of single-degree of freedom of systems subjected to free vibrations.",
+        "Analyze the multi degree of freedom systems to find the response by using different methods.",
+        "Analyze and determine the natural frequencies and modes of torsional, longitudinal, and transverse vibrations in continuous systems.",
+        "Comprehend the various vibration measuring instruments."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2708,7 +2905,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the principles of advanced machining processes such as AJM, EDM, ECM, and laser-based methods to select suitable techniques for specific applications.",
+        "Demonstrate the working principles and applications of various additive manufacturing techniques, including rapid tooling methods.",
+        "Apply surface treatment techniques and laser-based material processing methods for coating and modification of engineering surfaces.",
+        "Utilize advanced coating processes such as PVD, CVD, thermal spraying, and nanomaterial synthesis techniques for surface enhancement.",
+        "Describe the fabrication steps involved in microelectronic device manufacturing, including lithography, film deposition, and packaging."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2798,7 +3001,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the importance, the impact of solar radiation.",
+        "Understand the principles of solar PV modules and storage in PV systems.",
+        "Discuss solar energy storage systems and their applications.",
+        "Describe power extraction from wind and bio-mass.",
+        "Illustrate the working of geothermal, ocean energy and fuel cells."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2886,7 +3095,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Recognize with various calibration techniques and signal types for sensors.",
+        "Describe the working principle and characteristics of force, magnetic, heading, pressure and temperature, smart and other sensors and transducers.",
+        "Apply the various sensors and transducers in various applications.",
+        "Select the appropriate sensor for different applications.",
+        "Acquire the signals from different sensors using Data acquisition systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2975,7 +3190,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the importance of energy storage systems",
+        "Describe the chemical and electromagnetic storage systems",
+        "Understand the principles of electrochemical storage systems",
+        "Comprehend the construction and working of super capacitors and fuel cells",
+        "Demonstrate the key features of batteries used in transportation"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3063,7 +3284,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Illustrate the basic concepts of fluid power.",
+        "Understand the functions of elements of Hydraulic and Pneumatic systems.",
+        "Analyze the functions of hydraulic and Pneumatic circuits.",
+        "Illustrate the working of various hydraulic and pneumatic devices.",
+        "Interpret the procedure of installation, maintenance of hydraulic and pneumatic systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3153,7 +3380,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts of various NDE techniques and the requirements of radiography techniques and safety aspects.",
+        "Interpret the principles and procedure of ultrasonic testing.",
+        "Understand the principles and procedure of Liquid penetration and eddy current testing.",
+        "Illustrate the principles and procedure of Magnetic particle testing.",
+        "Interpret the principles and procedure of infrared testing and thermal testing."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3242,7 +3475,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the basic concepts of refrigeration and its applications.",
+        "Evaluate the performance parameters of refrigeration systems.",
+        "Identify the desirable refrigerants and its use in various refrigeration systems.",
+        "Analyze the psychrometric properties and processes used in Air Conditioning systems.",
+        "Design of Air Conditioning systems for thermal comfort conditions."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3295,7 +3534,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Estimate the thermal conductivity of different materials and powders.",
+        "Compute the value of heat transfer coefficients in free and forced convection using data handbook.",
+        "Determine the emissivity of grey body.",
+        "Compare the LMTD, NTU parameters in parallel and counter flow heat exchangers."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3348,7 +3592,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Learn various Python libraries.",
+        "Do programming for regression methods.",
+        "Write coding for different types of neural networks.",
+        "Write a program for decision tree, Na\u00efve Bayes and SVM and generate code for autoencoders."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3401,7 +3650,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Build and program basic robotic systems using sensors, actuators, and microcontrollers to perform navigation and object manipulation tasks.",
+        "Simulate and analyze the kinematics and control of robotic manipulators using modeling and software tools.",
+        "Demonstrate the working principles of drone components and control mechanisms such as roll, pitch, and yaw using appropriate sensor feedback.",
+        "Design and assemble functional drone prototypes with capabilities such as video capture, obstacle avoidance, and payload handling."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3490,7 +3744,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the structure of the technical paper and its components.",
+        "Review the literature and acquire the skills to write a technical paper for first submission.",
+        "Understand the process and development of IPR.",
+        "Create awareness about the scope of patent rights.",
+        "Analyze the new developments in IPR include latest software."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,

@@ -70,7 +70,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Evaluate the approximate roots of polynomial and transcendental equations by different algorithms. Apply Newton's forward & backward interpolation and Lagrange's formulae for equal and unequal intervals",
+        "Apply numerical integral techniques to different Engineering problems. Apply different algorithms for approximating the solutions of ordinary differential equations with initial conditions to its analytical computations",
+        "Apply discrete and continuous probability distributions",
+        "Design the components of a classical hypothesis test",
+        "Infer the statistical inferential methods based on small and large sampling tests"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -160,7 +166,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Relate human values with human relationship and human society.",
+        "Illustrate the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -250,7 +262,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Summarize the principles and methods of surveying and measuring of horizontal and vertical- distances and angles.",
+        "Identify the source of errors and rectification methods.",
+        "Apply surveying principles to determine areas and volumes.",
+        "Setting out curves and using modern surveying equipment.",
+        "Understand the basics of Photogrammetry Surveying in field."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -340,7 +358,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "To relate the deformations with the stress strain characteristics of materials under axial loading.",
+        "To draw the diagrams indicating the variation of the key performance features like axial forces, bending moment and shear forces in structural members.",
+        "To calculate section modulus and for determination of stresses developed in the beams.",
+        "To compute the deflections due to various loading conditions.",
+        "To determine stresses across sections of the thin, thick cylinders and columns to arrive at optimum sections to withstand the internal pressure using Lame's equation."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -430,7 +454,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the fluid properties, principles of fluid statics, and buoyancy.",
+        "Apply the laws of fluid statics and buoyancy.",
+        "Understand the fundamentals of fluid kinematics, dynamics, differentiate types of fluid flows and loss in pipes.",
+        "Derive and apply the principle of conservation of mass energy and momentum for flow measurement.",
+        "Compute the losses in pipes and discharge through pipe flows."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -469,7 +499,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Handle various linear and angular measuring instruments",
+        "Measure the linear and angular measurements",
+        "Calculate the area and volume by interpreting the data obtained from surveying",
+        "Handle modern equipment such as total station",
+        "Prepare field notes from survey data"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -508,7 +544,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Conduct tensile strength test and draw stress-strain diagrams for ductile metals",
+        "Perform bending test and determine load-deflection curve of steel/wood",
+        "Able to conduct torsion test and determine torsion parameters",
+        "Perform hardness, impact and shear strength tests and calculate hardness numbers, impact and shear strengths",
+        "Able to conduct tests on closely coiled and open coiled springs and calculate deflections"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -547,7 +589,12 @@
       },
       "type": "theory_cum_lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Draw signs and bonds",
+        "Draw different building units",
+        "Plan various buildings as per the building by-laws.",
+        "Learn the skills of drawing building elements and plan the buildings as per requirements."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -637,7 +684,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "The necessity of resources, their exploitation and sustainable management",
+        "The interactions of human and ecosystems and their role in the food web in the natural world and the global biodiversity, threats to biodiversity and its conservation.",
+        "Environmental problems like pollution, disasters and possible solutions.",
+        "The importance of environmental decision making in organizations through understanding the environmental law and environmental audits.",
+        "Environmental issues like over population, human health etc related to local, regional and global levels."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -727,7 +780,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to Managerial Economics, Financial Accounting and Management",
+        "Understand the Fundamentals of Economics viz., Demand, Production, Cost, Revenue and Markets",
+        "Apply the Concept of Production cost and Revenues for effective Business Decision",
+        "Evaluate the Capital Budgeting Techniques.",
+        "Develop the Accounting Statements and Evaluate the Financial Performance of Business Entity"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -817,7 +876,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand and interpret fundamental geological processes and geological formations.",
+        "Differentiate various properties of minerals and rocks.",
+        "Illustrate geological structural features",
+        "Understand geological principles in civil engineering applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -907,7 +971,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Familiarize the basic ingredients of concrete and their role in the production of concrete and its behaviour in the field.",
+        "Test the fresh concrete properties and the hardened concrete properties. Understand the basic concepts of concrete. Design the concrete mix by BIS method.",
+        "Determine the ingredients of concrete through lab test results. realize the importance of quality of concrete",
+        "Understand the behaviour of concrete in various environments.",
+        "Familiarize the basic concepts of special concrete and their production and applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -997,7 +1067,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply energy theorems to analyze trusses",
+        "Determine unknown reactions of indeterminate structures by using Castigliano's\u2013II Theorem.",
+        "Compute the internal forces of members in fixed and continuous beams",
+        "Evaluate the internal forces of members portal frames by using slope-deflection method",
+        "Analyze continuous beams and portal frames by using Moment \u2013 distribution method"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1087,7 +1163,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the characteristics of laminar and turbulent flows.",
+        "Understand the fundamentals in open channel flow",
+        "Apply the knowledge of fluid mechanics to solve the uniform and non-uniform flow problems in open channels.",
+        "Understand the principles, losses and its efficiencies of centrifugal pumps",
+        "Determine the performance of impact of jets on plates, Pelton wheel, and Francis turbine and centrifugal pump"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1126,7 +1208,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Outline importance of testing cement and its properties",
+        "Assess different properties of aggregates",
+        "Assess fresh concrete properties and their relevance to hardened concrete",
+        "Assess hardened concrete properties"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1165,7 +1252,11 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the importance of geological principles.",
+        "Distinguish various types of minerals and rocks based on physical properties and physical observations.",
+        "Interpret structural patterns of various geological structures."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1235,7 +1326,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Acquire knowledge about concepts of Remote Sensing and GIS applications.",
+        "Perform digital image analysis and interpret digital image characteristics.",
+        "Digitize and create thematic map and extract important features to calculate geometry.",
+        "Illustrate the GIS applications for developing elevations using TIN/DEM and stream ordering map.",
+        "Apply GIS software to perform simple analysis for Civil Engineering problems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1325,7 +1422,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply fundamental design components, principles, and new materials to create and improve design projects.",
+        "Apply the design thinking process to develop and present innovative product solutions.",
+        "Analyze the relationship between creativity and innovation, evaluate their roles in organizations, and develop strategic plans for transforming creative ideas into innovative solutions.",
+        "Analyze to work in a multidisciplinary environment.",
+        "Apply design thinking principles to address business challenges, develop and test business models and prototypes, and evaluate the value of creativity."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1415,7 +1518,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the preparation process and the composition of construction materials such as Stones, bricks and timber.",
+        "Describe the sources, constituents and storage of lime and cement for their appropriate usage as building materials based on their specific attributes.",
+        "Identify the different components in a building and their specific purpose in the building.",
+        "Classify the various types of mortars, masonry components and finishings used in the buildings.",
+        "Identify the uses, good and faulty characteristics of different building materials."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1505,7 +1614,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the fundamental procedures and guidelines given in relevant IS Codes for design of various RCC elements such as beams, columns, foundations, slabs, shear reinforcement, under Working stress and Limit State methods",
+        "Design and detailing of various flexural members",
+        "Limit state design of structures subjected to shear, bond and torsion",
+        "Design of compression members subjected to axial load, uni-axial and bi-axial moments, Design of different types of shallow foundations",
+        "Design the one way and two-way slabs with different end conditions using appropriate design guidelines"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1596,7 +1711,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basic concepts of hydrology and factors affecting the hydrological components.",
+        "Compute the average rainfall over an area and estimate the runoff for a given data",
+        "Understand concepts of Hydrographs. flood frequency analysis, groundwater movement and well hydraulics.",
+        "Develop unit hydrograph and synthetic hydrograph, and estimate flood magnitude and carry out flood routing.",
+        "Determine aquifer parameters and yield of wells."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1686,7 +1807,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the soil formation, its index properties and classification.",
+        "Understand the soil moisture and flow of water through soils and its effects.",
+        "Evaluate the stress distribution of soil subjected to different loading conditions.",
+        "Understand Compaction and Compressibility characteristics under partially saturated and fully saturated conditions.",
+        "Evaluate the shear strength of soil at different loading & drainage conditions for different soils."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1775,7 +1902,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Differentiate Determinate and Indeterminate Structures",
+        "Analyze three and two hinged arches",
+        "Carryout lateral Load analysis of structures",
+        "Analyze Cable and Suspension Bridge structures",
+        "Analyze structures using Moment Distribution, Kani's Method"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1863,7 +1996,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the distinguish architectural styles of eastern and western world.",
+        "Understand the importance of Orders of architecture.",
+        "Assess the compose spaces of buildings using design concepts, planning principles.",
+        "Understand the town planning standards, landscaping features and regulations controlling expansion of the towns and the cities."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1951,7 +2089,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Appreciate the importance of construction planning and the Stakeholders involved",
+        "Understand the functioning of various earthmoving equipment and construction techniques",
+        "Distinguish the methods of production of aggregate products and concreting",
+        "Apply the project management and construction techniques using CPM and PERT to practical problems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2041,7 +2184,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify the causes of accidents related to construction activities, role of stakeholders, and human factors associated with these accidents.",
+        "Recognize the safety requirements in the construction operations and develop guidelines to ensure safety at construction site.",
+        "Describe and deal with the safety requirements while dealing with machinery and materials during construction.",
+        "Realize the legal provisions and Acts with respect to the health and welfare of workers at construction site.",
+        "Identify the appropriate safety and precautionary measures to be taken at a demolition site."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2094,7 +2243,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Perform the index and engineering properties of the soil and interpret the results.",
+        "Perform the Strength, compaction and consolidation properties of the soil and interpret the results.",
+        "Apply field conditions for computing and analyzing experimental data."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2147,7 +2300,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate knowledge on the fundamental principles of fluid flow.",
+        "Apply the laws of conservation of mass, energy, and momentum to solve practical problems in fluid mechanics.",
+        "Select the required flow rate, pressure rise and the proper hydraulic turbines and pumps."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2235,7 +2392,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "The student should be able to determine the quantities of different components of buildings.",
+        "The student should be in a position of find the cost of various building components.",
+        "The student should be capable of finalizing the value of structures."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2289,7 +2450,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Turn ideas into reality by brainstorming, modelling and prototyping.",
+        "Inculcate innovative and entrepreneurial mind-set through Design thinking and Hands-on Learning.",
+        "Develop basic knowledge in electrical and mechanical engineering principles.",
+        "Develop skills of using hand tools to construct a prototype of an engineering design."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2415,7 +2581,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Design the different types of connections (Riveted and Welded) in steel members",
+        "Design of Simple and compound beams and check its stability as per IS code",
+        "Design of Tension, compression members",
+        "Design of compression members, column bases subjected to point loads and moments",
+        "Design of Plate girder and IS code Recommendations"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2507,7 +2679,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the fundamentals of planning, development, geometric elements, maintenance strategies and traffic parameters of highway.",
+        "Determine the geometric elements of highway in accordance with IRC Standards for the effective road layout.",
+        "Identify the suitable highway materials based on their physical and mechanical properties.",
+        "Design the elements of highway in accordance with the IRC standards."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2598,7 +2775,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Recognize the basic aspects involved in the population projection, water conveyance and distribution approaches for a community, classify the appropriate water sources and estimate the water demand",
+        "Establish the proper water and wastewater quality parameters and the associated environmental impacts on the receptors",
+        "Identify the appropriate water treatment system to be adopted based on the fundamental principles",
+        "Identify the appropriate wastewater treatment system, sludge disposal and septic tank options to be adopted based on the fundamental principles",
+        "Estimate the quantity of sewage generation, and design the appropriate treatment units for the treatment of water and wastewater"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2689,7 +2872,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the knowledge of various densification methods of ground improvement and their suitability to different field situations.",
+        "Understand the dewatering and well points techniques to improve the ground.",
+        "Understand the different types of stabilization methods and grouting techniques to improve the ground.",
+        "Understand the concept and principles of Reinforced earth to stabilize the ground.",
+        "Understand the various functions of Geosynthetics and their applications in Civil Engineering practice."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2779,7 +2968,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Illustrate the concepts of traditional building materials and eco-friendly building materials for construction.",
+        "Understand the developments of building technologies in foundations, walls and roofs.",
+        "Describe prefabrication techniques and assess the wind effects on low rise buildings.",
+        "Demonstrate the construction of houses in rural areas and disaster prone areas."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2872,7 +3066,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the mechanisms of degradation of concrete structures.",
+        "Design and suggest repair strategies for deteriorated concrete structures including Repairing with composites.",
+        "Select appropriate repair material and rehabilitation strategy.",
+        "Describe the application and use of fiber reinforced concrete, high performance concrete and self compacting concrete."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2964,7 +3163,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Estimate the quantities for various types of structures and contract document.",
+        "Calculate the quantities of different items in buildings and roads from drawings and explain its general specification and rate analysis.",
+        "Prepare detailed measurements (including BBS) and BoQ of various work like buildings, earth work for road, sanitary and water supply work.",
+        "Perform valuation of land buildings using different methods of valuation."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3057,7 +3261,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the need, benefits and key features of green buildings.",
+        "Understand the green building rating concept and energy efficiency in green buildings.",
+        "Identify the importance of energy demand reduction in the design of green buildings.",
+        "Describe the requirements of different energy units installation and operation by referring to suitable case studies of green buildings.",
+        "Understand the waste management and methods for improving air quality in green buildings"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3147,7 +3357,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Develop finite element formulations of 1degree of freedom problems and solve Them.",
+        "Understand any Finite Elements of ware to perform stress, thermal and modal Analysis.",
+        "Compute the stiffness matrices of different elements and system",
+        "Interpret displacements, strains and stress resultants",
+        "Analyze planar structural systems using finite element modeling"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3238,7 +3454,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the different types of Bridges with diagrams and Loading standards.",
+        "Evaluate the analysis and design of Slab bridges, T Beam bridges, Box culvers and suggest structural detailing.",
+        "Evaluate the analysis and design of Plate girder bridges.",
+        "Understand the attending inspections and maintenance of bridges and prepare reports."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3330,7 +3551,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Estimate irrigation water requirements.",
+        "Design irrigation canals.",
+        "Design irrigation canal structures.",
+        "Plan and design diversion head works.",
+        "Analyze stability of gravity and earth dams. Design of hydraulic ogee spillways."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3384,7 +3611,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Determine few important characteristics of water and wastewater in the laboratory",
+        "Draw some conclusions based on prevailing standards about (i) suitability of water for a specific purpose (ii) options for the appropriate treatment options and ultimate disposal of sewage.",
+        "Interpret the impacts of the water or wastewater on the local environment"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3436,7 +3667,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Assess the properties of highway construction materials such as aggregates and bitumen.",
+        "Determine the optimum binder content with Marshall stability value.",
+        "Analyze the test results and evaluate their suitability for pavement design and construction."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3490,7 +3725,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply structural analysis software to analyze and design the beams, 2D and 3D frames",
+        "Design the retaining walls and foundations using STAAD Pro",
+        "Draw the details of RCC and steel structural elements suing Auto CAD."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3675,7 +3914,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "understand Soil exploration methods and field tests.",
+        "understand earth pressure theories.",
+        "understand stability of slopes.",
+        "analyze the shallow foundations.",
+        "analyze the deep foundations."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3770,7 +4015,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explore the quality assurance, quality control and construction safety methods",
+        "Prepare project estimates and perform cost control analysis.",
+        "Plan and manage construction materials and machinery efficiently.",
+        "Utilize BIM & Advanced Design Tools applications in planning, coordination and project management.",
+        "Summarize the principles of smart sustainable construction techniques and green building practices."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3864,7 +4115,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the basic concepts and general mechanical behavior of prestressed concrete, available IS Codes, and various methods of prestressing.",
+        "Analyze the different losses of pre-stressing",
+        "Design prestressed concrete beams under flexure.",
+        "Design prestressed concrete beams under shear and torsion and interpret the relevant IS code provisions for prestressed concrete."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3957,7 +4213,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Comprehend the importance of self-purification of streams, DO balance in streams, and the impacts of various pollutants on receiving streams.",
+        "Categorize the advanced treatment approaches in the advanced biological treatment of wastewater",
+        "Analyze the wastewater generation, its characteristics and treatment operations from selected industries, and develop plans for the treatment of wastewater from other industrial sectors.",
+        "Recognize the options available for development of strategies for a comprehensive solid waste management and noise pollution in the community.",
+        "Identify the basic principles of air pollution, its impacts, dispersion, and control strategies."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4037,7 +4299,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the principles and design criteria of surplus weirs and prepare detailed drawings.",
+        "Analyze and design tank sluice with tower heads, including structural and hydraulic considerations.",
+        "Design and draw canal drops (notch type) by applying hydraulic principles and standard design",
+        "Develop design and drawing skills for canal regulators with proper understanding of flow control mechanisms.",
+        "Design and prepare detailed drawings of syphon aqueducts considering hydraulic and structural requirements."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4132,7 +4400,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify the services like lift, elevators, conveyors and escalators, etc. & plan various types of mechanical services as per requirements of building",
+        "Explain the electrical services requirement and Layout of a building",
+        "Analyze the basic principles of illumination for different types of buildings.",
+        "Analyze the refrigeration principles & applications for different types of buildings.",
+        "Describe the damage caused by fire & exercise due care for fire safety."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4216,7 +4490,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Design raft foundations and different types of RCC retaining walls",
+        "Carryout analysis and design of different types of RCC water tanks",
+        "Solve the problems regarding design of RCC Bunkers, Silos and Chimneys",
+        "Understand the concepts of prefabricated construction."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4311,7 +4590,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basics, types and terminology of EIA, Role of stakeholders and GIS in EIA, and Environmental economics",
+        "Explore the different EIA methodologies, their advantages and disadvantages",
+        "Interpret the methodologies available for analyzing air, water and soil environments",
+        "Comprehend the methodologies available for Risk assessment in EIA, analyzing impacts on vegetation and wild life",
+        "Recognize the available Regulatory guidelines available for executing EIA, ISO and other Environmental Management procedures"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4406,7 +4691,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand and explain the components and behavior of railway track systems including permanent way elements and rail interactions.",
+        "Analyze and design railway track geometry for safe and efficient train movement.",
+        "Evaluate railway track layouts, turnouts, crossings, and signaling systems for operational control.",
+        "Assess and plan airport layout, site selection, and operational facilities.",
+        "Design and evaluate airfield pavements, drainage systems, and maintenance strategies."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4499,7 +4790,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Determine watershed parameters and analyse watershed characteristics to take appropriate management action.",
+        "Quantify soil erosion and design control measures.",
+        "Recommend suitable harvesting techniques for better watershed management.",
+        "Describe the land grading techniques for proper land management.",
+        "Discuss the appropriate models for watershed management."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4553,7 +4850,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand and apply the fundamentals of structural modelling, load assignment and analysis of RCC buildings using ETABS.",
+        "Analyse building structures under dead load, live load, seismic load and wind load conditions using relevant IS Codes and interpret structural behaviour.",
+        "Design RCC structural components such as beams, columns, slabs and shear walls based on analysis results for safe and economical construction.",
+        "Prepare structural analysis reports, design documentation and engineering interpretations using ETABS software for practical civil engineering applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,

@@ -21,7 +21,13 @@
         { "number": 4, "title": "Laplace Transforms", "topics": ["Region of convergence (ROC) and constraints for various signal classes", "Properties of Laplace transforms; inverse Laplace transform", "Relation between Laplace transform and Fourier transform", "Laplace transform via waveform synthesis"] },
         { "number": 5, "title": "Sampling Theorem and Z-Transforms", "topics": ["Sampling theorem for band-limited signals; impulse, natural and flat-top sampling", "Reconstruction; aliasing; band-pass sampling", "Z-transform of a discrete sequence; ROC; inverse Z-transform; properties", "Distinction between Laplace, Fourier and Z transforms"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Differentiate the various classifications of signals and systems",
+        "Analyze the frequency domain representation of signals using Fourier concepts",
+        "Classify the systems based on their properties and determine the response of LTI Systems.",
+        "Know the sampling process and various types of sampling techniques.",
+        "Apply Laplace and z-transforms to analyze signals and Systems (continuous & discrete)."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "signals-and-systems-jntuk-r23-ece-2-1",
@@ -52,7 +58,13 @@
         { "number": 4, "title": "Small Signal Low Frequency Transistor Amplifier Models (BJT)", "topics": ["Two-port network; transistor hybrid model; determination and conversion of h-parameters", "Generalized analysis of transistor amplifier using h-parameters", "Analysis of CB, CE, CC amplifiers (exact and approximate)", "Comparison of transistor amplifiers"] },
         { "number": 5, "title": "FET and MOSFET", "topics": ["FET types; JFET operation, characteristics, biasing; small-signal model", "MOSFET structure and operation in triode and saturation regions", "V-I characteristics of MOSFET; MOS transconductance; small-signal model", "PMOS and NMOS transistors; comparison of bipolar and MOS devices"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the basic concepts of semiconductor physics.",
+        "Understand the formation of p-n junction and how it can be used as a p-n junction as diode in different modes of operation.",
+        "Analyze the construction, working principle of Semiconductor Devices and Diode Circuits",
+        "Know the need of transistor biasing, various biasing techniques for BJT and FET and stabilization concepts with necessary expressions",
+        "Apply small signal low frequency transistor amplifier circuits using BJT and FET in different configurations"
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "electronic-devices-and-circuits-jntuk-r23-ece-2-1",
@@ -83,7 +95,14 @@
         { "number": 4, "title": "Sequential Circuits I", "topics": ["Synchronous vs asynchronous circuits; NAND/NOR latches", "Flip-flops: RS, JK, T, D with reset/clear; flip-flop conversions", "Ripple and synchronous counters; Johnson and ring counters", "Registers: buffer, shift, bidirectional, universal shift register"] },
         { "number": 5, "title": "Sequential Circuits II", "topics": ["Finite state machine; state diagrams and state tables; reduction of state tables", "Analysis of clocked sequential circuits", "Mealy to Moore conversion and vice-versa", "Sequence generator and sequence detector design (with/without overlapping)"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Classify different number systems and apply to generate various codes.",
+        "Use the concept of Boolean algebra in minimization of switching functions",
+        "Design different types of combinational logic circuits.",
+        "Apply knowledge of flip-flops in designing of Registers and counters",
+        "The operation and design methodology for synchronous sequential circuits and algorithmic state machines.",
+        "Produce innovative designs by modifying the traditional design techniques."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "switching-theory-and-logic-design-jntuk-r23-ece-2-1",
@@ -114,7 +133,13 @@
         { "number": 4, "title": "Social Issues and the Environment", "topics": ["Sustainable development; water conservation and rainwater harvesting; watershed management", "Environmental ethics; climate change, global warming, acid rain, ozone depletion", "Environment protection acts and legislation"] },
         { "number": 5, "title": "Human Population and the Environment", "topics": ["Population growth and explosion; family welfare programmes", "Environment and human health; human rights; value education", "Role of information technology in environment and human health"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Grasp multi disciplinary nature of environmental studies and various renewable and non-renewable resources.",
+        "Understand flow and bio-geo-chemical cycles and ecological pyramids.",
+        "Understand various causes of pollution and solid waste management and related preventive measures.",
+        "Understand the rainwater harvesting, watershed management, ozone layer depletion and waste land reclamation.",
+        "Illustrate the causes of population explosion, value education and welfare programmes."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "environmental-science-jntuk-r23-ece-2-1",
@@ -245,7 +270,10 @@
           "topics": []
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Perform operations on single and multiple Random variables.",
+        "Determine the Spectral and temporal characteristics of Random Signals."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -285,7 +313,14 @@
         { "number": 4, "title": "Harmony in the Nature/Existence", "topics": [] },
         { "number": 5, "title": "Implications of the Holistic Understanding - Professional Ethics", "topics": [] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Apply what they have learnt to their own self in different day-to-day settings in real life",
+        "Relate human values with human relationship and human society.",
+        "Justify the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "universal-human-values-jntuk-r23-ece-2-1",
@@ -316,7 +351,14 @@
         { "number": 4, "title": "Capital Budgeting", "topics": ["Working capital types, components and sources; estimating requirements", "Capital budgeting: features, proposals, methods and evaluation", "Payback, ARR, NPV and IRR methods"] },
         { "number": 5, "title": "Financial Accounting and Analysis", "topics": ["Double-entry bookkeeping; journal, ledger, trial balance", "Final accounts: trading account, profit and loss account, balance sheet", "Ratio analysis: liquidity, activity, capital structure and profitability ratios"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to Managerial Economics, financial accounting and management",
+        "Understand the fundamentals of Economics viz., Demand, Production, cost, revenue and markets",
+        "Apply the Concept of Production cost and revenues for effective Business decision",
+        "Analyze how to invest their capital and maximize returns",
+        "Evaluate the capital budgeting techniques.",
+        "Develop the accounting statements and evaluate the financial performance of business entity"
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "managerial-economics-and-financial-analysis-jntuk-r23-ece-2-2",
@@ -347,7 +389,12 @@
         { "number": 4, "title": "Frequency Response Analysis", "topics": ["Correlation between time and frequency response", "Polar plots and Bode plots", "Nyquist stability criterion"] },
         { "number": 5, "title": "Classical Control Design and State Space Analysis", "topics": ["Lag, lead and lead-lag compensators; PID controllers", "State, state variables and state model; state models from block diagrams", "Diagonalization; solving state equations; state transition matrix", "Controllability and observability"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "This course introduces the concepts of feedback and its advantages to various control systems",
+        "The performance metrics to design the control system in time-domain and frequency domain are introduced.",
+        "Control systems for various applications can be designed using time-domain and frequency domain analysis.",
+        "In addition to the conventional approach, the state space approach for the analysis of control systems is also introduced."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "linear-control-systems-jntuk-r23-ece-2-2",
@@ -378,7 +425,13 @@
         { "number": 4, "title": "Transmission Lines - I", "topics": ["Types, parameters, T and pi equivalent circuits; transmission line equations", "Primary and secondary constants; characteristic impedance; propagation constant", "Phase and group velocities; infinite, lossless and distortionless lines"] },
         { "number": 5, "title": "Transmission Lines - II", "topics": ["Input impedance, reflection coefficient, VSWR; shorted, open and matched lines", "UHF lines as circuit elements", "Smith chart construction and applications; quarter-wave transformer; single stub matching"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Determine electric field intensity using coulomb's law and Gauss law.",
+        "Determine magnetic field intensity using Biot-Savarts Law and Ampere's Circuital Law.",
+        "Analyze the electromagnetic wave propagation in dielectric and conducting media.",
+        "Examine the primary and secondary constants of different types of transmission lines.",
+        "Derive the expressions for input impedance, reflection coefficient, and VSWR of transmission lines and calculate these parameters using smith chart."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "electromagnetic-waves-and-transmission-lines-jntuk-r23-ece-2-2",
@@ -409,7 +462,12 @@
         { "number": 4, "title": "Oscillators", "topics": ["Oscillator principle and condition for oscillations; types of oscillators", "RC phase-shift and Wien bridge oscillators (BJT and FET)", "LC oscillators: Hartley and Colpitts", "Frequency and amplitude stability of oscillators"] },
         { "number": 5, "title": "Power and Tuned Amplifiers", "topics": ["Classes A to H; Class A, Class B push-pull, complementary symmetry, Class AB, Class C", "Thermal stability and heat sinks", "Tuned amplifiers: Q-factor, single/double/staggered tuned amplifiers"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Design and analysis of small signal high frequency transistor amplifier using BJT and FET.",
+        "Design and analysis of multistage amplifiers using BJT and FET and Differential amplifier using BJT.",
+        "Derive the expressions for frequency of oscillation and condition for oscillation of RC and LC oscillators and their amplitude and frequency stability concept.",
+        "Know the classification of the power and tuned amplifiers and their analysis with performance comparison"
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "electronic-circuit-analysis-jntuk-r23-ece-2-2",
@@ -440,7 +498,14 @@
         { "number": 4, "title": "Radio Transmitters and Receivers", "topics": ["AM and FM transmitters; effect of feedback; frequency stability", "Receiver types: TRF and superheterodyne; RF section, frequency changing and tracking", "Intermediate frequency, AGC; FM receiver and amplitude limiting", "Comparison of FM and AM receivers"] },
         { "number": 5, "title": "Noise and Pulse Analog Modulation", "topics": ["Noise sources and noise figure; noise in DSB/SSB/AM and angle modulation systems", "Threshold effect; pre-emphasis and de-emphasis", "Pulse analog modulation: PAM, PWM, PPM (generation and detection)", "Time division multiplexing; TDM vs FDM"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe the Modulation and Demodulation techniques of standard AM.",
+        "Compare different types of Amplitude Modulation and Demodulation techniques.",
+        "Analyse the concepts of generation and detection of Angle Modulated signals.",
+        "Outline the Radio Receivers with different sections.",
+        "Interpret the Radio Transmitters completely.",
+        "Illustrate the noise performance in Analog Modulation techniques and also the concepts of Pulse Analog Modulation and Demodulation techniques."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "analog-communications-jntuk-r23-ece-2-2",
@@ -521,7 +586,13 @@
         { "number": 4, "title": "Verbal Skills", "topics": ["Listening skills: types, advantages, improving tips", "Speaking skills; reading and writing skills", "Report, resume and statement of purpose"] },
         { "number": 5, "title": "Non-Verbal Skills and Interview Skills", "topics": ["Facial expressions, eye contact, proxemics, haptics, posture, body language", "Para language: tone, pitch, pause; accent neutralization; appearance and dress code", "Interview skills, methods and questions"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Assimilate and understood the meaning and importance of soft skills and learn how to develop them.",
+        "Understand the significance of soft skills in the working environment for professional excellence.",
+        "Prepare to undergo the placement process with confidence and clarity.",
+        "Ready to face any situation in life and equip themselves to handle them effectively.",
+        "Understand and learn the importance of etiquette in both professional and personal life"
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "soft-skills-jntuk-r23-ece-2-2",
@@ -552,7 +623,13 @@
         { "number": 4, "title": "Product Design", "topics": ["Problem formation; introduction to product design; product strategies", "Product value, planning and specifications", "Innovation towards product design; case studies"] },
         { "number": 5, "title": "Design Thinking in Business Processes", "topics": ["Design thinking in business and strategic innovation", "Business challenges: growth, predictability, change, competition, standardization", "Design thinking for startups; defining and testing business models and prototypes"] }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to design thinking.",
+        "Explain the fundamentals of Design Thinking and innovation.",
+        "Apply the design thinking techniques for solving problems in various sectors.",
+        "Analyse to work in a multidisciplinary environment.",
+        "Evaluate the value of creativity."
+      ],
       "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
       "seo": {
         "slug": "design-thinking-and-innovation-jntuk-r23-ece-2-2",
@@ -658,7 +735,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply the operational principles and characteristics of op-amps to design and analyze analog circuits such as amplifiers and active filters.",
+        "Design waveform generators and comparator circuits using op-amps for signal processing applications.",
+        "Implement and troubleshoot combinational and sequential logic circuits using digital ICs.",
+        "Compare different data conversion techniques (DAC and ADC) and implement digital-to-analog and analog-to-digital conversion circuits in real-time applications.",
+        "Design and interface digital systems using programmable logic devices like PLDs and FPGAs."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -747,7 +830,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "To Describe basic components of Digital Communication Systems and to determine the performance of different pulse digital modulation techniques",
+        "To determine the performance of digital modulation techniques for the generation and digital representation of the signals.",
+        "To design optimum receiver for Digital Modulation techniques and to determine the probability of error for various digital modulation schemes",
+        "To compute and analyze error detecting and error correction codes block codes, cyclic codes.",
+        "To compute and analyze convolution codes and Turbo codes."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -838,7 +927,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify basic antenna parameters.",
+        "Quantify the fields radiated by various types of antennas",
+        "Design and analyze antenna arrays",
+        "Design and analyze wire antennas, loop antennas, reflector antennas, lens antennas, horn antennas and micro-strip antennas",
+        "Analyze antenna measurements to assess antenna's performance"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -928,7 +1023,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the language constructs and programming fundamentals of Verilog HDL.",
+        "Choose the suitable abstraction level for a particular digital design",
+        "Construct Combinational and sequential circuits in different modelling styles using Verilog HDL",
+        "Design and synthesize combinational and sequential logic circuits",
+        "Analyze and Verify the functionality of digital circuits/systems using test benches."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1018,7 +1119,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Choose necessary components required in modern optical communications systems.",
+        "Design and build optical fiber experiments in the laboratory, and learn how to calculate electromagnetic modes in waveguides, the amount of light lost going through an optical system, dispersion of optical fibers.",
+        "Use different types of photo detectors and optical test equipment to analyze optical fiber and light wave systems.",
+        "Choose the optical cables for better communication with minimum losses",
+        "Design, build, and demonstrate optical fiber experiments in the laboratory."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1108,7 +1215,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the various Analog and Digital measuring Instruments",
+        "Aware of the principles and operations of various oscilloscopes",
+        "Learn measurements using various bridges",
+        "Familiarize different Signal Generators and function generators",
+        "Learn various transducers and Intelligent sensors"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1198,7 +1311,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the representation of data, the register transfer language and Micro operations.",
+        "Know the basic computer organization and design, programming the basic computer and design the micro programmer control unit.",
+        "Know the development of central processing unit and explain various algorithms for computer arithmetic operations.",
+        "Interface various Peripheral devices and various data transfer operations.",
+        "Study the memory Hierarchy and different types of memories."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1435,7 +1554,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Develop loops, case structures, arrays, and clusters.",
+        "Realize real time applications using NI DAQ hardware",
+        "Implement Coding techniques using LabVIEW",
+        "Design automation and process control application",
+        "Apply LabVIEW for data processing applications"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1615,7 +1740,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate a clear understanding of CMOS fabrication flow and technology scaling.",
+        "Design MOSFET based logic circuit.",
+        "Design basic building blocks in Analog IC design.",
+        "Design various CMOS logic circuits for design of Combinational logic circuits.",
+        "Analyze the behavior of static and dynamic logic circuits"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1705,7 +1836,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Develop the students to compose the assembly language program for 8086.",
+        "Applying 8086 processor to interface with necessary peripherals.",
+        "Understand the architecture of 8051 and interfacing with necessary peripherals.",
+        "Understand the introductory concepts of advanced processors, viz., ARM processors.",
+        "Understand the architecture of 8086 and its operation."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1795,7 +1932,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts of discrete signals and discrete systems with its characteristics",
+        "Calculate z-Transform, Fourier Transform, Discrete Fourier Transform of discrete signals",
+        "Understand the algorithms for the efficient computation of DFT coefficients of signals",
+        "Design the FIR and IIR filters.",
+        "Know the architectures of various DSP processors and its addressing modes, assembly language instructions."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1885,7 +2028,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts of MOS Devices and Modeling.",
+        "Design and analyze any Analog Circuits in real time applications.",
+        "Extend the Analog Circuit Design to Different Applications in Real Time.",
+        "Understand of Open-Loop Comparators and Different Types of Oscillators"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1975,7 +2123,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts, applications and subsystems of Satellite communications.",
+        "Derive the expression for G/T ratio and to solve some analytical problems on satellite link design.",
+        "Understand the various types of multiple access techniques and architecture of earth station design",
+        "Understand the concepts of GPS and its architecture."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2065,7 +2218,11 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze Smart and Wireless Instrumentation with respect to various performance parameters.",
+        "Design and develop Applications using WSN (Wireless sensor Network).",
+        "Demonstration of various Node architectures."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2155,7 +2312,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define machine learning and its different types and understand their applications.",
+        "Explain the various techniques involved in pre-processing of data for Data Analysis",
+        "Apply various supervised learning algorithms including decision trees and k-nearest neighbours (k-NN) etc.",
+        "Implement unsupervised learning techniques, viz., K-means clustering etc.",
+        "Learn about various performance metrics and explore them in various applications of implementing Machine learning Algorithms."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2245,7 +2408,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate a foundational understanding of the anatomy and physiology of the human body.",
+        "Apply knowledge of different techniques used for measuring various physiological parameters.",
+        "Explain modern imaging techniques employed in medical diagnosis and identify the diverse therapeutic equipment utilized in the biomedical field.",
+        "Understand and apply bio-telemetry principles for transmitting bioelectrical variables.",
+        "Analyze patient safety measures and evaluate recent advancements in the medical field."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2335,7 +2504,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Design different modes in waveguide structures",
+        "Calculate S-matrix for various waveguide components and splitting the microwave energy in a desired direction",
+        "Distinguish between Microwave tubes and Solid State Devices, calculation of efficiency of devices.",
+        "Measure various microwave parameters using a Micro wave test bench"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2425,7 +2599,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Know basics of embedded system, classification, memories, different communication interface and what embedded firmware is and its role in embedded system, different system components.",
+        "Distinguish all communication devices in embedded system, other peripheral device.",
+        "Distinguish concepts of C versus embedded C and compiler versus cross-compiler.",
+        "Choose an operating system, and learn how to choose an RTOS"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2515,7 +2694,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the concepts of computational intelligence like machine learning",
+        "Ability to get the skill to apply machine learning techniques to address the real time Problems in different areas",
+        "Understand the Neural Networks and its usage in machine learning application.",
+        "Apply principles and algorithms evaluate models generated from data",
+        "Apply the algorithms to a real world problems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2713,7 +2898,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the need for simulation/implementation for the verification of mathematical functions",
+        "Understand the main features of the SCILAB program development environment to enable their usage in the higher learning.",
+        "Implement simple mathematical functions/equations in numerical computing environment such as SCILAB",
+        "Interpret and visualize simple mathematical functions and operations thereon using plots/display",
+        "Analyze the program for correctness and determine/estimate/predict the output and verify it under simulation environment using SCILAB tools & Develop graphs by running Scilab programs"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2803,7 +2994,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand research problem formulation.",
+        "Analyze research related information, Follow research ethics",
+        "Understand that today's world is controlled by Computer, Information Technology, but tomorrow world will be ruled by ideas, concept, and creativity.",
+        "Understanding that when IPR would take such important place in growth of individuals & nation, it is needless to emphasis the need of information about Intellectual Property Right to be promoted among students in general & engineering in particular.",
+        "Understand that IPR protection provides an incentive to inventors for further research work and investment in R & D, which leads to creation of new and better products, and in turn brings about, economic growth and social benefits."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2875,7 +3072,14 @@
         "C": 3
       },
       "type": "theory",
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Apply what they have learnt to their own self in different day-to-day settings in real life",
+        "Relate human values with human relationship and human society.",
+        "Justify the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,

@@ -70,7 +70,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Illustrate the static and dynamic characteristics of SCR, Power-MOSFET and Power-IGBT.",
+        "Analyse the operation of phase-controlled rectifiers.",
+        "Analyse the operation of three-phase full\u2013wave converters, AC Voltage Controllers and Cyclo converters.",
+        "Examine the operation and design of different types of DC-DC converters.",
+        "Analyse the operation of Square wave inverters and PWM inverters for voltage control."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -160,7 +166,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Use the concepts of Boolean algebra, K-map, tabulation method in minimization of switching functions and able to design the arithmetic combinational circuits.",
+        "Realize different types of data routing combinational circuits and PLDs.",
+        "Apply knowledge of flip-flops in designing of registers and counters.",
+        "Analyze synchronous sequential circuits and apply different methods for the design of synchronous sequential circuits.",
+        "Understand the logic families in the form of digital integrated circuits."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -250,7 +262,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Calculate parameters of transmission lines for different circuit configurations.",
+        "Analyze the performance of short, medium and long transmission lines.",
+        "Analyze the effect of travelling waves on transmission lines.",
+        "Estimate the effects of corona in transmission lines.",
+        "Calculate sag and tension of transmission lines and design the line insulators."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -289,7 +307,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyse characteristics of various power electronic devices and design firing circuits for SCR.",
+        "Analyse the performance of single\u2013phase dual, three\u2013phase full\u2013wave bridge converters and dual converter with both resistive and inductive loads.",
+        "Examine the operation of Single-phase AC voltage regulator and Cyclo converter with resistive and inductive loads.",
+        "Differentiate the working and control of Buck converter and Boost converter.",
+        "Differentiate the working & control of Square wave inverter and PWM inverter."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -328,7 +352,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyse diode clipper/clamper circuits and transistor biasing.",
+        "Illustrate the operation of feedback amplifiers and oscillator circuits.",
+        "Analyze the applications of linear IC's",
+        "Demonstrate the operation of digital circuits such as arithmetic, data routing, registers and counters."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -457,7 +486,9 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "The students will be able to experiment, innovate, and solve real-world challenges."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -547,7 +578,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Know the construction and working of various types of analog instruments.",
+        "Describe the construction and working of wattmeter and power factor meters",
+        "Know the construction and working various bridges for the measurement resistance inductance and capacitance",
+        "Know the operational concepts of various transducers",
+        "Know the construction and operation digital meters"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -637,7 +674,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Know the concepts of the Microprocessor capability in general and explore the evaluation of microprocessors.",
+        "Analyse the instruction sets - addressing modes - minimum and maximum modes operations of 8086 Microprocessors",
+        "Analyse the Microcontroller and interfacing capability",
+        "Describe the architecture and interfacing of 8051 controller",
+        "Know the concepts of PIC micro controller and its programming."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -727,7 +770,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Draw impedance diagram for a power system network and calculate per unit quantities.",
+        "Apply the load flow solution to a power system using different methods.",
+        "Form Zbus for a power system networks and analyse the effect of symmetrical faults.",
+        "Find the sequence components for power system Components and analyse its effects of unsymmetrical faults.",
+        "Analyse the stability concepts of a power system."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -766,7 +815,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Know about the phantom loading and calibration process.",
+        "Measure the electrical parameters voltage - current - power- energy and electrical characteristics of resistance - inductance and capacitance.",
+        "Gain the skill knowledge of various bridges and their applications.",
+        "Learn the usage of CT's - PT's for measurement purpose.",
+        "Know the characteristics of transducers and measure the strains - frequency and phase difference."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -805,7 +860,14 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Write assembly language program using 8086 microprocessor based on arithmetic - logical number systems and shift operations.",
+        "Write assembly language programs for numeric operations and array handling problems.",
+        "Write a assembly program on string operations.",
+        "Interface 8086 with I/O and other devices.",
+        "Do parallel and serial communication using 8051 & PIC 18 micro controllers.",
+        "Program microprocessors and microcontrollers for real world applications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -895,7 +957,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Operate the Arduino Integrated Development Environment with embedded c.",
+        "Program the embedded Python in Raspberry Pi OS.",
+        "Interface various sensors with Arduino/Raspberry Pi in the IoT environment.",
+        "Connect different displays with Arduino/Raspberry Pi",
+        "Interconnect with wireless communication technologies."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -985,7 +1053,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand research problem formulation.",
+        "Analyze research related information, Follow research ethics tomorrow world will be ruled by ideas, concept, and creativity.",
+        "Understanding that today's world is controlled by computer, information technology but tomorrow world will be created by concept, idea, creativity.",
+        "Understanding that when IPR would take such important place in growth of individuals & nation, it is needless to emphasis the need of information about Intellectual Property Right to be promoted among students in general & engineering in particular.",
+        "Understand that IPR protection provides an incentive to inventors for further research work and investment in R & D, which leads to creation of new and better products, and in turn brings about, economic growth and social benefits"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1109,7 +1183,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Differentiate the various classifications of signals and systems",
+        "Analyze the frequency domain representation of signals using Fourier concepts",
+        "Classify the systems based on their properties and determine the response of LTI Systems.",
+        "Know the sampling process and various types of sampling techniques.",
+        "Apply Laplace and z-transforms to analyze signals and Systems (continuous & discrete)."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1199,7 +1279,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the instruction cycle of a computer.",
+        "Understand various micro operations and register transfer language.",
+        "Describe parallel processing and pipelining.",
+        "Interface different peripherals with processors.",
+        "Know the advantages of cache and virtual memory."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1328,7 +1414,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze solar radiation data, extra-terrestrial radiation, radiation on earth's surface and solar Energy Storage.",
+        "Illustrate the components of wind energy systems.",
+        "Illustrate the working of biomass, hydel plants and Geothermal plants.",
+        "Demonstrate the principle of Energy production from OTEC, Tidal and Waves.",
+        "Evaluate the concept and working of Fuel cells & MHD power generation."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1418,7 +1510,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the principles of energy audit along with various Energy related terminologies.",
+        "Asses the role of Energy Manager and Energy Management program.",
+        "Design a energy efficient motors and good lighting system.",
+        "Analyse the methods to improve the power factor and identify the energy instruments for various real time applications.",
+        "Evaluate the computational techniques with regard to economic aspects."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1547,7 +1645,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand and describe the operation of circuit breakers, including their ratings, principles of arc interruption, and types.",
+        "Analyze relay-based protection systems, identifying and explaining their roles in overcurrent, undervoltage, and fault detection.",
+        "Design protection schemes for generators and transformers, addressing faults like restricted earth faults and inter-turn faults.",
+        "Implement feeder and busbar protection using advanced relays such as distance, impedance, and static relays.",
+        "Evaluate over-voltage protection strategies, including the use of lightning arresters, and understand various neutral grounding techniques."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1637,7 +1741,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain controllability, observability, and the principle of duality in state-space systems.",
+        "Apply state-space methods to analyze controllability, observability, and design state feedback controllers.",
+        "Analyze the stability of nonlinear systems using phase-plane analysis and Lyapunov's stability theorems.",
+        "Examine the minimization of functional and control variable inequality constraints.",
+        "Formulate and solve the optimal regulator problems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1727,7 +1837,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Illustrate basic concepts of renewable and distributed sources of wind energy.",
+        "Demonstrate the components of wind energy conversion systems.",
+        "Model PV systems and analyze MPPT Techniques.",
+        "Illustrate the concept of Energy Production from Hydro - Tidal and Geothermal.",
+        "Explain the aspects of hybrid renewable energy systems."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1817,7 +1933,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the fundamentals of electric drive and different electric braking methods.",
+        "Analyze the operation of three-phase converter fed dc motors and four quadrant operations of dc motors using dual converters.",
+        "Describe the DC-DC converter fed control of dc motors in various quadrants of operation",
+        "Know the concept of speed control of induction motor by using AC voltage controllers and voltage source inverters and differentiate the stator side control and rotor side control",
+        "Learn the concepts of speed control of synchronous motor with different methods."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1907,7 +2029,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Know the concepts of Digital signal processing - frequency domain representation & z-transform.",
+        "Compute discrete Fourier transform and fast Fourier transforms for different sequences.",
+        "Design IIR filters through analog filter approximation and basic structure of IIR filters.",
+        "Design FIR filters with window techniques and basic structure of FIR filters.",
+        "Learn the concepts of Multirate Signal Processing."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1997,7 +2125,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Recognise the dielectric properties of gaseous materials used in HV equipment.",
+        "Differentiate the break down phenomenon in liquid and solid dielectric materials.",
+        "Acquaint with the techniques of generation of high AC and DC voltages",
+        "Acquaint with the techniques of generation of high Impulse voltages and currents.",
+        "Getting the knowledge of measurement of high AC - DC - Impulse voltages and currents."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2087,7 +2221,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Illustrate the use and advantages of different types of electric vehicles.",
+        "Use suitable power converters for EV application.",
+        "Select suitable electric motor for EV power train.",
+        "Design HEV configuration for a specific application.",
+        "Analyse various storage systems and battery management system for EVs."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2177,7 +2317,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate the various electrical apparatus and their interconnections.",
+        "Examine various components of electrical installations.",
+        "Estimate the cost for installation of wiring for different types of building and small industries.",
+        "Illustrate the components of electrical substations.",
+        "Design suitable control circuit for starting of three phase induction motor and synchronous motor."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2215,7 +2361,12 @@
         "C": 3
       },
       "type": "theory",
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the process of voltage build-up in DC generators and characteristics.",
+        "Understand the process of torque production, starting and speed control of DC motors and illustrate their characteristics.",
+        "Obtain the equivalent circuit of single-phase transformer and determine its efficiency & regulation.",
+        "Analyse various configurations of three-phase transformers."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2305,7 +2456,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Evaluate the approximate roots of polynomial and Transcendental equations by different algorithms. Apply Newton's forward and backward and Lagrange's formulae for equal and unequal intervals.",
+        "Apply numerical integral techniques to different Engineering problems. Apply different algorithms for approximating the solutions of ordinary differential equations with initial conditions to its analytical computations.",
+        "Apply Cauchy-Riemann equations to complex functions in order to determine whether a given continuous function is analytic.",
+        "Evaluate the Taylor and Laurent expansions of simple functions, determining the nature of the singularities and calculating residues. Make use of Cauchy Residue theorem to evaluate certain integrals.",
+        "Explain properties of various types of conformal mappings."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2395,7 +2552,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the terms like Natural Acceptance, Happiness and Prosperity",
+        "Identify one's self, and one's surroundings (family, society nature)",
+        "Apply what they have learnt to their own self in different day-to-day settings in real life",
+        "Relate human values with human relationship and human society.",
+        "Justify the need for universal human values and harmonious existence",
+        "Develop as socially and ecologically responsible engineers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2485,7 +2649,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Compute electric fields and potentials using Gauss law/ solve Laplace's or Poisson's equations for various electric charge distributions.",
+        "Analyze the behavior of conductors in electric fields, electric dipole and the capacitance and energy stored in dielectrics.",
+        "Calculate the magnetic field intensity due to current carrying conductor and understanding the application of Ampere's law, Maxwell's second and third law.",
+        "Estimate self and mutual inductances and the energy stored in the magnetic field.",
+        "Understand the concepts of Faraday's laws, Displacement current, Poynting theorem and Poynting vector."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2575,7 +2745,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyse the balanced and unbalanced 3 phase circuits for power calculations.",
+        "Analyse the transient behaviour of electrical networks in different domains.",
+        "Estimate various Network parameters.",
+        "Apply the concept of Fourier series to electrical systems.",
+        "Analyse the filter circuit for electrical circuits."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2614,7 +2790,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the power calculations in three phase circuits.",
+        "Evaluate the time response of given network.",
+        "Evaluate two port network parameters.",
+        "Simulate and analyse electrical circuits using suitable software."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2653,7 +2834,12 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Demonstrate starting and speed control methods of DC Machines.",
+        "Apply theoretical concepts in analyzing the performance characteristics of DC Machines.",
+        "Determine the performance characteristics of DC machines using different testing methods.",
+        "Determine the performance parameters of single-phase transformer."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2743,7 +2929,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify the role of data structures in organizing and accessing data.",
+        "Design, implement, and apply linked lists for dynamic data storage.",
+        "Develop applications using stacks and queues.",
+        "Design and implement algorithms for operations on binary trees and binary search trees.",
+        "Devise novel solutions to small scale programming challenges involving data structures such as stacks, queues, Trees."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2833,7 +3025,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Grasp multi disciplinary nature of environmental studies and various renewable and non-renewable resources.",
+        "Understand flow and bio-geo-chemical cycles and ecological pyramids.",
+        "Understand various causes of pollution and solid waste management and related preventive measures.",
+        "Understand the rainwater harvesting, watershed management, ozone layer depletion and waste land reclamation.",
+        "Illustrate the causes of population explosion, value education and welfare programmes."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2923,7 +3121,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to Managerial Economics, financial accounting and management",
+        "Understand the fundamentals of Economics viz., Demand, Production, cost, revenue and markets",
+        "Apply the Concept of Production cost and revenues for effective Business decision",
+        "Analyze how to invest their capital and maximize returns",
+        "Evaluate the capital budgeting techniques.",
+        "Develop the accounting statements and evaluate the financial performance of business entity"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3013,7 +3218,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze diode clipping and clamping circuits. Understand different types of biasing circuits of a transistor.",
+        "Use small signal modeling for transistor circuit analysis and illustrate the operation of feedback amplifiers.",
+        "Understand operation of oscillators, operational amplifier and their applications.",
+        "Use 555 timers in multi-vibrators, Schmitt Trigger and PLL applications.",
+        "Describe the operation of different ADC's and DAC's."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3103,7 +3314,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the different types of power plants, operation of power plants.",
+        "Describe the different components of air and gas insulated substations.",
+        "Discuss the construction of single core and three core cables and describe distribution system configurations.",
+        "Analyze different economic factors of power generation and tariffs."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3193,7 +3409,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the construction and operation of three-phase induction motor.",
+        "Analyze the performance of three-phase induction motor.",
+        "Describe the working of single-phase induction motors.",
+        "Analyze the performance of Synchronous generators and motors."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3283,7 +3504,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Derive the transfer function of physical systems and determine overall transfer function using block diagram algebra and signal flow graphs.",
+        "Obtain the time response of first and specifications of second order systems and determine error constants. Analyze the absolute and relative stability of LTI systems using Routh's stability criterion and root locus method.",
+        "Analyze the stability of LTI systems using frequency response methods.",
+        "Design Lag, Lead, Lag-Lead compensators to improve system performance using Bode Diagrams.",
+        "Apply state space analysis concepts to represent physical systems as state models, derive transfer function and determine the response. Understand the concepts of controllability and observability."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3322,7 +3549,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze the speed control methods on 3-phase Induction Motor.",
+        "Evaluate the performance of 3-phase Induction Motor by obtaining the locus diagram and equivalent circuit of 3-phase Induction Motor",
+        "Adapt the power factor improvement methods for single phase Induction Motor",
+        "Pre-determine the regulation of 3-phase alternator",
+        "Determine the synchronous machine reactance of 3-phase alternator"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3361,7 +3594,13 @@
       },
       "type": "lab",
       "units": [],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze the performance of Magnetic amplifier D.C and A.C. servo motors and synchrous.",
+        "Design of PID controllers and compensators.",
+        "Evaluate temperature control of an oven using PID controller.",
+        "Determine the transfer function of D.C Motor and examine the truth table of logic gates using PLC.",
+        "Judge the stability in time and frequency domain and Kalman's test for controllability and observability."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3541,7 +3780,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Define the concepts related to design thinking.",
+        "Explain the fundamentals of Design Thinking and innovation.",
+        "Apply the design thinking techniques for solving problems in various sectors.",
+        "Analyse to work in a multidisciplinary environment.",
+        "Evaluate the value of creativity."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
