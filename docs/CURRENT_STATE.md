@@ -1,6 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-06 after RC13 Git sync (`29ac399`).
+Last updated: 2026-07-11 after the official CSE/ECE/IT source passes and
+immediate content-integrity corrections.
 
 ## Architecture
 
@@ -23,26 +24,26 @@ Production remains JSON-backed:
 
 ## Current Counts
 
-As of RC13 sync:
+Current JSON/build state:
 
 | Metric | Count |
 | --- | ---: |
-| Subjects | 272 |
-| Verified subjects | 242 |
-| Needs verification subjects | 29 |
+| Subjects | 333 |
+| Verified subjects | 304 |
+| Needs verification subjects | 28 |
 | Placeholder subjects | 1 |
 | Colleges | 376 |
 | Branch profiles | 6 |
-| Search docs | 624 |
-| Sitemap URLs | 251 |
-| DB migrations | 23/23 |
+| Search docs | 686 |
+| Sitemap URLs | 313 |
+| Migration files | 24 |
 
 The parity constants in `lib/db-json.js` currently expect:
 
-- `verifiedSubjects: 242`
+- `verifiedSubjects: 304`
 - `colleges: 376`
 - `branchProfiles: 6`
-- `searchDocs: 624`
+- `searchDocs: 686`
 
 ## Verified/Draft State
 
@@ -58,6 +59,18 @@ Recent RC13 verified promotions:
   - Canonical URL: `/universal-human-values-jntuk-r23-ece-2-1/`
 - `r23-cse-3-1-microprocessors-and-microcontrollers`
   - Canonical URL: `/microprocessors-and-microcontrollers-jntuk-r23-cse-3-1/`
+
+Recent integrity corrections:
+
+- CSE, ECE, and IT subjects through 3-2 were re-sourced from JNTUK's own
+  official R23 PDFs.
+- ECE Switching Theory and Logic Design Lab is correctly assigned to 2-1;
+  Signals and Systems Lab is correctly assigned to 2-2. The previously public
+  swapped-semester URLs redirect permanently to the corrected URLs.
+- The duplicate ECE Universal Human Values draft and obsolete autonomous-college
+  IT 3-1 Employability Skills draft were removed; neither draft was public.
+- Official-source page metadata no longer labels JNTUK content as Tirumala or
+  SRKR content.
 
 Public URL checks must use `seo.slug || id`. Entity keys are stable content identifiers and are not guaranteed to match public URL slugs.
 

@@ -1,6 +1,7 @@
 # Content Operations Runbook
 
-Last updated: 2026-07-06 after RC13 Git sync.
+Last updated: 2026-07-11 after the official CSE/ECE/IT source passes and
+immediate content-integrity corrections.
 
 This runbook is for controlled content work. It does not authorize broad rewrites, unverified publishing, crawler/scheduler work, `/api/ask`, or DB-backed serving.
 
@@ -231,14 +232,14 @@ After every successful live apply:
 8. Wait for Hostinger deploy.
 9. Verify live endpoints and canonical URLs.
 
-Current expected state after RC13:
+Current expected JSON/build state:
 
-- Subjects: 272
-- Verified: 242
-- Needs verification: 29
+- Subjects: 333
+- Verified: 304
+- Needs verification: 28
 - Placeholder: 1
-- Search docs: 624
-- Sitemap URLs: 251
+- Search docs: 686
+- Sitemap URLs: 313
 
 ## DB Import and Parity
 

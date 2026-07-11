@@ -84,7 +84,7 @@
       "seo": {
         "slug": "data-warehousing-and-data-mining-jntuk-r23-cse-3-1",
         "title": "Data Warehousing & Data Mining - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Data Warehousing and Data Mining: OLAP & warehousing, preprocessing, classification, association analysis, cluster analysis."
+        "meta_description": "JNTUK R23 CSE 3-1 Data Warehousing and Data Mining: OLAP & warehousing, preprocessing, classification, association analysis, cluster analysis."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1784,7 +1784,7 @@
       "seo": {
         "slug": "computer-networks-jntuk-r23-cse-3-1",
         "title": "Computer Networks - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Computer Networks: intro & physical layer, data link layer, media access control, network layer/routing, transport & application layers."
+        "meta_description": "JNTUK R23 CSE 3-1 Computer Networks: intro & physical layer, data link layer, media access control, network layer/routing, transport & application layers."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1883,7 +1883,7 @@
       "seo": {
         "slug": "formal-languages-and-automata-theory-jntuk-r23-cse-3-1",
         "title": "Formal Languages & Automata Theory - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Formal Languages and Automata Theory: finite automata, regular expressions & grammars, CFGs, pushdown automata, Turing machines."
+        "meta_description": "JNTUK R23 CSE 3-1 Formal Languages and Automata Theory: finite automata, regular expressions & grammars, CFGs, pushdown automata, Turing machines."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1980,7 +1980,7 @@
       "seo": {
         "slug": "object-oriented-analysis-and-design-jntuk-r23-cse-3-1",
         "title": "Object Oriented Analysis & Design - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Object Oriented Analysis and Design: complex systems, UML & structural modeling, class diagrams, behavioral & architectural modeling."
+        "meta_description": "JNTUK R23 CSE 3-1 Object Oriented Analysis and Design: complex systems, UML & structural modeling, class diagrams, behavioral & architectural modeling."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2076,7 +2076,7 @@
       "seo": {
         "slug": "artificial-intelligence-jntuk-r23-cse-3-1",
         "title": "Artificial Intelligence - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Artificial Intelligence: intelligent agents, search & game playing, knowledge representation, first order logic, expert systems."
+        "meta_description": "JNTUK R23 CSE 3-1 Artificial Intelligence: intelligent agents, search & game playing, knowledge representation, first order logic, expert systems."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2173,7 +2173,7 @@
       "seo": {
         "slug": "microprocessors-and-microcontrollers-jntuk-r23-cse-3-1",
         "title": "Microprocessors & Microcontrollers - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Microprocessors & Microcontrollers (Professional Elective-I) - listed in the course structure with no syllabus content found."
+        "meta_description": "JNTUK R23 CSE 3-1 Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, plus 8051 architecture and device interfacing."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2268,7 +2268,7 @@
       "seo": {
         "slug": "quantum-computing-jntuk-r23-cse-3-1",
         "title": "Quantum Computing - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Quantum Computing: history & fundamentals, background math/physics/biology, qubits & circuits, quantum algorithms, error correction."
+        "meta_description": "JNTUK R23 CSE 3-1 Quantum Computing: history & fundamentals, background math/physics/biology, qubits & circuits, quantum algorithms, error correction."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2328,7 +2328,7 @@
       "seo": {
         "slug": "data-mining-lab-jntuk-r23-cse-3-1",
         "title": "Data Mining Lab - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Data Mining Lab: data warehouse creation, WEKA exploration, preprocessing/association rules, classification, clustering, Python/R."
+        "meta_description": "JNTUK R23 CSE 3-1 Data Mining Lab: data warehouse creation, WEKA exploration, preprocessing/association rules, classification, clustering, Python/R."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2388,7 +2388,7 @@
       "seo": {
         "slug": "computer-networks-lab-jntuk-r23-cse-3-1",
         "title": "Computer Networks Lab - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Computer Networks Lab: LAN setup, framing & error control, sliding window protocols, routing algorithms, Wireshark, Nmap, NS2."
+        "meta_description": "JNTUK R23 CSE 3-1 Computer Networks Lab: LAN setup, framing & error control, sliding window protocols, routing algorithms, Wireshark, Nmap, NS2."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2446,7 +2446,7 @@
       "seo": {
         "slug": "full-stack-development-2-jntuk-r23-cse-3-1",
         "title": "Full Stack Development-2 - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Full Stack Development-2 (skill course): ExpressJS routing/middleware/auth/REST APIs, ReactJS components/hooks/router, MongoDB CRUD."
+        "meta_description": "JNTUK R23 CSE 3-1 Full Stack Development-2 (skill course): ExpressJS routing/middleware/auth/REST APIs, ReactJS components/hooks/router, MongoDB CRUD."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2506,7 +2506,7 @@
       "seo": {
         "slug": "user-interface-design-using-flutter-jntuk-r23-cse-3-1",
         "title": "UI Design using Flutter - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 User Interface Design using Flutter: widgets & layouts, responsive UI, navigation, state management, forms, animations, REST APIs."
+        "meta_description": "JNTUK R23 CSE 3-1 User Interface Design using Flutter: widgets & layouts, responsive UI, navigation, state management, forms, animations, REST APIs."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2596,7 +2596,7 @@
       "seo": {
         "slug": "principles-of-operating-systems-jntuk-r23-cse-3-1",
         "title": "Principles of Operating Systems - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Principles of Operating Systems: OS overview & structures, processes/threads/scheduling, synchronization & deadlocks, memory, files."
+        "meta_description": "JNTUK R23 CSE 3-1 Principles of Operating Systems: OS overview & structures, processes/threads/scheduling, synchronization & deadlocks, memory, files."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2685,7 +2685,7 @@
       "seo": {
         "slug": "computer-organization-and-architecture-jntuk-r23-cse-3-1",
         "title": "Computer Organization & Architecture - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Computer Organization and Architecture: computer structure & logic gates, sequential circuits, CPU & control unit, microprocessors, I/O."
+        "meta_description": "JNTUK R23 CSE 3-1 Computer Organization and Architecture: computer structure & logic gates, sequential circuits, CPU & control unit, microprocessors, I/O."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2857,7 +2857,7 @@
       "seo": {
         "slug": "compiler-design-jntuk-r23-cse-3-2",
         "title": "Compiler Design - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Compiler Design: lexical & syntax analysis, top-down/bottom-up parsing, syntax-directed translation, optimization, run-time environments."
+        "meta_description": "JNTUK R23 CSE 3-2 Compiler Design: lexical & syntax analysis, top-down/bottom-up parsing, syntax-directed translation, optimization, run-time environments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2957,7 +2957,7 @@
       "seo": {
         "slug": "cloud-computing-jntuk-r23-cse-3-2",
         "title": "Cloud Computing - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Cloud Computing: service/deployment models, enabling technologies, virtualization & containers, cloud challenges, serverless & IoT."
+        "meta_description": "JNTUK R23 CSE 3-2 Cloud Computing: service/deployment models, enabling technologies, virtualization & containers, cloud challenges, serverless & IoT."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3047,7 +3047,7 @@
       "seo": {
         "slug": "cryptography-and-network-security-jntuk-r23-cse-3-2",
         "title": "Cryptography & Network Security - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Cryptography & Network Security: crypto math, symmetric/asymmetric encryption, hashing, digital signatures, PGP/SSL/IPSec, firewalls."
+        "meta_description": "JNTUK R23 CSE 3-2 Cryptography & Network Security: crypto math, symmetric/asymmetric encryption, hashing, digital signatures, PGP/SSL/IPSec, firewalls."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3133,7 +3133,7 @@
       "seo": {
         "slug": "software-testing-methodologies-jntuk-r23-cse-3-2",
         "title": "Software Testing Methodologies - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Software Testing Methodologies: path/transaction/data flow testing, domain testing, logic-based testing, state graphs, graph matrices."
+        "meta_description": "JNTUK R23 CSE 3-2 Software Testing Methodologies: path/transaction/data flow testing, domain testing, logic-based testing, state graphs, graph matrices."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3227,7 +3227,7 @@
       "seo": {
         "slug": "cyber-security-jntuk-r23-cse-3-2",
         "title": "Cyber Security - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Cyber Security: cybercrime tools & attacks, cybercrime investigation, computer forensics, and cyber law/legal perspectives."
+        "meta_description": "JNTUK R23 CSE 3-2 Cyber Security: cybercrime tools & attacks, cybercrime investigation, computer forensics, and cyber law/legal perspectives."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3322,7 +3322,7 @@
       "seo": {
         "slug": "devops-jntuk-r23-cse-3-2",
         "title": "DevOps - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 DevOps: DevOps lifecycle, GIT source control, Jenkins CI, Docker-based continuous delivery, Ansible & Kubernetes configuration mgmt."
+        "meta_description": "JNTUK R23 CSE 3-2 DevOps: DevOps lifecycle, GIT source control, Jenkins CI, Docker-based continuous delivery, Ansible & Kubernetes configuration mgmt."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3416,7 +3416,7 @@
       "seo": {
         "slug": "machine-learning-jntuk-r23-cse-3-2",
         "title": "Machine Learning - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Machine Learning: ML stages, nearest-neighbor models, decision trees & Bayes classifier, linear discriminants/SVM, clustering."
+        "meta_description": "JNTUK R23 CSE 3-2 Machine Learning: ML stages, nearest-neighbor models, decision trees & Bayes classifier, linear discriminants/SVM, clustering."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3509,7 +3509,7 @@
       "seo": {
         "slug": "software-project-management-jntuk-r23-cse-3-2",
         "title": "Software Project Management - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Software Project Management: software economics, life cycle phases & artifacts, iterative planning, process control, Agile & DevOps."
+        "meta_description": "JNTUK R23 CSE 3-2 Software Project Management: software economics, life cycle phases & artifacts, iterative planning, process control, Agile & DevOps."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3602,7 +3602,7 @@
       "seo": {
         "slug": "mobile-adhoc-networks-jntuk-r23-cse-3-2",
         "title": "Mobile Adhoc Networks - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Mobile Adhoc Networks: MANET MAC & routing/transport protocols, ad hoc security, wireless sensor networks, WSN hardware & OS."
+        "meta_description": "JNTUK R23 CSE 3-2 Mobile Adhoc Networks: MANET MAC & routing/transport protocols, ad hoc security, wireless sensor networks, WSN hardware & OS."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3693,7 +3693,7 @@
       "seo": {
         "slug": "natural-language-processing-jntuk-r23-cse-3-2",
         "title": "Natural Language Processing - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 NLP: language modeling, N-grams & POS tagging, syntactic parsing, semantics/pragmatics & WSD, discourse analysis & lexical resources."
+        "meta_description": "JNTUK R23 CSE 3-2 NLP: language modeling, N-grams & POS tagging, syntactic parsing, semantics/pragmatics & WSD, discourse analysis & lexical resources."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3785,7 +3785,7 @@
       "seo": {
         "slug": "distributed-operating-system-jntuk-r23-cse-3-2",
         "title": "Distributed Operating System - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Distributed OS: message passing, RPC, distributed shared memory & synchronization, resource/process management, distributed file systems."
+        "meta_description": "JNTUK R23 CSE 3-2 Distributed OS: message passing, RPC, distributed shared memory & synchronization, resource/process management, distributed file systems."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3845,7 +3845,7 @@
       "seo": {
         "slug": "cloud-computing-lab-jntuk-r23-cse-3-2",
         "title": "Cloud Computing Lab - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Cloud Computing Lab: web services/IPC, VM & Docker setup, EC2/OpenStack, Google App Engine, Hadoop, OpenFaaS, CloudSim experiments."
+        "meta_description": "JNTUK R23 CSE 3-2 Cloud Computing Lab: web services/IPC, VM & Docker setup, EC2/OpenStack, Google App Engine, Hadoop, OpenFaaS, CloudSim experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3899,7 +3899,7 @@
       "seo": {
         "slug": "cryptography-and-network-security-lab-jntuk-r23-cse-3-2",
         "title": "Cryptography & Network Security Lab - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Cryptography & Network Security Lab: XOR ciphers, Caesar/substitution/Hill cipher, DES, BlowFish, Rijndael, RSA, Diffie-Hellman, SHA-1."
+        "meta_description": "JNTUK R23 CSE 3-2 Cryptography & Network Security Lab: XOR ciphers, Caesar/substitution/Hill cipher, DES, BlowFish, Rijndael, RSA, Diffie-Hellman, SHA-1."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3991,7 +3991,7 @@
       "seo": {
         "slug": "principles-of-database-management-systems-jntuk-r23-cse-3-2",
         "title": "Principles of DBMS - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Open Elective-II Principles of DBMS: data models, ER & relational model, SQL, normalization (1NF-BCNF), transactions & recovery."
+        "meta_description": "JNTUK R23 CSE 3-2 Open Elective-II Principles of DBMS: data models, ER & relational model, SQL, normalization (1NF-BCNF), transactions & recovery."
       },
       "legacy_equivalent_id": null,
       "source": {

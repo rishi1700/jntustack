@@ -1567,7 +1567,7 @@
       "seo": {
         "slug": "advanced-java-jntuk-r23-it-3-1",
         "title": "Advanced Java - R23 IT 3-1",
-        "meta_description": "Tirumala R23 IT 3-1 Advanced Java: JDBC programming, J2EE & web development, Servlet API, JSP, and Spring MVC web frameworks."
+        "meta_description": "JNTUK R23 IT 3-1 Advanced Java: JDBC programming, J2EE & web development, Servlet API, JSP, and Spring MVC web frameworks."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1655,7 +1655,7 @@
       "seo": {
         "slug": "automata-theory-and-compiler-design-jntuk-r23-it-3-1",
         "title": "Automata Theory & Compiler Design - IT 3-1",
-        "meta_description": "Tirumala R23 IT 3-1 Automata Theory & Compiler Design: regular languages & FA, CFGs & PDAs, lexical/top-down/bottom-up parsing, code generation."
+        "meta_description": "JNTUK R23 IT 3-1 Automata Theory & Compiler Design: regular languages & FA, CFGs & PDAs, lexical/top-down/bottom-up parsing, code generation."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1744,7 +1744,7 @@
       "seo": {
         "slug": "computer-networks-jntuk-r23-it-3-1",
         "title": "Computer Networks - R23 IT 3-1",
-        "meta_description": "Tirumala R23 IT 3-1 Computer Networks: OSI/TCP-IP models, data link layer & MAC, network layer routing/IP, transport & application layer."
+        "meta_description": "JNTUK R23 IT 3-1 Computer Networks: OSI/TCP-IP models, data link layer & MAC, network layer routing/IP, transport & application layer."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1834,7 +1834,7 @@
       "seo": {
         "slug": "data-warehousing-and-data-mining-jntuk-r23-it-3-1",
         "title": "Data Warehousing & Data Mining - IT 3-1",
-        "meta_description": "Tirumala R23 IT 3-1 Data Warehousing & Data Mining: OLAP & data warehousing, preprocessing, classification, association analysis, cluster analysis."
+        "meta_description": "JNTUK R23 IT 3-1 Data Warehousing & Data Mining: OLAP & data warehousing, preprocessing, classification, association analysis, cluster analysis."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1930,7 +1930,7 @@
       "seo": {
         "slug": "cloud-computing-jntuk-r23-it-3-2",
         "title": "Cloud Computing - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Cloud Computing: IaaS/PaaS/SaaS models, enabling technologies, virtualization & containers, cloud challenges, and serverless computing."
+        "meta_description": "JNTUK R23 IT 3-2 Cloud Computing: IaaS/PaaS/SaaS models, enabling technologies, virtualization & containers, cloud challenges, and serverless computing."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2025,7 +2025,7 @@
       "seo": {
         "slug": "cryptography-and-network-security-jntuk-r23-it-3-2",
         "title": "Cryptography & Network Security - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Cryptography & Network Security: number theory, symmetric & asymmetric algorithms, hash functions & digital signatures, and network security."
+        "meta_description": "JNTUK R23 IT 3-2 Cryptography & Network Security: number theory, symmetric & asymmetric algorithms, hash functions & digital signatures, and network security."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2121,7 +2121,7 @@
       "seo": {
         "slug": "machine-learning-jntuk-r23-it-3-2",
         "title": "Machine Learning - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Machine Learning: ML foundations, nearest-neighbor models, decision trees & Bayes classifiers, linear discriminants and clustering."
+        "meta_description": "JNTUK R23 IT 3-2 Machine Learning: ML foundations, nearest-neighbor models, decision trees & Bayes classifiers, linear discriminants and clustering."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2166,7 +2166,7 @@
       "seo": {
         "slug": "cloud-computing-lab-jntuk-r23-it-3-2",
         "title": "Cloud Computing Lab - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Cloud Computing Lab: AWS VPC, Lambda, Elastic Beanstalk, IAM, RDS, CloudFormation, SQS, serverless architecture and Storage Gateway."
+        "meta_description": "JNTUK R23 IT 3-2 Cloud Computing Lab: AWS VPC, Lambda, Elastic Beanstalk, IAM, RDS, CloudFormation, SQS, serverless architecture and Storage Gateway."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2211,7 +2211,7 @@
       "seo": {
         "slug": "machine-learning-lab-jntuk-r23-it-3-2",
         "title": "Machine Learning Lab - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Machine Learning Lab: preprocessing, encoding, regression, regularization, decision trees, Naive Bayes, KNN, clustering, PCA, perceptrons."
+        "meta_description": "JNTUK R23 IT 3-2 Machine Learning Lab: preprocessing, encoding, regression, regularization, decision trees, Naive Bayes, KNN, clustering, PCA, perceptrons."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2306,7 +2306,7 @@
       "seo": {
         "slug": "soft-skills-jntuk-r23-it-3-2",
         "title": "Soft Skills - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Soft Skills: analytical thinking & listening, self-management & etiquette, standard operation methods, job-oriented and interpersonal skills."
+        "meta_description": "JNTUK R23 IT 3-2 Soft Skills: analytical thinking & listening, self-management & etiquette, standard operation methods, job-oriented and interpersonal skills."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2402,7 +2402,7 @@
       "seo": {
         "slug": "software-testing-methodologies-jntuk-r23-it-3-2",
         "title": "Software Testing Methodologies - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Software Testing Methodologies: path testing, data-flow & domain testing, logic-based testing, state graphs and graph matrices."
+        "meta_description": "JNTUK R23 IT 3-2 elective Software Testing Methodologies: path testing, data-flow & domain testing, logic-based testing, state graphs and graph matrices."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2497,7 +2497,7 @@
       "seo": {
         "slug": "augmented-reality-and-virtual-reality-jntuk-r23-it-3-2",
         "title": "Augmented Reality & Virtual Reality - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective AR & VR: AR foundations & tracking, computer vision, VR geometry & optics, human vision & rendering, motion and audio."
+        "meta_description": "JNTUK R23 IT 3-2 elective AR & VR: AR foundations & tracking, computer vision, VR geometry & optics, human vision & rendering, motion and audio."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2593,7 +2593,7 @@
       "seo": {
         "slug": "devops-jntuk-r23-it-3-2",
         "title": "DevOps - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective DevOps: DevOps lifecycle, Git source-code management, CI with Jenkins, continuous delivery with Docker, and Ansible/Kubernetes."
+        "meta_description": "JNTUK R23 IT 3-2 elective DevOps: DevOps lifecycle, Git source-code management, CI with Jenkins, continuous delivery with Docker, and Ansible/Kubernetes."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2689,7 +2689,7 @@
       "seo": {
         "slug": "generative-ai-jntuk-r23-it-3-2",
         "title": "Generative AI - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Generative AI: generative modelling, text generation with transformers, image generation with GANs & diffusion, open-source tools."
+        "meta_description": "JNTUK R23 IT 3-2 elective Generative AI: generative modelling, text generation with transformers, image generation with GANs & diffusion, open-source tools."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2785,7 +2785,7 @@
       "seo": {
         "slug": "software-project-management-jntuk-r23-it-3-2",
         "title": "Software Project Management - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Software Project Management: software economics, life-cycle phases & artifacts, planning, process control, Agile and DevOps."
+        "meta_description": "JNTUK R23 IT 3-2 elective Software Project Management: software economics, life-cycle phases & artifacts, planning, process control, Agile and DevOps."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2881,7 +2881,7 @@
       "seo": {
         "slug": "mobile-adhoc-networks-jntuk-r23-it-3-2",
         "title": "Mobile Adhoc Networks - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Mobile Adhoc Networks: MANET fundamentals & MAC, routing & transport protocols, ad-hoc security, WSN basics and WSN security."
+        "meta_description": "JNTUK R23 IT 3-2 elective Mobile Adhoc Networks: MANET fundamentals & MAC, routing & transport protocols, ad-hoc security, WSN basics and WSN security."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2977,7 +2977,7 @@
       "seo": {
         "slug": "natural-language-processing-jntuk-r23-it-3-2",
         "title": "Natural Language Processing - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Natural Language Processing: language modelling, word-level analysis, POS tagging, syntactic analysis, semantics and discourse."
+        "meta_description": "JNTUK R23 IT 3-2 elective Natural Language Processing: language modelling, word-level analysis, POS tagging, syntactic analysis, semantics and discourse."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3073,7 +3073,7 @@
       "seo": {
         "slug": "distributed-operating-system-jntuk-r23-it-3-2",
         "title": "Distributed Operating System - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 elective Distributed Operating System: message passing, RPC, distributed shared memory, resource management and distributed file systems."
+        "meta_description": "JNTUK R23 IT 3-2 elective Distributed Operating System: message passing, RPC, distributed shared memory, resource management and distributed file systems."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3265,7 +3265,7 @@
       "seo": {
         "slug": "object-oriented-analysis-and-design-jntuk-r23-it-3-1",
         "title": "Object Oriented Analysis and Design - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective Object Oriented Analysis and Design: complexity, UML modelling, class & object diagrams, behavioral and architectural modelling."
+        "meta_description": "JNTUK R23 IT 3-1 elective Object Oriented Analysis and Design: complexity, UML modelling, class & object diagrams, behavioral and architectural modelling."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3361,7 +3361,7 @@
       "seo": {
         "slug": "cyber-security-jntuk-r23-it-3-1",
         "title": "Cyber Security - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective Cyber Security: cybercrime types, attack tools & methods, cybercrime investigation, computer forensics and Indian cyber law."
+        "meta_description": "JNTUK R23 IT 3-1 elective Cyber Security: cybercrime types, attack tools & methods, cybercrime investigation, computer forensics and Indian cyber law."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3457,7 +3457,7 @@
       "seo": {
         "slug": "artificial-intelligence-jntuk-r23-it-3-1",
         "title": "Artificial Intelligence - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective AI: intelligent agents, uninformed & heuristic search, game playing, knowledge representation, first-order logic and expert systems."
+        "meta_description": "JNTUK R23 IT 3-1 elective AI: intelligent agents, uninformed & heuristic search, game playing, knowledge representation, first-order logic and expert systems."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3553,7 +3553,7 @@
       "seo": {
         "slug": "microprocessors-and-microcontrollers-jntuk-r23-it-3-1",
         "title": "Microprocessors & Microcontrollers - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, plus the 8051 microcontroller."
+        "meta_description": "JNTUK R23 IT 3-1 elective Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, plus the 8051 microcontroller."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3597,7 +3597,7 @@
       "seo": {
         "slug": "advanced-java-lab-jntuk-r23-it-3-1",
         "title": "Advanced Java Lab - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 Advanced Java Lab: JDBC CRUD, servlets & sessions, JSP & JSTL, and Spring MVC/JDBC/AOP/Security experiments."
+        "meta_description": "JNTUK R23 IT 3-1 Advanced Java Lab: JDBC CRUD, servlets & sessions, JSP & JSTL, and Spring MVC/JDBC/AOP/Security experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3641,7 +3641,7 @@
       "seo": {
         "slug": "computer-networks-lab-jntuk-r23-it-3-1",
         "title": "Computer Networks Lab - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 Computer Networks Lab: error detection, sliding-window protocols, routing (RIP/OSPF), VLANs, Wireshark, Nmap and NS2 experiments."
+        "meta_description": "JNTUK R23 IT 3-1 Computer Networks Lab: error detection, sliding-window protocols, routing (RIP/OSPF), VLANs, Wireshark, Nmap and NS2 experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3685,7 +3685,7 @@
       "seo": {
         "slug": "full-stack-development-i-jntuk-r23-it-3-1",
         "title": "Full Stack Development-I - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 Full Stack Development-I: HTML, CSS, HTML5 and JavaScript practicals covering forms, selectors, the box model, objects and validation."
+        "meta_description": "JNTUK R23 IT 3-1 Full Stack Development-I: HTML, CSS, HTML5 and JavaScript practicals covering forms, selectors, the box model, objects and validation."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3730,7 +3730,7 @@
       "seo": {
         "slug": "user-interface-design-using-flutter-jntuk-r23-it-3-1",
         "title": "User Interface Design Using Flutter - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 UI Design Using Flutter: Flutter/Dart widgets, layouts, responsive UI, navigation, state management, forms, animations and REST data."
+        "meta_description": "JNTUK R23 IT 3-1 UI Design Using Flutter: Flutter/Dart widgets, layouts, responsive UI, navigation, state management, forms, animations and REST data."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3779,102 +3779,6 @@
         "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
       },
       "notes": "HELD as needs_verification (not published). Evaluation of Community Service Internship (B23IT3114, PR, 2 credits) from SRKR R23 IT 3-1 PDF -- a content-less activity/evaluation row with no gradeable syllabus, so it is retained as a draft rather than published, consistent with the project's treatment of internship/project rows."
-    },
-    {
-      "id": "r23-it-3-1-employability-skills",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 3,
-      "semester": 1,
-      "year_sem_label": "3-1",
-      "subject_code": null,
-      "name": "Employability Skills",
-      "category": "MandatoryNonCredit",
-      "credits": {
-        "L": 2,
-        "T": 0,
-        "P": 0,
-        "C": 0
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Vocabulary and Grammar",
-          "topics": [
-            "Synonyms, antonyms and frequently confused words",
-            "Foreign phrases, idioms and phrasal verbs, collocations",
-            "Spotting errors",
-            "Sentence improvement"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Quantitative Aptitude",
-          "topics": [
-            "Time and work; pipes and cisterns",
-            "Time and distance; problems on boats and streams",
-            "Percentages; profit and loss",
-            "Simple and compound interest; discount problems"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Logical Reasoning",
-          "topics": [
-            "Analogies and odd one out",
-            "Number, letter and alphanumeric series",
-            "Order and ranking, directions",
-            "Data sufficiency and syllogisms"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Verbal Ability",
-          "topics": [
-            "Sentence completion and sentence equivalence",
-            "Cloze test",
-            "Reading comprehension",
-            "Para jumbles"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Number System",
-          "topics": [
-            "Divisibility tests",
-            "Finding remainders in various cases",
-            "Problems related to numbers",
-            "Methods to find LCM and HCF"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Match various vocabulary items that appear in competitive examinations with their contextual meanings accurately.",
-        "Identify grammatical and ungrammatical usage of English language in all the grammar related questions asked in various competitive examinations like CAT, GRE, IBPS.",
-        "Infer meaning from complex texts that are set as questions in different competitive examinations held for higher education or employment",
-        "Find solutions to complex arithmetic problems set as questions in the competitive examinations held for employment or higher education",
-        "Apply logical thinking abilities in solving the problems of reasoning that appear in the examinations like CAT, GRE, GATE, IBPS."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "employability-skills-jntuk-r23-it-3-1",
-        "title": "Employability Skills - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 Employability Skills (non-credit): vocabulary, grammar, quantitative aptitude, reasoning and verbal ability for competitive exams."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
-      },
-      "notes": "HELD as needs_verification (not published). Employability Skills (B23MC3101, Mandatory Non-Credit, no credits) from SRKR R23 IT 3-1 PDF (common to several branches). Per the project's audit/non-credit discipline, non-credit rows require an explicit publication decision before going public, so this is retained as a draft."
     }
   ]
 }

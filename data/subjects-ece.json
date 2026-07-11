@@ -427,7 +427,7 @@
       "notes": "Experiment-based lab (clippers/clampers, rectifiers, BJT-CE and FET-CS characteristics, SCR/UJT, biasing, CE/CC/CS amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
-      "id": "r23-ece-2-1-signals-and-systems-lab",
+      "id": "r23-ece-2-1-switching-theory-and-logic-design-lab",
       "regulation": "R23",
       "branch": "ECE",
       "specialization": null,
@@ -435,7 +435,7 @@
       "semester": 1,
       "year_sem_label": "2-1",
       "subject_code": null,
-      "name": "Signals and Systems Lab",
+      "name": "Switching Theory and Logic Design Lab",
       "category": "ProfessionalCore",
       "credits": {
         "L": 0,
@@ -452,9 +452,9 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "signals-and-systems-lab-jntuk-r23-ece-2-1",
-        "title": "Signals and Systems Lab - JNTUK R23 ECE 2-1",
-        "meta_description": "JNTUK R23 ECE 2-1 Signals and Systems Lab: signal generation, operations, convolution/correlation, Fourier, Laplace and Z-transforms."
+        "slug": "switching-theory-and-logic-design-lab-jntuk-r23-ece-2-1",
+        "title": "Switching Theory & Logic Design Lab - JNTUK R23 ECE 2-1",
+        "meta_description": "JNTUK R23 ECE 2-1 Switching Theory and Logic Design Lab: logic gates, combinational and sequential circuit design, counters and registers."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -463,7 +463,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Experiment-based lab (basic signal generation, operations on signals, energy/power, convolution and correlation, Fourier/Laplace/Z-transforms). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Experiment-based lab covering logic gates, combinational circuits, decoders and multiplexers, flip-flops, counters, shift registers, and seven-segment displays. Name, 0-0-3-1.5 credits, experiment list, and II Year-I Semester placement are confirmed from JNTUK's official R23 ECE course structure and syllabus PDF."
     },
     {
       "id": "r23-ece-2-1-data-structures-using-python",
@@ -1165,7 +1165,7 @@
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
-      "id": "r23-ece-2-2-switching-theory-and-logic-design-lab",
+      "id": "r23-ece-2-2-signals-and-systems-lab",
       "regulation": "R23",
       "branch": "ECE",
       "specialization": null,
@@ -1173,7 +1173,7 @@
       "semester": 2,
       "year_sem_label": "2-2",
       "subject_code": null,
-      "name": "Switching Theory and Logic Design Lab",
+      "name": "Signals and Systems Lab",
       "category": "ProfessionalCore",
       "credits": {
         "L": 0,
@@ -1190,9 +1190,9 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "switching-theory-and-logic-design-lab-jntuk-r23-ece-2-2",
-        "title": "Switching Theory & Logic Design Lab - R23 ECE 2-2",
-        "meta_description": "JNTUK R23 ECE 2-2 Switching Theory and Logic Design Lab: logic gates, combinational and sequential circuit design, counters and registers."
+        "slug": "signals-and-systems-lab-jntuk-r23-ece-2-2",
+        "title": "Signals and Systems Lab - JNTUK R23 ECE 2-2",
+        "meta_description": "JNTUK R23 ECE 2-2 Signals and Systems Lab: signal generation, operations, convolution/correlation, Fourier, Laplace and Z-transforms."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1201,7 +1201,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Experiment-based lab (logic gate verification, combinational design, decoders/multiplexers, flip-flops, ring/Johnson counters, universal shift register, seven-segment display). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Experiment-based lab covering signal generation and operations, energy and power, convolution and correlation, Fourier analysis, Laplace transforms, and Z-transforms. Name, 0-0-3-1.5 credits, experiment list, and II Year-II Semester placement are confirmed from JNTUK's official R23 ECE course structure and syllabus PDF."
     },
     {
       "id": "r23-ece-2-2-electronic-circuit-analysis-lab",
@@ -1543,7 +1543,7 @@
       "seo": {
         "slug": "analog-and-digital-ic-applications-jntuk-r23-ece-3-1",
         "title": "Analog & Digital IC Applications - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital IC Applications: op-amp circuits, 555/565 ICs, data converters, combinational & sequential logic ICs, memories."
+        "meta_description": "JNTUK R23 ECE 3-1 Analog & Digital IC Applications: op-amp circuits, 555/565 ICs, data converters, combinational & sequential logic ICs, memories."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1638,7 +1638,7 @@
       "seo": {
         "slug": "digital-communications-jntuk-r23-ece-3-1",
         "title": "Digital Communications - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Digital Communications: PCM/DPCM/delta modulation, digital modulation techniques, matched-filter receivers, block & convolution codes."
+        "meta_description": "JNTUK R23 ECE 3-1 Digital Communications: PCM/DPCM/delta modulation, digital modulation techniques, matched-filter receivers, block & convolution codes."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1735,7 +1735,7 @@
       "seo": {
         "slug": "antennas-and-wave-propagation-jntuk-r23-ece-3-1",
         "title": "Antennas and Wave Propagation - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Antennas & Wave Propagation: radiation mechanism, wire antennas, arrays, broadband/microwave antennas, measurements, propagation."
+        "meta_description": "JNTUK R23 ECE 3-1 Antennas & Wave Propagation: radiation mechanism, wire antennas, arrays, broadband/microwave antennas, measurements, propagation."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1831,7 +1831,7 @@
       "seo": {
         "slug": "digital-system-design-through-hdl-jntuk-r23-ece-3-1",
         "title": "Digital System Design through HDL - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Digital System Design through HDL (PE-I): gate-level, behavioural & dataflow Verilog modelling, FSM design, test benches."
+        "meta_description": "JNTUK R23 ECE 3-1 Digital System Design through HDL (PE-I): gate-level, behavioural & dataflow Verilog modelling, FSM design, test benches."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -1927,7 +1927,7 @@
       "seo": {
         "slug": "optical-communications-jntuk-r23-ece-3-1",
         "title": "Optical Communications - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Optical Communications (PE-I): fiber waveguides, dispersion, connectors/splicing, sources/detectors, receiver & system design."
+        "meta_description": "JNTUK R23 ECE 3-1 Optical Communications (PE-I): fiber waveguides, dispersion, connectors/splicing, sources/detectors, receiver & system design."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2023,7 +2023,7 @@
       "seo": {
         "slug": "electronic-measurements-and-instrumentation-jntuk-r23-ece-3-1",
         "title": "Electronic Measurements & Instrumentation - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Electronic Measurements & Instrumentation (PE-I): meters, oscilloscopes, bridges, signal generators, transducers & smart sensors."
+        "meta_description": "JNTUK R23 ECE 3-1 Electronic Measurements & Instrumentation (PE-I): meters, oscilloscopes, bridges, signal generators, transducers & smart sensors."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2119,7 +2119,7 @@
       "seo": {
         "slug": "computer-organization-and-architecture-jntuk-r23-ece-3-1",
         "title": "Computer Organization & Architecture - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Computer Organization & Architecture (PE-I): data representation, basic computer design, CPU, I/O organization, memory hierarchy."
+        "meta_description": "JNTUK R23 ECE 3-1 Computer Organization & Architecture (PE-I): data representation, basic computer design, CPU, I/O organization, memory hierarchy."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2212,7 +2212,7 @@
       "seo": {
         "slug": "analog-and-digital-ic-applications-lab-jntuk-r23-ece-3-1",
         "title": "Analog & Digital IC Applications Lab - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital IC Applications Lab: OP-AMP/IC555/IC565 circuits and digital ICs designed and HDL-verified."
+        "meta_description": "JNTUK R23 ECE 3-1 Analog & Digital IC Applications Lab: OP-AMP/IC555/IC565 circuits and digital ICs designed and HDL-verified."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2266,7 +2266,7 @@
       "seo": {
         "slug": "analog-and-digital-communications-lab-jntuk-r23-ece-3-1",
         "title": "Analog & Digital Communications Lab - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Analog & Digital Communications Lab: AM/FM modulation, sampling, PCM/DPCM/delta modulation, ASK/PSK/FSK, coding experiments."
+        "meta_description": "JNTUK R23 ECE 3-1 Analog & Digital Communications Lab: AM/FM modulation, sampling, PCM/DPCM/delta modulation, ASK/PSK/FSK, coding experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2362,7 +2362,7 @@
       "seo": {
         "slug": "applications-of-lab-view-for-instrumentation-and-communications-jntuk-r23-ece-3-1",
         "title": "LabVIEW for Instrumentation & Comms - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Applications of LabVIEW for Instrumentation & Communications: VIs, DAQ/signal processing, modulation, automation, IoT."
+        "meta_description": "JNTUK R23 ECE 3-1 Applications of LabVIEW for Instrumentation & Communications: VIs, DAQ/signal processing, modulation, automation, IoT."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2416,7 +2416,7 @@
       "seo": {
         "slug": "design-of-pcb-and-antennas-lab-jntuk-r23-ece-3-1",
         "title": "Design of PCB & Antennas Lab - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Design of PCB & Antennas Lab: CNC PCB prototyping scope plus antenna simulation experiments (radiation patterns, arrays, path loss)."
+        "meta_description": "JNTUK R23 ECE 3-1 Design of PCB & Antennas Lab: CNC PCB prototyping scope plus antenna simulation experiments (radiation patterns, arrays, path loss)."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2548,7 +2548,7 @@
       "seo": {
         "slug": "vlsi-design-jntuk-r23-ece-3-2",
         "title": "VLSI Design - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 VLSI Design: MOS fabrication and inverters, sheet resistance and scaling, analog building blocks, CMOS logic design, FPGA design."
+        "meta_description": "JNTUK R23 ECE 3-2 VLSI Design: MOS fabrication and inverters, sheet resistance and scaling, analog building blocks, CMOS logic design, FPGA design."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2645,7 +2645,7 @@
       "seo": {
         "slug": "microprocessors-and-microcontrollers-jntuk-r23-ece-3-2",
         "title": "Microprocessors & Microcontrollers - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, 8051 microcontroller, ARM Cortex-M3."
+        "meta_description": "JNTUK R23 ECE 3-2 Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, 8051 microcontroller, ARM Cortex-M3."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2741,7 +2741,7 @@
       "seo": {
         "slug": "digital-signal-processing-jntuk-r23-ece-3-2",
         "title": "Digital Signal Processing - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 DSP: discrete-time signals and z-transform, DFT/FFT, IIR and FIR filter design, programmable DSP architectures."
+        "meta_description": "JNTUK R23 ECE 3-2 DSP: discrete-time signals and z-transform, DFT/FFT, IIR and FIR filter design, programmable DSP architectures."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2836,7 +2836,7 @@
       "seo": {
         "slug": "analog-ic-design-jntuk-r23-ece-3-2",
         "title": "Analog IC Design - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Analog IC Design: MOS device modelling, CMOS sub-circuits, CMOS amplifiers and op-amps, comparators, oscillators and PLLs."
+        "meta_description": "JNTUK R23 ECE 3-2 Analog IC Design: MOS device modelling, CMOS sub-circuits, CMOS amplifiers and op-amps, comparators, oscillators and PLLs."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -2931,7 +2931,7 @@
       "seo": {
         "slug": "satellite-communication-jntuk-r23-ece-3-2",
         "title": "Satellite Communication - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Satellite Communication: orbital mechanics, satellite subsystems, link design, multiple access, earth stations, GNSS."
+        "meta_description": "JNTUK R23 ECE 3-2 Satellite Communication: orbital mechanics, satellite subsystems, link design, multiple access, earth stations, GNSS."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3027,7 +3027,7 @@
       "seo": {
         "slug": "smart-and-wireless-instrumentation-jntuk-r23-ece-3-2",
         "title": "Smart & Wireless Instrumentation - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Smart & Wireless Instrumentation: WSN fundamentals, node architecture, wireless digital communication, power sources, applications."
+        "meta_description": "JNTUK R23 ECE 3-2 Smart & Wireless Instrumentation: WSN fundamentals, node architecture, wireless digital communication, power sources, applications."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3123,7 +3123,7 @@
       "seo": {
         "slug": "machine-learning-jntuk-r23-ece-3-2",
         "title": "Machine Learning - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning: ML fundamentals, exploratory data analysis, supervised and unsupervised learning, model evaluation metrics."
+        "meta_description": "JNTUK R23 ECE 3-2 Machine Learning: ML fundamentals, exploratory data analysis, supervised and unsupervised learning, model evaluation metrics."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3219,7 +3219,7 @@
       "seo": {
         "slug": "bio-medical-instrumentation-jntuk-r23-ece-3-2",
         "title": "Bio-Medical Instrumentation - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Bio-Medical Instrumentation: bioelectric potentials, cardiovascular measurement, patient monitoring, telemetry, X-ray/imaging."
+        "meta_description": "JNTUK R23 ECE 3-2 Bio-Medical Instrumentation: bioelectric potentials, cardiovascular measurement, patient monitoring, telemetry, X-ray/imaging."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3314,7 +3314,7 @@
       "seo": {
         "slug": "microwave-engineering-jntuk-r23-ece-3-2",
         "title": "Microwave Engineering - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Microwave Engineering: waveguide transmission lines, microwave tubes, TWTs/magnetrons, waveguide components, solid-state devices."
+        "meta_description": "JNTUK R23 ECE 3-2 Microwave Engineering: waveguide transmission lines, microwave tubes, TWTs/magnetrons, waveguide components, solid-state devices."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3409,7 +3409,7 @@
       "seo": {
         "slug": "embedded-systems-jntuk-r23-ece-3-2",
         "title": "Embedded Systems - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Embedded Systems: embedded hardware and firmware design, RTOS concepts, hardware-software co-design, development and testing."
+        "meta_description": "JNTUK R23 ECE 3-2 Embedded Systems: embedded hardware and firmware design, RTOS concepts, hardware-software co-design, development and testing."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3505,7 +3505,7 @@
       "seo": {
         "slug": "artificial-intelligence-jntuk-r23-ece-3-2",
         "title": "Artificial Intelligence - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 AI: state space and heuristic search, knowledge representation, reasoning under uncertainty, fuzzy logic, game playing, NLP."
+        "meta_description": "JNTUK R23 ECE 3-2 AI: state space and heuristic search, knowledge representation, reasoning under uncertainty, fuzzy logic, game playing, NLP."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3559,7 +3559,7 @@
       "seo": {
         "slug": "vlsi-design-lab-jntuk-r23-ece-3-2",
         "title": "VLSI Design Lab - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 VLSI Design Lab: CMOS schematic and layout design of digital/analog circuits using EDA tools (Cadence/Synopsys/Tanner)."
+        "meta_description": "JNTUK R23 ECE 3-2 VLSI Design Lab: CMOS schematic and layout design of digital/analog circuits using EDA tools (Cadence/Synopsys/Tanner)."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3613,7 +3613,7 @@
       "seo": {
         "slug": "microprocessors-and-microcontrollers-lab-jntuk-r23-ece-3-2",
         "title": "Microprocessors & Microcontrollers Lab - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Microprocessors & Microcontrollers Lab: 8086 and 8051 assembly/interfacing experiments plus ARM Cortex-M3 programming."
+        "meta_description": "JNTUK R23 ECE 3-2 Microprocessors & Microcontrollers Lab: 8086 and 8051 assembly/interfacing experiments plus ARM Cortex-M3 programming."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3674,7 +3674,7 @@
       "seo": {
         "slug": "machine-learning-lab-jntuk-r23-ece-3-2",
         "title": "Machine Learning Lab - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning Lab: FIND-S, Candidate-Elimination, ID3, regression, ANN backpropagation, KNN, naive Bayes, EM/K-Means, SVM, PCA."
+        "meta_description": "JNTUK R23 ECE 3-2 Machine Learning Lab: FIND-S, Candidate-Elimination, ID3, regression, ANN backpropagation, KNN, naive Bayes, EM/K-Means, SVM, PCA."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3770,7 +3770,7 @@
       "seo": {
         "slug": "research-methodology-and-ipr-jntuk-r23-ece-3-2",
         "title": "Research Methodology and IPR - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Research Methodology and IPR (audit): research problem formulation, literature and ethics, patents, patent rights, IPR developments."
+        "meta_description": "JNTUK R23 ECE 3-2 Research Methodology and IPR (audit): research problem formulation, literature and ethics, patents, patent rights, IPR developments."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -3814,102 +3814,6 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship of 08 weeks duration during summer vacation' as a bare footnote row (no S.No., category, or L-T-P-C entry), not a numbered course row, and the source PDF gives no evaluation scheme, guidelines or unit content. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
-    },
-    {
-      "id": "r23-ece-2-1-universal-human-values-understanding-harmony-and-ethical-human-conduct",
-      "regulation": "R23",
-      "branch": "ECE",
-      "specialization": null,
-      "year": 2,
-      "semester": 1,
-      "year_sem_label": "2-1",
-      "subject_code": null,
-      "name": "Universal Human Values– Understanding Harmony and Ethical Human Conduct",
-      "category": "HSMC",
-      "credits": {
-        "L": 2,
-        "T": 1,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "course_outcomes": [
-        "Define the terms like Natural Acceptance, Happiness and Prosperity",
-        "Identify one's self, and one's surroundings (family, society nature)",
-        "Apply what they have learnt to their own self in different day-to-day settings in real life",
-        "Relate human values with human relationship and human society.",
-        "Justify the need for universal human values and harmonious existence",
-        "Develop as socially and ecologically responsible engineers"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "r23-ece-2-1-universal-human-values-understanding-harmony-and-ethical-human-conduct",
-        "title": "Universal Human Values - ECE R23 2-1",
-        "meta_description": "Universal Human Values– Understanding Harmony and Ethical Human Conduct extracted candidate. Needs human verification before publishing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
-        "status": "needs_verification",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
-      },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification.",
-      "units": [
-        {
-          "number": 1,
-          "title": "Introduction to Value Education",
-          "topics": [
-            "Right Understanding, Relationship and Physical Facility (Holistic Development and the Role of Education); Understanding Value Education",
-            "Self-exploration as the Process for Value Education; Continuous Happiness and Prosperity - the Basic Human Aspirations",
-            "Happiness and Prosperity - Current Scenario; Method to Fulfill the Basic Human Aspirations",
-            "Practice sessions: Sharing about Oneself, Exploring Human Consciousness, Exploring Natural Acceptance"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Harmony in the Human Being",
-          "topics": [
-            "Understanding Human being as the Co-existence of the self and the body; Distinguishing between the Needs of the self and the body",
-            "The body as an Instrument of the self; Understanding Harmony in the self",
-            "Harmony of the self with the body; Programme to ensure self-regulation and Health",
-            "Practice sessions: Exploring the difference of Needs of self and body, Exploring Sources of Imagination in the self, Exploring Harmony of self with the body"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Harmony in the Family and Society",
-          "topics": [
-            "Harmony in the Family - the Basic Unit of Human Interaction; 'Trust' - the Foundational Value in Relationship",
-            "'Respect' - as the Right Evaluation; Other Feelings, Justice in Human-to-Human Relationship",
-            "Understanding Harmony in the Society; Vision for the Universal Human Order",
-            "Practice sessions: Exploring the Feeling of Trust, Exploring the Feeling of Respect, Exploring Systems to fulfil Human Goal"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Harmony in the Nature/Existence",
-          "topics": [
-            "Understanding Harmony in the Nature; Interconnectedness, self-regulation and Mutual Fulfilment among the Four Orders of Nature",
-            "Realizing Existence as Co-existence at All Levels; The Holistic Perception of Harmony in Existence",
-            "Practice sessions: Exploring the Four Orders of Nature, Exploring Co-existence in Existence"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Implications of the Holistic Understanding - Professional Ethics",
-          "topics": [
-            "Natural Acceptance of Human Values; Definitiveness of (Ethical) Human Conduct",
-            "A Basis for Humanistic Education, Humanistic Constitution and Universal Human Order; Competence in Professional Ethics",
-            "Holistic Technologies, Production Systems and Management Models - Typical Case Studies; Strategies for Transition towards Value-based Life and Profession",
-            "Practice sessions: Exploring Ethical Human Conduct, Exploring Humanistic Models in Education, Exploring Steps of Transition towards Universal Human Order"
-          ]
-        }
-      ]
     }
   ]
 }
