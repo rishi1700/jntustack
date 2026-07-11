@@ -482,3 +482,35 @@ html[data-theme="dark"] .quiz-option.is-selected{
 
 /* Glow reads only on true black -- harmless no-op look on light */
 html[data-theme="dark"] .verify-seal{filter:drop-shadow(0 0 20px rgba(46,223,207,.3));}
+
+/* Bigger seal variant for the home hero */
+.verify-seal--lg{width:210px;height:210px;}
+.verify-seal--lg .verify-seal-ring-inner{inset:13px;}
+.verify-seal--lg .verify-seal-word{font-size:1.7rem;}
+.verify-seal--lg .verify-seal-brand{font-size:.62rem;}
+.verify-seal--lg .verify-seal-sub{font-size:.58rem;max-width:130px;}
+
+
+/* ============================================================================
+   Home — semester shortcut strip + featured CTA cards (design direction 3a)
+   ========================================================================== */
+.home-hero-grid{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center;}
+@media (min-width:860px){.home-hero-grid{grid-template-columns:1fr 300px;}}
+.home-hero-seal{display:flex;justify-content:center;}
+
+.semester-strip{background:var(--surface);border:1px solid var(--border);border-radius:18px;padding:1.3rem 1.5rem;margin:2.2rem 0;}
+.semester-strip-head{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:.9rem;}
+.semester-strip-head h2{font-size:1rem;margin:0;}
+.semester-strip-tag{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--faint);}
+.semester-tiles{display:grid;grid-template-columns:repeat(2,1fr);gap:.6rem;}
+@media (min-width:640px){.semester-tiles{grid-template-columns:repeat(6,1fr);}}
+.semester-tile{border:1px solid var(--border);background:var(--bg);border-radius:12px;padding:.75rem;text-align:center;text-decoration:none;}
+a.semester-tile:hover{border-color:var(--accent);}
+.semester-tile-code{font-weight:700;font-size:.95rem;color:var(--text);}
+.semester-tile-count{font-family:"IBM Plex Mono",monospace;font-size:.66rem;color:var(--accent);margin-top:.2rem;}
+.semester-tile--disabled{opacity:.55;}
+.semester-tile--disabled .semester-tile-code{color:var(--muted);}
+.semester-tile-soon{font-family:"IBM Plex Mono",monospace;font-size:.62rem;color:var(--faint);margin-top:.2rem;}
+
+/* Featured (quiz) CTA card gets the teal border the mockup leads with */
+.home-cta-card--featured{border-color:var(--accent);}

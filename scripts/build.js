@@ -280,7 +280,7 @@ const homeHtml = layout({
   description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
   canonical: `${SITE_URL}/`,
   jsonLd: homeJsonLd(),
-  bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary }),
+  bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary, verifiedSubjectCount: verifiedSubjects.length, verifiedCollegeCount: collegesPublished }),
   navBranches,
   stamp: null,
 });

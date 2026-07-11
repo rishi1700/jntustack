@@ -1,21 +1,58 @@
 import { escapeHtml } from './layout.js';
 
-export function renderHomePage({ branches = [], collegeUniversitySummary = null }) {
+export function renderHomePage({ branches = [], collegeUniversitySummary = null, verifiedSubjectCount = 0, verifiedCollegeCount = 0 }) {
   // Hero: light-first, loud teal. Copy keeps the honest framing -- verified
-  // before it ships, no scraped dumps.
+  // before it ships, no scraped dumps. Paired with the same circular seal
+  // used on subject pages (bigger variant) -- the redesign's signature
+  // element, now the very first thing a visitor sees.
   const collegeDirectoryPhrase = collegeUniversitySummary
     ? `a college directory covering ${collegeUniversitySummary}`
     : 'a college directory';
   const hero = `
-<section class="home-hero">
-  <span class="hero-badge">&#9679; Verified before it ships</span>
-  <h1 class="hero-title">Course material you can <span class="text-brand">actually trust</span>.</h1>
-  <p class="hero-sub">A clean, fast resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and ${escapeHtml(collegeDirectoryPhrase)}. Built page by page, verified before it goes live, not scraped together.</p>
-  <div class="btn-row">
-    <a class="btn-primary" href="/branch-guide/">Open the branch guide</a>
-    <a class="btn-secondary" href="/colleges/">Browse colleges</a>
+<div class="home-hero-grid">
+  <section class="home-hero">
+    <span class="hero-badge">&#10003; Every page checked against a real syllabus</span>
+    <h1 class="hero-title">Your semester, sorted <span class="text-brand">&mdash; and verified.</span></h1>
+    <p class="hero-sub">Syllabus, units, and honest branch advice for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and ${escapeHtml(collegeDirectoryPhrase)}. No scraped dumps, no fake placement stats -- if it's on the page, we checked it.</p>
+    <div class="btn-row">
+      <a class="btn-primary" href="/branch-guide/">Find my subjects &rarr;</a>
+      <a class="btn-secondary" href="/colleges/">Browse colleges</a>
+    </div>
+  </section>
+  <div class="home-hero-seal">
+    <div class="verify-seal verify-seal--lg">
+      <div class="verify-seal-ring-outer"></div>
+      <div class="verify-seal-ring-inner"></div>
+      <div class="verify-seal-text">
+        <span class="verify-seal-brand">JNTUSTACK</span>
+        <span class="verify-seal-word">VERIFIED</span>
+        <span class="verify-seal-sub">VS. PUBLISHED SYLLABUS &middot; ${verifiedSubjectCount} PAGES LIVE</span>
+      </div>
+    </div>
   </div>
-</section>`;
+</div>`;
+
+  // Semester shortcut strip: a quick-scan tile per branch, same published/
+  // not-yet-available honesty rule as the registry rows below (never a dead
+  // link) -- just a faster way to jump straight in for repeat visitors.
+  const semesterTiles = branches.map(b => b.published
+    ? `<a class="semester-tile" href="${escapeHtml(b.href)}">
+        <div class="semester-tile-code">${escapeHtml(b.code)}</div>
+        <div class="semester-tile-count mono">${b.verifiedCount} subject${b.verifiedCount === 1 ? '' : 's'}</div>
+      </a>`
+    : `<div class="semester-tile semester-tile--disabled" aria-disabled="true">
+        <div class="semester-tile-code">${escapeHtml(b.code)}</div>
+        <div class="semester-tile-soon">soon</div>
+      </div>`
+  ).join('');
+  const semesterStrip = `
+<div class="semester-strip">
+  <div class="semester-strip-head">
+    <h2>Jump straight to your semester</h2>
+    <span class="semester-strip-tag">R23</span>
+  </div>
+  <div class="semester-tiles">${semesterTiles}</div>
+</div>`;
 
   // The verification pipeline is the brand differentiator, promoted to its own
   // strip right under the hero. Static copy -- it describes the process, not data.
@@ -60,19 +97,19 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null 
 <section class="tools-band">
   <h2>Not sure where to start?</h2>
   <div class="home-cta-row">
-    <a class="home-cta-card" href="/branch-guide/">
-      <h3>Choosing a branch?</h3>
-      <p class="tagline">A 5-question quiz plus an honest comparison of all six branches -- no fabricated placement stats, no invented rankings.</p>
-      <span class="home-cta-go">Open the branch guide &rarr;</span>
+    <a class="home-cta-card home-cta-card--featured" href="/branch-guide/">
+      <h3>Confused about branches?</h3>
+      <p class="tagline">A 5-question quiz and an honest comparison of all six -- no fabricated placement stats, no invented rankings.</p>
+      <span class="home-cta-go">Take the quiz &rarr;</span>
     </a>
     <a class="home-cta-card" href="/colleges/">
-      <h3>College directory</h3>
-      <p class="tagline">Constituent, autonomous, and affiliated colleges${collegeUniversitySummary ? ` across ${escapeHtml(collegeUniversitySummary)}` : ''}, grouped by university and filterable by district.</p>
+      <h3>${verifiedCollegeCount ? `${verifiedCollegeCount} colleges, on record` : 'College directory'}</h3>
+      <p class="tagline">Filter by district across${collegeUniversitySummary ? ` ${escapeHtml(collegeUniversitySummary)}` : ' every covered university'}. No &ldquo;best college&rdquo; claims.</p>
       <span class="home-cta-go">Open the directory &rarr;</span>
     </a>
     <div class="home-cta-card home-cta-card--soon" aria-disabled="true">
       <h3>Ask JNTUStack <span class="badge badge--soon">Soon</span></h3>
-      <p class="tagline">Ask a question, get an answer grounded only in verified pages. Not live yet -- it ships once it can cite a real source every time.</p>
+      <p class="tagline">Answers grounded only in verified pages -- ships once it can cite a source every time.</p>
       <span class="home-cta-go home-cta-go--muted">Coming soon</span>
     </div>
   </div>
@@ -83,6 +120,10 @@ ${hero}
 
 <div class="ad-slot">ad slot &mdash; below intro</div>
 
+${semesterStrip}
+
+${toolsBand}
+
 ${pipeline}
 
 <section>
@@ -90,8 +131,6 @@ ${pipeline}
   <p class="guide-intro">Published branches link to every verified subject in one place. Branches without a verified subject yet are listed but marked not-yet-available -- never a dead link.</p>
   <div class="registry">${branchRows}</div>
 </section>
-
-${toolsBand}
 
 <div class="disclaimer-box">JNTUStack is an independent student resource, not affiliated with JNTU Kakinada, Hyderabad, Anantapur, or GV. New content is added only after it's checked against a published source -- see the "Verified" stamp on each page.</div>
 `;
