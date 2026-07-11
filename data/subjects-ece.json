@@ -12,14 +12,65 @@
       "subject_code": null,
       "name": "Signals and Systems",
       "category": "EngineeringScience",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Introduction", "topics": ["Definition and classification of signals and systems", "Operations on signals: time-shifting, time-scaling, amplitude-shifting/scaling", "Complex exponential and sinusoidal signals; singularity functions (impulse, step, signum, ramp)", "Analogy between vectors and signals; orthogonal signal space; mean square error; orthogonality in complex functions"] },
-        { "number": 2, "title": "Fourier Series and Fourier Transform", "topics": ["Fourier series of continuous-time periodic signals; Dirichlet's conditions", "Trigonometric and exponential Fourier series; complex Fourier spectrum", "Fourier transform of standard and periodic signals; properties", "Introduction to Hilbert transform"] },
-        { "number": 3, "title": "Analysis of Linear Systems", "topics": ["Linear system, impulse response, LTI and LTV systems", "Convolution in time and frequency domain; transfer function of an LTI system", "Filter characteristics; distortionless transmission; signal and system bandwidth", "Ideal LPF/HPF/BPF; Paley-Wiener criterion; bandwidth-rise time relation"] },
-        { "number": 4, "title": "Laplace Transforms", "topics": ["Region of convergence (ROC) and constraints for various signal classes", "Properties of Laplace transforms; inverse Laplace transform", "Relation between Laplace transform and Fourier transform", "Laplace transform via waveform synthesis"] },
-        { "number": 5, "title": "Sampling Theorem and Z-Transforms", "topics": ["Sampling theorem for band-limited signals; impulse, natural and flat-top sampling", "Reconstruction; aliasing; band-pass sampling", "Z-transform of a discrete sequence; ROC; inverse Z-transform; properties", "Distinction between Laplace, Fourier and Z transforms"] }
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Definition and classification of signals and systems",
+            "Operations on signals: time-shifting, time-scaling, amplitude-shifting/scaling",
+            "Complex exponential and sinusoidal signals; singularity functions (impulse, step, signum, ramp)",
+            "Analogy between vectors and signals; orthogonal signal space; signal approximation using orthogonal functions; mean square error; orthogonality in complex functions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fourier Series and Fourier Transform",
+          "topics": [
+            "Fourier series of continuous-time periodic signals; Dirichlet's conditions",
+            "Trigonometric and exponential Fourier series; complex Fourier spectrum",
+            "Fourier transform of standard and periodic signals; properties",
+            "Introduction to Hilbert transform"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Analysis of Linear Systems",
+          "topics": [
+            "Linear system, impulse response, LTI and LTV systems",
+            "Convolution in time and frequency domain; transfer function of an LTI system",
+            "Filter characteristics; distortionless transmission; signal and system bandwidth",
+            "Ideal LPF/HPF/BPF; Paley-Wiener criterion; bandwidth-rise time relation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Correlation and Sampling Theorem",
+          "topics": [
+            "Auto-correlation and cross-correlation of functions; properties of correlation function; energy density spectrum, Parseval's theorem, power density spectrum; relation between convolution and correlation",
+            "Detection of periodic signals in the presence of noise by correlation; extraction of signal from noise by filtering",
+            "Sampling theorem: graphical and analytical proof for band-limited signals; impulse, natural and flat-top sampling",
+            "Reconstruction of signal from its samples; effect of under-sampling (aliasing); introduction to band-pass sampling"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Laplace Transforms and Z-Transforms",
+          "topics": [
+            "Laplace transforms: region of convergence (ROC); constraints on ROC for various classes of signals",
+            "Properties of Laplace transforms; inverse Laplace transform; relation between Laplace transform and Fourier transform",
+            "Laplace transform of signals using waveform synthesis",
+            "Z-transform of a discrete sequence; region of convergence in Z-transform; constraints on ROC for various classes of signals",
+            "Inverse Z-transform; properties of Z-transforms; distinction between Laplace, Fourier and Z-transforms"
+          ]
+        }
       ],
       "course_outcomes": [
         "Differentiate the various classifications of signals and systems",
@@ -28,14 +79,23 @@
         "Know the sampling process and various types of sampling techniques.",
         "Apply Laplace and z-transforms to analyze signals and Systems (continuous & discrete)."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "signals-and-systems-jntuk-r23-ece-2-1",
         "title": "Signals and Systems - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Signals and Systems syllabus: unit-wise topics (Fourier, Laplace, Z-transforms, sampling) and credits."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the Tirumala Engineering College JNTUK R23 ECE PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -49,14 +109,64 @@
       "subject_code": null,
       "name": "Electronic Devices and Circuits",
       "category": "ProfessionalCore",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Review of Semiconductor Physics and Junction Diode Characteristics", "topics": ["Hall effect, continuity equation, law of junction, Fermi-Dirac function, Fermi level", "PN junction energy band diagram; open-circuited and biased p-n junction", "Diode equation, V-I characteristics, temperature dependence", "Diode resistance and diode capacitance"] },
-        { "number": 2, "title": "Special Semiconductor Devices and Diode Circuits", "topics": ["Zener diode and breakdown mechanisms; Varactor, LED, Photodiode, Tunnel diode, UJT, SCR", "Diode as a circuit element; load-line concept; clippers and clampers; peak detector; comparators", "Rectifiers: half-wave, full-wave, bridge; derivations", "Filters: inductor, capacitor, pi-section; ripple factor comparison"] },
-        { "number": 3, "title": "Transistor Characteristics, Biasing and Thermal Stabilization", "topics": ["BJT current components; CB, CE, CC configurations; Ebers-Moll model; phototransistor", "Need for biasing; operating point; load-line analysis", "Biasing methods: fixed bias, collector-to-base, self bias; stability factors (S, S', S'')", "Bias compensation; thermal runaway and thermal stability"] },
-        { "number": 4, "title": "Small Signal Low Frequency Transistor Amplifier Models (BJT)", "topics": ["Two-port network; transistor hybrid model; determination and conversion of h-parameters", "Generalized analysis of transistor amplifier using h-parameters", "Analysis of CB, CE, CC amplifiers (exact and approximate)", "Comparison of transistor amplifiers"] },
-        { "number": 5, "title": "FET and MOSFET", "topics": ["FET types; JFET operation, characteristics, biasing; small-signal model", "MOSFET structure and operation in triode and saturation regions", "V-I characteristics of MOSFET; MOS transconductance; small-signal model", "PMOS and NMOS transistors; comparison of bipolar and MOS devices"] }
+        {
+          "number": 1,
+          "title": "Review of Semiconductor Physics and Junction Diode Characteristics",
+          "topics": [
+            "Mobility and conductivity; intrinsic and extrinsic semiconductors",
+            "Hall effect, continuity equation, law of junction, Fermi-Dirac function, Fermi level in intrinsic and extrinsic semiconductors",
+            "PN junction energy band diagram; open-circuited and biased p-n junction; current components in p-n junction diode",
+            "Diode equation, V-I characteristics, temperature dependence on V-I characteristics; diode resistance and diode capacitance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Special Semiconductor Devices and Diode Circuits",
+          "topics": [
+            "Zener diode and breakdown mechanisms, Zener diode applications; Varactor diode, LED, photodiode, tunnel diode, UJT, PNPN diode, SCR - construction, operation and V-I characteristics",
+            "Diode as a circuit element; load-line concept; piecewise linear diode model; clipping circuits (including clipping at two independent levels); peak detector; clamping circuits; comparators; sampling gate",
+            "Rectifiers: half-wave, full-wave, bridge rectifier; derivations of rectifier characteristics",
+            "Filters: inductor filter, capacitor filter, pi-section filter; comparison of filter circuits by ripple factor"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Transistor Characteristics, Biasing and Thermal Stabilization",
+          "topics": [
+            "Junction transistor, transistor current components, transistor equation in CB configuration, transistor as an amplifier; characteristics in CB, CE, CC configurations",
+            "Ebers-Moll model of a transistor; punch-through/reach-through; phototransistor; typical transistor junction voltage values",
+            "Need for biasing; operating point; load-line analysis; BJT biasing methods: fixed bias, collector-to-base bias, self bias",
+            "Stabilization against variations in VBE, Ic and beta; stability factors (S, S', S''); bias compensation; thermal runaway and thermal stability"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Small Signal Low Frequency Transistor Amplifier Models (BJT)",
+          "topics": [
+            "Two-port network; transistor hybrid model; determination and conversion of h-parameters",
+            "Generalized analysis of transistor amplifier using h-parameters",
+            "Analysis of CB, CE, CC amplifiers (exact and approximate)",
+            "Comparison of transistor amplifiers"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "FET and MOSFET",
+          "topics": [
+            "FET types; JFET operation, characteristics; small-signal model of JFET",
+            "MOSFET structure; operation in triode and saturation regions; MOSFET as a variable resistor; derivation of V-I characteristics; channel length modulation",
+            "MOS transconductance; MOS device models (MOS small-signal model); PMOS transistor; CMOS technology; comparison of bipolar and MOS devices",
+            "CMOS amplifiers: general considerations, common-source stage, common-gate stage, source follower; comparison of FET amplifiers"
+          ]
+        }
       ],
       "course_outcomes": [
         "Apply the basic concepts of semiconductor physics.",
@@ -65,14 +175,23 @@
         "Know the need of transistor biasing, various biasing techniques for BJT and FET and stabilization concepts with necessary expressions",
         "Apply small signal low frequency transistor amplifier circuits using BJT and FET in different configurations"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "electronic-devices-and-circuits-jntuk-r23-ece-2-1",
         "title": "Electronic Devices and Circuits - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Electronic Devices and Circuits syllabus: diodes, rectifiers, BJT/FET characteristics, biasing and amplifier models."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -86,14 +205,65 @@
       "subject_code": null,
       "name": "Switching Theory and Logic Design",
       "category": "ProfessionalCore",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Number Systems, Codes and Boolean Theorems", "topics": ["Radix conversions; r's and (r-1)'s complements of signed numbers", "Gray, BCD, Excess-3, 2421 codes; error detection and correction (parity, Hamming code)", "Boolean theorems; De Morgan's theorems; complementation and duality", "Logic operations; SOP and POS forms; NAND-NAND and NOR-NOR realizations"] },
-        { "number": 2, "title": "Minimization Techniques and Combinational Logic Design", "topics": ["K-map (up to 6 variables) and Quine-McCluskey (tabular) method", "Half/full adder and subtractor; 4-bit adder-subtractor", "BCD adder, Excess-3 adder, carry look-ahead adder", "Code converters using Karnaugh method"] },
-        { "number": 3, "title": "Combinational Logic using MSI/LSI and PLDs", "topics": ["Encoder, decoder, multiplexer, de-multiplexer; higher-order from lower-order circuits", "Boolean functions using decoders and multiplexers", "Priority encoder, 4-bit digital comparator, seven-segment decoder", "PLDs: PROM, PAL, PLA - structures and realization"] },
-        { "number": 4, "title": "Sequential Circuits I", "topics": ["Synchronous vs asynchronous circuits; NAND/NOR latches", "Flip-flops: RS, JK, T, D with reset/clear; flip-flop conversions", "Ripple and synchronous counters; Johnson and ring counters", "Registers: buffer, shift, bidirectional, universal shift register"] },
-        { "number": 5, "title": "Sequential Circuits II", "topics": ["Finite state machine; state diagrams and state tables; reduction of state tables", "Analysis of clocked sequential circuits", "Mealy to Moore conversion and vice-versa", "Sequence generator and sequence detector design (with/without overlapping)"] }
+        {
+          "number": 1,
+          "title": "Number Systems, Codes and Boolean Theorems",
+          "topics": [
+            "Radix conversions; r's and (r-1)'s complements of signed numbers",
+            "Gray, BCD, Excess-3, 2421, 84-2-1 codes; error detection and correction (parity checking, Hamming code)",
+            "Boolean theorems; De Morgan's theorems; complementation and duality; logic operations (NOT, OR, AND, universal logic operations, EX-OR, EX-NOR)",
+            "SOP and POS forms; NAND-NAND and NOR-NOR realizations; realization of three-level logic circuits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Minimization Techniques and Combinational Logic Design",
+          "topics": [
+            "K-map (up to 6 variables) and Quine-McCluskey (tabular) method",
+            "Half/full adder and subtractor; applications of full adders; 4-bit adder-subtractor",
+            "BCD adder, Excess-3 adder, carry look-ahead adder",
+            "Code converters using Karnaugh method"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Combinational Logic using MSI/LSI and PLDs",
+          "topics": [
+            "Encoder, decoder, multiplexer, de-multiplexer; higher-order from lower-order circuits",
+            "Boolean functions using decoders and multiplexers",
+            "Priority encoder, 4-bit digital comparator, seven-segment decoder",
+            "PLDs: PROM, PAL, PLA - structures, realization of Boolean functions and programming table"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sequential Circuits I",
+          "topics": [
+            "Synchronous vs asynchronous circuits; NAND/NOR latches",
+            "Flip-flops: RS, JK, T, D with reset/clear terminals; flip-flop conversions",
+            "Design of ripple counters, synchronous counters, Johnson counter, ring counter",
+            "Registers: buffer, control buffer register, shift register, bidirectional shift register, universal shift register",
+            "Relevant ICs and their functions: 7474, 7475, 7476, 7490, 7493, 74121"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Sequential Circuits II",
+          "topics": [
+            "Finite state machine; state diagrams and state tables; reduction of state tables",
+            "Analysis of clocked sequential circuits",
+            "Mealy to Moore conversion and vice-versa",
+            "Sequence generator and sequence detector design (with/without overlapping)"
+          ]
+        }
       ],
       "course_outcomes": [
         "Classify different number systems and apply to generate various codes.",
@@ -103,14 +273,23 @@
         "The operation and design methodology for synchronous sequential circuits and algorithmic state machines.",
         "Produce innovative designs by modifying the traditional design techniques."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "switching-theory-and-logic-design-jntuk-r23-ece-2-1",
         "title": "Switching Theory & Logic Design - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Switching Theory and Logic Design syllabus: number systems, K-maps, combinational and sequential circuits."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -124,14 +303,63 @@
       "subject_code": null,
       "name": "Environmental Science",
       "category": "MandatoryNonCredit",
-      "credits": { "L": 2, "T": 0, "P": 0, "C": 0 },
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Multidisciplinary Nature and Natural Resources", "topics": ["Scope and importance of environmental studies; need for public awareness", "Renewable and non-renewable resources", "Forest, water, mineral, food and energy resources and associated problems"] },
-        { "number": 2, "title": "Ecosystems and Biodiversity", "topics": ["Ecosystem structure and function; energy flow; ecological succession; food chains/webs/pyramids", "Forest, grassland, desert and aquatic ecosystems", "Biodiversity: genetic/species/ecosystem; value, hotspots, threats", "Conservation of biodiversity: in-situ and ex-situ"] },
-        { "number": 3, "title": "Environmental Pollution and Solid Waste Management", "topics": ["Air, water, soil, marine, noise, thermal pollution and nuclear hazards", "Solid waste management: urban and industrial wastes", "Disaster management: floods, earthquakes, cyclones, landslides"] },
-        { "number": 4, "title": "Social Issues and the Environment", "topics": ["Sustainable development; water conservation and rainwater harvesting; watershed management", "Environmental ethics; climate change, global warming, acid rain, ozone depletion", "Environment protection acts and legislation"] },
-        { "number": 5, "title": "Human Population and the Environment", "topics": ["Population growth and explosion; family welfare programmes", "Environment and human health; human rights; value education", "Role of information technology in environment and human health"] }
+        {
+          "number": 1,
+          "title": "Multidisciplinary Nature and Natural Resources",
+          "topics": [
+            "Multidisciplinary nature of environmental studies: definition, scope and importance; need for public awareness",
+            "Renewable and non-renewable resources; natural resources and associated problems",
+            "Forest resources: use and over-exploitation, deforestation, timber extraction, mining and dams and other effects on forest and tribal people",
+            "Water resources: use and over-utilization of surface and ground water; floods, drought, conflicts over water, dams - benefits and problems",
+            "Mineral resources: use and exploitation, environmental effects of extracting and using mineral resources",
+            "Food resources: world food problems, changes caused by agriculture and overgrazing, effects of modern agriculture, fertilizer-pesticide problems, water logging, salinity; energy resources"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ecosystems and Biodiversity",
+          "topics": [
+            "Ecosystem structure and function; producers, consumers and decomposers; energy flow; ecological succession; food chains, food webs and ecological pyramids",
+            "Forest, grassland, desert and aquatic (ponds, streams, lakes, rivers, oceans, estuaries) ecosystems: types, characteristic features, structure and function",
+            "Biodiversity: genetic, species and ecosystem diversity; bio-geographical classification of India; value of biodiversity (consumptive, productive, social, ethical, aesthetic, option values); biodiversity at global, national and local levels; India as a mega-diversity nation; hotspots of biodiversity",
+            "Threats to biodiversity: habitat loss, poaching of wildlife, man-wildlife conflicts; endangered and endemic species of India; conservation of biodiversity: in-situ and ex-situ"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Environmental Pollution and Solid Waste Management",
+          "topics": [
+            "Air, water, soil, marine, noise, thermal pollution and nuclear hazards: definition, cause, effects and control measures",
+            "Solid waste management: causes, effects and control measures of urban and industrial wastes; role of an individual in prevention of pollution",
+            "Disaster management: floods, earthquake, cyclone and landslides"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Social Issues and the Environment",
+          "topics": [
+            "Sustainable development; urban problems related to energy; water conservation, rainwater harvesting and watershed management; resettlement and rehabilitation of people",
+            "Environmental ethics: issues and possible solutions; climate change, global warming, acid rain, ozone layer depletion, nuclear accidents and holocaust; wasteland reclamation; consumerism and waste products",
+            "Environment Protection Act; Air (Prevention and Control of Pollution) Act; Water (Prevention and Control of Pollution) Act; Wildlife Protection Act; Forest Conservation Act; issues in enforcement of environmental legislation; public awareness"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Human Population and the Environment",
+          "topics": [
+            "Population growth and variation among nations; population explosion; family welfare programmes",
+            "Environment and human health; human rights; value education; HIV/AIDS; women and child welfare",
+            "Role of information technology in environment and human health"
+          ]
+        }
       ],
       "course_outcomes": [
         "Grasp multi disciplinary nature of environmental studies and various renewable and non-renewable resources.",
@@ -140,14 +368,23 @@
         "Understand the rainwater harvesting, watershed management, ozone layer depletion and waste land reclamation.",
         "Illustrate the causes of population explosion, value education and welfare programmes."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "environmental-science-jntuk-r23-ece-2-1",
         "title": "Environmental Science - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Environmental Science (audit course) syllabus: natural resources, ecosystems, pollution and social issues."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as '-' (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -161,18 +398,32 @@
       "subject_code": null,
       "name": "Electronic Devices and Circuits Lab",
       "category": "ProfessionalCore",
-      "credits": { "L": 0, "T": 0, "P": 3, "C": 1.5 },
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
       "type": "lab",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "electronic-devices-and-circuits-lab-jntuk-r23-ece-2-1",
         "title": "Electronic Devices & Circuits Lab - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Electronic Devices and Circuits Lab: experiments on diodes, rectifiers, BJT/FET characteristics, biasing and amplifiers."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Experiment-based lab (clippers/clampers, rectifiers, BJT-CE and FET-CS characteristics, SCR/UJT, biasing, CE/CC/CS amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -186,18 +437,32 @@
       "subject_code": null,
       "name": "Signals and Systems Lab",
       "category": "ProfessionalCore",
-      "credits": { "L": 0, "T": 0, "P": 3, "C": 1.5 },
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
       "type": "lab",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "signals-and-systems-lab-jntuk-r23-ece-2-1",
         "title": "Signals and Systems Lab - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Signals and Systems Lab: signal generation, operations, convolution/correlation, Fourier, Laplace and Z-transforms."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Experiment-based lab (basic signal generation, operations on signals, energy/power, convolution and correlation, Fourier/Laplace/Z-transforms). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -211,18 +476,32 @@
       "subject_code": null,
       "name": "Data Structures using Python",
       "category": "SkillEnhancement",
-      "credits": { "L": 0, "T": 1, "P": 2, "C": 2 },
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
       "type": "theory_cum_lab",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "data-structures-using-python-jntuk-r23-ece-2-1",
         "title": "Data Structures using Python - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Data Structures using Python: skill course with programming experiments (searching, sorting, stacks, queues, linked lists, BST)."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Skill Enhancement course delivered as programming experiments (classes/inheritance, comprehensions, linear/binary search, bubble/selection/merge/quick sort, stacks, queues, singly/doubly linked lists, BST). Name, 0-1-2-2 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -247,32 +526,59 @@
         {
           "number": 1,
           "title": "Probability and Random Variable",
-          "topics": []
+          "topics": [
+            "Probability introduced through sets and relative frequency: experiments and sample spaces, discrete and continuous sample spaces, events",
+            "Probability definitions and axioms; joint probability, conditional probability, total probability, Bayes' theorem, independent events",
+            "Random variable: definition, conditions for a function to be a random variable; discrete, continuous and mixed random variables; distribution and density functions and their properties",
+            "Binomial, Poisson, uniform, Gaussian, exponential, Rayleigh distributions; conditioning event, conditional distribution and conditional density"
+          ]
         },
         {
           "number": 2,
           "title": "Operations on Single and Multiple Random Variables - Expectations",
-          "topics": []
+          "topics": [
+            "Expected value of a random variable; function of a random variable; moments about the origin, central moments, variance and skew; Chebyshev's inequality; characteristic function; moment generating function",
+            "Transformations of a random variable: monotonic and non-monotonic transformations of continuous random variables; transformation of a discrete random variable",
+            "Vector random variables; joint distribution function and its properties; marginal distribution functions; conditional distribution and density (point and interval conditioning); statistical independence",
+            "Sum of two and several random variables; central limit theorem (proof not expected); unequal and equal distributions",
+            "Joint moments about the origin, joint central moments, joint characteristic functions; jointly Gaussian random variables (two and N random variable cases); transformations of multiple random variables; linear transformations of Gaussian random variables"
+          ]
         },
         {
           "number": 3,
           "title": "Random Processes - Temporal Characteristics",
-          "topics": []
+          "topics": [
+            "The random process concept; classification of processes; deterministic and nondeterministic processes; distribution and density functions; stationarity and statistical independence",
+            "First-order, second-order, wide-sense, N-order and strict-sense stationarity; time averages and ergodicity; mean-ergodic and correlation-ergodic processes",
+            "Autocorrelation and cross-correlation functions and their properties; covariance functions; Gaussian random processes; Poisson random process",
+            "Random signal response of linear systems: system response via convolution, mean and mean-squared value of system response, autocorrelation function of response, cross-correlation functions of input and output"
+          ]
         },
         {
           "number": 4,
           "title": "Random Processes - Spectral Characteristics",
-          "topics": []
+          "topics": [
+            "The power spectrum: properties; relationship between power spectrum and autocorrelation function",
+            "The cross-power density spectrum: properties; relationship between cross-power spectrum and cross-correlation function",
+            "Spectral characteristics of system response: power density spectrum of response; cross-power density spectrums of input and output"
+          ]
         },
         {
           "number": 5,
-          "title": "Noise Sources and Linear Systems",
-          "topics": []
+          "title": "Noise Sources and Information Theory",
+          "topics": [
+            "Resistive/thermal noise source; arbitrary noise sources; effective noise temperature; noise equivalent bandwidth",
+            "Average noise figures; average noise figure of cascaded networks; narrow band noise; quadrature representation of narrow band noise and its properties",
+            "Entropy, information rate; source coding: Huffman coding, Shannon-Fano coding",
+            "Mutual information; channel capacity of a discrete channel; Shannon-Hartley law; trade-off between bandwidth and SNR"
+          ]
         }
       ],
       "course_outcomes": [
         "Perform operations on single and multiple Random variables.",
-        "Determine the Spectral and temporal characteristics of Random Signals."
+        "Determine the Spectral and temporal characteristics of Random Signals.",
+        "Characterize LTI systems driven by stationary random process by using ACFs and PSDs.",
+        "Understand the concepts of Noise and Information theory in Communication systems"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -286,10 +592,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
@@ -304,14 +610,63 @@
       "subject_code": null,
       "name": "Universal Human Values - Understanding Harmony and Ethical Human Conduct",
       "category": "HSMC",
-      "credits": { "L": 2, "T": 1, "P": 0, "C": 3 },
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Introduction to Value Education", "topics": [] },
-        { "number": 2, "title": "Harmony in the Human Being", "topics": [] },
-        { "number": 3, "title": "Harmony in the Family and Society", "topics": [] },
-        { "number": 4, "title": "Harmony in the Nature/Existence", "topics": [] },
-        { "number": 5, "title": "Implications of the Holistic Understanding - Professional Ethics", "topics": [] }
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right Understanding, Relationship and Physical Facility (Holistic Development and the Role of Education); Understanding Value Education",
+            "Self-exploration as the Process for Value Education; Continuous Happiness and Prosperity - the Basic Human Aspirations",
+            "Happiness and Prosperity - Current Scenario; Method to Fulfill the Basic Human Aspirations",
+            "Practice sessions: Sharing about Oneself, Exploring Human Consciousness, Exploring Natural Acceptance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "Understanding Human being as the Co-existence of the self and the body; Distinguishing between the Needs of the self and the body",
+            "The body as an Instrument of the self; Understanding Harmony in the self",
+            "Harmony of the self with the body; Programme to ensure self-regulation and Health",
+            "Practice sessions: Exploring the difference of Needs of self and body, Exploring Sources of Imagination in the self, Exploring Harmony of self with the body"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the Family - the Basic Unit of Human Interaction; 'Trust' - the Foundational Value in Relationship",
+            "'Respect' - as the Right Evaluation; Other Feelings, Justice in Human-to-Human Relationship",
+            "Understanding Harmony in the Society; Vision for the Universal Human Order",
+            "Practice sessions: Exploring the Feeling of Trust, Exploring the Feeling of Respect, Exploring Systems to fulfil Human Goal"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in the Nature/Existence",
+          "topics": [
+            "Understanding Harmony in the Nature; Interconnectedness, self-regulation and Mutual Fulfilment among the Four Orders of Nature",
+            "Realizing Existence as Co-existence at All Levels; The Holistic Perception of Harmony in Existence",
+            "Practice sessions: Exploring the Four Orders of Nature, Exploring Co-existence in Existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications of the Holistic Understanding - Professional Ethics",
+          "topics": [
+            "Natural Acceptance of Human Values; Definitiveness of (Ethical) Human Conduct",
+            "A Basis for Humanistic Education, Humanistic Constitution and Universal Human Order; Competence in Professional Ethics",
+            "Holistic Technologies, Production Systems and Management Models - Typical Case Studies; Strategies for Transition towards Value-based Life and Profession",
+            "Practice sessions: Exploring Ethical Human Conduct, Exploring Humanistic Models in Education, Exploring Steps of Transition towards Universal Human Order"
+          ]
+        }
       ],
       "course_outcomes": [
         "Define the terms like Natural Acceptance, Happiness and Prosperity",
@@ -321,14 +676,23 @@
         "Justify the need for universal human values and harmonious existence",
         "Develop as socially and ecologically responsible engineers"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "universal-human-values-jntuk-r23-ece-2-1",
         "title": "Universal Human Values (UHV) - JNTUK R23 ECE 2-1",
         "meta_description": "JNTUK R23 ECE 2-1 Universal Human Values: value education, harmony in the human being, family, society, nature and professional ethics."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -342,14 +706,59 @@
       "subject_code": null,
       "name": "Managerial Economics and Financial Analysis",
       "category": "HSMC",
-      "credits": { "L": 2, "T": 0, "P": 0, "C": 2 },
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Managerial Economics", "topics": ["Nature, meaning and significance of managerial economics", "Demand concept and law of demand; demand elasticity (types and measurement)", "Demand forecasting: factors and methods"] },
-        { "number": 2, "title": "Production and Cost Analysis", "topics": ["Production function; least-cost combination; short-run and long-run production", "Isoquants and isocosts; cost concepts and behaviour", "Break-even analysis and determination of break-even point"] },
-        { "number": 3, "title": "Business Organizations and Markets", "topics": ["Forms of business organizations: sole proprietary, partnership, joint stock, public sector", "Market types: perfect and imperfect competition, monopoly, monopolistic, oligopoly", "Price-output determination; pricing methods and strategies"] },
-        { "number": 4, "title": "Capital Budgeting", "topics": ["Working capital types, components and sources; estimating requirements", "Capital budgeting: features, proposals, methods and evaluation", "Payback, ARR, NPV and IRR methods"] },
-        { "number": 5, "title": "Financial Accounting and Analysis", "topics": ["Double-entry bookkeeping; journal, ledger, trial balance", "Final accounts: trading account, profit and loss account, balance sheet", "Ratio analysis: liquidity, activity, capital structure and profitability ratios"] }
+        {
+          "number": 1,
+          "title": "Managerial Economics",
+          "topics": [
+            "Nature, meaning and significance of managerial economics",
+            "Demand concept and law of demand; demand elasticity (types and measurement)",
+            "Demand forecasting: factors and methods"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Production and Cost Analysis",
+          "topics": [
+            "Production function; least-cost combination; short-run and long-run production",
+            "Isoquants and isocosts; cost concepts and behaviour",
+            "Break-even analysis and determination of break-even point"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Business Organizations and Markets",
+          "topics": [
+            "Forms of business organizations: sole proprietary, partnership, joint stock, public sector",
+            "Market types: perfect and imperfect competition, monopoly, monopolistic, oligopoly",
+            "Price-output determination; pricing methods and strategies"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Capital Budgeting",
+          "topics": [
+            "Working capital types, components and sources; estimating requirements",
+            "Capital budgeting: features, proposals, methods and evaluation",
+            "Payback, ARR, NPV and IRR methods"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Financial Accounting and Analysis",
+          "topics": [
+            "Double-entry bookkeeping; journal, ledger, trial balance",
+            "Final accounts: trading account, profit and loss account, balance sheet",
+            "Ratio analysis: liquidity, activity, capital structure and profitability ratios"
+          ]
+        }
       ],
       "course_outcomes": [
         "Define the concepts related to Managerial Economics, financial accounting and management",
@@ -359,14 +768,23 @@
         "Evaluate the capital budgeting techniques.",
         "Develop the accounting statements and evaluate the financial performance of business entity"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "managerial-economics-and-financial-analysis-jntuk-r23-ece-2-2",
         "title": "Managerial Economics & Financial Analysis - R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Managerial Economics and Financial Analysis: demand, production and cost, markets, capital budgeting and financial accounting."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -380,14 +798,62 @@
       "subject_code": null,
       "name": "Linear Control Systems",
       "category": "EngineeringScience",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Introduction", "topics": ["Open-loop and closed-loop control systems and their differences", "Feedback characteristics and effects of feedback", "Mathematical models; differential equations; impulse response and transfer functions", "Translational and rotational mechanical systems"] },
-        { "number": 2, "title": "Transfer Function Representation and Time Response Analysis", "topics": ["Transfer function of DC/AC servo motors and synchros", "Block diagram algebra; signal flow graph and Mason's gain formula", "Standard test signals; first- and second-order time response; time-domain specifications", "Steady-state errors and error constants"] },
-        { "number": 3, "title": "Stability Analysis in S-Domain and Root Locus", "topics": ["Concept of stability; Routh's stability criterion; conditional stability", "Limitations of Routh's stability criterion", "Root locus concept and construction; effect of adding poles and zeros"] },
-        { "number": 4, "title": "Frequency Response Analysis", "topics": ["Correlation between time and frequency response", "Polar plots and Bode plots", "Nyquist stability criterion"] },
-        { "number": 5, "title": "Classical Control Design and State Space Analysis", "topics": ["Lag, lead and lead-lag compensators; PID controllers", "State, state variables and state model; state models from block diagrams", "Diagonalization; solving state equations; state transition matrix", "Controllability and observability"] }
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Open-loop and closed-loop control systems and their differences",
+            "Feedback characteristics and effects of feedback",
+            "Mathematical models; differential equations; impulse response and transfer functions",
+            "Translational and rotational mechanical systems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Transfer Function Representation and Time Response Analysis",
+          "topics": [
+            "Transfer function of DC/AC servo motors and synchros",
+            "Block diagram algebra; signal flow graph and Mason's gain formula",
+            "Standard test signals; first- and second-order time response; time-domain specifications",
+            "Steady-state errors and error constants"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Stability Analysis in S-Domain and Root Locus",
+          "topics": [
+            "Concept of stability; Routh's stability criterion; conditional stability",
+            "Limitations of Routh's stability criterion",
+            "Root locus concept and construction; effect of adding poles and zeros"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Frequency Response Analysis",
+          "topics": [
+            "Correlation between time and frequency response",
+            "Polar plots and Bode plots",
+            "Nyquist stability criterion"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Classical Control Design and State Space Analysis",
+          "topics": [
+            "Lag, lead and lead-lag compensators; PID controllers",
+            "State, state variables and state model; state models from block diagrams",
+            "Diagonalization; solving state equations; state transition matrix",
+            "Controllability and observability"
+          ]
+        }
       ],
       "course_outcomes": [
         "This course introduces the concepts of feedback and its advantages to various control systems",
@@ -395,14 +861,23 @@
         "Control systems for various applications can be designed using time-domain and frequency domain analysis.",
         "In addition to the conventional approach, the state space approach for the analysis of control systems is also introduced."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "linear-control-systems-jntuk-r23-ece-2-2",
         "title": "Linear Control Systems - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Linear Control Systems syllabus: transfer functions, time and frequency response, stability, root locus and state space."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -416,14 +891,62 @@
       "subject_code": null,
       "name": "Electromagnetic Waves and Transmission Lines",
       "category": "ProfessionalCore",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Electrostatics", "topics": ["Coordinate systems; Coulomb's law; electric field intensity and flux density", "Gauss law and applications; electric potential; Maxwell's two electrostatic equations; energy density", "Poisson's and Laplace's equations", "Capacitance: parallel plate and coaxial capacitors"] },
-        { "number": 2, "title": "Magnetostatics and Maxwell's Equations", "topics": ["Biot-Savart law; Ampere's circuital law and applications; magnetic flux density", "Magnetic scalar and vector potentials; forces; inductances and magnetic energy", "Time-varying fields; Faraday's law; displacement current; Maxwell's equations", "Boundary conditions"] },
-        { "number": 3, "title": "EM Wave Characteristics", "topics": ["Wave equations for conducting and dielectric media; uniform plane waves", "Propagation in lossy/lossless dielectrics, free space and good conductors; skin depth; polarization", "Reflection and refraction (normal and oblique incidence)", "Brewster angle, critical angle, total internal reflection; Poynting theorem"] },
-        { "number": 4, "title": "Transmission Lines - I", "topics": ["Types, parameters, T and pi equivalent circuits; transmission line equations", "Primary and secondary constants; characteristic impedance; propagation constant", "Phase and group velocities; infinite, lossless and distortionless lines"] },
-        { "number": 5, "title": "Transmission Lines - II", "topics": ["Input impedance, reflection coefficient, VSWR; shorted, open and matched lines", "UHF lines as circuit elements", "Smith chart construction and applications; quarter-wave transformer; single stub matching"] }
+        {
+          "number": 1,
+          "title": "Electrostatics",
+          "topics": [
+            "Coordinate systems; Coulomb's law; electric field intensity and flux density",
+            "Gauss law and applications; electric potential; Maxwell's two electrostatic equations; energy density",
+            "Convection and conduction currents; dielectric constant; Poisson's and Laplace's equations",
+            "Capacitance: parallel plate and coaxial capacitors"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Magnetostatics and Maxwell's Equations",
+          "topics": [
+            "Biot-Savart law; Ampere's circuital law and applications; magnetic flux density",
+            "Magnetic scalar and vector potentials; forces due to magnetic fields, Ampere's force law; inductances and magnetic energy",
+            "Time-varying fields; Faraday's law and transformer EMF; inconsistency of Ampere's law and displacement current density; Maxwell's equations",
+            "Boundary conditions at a surface"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "EM Wave Characteristics",
+          "topics": [
+            "Wave equations for conducting and dielectric media; uniform plane waves",
+            "Propagation in lossy/lossless dielectrics, free space and good conductors; skin depth; polarization",
+            "Reflection and refraction (normal and oblique incidence); Brewster angle, critical angle, total internal reflection",
+            "Surface impedance; Poynting vector and Poynting theorem"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Transmission Lines - I",
+          "topics": [
+            "Types, parameters, T and pi equivalent circuits; transmission line equations",
+            "Primary and secondary constants; characteristic impedance; propagation constant",
+            "Phase and group velocities; infinite, lossless and distortionless lines"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Transmission Lines - II",
+          "topics": [
+            "Input impedance, reflection coefficient, VSWR, average power; shorted, open and matched lines",
+            "Low-loss RF and UHF transmission lines; UHF lines as circuit elements",
+            "Smith chart construction and applications; quarter-wave transformer; single stub matching"
+          ]
+        }
       ],
       "course_outcomes": [
         "Determine electric field intensity using coulomb's law and Gauss law.",
@@ -432,14 +955,23 @@
         "Examine the primary and secondary constants of different types of transmission lines.",
         "Derive the expressions for input impedance, reflection coefficient, and VSWR of transmission lines and calculate these parameters using smith chart."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "electromagnetic-waves-and-transmission-lines-jntuk-r23-ece-2-2",
         "title": "Electromagnetic Waves & Transmission Lines - R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Electromagnetic Waves and Transmission Lines: electrostatics, magnetostatics, EM waves, transmission lines and Smith chart."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -453,14 +985,62 @@
       "subject_code": null,
       "name": "Electronic Circuit Analysis",
       "category": "ProfessionalCore",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Small Signal High Frequency Transistor Amplifier Models", "topics": ["BJT at high frequencies; hybrid-pi common emitter model; conductances and capacitances", "High-frequency parameters from low-frequency parameters; CE short-circuit current gain", "Cut-off frequencies, frequency response and gain-bandwidth product", "FET common-source and common-drain amplifiers at high frequencies"] },
-        { "number": 2, "title": "Multistage Amplifiers", "topics": ["Classification of amplifiers; methods of coupling; cascaded amplifier analysis", "Two-stage RC coupled amplifier", "Darlington pair, cascode, bootstrap emitter follower", "Differential amplifier using BJT"] },
-        { "number": 3, "title": "Feedback Amplifiers", "topics": ["Feedback principle and concept; types of feedback; feedback topologies", "Characteristics of negative feedback amplifiers", "Generalized analysis and method of analysis; performance comparison"] },
-        { "number": 4, "title": "Oscillators", "topics": ["Oscillator principle and condition for oscillations; types of oscillators", "RC phase-shift and Wien bridge oscillators (BJT and FET)", "LC oscillators: Hartley and Colpitts", "Frequency and amplitude stability of oscillators"] },
-        { "number": 5, "title": "Power and Tuned Amplifiers", "topics": ["Classes A to H; Class A, Class B push-pull, complementary symmetry, Class AB, Class C", "Thermal stability and heat sinks", "Tuned amplifiers: Q-factor, single/double/staggered tuned amplifiers"] }
+        {
+          "number": 1,
+          "title": "Small Signal High Frequency Transistor Amplifier Models",
+          "topics": [
+            "BJT at high frequencies; hybrid-pi common emitter model; conductances and capacitances",
+            "High-frequency parameters from low-frequency parameters; CE short-circuit current gain",
+            "Cut-off frequencies, frequency response and gain-bandwidth product",
+            "FET common-source and common-drain amplifiers at high frequencies"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Multistage Amplifiers",
+          "topics": [
+            "Classification of amplifiers; methods of coupling; cascaded amplifier analysis",
+            "Two-stage RC coupled amplifier",
+            "Darlington pair, cascode, bootstrap emitter follower",
+            "Differential amplifier using BJT"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Feedback Amplifiers",
+          "topics": [
+            "Feedback principle and concept; types of feedback; feedback topologies",
+            "Characteristics of negative feedback amplifiers",
+            "Generalized analysis and method of analysis; performance comparison"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Oscillators",
+          "topics": [
+            "Oscillator principle and condition for oscillations; types of oscillators",
+            "RC phase-shift and Wien bridge oscillators (BJT and FET)",
+            "LC oscillators: Hartley and Colpitts",
+            "Frequency and amplitude stability of oscillators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Power and Tuned Amplifiers",
+          "topics": [
+            "Classes A to H; Class A, Class B push-pull, complementary symmetry, Class AB, Class C",
+            "Thermal stability and heat sinks",
+            "Tuned amplifiers: Q-factor, single/double/staggered tuned amplifiers"
+          ]
+        }
       ],
       "course_outcomes": [
         "Design and analysis of small signal high frequency transistor amplifier using BJT and FET.",
@@ -468,14 +1048,23 @@
         "Derive the expressions for frequency of oscillation and condition for oscillation of RC and LC oscillators and their amplitude and frequency stability concept.",
         "Know the classification of the power and tuned amplifiers and their analysis with performance comparison"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "electronic-circuit-analysis-jntuk-r23-ece-2-2",
         "title": "Electronic Circuit Analysis - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Electronic Circuit Analysis: high-frequency models, multistage amplifiers, feedback, oscillators, power and tuned amplifiers."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -489,14 +1078,64 @@
       "subject_code": null,
       "name": "Analog Communications",
       "category": "ProfessionalCore",
-      "credits": { "L": 3, "T": 0, "P": 0, "C": 3 },
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
       "units": [
-        { "number": 1, "title": "Amplitude Modulation", "topics": ["Need for modulation; frequency division multiplexing", "AM time and frequency domain description; single-tone modulation; power relations", "Generation of AM: square law and switching modulator", "Detection of AM: square law detector and envelope detector"] },
-        { "number": 2, "title": "DSB and SSB Modulation", "topics": ["DSB-SC generation (balanced and ring modulator) and detection (coherent, Costas, squaring loop)", "SSB-SC generation (frequency and phase discrimination) and coherent demodulation", "Vestigial sideband modulation and envelope detection", "Comparison and applications of AM techniques"] },
-        { "number": 3, "title": "Angle Modulation", "topics": ["Phase and frequency modulation; single-tone FM; spectrum; narrowband and wideband FM", "Transmission bandwidth of FM", "Generation of FM: direct and indirect methods", "Detection of FM: balanced discriminator, zero-crossing detector, PLL; FM vs AM"] },
-        { "number": 4, "title": "Radio Transmitters and Receivers", "topics": ["AM and FM transmitters; effect of feedback; frequency stability", "Receiver types: TRF and superheterodyne; RF section, frequency changing and tracking", "Intermediate frequency, AGC; FM receiver and amplitude limiting", "Comparison of FM and AM receivers"] },
-        { "number": 5, "title": "Noise and Pulse Analog Modulation", "topics": ["Noise sources and noise figure; noise in DSB/SSB/AM and angle modulation systems", "Threshold effect; pre-emphasis and de-emphasis", "Pulse analog modulation: PAM, PWM, PPM (generation and detection)", "Time division multiplexing; TDM vs FDM"] }
+        {
+          "number": 1,
+          "title": "Amplitude Modulation",
+          "topics": [
+            "Need for modulation; frequency division multiplexing",
+            "AM time and frequency domain description; single-tone modulation; power relations",
+            "Generation of AM: square law and switching modulator",
+            "Detection of AM: square law detector and envelope detector"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "DSB and SSB Modulation",
+          "topics": [
+            "DSB-SC generation (balanced and ring modulator) and detection (coherent detection, quadrature null effect, Costas loop, squaring loop)",
+            "SSB-SC generation (frequency and phase discrimination) and coherent demodulation",
+            "Vestigial sideband modulation and envelope detection",
+            "Comparison and applications of AM techniques"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Angle Modulation",
+          "topics": [
+            "Phase and frequency modulation; single-tone FM; spectrum; narrowband and wideband FM; constant average power",
+            "Transmission bandwidth of FM",
+            "Generation of FM: direct and indirect methods",
+            "Detection of FM: balanced discriminator, zero-crossing detector, PLL; FM vs AM"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Radio Transmitters and Receivers",
+          "topics": [
+            "AM and FM transmitters; effect of feedback; frequency stability",
+            "Receiver types: TRF and superheterodyne; RF section, frequency changing and tracking",
+            "Intermediate frequency, AGC; FM receiver and amplitude limiting",
+            "Comparison of FM and AM receivers; communication receivers; extension of the superheterodyne principle and additional circuits"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Noise and Pulse Analog Modulation",
+          "topics": [
+            "Noise sources and noise figure; noise in DSB/SSB/AM and angle modulation systems",
+            "Threshold effect; pre-emphasis and de-emphasis",
+            "Pulse analog modulation: PAM, PWM, PPM (generation and detection)",
+            "Time division multiplexing; TDM vs FDM"
+          ]
+        }
       ],
       "course_outcomes": [
         "Describe the Modulation and Demodulation techniques of standard AM.",
@@ -506,14 +1145,23 @@
         "Interpret the Radio Transmitters completely.",
         "Illustrate the noise performance in Analog Modulation techniques and also the concepts of Pulse Analog Modulation and Demodulation techniques."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "analog-communications-jntuk-r23-ece-2-2",
         "title": "Analog Communications - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Analog Communications: amplitude modulation, DSB/SSB, angle modulation, radio transmitters/receivers and noise."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -527,18 +1175,32 @@
       "subject_code": null,
       "name": "Switching Theory and Logic Design Lab",
       "category": "ProfessionalCore",
-      "credits": { "L": 0, "T": 0, "P": 3, "C": 1.5 },
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
       "type": "lab",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "switching-theory-and-logic-design-lab-jntuk-r23-ece-2-2",
         "title": "Switching Theory & Logic Design Lab - R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Switching Theory and Logic Design Lab: logic gates, combinational and sequential circuit design, counters and registers."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Experiment-based lab (logic gate verification, combinational design, decoders/multiplexers, flip-flops, ring/Johnson counters, universal shift register, seven-segment display). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -552,18 +1214,32 @@
       "subject_code": null,
       "name": "Electronic Circuit Analysis Lab",
       "category": "ProfessionalCore",
-      "credits": { "L": 0, "T": 0, "P": 3, "C": 1.5 },
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
       "type": "lab",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "electronic-circuit-analysis-lab-jntuk-r23-ece-2-2",
         "title": "Electronic Circuit Analysis Lab - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Electronic Circuit Analysis Lab: feedback amplifiers, oscillators, multistage, power and tuned amplifiers (Multisim + hardware)."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Simulation (Multisim) + hardware lab (Ft determination, voltage-series/current-shunt feedback amplifiers, RC/Wien/Hartley/Colpitts oscillators, RC coupled and Darlington amplifiers, Class A/B power amplifiers, tuned amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -577,14 +1253,59 @@
       "subject_code": null,
       "name": "Soft Skills",
       "category": "SkillEnhancement",
-      "credits": { "L": 0, "T": 1, "P": 2, "C": 2 },
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
       "type": "theory_cum_lab",
       "units": [
-        { "number": 1, "title": "Introduction", "topics": ["Emergence of life skills; definition, meaning, importance and need", "Reasons for skill gap; soft skills vs hard skills", "Linkage between industry and soft skills; personality development"] },
-        { "number": 2, "title": "Intra-Personal", "topics": ["SWOT analysis; Johari window; goal setting", "Emotional intelligence; attitudinal skills; right thinking", "Problem solving; time management; stress management"] },
-        { "number": 3, "title": "Inter-Personal", "topics": ["Communication skills; teamwork; managerial skills", "Negotiation skills; leadership skills; corporate etiquette"] },
-        { "number": 4, "title": "Verbal Skills", "topics": ["Listening skills: types, advantages, improving tips", "Speaking skills; reading and writing skills", "Report, resume and statement of purpose"] },
-        { "number": 5, "title": "Non-Verbal Skills and Interview Skills", "topics": ["Facial expressions, eye contact, proxemics, haptics, posture, body language", "Para language: tone, pitch, pause; accent neutralization; appearance and dress code", "Interview skills, methods and questions"] }
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Emergence of life skills; definition, meaning, importance and need",
+            "Reasons for skill gap; soft skills vs hard skills; challenges",
+            "Linkage between industry and soft skills; personality development",
+            "Soft skills vs English - improving techniques"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Intra-Personal",
+          "topics": [
+            "SWOT analysis; Johari window; goal setting",
+            "Emotional intelligence; attitudinal skills; right thinking",
+            "Problem solving; time management; stress management"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Inter-Personal",
+          "topics": [
+            "Communication skills; teamwork; managerial skills",
+            "Negotiation skills; leadership skills; corporate etiquette"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Verbal Skills",
+          "topics": [
+            "Listening skills: types, advantages, improving tips",
+            "Speaking skills; reading and writing skills",
+            "Report, resume and statement of purpose"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Non-Verbal Skills and Interview Skills",
+          "topics": [
+            "Facial expressions, eye contact, proxemics, haptics, posture; cross-cultural body language; body language in the interview room",
+            "Kinetics; para language: tone, pitch, pause; accent neutralization; appearance and dress code",
+            "Interview skills, methods and questions"
+          ]
+        }
       ],
       "course_outcomes": [
         "Assimilate and understood the meaning and importance of soft skills and learn how to develop them.",
@@ -593,14 +1314,23 @@
         "Ready to face any situation in life and equip themselves to handle them effectively.",
         "Understand and learn the importance of etiquette in both professional and personal life"
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "soft-skills-jntuk-r23-ece-2-2",
         "title": "Soft Skills - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Soft Skills syllabus: intra-personal, inter-personal, verbal and non-verbal skills, and interview skills."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Name, 0-1-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -614,14 +1344,59 @@
       "subject_code": null,
       "name": "Design Thinking & Innovation",
       "category": "EngineeringScience",
-      "credits": { "L": 1, "T": 0, "P": 2, "C": 2 },
+      "credits": {
+        "L": 1,
+        "T": 0,
+        "P": 2,
+        "C": 2
+      },
       "type": "theory_cum_lab",
       "units": [
-        { "number": 1, "title": "Introduction to Design Thinking", "topics": ["Elements and principles of design; basics (dot, line, shape, form)", "Introduction to design thinking; history of design thinking", "New materials in industry"] },
-        { "number": 2, "title": "Design Thinking Process", "topics": ["Empathize, analyze, ideate and prototype", "Design thinking in social innovations", "Tools: persona, customer journey map, brainstorming, product development"] },
-        { "number": 3, "title": "Innovation", "topics": ["Art of innovation; difference between innovation and creativity", "Role of creativity and innovation in organizations; teams for innovation", "Measuring the impact and value of creativity"] },
-        { "number": 4, "title": "Product Design", "topics": ["Problem formation; introduction to product design; product strategies", "Product value, planning and specifications", "Innovation towards product design; case studies"] },
-        { "number": 5, "title": "Design Thinking in Business Processes", "topics": ["Design thinking in business and strategic innovation", "Business challenges: growth, predictability, change, competition, standardization", "Design thinking for startups; defining and testing business models and prototypes"] }
+        {
+          "number": 1,
+          "title": "Introduction to Design Thinking",
+          "topics": [
+            "Elements and principles of design; basics (dot, line, shape, form)",
+            "Introduction to design thinking; history of design thinking",
+            "New materials in industry"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Design Thinking Process",
+          "topics": [
+            "Empathize, analyze, ideate and prototype",
+            "Design thinking in social innovations",
+            "Tools: persona, customer journey map, brainstorming, product development"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Innovation",
+          "topics": [
+            "Art of innovation; difference between innovation and creativity",
+            "Role of creativity and innovation in organizations; teams for innovation",
+            "Measuring the impact and value of creativity"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Product Design",
+          "topics": [
+            "Problem formation; introduction to product design; product strategies",
+            "Product value, planning and specifications",
+            "Innovation towards product design; case studies"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Design Thinking in Business Processes",
+          "topics": [
+            "Design thinking in business and strategic innovation",
+            "Business challenges: growth, predictability, change, competition, standardization",
+            "Design thinking for startups; defining and testing business models and prototypes"
+          ]
+        }
       ],
       "course_outcomes": [
         "Define the concepts related to design thinking.",
@@ -630,14 +1405,23 @@
         "Analyse to work in a multidisciplinary environment.",
         "Evaluate the value of creativity."
       ],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "design-thinking-and-innovation-jntuk-r23-ece-2-2",
         "title": "Design Thinking & Innovation - JNTUK R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 Design Thinking & Innovation (common to all branches): design thinking process, innovation, product design and business processes."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "verified", "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally." },
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "verified",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+      },
       "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -655,14 +1439,23 @@
       "type": "internship",
       "units": [],
       "course_outcomes": [],
-      "resources": { "lecture_notes_pdf": null, "previous_question_papers_pdf": null, "lab_manual_pdf": null },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-ece-2-2",
         "title": "Community Service Project Internship - R23 ECE 2-2",
         "meta_description": "JNTUK R23 ECE 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation."
       },
       "legacy_equivalent_id": null,
-      "source": { "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf", "retrieved_date": "2026-07-01", "status": "needs_verification", "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline." },
+      "source": {
+        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
+        "retrieved_date": "2026-07-01",
+        "status": "needs_verification",
+        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+      },
       "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
     },
     {
@@ -754,10 +1547,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -849,10 +1642,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -946,10 +1739,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1042,10 +1835,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1138,10 +1931,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF; the course title/L-T-P-C label appears after the unit content in the source (a PDF extraction quirk), used here to confirm scope."
     },
@@ -1234,10 +2027,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1330,10 +2123,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1423,10 +2216,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "0-0-3-1.5 credits; two-part experiment list (Part-A analog OP-AMP/IC circuits, Part-B digital ICs designed and verified via HDL) read from the source PDF."
     },
@@ -1477,10 +2270,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "0-0-3-1.5 credits; hardware, MATLAB Simulink and MATLAB Communication toolbox experiment list (Part-A analog, Part-B digital/coding) read from the source PDF."
     },
@@ -1573,10 +2366,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Skill Enhancement course; 0-1-2-2 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1627,10 +2420,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Engineering Science lab; 0-0-2-1 credits. Content covers CNC PCB-machine prototyping scope plus an antennas-lab experiment list, read from the source PDF."
     },
@@ -1759,10 +2552,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1832,7 +2625,8 @@
             "Introduction to CISC and RISC architectures; ARM architecture and ARM processor families",
             "ARM Cortex-M series family and ARM Cortex-M3 processor functional description",
             "Instruction set summary, system address map, write buffer and bit-banding",
-            "Programmer's model: modes of operation and execution, stack pointer, exceptions and interrupt handling"
+            "Programmer's model: modes of operation and execution, stack pointer, exceptions and interrupt handling",
+            "ARM Cortex-M3 programming: software delay, programming techniques, loops, stack and stack pointer, subroutines and parameter passing, parallel I/O, and the Nested Vectored Interrupt Controller (NVIC) functional description and programmer's model"
           ]
         }
       ],
@@ -1855,10 +2649,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF (source heads this course \"MICROPROCESSOR AND MICROCONTROLLERS\")."
     },
@@ -1883,42 +2677,42 @@
       "units": [
         {
           "number": 1,
-          "title": "Discrete-Time Signals, Systems and the z-Transform",
+          "title": "Introduction to Signals and Discrete-Time Systems",
           "topics": [
-            "Signals, systems and signal processing; discrete-time signals and systems, analysis of discrete-time LTI systems",
-            "Discrete-time systems described by difference equations, implementation of discrete-time systems, correlation of signals",
-            "Frequency analysis of continuous-time and discrete-time signals; frequency response of LTI systems",
-            "The z-transform and its properties, rational z-transforms, inversion of the z-transform, analysis of LTI systems in the z-domain, the one-sided z-transform"
+            "Signals, systems and signal processing; classification of signals; the concept of frequency in continuous-time and discrete-time signals",
+            "Discrete-time signals and systems, analysis of discrete-time LTI systems, discrete-time systems described by difference equations, implementation of discrete-time systems, correlation of discrete-time signals",
+            "Frequency analysis of continuous-time and discrete-time signals; frequency-domain and time-domain signal properties; properties of the Fourier transform for discrete-time signals",
+            "Frequency-domain analysis of LTI systems: frequency-domain characteristics and frequency response of LTI systems"
           ]
         },
         {
           "number": 2,
-          "title": "Discrete Fourier Transform and FFT",
+          "title": "The z-Transform and the Discrete Fourier Transform",
           "topics": [
-            "Frequency domain sampling and the discrete Fourier transform (DFT) and its properties",
-            "Linear filtering methods based on the DFT; frequency analysis of signals using the DFT",
-            "Direct computation of the DFT",
-            "Radix-2 FFT algorithms for efficient DFT computation"
+            "The z-transform and its properties, rational z-transforms, inversion of the z-transform, analysis of LTI systems in the z-domain, the one-sided z-transform",
+            "Frequency-domain sampling and the discrete Fourier transform (DFT) and its properties",
+            "Linear filtering methods based on the DFT",
+            "Frequency analysis of signals using the DFT"
           ]
         },
         {
           "number": 3,
-          "title": "Design of IIR Filters",
+          "title": "Efficient Computation of the DFT and System Structures",
           "topics": [
-            "IIR filter design by approximation of derivatives, impulse invariance, and the bilinear transformation",
-            "Frequency transformations in the analog and digital domains",
-            "Structures for IIR systems: direct form structures, signal flow graphs and transposed structures",
-            "Cascade form and parallel form structures for IIR systems"
+            "Fast Fourier transform algorithms: direct computation of the DFT and Radix-2 FFT algorithms",
+            "Structures for the realization of discrete-time systems",
+            "Structures for FIR systems: direct form, cascade form and frequency sampling structures",
+            "Structures for IIR systems: direct form structures, signal flow graphs and transposed structures, cascade form and parallel form structures"
           ]
         },
         {
           "number": 4,
-          "title": "Design of Digital Filters and FIR Systems",
+          "title": "Design of FIR and IIR Digital Filters",
           "topics": [
             "Causality and its implications; characteristics of practical frequency-selective filters",
-            "Symmetric and antisymmetric FIR filters; design of linear-phase FIR filters using windows",
-            "Design of linear-phase FIR filters by the frequency sampling method",
-            "Structures for the realization of discrete-time and FIR systems: direct form, cascade form and frequency sampling structures"
+            "Design of FIR filters: symmetric and antisymmetric FIR filters, design of linear-phase FIR filters using windows, design of linear-phase FIR filters by the frequency sampling method",
+            "Design of IIR filters from analog filters: IIR filter design by approximation of derivatives, impulse invariance, and the bilinear transformation",
+            "Frequency transformations in the analog domain and in the digital domain"
           ]
         },
         {
@@ -1951,10 +2745,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -2046,10 +2840,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 1 of 4."
     },
@@ -2141,10 +2935,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 2 of 4."
     },
@@ -2221,7 +3015,9 @@
       "course_outcomes": [
         "Analyze Smart and Wireless Instrumentation with respect to various performance parameters.",
         "Design and develop Applications using WSN (Wireless sensor Network).",
-        "Demonstration of various Node architectures."
+        "Demonstration of various Node architectures.",
+        "Demonstration of Fundamentals of wireless digital communication",
+        "Analyze the power sources, Demonstrate an ability to design strategies as per needs and specifications"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2235,10 +3031,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 3 of 4."
     },
@@ -2331,10 +3127,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-II option 4 of 4."
     },
@@ -2427,10 +3223,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 1 of 4."
     },
@@ -2522,10 +3318,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 2 of 4."
     },
@@ -2617,10 +3413,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 3 of 4."
     },
@@ -2713,10 +3509,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF. Professional Elective-III option 4 of 4."
     },
@@ -2767,10 +3563,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "0-0-3-1.5 credits; experiment-based lab, single Experiments unit listed per instructions."
     },
@@ -2799,7 +3595,7 @@
           "topics": [
             "8086 assembly programs for 16-bit arithmetic operations using various addressing modes (BCD addition/subtraction, multiplication/division, array addition with overflow detection)",
             "8086 programs for sorting an array and computing the factorial of n numbers",
-            "Interfacing ADC, DAC, stepper motor and seven-segment display to 8086",
+            "Interfacing ADC, DAC, stepper motor, seven-segment display and keyboard to 8086",
             "8051 assembly programs for counting number of 1s/0s in an 8-bit number, averaging n numbers, and timer/counter verification",
             "Interfacing traffic light controller, UART, LCD, temperature sensor (LM35) and stepper motor to 8051",
             "ARM Cortex-M3 (Keil MDK-ARM) assembly programs for 16-bit multiplication and sum of first 10 integers",
@@ -2821,10 +3617,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "0-0-3-1.5 credits; experiment-based lab (Part A: 8086, Part B: 8051, Part C: ARM Cortex-M3), single Experiments unit listed per instructions."
     },
@@ -2849,62 +3645,27 @@
       "units": [
         {
           "number": 1,
-          "title": "Fundamentals of Machine Learning and Linear Regression",
+          "title": "Experiments",
           "topics": [
-            "Learning from experience, machine learning tasks, training/test data, performance measures, bias and variance",
-            "Introduction to scikit-learn: installation on Windows/Linux/OS X and installing pandas and matplotlib",
-            "Simple linear regression, cost functions, ordinary least squares and model evaluation",
-            "Multiple linear regression, polynomial regression, regularization, and fitting models with gradient descent"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Feature Extraction and Classification Metrics",
-          "topics": [
-            "Extracting features from categorical variables and from text (bag-of-words, stop-word filtering, stemming/lemmatization, TF-IDF, hashing trick)",
-            "Extracting features from images (pixel intensities, SIFT and SURF points of interest) and data standardization",
-            "Binary classification with logistic regression for spam filtering; accuracy, precision, recall, F1 measure and ROC AUC",
-            "Tuning models with grid search; multi-class and multi-label classification and their performance metrics"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Decision Trees and K-Means Clustering",
-          "topics": [
-            "Training decision trees, selecting questions, information gain and Gini impurity",
-            "Decision trees with scikit-learn, tree ensembles, and advantages/disadvantages of decision trees",
-            "Clustering with the K-Means algorithm, local optima and the elbow method",
-            "Evaluating clusters, image quantization, and clustering to learn features"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Principal Component Analysis",
-          "topics": [
-            "Overview of PCA and performing principal component analysis",
-            "Variance, covariance and covariance matrices",
-            "Eigenvectors and eigenvalues; dimensionality reduction with PCA",
-            "Using PCA to visualize high-dimensional data and face recognition with PCA"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Support Vector Machines and Neural Networks",
-          "topics": [
-            "Kernels and the kernel trick; maximum margin classification and support vectors",
-            "Classifying characters and handwritten digits in scikit-learn",
-            "Nonlinear decision boundaries; feed-forward and feedback artificial neural networks, multilayer perceptron",
-            "Minimizing the cost function via forward and back propagation; approximating XOR with a multilayer perceptron"
+            "Implement and demonstrate the FIND-S algorithm for finding the most specific hypothesis based on a given set of training data samples, reading the training data from a .CSV file",
+            "For a given set of training data examples stored in a .CSV file, implement and demonstrate the Candidate-Elimination algorithm to output a description of the set of all hypotheses consistent with the training examples",
+            "Write a program to demonstrate the working of the decision tree based ID3 algorithm; use an appropriate data set for building the decision tree and apply this knowledge to classify a new sample",
+            "Solve real-world problems using Linear Regression, Logistic Regression and a Binary Classifier",
+            "Develop a program for Bias, Variance, removing duplicates, and Cross Validation",
+            "Write a program to implement Categorical Encoding and One-hot Encoding",
+            "Build an Artificial Neural Network by implementing the Back Propagation algorithm and test it using appropriate data sets",
+            "Write a program to implement the k-Nearest Neighbor algorithm to classify the iris data set, printing both correct and wrong predictions",
+            "Implement the non-parametric Locally Weighted Regression algorithm to fit data points; select an appropriate data set and draw graphs",
+            "Use the naive Bayesian Classifier model to classify a set of documents; calculate accuracy, precision and recall for the data set",
+            "Apply the EM algorithm to cluster a Heart Disease Data Set and compare with K-Means clustering on the same data set, commenting on the quality of clustering",
+            "Exploratory Data Analysis for classification using Pandas or Matplotlib",
+            "Write a Python program to construct a Bayesian network considering medical data, and use it to demonstrate diagnosis of heart patients using a standard Heart Disease Data Set",
+            "Write a program to implement Support Vector Machines and Principal Component Analysis",
+            "Write a program to implement Principal Component Analysis"
           ]
         }
       ],
-      "course_outcomes": [
-        "Understand the need for simulation/implementation for the verification of mathematical functions",
-        "Understand the main features of the SCILAB program development environment to enable their usage in the higher learning.",
-        "Implement simple mathematical functions/equations in numerical computing environment such as SCILAB",
-        "Interpret and visualize simple mathematical functions and operations thereon using plots/display",
-        "Analyze the program for correctness and determine/estimate/predict the output and verify it under simulation environment using SCILAB tools & Develop graphs by running Scilab programs"
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2917,10 +3678,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "0-1-2-2 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3013,10 +3774,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '-' in the source). 5-unit syllabus read from the source PDF."
     },
@@ -3092,11 +3853,63 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": null,
-        "status": "needs_verification"
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-11",
+        "status": "needs_verification",
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+      "notes": "Extracted candidate from parsed source evidence. Requires human verification.",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Value Education",
+          "topics": [
+            "Right Understanding, Relationship and Physical Facility (Holistic Development and the Role of Education); Understanding Value Education",
+            "Self-exploration as the Process for Value Education; Continuous Happiness and Prosperity - the Basic Human Aspirations",
+            "Happiness and Prosperity - Current Scenario; Method to Fulfill the Basic Human Aspirations",
+            "Practice sessions: Sharing about Oneself, Exploring Human Consciousness, Exploring Natural Acceptance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Harmony in the Human Being",
+          "topics": [
+            "Understanding Human being as the Co-existence of the self and the body; Distinguishing between the Needs of the self and the body",
+            "The body as an Instrument of the self; Understanding Harmony in the self",
+            "Harmony of the self with the body; Programme to ensure self-regulation and Health",
+            "Practice sessions: Exploring the difference of Needs of self and body, Exploring Sources of Imagination in the self, Exploring Harmony of self with the body"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Harmony in the Family and Society",
+          "topics": [
+            "Harmony in the Family - the Basic Unit of Human Interaction; 'Trust' - the Foundational Value in Relationship",
+            "'Respect' - as the Right Evaluation; Other Feelings, Justice in Human-to-Human Relationship",
+            "Understanding Harmony in the Society; Vision for the Universal Human Order",
+            "Practice sessions: Exploring the Feeling of Trust, Exploring the Feeling of Respect, Exploring Systems to fulfil Human Goal"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Harmony in the Nature/Existence",
+          "topics": [
+            "Understanding Harmony in the Nature; Interconnectedness, self-regulation and Mutual Fulfilment among the Four Orders of Nature",
+            "Realizing Existence as Co-existence at All Levels; The Holistic Perception of Harmony in Existence",
+            "Practice sessions: Exploring the Four Orders of Nature, Exploring Co-existence in Existence"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Implications of the Holistic Understanding - Professional Ethics",
+          "topics": [
+            "Natural Acceptance of Human Values; Definitiveness of (Ethical) Human Conduct",
+            "A Basis for Humanistic Education, Humanistic Constitution and Universal Human Order; Competence in Professional Ethics",
+            "Holistic Technologies, Production Systems and Management Models - Typical Case Studies; Strategies for Transition towards Value-based Life and Profession",
+            "Practice sessions: Exploring Ethical Human Conduct, Exploring Humanistic Models in Education, Exploring Steps of Transition towards Universal Human Order"
+          ]
+        }
+      ]
     }
   ]
 }
