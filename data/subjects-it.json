@@ -89,10 +89,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common to CSE, IT and CSE-AI&ML (per the IT course structure). Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Content matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -186,10 +186,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "The IT course structure lists this under BS&H; mapped to HSMC for site consistency (it is the values/humanities course, same as CSE's UHV). 2-1-0-3 credits and the 5-unit (28 lectures + 14 tutorials) structure confirmed from the source PDF."
     },
@@ -218,8 +218,8 @@
           "topics": [
             "Data representation: binary numbers, fixed point and floating point representation",
             "Number base conversions, octal and hexadecimal numbers, complements, signed binary numbers, binary codes",
-            "Boolean theorems, logic gates, universal logic gates, minimization of logic expressions, K-map simplification (up to 4 variables)",
-            "Combinational circuits: adders, subtractor, encoders, decoders, multiplexers and de-multiplexers"
+            "Basic logic functions, logic gates, universal logic gates, minimization of logic expressions, K-map simplification",
+            "Combinational circuits, decoders, multiplexers"
           ]
         },
         {
@@ -237,7 +237,7 @@
           "title": "Computer Arithmetic & Processor Organization",
           "topics": [
             "Addition and subtraction of signed numbers, design of fast adders",
-            "Multiplication of positive numbers, signed-operand multiplication, fast multiplication, integer division",
+            "Multiplication of positive numbers, signed-operand multiplication, fast multiplication, integer division, floating-point numbers and operations",
             "Processor organization: fundamental concepts, execution of a complete instruction, multiple-bus organization",
             "Hardwired control and microprogrammed control"
           ]
@@ -276,10 +276,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF."
     },
@@ -304,20 +304,19 @@
       "units": [
         {
           "number": 1,
-          "title": "Advanced Data Structures",
+          "title": "Algorithm Analysis and Advanced Trees",
           "topics": [
+            "Introduction to algorithm analysis: space and time complexity analysis, asymptotic notations",
             "AVL trees - creation, insertion, deletion operations and applications",
-            "B-trees - creation, insertion, deletion operations and applications",
-            "Heap trees (priority queues) - min and max heaps, operations and applications",
-            "Graphs - terminology, representations, basic search and traversals, connected and biconnected components, applications"
+            "B-trees - creation, insertion, deletion operations and applications"
           ]
         },
         {
           "number": 2,
-          "title": "Algorithm Analysis & Divide and Conquer",
+          "title": "Heap Trees, Graphs and Divide and Conquer",
           "topics": [
-            "Algorithm, types of algorithms, algorithm specifications",
-            "Performance analysis: space and time complexity analysis, asymptotic notations",
+            "Heap trees (priority queues) - min and max heaps, operations and applications",
+            "Graphs - terminology, representations, basic search and traversals, connected and biconnected components, applications",
             "Divide and conquer: general method, quick sort, merge sort",
             "Strassen's matrix multiplication, convex hull"
           ]
@@ -366,10 +365,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "IT titles this subject 'Advanced Data Structures & Algorithms' -- note the CSE R23 record is titled 'Advanced Data Structures & Algorithm Analysis'. The unit content is closely aligned, but this record is transcribed independently from the IT syllabus PDF. 3-0-0-3 credits and 5-unit syllabus confirmed."
     },
@@ -419,27 +418,29 @@
             "Arrays: declaration and initialization, storage, accessing elements, operations, sorting and searching, two- and three-dimensional arrays, arrays as vectors",
             "Inheritance: process, types, universal super class (Object), final classes and methods, access control and inheritance, multilevel inheritance, super, constructor and inheritance",
             "Method overriding, dynamic method dispatch, abstract classes",
-            "Interfaces: declaration, implementation, multiple and nested interfaces, inheritance of interfaces, default and static methods"
+            "Interfaces: declaration, implementation, multiple and nested interfaces, inheritance of interfaces, default and static methods, functional interfaces, annotations"
           ]
         },
         {
           "number": 4,
-          "title": "Packages and Exception Handling",
+          "title": "Packages, Exception Handling and Java I/O",
           "topics": [
             "Packages and Java library: defining, importing packages and classes, path and class path, access control, packages in Java SE",
             "java.lang package and its classes, class Object, enumeration, class Math, wrapper classes, auto-boxing and auto-unboxing",
             "java.util classes and interfaces, Formatter, Random, Time package, Instant, date/time formatting, temporal adjusters",
-            "Exception handling: hierarchy of standard exception classes, throws and throw, try/catch/finally, multiple catch, Throwable, checked and unchecked exceptions"
+            "Exception handling: hierarchy of standard exception classes, throws and throw, try/catch/finally, multiple catch, Throwable, checked and unchecked exceptions",
+            "Java I/O and File: Java I/O API, standard I/O streams, byte streams, character streams, Scanner class, files in Java"
           ]
         },
         {
           "number": 5,
-          "title": "Strings, Multithreading and JDBC",
+          "title": "Strings, Multithreading, JDBC and JavaFX",
           "topics": [
             "String handling: CharSequence, class String, extracting/comparing/modifying/searching characters, StringBuffer",
             "Multithreaded programming: need for multiple threads, multi-core programming, Thread class, main thread, thread states and priority",
             "Synchronization, deadlock and race situations, inter-thread communication, suspending/resuming/stopping threads",
-            "Java Database Connectivity: JDBC architecture, installing MySQL and Connector/J, environment setup, establishing connections, ResultSet interface"
+            "Java Database Connectivity: JDBC architecture, installing MySQL and Connector/J, environment setup, establishing connections, ResultSet interface",
+            "JavaFX GUI: Scene Builder, JavaFX app window structure, displaying text and images, event handling, laying out nodes in a scene graph, mouse events"
           ]
         }
       ],
@@ -456,10 +457,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -495,10 +496,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Lab (0-0-3-1.5). Experiment list covering AVL/B-trees, heaps, BFT/DFT, biconnected components, quick/merge sort, greedy shortest paths, job sequencing, 0/1 knapsack (DP and backtracking), N-Queens and branch-and-bound TSP confirmed from the source PDF."
     },
@@ -534,10 +535,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Lab (0-0-3-1.5). Twelve exercises covering data types, classes and constructors, inheritance, interfaces, runtime polymorphism, exception handling, user-defined exceptions, threads, packages and JDBC confirmed from the source PDF."
     },
@@ -624,10 +625,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Skill Enhancement Course (0-1-2-2). 5-unit syllabus with per-unit exercises confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -720,10 +721,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '--' in the source). 5-unit syllabus confirmed from the source PDF."
     },
@@ -778,22 +779,22 @@
         },
         {
           "number": 4,
-          "title": "Sequencing and Theory of Games",
+          "title": "Nonlinear Programming",
           "topics": [
-            "Sequencing: flow-shop sequencing, n jobs through two machines, n jobs through three machines, two jobs through m machines",
-            "Theory of games: introduction to decision theory, minimax (maximin) criterion and optimal strategy",
-            "Solution of games with saddle points; rectangular games without saddle points; 2 x 2 games",
-            "Dominance principle; m x 2 and 2 x n games - graphical method"
+            "Unconstrained cases",
+            "One-dimensional minimization methods: classification, Fibonacci method, univariate method, steepest descent method",
+            "Constrained cases - characteristics of a constrained problem, classification",
+            "Basic approach of penalty function method; basic approaches of interior and exterior penalty function methods"
           ]
         },
         {
           "number": 5,
-          "title": "Network Analysis",
+          "title": "Dynamic Programming",
           "topics": [
-            "Project planning, scheduling and controlling; tools for project management",
-            "Critical path method (CPM)",
-            "Programme evaluation and review technique (PERT)",
-            "Cost analysis and crashing, resource leveling, updating"
+            "Dynamic programming multistage decision processes, types",
+            "Concept of sub-optimization and the principle of optimality",
+            "Computational procedure in dynamic programming",
+            "Examples illustrating the calculus method of solution; examples illustrating the tabular method of solution"
           ]
         }
       ],
@@ -801,8 +802,8 @@
         "State and formulate the optimization problem, without and with constraints, by using design variables from an engineering design problem.",
         "Apply classical optimization techniques to minimize or maximize a multi-variable objective function, without or with constraints, and arrive at an optimal solution.",
         "Apply and Solve transportation and assignment problem by using Linear programming Simplex method.",
-        "Solve decision theory problems through the application of game theory Apply the replacement and queuing models to increase the efficiency of the system",
-        "Model the project management problems through CPM and PERT"
+        "Apply gradient and non-gradient methods to nonlinear optimization problems and use interior or exterior penalty functions for the constraints to derive the optimal solutions.",
+        "Formulate and apply Dynamic programming technique to inventory control, production planning, engineering design problems etc. to reach a final optimal solution from the current optimal solution."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -812,14 +813,14 @@
       "seo": {
         "slug": "optimization-techniques-jntuk-r23-it-2-2",
         "title": "Optimization Techniques - JNTUK R23 IT 2-2",
-        "meta_description": "JNTUK R23 IT 2-2 Optimization Techniques: classical optimization, linear programming & simplex, transportation, sequencing, game theory, CPM and PERT."
+        "meta_description": "JNTUK R23 IT 2-2 Optimization Techniques: classical optimization, linear programming & simplex, transportation, nonlinear programming and dynamic programming."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "IT's Management Course-I slot is Optimization Techniques (Common to CSE-AIML and IT per the doc) -- note the CSE R23 2-2 record fills this same slot with 'Managerial Economics & Financial Analysis' instead; the two branches differ here. 2-0-0-2 credits and 5-unit syllabus confirmed from the source PDF."
     },
@@ -879,7 +880,7 @@
             "Introduction, population and samples",
             "Sampling distribution of means and variance",
             "Point and interval estimations, maximum error of estimate",
-            "Central limit theorem (without proof), estimation using t-test"
+            "Central limit theorem (without proof), estimation using t- and F-distributions"
           ]
         },
         {
@@ -912,10 +913,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common to CSE, IT and CSE-AI&ML (per the IT course structure). 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -1002,10 +1003,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -1092,10 +1093,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and 5-unit syllabus confirmed from the source PDF. Matches the CSE record; transcribed independently from the IT syllabus document."
     },
@@ -1182,10 +1183,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "IT lists Software Engineering as 3-0-0-3 (3 credits) -- note the CSE R23 2-2 record is 2-1-0-3; the lecture/tutorial split differs between the two branches. 5-unit syllabus confirmed from the source PDF."
     },
@@ -1221,10 +1222,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "IT combines Operating Systems and Software Engineering into one lab (0-0-3-1.5) -- note the CSE R23 2-2 has a standalone 'Operating Systems Lab' instead; the lab structure differs between branches. Experiment lists for both OS (UNIX commands/system calls, CPU scheduling, semaphores/monitors, memory allocation, page replacement, Banker's algorithm, file allocation) and SE (SRS, ER/DFD/CFD, COCOMO/FP estimation, UML diagrams, test case design) confirmed from the source PDF."
     },
@@ -1260,10 +1261,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Lab (0-0-3-1.5). Ten exercises covering table creation and constraints, sub queries, aggregate/conversion/string/date functions, views, PL/SQL blocks, procedures, functions, cursors, triggers, indexing and JDBC connectivity confirmed from the source PDF."
     },
@@ -1350,10 +1351,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "IT's 2-2 skill-enhancement course is 'Python with Django' -- note the CSE R23 2-2 record has 'Full Stack Development - I' in this slot; the two branches differ here. 0-1-2-2 credits and 5-unit syllabus with per-unit experiments confirmed from the source PDF."
     },
@@ -1446,10 +1447,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common for all branches of Engineering (per the IT course structure). The IT structure lists it under BS&H; mapped to EngineeringScience for site consistency with the identical CSE record. 1-0-2-2 credits and 5-unit syllabus confirmed from the source PDF."
     },
@@ -1510,50 +1511,50 @@
           "number": 1,
           "title": "JDBC Programming",
           "topics": [
-            "JDBC architecture and types of JDBC drivers",
-            "Introduction to major JDBC classes and interfaces; creating a simple JDBC application",
-            "Types of Statement (Statement interface, Prepared Statement, Callable Statement); exploring Result Set operations",
-            "Batch updates in JDBC; creating a CRUD application; using RowSet objects; managing database transactions"
+            "JDBC Architecture, Types of JDBC Drivers",
+            "Introduction to major JDBC Classes and Interfaces, Creating simple JDBC Application",
+            "Types of Statement (Statement Interface, Prepared Statement, Callable Statement), Exploring Result Set Operations",
+            "Batch Updates in JDBC, Creating CRUD Application, Using Rowsets Objects, Managing Database Transaction"
           ]
         },
         {
           "number": 2,
           "title": "J2EE and Web Development",
           "topics": [
-            "J2EE architecture types and J2EE containers",
-            "Types of servers in a J2EE application",
-            "HTTP protocols and API; request processing in a web application",
-            "Web application structure, web containers and web architecture models"
+            "J2EE Architecture Types, J2EE Containers",
+            "Types of Servers in J2EE Application",
+            "HTTP Protocols and API, Request Processing in Web Application",
+            "Web Application Structure, Web Containers and Web Architecture Models"
           ]
         },
         {
           "number": 3,
           "title": "Servlet API and Overview",
           "topics": [
-            "Servlet introduction, Servlet Life Cycle (SLC), types of servlet",
-            "Servlet configuration with deployment descriptor; working with ServletContext and ServletConfig objects; attributes in servlets",
-            "Response and redirection using Request Dispatcher and sendRedirect method",
-            "Session tracking: cookies, HTTPSession, hidden form fields and URL rewriting; types of servlet events (context-level and session-level)"
+            "Servlet Introduction, Servlet Life Cycle (SLC), Types of Servlet",
+            "Servlet Configuration with Deployment Descriptor, Working with Servlet Context and Servlet Config Object, Attributes in Servlet",
+            "Response and Redirection using Request Dispatcher and send Redirect Method, Filter API, Manipulating Responses using Filter API",
+            "Session Tracking: using Cookies, HTTP Session, Hidden Form Fields and URL Rewriting, Types of Servlet Event: Context Level and Session Level"
           ]
         },
         {
           "number": 4,
           "title": "Java Server Pages (JSP)",
           "topics": [
-            "Introduction to JSP and comparison with Servlet; JSP architecture and JSP life cycle",
-            "Scripting elements, directives, action tags, implicit objects",
-            "Expression Language (EL), JSP Standard Tag Libraries (JSTL), custom tags",
-            "Session management, exception handling, and a CRUD application"
+            "Introduction to JSP, Comparison with Servlet, JSP Architecture, JSP Life Cycle",
+            "Scripting Elements, Directives, Action Tags, Implicit Objects",
+            "Expression Language (EL), JSP Standard Tag Libraries (JSTL), Custom Tag",
+            "Session Management, Exception Handling, CRUD Application"
           ]
         },
         {
           "number": 5,
           "title": "Java Web Frameworks: Spring MVC",
           "topics": [
-            "Spring introduction and architecture; Spring MVC module",
-            "Life cycle of a Bean Factory",
-            "Database transaction management",
-            "CRUD operations using DAO and Spring API"
+            "Spring: Introduction, Architecture, Spring MVC Module, Life Cycle of Bean Factory",
+            "Constructor Injection, Dependency Injection, Inner Beans, Aliases in Bean, Bean Scopes, Spring Annotations",
+            "Spring AOP Module, Spring DAO, Database Transaction Management",
+            "CRUD Operation using DAO and Spring API"
           ]
         }
       ],
@@ -1570,10 +1571,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1658,10 +1659,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1688,9 +1689,9 @@
           "number": 1,
           "title": "Introduction and Physical Layer",
           "topics": [
-            "Network types (LAN, MAN, WAN) and network topologies",
-            "Reference models: OSI reference model, TCP/IP reference model, comparison of OSI and TCP/IP, OSI vs TCP/IP",
-            "Physical layer: guided media (twisted-pair, coaxial and fiber optic cable)",
+            "Network Types: LAN, MAN, WAN; Network Topologies",
+            "Reference models: the OSI Reference Model, the TCP/IP Reference Model, comparison of OSI and TCP/IP Reference Models, OSI vs TCP/IP",
+            "Physical Layer: guided media (twisted-pair cable, coaxial cable and fiber optic cable)",
             "Introduction to unguided media"
           ]
         },
@@ -1698,40 +1699,39 @@
           "number": 2,
           "title": "Data Link Layer",
           "topics": [
-            "Design issues; framing (fixed size and variable size); flow control; error control; error detection and correction codes; CRC and checksum",
-            "Services provided to the network layer; elementary data link layer protocols (simplex protocol, simplex stop-and-wait, simplex protocol for a noisy channel)",
-            "Sliding window protocols: one bit, go-back-N, selective repeat, stop-and-wait",
-            "Data link layer in HDLC; Point-to-Point Protocol (PPP)"
+            "Design issues; Framing: fixed size framing, variable size framing; flow control; error control; error detection and correction codes, CRC, Checksum (idea, one's complement internet checksum)",
+            "Services provided to Network Layer; Elementary Data Link Layer protocols: simplex protocol, simplex stop and wait, simplex protocol for noisy channel",
+            "Sliding window protocol: one bit, Go-Back-N, selective repeat, stop and wait protocol",
+            "Data link layer in HDLC, Point to Point Protocol (PPP)"
           ]
         },
         {
           "number": 3,
           "title": "Media Access Control",
           "topics": [
-            "Random access: ALOHA, CSMA, CSMA/CD, CSMA/CA",
-            "Controlled access: reservation, polling, token passing; channelization: FDMA, TDMA, CDMA",
-            "Wired LANs: Ethernet, Ethernet protocol, standard/fast/gigabit/10-gigabit Ethernet",
-            "Network layer design issues: store-and-forward packet switching, services to the transport layer, implementation of connectionless and connection-oriented service"
+            "Random Access: ALOHA, CSMA, CSMA with Collision Detection, CSMA with Collision Avoidance",
+            "Controlled Access: Reservation, Polling, Token Passing; Channelization: FDMA, TDMA, CDMA",
+            "Wired LANs: Ethernet, Ethernet Protocol, Standard Ethernet, Fast Ethernet (100 Mbps), Gigabit Ethernet, 10 Gigabit Ethernet"
           ]
         },
         {
           "number": 4,
           "title": "Network Layer and Internetworking",
           "topics": [
-            "Routing algorithms: optimality principle, shortest path, flooding, distance vector, link state, hierarchical routing",
-            "Congestion control algorithms and congestion prevention policies; traffic control algorithms (leaky bucket, token bucket)",
-            "Internetworking: tunnelling, fragmentation; network layer in the internet",
-            "IP protocols: IPv4 header format, IP addresses, classful addressing, CIDR, subnets; IPv6 main header; transition from IPv4 to IPv6; comparison of IPv4 and IPv6"
+            "The Network Layer Design Issues: Store and Forward Packet Switching, Services provided to the Transport layer, Implementation of Connectionless Service, Implementation of Connection Oriented Service, Comparison of Virtual Circuit and Datagram Networks",
+            "Routing Algorithms: the Optimality principle, Shortest path, Flooding, Distance vector, Link state, Hierarchical",
+            "Congestion Control algorithms: general principles of congestion control, congestion prevention policies, approaches to congestion control (traffic aware routing, admission control, traffic throttling, load shedding); Traffic Control Algorithm: leaky bucket & token bucket",
+            "Internet Working: how networks differ, how networks can be connected, tunnelling, internetwork routing, fragmentation, network layer in the internet; IP protocols: IP Version 4, IPv4 header format, IP addresses, classful addressing, CIDR, subnets; IP Version 6: the main IPv6 header, transition from IPv4 to IPv6, comparison of IPv4 & IPv6"
           ]
         },
         {
           "number": 5,
           "title": "Transport and Application Layer",
           "topics": [
-            "Transport layer protocols: services, port numbers, user datagram protocol (UDP) and UDP applications",
-            "Transmission Control Protocol (TCP): services and features",
-            "Application layer: World Wide Web (HTTP), electronic mail (architecture, web-based mail, email security)",
-            "TELNET (local vs remote logging), Domain Name System"
+            "Transport layer protocols: services, port number, User Datagram Protocol, UDP services, UDP applications",
+            "Transmission Control Protocol: TCP services, TCP features, Segment, a TCP connection, windows in TCP, flow control, error control, congestion control in TCP",
+            "Application Layer: World Wide Web (HTTP), Electronic mail: architecture, web-based mail, email security",
+            "TELNET: local versus remote logging, Domain Name System"
           ]
         }
       ],
@@ -1748,10 +1748,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1778,50 +1778,50 @@
           "number": 1,
           "title": "Data Warehousing and Online Analytical Processing",
           "topics": [
-            "Basic concepts; data warehouse modeling: data cube and OLAP; OLAP vs OLTP",
-            "Data warehouse design and usage; data warehouse implementation; cloud data warehouse",
-            "Data mining and pattern mining, KDD process, technologies, applications and major issues",
-            "Data objects and attribute types; basic statistical descriptions of data; data mining system architecture"
+            "Basic concepts, Data Warehouse Modeling: Data Cube and OLAP",
+            "Data Warehouse Design and Usage, Data Warehouse Implementation, Cloud Data Warehouse",
+            "Data Mining and Pattern Mining, Technologies, Applications, Major issues",
+            "Data Objects & Attribute Types, Basic Statistical Descriptions of Data, Data Visualization, Measuring Data Similarity and Dissimilarity"
           ]
         },
         {
           "number": 2,
           "title": "Data Preprocessing",
           "topics": [
-            "Overview of data preprocessing",
-            "Data cleaning and data integration",
-            "Data reduction",
-            "Data transformation and data discretization; concept of hierarchy generation"
+            "An Overview",
+            "Data Cleaning, Data Integration",
+            "Data Reduction",
+            "Data Transformation and Data Discretization"
           ]
         },
         {
           "number": 3,
           "title": "Classification",
           "topics": [
-            "Basic concepts and the general approach to solving a classification problem",
-            "Decision tree induction: attribute selection measures, tree pruning",
-            "Bayesian classification methods: Bayes theorem, Naive Bayes classification",
-            "Rule-based classification; model evaluation and selection"
+            "Basic Concepts, General Approach to solving a classification problem",
+            "Decision Tree Induction: Attribute Selection Measures, Tree Pruning, Scalability and Decision Tree Induction, Visual Mining for Decision Tree Induction",
+            "Bayesian Classification Methods: Bayes Theorem, Naive Bayes Classification",
+            "Rule-Based Classification, Model Evaluation and Selection"
           ]
         },
         {
           "number": 4,
           "title": "Association Analysis",
           "topics": [
-            "Problem definition and frequent itemset generation",
-            "Rule generation: confidence-based pruning, rule generation in the Apriori algorithm",
-            "Compact representation of frequent itemsets",
-            "FP-Growth algorithm"
+            "Problem Definition, Frequent Itemset Generation",
+            "Rule Generation: Confidence Based Pruning, Rule Generation in Apriori Algorithm",
+            "Compact Representation of Frequent Itemsets",
+            "FP-Growth Algorithm"
           ]
         },
         {
           "number": 5,
           "title": "Cluster Analysis",
           "topics": [
-            "Overview, basics and importance of cluster analysis; different types of clusters",
-            "K-means: the basic K-means algorithm, additional issues, bisecting K-means",
-            "Agglomerative hierarchical clustering: basic agglomerative hierarchical clustering algorithm",
-            "DBSCAN: traditional density center-based approach, DBSCAN algorithm, strengths and weaknesses"
+            "Overview, Basics and Importance of Cluster Analysis, Clustering techniques, Different Types of Clusters",
+            "K-means: the Basic K-means Algorithm, K-means Additional Issues, Bisecting K-means",
+            "Agglomerative Hierarchical Clustering: Basic Agglomerative Hierarchical Clustering Algorithm",
+            "DBSCAN: Traditional Density Center-Based Approach, DBSCAN Algorithm, Strengths and Weaknesses"
           ]
         }
       ],
@@ -1838,10 +1838,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/3-1%20IT.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "This subject's own detail page is the only content found in Tirumala's '3-1 IT.pdf' -- unlike CSE's and ECE's III-year files, this document is only 5 pages and has no course-structure table (no codes, no elective groupings, no lab/skill-course rows). Category is inferred (ProfessionalCore) by analogy to CSE's parallel III-I structure, not confirmed from a structure table in this specific document. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1934,10 +1934,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3201; college code not stored to avoid implying a JNTUK code)."
     },
@@ -1962,52 +1962,51 @@
       "units": [
         {
           "number": 1,
-          "title": "Number Theory and Security Basics",
+          "title": "Basic Principles",
           "topics": [
-            "Prime numbers, Fermat's and Euler's theorems, testing for primality",
-            "The Chinese Remainder Theorem and the Euclidean theorem",
-            "The need for security, security approaches and principles of security",
-            "Plaintext and ciphertext; types of attacks"
+            "Security goals, cryptographic attacks, and security services and mechanisms",
+            "Mathematics of cryptography: integer arithmetic and modular arithmetic",
+            "Matrices and linear congruence"
           ]
         },
         {
           "number": 2,
-          "title": "Cryptography Concepts and Symmetric Algorithms",
+          "title": "Symmetric Encryption",
           "topics": [
-            "Substitution and transposition techniques; encryption and decryption",
-            "Symmetric vs asymmetric cryptography; steganography",
-            "Feistel cipher structure; Data Encryption Standard (DES) and Triple DES",
-            "Stream ciphers and RC4"
+            "Mathematics of symmetric key cryptography: algebraic structures and GF(2^n) fields",
+            "Modern symmetric key ciphers: modern block ciphers and modern stream ciphers",
+            "Data Encryption Standard: DES structure, DES analysis, security of DES, and Multiple DES",
+            "Advanced Encryption Standard: transformations, key expansions, AES ciphers and analysis of AES"
           ]
         },
         {
           "number": 3,
-          "title": "Asymmetric Key Cryptographic Algorithms",
+          "title": "Asymmetric Encryption",
           "topics": [
-            "Overview of asymmetric key cryptography",
-            "Diffie-Hellman key exchange and the RSA algorithm",
-            "Using symmetric and asymmetric cryptography together",
-            "Message digest, MAC, HMAC and digital signatures"
+            "Mathematics of asymmetric key cryptography: primes, primality testing, factorization and the Chinese Remainder Theorem",
+            "Asymmetric key cryptography: the RSA cryptosystem",
+            "Rabin cryptosystem and Elgamal cryptosystem",
+            "Elliptic Curve Cryptography (ECC)"
           ]
         },
         {
           "number": 4,
-          "title": "Public Key Infrastructure and Authentication",
+          "title": "Data Integrity, Digital Signature Schemes & Key Management",
           "topics": [
-            "Public key infrastructure, digital certificates and the PKIX model",
-            "User authentication basics; password and authentication-token mechanisms",
-            "Certificate-based and biometric authentication",
-            "Key Distribution Center (KDC) and Kerberos"
+            "Message integrity and message authentication: message integrity, the random oracle model and message authentication",
+            "Cryptographic hash functions: Whirlpool and SHA-512",
+            "Digital signature: process, services, attacks, schemes and applications",
+            "Key management: symmetric key distribution and Kerberos"
           ]
         },
         {
           "number": 5,
-          "title": "Internet Security Protocols",
+          "title": "Network Security",
           "topics": [
-            "SSL, S-HTTP and SET; SSL versus SET",
-            "Email security: Simple SMTP, Privacy Enhanced Mail (PEM)",
-            "Pretty Good Privacy (PGP) and S/MIME",
-            "Firewalls, IP security and Virtual Private Networks"
+            "Security at the application layer: PGP and S/MIME",
+            "Security at the transport layer: SSL and TLS",
+            "Security at the network layer: IPSec, its two modes and two security protocols, security association, IKE and ISAKMP",
+            "System security: users, trust and trusted systems, buffer overflow, malicious software, worms, viruses, IDS and firewalls"
           ]
         }
       ],
@@ -2026,14 +2025,14 @@
       "seo": {
         "slug": "cryptography-and-network-security-jntuk-r23-it-3-2",
         "title": "Cryptography & Network Security - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Cryptography & Network Security: number theory, symmetric & asymmetric algorithms, PKI, authentication, and internet security protocols."
+        "meta_description": "SRKR R23 IT 3-2 Cryptography & Network Security: number theory, symmetric & asymmetric algorithms, hash functions & digital signatures, and network security."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3202)."
     },
@@ -2060,50 +2059,50 @@
           "number": 1,
           "title": "Introduction to Machine Learning",
           "topics": [
-            "Definition and the relation between AI, ML and DL; need for machine learning",
-            "Types of machine learning, applications and challenges; data acquisition",
-            "Feature selection and feature extraction",
-            "Overfitting vs underfitting; bias and variance"
+            "Evolution of machine learning and paradigms for ML: learning by rote, learning by induction and reinforcement learning",
+            "Types of data and matching",
+            "Stages in machine learning: data acquisition, feature engineering, data representation and model selection",
+            "Model learning, model evaluation, model prediction, search and learning, and data sets"
           ]
         },
         {
           "number": 2,
-          "title": "Regression",
+          "title": "Nearest Neighbor-Based Models",
           "topics": [
-            "Linear regression and non-linear regression",
-            "Regularization and its types",
-            "Ridge regression vs Lasso regression",
-            "Logistic regression and binary classification"
+            "Proximity measures: distance measures, non-metric similarity functions and proximity between binary patterns",
+            "Classification algorithms based on distance measures",
+            "K-Nearest Neighbor classifier, radius distance nearest neighbor algorithm and KNN regression",
+            "Performance of classifiers and performance of regression algorithms"
           ]
         },
         {
           "number": 3,
-          "title": "Classification",
+          "title": "Models Based on Decision Trees and the Bayes Classifier",
           "topics": [
-            "Types of learners; binary, multi-class, multi-label and imbalanced classification",
-            "Decision trees: representation and the ID3 learning algorithm",
-            "Metrics for evaluating classifier performance",
-            "Naive Bayes classification and K-Nearest Neighbors with distance metrics"
+            "Decision trees for classification: impurity measures and properties",
+            "Regression based on decision trees, the bias-variance trade-off, and random forests for classification and regression",
+            "The Bayes classifier: Bayes' rule and inference, and the Bayes classifier and its optimality",
+            "Multi-class classification, class conditional independence and the Naive Bayes classifier (NBC)"
           ]
         },
         {
           "number": 4,
-          "title": "Support Vectors, Ensembles and Clustering",
+          "title": "Linear Discriminants for Machine Learning",
           "topics": [
-            "Support vector machines: linear SVM, non-linear SVM and SVR",
-            "Ensemble learning: bagging, boosting, stacking and random forest",
-            "Cluster analysis and measures of similarity and dissimilarity",
-            "Partitioning methods: K-Means and K-Medoids"
+            "Linear discriminants for classification: the perceptron classifier and the perceptron learning algorithm",
+            "Support vector machines: the linearly non-separable case, non-linear SVM and the kernel trick",
+            "Logistic regression and linear regression",
+            "Multi-layer perceptrons (MLPs) and backpropagation for training an MLP"
           ]
         },
         {
           "number": 5,
-          "title": "Dimensionality Reduction and Neural Networks",
+          "title": "Clustering",
           "topics": [
-            "Random forest and an introduction to reinforcement learning",
-            "Dimensionality reduction using Principal Component Analysis (PCA)",
-            "Artificial neural networks: biological vs artificial neurons, perceptron and multi-layer perceptron",
-            "Feedforward networks and the backpropagation algorithm"
+            "Partitioning of data, matrix factorization and clustering of patterns",
+            "Divisive clustering, agglomerative clustering and partitional clustering",
+            "K-Means clustering, soft partitioning and soft clustering, and Fuzzy C-Means clustering",
+            "Rough clustering and the rough K-Means clustering algorithm, Expectation-Maximization-based clustering, and spectral clustering"
           ]
         }
       ],
@@ -2122,14 +2121,14 @@
       "seo": {
         "slug": "machine-learning-jntuk-r23-it-3-2",
         "title": "Machine Learning - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Machine Learning: ML foundations, regression, classification, SVM, ensembles & clustering, dimensionality reduction and neural networks."
+        "meta_description": "SRKR R23 IT 3-2 Machine Learning: ML foundations, nearest-neighbor models, decision trees & Bayes classifiers, linear discriminants and clustering."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "ProfessionalCore theory (3-0-0-3). Five-unit syllabus read from SRKR R23 IT 3-2 PDF (course code B23IT3203)."
     },
@@ -2171,10 +2170,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-2 PDF (B23IT3214): build a VPC and launch a web server; AWS Lambda and Elastic Beanstalk; IAM; Amazon RDS database; Virtual Private Cloud; highly available environment; securing applications with Amazon Cognito; encrypting data at rest; automating infrastructure with CloudFormation; decoupled applications with SQS; serverless architecture on AWS; hybrid storage and migration with Storage Gateway S3 File Gateway; static website hosting; migrating a database to Amazon RDS."
     },
@@ -2216,10 +2215,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-2 PDF (B23IT3215): data preprocessing on CSV data; categorical and one-hot encoding; bias-variance analysis; linear and multiple regression; logistic regression for binary and multiclass classification; Lasso and Ridge regularization; ID3 decision tree; Naive Bayes; K-NN with different distance metrics; K-Means and hierarchical clustering; PCA dimensionality reduction; single- and multi-layer perceptrons using scikit-learn/TensorFlow."
     },
@@ -2244,52 +2243,52 @@
       "units": [
         {
           "number": 1,
-          "title": "Introduction to Soft Skills",
+          "title": "Analytical Thinking & Listening Skills",
           "topics": [
-            "Introduction to soft skills: definition and meaning",
-            "Importance and need in personal and professional settings",
-            "Soft skills versus hard skills",
-            "Personality development"
+            "Self-introduction and self-analysis",
+            "\"Shaping Young Minds\" -- a listening activity based on a talk by Azim Premji",
+            "Developing a positive attitude and perception",
+            "Communication skills: verbal communication and non-verbal communication (body language)"
           ]
         },
         {
           "number": 2,
-          "title": "Intra-Personal and Inter-Personal Communication",
+          "title": "Self-Management Skills and Etiquette",
           "topics": [
-            "Significance of inter- and intra-personal communication; SWOT analysis",
-            "Goal setting and guidelines for goal setting; emotional intelligence",
-            "Creativity and problem solving; stress and time management",
-            "Leadership and teamwork; building a positive attitude and social consciousness"
+            "Anger management, stress management and time management",
+            "The Six Thinking Hats technique",
+            "Team building and leadership qualities",
+            "Etiquette: social, business, telephone and dining etiquette"
           ]
         },
         {
           "number": 3,
-          "title": "Written Communication",
+          "title": "Standard Operation Methods",
           "topics": [
-            "Resume preparation: common resume blunders and tips for betterment",
-            "Resume review",
-            "Report writing",
-            "Writing a Statement of Purpose (SOP)"
+            "Basic grammar, tenses and prepositions",
+            "Pronunciation",
+            "Letter writing",
+            "Note making, note taking, minutes preparation, and email and letter writing"
           ]
         },
         {
           "number": 4,
-          "title": "Presentation Skills",
+          "title": "Job-Oriented Skills",
           "topics": [
-            "Importance of presentation skills",
-            "Just A Minute (JAM)",
-            "Essential guidelines for group discussions and debates",
-            "Role plays and PowerPoint presentations"
+            "Group discussion and mock group discussions",
+            "Resume preparation",
+            "Interview skills",
+            "Mock interviews"
           ]
         },
         {
           "number": 5,
-          "title": "Interview Skills",
+          "title": "Interpersonal Relationships",
           "topics": [
-            "Employability skills and knowing the selection process",
-            "Interview skills and types of interviews, including e-interviews",
-            "Do's and don'ts of interviews and frequently asked questions",
-            "Mock interviews; awareness of industries and researching the prospective workplace"
+            "Introduction, importance, types and uses of interpersonal relationships",
+            "Factors affecting interpersonal relationships",
+            "Accommodating different styles",
+            "Consequences of interpersonal relationships"
           ]
         }
       ],
@@ -2307,14 +2306,14 @@
       "seo": {
         "slug": "soft-skills-jntuk-r23-it-3-2",
         "title": "Soft Skills - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 Soft Skills: soft-skills foundations, intra/inter-personal communication, written communication, presentation skills and interview skills."
+        "meta_description": "SRKR R23 IT 3-2 Soft Skills: analytical thinking & listening, self-management & etiquette, standard operation methods, job-oriented and interpersonal skills."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Skill Enhancement Course (0-1-2-2). Five modules read from SRKR R23 IT 3-2 PDF (B23BS3201; offered commonly to AIML, CSBS, CSE, IT and MECH)."
     },
@@ -2407,10 +2406,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3204)."
     },
@@ -2502,10 +2501,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3205)."
     },
@@ -2598,10 +2597,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3206)."
     },
@@ -2694,10 +2693,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-II, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3207)."
     },
@@ -2790,10 +2789,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3209)."
     },
@@ -2886,10 +2885,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3210)."
     },
@@ -2982,10 +2981,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3211)."
     },
@@ -3078,10 +3077,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3212)."
     },
@@ -3174,10 +3173,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "needs_verification",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. Unlike this branch's other semesters, the subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-2 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "HELD as needs_verification (not published). Audit course / Mandatory Non-Credit (2-0-0-0, no credits) from SRKR R23 IT 3-2 PDF (B23AC3201, common to several branches). Per the project's audit-course discipline, content-light non-credit/audit rows require an explicit publication decision before going public, so this is retained as a draft rather than published."
     },
@@ -3270,10 +3269,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3104)."
     },
@@ -3298,52 +3297,52 @@
       "units": [
         {
           "number": 1,
-          "title": "Cyber Threats and Attacks",
+          "title": "Introduction to Cybercrime",
           "topics": [
-            "Types of cyber threats; social engineering and defending against deception",
-            "Types of cyber attacks; wireless, mobile and application attacks",
-            "Securing networks: IP, ICMP, TCP/UDP vulnerabilities; ARP, DNS and DHCP attacks; HTTP exploits, SQL injection and cross-site scripting",
-            "Wireless LAN threats and security; network security infrastructure and services"
+            "Introduction, Cybercrime: Definition and Origins of the Word, Cybercrime and Information Security, Cybercriminals, Classifications of Cybercrime, Cyberstalking, Cybercafe and Cybercrimes, Botnets",
+            "Attack Vector, Proliferation of Mobile and Wireless Devices, Security Challenges Posed by Mobile Devices",
+            "Attacks on Mobile/Cell Phones",
+            "Network and Computer Attacks"
           ]
         },
         {
           "number": 2,
-          "title": "Defense-in-Depth",
+          "title": "Tools and Methods",
           "topics": [
-            "Windows OS vulnerabilities, architecture, configuration and security",
-            "Operating-system security: patch management, endpoint security, host encryption and boot integrity",
-            "Endpoint and malware protection; host-based firewalls and intrusion detection",
-            "The cyber security cube and CIA triad; policies, standards and network hardening"
+            "Proxy Servers and Anonymizers, Phishing, Password Cracking, Keyloggers and Spywares",
+            "Virus and Worms, Trojan Horses and Backdoors, Steganography, Sniffers, Spoofing, Session Hijacking",
+            "Buffer Overflow, DoS and DDoS Attacks, SQL Injection, Attacks on Wireless Networks",
+            "Identity Theft (ID Theft), Foot Printing and Social Engineering, Port Scanning, Enumeration"
           ]
         },
         {
           "number": 3,
-          "title": "Access Control and AAA",
+          "title": "Cyber Crime Investigation",
           "topics": [
-            "Wireless, mobile, embedded and IoT device security",
-            "Access control types; identity management, authentication and authorization",
-            "Zero-trust security, Network Access Control and account management; AAA usage and operation",
-            "Access control lists and configuration; firewalls and zone-based policy firewalls"
+            "Introduction, Investigation Tools, eDiscovery, Digital Evidence Collection, Evidence Preservation",
+            "E-Mail Investigation, E-Mail Tracking, IP Tracking, E-Mail Recovery, Hands on Case Studies",
+            "Encryption and Decryption Methods, Search and Seizure of Computers",
+            "Recovering Deleted Evidences, Password Cracking"
           ]
         },
         {
           "number": 4,
-          "title": "Cloud Security, IT Security and Governance",
+          "title": "Computer Forensics and Investigations",
           "topics": [
-            "Cloud security domains: infrastructure, application and data security; protecting virtual machines",
-            "Security monitoring, security data and logs; evaluating alerts",
-            "Governance, security policies, ethics and cyber law",
-            "IT security management frameworks (ISO 27000, CIS controls); network security testing and penetration testing"
+            "Understanding Computer Forensics, Preparing for Computer Investigations",
+            "Current Computer Forensics Tools: Evaluating Computer Forensics Tools, Computer Forensics Software Tools, Computer Forensics Hardware Tools, Validating and Testing Forensics Software",
+            "Face, Iris and Fingerprint Recognition, Audio Video Analysis, Windows System Forensics, Linux System Forensics",
+            "Graphics and Network Forensics, E-mail Investigations, Cell Phone and Mobile Device Forensics"
           ]
         },
         {
           "number": 5,
-          "title": "CVSS, Risk and Incident Response",
+          "title": "Cyber Crime Legal Perspectives",
           "topics": [
-            "Threat intelligence; network and server profiling and anomaly detection",
-            "Common Vulnerability Scoring System (CVSS); secure device management",
-            "Risk management and risk assessment; security controls",
-            "Evidence handling and attack attribution; the Cyber Kill Chain, the Diamond Model, incident response and disaster recovery"
+            "Introduction, Cybercrime and the Legal Landscape around the World",
+            "The Indian IT Act, Challenges to Indian Law and Cybercrime Scenario in India",
+            "Consequences of Not Addressing the Weakness in Information Technology Act, Digital Signatures and the Indian IT Act, Amendments to the Indian IT Act",
+            "Cybercrime and Punishment, Cyberlaw, Technology and Students: Indian Scenario"
           ]
         }
       ],
@@ -3362,14 +3361,14 @@
       "seo": {
         "slug": "cyber-security-jntuk-r23-it-3-1",
         "title": "Cyber Security - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective Cyber Security: threats & attacks, defense-in-depth, access control & AAA, cloud security & governance, and incident response."
+        "meta_description": "SRKR R23 IT 3-1 elective Cyber Security: cybercrime types, attack tools & methods, cybercrime investigation, computer forensics and Indian cyber law."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3105)."
     },
@@ -3394,52 +3393,52 @@
       "units": [
         {
           "number": 1,
-          "title": "Introduction and Intelligent Agents",
+          "title": "Introduction",
           "topics": [
-            "Introduction, history and foundations of AI; intelligent systems",
-            "Agents and environments; the concept of rationality and the nature of environments",
-            "Structure of agents; problem-solving agents and problem formulation",
-            "Applications; tic-tac-toe game playing"
+            "AI problems, foundation of AI and history of AI",
+            "Intelligent agents: agents and environments, the concept of rationality",
+            "The nature of environments, structure of agents",
+            "Problem solving agents, problem formulation"
           ]
         },
         {
           "number": 2,
-          "title": "Problem Solving and Game Playing",
+          "title": "Searching",
           "topics": [
-            "State-space search and control strategies; general problem solving",
-            "Characteristics of problems; exhaustive and heuristic search; iterative deepening A*; constraint satisfaction",
-            "Problem reduction",
-            "Game playing, alpha-beta pruning and two-player perfect-information games"
+            "Searching for solutions, uninformed search strategies: breadth-first search, depth-first search",
+            "Search with partial information (heuristic search): hill climbing, A*, AO* algorithms, problem reduction",
+            "Game Playing: adversarial search, games, mini-max algorithm, optimal decisions in multiplayer games",
+            "Problems in game playing, alpha-beta pruning, evaluation functions"
           ]
         },
         {
           "number": 3,
-          "title": "Logic and Uncertainty",
+          "title": "Representation of Knowledge",
           "topics": [
-            "Propositional calculus and propositional logic",
-            "Natural deduction and axiomatic systems; semantic tableau and resolution refutation",
-            "Predicate logic",
-            "Uncertainty; fuzzy logic, membership functions and fuzzy set operations"
+            "Knowledge representation issues, predicate logic, logic programming",
+            "Semantic nets, frames and inheritance, constraint propagation",
+            "Representing knowledge using rules, rule-based deduction systems",
+            "Reasoning under uncertainty, review of probability, Bayes' probabilistic inferences and Dempster-Shafer theory"
           ]
         },
         {
           "number": 4,
-          "title": "Knowledge Representation",
+          "title": "Logic Concepts",
           "topics": [
-            "Approaches to knowledge representation; semantic networks and extended semantic networks",
-            "Knowledge representation using frames",
-            "Advanced techniques: conceptual dependency theory and script structure",
-            "Reasoning under uncertainty; probability, Bayes' theorem and Dempster-Shafer theory"
+            "First order logic, inference in first order logic, propositional vs. first order inference",
+            "Unification and lifts, forward chaining, backward chaining, resolution",
+            "Learning from observation: inductive learning, decision trees, explanation-based learning",
+            "Statistical learning methods, reinforcement learning"
           ]
         },
         {
           "number": 5,
-          "title": "Planning and Expert Systems",
+          "title": "Expert Systems",
           "topics": [
-            "Components of a planning system; goal-stack planning",
-            "Non-linear planning with constraint posting; hierarchical and reactive planning",
-            "Expert systems: phases in building, architecture, knowledge acquisition, meta-knowledge and heuristics",
-            "Typical expert systems (MYCIN, DART, XCON) and expert-system shells"
+            "Architecture of expert systems",
+            "Roles of expert systems: knowledge acquisition, meta-knowledge, heuristics",
+            "Typical expert systems: MYCIN, DART, XCON",
+            "Expert system shells"
           ]
         }
       ],
@@ -3458,14 +3457,14 @@
       "seo": {
         "slug": "artificial-intelligence-jntuk-r23-it-3-1",
         "title": "Artificial Intelligence - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective AI: intelligent agents, search & game playing, logic & fuzzy sets, knowledge representation, planning and expert systems."
+        "meta_description": "SRKR R23 IT 3-1 elective AI: intelligent agents, uninformed & heuristic search, game playing, knowledge representation, first-order logic and expert systems."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3106)."
     },
@@ -3490,52 +3489,52 @@
       "units": [
         {
           "number": 1,
-          "title": "Introduction to the 8085 Microprocessor",
+          "title": "8086 Architecture",
           "topics": [
-            "Internal architecture and functional/signal description of the 8085",
-            "Instruction set",
-            "Addressing modes",
-            "Programming in 8085"
+            "Main features, pin diagram/description, 8086 microprocessor family",
+            "Internal architecture, bus interfacing unit, execution unit",
+            "Interrupts and interrupt response, 8086 system timing",
+            "Minimum mode and maximum mode configuration"
           ]
         },
         {
           "number": 2,
-          "title": "Programming Techniques",
+          "title": "8086 Programming",
           "topics": [
-            "Timing diagrams",
-            "Counters and delays",
-            "Stacks and subroutines",
-            "Interrupts in the 8085"
+            "Program development steps, instructions, addressing modes",
+            "Assembler directives",
+            "Writing simple programs with an assembler",
+            "Assembly language program development tools"
           ]
         },
         {
           "number": 3,
-          "title": "Interfacing with the 8085",
+          "title": "8086 Interfacing",
           "topics": [
-            "Memory structure and requirements; basic memory interfacing and address decoding",
-            "Interfacing circuits (2732 EPROM, read/write memory)",
-            "Parallel I/O interface 8255 and timer interface 8253/54",
-            "Programmable interrupt controller 8259A and its interrupt operation"
+            "Semiconductor memories interfacing (RAM, ROM), Intel 8255 programmable peripheral interface",
+            "Interfacing switches and LEDs, interfacing seven segment displays, software and hardware interrupt applications",
+            "Intel 8251 USART architecture and interfacing, Intel 8237A DMA controller",
+            "Stepper motor, A/D and D/A converters, need for 8259 programmable interrupt controllers"
           ]
         },
         {
           "number": 4,
-          "title": "The 8086 Microprocessor and Programming",
+          "title": "Microcontroller: Architecture of 8051",
           "topics": [
-            "The 8086 microprocessor architecture and functional/signal description",
-            "Segmented memory",
-            "Maximum and minimum mode of the 8086",
-            "Instruction set and addressing modes"
+            "Architecture of 8051, Special Function Registers (SFRs)",
+            "I/O Pins, Ports and Circuits",
+            "Instruction set, addressing modes",
+            "Assembly language programming"
           ]
         },
         {
           "number": 5,
-          "title": "Introduction to Microcontrollers",
+          "title": "Interfacing Microcontroller",
           "topics": [
-            "Comparison between microprocessors and microcontrollers",
-            "8051 hardware: block diagram and oscillator clock",
-            "8051 programming model: program counter, data pointer, CPU registers, flags and program status word",
-            "Internal RAM and ROM, special function registers, stack and stack pointer"
+            "Programming 8051 timers, serial port programming",
+            "Interrupts programming, LCD & keyboard interfacing",
+            "ADC, DAC & sensor interfacing, external memory interface",
+            "Stepper motor and waveform generation; comparison of microprocessor, microcontroller, PIC and ARM processors"
           ]
         }
       ],
@@ -3554,14 +3553,14 @@
       "seo": {
         "slug": "microprocessors-and-microcontrollers-jntuk-r23-it-3-1",
         "title": "Microprocessors & Microcontrollers - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 elective Microprocessors & Microcontrollers: 8085 architecture & programming, interfacing, the 8086, and 8051 microcontroller basics."
+        "meta_description": "SRKR R23 IT 3-1 elective Microprocessors & Microcontrollers: 8086 architecture, programming and interfacing, plus the 8051 microcontroller."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Professional Elective (PE-I, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-1 PDF (B23IT3107)."
     },
@@ -3602,10 +3601,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3110): JDBC CRUD using Statement, PreparedStatement and CallableStatement; scrollable and updatable ResultSets; servlets, deployment descriptors and session management with cookies, HttpSession and URL rewriting; JSP and JSTL (core, format, function and SQL tags) with database access; Spring MVC, Spring JDBC template and transactions, Spring AOP logging and Spring Security authentication."
     },
@@ -3646,10 +3645,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Lab (0-0-3-1.5). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3111): error detection with checksum and CRC; sliding-window protocols (Go-Back-N and Selective Repeat); distance-vector routing; switch and router configuration, static and dynamic routing (RIP v1/v2, OSPF), VLANs and inter-VLAN routing on Packet Tracer; leaky-bucket congestion control; packet capture with Wireshark; OS detection with Nmap; and NS2 simulation of packet drops and throughput."
     },
@@ -3690,10 +3689,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Skill Enhancement Course (0-1-2-2), a hands-on practical. Module list from SRKR R23 IT 3-1 PDF (B23IT3112): HTML lists, links and images; tables, forms and frames; HTML5 and cascading style sheets with types of CSS; selector forms; CSS color, background, font, text and the box model; applying internal and external JavaScript with I/O and type conversion; predefined and user-defined JavaScript objects; conditional statements and loops; and JavaScript functions, events and form validation."
     },
@@ -3735,10 +3734,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-11",
         "status": "verified",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
       },
       "notes": "Tinkering Lab / Engineering Science (0-0-2-1). Experiment list from SRKR R23 IT 3-1 PDF (B23IT3113): install Flutter and Dart SDK and Dart basics; Flutter widgets (Text, Image, Container) and layouts (Row, Column, Stack); responsive UI with media queries; navigation with Navigator and named routes; stateful and stateless widgets with state management (setState, Provider); custom widgets and themes; forms with validation and error handling; animations; fetching and displaying data from a REST API; and unit testing and debugging of UI components."
     },
