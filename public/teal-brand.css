@@ -434,3 +434,51 @@ html[data-theme="dark"] .quiz-option[aria-pressed="true"],
 html[data-theme="dark"] .quiz-option.is-selected{
   background:rgba(46,223,207,.08);border:1.5px solid #2EDFCF;
 }
+
+
+/* ============================================================================
+   Subject page — unit checklist + verified seal (design direction 4a)
+   ========================================================================== */
+
+/* --- Breadcrumb path + pill meta row (replaces the old key:value form-strip) --- */
+.subject-path{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.04em;color:var(--faint);margin-bottom:1rem;}
+.subject-path a{color:var(--faint);}
+.subject-path a:hover{color:var(--accent);}
+.pill-row{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1rem;font-family:"IBM Plex Mono",monospace;font-size:.7rem;}
+.pill{background:var(--surface-2);border:1px solid var(--border);border-radius:99px;padding:.32rem .75rem;color:var(--text-2);}
+.pill--verified{background:transparent;border-color:var(--green);color:var(--green);font-weight:600;}
+
+/* --- Unit checklist --- */
+.checklist-card{background:var(--surface-2);border:1px solid var(--border);border-radius:16px;overflow:hidden;}
+.checklist-head{display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.25rem;border-bottom:1px solid var(--hair);}
+.checklist-head h2{font-size:.95rem;margin:0;}
+.checklist-progress{font-family:"IBM Plex Mono",monospace;font-size:.7rem;color:var(--accent);}
+.checklist-row{
+  display:flex;gap:.9rem;width:100%;padding:.95rem 1.25rem;border:none;border-bottom:1px solid var(--hair);
+  background:transparent;text-align:left;font-family:inherit;cursor:pointer;
+}
+.checklist-row:last-child{border-bottom:none;}
+.checklist-row:hover{background:var(--surface);}
+.checklist-row.is-covered{background:var(--accent-soft);}
+.checklist-row.is-covered:hover{background:var(--accent-soft);filter:brightness(1.04);}
+.checklist-check{
+  flex:none;width:22px;height:22px;margin-top:.1rem;border-radius:7px;border:1px solid var(--border);
+  background:transparent;display:flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;
+}
+.checklist-row.is-covered .checklist-check{background:var(--brand);border-color:var(--brand);color:var(--accent-ink);}
+.checklist-unit-title{font-weight:600;font-size:.92rem;color:var(--text);}
+.checklist-unit-topics{font-size:.8rem;color:var(--muted);margin-top:.15rem;}
+.checklist-intro{font-size:.95rem;color:var(--text-2);max-width:60ch;margin:.6rem 0 1.1rem;}
+
+/* --- Circular verified seal (sidebar rail) --- */
+.verify-seal-wrap{display:flex;justify-content:center;margin-bottom:1.1rem;}
+.verify-seal{position:relative;width:150px;height:150px;transform:rotate(-6deg);}
+.verify-seal-ring-outer{position:absolute;inset:0;border:2.5px solid var(--green);border-radius:50%;}
+.verify-seal-ring-inner{position:absolute;inset:10px;border:1.5px dashed var(--green);border-radius:50%;}
+.verify-seal-text{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;color:var(--green);text-align:center;}
+.verify-seal-brand{font-family:"IBM Plex Mono",monospace;font-size:.56rem;letter-spacing:.24em;}
+.verify-seal-word{font-weight:700;font-size:1.15rem;letter-spacing:.05em;}
+.verify-seal-sub{font-family:"IBM Plex Mono",monospace;font-size:.52rem;letter-spacing:.05em;max-width:100px;line-height:1.5;}
+
+/* Glow reads only on true black -- harmless no-op look on light */
+html[data-theme="dark"] .verify-seal{filter:drop-shadow(0 0 20px rgba(46,223,207,.3));}

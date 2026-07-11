@@ -1,5 +1,45 @@
 import { escapeHtml } from './layout.js';
 
+// Local storage-backed unit checklist: each subject gets its own key, so
+// progress is per-device and never touches the server (no accounts, no PII).
+// Inlined per-page (like search-bar.js's searchBarScript) since this only
+// ever runs on subject pages.
+function unitChecklistScript() {
+  return `<script>
+(function () {
+  var card = document.querySelector('.checklist-card[data-subject-id]');
+  if (!card) return;
+  var key = 'ts-units-' + card.getAttribute('data-subject-id');
+  var rows = Array.prototype.slice.call(card.querySelectorAll('.checklist-row'));
+  var progressEl = card.querySelector('.checklist-progress');
+  var covered;
+  try { covered = new Set(JSON.parse(localStorage.getItem(key) || '[]')); } catch (e) { covered = new Set(); }
+
+  function paint() {
+    rows.forEach(function (row) {
+      var unit = row.getAttribute('data-unit');
+      var on = covered.has(unit);
+      row.classList.toggle('is-covered', on);
+      row.setAttribute('aria-pressed', on ? 'true' : 'false');
+      row.querySelector('.checklist-check').textContent = on ? '\\u2713' : '';
+    });
+    if (progressEl) progressEl.textContent = covered.size + ' / ' + rows.length + ' COVERED';
+  }
+
+  rows.forEach(function (row) {
+    row.addEventListener('click', function () {
+      var unit = row.getAttribute('data-unit');
+      if (covered.has(unit)) covered.delete(unit); else covered.add(unit);
+      try { localStorage.setItem(key, JSON.stringify(Array.from(covered))); } catch (e) {}
+      paint();
+    });
+  });
+
+  paint();
+})();
+</script>`;
+}
+
 export function renderSubjectPage(subject, { branches = [], regulation, legacySubject, branchHubPublished }) {
   // branches is always an array: length 1 for an ordinary per-branch subject
   // (identical to the old single-branch behavior below), length 2+ for a
@@ -9,17 +49,31 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
   const isVerified = subject.source.status === 'verified';
   const badgeClass = isVerified ? 'badge--verified' : 'badge--draft';
   const badgeLabel = isVerified ? 'Verified vs. published syllabus' : 'Needs verification';
+  const hasUnits = subject.units && subject.units.length > 0;
 
-  // Units as registry-style rows with a mono UNIT nn tag column.
-  const unitsHtml = subject.units && subject.units.length > 0
-    ? subject.units.map((u, i) => `
-          <div class="unit-row">
-            <div class="unit-tag">UNIT ${String(i + 1).padStart(2, '0')}</div>
-            <div>
-              <div class="unit-title">${escapeHtml(u.title)}</div>
-              ${u.topics?.length ? `<div class="unit-topics">${escapeHtml(u.topics.join('; '))}</div>` : ''}
-            </div>
-          </div>`).join('')
+  // Unit checklist: tick-off progress lives entirely in the visitor's
+  // localStorage (see unitChecklistScript) -- server always renders the
+  // unchecked "0 / N" state, then the inline script hydrates real counts on
+  // load. No accounts, nothing sent anywhere, never varies the cached HTML.
+  const checklistIntro = hasUnits
+    ? `${subject.units.length} units, from ${escapeHtml(subject.units[0].title)} to ${escapeHtml(subject.units[subject.units.length - 1].title)}. Tick off units as you cover them &mdash; your progress stays on this device.`
+    : '';
+  const unitsHtml = hasUnits
+    ? `<div class="checklist-card" data-subject-id="${escapeHtml(subject.id)}">
+        <div class="checklist-head">
+          <h2>Unit-wise syllabus</h2>
+          <span class="checklist-progress mono">0 / ${subject.units.length} COVERED</span>
+        </div>
+        ${subject.units.map((u, i) => `
+        <button type="button" class="checklist-row" data-unit="${i + 1}" aria-pressed="false">
+          <span class="checklist-check" aria-hidden="true"></span>
+          <span>
+            <span class="checklist-unit-title">UNIT ${String(i + 1).padStart(2, '0')} &mdash; ${escapeHtml(u.title)}</span>
+            ${u.topics?.length ? `<span class="checklist-unit-topics">${escapeHtml(u.topics.join(' · '))}</span>` : ''}
+          </span>
+        </button>`).join('')}
+      </div>
+      ${unitChecklistScript()}`
     : `<div class="empty-state">Unit-wise breakdown not published yet for this page. Source: ${subject.source.origin_url ? `<a href="${subject.source.origin_url}" rel="nofollow noopener" target="_blank">reference</a>` : 'not yet sourced'}.</div>`;
 
   const outcomesHtml = subject.course_outcomes?.length
@@ -39,23 +93,35 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
     ? resourceLinks
     : `<div class="empty-state">Notes for this subject haven't been uploaded yet. Check back soon.</div>`;
 
-  // Right rail: verification card (the redesign's signature element) when the
-  // page is verified; the draft badge stays in the status row either way.
-  // Tier-aware verify-card text. The strong tier (subject/credits/placement
-  // cross-confirmed against JNTUK's own exam records) may say so; autonomous-only
-  // sources must NOT imply an official JNTU document -- they are a published
-  // syllabus from a JNTUK-affiliated college, as the caveat box states.
+  // Right rail: the circular verified seal is the redesign's signature
+  // element, replacing the old text verify-card (whose more detailed
+  // cross-confirmed/not-cross-confirmed sentence still lives on the page,
+  // in the source-caveat disclaimer box below). Tier-aware: the strong tier
+  // (subject/credits/placement cross-confirmed against JNTUK's own exam
+  // records) may say so; autonomous-only sources must NOT imply an official
+  // JNTU document -- they are a published syllabus from a JNTUK-affiliated
+  // college, as the caveat box states.
   const sourceNote = subject.source.college_source_note || '';
   const notCrossConfirmed = /not\s+(been\s+)?(independently\s+)?cross-confirmed/i.test(sourceNote);
   const crossConfirmed = /cross-confirmed against/i.test(sourceNote) && !notCrossConfirmed;
-  const verifyCardText = crossConfirmed
-    ? `Subject, credits and placement cross-checked against JNTUK's ${escapeHtml(subject.regulation)} exam records.`
-    : `Checked against a published ${escapeHtml(subject.regulation)} syllabus from a JNTUK-affiliated source.`;
-  const verifyCard = isVerified
-    ? `<div class="verify-card">
-        <div><span class="check" aria-hidden="true">&#10003;</span> <strong style="color:var(--accent);">Verified</strong></div>
-        <p style="font-size:.82rem;line-height:1.55;color:var(--text-2);margin:.5rem 0;">${verifyCardText}</p>
-        ${subject.source.retrieved_date ? `<div class="mono" style="font-size:.68rem;color:var(--muted);">Checked ${escapeHtml(subject.source.retrieved_date)}</div>` : ''}
+
+  // Circular seal: the same signature element the mockups lead with. Reuses
+  // the exact crossConfirmed gating above -- the sub-line never claims an
+  // exam-records cross-check it didn't get.
+  const sealSub = crossConfirmed
+    ? `VS. JNTUK ${escapeHtml(subject.regulation)} EXAM RECORDS`
+    : `VS. PUBLISHED ${escapeHtml(subject.regulation)} SYLLABUS`;
+  const verifySeal = isVerified
+    ? `<div class="verify-seal-wrap">
+        <div class="verify-seal">
+          <div class="verify-seal-ring-outer"></div>
+          <div class="verify-seal-ring-inner"></div>
+          <div class="verify-seal-text">
+            <span class="verify-seal-brand">JNTUSTACK</span>
+            <span class="verify-seal-word">VERIFIED</span>
+            <span class="verify-seal-sub">${sealSub}${subject.source.retrieved_date ? ` &middot; ${escapeHtml(subject.source.retrieved_date)}` : ''}</span>
+          </div>
+        </div>
       </div>`
     : '';
 
@@ -89,17 +155,22 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
     ? `<div class="disclaimer-box">${escapeHtml(subject.source.college_source_note)}</div>`
     : '';
 
+  const subjectPath = isShared
+    ? `<a href="/">HOME</a> / ${escapeHtml(subject.year_sem_label)}`
+    : `<a href="/">HOME</a>${branchHubPublished && branch ? ` / <a href="/${escapeHtml(branch.code.toLowerCase())}/">${escapeHtml(branch.code)}</a>` : branch ? ` / ${escapeHtml(branch.code)}` : ''} / ${escapeHtml(subject.year_sem_label)}`;
+
   return `
 ${hubBreadcrumb}
+<div class="subject-path mono">${subjectPath}</div>
 <div class="subject-grid">
   <div class="subject-main">
-    <div class="form-strip">
-      <span>Regulation: <b>${escapeHtml(subject.regulation)}</b></span>
+    <div class="pill-row">
+      <span class="pill">${escapeHtml(subject.regulation)}</span>
       ${isShared
-        ? `<span>Branches: <b>${branches.map(b => escapeHtml(b?.code || '')).join(', ')}</b></span>`
-        : `<span>Branch: <b>${escapeHtml(branch?.name || subject.branch)}</b></span>`}
-      <span>Semester: <b>${escapeHtml(subject.year_sem_label)}</b></span>
-      ${subject.subject_code ? `<span>Code: <b>${escapeHtml(subject.subject_code)}</b></span>` : ''}
+        ? `<span class="pill">${branches.map(b => escapeHtml(b?.code || '')).join('/')} &middot; ${escapeHtml(subject.year_sem_label)}</span>`
+        : `<span class="pill">${escapeHtml(branch?.code || subject.branch)} &middot; ${escapeHtml(subject.year_sem_label)}</span>`}
+      ${subject.subject_code ? `<span class="pill">${escapeHtml(subject.subject_code)}</span>` : ''}
+      <span class="pill ${isVerified ? 'pill--verified' : ''}">${isVerified ? '&#10003; ' : ''}${badgeLabel.toUpperCase()}${subject.source.retrieved_date ? ` ${escapeHtml(subject.source.retrieved_date)}` : ''}</span>
     </div>
 
     <h1 class="subject-title">${escapeHtml(subject.name)}</h1>
@@ -117,13 +188,14 @@ ${hubBreadcrumb}
     ${outcomesHtml}
 
     <section>
-      <h2>Unit-wise syllabus</h2>
+      ${hasUnits ? '' : '<h2>Unit-wise syllabus</h2>'}
+      ${hasUnits ? `<p class="checklist-intro">${checklistIntro}</p>` : ''}
       ${unitsHtml}
     </section>
   </div>
 
   <aside class="subject-rail">
-    ${verifyCard}
+    ${verifySeal}
     <div class="rail-card">
       <h2 style="font-size:.95rem;margin-bottom:.7rem;">Download</h2>
       ${resourcesHtml}
