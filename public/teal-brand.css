@@ -581,3 +581,28 @@ a.subject-card:hover{border-color:var(--accent);}
   .college-card h4{grid-column:2;}
   .college-card .college-meta,.college-card .college-codes,.college-card .college-link{grid-column:2;}
 }
+
+
+/* ============================================================================
+   Branch guide / quiz — progress dots + keyed options (design direction 4d)
+   ========================================================================== */
+.quiz-progress-dots{display:flex;align-items:center;gap:.5rem;margin-bottom:1.2rem;}
+.quiz-progress-dot{width:8px;height:8px;border-radius:50%;background:var(--border);flex:none;}
+.quiz-progress-dot--done,.quiz-progress-dot--current{background:var(--accent);}
+.quiz-progress-dot--current{width:34px;border-radius:99px;}
+.quiz-progress-count{font-family:"IBM Plex Mono",monospace;font-size:.72rem;color:var(--faint);margin-left:.3rem;}
+
+.quiz-option{display:flex;align-items:center;gap:.9rem;}
+.quiz-option-key{flex:none;font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--accent);border:1px solid var(--green-border);border-radius:7px;padding:.15rem .5rem;}
+.quiz-option[aria-pressed="true"] .quiz-option-key,
+.quiz-option.is-selected .quiz-option-key{background:var(--accent);color:var(--accent-ink);border-color:var(--accent);}
+
+/* Card header row (title + subject-count pill) and the good-fit/reconsider
+   pairing side by side instead of stacked -- same underlying lists, just
+   laid out like the mockup rather than truncated. */
+.branch-compare-card{display:flex;flex-direction:column;}
+.branch-compare-head{display:flex;align-items:baseline;justify-content:space-between;gap:.8rem;}
+.branch-compare-head h3{margin:0;}
+.fit-columns{display:grid;grid-template-columns:1fr 1fr;gap:.9rem;margin:.3rem 0 .6rem;}
+.fit-columns .compare-label{margin:0 0 .3rem;}
+.fit-columns .compare-label--reconsider{color:var(--draft);}

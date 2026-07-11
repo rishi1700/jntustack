@@ -50,12 +50,14 @@ const QUIZ_QUESTIONS = [
   },
 ];
 
+const OPTION_KEYS = ['A', 'B', 'C', 'D', 'E'];
+
 function renderQuizSection() {
   return `
 <section class="quiz-section">
   <h2>Find a starting point</h2>
   <p class="guide-intro">Five quick questions. This narrows the field based on how you actually answer -- it doesn't hand you a verdict. Treat the result as something to go research and discuss, not a decision made for you.</p>
-  <div class="progress-bar"><div class="progress-bar-fill" id="quizProgress"></div></div>
+  <div class="quiz-progress-dots" id="quizProgress"></div>
   <div class="quiz-card" id="quizCard"></div>
   <div id="quizResults"></div>
 </section>
@@ -63,15 +65,27 @@ function renderQuizSection() {
 <script>
 (function(){
   const QUESTIONS = ${JSON.stringify(QUIZ_QUESTIONS)};
+  const OPTION_KEYS = ${JSON.stringify(OPTION_KEYS)};
   const BRANCH_DATA = ${'__BRANCH_DATA_PLACEHOLDER__'};
   let current = 0;
   const scores = {};
+
+  function renderProgress(){
+    const dots = document.getElementById('quizProgress');
+    let html = '';
+    for (let i = 0; i < QUESTIONS.length; i++) {
+      const cls = i < current ? 'quiz-progress-dot--done' : i === current ? 'quiz-progress-dot--current' : '';
+      html += '<span class="quiz-progress-dot ' + cls + '"></span>';
+    }
+    html += '<span class="quiz-progress-count">' + Math.min(current + 1, QUESTIONS.length) + ' / ' + QUESTIONS.length + '</span>';
+    dots.innerHTML = html;
+  }
 
   function renderQuestion(){
     const card = document.getElementById('quizCard');
     const resultsEl = document.getElementById('quizResults');
     resultsEl.innerHTML = '';
-    document.getElementById('quizProgress').style.width = Math.round((current / QUESTIONS.length) * 100) + '%';
+    renderProgress();
 
     if (current >= QUESTIONS.length) {
       card.style.display = 'none';
@@ -84,7 +98,7 @@ function renderQuizSection() {
       '<div class="quiz-kicker">QUESTION ' + (current + 1) + ' / ' + QUESTIONS.length + '</div>' +
       '<div class="quiz-question">' + q.q + '</div>' +
       '<div class="quiz-options">' +
-        q.options.map((opt, i) => '<button class="quiz-option" data-i="' + i + '">' + opt.label + '</button>').join('') +
+        q.options.map((opt, i) => '<button class="quiz-option" data-i="' + i + '"><span class="quiz-option-key">' + OPTION_KEYS[i] + '</span>' + opt.label + '</button>').join('') +
       '</div>' +
       (current > 0 ? '<div class="quiz-nav"><button id="backBtn">&larr; back</button><span></span></div>' : '');
 
@@ -103,7 +117,8 @@ function renderQuizSection() {
   }
 
   function showResults(){
-    document.getElementById('quizProgress').style.width = '100%';
+    current = QUESTIONS.length;
+    renderProgress();
     const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]).slice(0, 3);
     const resultsEl = document.getElementById('quizResults');
     if (ranked.length === 0) {
@@ -154,19 +169,26 @@ function renderComparisonGrid(branchProfiles, statusByCode = {}) {
   <div class="branch-compare-grid">
     ${branchProfiles.map(b => `
       <div class="branch-compare-card">
-        <h3>${escapeHtml(b.branch)}</h3>
+        <div class="branch-compare-head">
+          <h3>${escapeHtml(b.branch)}</h3>
+          ${contentStatusHtml(statusByCode[b.branch])}
+        </div>
         <div class="tagline">${escapeHtml(b.tagline)}</div>
-        ${contentStatusHtml(statusByCode[b.branch])}
 
         <div class="compare-label">Core focus</div>
         <p>${b.core_focus.map(escapeHtml).join(' &middot; ')}</p>
 
-        <div class="compare-label">Probably a good fit if</div>
-        <ul class="fit-list">${b.suits_students_who.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
-
-        ${b.less_good_fit_if?.length ? `
-        <div class="compare-label">Maybe reconsider if</div>
-        <ul class="nonfit-list">${b.less_good_fit_if.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>` : ''}
+        <div class="fit-columns">
+          <div>
+            <div class="compare-label">Good fit if</div>
+            <ul class="fit-list">${b.suits_students_who.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
+          </div>
+          ${b.less_good_fit_if?.length ? `
+          <div>
+            <div class="compare-label compare-label--reconsider">Reconsider if</div>
+            <ul class="nonfit-list">${b.less_good_fit_if.map(s => `<li>${escapeHtml(s)}</li>`).join('')}</ul>
+          </div>` : ''}
+        </div>
 
         <div class="compare-label">Career paths</div>
         <p>${b.career_paths.map(escapeHtml).join(' &middot; ')}</p>
