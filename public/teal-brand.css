@@ -514,3 +514,36 @@ a.semester-tile:hover{border-color:var(--accent);}
 
 /* Featured (quiz) CTA card gets the teal border the mockup leads with */
 .home-cta-card--featured{border-color:var(--accent);}
+
+
+/* ============================================================================
+   Branch hub — semester rail + subject cards (design direction 4b)
+   ========================================================================== */
+.hub-layout{display:flex;align-items:flex-start;gap:2.2rem;}
+.hub-rail{flex:none;width:150px;position:sticky;top:5.5rem;}
+.hub-rail-label{font-family:"IBM Plex Mono",monospace;font-size:.62rem;letter-spacing:.16em;color:var(--faint);margin-bottom:.85rem;}
+.hub-rail-list{display:flex;flex-direction:column;gap:.4rem;}
+.hub-rail-item{display:flex;align-items:center;justify-content:space-between;gap:.6rem;border:1px solid var(--border);border-radius:10px;padding:.6rem .85rem;font-weight:600;font-size:.85rem;background:var(--surface);color:var(--text);text-decoration:none;}
+a.hub-rail-item:hover{border-color:var(--accent);}
+.hub-rail-item .mono{font-size:.62rem;color:var(--accent);}
+.hub-rail-item--active{background:var(--brand);color:var(--accent-ink);border-color:var(--brand);}
+.hub-rail-item--active .mono{color:var(--accent-ink);}
+.hub-rail-item--soon{border-style:dashed;color:var(--faint);}
+.hub-rail-item--soon .mono{color:var(--faint);}
+
+.hub-head-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;margin-bottom:1.5rem;flex-wrap:wrap;}
+.hub-stat-badge{flex:none;background:var(--surface);border:1px solid var(--accent);border-radius:16px;padding:.85rem 1.4rem;text-align:center;}
+.hub-stat-badge b{display:block;font-size:2rem;line-height:1;color:var(--accent);}
+.hub-stat-badge span{font-family:"IBM Plex Mono",monospace;font-size:.58rem;letter-spacing:.12em;color:var(--faint);margin-top:.3rem;display:block;}
+html[data-theme="dark"] .hub-stat-badge{filter:drop-shadow(0 0 14px rgba(46,223,207,.18));}
+
+.hub-sem-label{font-family:"IBM Plex Mono",monospace;font-size:.7rem;letter-spacing:.14em;color:var(--accent);margin:1.6rem 0 .65rem;text-transform:uppercase;}
+.subject-card-grid{display:grid;grid-template-columns:1fr;gap:.7rem;}
+@media (min-width:640px){.subject-card-grid{grid-template-columns:1fr 1fr;}}
+.subject-card{display:flex;align-items:center;justify-content:space-between;gap:.8rem;background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:.9rem 1.05rem;text-decoration:none;color:var(--text);}
+a.subject-card:hover{border-color:var(--accent);}
+.subject-card-title{font-weight:600;font-size:.9rem;}
+.subject-card-meta{font-family:"IBM Plex Mono",monospace;font-size:.62rem;color:var(--accent);margin-top:.2rem;}
+.subject-card-arrow{flex:none;color:var(--accent);}
+
+@media (max-width:720px){.hub-layout{flex-direction:column;}.hub-rail{width:100%;position:static;}.hub-rail-list{flex-direction:row;flex-wrap:wrap;}}
