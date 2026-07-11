@@ -109,32 +109,45 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>${escapeHtml(title)} - JNTUStack Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="/theme-toggle.js"></script>
+<link rel="stylesheet" href="/teal-brand.css">
 <style>
-:root{--ink:#18212f;--muted:#657184;--line:#d9e1e8;--paper:#f7fafc;--panel:#fff;--accent:#007c73;--warn:#a45d00;--bad:#9b1c31;--ok:#0d7a48;}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);font-size:14px;line-height:1.45}
-a{color:inherit}.admin-frame{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.admin-rail{background:#0e2530;color:#e8f3f2;padding:18px 14px;position:sticky;top:0;height:100vh}
-.admin-brand{font-weight:700;font-size:18px;margin-bottom:18px}.admin-source{font-size:12px;color:#9fc5c0;margin-bottom:20px}
-.admin-nav{display:grid;gap:4px}.admin-nav a{display:block;text-decoration:none;padding:9px 10px;border-radius:6px;color:#d9ece9}
-.admin-nav a[aria-current="page"]{background:#173946;color:#fff}.admin-nav a:hover{background:#17313c}
-.admin-main{padding:22px 28px;min-width:0}.admin-top{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:18px}
-h1{font-size:24px;margin:0}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color:var(--muted);font-size:13px;margin-top:4px}.logout{font-size:13px;color:var(--muted)}
-.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}
-.metric-label{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}.metric-value{font-size:24px;font-weight:700;margin-top:4px}
+/* Same tokens/back-compat-alias philosophy as teal-brand.css: rename the
+   VALUES onto the shared design system, keep every class/var name the same
+   so none of this file's ~2000 lines of route-handler markup needs touching.
+   --warn/--bad/--ok map onto the site's amber/danger/teal semantics; --bad
+   has no shared-system equivalent (public pages never need a "this failed"
+   red) so it stays admin-local. */
+:root{--ink:var(--text);--muted:var(--muted);--line:var(--border);--paper:var(--bg);--panel:var(--surface);--accent:var(--accent);--warn:var(--draft);--bad:#D6455B;--ok:var(--green);}
+html[data-theme="dark"]{--bad:#E5677D;}
+*{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:14px;line-height:1.45}
+a{color:inherit}.admin-frame{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.admin-rail{background:var(--panel);color:var(--ink);padding:18px 14px;position:sticky;top:0;height:100vh;border-right:1px solid var(--line)}
+.admin-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;margin-bottom:4px}.admin-source{font-size:11.5px;font-family:"IBM Plex Mono",monospace;letter-spacing:.06em;color:var(--muted);margin-bottom:20px;text-transform:uppercase}
+.admin-nav{display:grid;gap:3px;font-size:13px}.admin-nav a{display:block;text-decoration:none;padding:8px 10px;border-radius:8px;color:var(--muted)}
+.admin-nav a[aria-current="page"]{background:var(--accent-soft);color:var(--accent);font-weight:600}.admin-nav a:hover{color:var(--accent)}
+.admin-main{padding:22px 28px;min-width:0}.admin-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.admin-top-right{display:flex;align-items:center;gap:.8rem;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
+h1{font-size:23px;margin:0;letter-spacing:-.02em}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color:var(--muted);font-size:12.5px;margin-top:2px}.logout{font-size:13px;color:var(--muted)}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.metric-label{font-family:"IBM Plex Mono",monospace;font-size:9.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.1em}.metric-value{font-size:26px;font-weight:700;margin-top:6px}
 .status-ok{color:var(--ok)}.status-warn{color:var(--warn)}.status-bad{color:var(--bad)}
-.table-wrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px}table{width:100%;border-collapse:collapse;min-width:760px}
-th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);background:#f0f5f7}
-tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:12px;background:#f8fbfc}
-.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:6px;padding:8px;font:inherit;margin-top:8px}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad)}.action-box button.warn{background:var(--warn)}.danger-zone{border:2px solid var(--bad);background:#fff5f5}.danger-zone strong{color:var(--bad)}.danger-copy{border:1px solid #efb5bd;background:#fff;color:var(--bad);border-radius:6px;padding:10px;margin-top:10px;font-weight:700}.json-block{white-space:pre-wrap;overflow:auto;background:#101923;color:#d9f7ef;border-radius:8px;padding:12px;font-size:12px;line-height:1.55}.notice{border:1px solid var(--line);background:#fff;padding:12px;border-radius:8px;color:var(--muted)}.evidence-warning{border-color:#efcf8a;background:#fffaf0;color:#6d4c00}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 8px;text-decoration:none;background:#fff;color:var(--muted);font-size:12px}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:#e7f3f1;color:var(--accent);border-color:#9acdc7}
-.login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:22px}
-.login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:6px;margin-top:5px;font:inherit}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:6px;background:var(--accent);color:#fff;font-weight:700;cursor:pointer}.error{border:1px solid #f0b8b8;color:var(--bad);background:#fff5f5;border-radius:6px;padding:9px;margin:12px 0 0}
+.table-wrap{overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:760px}
+th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-family:"IBM Plex Mono",monospace;font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);background:var(--bg)}
+tr:last-child td{border-bottom:0}.mono{font-family:"IBM Plex Mono",monospace;font-size:12px}.pill{display:inline-block;border:1px solid var(--line);border-radius:999px;padding:2px 8px;font-size:12px;background:var(--bg)}
+.proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;margin-top:8px;background:var(--bg);color:var(--ink)}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad);color:#fff}.action-box button.warn{background:var(--warn);color:var(--accent-ink)}.danger-zone{border:2px solid var(--bad);background:var(--panel)}.danger-zone strong{color:var(--bad)}.danger-copy{border:1px solid var(--bad);background:var(--panel);color:var(--bad);border-radius:8px;padding:10px;margin-top:10px;font-weight:700}.json-block{white-space:pre-wrap;overflow:auto;background:#0E1211;color:#8FE3D3;border-radius:12px;padding:12px;font-size:12px;line-height:1.55;font-family:"IBM Plex Mono",monospace}.notice{border:1px solid var(--line);background:var(--panel);padding:12px;border-radius:12px;color:var(--muted)}.evidence-warning{border-color:var(--warn);background:var(--draft-bg);color:var(--warn)}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 10px;text-decoration:none;background:var(--panel);color:var(--muted);font-size:12px;font-family:"IBM Plex Mono",monospace}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:var(--accent-soft);color:var(--accent);border-color:var(--green-border)}
+.login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
+.login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin-top:5px;font:inherit;background:var(--bg);color:var(--ink)}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}.error{border:1px solid var(--bad);color:var(--bad);background:var(--panel);border-radius:8px;padding:9px;margin:12px 0 0}
 @media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top{align-items:flex-start;flex-direction:column}}
 </style>
 </head>
 <body>
 <div class="admin-frame">
   <aside class="admin-rail">
-    <div class="admin-brand">JNTUStack Admin</div>
-    <div class="admin-source">Controlled content operations</div>
+    <div class="admin-brand"><svg width="20" height="20" viewBox="0 0 260 260" aria-hidden="true"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" style="fill:var(--logo-bot)"/><polygon points="0,22 92,-12 0,-46 -92,-12" style="fill:var(--logo-mid)"/><polygon points="0,-16 80,-46 0,-76 -80,-46" style="fill:var(--logo-top)"/></g></svg>Admin</div>
+    <div class="admin-source">Controlled content ops</div>
     <nav class="admin-nav" aria-label="Admin navigation">
       ${nav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
     </nav>
@@ -144,6 +157,7 @@ tr:last-child td{border-bottom:0}.mono{font-family:ui-monospace,SFMono-Regular,M
     ${body}
   </main>
 </div>
+<button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle day / night" style="position:fixed;bottom:18px;right:18px;z-index:50;">&#9790; Night</button>
 </body>
 </html>`;
 }
@@ -221,6 +235,10 @@ export function renderLoginPage({ error = null } = {}) {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Admin login - JNTUStack</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/teal-brand.css">
 ${adminShell({ title: 'Login', body: '' }).match(/<style>[\s\S]*<\/style>/)[0]}
 </head>
 <body class="login-page">
