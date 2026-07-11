@@ -21,12 +21,12 @@
       "units": [
         {
           "number": 1,
-          "title": "Data Warehousing and OLAP",
+          "title": "Data Warehousing and Online Analytical Processing",
           "topics": [
-            "Data warehousing basic concepts; data warehouse modeling with data cube and OLAP; comparison of OLAP with OLTP",
+            "Data warehousing and online analytical processing: basic concepts; data warehouse modeling with data cube and OLAP",
             "Data warehouse design and usage; data warehouse implementation; cloud data warehouse",
-            "Data mining and pattern mining, technologies, the KDD process, applications and major issues",
-            "Data objects and attribute types; measuring data similarity and dissimilarity"
+            "Data mining and pattern mining: technologies, applications and major issues",
+            "Data objects and attribute types; basic statistical descriptions of data; data visualization; measuring data similarity and dissimilarity"
           ]
         },
         {
@@ -44,9 +44,9 @@
           "title": "Classification",
           "topics": [
             "Basic concepts and the general approach to solving a classification problem",
-            "Decision tree induction: attribute selection measures, tree pruning, scalability and decision tree induction",
-            "Bayesian classification methods: Bayes theorem, Naive Bayes classification",
-            "Rule-based classification"
+            "Decision tree induction: attribute selection measures, tree pruning, scalability and decision tree induction, visual mining for decision tree induction",
+            "Bayesian classification methods: Bayes theorem, Naive Bayes classification, rule-based classification",
+            "Model evaluation and selection"
           ]
         },
         {
@@ -54,7 +54,6 @@
           "title": "Association Analysis",
           "topics": [
             "Problem definition and frequent itemset generation",
-            "Concept of hierarchy generation",
             "Rule generation: confidence-based pruning, rule generation in the Apriori algorithm",
             "Compact representation of frequent itemsets; FP-Growth algorithm"
           ]
@@ -70,7 +69,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the concepts of data warehousing, OLAP, data cubes, cloud data warehouses, and data visualization to support decision-making",
+        "Apply data preprocessing techniques, including cleaning, integration, transformation, reduction, and discretization, to prepare datasets for analysis",
+        "Analyze classification problems using decision trees, Bayesian and rule-based classifiers, and evaluate models for accuracy and scalability",
+        "Develop association rules from transactional data using algorithms such as Apriori and FP-Growth, and perform pruning and compact representation of frequent itemsets",
+        "Analyze clustering techniques such as K-means, hierarchical clustering, and DBSCAN to group data and interpret the resulting clusters for knowledge discovery"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -83,10 +88,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -271,11 +276,11 @@
         }
       ],
       "course_outcomes": [
-        "Build skills in solving mathematical problems",
-        "Comprehend mathematical principles and logic",
-        "Demonstrate knowledge of mathematical modeling and proficiency in using mathematical software",
-        "Manipulate and analyze data numerically and/or graphically appropriate software",
-        "Communicate effectively mathematical ideas/results verbally or in writing"
+        "Apply the principles of propositional and predicate logic to construct well-formed formulas and validate arguments using inference rules",
+        "Analyze and solve problems related to sets, relations, functions, lattices, and algebraic structures using appropriate mathematical techniques",
+        "Apply combinatorial techniques and generating functions to formulate and solve recurrence relations in discrete structures",
+        "Examine graph theoretic concepts such as paths, circuits, connectivity, and graph isomorphism, and apply them to model and solve real-world problems",
+        "Apply advanced graph algorithms (BFS, DFS, spanning trees, colouring, planar graphs) and evaluate their suitability in solving computational problems"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -289,10 +294,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common to CSE, IT and CSE-AI&ML. Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -386,10 +391,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Delivered as 28 lectures and 14 tutorials across 5 modules. Name, 2-1-0-3 credits and full 5-unit structure confirmed by reading the source PDF."
     },
@@ -416,10 +421,9 @@
           "number": 1,
           "title": "Data Representation and Digital Logic Circuits-I",
           "topics": [
-            "Binary numbers; fixed- and floating-point representation; number base conversions; octal and hexadecimal",
-            "Complements, signed binary numbers, binary codes",
-            "Boolean theorems, logic gates, universal gates, minimization; K-map simplification (up to 4 variables)",
-            "Combinational circuits: adders, subtractors, encoders, decoders, multiplexers and de-multiplexers"
+            "Binary numbers, fixed-point representation, floating-point representation, number base conversions, octal and hexadecimal numbers, signed binary numbers, binary codes",
+            "Basic logic functions, logic gates, universal logic gates, minimization of logic expressions, K-map simplification",
+            "Combinational circuits, decoders, multiplexers"
           ]
         },
         {
@@ -429,26 +433,26 @@
             "Sequential circuits, flip-flops, binary counters, registers, shift registers, ripple counters",
             "Computer types, functional units, basic operational concepts",
             "Bus structures, software, performance, multiprocessors and multicomputers",
-            "Computer generations; Von Neumann architecture"
+            "Computer generations, Von Neumann architecture"
           ]
         },
         {
           "number": 3,
           "title": "Computer Arithmetic and Processor Organization",
           "topics": [
-            "Addition and subtraction of signed numbers; design of fast adders",
-            "Multiplication of positive and signed operands; fast multiplication; integer division",
+            "Addition and subtraction of signed numbers, design of fast adders",
+            "Multiplication of positive numbers, signed-operand multiplication, fast multiplication, integer division, floating-point numbers and operations",
             "Processor organization: fundamental concepts, execution of a complete instruction",
-            "Multiple-bus organization; hardwired and microprogrammed control"
+            "Multiple-bus organization, hardwired control and multi-programmed control"
           ]
         },
         {
           "number": 4,
           "title": "Memory Organization",
           "topics": [
-            "Basic concepts; semiconductor RAM memories; read-only memories",
-            "Speed, size and cost; cache memories; performance considerations",
-            "Virtual memories; memory management requirements",
+            "Basic concepts, semiconductor RAM memories, read-only memories",
+            "Speed, size and cost, cache memories, performance considerations",
+            "Virtual memories, memory management requirements",
             "Secondary storage"
           ]
         },
@@ -456,14 +460,20 @@
           "number": 5,
           "title": "Input/Output Organization",
           "topics": [
-            "Accessing I/O devices; interrupts",
-            "Direct memory access; buses",
+            "Accessing I/O devices, interrupts, processor examples",
+            "Direct memory access, buses",
             "Interface circuits",
             "Standard I/O interfaces"
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply number systems, binary codes, logic gates, and K-map techniques to design and simplify combinational logic circuits",
+        "Analyze the behavior and operation of sequential circuits, flip-flops, counters, and registers, and explain the basic structure and performance factors of computer systems",
+        "Perform and evaluate arithmetic operations including addition, subtraction, multiplication, and division using various algorithms, and examine processor organization and instruction execution mechanisms",
+        "Analyze and compare different memory organizations, including RAM, ROM, cache, and virtual memory, with respect to speed, size, cost, and performance",
+        "Explain and assess I/O organization concepts such as interrupts, DMA, buses, and interface circuits, and evaluate standard I/O interfaces used in modern computer systems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -476,10 +486,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -506,9 +516,9 @@
           "number": 1,
           "title": "Introduction, AVL and B-Trees",
           "topics": [
-            "Introduction to algorithm analysis; space and time complexity; asymptotic notations",
-            "AVL trees: creation, insertion, deletion and applications",
-            "B-trees: creation, insertion, deletion and applications"
+            "Introduction to algorithm analysis, space and time complexity analysis, asymptotic notations",
+            "AVL trees: creation, insertion, deletion operations and applications",
+            "B-trees: creation, insertion, deletion operations and applications"
           ]
         },
         {
@@ -516,48 +526,44 @@
           "title": "Heaps, Graphs and Divide and Conquer",
           "topics": [
             "Heap trees (priority queues): min and max heaps, operations and applications",
-            "Graphs: terminology, representations, search and traversals",
-            "Connected and biconnected components and applications",
-            "Divide and conquer: general method, quick sort, merge sort"
+            "Graphs: terminology, representations, basic search and traversals",
+            "Connected components and biconnected components, applications",
+            "Divide and conquer: the general method, quick sort, merge sort, Strassen's matrix multiplication, convex hull"
           ]
         },
         {
           "number": 3,
           "title": "Greedy Method and Dynamic Programming",
           "topics": [
-            "Greedy method: job sequencing with deadlines, knapsack, minimum cost spanning trees, single source shortest paths",
-            "Dynamic programming: general method, all pairs shortest paths",
-            "Bellman-Ford, optimal binary search trees, 0/1 knapsack",
-            "String editing, travelling salesperson problem"
+            "Greedy method: general method, job sequencing with deadlines, knapsack problem, minimum cost spanning trees, single source shortest paths",
+            "Dynamic programming: general method, all pairs shortest paths, single source shortest paths - general weights (Bellman-Ford algorithm)",
+            "Optimal binary search trees, 0/1 knapsack, string editing, travelling salesperson problem"
           ]
         },
         {
           "number": 4,
           "title": "Backtracking and Branch and Bound",
           "topics": [
-            "Backtracking: general method, 8-queens, sum of subsets, graph colouring, 0/1 knapsack",
-            "Branch and bound: general method",
-            "0/1 knapsack problem",
-            "Travelling salesperson problem"
+            "Backtracking: general method, 8-queens problem, sum of subsets problem, graph colouring, 0/1 knapsack problem",
+            "Branch and bound: the general method, 0/1 knapsack problem, travelling salesperson problem"
           ]
         },
         {
           "number": 5,
           "title": "NP-Hard and NP-Complete Problems",
           "topics": [
-            "Basic concepts of NP-hard and NP-complete",
-            "Clique decision problem (CDP)",
-            "Chromatic number decision problem (CNDP)",
-            "Travelling salesperson decision problem (TSP)"
+            "Basic concepts of NP-hard and NP-complete, Cook's theorem",
+            "NP hard graph problems: clique decision problem (CDP), chromatic number decision problem (CNDP), travelling salesperson decision problem (TSP)",
+            "NP hard scheduling problems: scheduling identical processors, job shop scheduling"
           ]
         }
       ],
       "course_outcomes": [
-        "Analyze the complexity of algorithms and apply asymptotic notations",
-        "Apply non-linear data structures and their operations",
-        "Understand and apply greedy, divide and conquer algorithms",
-        "Develop dynamic programming algorithms for various real-time applications",
-        "Illustrate Back Tracking algorithms for various applications"
+        "Analyze algorithm performance using space and time complexity measures, apply asymptotic notations, and construct and manipulate AVL Trees and B-Trees for various applications",
+        "Apply and evaluate heap structures, graph representations, and graph traversal techniques, and implement divide-and-conquer algorithms such as quick sort, merge sort, Strassen's matrix multiplication, and convex hull computations",
+        "Apply greedy and dynamic programming strategies to solve optimization problems such as MST, shortest paths, knapsack, OBST, TSP, and string editing, and analyze their computational efficiency",
+        "Develop and analyze solutions for combinatorial problems using backtracking and branch-and-bound techniques, including 8-queens, subset sum, graph coloring, knapsack, and TSP",
+        "Explain and evaluate NP-hard and NP-complete problem classes, including graph and scheduling decision problems, and assess their computational intractability with reference to theoretical foundations"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -571,10 +577,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -649,10 +655,11 @@
         }
       ],
       "course_outcomes": [
-        "Classify object oriented programming and procedural programming",
-        "Apply Java features such as composition of objects, operator overloads, dynamic memory allocation, inheritance and polymorphism, file I/O, exception handling",
-        "Build Java classes using appropriate encapsulation and design principles",
-        "Apply object oriented or non-object oriented techniques to solve bigger computing problems"
+        "Apply object-oriented programming principles and Java program structure to write, compile, and execute basic Java programs using appropriate data types, operators, and control statements",
+        "Develop and utilize classes, objects, constructors, methods, access specifiers, and method overloading/overriding to implement modular and reusable Java applications",
+        "Implement and analyze arrays, inheritance models, interfaces, and abstract classes to design structured and extensible Java solutions for given problems",
+        "Use and evaluate Java packages, standard libraries, exception handling mechanisms, and Java I/O streams to build robust and efficient applications",
+        "Develop and integrate advanced Java features including string handling, multithreading, JDBC-based database connectivity, and JavaFX GUI components to create interactive and concurrent applications"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -666,10 +673,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -693,11 +700,10 @@
       "type": "lab",
       "units": [],
       "course_outcomes": [
-        "Understand and apply data structure operations",
-        "Understand and apply non-linear data structure operations",
-        "Apply Greedy, divide and conquer algorithms",
-        "Develop dynamic programming algorithms for various real-time applications",
-        "Illustrate and apply backtracking algorithms, further able to understand non-deterministic algorithms"
+        "Implement and manipulate advanced tree data structures such as AVL Trees, B-Trees, and Heaps to perform operations including insertion, deletion, traversal, and file/array-based storage",
+        "Develop and analyze graph traversal and graph-based algorithms such as BFS, DFS, connected and biconnected components using multiple graph representations",
+        "Apply and compare divide-and-conquer, greedy, and dynamic programming techniques to solve problems such as sorting, shortest paths, job sequencing, and knapsack, including performance evaluation for various inputs",
+        "Design and implement backtracking and branch-and-bound solutions for combinatorial optimization problems such as N-Queens, 0/1 Knapsack, and Travelling Salesperson Problem"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -711,10 +717,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Experiment-based lab (AVL and B-trees, min/max heaps, BFT/DFT, biconnected components, quick/merge sort timing, job sequencing, 0/1 knapsack via DP and backtracking, TSP via branch and bound). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty."
     },
@@ -738,12 +744,10 @@
       "type": "lab",
       "units": [],
       "course_outcomes": [
-        "Identify classes, objects, members of a class and the relationship among them needed for a specific problem",
-        "Implement programs to distinguish different forms of inheritance",
-        "Create packages and to reuse them",
-        "Develop programs using Exception Handling mechanism",
-        "Develop multithreaded application using synchronization concept",
-        "Design GUI based applications using Swings and AWT"
+        "Apply object-oriented programming fundamentals, including data types, control structures, classes, methods, inheritance, and polymorphism, to develop structured Java programs",
+        "Implement and demonstrate Java features such as interfaces, packages, exception handling, and multithreading to build modular, robust, and concurrent applications",
+        "Use and manage files, I/O streams, JDBC connectivity, and JavaFX GUI components to create interactive applications involving data input, storage, and display",
+        "Design and evaluate Java applications by integrating OOP concepts, multithreading, exceptions, GUI and database operations to solve real-world programming problems"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -757,10 +761,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Experiment-based lab (data types, binary search and bubble sort, classes and constructor overloading, inheritance, super and interfaces, runtime polymorphism, exception handling, threads, packages, JavaFX GUI, JDBC). Name, 0-0-3-1.5 credits and exercise list confirmed from the source PDF; units left empty (lab)."
     },
@@ -835,10 +839,11 @@
         }
       ],
       "course_outcomes": [
-        "Write, Test and Debug Python Programs",
-        "Use Conditionals and Loops for Python Programs",
-        "Use functions and represent Compound data using Lists, Tuples and Dictionaries",
-        "Use various applications using python"
+        "Apply core Python programming concepts, including data types, operators, control flow statements, functions, and basic data structures, to solve computational problems efficiently",
+        "Implement and analyze string operations, list manipulations, tuple and dictionary operations, and set-based concepts to handle structured data in Python programs",
+        "Use and manage file handling techniques, object-oriented programming principles, and modular programming constructs to develop clean, reusable, and real-world Python applications",
+        "Develop data handling and data-processing programs using JSON, XML, NumPy, and Pandas, including array operations, slicing, indexing, and tabular data exploration",
+        "Design and build Python applications integrating OOP, file processing, data structures, functional programming, and basic data science libraries to address real-world computational tasks"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -852,10 +857,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Skill Enhancement Course. Name, 0-1-2-2 credits and full 5-unit syllabus (with sample experiments) confirmed by reading the source PDF."
     },
@@ -944,10 +949,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as ‘-’ (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -977,25 +982,25 @@
             "Nature, meaning, significance, functions and advantages",
             "Demand: concept, function, law of demand",
             "Demand elasticity: types and measurement",
-            "Demand forecasting: factors and methods"
+            "Demand forecasting: factors governing forecasting, methods"
           ]
         },
         {
           "number": 2,
           "title": "Production and Cost Analysis",
           "topics": [
-            "Production function; least-cost combination; short-run and long-run production",
-            "Isoquants and isocosts",
+            "Production function: least-cost combination, short-run and long-run production function, isoquants and isocosts",
+            "MRTS, Cobb-Douglas production function, laws of returns, internal and external economies of scale",
             "Cost concepts and cost behaviour",
-            "Break-even analysis and determination of break-even point"
+            "Break-even analysis, determination of break-even point, managerial significance and limitations of break-even analysis"
           ]
         },
         {
           "number": 3,
           "title": "Business Organizations and Markets",
           "topics": [
-            "Forms of business organizations: sole proprietary, partnership, joint stock, public sector",
-            "Types of markets: perfect and imperfect competition, monopoly, monopolistic, oligopoly",
+            "Forms of business organizations: sole proprietary, partnership, joint stock companies, public sector enterprises",
+            "Types of markets: perfect and imperfect competition, features of perfect competition, monopoly, monopolistic competition, oligopoly",
             "Price-output determination",
             "Pricing methods and strategies"
           ]
@@ -1004,20 +1009,20 @@
           "number": 4,
           "title": "Capital Budgeting",
           "topics": [
-            "Working capital: types, components, sources; estimating requirements",
+            "Types of working capital, components, sources of short-term and long-term capital, estimating working capital requirements",
             "Capital budgeting: features, proposals, methods and evaluation",
-            "Payback and accounting rate of return (ARR)",
-            "Net present value (NPV) and internal rate of return (IRR)"
+            "Payback method, accounting rate of return (ARR)",
+            "Net present value (NPV) and internal rate of return (IRR) method"
           ]
         },
         {
           "number": 5,
           "title": "Financial Accounting and Analysis",
           "topics": [
-            "Double-entry bookkeeping; journal, ledger, trial balance",
-            "Final accounts: trading account, profit and loss account, balance sheet",
-            "Introduction to financial analysis",
-            "Ratio analysis: liquidity, activity, capital structure and profitability"
+            "Concepts and conventions, double-entry bookkeeping, journal, ledger, trial balance",
+            "Final accounts: trading account, profit and loss account and balance sheet with simple adjustments",
+            "Financial analysis: analysis and interpretation of liquidity ratios and activity ratios",
+            "Capital structure ratios and profitability ratios"
           ]
         }
       ],
@@ -1041,10 +1046,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Management Course-I. Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1136,10 +1141,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common to CSE, IT and CSE-AI&ML. Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1214,11 +1219,11 @@
         }
       ],
       "course_outcomes": [
-        "Describe various generations of Operating System and functions of Operating System",
-        "Describe the concept of program, process and thread and analyze various CPU Scheduling Algorithms and compare their performance",
-        "Solve Inter Process Communication problems using Mathematical Equations by various methods",
-        "Compare various Memory Management Schemes especially paging and Segmentation in Operating System and apply various Page Replacement Techniques",
-        "Outline File Systems in Operating System like UNIX/Linux and Windows"
+        "Explain the fundamental concepts, structures, and operational principles of operating systems, including system calls, services, and system design",
+        "Demonstrate understanding of processes, threads, concurrency, and CPU scheduling algorithms to effectively manage execution in operating systems",
+        "Apply synchronization mechanisms and analyze deadlock conditions to design safe and concurrent process interactions",
+        "Analyze and compare memory-management techniques, virtual memory strategies, and storage management approaches used in modern operating systems",
+        "Explain the concepts of file systems, directory structures, allocation methods, and protection mechanisms to understand secure and efficient data management"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1232,10 +1237,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1310,11 +1315,12 @@
         }
       ],
       "course_outcomes": [
-        "Describe a relational database and object-oriented database",
-        "Create, maintain and manipulate a relational database using SQL",
-        "Describe ER model and normalization for database design",
-        "Examine issues in data storage and query processing and can formulate appropriate solution",
-        "Outline the role and issues in management of data such as efficiency, privacy, security, ethical responsibility, and strategic advantage"
+        "Explain the fundamental concepts of database systems, including characteristics, architecture, data models, and differences between database and file systems",
+        "Construct and interpret Entity-Relationship (ER) diagrams, including entities, attributes, relationships, generalization, specialization, and inheritance for real-world scenarios",
+        "Apply the relational model concepts, including tuples, relations, domains, constraints, relational algebra, and relational calculus to model and query databases",
+        "Develop and execute SQL queries for data definition, data manipulation, aggregation, joins, nested queries, views, and relational set operations on a database schema",
+        "Analyze and design normalized database schemas using functional dependencies, various normal forms (1NF-5NF), and schema refinement techniques to ensure minimal redundancy and data integrity",
+        "Explain and implement transaction management, concurrency control, recovery mechanisms, and indexing techniques (B+ Trees, hash-based indexing) to ensure ACID properties and efficient data access"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1328,10 +1334,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1358,9 +1364,8 @@
           "number": 1,
           "title": "Introduction and Software Life Cycle Models",
           "topics": [
-            "Evolution; software development projects; exploratory style; emergence of software engineering",
-            "Notable changes in software development practices; computer system engineering",
-            "Life cycle models: basic concepts, waterfall model and extensions",
+            "Evolution, software development projects, exploratory style of software development, emergence of software engineering, notable changes in software development practices, computer system engineering",
+            "Life cycle models: basic concepts, waterfall model and its extensions",
             "Rapid application development, agile development model, spiral model"
           ]
         },
@@ -1368,19 +1373,19 @@
           "number": 2,
           "title": "Project Management and Requirements",
           "topics": [
-            "Software project management complexities; responsibilities of a project manager",
-            "Metrics for project size estimation; project estimation techniques; risk management",
-            "Requirements gathering and analysis; Software Requirements Specification (SRS)",
-            "Formal, axiomatic, algebraic and executable specification; 4GL"
+            "Software project management complexities, responsibilities of a software project manager",
+            "Metrics for project size estimation, project estimation techniques, empirical estimation techniques, COCOMO, Halstead's software science, risk management",
+            "Requirements gathering and analysis, Software Requirements Specification (SRS)",
+            "Formal, axiomatic, algebraic and executable specification, 4GL"
           ]
         },
         {
           "number": 3,
           "title": "Software Design, Agility and UI Design",
           "topics": [
-            "Overview of the design process; good software design; cohesion and coupling; approaches to design",
-            "Agility: agile process, Extreme Programming (XP), other agile process models, agile toolset",
-            "Function-oriented design: SA/SD, structured analysis and design, DFD, detailed design and review",
+            "Overview of the design process, characterizing a good software design, layered arrangement of modules, cohesion and coupling, approaches to design",
+            "Agility: agility and the cost of change, agile process, Extreme Programming (XP), other agile process models, tool set for the agile process",
+            "Function-oriented design: SA/SD methodology, structured analysis, DFD model, structured design, detailed design and design review",
             "User interface design: characteristics, types, component-based GUI development, methodology"
           ]
         },
@@ -1389,26 +1394,27 @@
           "title": "Coding, Testing and Quality Management",
           "topics": [
             "Coding, code review, software documentation",
-            "Testing: black-box, white-box, debugging, program analysis tools, integration testing, smoke testing",
-            "Testing object-oriented programs; general issues in testing",
-            "Software reliability and quality management; ISO 9000, SEI CMM, Six Sigma"
+            "Testing: black-box, white-box, debugging, program analysis tools, integration testing, testing object-oriented programs, smoke testing",
+            "Software reliability, statistical testing",
+            "Software quality management system, ISO 9000, SEI CMM, other quality standards, Six Sigma"
           ]
         },
         {
           "number": 5,
           "title": "CASE, Maintenance and Reuse",
           "topics": [
-            "Computer-Aided Software Engineering (CASE): scope, environment, support, second-generation CASE",
-            "Architecture of a CASE environment",
-            "Software maintenance: characteristics, reverse engineering, process models, cost estimation",
+            "Computer-Aided Software Engineering (CASE): scope, environment, support in the software life cycle, second-generation CASE, architecture of a CASE environment",
+            "Software maintenance: characteristics, reverse engineering, process models, estimation of maintenance cost",
             "Software reuse: definition, basic issues, a reuse approach, reuse at organization level"
           ]
         }
       ],
       "course_outcomes": [
-        "Ability to transform an Object-Oriented Design into high quality, executable code",
-        "Skills to design, implement, and execute test cases at the Unit and Integration level",
-        "Compare conventional and agile software methods"
+        "Explain the evolution of software engineering, software development projects, and various software life cycle models, including Waterfall, Spiral, Agile, and RAD",
+        "Analyze and apply software project management principles, estimation techniques, risk management, and software requirements gathering to plan and manage software projects effectively",
+        "Design software systems using structured analysis, function-oriented design, layered modules, cohesion and coupling concepts, and develop effective user interfaces",
+        "Implement, test, and evaluate software through coding standards, black-box and white-box testing, debugging, integration testing, and quality management practices, ensuring software reliability",
+        "Apply and evaluate computer-aided software engineering (CASE) tools, software maintenance strategies, and software reuse approaches to enhance productivity and maintainability in software development"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1422,10 +1428,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Name, 2-1-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1467,10 +1473,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Experiment-based lab (basic UNIX commands and system calls; simulating cp/ls/grep; FCFS/SJF/Priority/Round Robin scheduling; semaphores and monitors; pthreads; producer-consumer; first/worst/best fit; FIFO/LRU/LFU page replacement; paging; Banker’s algorithm; file allocation strategies; Nachos). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
     },
@@ -1511,10 +1517,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Experiment-based lab (create/alter/drop tables and constraints; sub-queries with ANY/ALL/IN/EXISTS/UNION/INTERSECT; aggregate functions and views; conversion, string and date functions; PL/SQL blocks with COMMIT/ROLLBACK/SAVEPOINT; loops and exception handling; procedures, functions, cursors and triggers; indexing; JDBC connectivity). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
     },
@@ -1555,10 +1561,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Skill Enhancement Course delivered as experiments covering: lists/links/images; HTML tables, forms and frames; HTML5 and CSS (types, selectors, colour/background/font/text, box model); JavaScript (I/O, type conversion, conditionals and loops, predefined and user-defined objects, functions and events, form validation); Node.js. Name, 0-1-2-2 credits and topic/experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
     },
@@ -1650,10 +1656,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
@@ -1762,7 +1768,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain computer network types, network topologies, OSI and TCP/IP reference models, and characteristics of guided and unguided transmission media",
+        "Analyze data link layer design issues, framing methods, error detection/correction mechanisms, and evaluate sliding-window-based flow control protocols",
+        "Compare random, controlled, and channelization MAC techniques and examine the operation and evolution of Ethernet technologies",
+        "Apply routing algorithms and congestion-control techniques to analyze the performance of packet-switched networks",
+        "Examine IPv4 and IPv6 protocols, addressing schemes, subnetting/CIDR, and internetworking mechanisms such as tunneling and fragmentation",
+        "Describe the services of transport and application layer protocols (UDP, TCP, HTTP, DNS, Email) and analyze their operational features including flow, error, and congestion control"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1775,10 +1788,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1855,7 +1868,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the foundational concepts of automata theory and construct various finite automata (DFA, NFA, epsilon-NFA, Mealy and Moore machines), including minimization and applications",
+        "Apply regular expressions, regular grammars, pumping lemma, and closure properties to describe and analyze regular languages",
+        "Develop and simplify context-free grammars, analyze derivations and parse trees, and convert grammars into normal forms while evaluating ambiguity",
+        "Design pushdown automata and demonstrate their equivalence with context-free grammars for recognizing context-free languages",
+        "Construct Turing Machines and analyze decidability, undecidability, PCP, the halting problem, and complexity classes (P, NP, NP-hard, NP-complete)"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1868,10 +1887,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -1946,7 +1965,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the structure, attributes, and complexities of large software systems and apply principles for designing complex systems",
+        "Explain UML fundamentals, its conceptual model, modeling principles, and apply basic structural modeling using classes, relationships, and diagrams",
+        "Develop class and object diagrams by applying advanced structural modeling concepts such as interfaces, packages, roles, and relationships for diverse case studies",
+        "Construct behavioral models, including use case, interaction, and activity diagrams, to accurately represent system behavior for real-world applications",
+        "Design advanced behavioral and architectural models using state machines, events, components, and deployment diagrams for complex software systems"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1959,10 +1984,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 1 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
@@ -2036,7 +2061,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe AI problems, foundations of AI, and agent architectures, and analyze how agents perceive, act, and make rational decisions in different environments",
+        "Apply uninformed and heuristic search strategies, including BFS, DFS, Hill Climbing, A*, AO*, and game-playing algorithms, to solve well-formulated problems",
+        "Develop suitable knowledge representation schemes using predicate logic, semantic networks, frames, rules, and probabilistic models to support reasoning under uncertainty",
+        "Perform inference using first-order logic, unification, resolution, forward/backward chaining, and apply learning approaches such as decision trees, EBL, statistical methods, and reinforcement learning",
+        "Examine the architecture, components, knowledge acquisition techniques, and shells of expert systems, and evaluate typical expert system applications"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2049,10 +2080,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 2 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
@@ -2074,8 +2105,66 @@
         "C": 3
       },
       "type": "theory",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "8086 Architecture",
+          "topics": [
+            "Main features, pin diagram and description of the 8086 microprocessor; the 8086 microprocessor family",
+            "Internal architecture: bus interfacing unit and execution unit",
+            "Interrupts and interrupt response; 8086 system timing",
+            "Minimum mode and maximum mode configuration"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "8086 Programming",
+          "topics": [
+            "Program development steps",
+            "Instructions and addressing modes",
+            "Assembler directives",
+            "Writing simple programs with an assembler; assembly language program development tools"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "8086 Interfacing",
+          "topics": [
+            "Semiconductor memories interfacing (RAM, ROM); Intel 8255 programmable peripheral interface",
+            "Interfacing switches and LEDs; interfacing seven-segment displays",
+            "Software and hardware interrupt applications; Intel 8251 USART architecture and interfacing",
+            "Intel 8237A DMA controller, stepper motor, A/D and D/A converters; need for 8259 programmable interrupt controllers"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "8051 Microcontroller Architecture",
+          "topics": [
+            "Architecture of the 8051 microcontroller",
+            "Special Function Registers (SFRs)",
+            "I/O pins, ports and circuits",
+            "Instruction set and addressing modes; assembly language programming"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Interfacing the 8051 Microcontroller",
+          "topics": [
+            "Programming 8051 timers; serial port programming; interrupts programming",
+            "LCD and keyboard interfacing",
+            "ADC, DAC and sensor interfacing; external memory interface",
+            "Stepper motor and waveform generation",
+            "Comparison of microprocessor, microcontroller, PIC and ARM processors"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain the architecture, operational modes, timing, and interrupt mechanisms of the 8086 microprocessor",
+        "Apply addressing modes, instruction set, and assembler directives to develop assembly-level programs for the 8086 microprocessor",
+        "Design interfacing circuits for memories, I/O devices, interrupts, serial communication, and peripheral controllers commonly used with 8086",
+        "Describe the architecture, SFRs, instruction set, and programming model of the 8051 microcontroller and develop basic assembly programs",
+        "Develop interface routines for timers, serial communication, interrupts, sensors, ADC/DAC, and external devices using 8051, and compare microprocessor/microcontroller families"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2088,10 +2177,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (page 2 course-structure table only) -- only the name 'Microprocessors & Microcontrollers' with 3-0-0-3 credits, no course objectives, outcomes, units or textbooks found anywhere in the document. The other three Professional Elective-I options (Object Oriented Analysis and Design, Artificial Intelligence, Quantum Computing) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
     },
@@ -2164,7 +2253,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain the evolution of quantum computing and distinguish between classical and quantum computing models, including bits vs qubits and logical operations",
+        "Apply foundational mathematics, physics, and biological concepts, including linear algebra, Hilbert spaces, superposition, entanglement, and genomics/proteomics, to analyze quantum computational principles",
+        "Demonstrate the representation, physical realization, and manipulation of qubits, and construct simple quantum circuits using single and multi-qubit gates",
+        "Analyze and implement foundational quantum algorithms such as Deutsch, Deutsch-Jozsa, Grover, and Shor, and compare their performance with classical algorithms",
+        "Examine noise sources, apply quantum error-correction and fault-tolerant mechanisms, and interpret modern applications of quantum information and cryptography"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2177,10 +2272,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-I option 4 of 4. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
@@ -2218,7 +2313,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Construct data warehouses, design multidimensional models (Star/Snowflake/Fact Constellation), and perform ETL and OLAP operations using industrial tools",
+        "Explore and operate WEKA tools to load, preprocess, visualize datasets, and analyze attribute characteristics for machine learning tasks",
+        "Apply data preprocessing, association rule mining (Apriori/FP-Growth), and interpretation of rules to derive meaningful insights from datasets",
+        "Implement and evaluate classification and clustering algorithms (ID3, J48, NB, k-NN, k-means) using WEKA/Python/R, and compare model performance using ROC curves, entropy, SSE, and confusion matrices",
+        "Develop machine learning programs in Python/Java/R for association mining, Naive Bayes, clustering, chi-square computation, and visualization using Matplotlib, and interpret results"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2231,10 +2332,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Core lab (0-0-3-1.5). List of 16 experiments covering data warehouse creation, WEKA toolkit exploration, preprocessing, association rule mining, classification, clustering and Python/R data mining tasks read from the source PDF."
     },
@@ -2272,7 +2373,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Configure and operate basic network devices to establish Local Area Networks and analyze packet-level behavior using tools such as Wireshark",
+        "Implement data link layer framing, error detection and correction techniques such as bit/character stuffing, checksum, Hamming code, and CRC algorithms",
+        "Develop and simulate reliable data transfer protocols including Stop-and-Wait, Go-Back-N, and Selective Repeat using programming constructs",
+        "Implement routing algorithms such as Dijkstra's shortest path and Distance Vector routing to compute optimal routing paths",
+        "Simulate congestion control, packet flow behavior, and throughput using NS2/Nmap and evaluate network performance under various scenarios"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2285,10 +2392,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Core lab (0-0-3-1.5). List of 16 experiments covering LAN setup, data link layer framing/error control, sliding window protocols, congestion control, routing algorithms, Wireshark, Nmap and NS2 simulation read from the source PDF."
     },
@@ -2310,8 +2417,27 @@
         "C": 2
       },
       "type": "theory_cum_lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "ExpressJS: routing, HTTP methods, middleware, templating, form data",
+            "ExpressJS: cookies, sessions, authentication, database connectivity, RESTful APIs",
+            "ReactJS: rendering HTML, JSX, components (function and class), props and state, styles, responding to events",
+            "ReactJS: conditional rendering, rendering lists, React forms, React Router, updating the screen",
+            "ReactJS: hooks, sharing data between components; applications - to-do list and quiz app",
+            "MongoDB: installation, configuration, CRUD operations, databases, collections and records"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Build server-side applications using ExpressJS with routing, middleware, templating, sessions, authentication, and RESTful APIs",
+        "Develop interactive client-side applications using ReactJS components, props, states, JSX, routing, forms, hooks, and event handling",
+        "Design and integrate MERN-based full-stack applications using ExpressJS, ReactJS, and MongoDB for end-to-end data management",
+        "Perform CRUD operations and manage collections, indexes, and aggregations using MongoDB and Mongoose",
+        "Implement and test real-world applications (e.g., To-Do, Quiz App) and evaluate security, performance, and usability considerations"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2324,10 +2450,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Skill Enhancement Course delivered as experiments covering: ExpressJS (routing, HTTP methods, middleware, templating, form data, cookies, sessions, authentication, RESTful APIs, database connectivity via Mongoose); ReactJS (rendering HTML/JSX, function & class components, props/state, styles, events, conditional rendering, rendering lists, React forms, React Router, hooks, sharing data between components); MongoDB (installation, configuration, CRUD operations, databases, collections and records); plus augmented programs (to-do list app, quiz app, MongoDB certification). Name, 0-1-2-2 credits and topic/experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
     },
@@ -2365,7 +2491,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Apply Dart programming constructs and core Flutter widgets to build basic user interfaces",
+        "Develop responsive and multi-screen mobile applications using layouts, navigation, and routing techniques",
+        "Implement effective state management and custom widget design using Flutter frameworks such as setState and Provider",
+        "Integrate animations, form handling, validation, and REST API communication to build interactive and data-driven mobile applications",
+        "Perform debugging, testing, and performance optimization of Flutter applications using available tools, testing frameworks, and best practices"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2378,10 +2510,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Engineering Science lab (0-0-2-1). List of 10 experiments (with sub-parts) covering Flutter/Dart setup, widgets and layouts, responsive UI, navigation, state management, custom widgets and theming, forms and validation, animations, REST API data fetching and unit testing/debugging, read from the source PDF. The course-structure table lists an alternative title 'SWAYAM Plus - Android Application Development (with Flutter)'; the detail page itself is headed 'User Interface Design using Flutter', used here as the canonical name."
     },
@@ -2468,10 +2600,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Open Elective-I option 1 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
@@ -2557,10 +2689,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Open Elective-I option 2 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
     },
@@ -2710,7 +2842,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain lexical and syntax analysis mechanisms, token specification, and grammar properties used in compiler front-end design",
+        "Apply top-down and bottom-up parsing techniques to analyze context-free grammars and construct predictive and LR parsing tables",
+        "Develop syntax-directed definitions, translation schemes, and intermediate code representations such as TAC, syntax trees, and backpatching",
+        "Examine code optimization techniques, data-flow analysis, and loop optimizations to improve intermediate code efficiency",
+        "Construct runtime environments, activation records, and generate object code by addressing issues in code generation and register allocation"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2723,10 +2861,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -2804,7 +2942,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Explain cloud computing concepts, service models, deployment models, and associated benefits in modern distributed systems",
+        "Apply cloud-enabling technologies such as parallel computing, distributed systems, SOA, and virtualization in cloud environments",
+        "Analyze virtualization techniques, container technologies, orchestration tools, and public cloud VM/container services",
+        "Evaluate cloud computing challenges related to interoperability, scalability, energy efficiency, and cloud security architecture",
+        "Assess advanced cloud paradigms including serverless computing, cloud-centric IoT, edge/fog computing, DevOps, and quantum cloud technologies"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -2817,10 +2961,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -2907,10 +3051,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -2993,10 +3137,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-II option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3087,10 +3231,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-II option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3182,10 +3326,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-II option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3276,10 +3420,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-II option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3369,10 +3513,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-III option 1 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3462,10 +3606,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-III option 2 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3553,10 +3697,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-III option 3 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3645,10 +3789,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Elective-III option 4 of 4. 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3705,10 +3849,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Core lab (0-0-3-1.5). List of Experiments read from the source PDF."
     },
@@ -3759,10 +3903,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Professional Core lab (0-0-3-1.5). List of Experiments read from the source PDF."
     },
@@ -3851,10 +3995,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "Open Elective-II (single named option). 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
@@ -3876,7 +4020,53 @@
         "C": 2
       },
       "type": "theory_cum_lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Analytical Thinking and Listening Skills",
+          "topics": [
+            "Self-introduction; 'Shaping Young Minds' - a talk by Azim Premji (listening activity)",
+            "Self-analysis; developing positive attitude; perception",
+            "Communication skills: verbal communication; non-verbal communication (body language)"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Self-Management Skills and Etiquette",
+          "topics": [
+            "Self-management skills: anger management, stress management, time management",
+            "Six thinking hats; team building; leadership qualities",
+            "Etiquette: social etiquette, business etiquette, telephone etiquette, dining etiquette"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Standard Operation Methods",
+          "topics": [
+            "Basic grammar, tenses, prepositions, pronunciation",
+            "Letter writing; note making, note taking, minutes preparation",
+            "Email and letter writing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Job-Oriented Skills",
+          "topics": [
+            "Group discussion; mock group discussions",
+            "Resume preparation",
+            "Interview skills; mock interviews"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Interpersonal Relationships",
+          "topics": [
+            "Introduction, importance, types, uses",
+            "Factors affecting interpersonal relationships",
+            "Accommodating different styles; consequences of interpersonal relationships"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3890,10 +4080,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "NEEDS VERIFICATION: this Skill Enhancement course appears only in the III-II course structure table (0-1-2-2) with no course objectives, outcomes, unit content or textbooks anywhere else in the source document. Source the unit-wise content from an official document before flipping to verified."
     },
@@ -3915,7 +4105,54 @@
         "C": 0
       },
       "type": "theory",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction to Technical Report Writing",
+          "topics": [
+            "Introduction to writing technical reports; technical sentence formation; using transitions to join sentences; using tenses for technical writing",
+            "Planning the report; identifying reader(s); voice",
+            "Formatting and structuring the report; sections of a technical report; minutes of meeting writing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Drafting, Editing and Plain English",
+          "topics": [
+            "Drafting the report and design issues: the use of drafts; illustrations and graphics",
+            "Final edits: grammar, spelling, readability and writing in plain English; jargon and final layout issues",
+            "Spelling, punctuation and grammar; padding, paragraphs, ambiguity"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Proofreading, Summaries and Presenting Reports",
+          "topics": [
+            "Proofreading and summaries; activities on summaries",
+            "Presenting final reports: printed presentation; verbal presentation skills",
+            "Introduction to proposals and practice"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Using a Word Processor for Report Writing",
+          "topics": [
+            "Adding, updating and deleting a table of contents; adding an index; creating an outline",
+            "Adding comments; tracking changes; viewing changes, additions and comments; accepting and rejecting changes",
+            "Working with footnotes and endnotes; inserting citations and bibliography; comparing and combining documents",
+            "Marking documents final and read-only; password-protecting Microsoft Word documents; using macros"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Intellectual Property Rights",
+          "topics": [
+            "Nature of intellectual property: patents, designs, trade and copyright",
+            "Process of patenting and development: technological research, innovation, patenting, development",
+            "International scenario: international cooperation on intellectual property"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3929,10 +4166,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-09",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
       "notes": "NEEDS VERIFICATION: listed as Audit Course 'Technical Paper Writing & IPR' in the III-II course structure table (L-T-P 2-0-0, credits shown as '-'), but this CSE document has no detail page for it -- no course objectives, outcomes, units or textbooks -- unlike other Tirumala/LBRCE branch documents where this course has full content. Source the unit-wise content from an official document before flipping to verified."
     },
