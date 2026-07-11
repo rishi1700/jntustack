@@ -3674,7 +3674,7 @@
       "seo": {
         "slug": "machine-learning-lab-jntuk-r23-ece-3-2",
         "title": "Machine Learning Lab - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning Lab: scikit-learn basics, regression, feature extraction, classification, decision trees, PCA, SVM, neural nets."
+        "meta_description": "Tirumala R23 ECE 3-2 Machine Learning Lab: FIND-S, Candidate-Elimination, ID3, regression, ANN backpropagation, KNN, naive Bayes, EM/K-Means, SVM, PCA."
       },
       "legacy_equivalent_id": null,
       "source": {
