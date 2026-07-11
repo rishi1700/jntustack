@@ -547,3 +547,37 @@ a.subject-card:hover{border-color:var(--accent);}
 .subject-card-arrow{flex:none;color:var(--accent);}
 
 @media (max-width:720px){.hub-layout{flex-direction:column;}.hub-rail{width:100%;position:static;}.hub-rail-list{flex-direction:row;flex-wrap:wrap;}}
+
+
+/* ============================================================================
+   Colleges — university tabs + type dots (design direction 4c)
+   ========================================================================== */
+.campus-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.9rem;}
+.campus-tab{font-family:inherit;font-weight:700;font-size:.85rem;border:1px solid var(--border);background:var(--surface);color:var(--text-2);border-radius:12px;padding:.6rem 1.2rem;cursor:pointer;}
+.campus-tab .mono{font-size:.62rem;font-weight:600;margin-left:.4rem;}
+.campus-tab[aria-pressed="true"]{background:var(--brand);color:var(--accent-ink);border-color:var(--brand);}
+.campus-tab[aria-pressed="true"] .mono{color:var(--accent-ink);}
+.campus-tab:not([aria-pressed="true"]) .mono{color:var(--accent);}
+
+.college-dot-legend{display:flex;gap:1.1rem;font-size:.75rem;color:var(--muted);margin:.9rem 0 .5rem;align-items:center;flex-wrap:wrap;}
+.college-dot-legend span{display:flex;align-items:center;gap:.4rem;}
+.college-dot{display:inline-block;width:9px;height:9px;border-radius:50%;flex:none;}
+.college-dot--constituent{background:var(--text);}
+.college-dot--autonomous{background:var(--accent);}
+.college-dot--affiliated{background:var(--faint);}
+
+/* Extend the existing college-card grid with a leading dot column instead
+   of replacing its layout -- h4/meta/codes/link keep their column/row
+   assignments, just shifted one column over (see college-directory.js). */
+.college-card{grid-template-columns:14px 1fr auto auto;}
+.college-card .college-dot{grid-row:1;grid-column:1;}
+.college-card h4{grid-column:2;}
+.college-card .college-meta{grid-column:3;}
+.college-card .college-codes{grid-column:2;}
+.college-card .college-link{grid-column:4;}
+@media (max-width:560px){
+  .college-card{grid-template-columns:14px 1fr;}
+  .college-card .college-dot{grid-row:1;}
+  .college-card h4{grid-column:2;}
+  .college-card .college-meta,.college-card .college-codes,.college-card .college-link{grid-column:2;}
+}

@@ -74,6 +74,14 @@ function typeLabel(type) {
   return 'Affiliated';
 }
 
+// white=constituent, teal=autonomous, gray=affiliated -- same three honest
+// buckets as TYPE_GROUPS/typeLabel above, just as a color instead of text.
+function typeDotClass(type) {
+  if (type === 'Constituent') return 'college-dot--constituent';
+  if (type === 'Autonomous-Private') return 'college-dot--autonomous';
+  return 'college-dot--affiliated';
+}
+
 function renderCard(college) {
   const loc = college.location || {};
   const city = loc.city ? escapeHtml(loc.city) : '';
@@ -90,6 +98,7 @@ function renderCard(college) {
 
   return `
         <article class="college-card" data-district="${district}">
+          <span class="college-dot ${typeDotClass(college.type)}" aria-hidden="true"></span>
           <h4>${escapeHtml(college.name)}</h4>
           <div class="college-meta">
             <span class="college-type-badge">${escapeHtml(typeLabel(college.type))}</span>
@@ -124,41 +133,73 @@ function renderCampus(campus, colleges) {
   </section>`;
 }
 
-// Client-side district filter. Progressive enhancement: with no JS every card
-// is already visible, so the page is fully usable -- the script only narrows by
-// district. It also hides any campus/type section left empty by the filter.
+// University tabs, one per campus present in the data, with a live count.
+// Progressive enhancement, same rule as the district filter below: server
+// renders every campus section visible and stacked, so a no-JS visitor gets
+// the full directory; the script (not server markup) is what actually hides
+// the non-active campuses once it runs.
+function campusTabs(campuses, colleges) {
+  return campuses.map((c, i) => {
+    const count = colleges.filter((col) => col.affiliated_to === c.code).length;
+    return `<button class="campus-tab" type="button" data-campus="${escapeHtml(c.code)}" aria-pressed="${i === 0 ? 'true' : 'false'}">${escapeHtml(CAMPUS_SHORT_LABEL[c.code] || c.code)} <span class="mono">${count}</span></button>`;
+  }).join('\n    ');
+}
+
+// Client-side campus tabs + district filter. Progressive enhancement: with no
+// JS every campus/card is already visible (server-rendered stacked, nothing
+// hidden in markup), so the page is fully usable -- this script is what
+// actually switches to the one-campus-at-a-time tabbed view once it runs.
 function filterScript() {
   return `
 <script>
 (function(){
+  const tabs = document.querySelectorAll('.campus-tab');
   const buttons = document.querySelectorAll('.district-btn');
   const cards = document.querySelectorAll('.college-card');
   const typeGroups = document.querySelectorAll('.college-type-group');
   const campusGroups = document.querySelectorAll('.campus-group');
   const countEl = document.getElementById('collegeCount');
-  const total = cards.length;
 
-  function apply(district){
-    let visible = 0;
+  let activeCampus = tabs.length ? tabs[0].dataset.campus : null;
+  let activeDistrict = 'all';
+
+  function apply(){
+    let visible = 0, campusTotal = 0;
     cards.forEach(card => {
-      const match = district === 'all' || card.dataset.district === district;
+      const campus = card.closest('.campus-group');
+      const inCampus = !activeCampus || (campus && campus.dataset.campus === activeCampus);
+      if (inCampus) campusTotal++;
+      const inDistrict = activeDistrict === 'all' || card.dataset.district === activeDistrict;
+      const match = inCampus && inDistrict;
       card.hidden = !match;
       if (match) visible++;
     });
     typeGroups.forEach(g => { g.hidden = !g.querySelector('.college-card:not([hidden])'); });
-    campusGroups.forEach(g => { g.hidden = !g.querySelector('.college-card:not([hidden])'); });
-    countEl.textContent = district === 'all'
-      ? 'Showing all ' + total + ' colleges'
-      : 'Showing ' + visible + ' of ' + total + ' colleges in ' + district;
+    campusGroups.forEach(g => { g.hidden = activeCampus ? g.dataset.campus !== activeCampus : false; });
+    countEl.textContent = activeDistrict === 'all'
+      ? 'Showing all ' + campusTotal + ' colleges'
+      : 'Showing ' + visible + ' of ' + campusTotal + ' colleges in ' + activeDistrict;
   }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.setAttribute('aria-pressed', 'false'));
+      tab.setAttribute('aria-pressed', 'true');
+      activeCampus = tab.dataset.campus;
+      apply();
+    });
+  });
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
       buttons.forEach(b => b.setAttribute('aria-pressed', 'false'));
       btn.setAttribute('aria-pressed', 'true');
-      apply(btn.dataset.district);
+      activeDistrict = btn.dataset.district;
+      apply();
     });
   });
+
+  apply();
 })();
 </script>`;
 }
@@ -176,7 +217,8 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
     ),
   ].join('\n    ');
 
-  const campusesHtml = campusesFromData(colleges).map((c) => renderCampus(c, colleges)).join('\n');
+  const campuses = campusesFromData(colleges);
+  const campusesHtml = campuses.map((c) => renderCampus(c, colleges)).join('\n');
   const universitySummary = collegeDirectoryUniversitySummary(colleges);
 
   // Support one or many coverage notes (one per campus data file). Back-compat:
@@ -205,8 +247,18 @@ ${notesHtml}
 
 <div class="ad-slot">ad slot &mdash; below intro</div>
 
+<div class="campus-tabs" role="group" aria-label="Filter colleges by university">
+    ${campusTabs(campuses, colleges)}
+</div>
+
 <div class="district-filter" role="group" aria-label="Filter colleges by district">
     ${filterButtons}
+</div>
+
+<div class="college-dot-legend">
+  <span><span class="college-dot college-dot--constituent" aria-hidden="true"></span>Constituent</span>
+  <span><span class="college-dot college-dot--autonomous" aria-hidden="true"></span>Autonomous</span>
+  <span><span class="college-dot college-dot--affiliated" aria-hidden="true"></span>Affiliated</span>
 </div>
 <p class="college-count" id="collegeCount">Showing all ${colleges.length} colleges</p>
 
