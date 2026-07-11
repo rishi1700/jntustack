@@ -31,14 +31,26 @@
 }
 
 html[data-theme="dark"]{
-  --bg:#04231F;        --surface:#0A2F2A;   --surface-2:#0E3630;
-  --border:#1C453F;    --hair:#123832;
-  --text:#EAF4F2;      --text-2:#C3DAD6;    --muted:#9DBBB5;   --faint:#6F918B;
-  --accent:#2EDFCF;    --accent-ink:#04231F; --accent-soft:rgba(0,184,169,.16);
-  --green:#2EDFCF;     --green-bg:rgba(46,223,207,.1); --green-border:rgba(46,223,207,.3); --green-ink:#04231F;
-  --draft:#E8A24A;     --draft-bg:rgba(232,162,74,.13);
-  --bar:#062B26;       --shadow:0 24px 50px -24px rgba(0,0,0,.6);
-  --logo-bot:#EAF4F2;  --logo-mid:#4E736D;  --logo-top:#00B8A9;
+  /* surfaces — OLED true-black */
+  --bg:#000000;        --surface:#0E1211;   --surface-2:#161B19;
+  --border:#2A322F;    --hair:#222826;
+
+  /* text — green-tinted grays */
+  --text:#F2F7F6;      --text-2:#C8D4D1;    --muted:#8D9B97;   --faint:#5A6663;
+
+  /* accent — teal reserved for verification + primary actions */
+  --accent:#2EDFCF;    --accent-ink:#000000; --accent-soft:rgba(46,223,207,.08);
+
+  /* verified state — outline style on black (border, not filled bg) */
+  --green:#2EDFCF;     --green-bg:transparent;
+  --green-border:#2A5A54;                    --green-ink:#000000;
+
+  /* review / soon state */
+  --draft:#E8A24A;     --draft-bg:rgba(232,162,74,.15);
+
+  /* chrome */
+  --bar:#000000;       --shadow:0 0 40px -14px rgba(46,223,207,.25);
+  --logo-bot:#F2F7F6;  --logo-mid:#4E736D;  --logo-top:#00B8A9;
 }
 
 *{box-sizing:border-box;}
@@ -374,3 +386,51 @@ a.registry-row--live:hover .registry-code{color:var(--accent);}
 /* Slate footer extras */
 .footer-tag{font-size:.82rem;color:#9DBBB5;max-width:40ch;line-height:1.6;margin:.6rem 0 0;}
 .footer-links{display:flex;gap:1.4rem;flex-wrap:wrap;font-size:.85rem;align-items:center;}
+
+
+/* ============================================================================
+   OLED true-black dark theme — refinements (design direction 3a / 4a-4e)
+   Teal (#2EDFCF) is reserved for verification + primary actions only.
+   Amber (#E8A24A) only for "needs review" / "soon" states. Grays stay
+   green-tinted, never neutral. Verified elements may glow.
+   ========================================================================== */
+
+/* Primary CTA keeps solid brand teal with black ink */
+html[data-theme="dark"] .btn-primary{
+  background:#00B8A9;color:#000;
+}
+
+/* VERIFIED stamp/seal glows */
+html[data-theme="dark"] .stamp--verified,
+html[data-theme="dark"] .verify-card{
+  filter:drop-shadow(0 0 20px rgba(46,223,207,.3));
+  border-color:#2EDFCF;color:#2EDFCF;
+}
+
+/* Badges become outlined pills (no filled backgrounds on black) */
+html[data-theme="dark"] .badge--verified{
+  background:transparent;border:1px solid #2A5A54;color:#2EDFCF;
+}
+html[data-theme="dark"] .badge--soon{
+  background:rgba(232,162,74,.15);color:#E8A24A;
+}
+
+/* Cards sit on hairline borders, not shadows */
+html[data-theme="dark"] .rail-card,
+html[data-theme="dark"] .quiz-card,
+html[data-theme="dark"] .branch-compare-card,
+html[data-theme="dark"] .college-card,
+html[data-theme="dark"] .home-cta-card{
+  background:var(--surface);border:1px solid var(--border);box-shadow:none;
+}
+
+/* Quiz focus card gets the one ambient glow on the page */
+html[data-theme="dark"] .quiz-card{
+  box-shadow:0 0 40px -14px rgba(46,223,207,.25);
+}
+
+/* Selected quiz option */
+html[data-theme="dark"] .quiz-option[aria-pressed="true"],
+html[data-theme="dark"] .quiz-option.is-selected{
+  background:rgba(46,223,207,.08);border:1.5px solid #2EDFCF;
+}
