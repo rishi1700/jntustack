@@ -65,8 +65,12 @@ export function renderBranchHubPage(branch, subjects) {
     .join('\n');
 
   return `
-<a class="crumb" href="/">&larr; Home</a>
-<div class="subject-path mono"><a href="/">HOME</a> / ${escapeHtml(branch.code)}</div>
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">${escapeHtml(branch.code)} subjects</li>
+  </ol>
+</nav>
 
 <div class="hub-layout">
   <nav class="hub-rail" aria-label="Jump to semester">
@@ -78,12 +82,10 @@ export function renderBranchHubPage(branch, subjects) {
     <div class="hub-head-row">
       <div>
         <h1 class="subject-title">${escapeHtml(branch.name || branch.code)}</h1>
-        <p class="guide-intro">Only pages checked against a published source appear here &mdash; added one by one, never dumped in unverified.</p>
+        <p class="guide-intro">Browse the JNTUK R23 ${escapeHtml(branch.code)} syllabus by semester. Every subject and unit breakdown listed here has been checked against a published source.</p>
       </div>
       <div class="hub-stat-badge"><b>${count}</b><span>VERIFIED<br>SUBJECT${count === 1 ? '' : 'S'}</span></div>
     </div>
-
-    <div class="ad-slot">ad slot &mdash; below intro</div>
 
     ${groupsHtml}
   </div>

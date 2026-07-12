@@ -40,6 +40,111 @@ function unitChecklistScript() {
 </script>`;
 }
 
+const CATEGORY_LABELS = {
+  BasicScience: 'basic science course',
+  EngineeringScience: 'engineering science course',
+  HSMC: 'humanities and management course',
+  Lab: 'laboratory course',
+  MandatoryNonCredit: 'mandatory non-credit course',
+  OpenElective: 'open elective',
+  ProfessionalCore: 'professional core course',
+  ProfessionalElective: 'professional elective',
+  SkillEnhancement: 'skill-enhancement course',
+};
+
+function displayDate(value = '') {
+  const match = String(value).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return value;
+  const [, year, month, day] = match;
+  const monthNames = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  return `${Number(day)} ${monthNames[Number(month) - 1]} ${year}`;
+}
+
+function sourceHost(url = '') {
+  try {
+    return new URL(url).hostname.replace(/^www\./, '');
+  } catch {
+    return '';
+  }
+}
+
+function sourcePageEvidence(subject) {
+  const note = subject.notes || '';
+  const pageMatch = note.match(/\b(?:pages?|pp?\.)\s*\d+(?:\s*[\u2013\u2014-]\s*\d+)?/i);
+  const evidence = [];
+  if (subject.subject_code) evidence.push(`Course ${subject.subject_code}`);
+  if (pageMatch) evidence.push(pageMatch[0].replace(/^./, c => c.toUpperCase()));
+  if (subject.units?.length) evidence.push(`${subject.units.length} published ${subject.units.length === 1 ? 'section' : 'units'}`);
+  return evidence.join(' \u00b7 ') || 'Published course record';
+}
+
+function subjectIntro(subject, branches) {
+  const branchScope = branches.length === 1
+    ? `${branches[0]?.name || branches[0]?.code || subject.branch} (${branches[0]?.code || subject.branch})`
+    : branches.length === 2
+      ? branches.map(branch => branch?.code).filter(Boolean).join(' and ')
+      : 'all listed engineering branches';
+  const category = CATEGORY_LABELS[subject.category] || 'course';
+  const totalCredits = subject.credits?.C ?? subject.credits?.total;
+  const creditText = typeof totalCredits === 'number'
+    ? totalCredits === 0
+      ? 'It is a non-credit requirement.'
+      : `It carries ${totalCredits} ${totalCredits === 1 ? 'credit' : 'credits'}.`
+    : '';
+  const units = subject.units || [];
+  let coverageText = 'A unit-wise breakdown is not yet available on this page.';
+  if (units.length === 1) {
+    const activityCount = units[0].topics?.length || 0;
+    coverageText = activityCount > 1
+      ? `Its published ${units[0].title} section lists ${activityCount} activities or topic groups.`
+      : `Its published coverage is grouped under ${units[0].title}.`;
+  } else if (units.length > 1) {
+    coverageText = `The published coverage runs across ${units.length} units, from ${units[0].title} through ${units[units.length - 1].title}.`;
+  }
+  return `This JNTUK ${subject.regulation} ${category} is listed for ${branchScope} in semester ${subject.year_sem_label}. ${creditText} ${coverageText}`.replace(/\s+/g, ' ').trim();
+}
+
+function sourceDocket(subject, isVerified) {
+  const primaryUrl = subject.source.origin_url || '';
+  const sources = [
+    ...(primaryUrl ? [{ origin_url: primaryUrl, label: sourceHost(primaryUrl).endsWith('jntuk.edu.in') ? 'Official JNTUK syllabus' : 'Published syllabus reference' }] : []),
+    ...((subject.source.additional_sources || []).map(source => typeof source === 'string'
+      ? { origin_url: source, label: 'Additional published source' }
+      : source)),
+  ].filter(source => source?.origin_url);
+  const uniqueSources = [...new Map(sources.map(source => [source.origin_url, source])).values()];
+  const linksHtml = uniqueSources.length
+    ? `<ul class="source-docket-links">${uniqueSources.map((source, index) => {
+        const host = sourceHost(source.origin_url);
+        return `<li>
+          <a href="${escapeHtml(source.origin_url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.label || (index === 0 ? 'Published syllabus source' : 'Additional published source'))} <span aria-hidden="true">\u2197</span></a>
+          ${host ? `<span class="source-docket-host mono">${escapeHtml(host)}</span>` : ''}
+        </li>`;
+      }).join('')}</ul>`
+    : '<span>Source URL not recorded</span>';
+  const checked = subject.source.retrieved_date
+    ? `<time datetime="${escapeHtml(subject.source.retrieved_date)}">${escapeHtml(displayDate(subject.source.retrieved_date))}</time>`
+    : 'Date not recorded';
+  const verificationScope = subject.source.college_source_note
+    || 'The page is linked to the published course reference shown above.';
+
+  return `<section class="source-docket" aria-labelledby="source-docket-title">
+    <div class="source-docket-head">
+      <div>
+        <span class="source-docket-kicker mono">SOURCE DOCKET</span>
+        <h2 id="source-docket-title">Published evidence</h2>
+      </div>
+      <span class="source-docket-status${isVerified ? '' : ' source-docket-status--draft'}">${isVerified ? '\u2713 Verified' : 'Needs verification'}</span>
+    </div>
+    <dl class="source-docket-grid">
+      <div><dt>Source</dt><dd>${linksHtml}</dd></div>
+      <div><dt>Checked</dt><dd>${checked}</dd></div>
+      <div><dt>Record</dt><dd>${escapeHtml(sourcePageEvidence(subject))}</dd></div>
+    </dl>
+    <p class="source-docket-scope"><strong>Verification scope</strong>${escapeHtml(verificationScope)}</p>
+  </section>`;
+}
+
 export function renderSubjectPage(subject, { branches = [], regulation, legacySubject, branchHubPublished }) {
   // branches is always an array: length 1 for an ordinary per-branch subject
   // (identical to the old single-branch behavior below), length 2+ for a
@@ -56,7 +161,9 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
   // unchecked "0 / N" state, then the inline script hydrates real counts on
   // load. No accounts, nothing sent anywhere, never varies the cached HTML.
   const checklistIntro = hasUnits
-    ? `${subject.units.length} units, from ${escapeHtml(subject.units[0].title)} to ${escapeHtml(subject.units[subject.units.length - 1].title)}. Tick off units as you cover them &mdash; your progress stays on this device.`
+    ? subject.units.length === 1
+      ? `Published practical or activity coverage: ${escapeHtml(subject.units[0].title)}. Tick it off as you cover it &mdash; your progress stays on this device.`
+      : `${subject.units.length} units, from ${escapeHtml(subject.units[0].title)} to ${escapeHtml(subject.units[subject.units.length - 1].title)}. Tick off units as you cover them &mdash; your progress stays on this device.`
     : '';
   const unitsHtml = hasUnits
     ? `<div class="checklist-card" data-subject-id="${escapeHtml(subject.id)}">
@@ -90,8 +197,11 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
   ].filter(Boolean).join('');
 
   const resourcesHtml = resourceLinks
-    ? resourceLinks
-    : `<div class="empty-state">Notes for this subject haven't been uploaded yet. Check back soon.</div>`;
+    ? `<div class="rail-card">
+        <h2 style="font-size:.95rem;margin-bottom:.7rem;">Downloads</h2>
+        ${resourceLinks}
+      </div>`
+    : '';
 
   // Right rail: the circular verified seal is the redesign's signature
   // element, replacing the old text verify-card (whose more detailed
@@ -125,20 +235,11 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
       </div>`
     : '';
 
-  // Back-link to the branch hub, but only when that hub was actually published
-  // (i.e. the branch has at least one verified subject). Never link to a hub
-  // URL that the verified-only gate didn't generate -- that would be a 404.
-  // A shared subject has no single hub to point back to (it's listed on all
-  // of them), so it gets no hub breadcrumb rather than an arbitrary one.
-  const hubBreadcrumb = !isShared && branchHubPublished && branch
-    ? `<a class="crumb" href="/${escapeHtml(branch.code.toLowerCase())}/">&larr; All ${escapeHtml(branch.name || branch.code)} subjects</a>`
-    : '';
-
   // Reuses the same disclaimer-box styling as the source caveat below -- no
   // new UI, just another instance of the existing "why this page looks the
   // way it does" callout, for the other reason a page might need one.
   const sharedNoteHtml = isShared
-    ? `<div class="disclaimer-box">Common to ${branches.map(b => escapeHtml(b?.code || '')).join(', ')} B.Tech first-year (R23) -- this page isn't branch-specific, which is why it isn't listed under a single branch hub.</div>`
+    ? `<div class="disclaimer-box">Common to ${branches.map(b => escapeHtml(b?.code || '')).join(', ')} in ${escapeHtml(subject.regulation)} semester ${escapeHtml(subject.year_sem_label)}. One branch-neutral page keeps the shared syllabus and source evidence together.</div>`
     : '';
 
   const legacyHtml = legacySubject
@@ -148,20 +249,30 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
       </div>`
     : '';
 
-  // Short, student-facing caveat about the source itself (e.g. autonomous-college
-  // sourcing). Rendered only when present so it stays honest about the "Verified"
-  // stamp instead of hiding the nuance in maintainer-only metadata.
-  const sourceCaveatHtml = subject.source.college_source_note
-    ? `<div class="disclaimer-box">${escapeHtml(subject.source.college_source_note)}</div>`
+  const branchScopeLabel = isShared
+    ? branches.map(item => item?.code).filter(Boolean).join('/')
+    : branch?.code || subject.branch;
+  const pageKind = hasUnits ? 'syllabus' : 'study notes';
+  const breadcrumbBranch = !isShared && branchHubPublished && branch
+    ? `<li><a href="/${escapeHtml(branch.code.toLowerCase())}/">${escapeHtml(branch.code)} subjects</a></li>`
+    : '';
+  const breadcrumbHtml = `<nav class="page-breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">Home</a></li>
+      ${breadcrumbBranch}
+      <li aria-current="page">${escapeHtml(subject.name)}</li>
+    </ol>
+  </nav>`;
+  const offeringCategories = (subject.offering_categories || []).filter(Boolean);
+  const offeringHtml = offeringCategories.length
+    ? `<div class="offering-categories" aria-label="Official offering categories">
+        <span class="mono">OFFICIALLY OFFERED AS</span>
+        ${offeringCategories.map(category => `<span class="offering-category">${escapeHtml((CATEGORY_LABELS[category] || category).replace(/ course$/, ''))}</span>`).join('')}
+      </div>`
     : '';
 
-  const subjectPath = isShared
-    ? `<a href="/">HOME</a> / ${escapeHtml(subject.year_sem_label)}`
-    : `<a href="/">HOME</a>${branchHubPublished && branch ? ` / <a href="/${escapeHtml(branch.code.toLowerCase())}/">${escapeHtml(branch.code)}</a>` : branch ? ` / ${escapeHtml(branch.code)}` : ''} / ${escapeHtml(subject.year_sem_label)}`;
-
   return `
-${hubBreadcrumb}
-<div class="subject-path mono">${subjectPath}</div>
+${breadcrumbHtml}
 <div class="subject-grid">
   <div class="subject-main">
     <div class="pill-row">
@@ -173,17 +284,22 @@ ${hubBreadcrumb}
       <span class="pill ${isVerified ? 'pill--verified' : ''}">${isVerified ? '&#10003; ' : ''}${badgeLabel.toUpperCase()}${subject.source.retrieved_date ? ` ${escapeHtml(subject.source.retrieved_date)}` : ''}</span>
     </div>
 
-    <h1 class="subject-title">${escapeHtml(subject.name)}</h1>
+    <h1 class="subject-title subject-title--contextual">
+      <span>${escapeHtml(subject.name)}</span>
+      <span class="subject-title-context">JNTUK ${escapeHtml(subject.regulation)} &middot; ${escapeHtml(branchScopeLabel)} &middot; semester ${escapeHtml(subject.year_sem_label)} &middot; ${pageKind}</span>
+    </h1>
+    ${offeringHtml}
+    <p class="subject-intro">${escapeHtml(subjectIntro(subject, branches))}</p>
     <div class="status-row">
       <span class="badge ${badgeClass}">${badgeLabel}</span>
-      ${subject.source.retrieved_date ? `<span>Checked ${escapeHtml(subject.source.retrieved_date)}</span>` : ''}
+      ${subject.source.retrieved_date ? `<span>Checked <time datetime="${escapeHtml(subject.source.retrieved_date)}">${escapeHtml(displayDate(subject.source.retrieved_date))}</time></span>` : ''}
     </div>
 
-    ${sharedNoteHtml}${sourceCaveatHtml}
+    ${sharedNoteHtml}
+
+    ${sourceDocket(subject, isVerified)}
 
     ${legacyHtml}
-
-    <div class="ad-slot">ad slot &mdash; top, below intro</div>
 
     ${outcomesHtml}
 
@@ -196,13 +312,8 @@ ${hubBreadcrumb}
 
   <aside class="subject-rail">
     ${verifySeal}
-    <div class="rail-card">
-      <h2 style="font-size:.95rem;margin-bottom:.7rem;">Download</h2>
-      ${resourcesHtml}
-    </div>
+    ${resourcesHtml}
   </aside>
 </div>
-
-<div class="ad-slot">ad slot &mdash; bottom, below content, never adjacent to the download box above</div>
 `;
 }

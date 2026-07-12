@@ -94,6 +94,19 @@
         "college_source_note": {
           "type": ["string", "null"],
           "description": "Optional short, single-sentence, student-facing caveat about the source itself (e.g. autonomous-college sourcing). Rendered on the page in a disclaimer box; only populate when a reader genuinely needs to know. Distinct from the internal maintainer-facing notes field on the record."
+        },
+        "additional_sources": {
+          "type": "array",
+          "description": "Additional primary source documents that independently confirm a shared or duplicate course offering.",
+          "items": {
+            "type": "object",
+            "required": ["origin_url", "label"],
+            "properties": {
+              "origin_url": { "type": "string", "format": "uri" },
+              "label": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
         }
       }
     },
@@ -181,6 +194,19 @@
             "OpenElective", "HSMC", "SkillEnhancement", "AbilityEnhancement",
             "MandatoryNonCredit", "Honors", "Minor", "Project", "Internship", "Lab"
           ]
+        },
+        "offering_categories": {
+          "type": "array",
+          "description": "All official category placements when one identical course is offered under more than one category in the same branch and semester.",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "enum": [
+              "BasicScience", "EngineeringScience", "ProfessionalCore", "ProfessionalElective",
+              "OpenElective", "HSMC", "SkillEnhancement", "AbilityEnhancement",
+              "MandatoryNonCredit", "Honors", "Minor", "Project", "Internship", "Lab"
+            ]
+          }
         },
         "credits": {
           "type": ["object", "null"],

@@ -227,10 +227,14 @@ export function renderBranchGuidePage(branchProfiles, navBranches = []) {
   );
   return `
 <div class="page-narrow">
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">Choosing a branch</li>
+  </ol>
+</nav>
 <h1 class="subject-title">Choosing a branch?</h1>
 <p class="guide-intro">Picking CSE, ECE, EEE, Civil, Mechanical, or IT shapes the next four years and a good chunk of your career after. This page won't decide for you -- nothing online should -- but it'll help you ask the right questions before you do.</p>
-
-<div class="ad-slot">ad slot &mdash; below intro, well clear of the quiz</div>
 
 ${quizHtml}
 

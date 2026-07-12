@@ -3,6 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSearchIndex } from '../lib/retrieve.js';
 import { loadMergedColleges, loadMergedSubjects, subjectBranchCodes } from '../lib/dataset.js';
+import { TEMPORARY_REDIRECTS } from '../lib/temporary-redirects.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DIST = path.join(ROOT, 'dist');
@@ -14,6 +15,7 @@ const DRAFT_META_PATTERNS = [
   /\bdraft\b/i,
   /\bunverified\b/i,
 ];
+const PUBLIC_BRANCH_COUNT = 6;
 
 function walk(dir, predicate = () => true) {
   if (!fs.existsSync(dir)) return [];
@@ -76,11 +78,39 @@ function canonicalSubjectPath(subject) {
   return `/${subject.seo?.slug || subject.id}/`;
 }
 
-function parseSitemapUrls() {
+function parseSitemapEntries() {
   const sitemapPath = path.join(DIST, 'sitemap.xml');
   if (!fs.existsSync(sitemapPath)) return null;
   const xml = fs.readFileSync(sitemapPath, 'utf-8');
-  return [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1].trim());
+  return [...xml.matchAll(/<url>\s*<loc>(.*?)<\/loc>(?:\s*<lastmod>(.*?)<\/lastmod>)?\s*<\/url>/g)]
+    .map(match => ({ url: match[1].trim(), lastmod: match[2]?.trim() || '' }));
+}
+
+function parseSitemapUrls() {
+  return parseSitemapEntries()?.map(entry => entry.url) || null;
+}
+
+function parseJsonLd(html) {
+  const nodes = [];
+  const errors = [];
+  for (const match of html.matchAll(/<script\s+type=["']application\/ld\+json["']>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const parsed = JSON.parse(match[1]);
+      nodes.push(...(Array.isArray(parsed) ? parsed : [parsed]));
+    } catch (error) {
+      errors.push(error.message);
+    }
+  }
+  return { nodes, errors };
+}
+
+function visibleTextLength(value = '') {
+  return [...value
+    .replace(/&amp;/g, '&')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;|&apos;/g, "'")
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')].length;
 }
 
 function collectInternalHrefs() {
@@ -132,13 +162,32 @@ function findMissingInternalLinks() {
   return missing;
 }
 
+function auditTemporaryRedirects() {
+  const failures = [];
+  const sitemapSet = new Set(parseSitemapUrls() || []);
+  for (const [source, target] of Object.entries(TEMPORARY_REDIRECTS)) {
+    if (!source.startsWith('/') || !target.startsWith('/')) {
+      failures.push(`temporary redirect must use root-relative paths: ${source} -> ${target}`);
+      continue;
+    }
+    if (sitemapSet.has(`${SITE_URL}${source}`)) failures.push(`temporary redirect source remains in sitemap: ${source}`);
+    if (fs.existsSync(distTargetForPathname(source))) failures.push(`temporary redirect source remains published in dist: ${source}`);
+    const targetPath = new URL(target, SITE_URL).pathname;
+    if (!fs.existsSync(distTargetForPathname(targetPath))) failures.push(`temporary redirect target is missing: ${source} -> ${target}`);
+  }
+  return { ok: failures.length === 0, failures, count: Object.keys(TEMPORARY_REDIRECTS).length };
+}
+
 function auditIndexingReadiness() {
   const failures = [];
   const warnings = [];
   const files = htmlFiles();
-  const sitemapUrls = parseSitemapUrls();
+  const sitemapEntries = parseSitemapEntries();
+  const sitemapUrls = sitemapEntries?.map(entry => entry.url) || null;
   const sitemapSet = new Set(sitemapUrls || []);
+  const sitemapByUrl = new Map((sitemapEntries || []).map(entry => [entry.url, entry]));
   const canonicalUrls = new Set();
+  const documentTitles = new Map();
 
   if (!sitemapUrls) {
     failures.push('dist/sitemap.xml is missing. Run npm run build before auditing.');
@@ -153,14 +202,42 @@ function auditIndexingReadiness() {
     const canonical = html.match(/<link\s+rel=["']canonical["']\s+href=["']([^"']+)["']/i)?.[1]?.trim();
     const noindex = /<meta\s+[^>]*name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(html);
     const mainHasContent = /<main\b[\s\S]*?<\/main>/i.test(html) && html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().length > 300;
+    const h1Count = [...html.matchAll(/<h1\b/gi)].length;
+    const jsonLd = parseJsonLd(html);
+    const requiredSocialTags = [
+      /<meta\s+property=["']og:title["']/i,
+      /<meta\s+property=["']og:description["']/i,
+      /<meta\s+property=["']og:url["']/i,
+      /<meta\s+property=["']og:image["']/i,
+      /<meta\s+name=["']twitter:card["']/i,
+      /<meta\s+name=["']twitter:title["']/i,
+      /<meta\s+name=["']twitter:description["']/i,
+      /<meta\s+name=["']twitter:image["']/i,
+    ];
 
     if (!title) failures.push(`${rel(file)} missing <title>`);
+    if (title && visibleTextLength(title) > 60) failures.push(`${rel(file)} title exceeds 60 visible characters: ${title}`);
+    if (title && documentTitles.has(title)) failures.push(`${rel(file)} duplicates the title from ${documentTitles.get(title)}: ${title}`);
+    else if (title) documentTitles.set(title, rel(file));
     if (!description) failures.push(`${rel(file)} missing meta description`);
     if (!canonical) failures.push(`${rel(file)} missing canonical link`);
     if (canonical && canonical !== expectedUrl) failures.push(`${rel(file)} canonical ${canonical} does not match generated URL ${expectedUrl}`);
     if (canonical) canonicalUrls.add(canonical);
     if (noindex) failures.push(`${rel(file)} contains a robots noindex meta tag`);
     if (!mainHasContent) warnings.push(`${rel(file)} main content looks thin or missing`);
+    if (h1Count !== 1) failures.push(`${rel(file)} has ${h1Count} H1 elements; expected exactly one`);
+    if (!html.includes('class="skip-link"') || !html.includes('href="#main-content"')) failures.push(`${rel(file)} is missing the skip link`);
+    if (!/<main\s+id=["']main-content["']/i.test(html)) failures.push(`${rel(file)} is missing the main-content target`);
+    if (html.includes('class="ad-slot"')) failures.push(`${rel(file)} still contains a visible ad placeholder`);
+    if (/Notes for this subject haven(?:'|&#39;)t been uploaded/i.test(html)) failures.push(`${rel(file)} still contains the empty download message`);
+    if (requiredSocialTags.some(pattern => !pattern.test(html))) failures.push(`${rel(file)} is missing required Open Graph/Twitter metadata`);
+    if (jsonLd.errors.length) failures.push(`${rel(file)} has invalid JSON-LD: ${jsonLd.errors.join('; ')}`);
+    if (publicPath !== '/' && !/<nav\s+class=["']page-breadcrumb["']\s+aria-label=["']Breadcrumb["']/i.test(html)) {
+      failures.push(`${rel(file)} is missing semantic breadcrumb navigation`);
+    }
+    if (publicPath !== '/' && !jsonLd.nodes.some(node => node?.['@type'] === 'BreadcrumbList')) {
+      failures.push(`${rel(file)} is missing BreadcrumbList JSON-LD`);
+    }
   }
 
   if (sitemapUrls) {
@@ -169,6 +246,8 @@ function auditIndexingReadiness() {
       const target = distTargetForPathname(new URL(url).pathname);
       if (!fs.existsSync(target)) failures.push(`sitemap URL has no generated dist target: ${url}`);
       if (!canonicalUrls.has(url)) failures.push(`sitemap URL has no matching page canonical: ${url}`);
+      const lastmod = sitemapByUrl.get(url)?.lastmod || '';
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(lastmod)) failures.push(`sitemap URL is missing a valid lastmod date: ${url}`);
     }
     for (const canonical of canonicalUrls) {
       if (!sitemapSet.has(canonical)) failures.push(`canonical URL missing from sitemap: ${canonical}`);
@@ -209,6 +288,35 @@ function auditIndexingReadiness() {
       const metaDescription = subject.seo?.meta_description || '';
       const stalePattern = DRAFT_META_PATTERNS.find(pattern => pattern.test(metaDescription));
       if (stalePattern) failures.push(`verified subject has stale draft-style meta description: ${subject.id}`);
+
+      const target = distTargetForPathname(canonicalPath);
+      const html = fs.existsSync(target) ? fs.readFileSync(target, 'utf-8') : '';
+      const title = html.match(/<title>(.*?)<\/title>/is)?.[1] || '';
+      const codes = subjectBranchCodes(subject);
+      const branchScope = codes.length === PUBLIC_BRANCH_COUNT
+        ? 'All'
+        : codes.length > 2
+          ? `${codes.length} Branches`
+          : codes.join('/');
+      if (!title.includes('Syllabus') || !title.includes('JNTUK') || !title.includes(subject.regulation) || !title.includes(branchScope) || !title.includes(subject.year_sem_label)) {
+        failures.push(`${subject.id} title is missing Syllabus/JNTUK/regulation/branch/semester targeting: ${title}`);
+      }
+      if (!html.includes('class="source-docket"')) failures.push(`${subject.id} is missing the source docket`);
+      if (!html.includes('<time datetime=')) failures.push(`${subject.id} is missing a semantic checked date`);
+      const expectedSources = [
+        subject.source?.origin_url,
+        ...(subject.source?.additional_sources || []).map(source => typeof source === 'string' ? source : source?.origin_url),
+      ].filter(Boolean);
+      for (const sourceUrl of expectedSources) {
+        if (!html.includes(sourceUrl.replaceAll('&', '&amp;'))) failures.push(`${subject.id} does not render source link: ${sourceUrl}`);
+      }
+      const hasResources = Object.values(subject.resources || {}).some(Boolean);
+      if (!hasResources && /<h2[^>]*>Downloads<\/h2>/i.test(html)) failures.push(`${subject.id} renders a download rail without resources`);
+      const jsonLd = parseJsonLd(html).nodes;
+      const course = jsonLd.find(node => node?.['@type'] === 'Course');
+      if (!course || course.url !== canonicalUrl || course.dateModified !== subject.source.retrieved_date) {
+        failures.push(`${subject.id} Course JSON-LD is missing canonical url/dateModified`);
+      }
     }
 
     if (subject.source?.status === 'verified' && subject.seo?.slug && subject.seo.slug !== subject.id) {
@@ -226,6 +334,9 @@ function auditIndexingReadiness() {
     const hubPath = path.join(DIST, String(branch).toLowerCase(), 'index.html');
     if (fs.existsSync(hubPath)) {
       const hubHtml = fs.readFileSync(hubPath, 'utf-8');
+      const hubJsonLd = parseJsonLd(hubHtml).nodes;
+      if (!hubJsonLd.some(node => node?.['@type'] === 'CollectionPage')) failures.push(`${branchPath} is missing CollectionPage JSON-LD`);
+      if (!hubJsonLd.some(node => node?.['@type'] === 'ItemList')) failures.push(`${branchPath} is missing subject ItemList JSON-LD`);
       const branchSubject = verifiedSubjects.find(subject => subjectBranchCodes(subject).includes(branch));
       const subjectPath = canonicalSubjectPath(branchSubject);
       if (!hubHtml.includes(`href="${subjectPath}"`)) failures.push(`${branchPath} does not link a verified subject page: ${subjectPath}`);
@@ -331,6 +442,7 @@ const missingInternalLinks = findMissingInternalLinks();
 const coverage = auditSearchCoverage();
 const indexing = auditIndexingReadiness();
 const responsive = auditResponsiveShell();
+const temporaryRedirects = auditTemporaryRedirects();
 
 console.log('Site audit');
 console.log('----------');
@@ -342,6 +454,7 @@ console.log(`Sitemap URLs                 : ${indexing.sitemapCount}`);
 console.log(`Canonical public pages       : ${indexing.canonicalCount}`);
 console.log(`Indexing warnings            : ${indexing.warnings.length}`);
 console.log(`Responsive shell pages       : ${responsive.pageCount}`);
+console.log(`Temporary redirect checks    : ${temporaryRedirects.count}`);
 
 const failures = [];
 if (hashHrefHits.length) failures.push(['href="#" placeholders', hashHrefHits]);
@@ -354,6 +467,7 @@ if (!coverage.ok) {
 }
 if (!indexing.ok) failures.push(['indexing readiness', indexing.failures]);
 if (!responsive.ok) failures.push(['responsive shell', responsive.failures]);
+if (!temporaryRedirects.ok) failures.push(['temporary redirects', temporaryRedirects.failures]);
 
 if (failures.length) {
   for (const [label, items] of failures) {

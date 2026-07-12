@@ -67,7 +67,111 @@ const draftsDir = path.join(ROOT, 'drafts');
 fs.rmSync(distDir, { recursive: true, force: true });
 fs.rmSync(draftsDir, { recursive: true, force: true });
 
-function courseJsonLd(subject, branches, regulation) {
+function latestRetrievedDate(records = []) {
+  return records
+    .map(record => record?.source?.retrieved_date)
+    .filter(value => /^\d{4}-\d{2}-\d{2}$/.test(value || ''))
+    .sort()
+    .at(-1);
+}
+
+function breadcrumbJsonLd(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+function compactSubjectTitleBase(subject) {
+  const raw = subject.seo?.title || subject.name;
+  const suffixes = [
+    /\s*-\s*(?:JNTUK\s+)?R\d+\s+(?:(?:CSE|IT|ECE|EEE|CE|MECH)(?:\/(?:CSE|IT|ECE|EEE|CE|MECH))?\s+)?\d-\d(?:\s+lecture notes)?$/i,
+    /\s*-\s*(?:CSE|IT|ECE|EEE|CE|MECH)(?:\/(?:CSE|IT|ECE|EEE|CE|MECH))?\s+\d-\d$/i,
+    /\s*-\s*(?:JNTUK\s+)?R\d+\s+\d-\d$/i,
+    /\s*-\s*\d-\d$/i,
+  ];
+  let base = raw;
+  const separatorIndex = raw.lastIndexOf(' - ');
+  if (separatorIndex > 0 && raw.slice(separatorIndex + 3).includes(subject.year_sem_label)) {
+    base = raw.slice(0, separatorIndex);
+  }
+  for (const pattern of suffixes) base = base.replace(pattern, '');
+  base = base.replace(/\s+Notes$/i, '');
+
+  const replacements = [
+    [/Universal Human Values\s*[-\u2013]\s*Understanding Harmony and Ethical Human Conduct/gi, 'Universal Human Values'],
+    [/Mechanics of Solids (?:and|&) Materials Science/gi, 'Solid Mechanics & Materials'],
+    [/Fluid Mechanics (?:and|&) Hydraulic Machines/gi, 'Fluid & Hydraulic Machines'],
+    [/NSS\/NCC\/Scouts (?:and|&) Guides\/Community Service/gi, 'NSS/NCC Community Service'],
+    [/Numerical Techniques (?:and|&) Statistical Methods/gi, 'Numerical & Statistical Methods'],
+    [/Numerical Methods (?:and|&) Transform Techniques/gi, 'Numerical & Transform Methods'],
+    [/Computer Organization (?:and|&) Architecture/gi, 'Computer Org & Architecture'],
+    [/Differential Equations (?:and|&) Vector Calculus/gi, 'Diff Equations & Vector Calculus'],
+    [/Conventional (?:and|&) Futuristic Vehicle Technology/gi, 'Vehicle Technology'],
+    [/Electrical (?:and|&) Electronics Engineering/gi, 'Electrical/Electronics'],
+    [/Battery Management Systems (?:and|&) Charging Stations/gi, 'Battery Mgmt & Charging'],
+    [/Managerial Economics (?:and|&) Financial Analysis/gi, 'MEFA'],
+    [/Artificial Intelligence (?:and|&) Machine Learning/gi, 'AI & ML'],
+    [/Augmented Reality (?:and|&) Virtual Reality/gi, 'AR & VR'],
+    [/Human Resources (?:and|&) Project Management/gi, 'HR & Project Mgmt'],
+    [/Geographical Information Systems/gi, 'GIS'],
+    [/Object Oriented Programming/gi, 'OOP'],
+    [/Electromagnetic/gi, 'EM'],
+    [/\bLaboratory\b/gi, 'Lab'],
+    [/\bEngineering\b/gi, 'Engg'],
+    [/\bManagement\b/gi, 'Mgmt'],
+    [/\bTechnology\b/gi, 'Tech'],
+    [/\bIntroduction\b/gi, 'Intro'],
+    [/\bCommunications\b/gi, 'Comms'],
+    [/\bCommunication\b/gi, 'Comm'],
+    [/\bInstrumentation\b/gi, 'Instrum'],
+    [/\bMeasurements\b/gi, 'Meas'],
+    [/\bApplications\b/gi, 'Apps'],
+    [/\bStatistics\b/gi, 'Stats'],
+    [/\band\b/gi, '&'],
+  ];
+  for (const [pattern, replacement] of replacements) base = base.replace(pattern, replacement);
+  return base.replace(/\s+/g, ' ').trim();
+}
+
+function clipTitleBase(base, maxLength) {
+  if ([...base].length <= maxLength) return base;
+
+  // Keep a trailing Lab qualifier when shortening a long course name; it is
+  // meaningful search intent and distinguishes theory from practical pages.
+  const qualifier = /\sLab$/i.test(base) ? ' Lab' : '';
+  const headSource = qualifier ? base.slice(0, -qualifier.length) : base;
+  const headBudget = Math.max(8, maxLength - qualifier.length - 1);
+  let head = [...headSource].slice(0, headBudget).join('').trimEnd();
+  const boundary = head.lastIndexOf(' ');
+  if (boundary >= Math.floor(headBudget * 0.65)) head = head.slice(0, boundary);
+  head = head.replace(/[\s,:;&/\u2013\u2014-]+$/g, '');
+  return `${head}\u2026${qualifier}`;
+}
+
+function subjectDocumentTitle(subject, branches) {
+  const codes = branches.map(branch => branch?.code).filter(Boolean);
+  const branchScope = codes.length === data.branches.length
+    ? 'All'
+    : codes.length > 2
+      ? `${codes.length} Branches`
+      : codes.join('/');
+  const suffix = ` Syllabus | JNTUK ${subject.regulation} ${branchScope} ${subject.year_sem_label}`;
+  const offeringQualifier = subject.category === 'OpenElective' ? ' OE' : '';
+  const compactBase = compactSubjectTitleBase(subject)
+    .replace(/\s*(?:\(Open Elective\)|Open Elective|OE)$/i, '')
+    .trim();
+  const titleBase = clipTitleBase(compactBase, 60 - [...suffix].length - [...offeringQualifier].length);
+  return `${titleBase}${offeringQualifier}${suffix}`;
+}
+
+function courseJsonLd(subject, branches, canonical) {
   // No `provider` is claimed: JNTUStack is an independent resource that
   // describes these courses, not the institution that offers/teaches them, and
   // the site is explicitly not affiliated with JNTU. `publisher` accurately
@@ -76,18 +180,33 @@ function courseJsonLd(subject, branches, regulation) {
   // 2+ for a shared subject rendered at one branch-neutral URL) so this reads
   // the same either way instead of special-casing the shared case.
   const levelLabel = branches.length > 1
-    ? `Common First Year (${branches.map(b => b.code).join(', ')}) - ${subject.year_sem_label}`
+    ? `Common to ${branches.map(b => b.code).join(', ')} - ${subject.year_sem_label}`
     : `${branches[0]?.name || subject.branch} - ${subject.year_sem_label}`;
-  return {
+  const citations = [
+    subject.source.origin_url,
+    ...(subject.source.additional_sources || []).map(source => typeof source === 'string' ? source : source?.origin_url),
+  ].filter(Boolean);
+  const course = {
     '@context': 'https://schema.org',
     '@type': 'Course',
+    '@id': `${canonical}#course`,
     name: subject.name,
     description: subject.seo.meta_description,
-    publisher: { '@type': 'Organization', name: 'JNTUStack', url: SITE_URL },
+    url: canonical,
+    mainEntityOfPage: canonical,
+    dateModified: subject.source.retrieved_date || undefined,
+    citation: citations.length === 1 ? citations[0] : citations,
+    publisher: { '@id': `${SITE_URL}/#organization` },
     courseCode: subject.subject_code || undefined,
     educationalLevel: levelLabel,
     inLanguage: 'en',
   };
+  const breadcrumbItems = [{ name: 'Home', url: `${SITE_URL}/` }];
+  if (branches.length === 1 && publishedBranchCodes.has(branches[0]?.code)) {
+    breadcrumbItems.push({ name: `${branches[0].code} subjects`, url: `${SITE_URL}/${branches[0].code.toLowerCase()}/` });
+  }
+  breadcrumbItems.push({ name: subject.name, url: canonical });
+  return [course, breadcrumbJsonLd(breadcrumbItems)];
 }
 
 // Homepage structured data: Organization + WebSite. No SearchAction is emitted
@@ -98,25 +217,74 @@ function homeJsonLd() {
     {
       '@context': 'https://schema.org',
       '@type': 'Organization',
+      '@id': `${SITE_URL}/#organization`,
       name: 'JNTUStack',
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
       logo: `${SITE_URL}/icon-512.png`,
       description: 'Independent, verified study-resource directory for the four JNTU universities in Andhra Pradesh and Telangana.',
     },
     {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
+      '@id': `${SITE_URL}/#website`,
       name: 'JNTUStack',
-      url: SITE_URL,
+      url: `${SITE_URL}/`,
+      publisher: { '@id': `${SITE_URL}/#organization` },
     },
   ];
 }
 
+function collectionPageJsonLd({ name, description, canonical, dateModified, items = [] }) {
+  return [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'CollectionPage',
+      '@id': `${canonical}#page`,
+      name,
+      description,
+      url: canonical,
+      inLanguage: 'en',
+      dateModified,
+      isPartOf: { '@id': `${SITE_URL}/#website` },
+      mainEntity: items.length ? { '@id': `${canonical}#items` } : undefined,
+    },
+    ...(items.length ? [{
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      '@id': `${canonical}#items`,
+      name,
+      numberOfItems: items.length,
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        name: item.name,
+        url: item.url,
+      })),
+    }] : []),
+    breadcrumbJsonLd([
+      { name: 'Home', url: `${SITE_URL}/` },
+      { name, url: canonical },
+    ]),
+  ];
+}
+
 // /colleges/ ItemList: the directory's actual content as a structured list.
-function collegesJsonLd(colleges) {
-  return {
+function collegesJsonLd(colleges, canonical, dateModified) {
+  const name = 'JNTU engineering college directory';
+  return [{
+    '@context': 'https://schema.org',
+    '@type': 'CollectionPage',
+    '@id': `${canonical}#page`,
+    name,
+    url: canonical,
+    dateModified,
+    inLanguage: 'en',
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    mainEntity: { '@id': `${canonical}#colleges` },
+  }, {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
+    '@id': `${canonical}#colleges`,
     name: 'JNTU-affiliated engineering colleges',
     numberOfItems: colleges.length,
     itemListElement: colleges.map((c, i) => ({
@@ -124,37 +292,51 @@ function collegesJsonLd(colleges) {
       position: i + 1,
       item: {
         '@type': 'CollegeOrUniversity',
+        '@id': c.official_website || `${canonical}#college-${i + 1}`,
         name: c.name,
         ...(c.official_website ? { url: c.official_website } : {}),
+        ...(c.location?.city || c.location?.district ? {
+          address: {
+            '@type': 'PostalAddress',
+            ...(c.location.city ? { addressLocality: c.location.city } : {}),
+            ...(c.location.district ? { addressRegion: c.location.district } : {}),
+            addressCountry: 'IN',
+          },
+        } : {}),
       },
     })),
-  };
+  }, breadcrumbJsonLd([
+    { name: 'Home', url: `${SITE_URL}/` },
+    { name: 'College directory', url: canonical },
+  ])];
 }
 
 let published = 0, drafted = 0, skipped = 0;
-const sitemapUrls = [];
+const sitemapEntries = [];
 
 for (const subject of data.subjects) {
   const branches = subjectBranchCodes(subject).map(code => branchByCode[code]);
   const regulation = regulationByCode[subject.regulation];
   const legacySubject = subject.legacy_equivalent_id ? subjectById[subject.legacy_equivalent_id] : null;
   const slug = subject.seo.slug || subject.id;
+  const canonical = `${SITE_URL}/${slug}/`;
 
   const html = layout({
-    title: subject.seo.title || subject.name,
+    title: subjectDocumentTitle(subject, branches),
     description: subject.seo.meta_description || '',
-    canonical: `${SITE_URL}/${slug}/`,
-    jsonLd: courseJsonLd(subject, branches, regulation),
+    canonical,
+    jsonLd: courseJsonLd(subject, branches, canonical),
     bodyHtml: renderSubjectPage(subject, { branches, regulation, legacySubject, branchHubPublished: branches.length === 1 && publishedBranchCodes.has(branches[0]?.code) }),
     navBranches,
     stamp: subject.source.status,
+    socialImageAlt: `${subject.name} ${subject.regulation} syllabus on JNTUStack`,
   });
 
   if (subject.source.status === 'verified') {
     const outDir = path.join(distDir, slug);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
-    sitemapUrls.push(`${SITE_URL}/${slug}/`);
+    sitemapEntries.push({ url: canonical, lastmod: subject.source.retrieved_date });
     published++;
   } else if (subject.source.status === 'needs_verification') {
     const outDir = path.join(draftsDir, subject.id);
@@ -190,11 +372,15 @@ if (fs.existsSync(branchGuidePath)) {
   const branch_profiles = content.branchProfiles;
   const verifiedProfiles = branch_profiles.filter(b => b.source.status === 'verified');
   if (verifiedProfiles.length === branch_profiles.length && verifiedProfiles.length > 0) {
+    const canonical = `${SITE_URL}/branch-guide/`;
+    const title = 'Choosing an Engineering Branch - Six-Way Guide | JNTUStack';
+    const description = 'Compare CSE, IT, ECE, EEE, Civil and Mechanical Engineering by core focus and fit signals, with an optional five-question branch quiz.';
+    const lastmod = latestRetrievedDate(verifiedProfiles);
     const html = layout({
-      title: 'Choosing a Branch? A Six-Way Comparison - JNTUStack',
-      description: 'An honest, no-fabricated-stats guide to picking an engineering branch -- core focus, real fit signals, and an optional 5-question narrowing quiz.',
-      canonical: `${SITE_URL}/branch-guide/`,
-      jsonLd: null,
+      title,
+      description,
+      canonical,
+      jsonLd: collectionPageJsonLd({ name: 'Choosing an engineering branch', description, canonical, dateModified: lastmod }),
       bodyHtml: renderBranchGuidePage(verifiedProfiles, navBranches),
       navBranches,
       stamp: 'verified',
@@ -203,7 +389,7 @@ if (fs.existsSync(branchGuidePath)) {
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     branchGuidePublished = verifiedProfiles.length;
-    sitemapUrls.push(`${SITE_URL}/branch-guide/`);
+    sitemapEntries.push({ url: canonical, lastmod });
   } else {
     console.warn(`Branch guide skipped: ${branch_profiles.length - verifiedProfiles.length} profile(s) not yet verified.`);
   }
@@ -225,11 +411,13 @@ if (allColleges.length > 0) {
   if (verifiedColleges.length === allColleges.length && verifiedColleges.length > 0) {
     collegeUniversitySummary = collegeDirectoryUniversitySummary(verifiedColleges);
     const campusCount = campusesFromData(verifiedColleges).length;
+    const canonical = `${SITE_URL}/colleges/`;
+    const lastmod = latestRetrievedDate(verifiedColleges);
     const html = layout({
       title: `JNTU Engineering College Directory - ${campusCount} Campuses - JNTUStack`,
       description: `A directory of ${collegeUniversitySummary} constituent, autonomous and affiliated engineering colleges, grouped by university and filterable by district.`,
-      canonical: `${SITE_URL}/colleges/`,
-      jsonLd: collegesJsonLd(verifiedColleges),
+      canonical,
+      jsonLd: collegesJsonLd(verifiedColleges, canonical, lastmod),
       bodyHtml: renderCollegeDirectoryPage(verifiedColleges, coverageNotes),
       navBranches,
       stamp: 'verified',
@@ -238,7 +426,7 @@ if (allColleges.length > 0) {
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, 'index.html'), html);
     collegesPublished = verifiedColleges.length;
-    sitemapUrls.push(`${SITE_URL}/colleges/`);
+    sitemapEntries.push({ url: canonical, lastmod });
   } else {
     console.warn(`College directory skipped: ${allColleges.length - verifiedColleges.length} record(s) not yet verified.`);
   }
@@ -257,11 +445,24 @@ for (const branch of data.branches) {
     continue;
   }
   const code = branch.code.toLowerCase();
+  const canonical = `${SITE_URL}/${code}/`;
+  const title = `${branch.code} JNTUK R23 Syllabus & Subjects | JNTUStack`;
+  const description = `JNTUK R23 ${branch.name} (${branch.code}) subjects and unit-wise syllabus, grouped by year and semester and checked against published sources.`;
+  const lastmod = latestRetrievedDate(branchVerified);
   const html = layout({
-    title: `${branch.code} Notes & Materials - JNTUStack`,
-    description: `Verified ${branch.name} (${branch.code}) subject notes and previous question papers, grouped by year and semester.`,
-    canonical: `${SITE_URL}/${code}/`,
-    jsonLd: null,
+    title,
+    description,
+    canonical,
+    jsonLd: collectionPageJsonLd({
+      name: `${branch.code} JNTUK R23 syllabus and subjects`,
+      description,
+      canonical,
+      dateModified: lastmod,
+      items: branchVerified.map(subject => ({
+        name: subject.name,
+        url: `${SITE_URL}/${subject.seo?.slug || subject.id}/`,
+      })),
+    }),
     bodyHtml: renderBranchHubPage(branch, branchVerified),
     navBranches,
     stamp: 'verified',
@@ -269,15 +470,15 @@ for (const branch of data.branches) {
   const outDir = path.join(distDir, code);
   fs.mkdirSync(outDir, { recursive: true });
   fs.writeFileSync(path.join(outDir, 'index.html'), html);
-  sitemapUrls.push(`${SITE_URL}/${code}/`);
+  sitemapEntries.push({ url: canonical, lastmod });
   branchHubsPublished++;
 }
 
 // Homepage -- the most basic requirement of a live site, generated last so
 // it can honestly reflect what actually got published above.
 const homeHtml = layout({
-  title: 'JNTUStack - JNTU Notes, Branch Guide & College Directory',
-  description: 'A clean, fast, verified resource for JNTU Kakinada, Hyderabad, Anantapur, and GV students.',
+  title: 'JNTUStack - JNTUK R23 Syllabus & Subject Directory',
+  description: 'Verified JNTUK R23 subject syllabi and unit breakdowns by branch and semester, plus an engineering college directory and branch-choice guide.',
   canonical: `${SITE_URL}/`,
   jsonLd: homeJsonLd(),
   bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary, verifiedSubjectCount: verifiedSubjects.length, verifiedCollegeCount: collegesPublished }),
@@ -285,11 +486,16 @@ const homeHtml = layout({
   stamp: null,
 });
 fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml);
-sitemapUrls.unshift(`${SITE_URL}/`);
+const homeLastmod = latestRetrievedDate([
+  ...verifiedSubjects,
+  ...content.branchProfiles.filter(profile => profile.source?.status === 'verified'),
+  ...allColleges.filter(college => college.source?.status === 'verified'),
+]);
+sitemapEntries.unshift({ url: `${SITE_URL}/`, lastmod: homeLastmod });
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-${sitemapUrls.map(u => `  <url><loc>${u}</loc></url>`).join('\n')}
+${sitemapEntries.map(entry => `  <url><loc>${entry.url}</loc>${entry.lastmod ? `<lastmod>${entry.lastmod}</lastmod>` : ''}</url>`).join('\n')}
 </urlset>
 `;
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
@@ -300,7 +506,7 @@ console.log('-------------');
 console.log(`Published (verified)         : ${published}  -> dist/   (these are deployable)`);
 console.log(`Drafted (needs_verification) : ${drafted}  -> drafts/ (watermarked preview, NOT deployed)`);
 console.log(`Skipped (placeholder)        : ${skipped}  -> not rendered at all`);
-console.log(`Sitemap entries               : ${sitemapUrls.length}`);
+console.log(`Sitemap entries               : ${sitemapEntries.length}`);
 console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `published (${branchGuidePublished} branches)` : 'not published'}`);
 console.log(`College directory             : ${collegesPublished > 0 ? `published (${collegesPublished} colleges)` : 'not published'}`);
 console.log(`Branch hubs                   : ${branchHubsPublished} published, ${branchHubsSkipped} skipped (no verified subjects)`);

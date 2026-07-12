@@ -240,12 +240,16 @@ export function renderCollegeDirectoryPage(colleges, coverageNotes = []) {
     : '';
 
   return `
+<nav class="page-breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="/">Home</a></li>
+    <li aria-current="page">College directory</li>
+  </ol>
+</nav>
 <h1 class="subject-title">College Directory</h1>
 <p class="guide-intro">Every ${escapeHtml(universitySummary)} constituent, autonomous and affiliated engineering college currently in our dataset, grouped by university and filterable by district. Just what's on record -- no rankings, no "best college" claims, nothing we can't point to a source for.</p>
 
 ${notesHtml}
-
-<div class="ad-slot">ad slot &mdash; below intro</div>
 
 <div class="campus-tabs" role="group" aria-label="Filter colleges by university">
     ${campusTabs(campuses, colleges)}

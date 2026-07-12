@@ -22,7 +22,19 @@ function stampMarkup(status) {
 }
 
 
-export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp, navBranches = [] }) {
+export function layout({
+  title,
+  description,
+  canonical,
+  jsonLd,
+  bodyHtml,
+  stamp,
+  navBranches = [],
+  socialImage = '/icon-512.png',
+  socialImageAlt = 'JNTUStack verified syllabus directory',
+  socialType = 'website',
+}) {
+  const absoluteSocialImage = new URL(socialImage, canonical).href;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +46,23 @@ export function layout({ title, description, canonical, jsonLd, bodyHtml, stamp,
 <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
 <title>${escapeHtml(title)}</title>
 <meta name="description" content="${escapeHtml(description)}">
-<link rel="canonical" href="${canonical}">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="${escapeHtml(canonical)}">
+<meta property="og:type" content="${escapeHtml(socialType)}">
+<meta property="og:locale" content="en_IN">
+<meta property="og:site_name" content="JNTUStack">
+<meta property="og:title" content="${escapeHtml(title)}">
+<meta property="og:description" content="${escapeHtml(description)}">
+<meta property="og:url" content="${escapeHtml(canonical)}">
+<meta property="og:image" content="${escapeHtml(absoluteSocialImage)}">
+<meta property="og:image:width" content="512">
+<meta property="og:image:height" content="512">
+<meta property="og:image:alt" content="${escapeHtml(socialImageAlt)}">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="${escapeHtml(title)}">
+<meta name="twitter:description" content="${escapeHtml(description)}">
+<meta name="twitter:image" content="${escapeHtml(absoluteSocialImage)}">
+<meta name="twitter:image:alt" content="${escapeHtml(socialImageAlt)}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -44,6 +72,7 @@ ${jsonLd ? `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script
 <link rel="stylesheet" href="/teal-brand.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 ${stamp ? stampMarkup(stamp) : ''}
 <header class="site-header">
   <a class="brand" href="/" aria-label="JNTUStack home"><svg class="brand-logo" viewBox="0 0 900 260" width="152" height="44" role="img" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" style="fill:var(--logo-bot)"/><polygon points="0,22 92,-12 0,-46 -92,-12" style="fill:var(--logo-mid)"/><polygon points="0,-16 80,-46 0,-76 -80,-46" style="fill:var(--logo-top)"/></g><text x="268" y="164" font-family="'IBM Plex Sans','Helvetica Neue',Arial,sans-serif" font-weight="700" font-size="92" letter-spacing="-2" style="fill:var(--text)">JNTUStack</text></svg></a>
@@ -67,7 +96,7 @@ ${stamp ? stampMarkup(stamp) : ''}
     <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle day / night">&#9790; Night</button>
   </nav>
 </header>
-<main>
+<main id="main-content" tabindex="-1">
 ${bodyHtml}
 </main>
 <footer class="site-footer site-footer--slate">

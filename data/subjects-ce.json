@@ -2121,6 +2121,10 @@
       "subject_code": null,
       "name": "Construction Technology and Management",
       "category": "ProfessionalElective",
+      "offering_categories": [
+        "ProfessionalElective",
+        "OpenElective"
+      ],
       "credits": {
         "L": 3,
         "T": 0,
@@ -2199,102 +2203,9 @@
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+        "college_source_note": "JNTUK's official R23 Civil Engineering syllabus offers this identical course content in 3-1 as both a Professional Elective and an Open Elective; this page represents both official offerings."
       },
-      "notes": "Named Professional Elective-I option in JNTUK's official III-I structure; credits, five units and four outcomes follow the detailed course page."
-    },
-    {
-      "id": "r23-ce-3-1-construction-technology-and-management-open-elective",
-      "regulation": "R23",
-      "branch": "CE",
-      "specialization": null,
-      "year": 3,
-      "semester": 1,
-      "year_sem_label": "3-1",
-      "subject_code": null,
-      "name": "Construction Technology and Management (Open Elective)",
-      "category": "OpenElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Construction Project Management",
-          "topics": [
-            "Construction project management and its relevance; qualities of a project manager",
-            "Project planning, coordination, scheduling and monitoring",
-            "Bar charts and milestone charts",
-            "Critical path method"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "PERT, Cost/Resource Optimization and Project Management Software",
-          "topics": [
-            "Project evaluation and review technique; cost analysis and updating",
-            "Crashing for optimum cost and crashing for optimum resources",
-            "Allocation of resources",
-            "Introduction to software for construction management; project management using PRIMAVERA (or equivalent)"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Construction Equipment",
-          "topics": [
-            "Construction equipment: economical considerations, earthwork equipment",
-            "Trucks and handling equipment - rear dump trucks, capacities of trucks and handling equipment, calculation of truck production",
-            "Compaction equipment: types of compaction rollers",
-            "Hoisting and earthwork equipment: hoists, cranes, tractors, bulldozers, graders, scrapers, draglines, clam shell buckets"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Concreting Equipment",
-          "topics": [
-            "Concreting equipment: concrete mixers, batching plants, mobile mixing plants like 'Ajax'",
-            "Mixing and placing of concrete",
-            "Consolidating and finishing"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Construction Methods, Quality Control and BIM",
-          "topics": [
-            "Construction methods: earthwork, piling, placing of concrete, form work, fabrication and erection",
-            "Quality control and safety engineering",
-            "BIM for civil engineers (Building Information Modelling)"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Explain the importance of construction planning.",
-        "Explain the functioning of earth-moving equipment.",
-        "Explain methods of aggregate production and concreting.",
-        "Apply project-management and construction techniques."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "construction-technology-and-management-open-elective-jntuk-r23-ce-3-1",
-        "title": "CTM Open Elective - JNTUK R23 CE 3-1",
-        "meta_description": "JNTUK R23 CE 3-1 Construction Technology and Management Open Elective: planning, PERT, construction equipment, concreting, methods, safety and BIM."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
-      },
-      "notes": "Distinct Open Elective-I offering in JNTUK's official III-I structure; its detailed syllabus and outcomes match the Professional Elective-I course of the same title."
+      "notes": "JNTUK's official III-I structure lists the same title, credits, five units and outcomes as both Professional Elective-I and Open Elective-I; consolidated here as one course page."
     },
     {
       "id": "r23-ce-3-1-geotechnical-engineering-lab",
@@ -4643,7 +4554,13 @@
     {
       "id": "r23-ce-4-1-quantum-science-and-technology",
       "regulation": "R23",
-      "branch": "CE",
+      "branch": null,
+      "branchCodes": [
+        "CE",
+        "ECE",
+        "EEE",
+        "MECH"
+      ],
       "specialization": null,
       "year": 4,
       "semester": 1,
@@ -4702,16 +4619,30 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "quantum-science-and-technology-jntuk-r23-ce-4-1",
-        "title": "Quantum Science and Technology - CE 4-1",
-        "meta_description": "JNTUK R23 CE 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
+        "slug": "quantum-science-and-technology-jntuk-r23-4-1",
+        "title": "Quantum Science and Technology - R23 CE/ECE/EEE/MECH 4-1",
+        "meta_description": "JNTUK R23 CE/ECE/EEE/MECH 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CE, ECE, EEE and Mechanical Engineering syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+            "label": "Official JNTUK R23 Electronics and Communication Engineering course structure and syllabus"
+          },
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+            "label": "Official JNTUK R23 Electrical and Electronics Engineering course structure and syllabus"
+          },
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+            "label": "Official JNTUK R23 Mechanical Engineering course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },

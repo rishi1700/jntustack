@@ -106,38 +106,28 @@
       "subject_code": null,
       "name": "Data Warehousing and Mining",
       "category": "ProfessionalCore",
-      "credits": {
-        "L": 4,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
+      "credits": null,
       "type": "theory",
       "units": [],
-      "course_outcomes": [
-        "Understand phases in building a Data Warehouse",
-        "Understand the need and significance of preprocessing strategies",
-        "Understand the need and significance of Similarity and dissimilarity strategies",
-        "Analyze and evaluate performance of algorithms for Association Rules.",
-        "Analyze Classification and Clustering algorithms"
-      ],
+      "course_outcomes": [],
       "resources": {
-        "lecture_notes_pdf": "https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/",
+        "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
         "slug": "data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes",
-        "title": "Data Warehousing and Mining Notes - JNTUK R16 CSE 3-2",
-        "meta_description": "JNTUK R16 CSE 3-2 Data Warehousing and Mining lecture notes and previous question papers."
+        "title": "Data Warehousing and Mining - JNTUK R16 CSE 3-2",
+        "meta_description": "Draft JNTUK R16 CSE 3-2 Data Warehousing and Mining record pending verification against a primary official university syllabus."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://jntukmaterials.com/data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes/",
-        "retrieved_date": "2026-06-30",
-        "status": "verified"
+        "origin_url": null,
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "Primary official JNTUK R16 CSE syllabus evidence was not located during the 2026-07-12 review; the former third-party page is not sufficient for publication."
       },
-      "notes": "Live page on the current site today. Keep it live and cross-link to its R23 equivalent rather than redirecting it away -- backlog/supply R16 students still search this directly. AUDIT (2026-06-30, scripts/audit-content.js): credits confirmed 4-0-0-3. On-page unit text is run through a crude word-spinner ('Knowledge Mining' for 'Data Mining', etc.) -- needs an LLM cleanup pass before reuse, not a direct copy. Page describes 6 units but the gated EDD product only contains 5 files -- Unit VI may be missing from the actual download; verify before publishing the R23 version."
+      "notes": "Withdrawn from publication pending a primary official JNTUK R16 CSE syllabus. The former jntukmaterials.com page is neither an official source nor a direct resource file, so its claimed credits, outcomes and lecture-notes link were removed."
     },
     {
       "id": "r16-cse-3-2-computer-networks",
@@ -155,22 +145,23 @@
       "units": [],
       "course_outcomes": [],
       "resources": {
-        "lecture_notes_pdf": "https://jntukmaterials.com/computer-networks-jntuk-r16-3-2-lecture-notes/",
+        "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
         "slug": "computer-networks-jntuk-r16-3-2-lecture-notes",
-        "title": "Computer Networks Notes - JNTUK R16 CSE 3-2",
-        "meta_description": "JNTUK R16 CSE 3-2 Computer Networks lecture notes and previous question papers."
+        "title": "Computer Networks - JNTUK R16 CSE 3-2",
+        "meta_description": "Draft JNTUK R16 CSE 3-2 Computer Networks record pending verification against a primary official university syllabus."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://jntukmaterials.com/computer-networks-jntuk-r16-3-2-lecture-notes/",
-        "retrieved_date": "2026-06-30",
-        "status": "verified"
+        "origin_url": null,
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "Primary official JNTUK R16 CSE syllabus evidence was not located during the 2026-07-12 review; the former third-party page is not sufficient for publication."
       },
-      "notes": "Live page on the current site today. Same cross-link treatment as the entry above."
+      "notes": "Withdrawn from publication pending a primary official JNTUK R16 CSE syllabus. The former jntukmaterials.com page is neither an official source nor a direct resource file, so its lecture-notes link was removed."
     },
     {
       "id": "r23-cse-2-1-discrete-mathematics-and-graph-theory",
@@ -1501,7 +1492,11 @@
     {
       "id": "r23-cse-2-2-database-management-systems-lab",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": null,
       "year": 2,
       "semester": 2,
@@ -1546,16 +1541,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "database-management-systems-lab-jntuk-r23-cse-2-2",
-        "title": "Database Management Systems Lab - R23 CSE 2-2",
-        "meta_description": "JNTUK R23 CSE 2-2 Database Management Systems Lab: DDL/DML/DCL, queries, joins, views, PL/SQL procedures, functions, cursors, triggers and JDBC."
+        "slug": "database-management-systems-lab-jntuk-r23-2-2",
+        "title": "Database Management Systems Lab - R23 CSE/IT 2-2",
+        "meta_description": "JNTUK R23 CSE/IT 2-2 Database Management Systems Lab: DDL/DML/DCL, queries, joins, views, PL/SQL procedures, functions, cursors, triggers and JDBC."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, and published laboratory experiment list are sourced directly from JNTUK's official R23 course structure and syllabus document."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
@@ -4296,7 +4297,11 @@
     {
       "id": "r23-cse-4-1-human-resources-and-project-management",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -4355,16 +4360,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "human-resources-and-project-management-jntuk-r23-cse-4-1",
-        "title": "HR & Project Management - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Human Resources & Project Management syllabus: HR planning, recruitment, training, appraisal, project selection, implementation and control."
+        "slug": "human-resources-and-project-management-jntuk-r23-4-1",
+        "title": "HR & Project Management - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Human Resources & Project Management: HR planning, recruitment, training, appraisal, project selection, implementation and control."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
@@ -4446,7 +4457,11 @@
     {
       "id": "r23-cse-4-1-blockchain-technology",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -4505,16 +4520,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "blockchain-technology-jntuk-r23-cse-4-1",
-        "title": "Blockchain Technology - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Blockchain Technology syllabus: Bitcoin, Ethereum, smart contracts, private and consortium chains, security and Hyperledger Fabric."
+        "slug": "blockchain-technology-jntuk-r23-4-1",
+        "title": "Blockchain Technology - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Blockchain Technology syllabus: Bitcoin, Ethereum, smart contracts, private and consortium chains, security and Hyperledger Fabric."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
@@ -4752,7 +4773,11 @@
     {
       "id": "r23-cse-4-1-agile-methodologies",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -4811,16 +4836,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "agile-methodologies-jntuk-r23-cse-4-1",
-        "title": "Agile Methodologies - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Agile Methodologies syllabus: Agile values and principles, Scrum, user stories, Extreme Programming, Lean, Kanban and agile coaching."
+        "slug": "agile-methodologies-jntuk-r23-4-1",
+        "title": "Agile Methodologies - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Agile Methodologies syllabus: Agile values and principles, Scrum, user stories, Extreme Programming, Lean, Kanban and agile coaching."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
@@ -4902,7 +4933,11 @@
     {
       "id": "r23-cse-4-1-computer-vision",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -4961,23 +4996,33 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "computer-vision-jntuk-r23-cse-4-1",
-        "title": "Computer Vision - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Computer Vision syllabus: image formation, filters, texture, multiview geometry, segmentation, Hough methods, tracking and camera calibration."
+        "slug": "computer-vision-jntuk-r23-4-1",
+        "title": "Computer Vision - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Computer Vision: image formation, filters, texture, multiview geometry, segmentation, Hough methods, tracking and camera calibration."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
     {
       "id": "r23-cse-4-1-cyber-physical-systems",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -5036,23 +5081,33 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "cyber-physical-systems-jntuk-r23-cse-4-1",
-        "title": "Cyber Physical Systems - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Cyber Physical Systems syllabus: controller synthesis, CPS security, distributed synchronization, real-time scheduling and model integration."
+        "slug": "cyber-physical-systems-jntuk-r23-4-1",
+        "title": "Cyber Physical Systems - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Cyber Physical Systems: controller synthesis, CPS security, distributed synchronization, real-time scheduling and model integration."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
     {
       "id": "r23-cse-4-1-prompt-engineering",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -5116,23 +5171,33 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "prompt-engineering-jntuk-r23-cse-4-1",
-        "title": "Prompt Engineering - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Prompt Engineering theory and lab syllabus: prompt design, few-shot learning, structured output, RAG, LangChain, agents and evaluation."
+        "slug": "prompt-engineering-jntuk-r23-4-1",
+        "title": "Prompt Engineering - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Prompt Engineering theory and lab syllabus: prompt design, few-shot learning, structured output, RAG, LangChain, agents and evaluation."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },
     {
       "id": "r23-cse-4-1-constitution-of-india",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ],
       "specialization": "CSE",
       "year": 4,
       "semester": 1,
@@ -5191,16 +5256,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "constitution-of-india-jntuk-r23-cse-4-1",
-        "title": "Constitution of India - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Constitution of India syllabus: constitutional history, rights and duties, government institutions, local administration and elections."
+        "slug": "constitution-of-india-jntuk-r23-4-1",
+        "title": "Constitution of India - R23 CSE/IT 4-1",
+        "meta_description": "JNTUK R23 CSE/IT 4-1 Constitution of India syllabus: constitutional history, rights and duties, government institutions, local administration and elections."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+        "college_source_note": "The same course title, credits, category, syllabus and outcomes are confirmed in JNTUK's official R23 CSE and IT syllabus documents.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": null
     },

@@ -10,6 +10,7 @@ import { fileURLToPath } from 'node:url';
 import { askRouter, loadSearchIndex } from './routes/ask.js';
 import { getAdminConfig, getAskConfig } from './lib/config.js';
 import { LEGACY_REDIRECTS } from './lib/legacy-redirects.js';
+import { TEMPORARY_REDIRECTS } from './lib/temporary-redirects.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
@@ -22,10 +23,34 @@ const app = express();
 // '1' trusts exactly one hop (the immediate proxy) and reads the client IP
 // from the outermost trusted entry of X-Forwarded-For.
 app.set('trust proxy', 1);
+
+function canonicalAliasTarget(originalUrl = '/') {
+  const queryIndex = originalUrl.indexOf('?');
+  const rawPath = queryIndex === -1 ? originalUrl : originalUrl.slice(0, queryIndex);
+  const query = queryIndex === -1 ? '' : originalUrl.slice(queryIndex);
+  let normalizedPath = rawPath.replace(/\/{2,}/g, '/');
+  normalizedPath = normalizedPath.replace(/\/index\.html\/?$/i, '/');
+  return normalizedPath === rawPath ? null : `${normalizedPath}${query}`;
+}
+
 app.use((req, res, next) => {
   const host = String(req.headers.host || '').toLowerCase().split(':')[0];
   if (host === 'www.jntustack.com') {
-    res.redirect(301, `https://jntustack.com${req.originalUrl || req.url || '/'}`);
+    const originalUrl = req.originalUrl || req.url || '/';
+    const aliasTarget = ['GET', 'HEAD'].includes(req.method) ? canonicalAliasTarget(originalUrl) : null;
+    res.redirect(301, `https://jntustack.com${aliasTarget || originalUrl}`);
+    return;
+  }
+  next();
+});
+app.use((req, res, next) => {
+  if (!['GET', 'HEAD'].includes(req.method)) {
+    next();
+    return;
+  }
+  const target = canonicalAliasTarget(req.originalUrl || req.url || '/');
+  if (target) {
+    res.redirect(301, target);
     return;
   }
   next();
@@ -34,6 +59,14 @@ app.use((req, res, next) => {
   const target = LEGACY_REDIRECTS[req.path];
   if (target) {
     res.redirect(301, target);
+    return;
+  }
+  next();
+});
+app.use((req, res, next) => {
+  const target = TEMPORARY_REDIRECTS[req.path];
+  if (target) {
+    res.redirect(302, target);
     return;
   }
   next();
@@ -103,10 +136,32 @@ if (adminConfig.enabled) {
 
 // Basic health check -- useful for Hostinger/UptimeRobot-style monitoring,
 // and for confirming the app is actually up after a deploy.
-app.get('/health', (req, res) => res.json({ status: 'ok' }));
+app.get('/health', (req, res) => {
+  res.setHeader('Cache-Control', 'no-store');
+  res.json({ status: 'ok' });
+});
 
 // The generated site itself.
-app.use(express.static(DIST_DIR));
+app.use(express.static(DIST_DIR, {
+  setHeaders(res, filePath) {
+    const extension = path.extname(filePath).toLowerCase();
+    if (extension === '.html' || ['sitemap.xml', 'robots.txt', 'search-index.json'].includes(path.basename(filePath))) {
+      // HTML and discovery indexes may change on every content publish. They can
+      // be stored, but must be revalidated so deploys never leave stale pages.
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+      return;
+    }
+    if (['.png', '.ico', '.svg'].includes(extension)) {
+      res.setHeader('Cache-Control', 'public, max-age=604800, stale-while-revalidate=86400');
+      return;
+    }
+    if (['.css', '.js'].includes(extension)) {
+      // Asset filenames are stable rather than content-hashed, so keep this
+      // useful but short enough that a deployment is picked up promptly.
+      res.setHeader('Cache-Control', 'public, max-age=3600, stale-while-revalidate=86400');
+    }
+  },
+}));
 
 export { app };
 export default app;

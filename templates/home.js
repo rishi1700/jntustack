@@ -13,7 +13,7 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null,
   <section class="home-hero">
     <span class="hero-badge">&#10003; Every page checked against a real syllabus</span>
     <h1 class="hero-title">Your semester, sorted <span class="text-brand">&mdash; and verified.</span></h1>
-    <p class="hero-sub">Syllabus, units, and honest branch advice for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- course materials, a branch-choice guide, and ${escapeHtml(collegeDirectoryPhrase)}. No scraped dumps, no fake placement stats -- if it's on the page, we checked it.</p>
+    <p class="hero-sub">Syllabus, unit breakdowns, and honest branch advice for JNTU Kakinada, Hyderabad, Anantapur, and GV students -- verified subject pages, a branch-choice guide, and ${escapeHtml(collegeDirectoryPhrase)}. No scraped dumps, no fake placement stats -- if it's on the page, we checked it.</p>
     <div class="btn-row">
       <a class="btn-primary" href="/branch-guide/">Find my subjects &rarr;</a>
       <a class="btn-secondary" href="/colleges/">Browse colleges</a>
@@ -117,8 +117,6 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null,
 
   return `
 ${hero}
-
-<div class="ad-slot">ad slot &mdash; below intro</div>
 
 ${semesterStrip}
 

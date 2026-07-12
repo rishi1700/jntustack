@@ -2135,6 +2135,10 @@
       "subject_code": null,
       "name": "Industrial Robotics",
       "category": "ProfessionalElective",
+      "offering_categories": [
+        "ProfessionalElective",
+        "OpenElective"
+      ],
       "credits": {
         "L": 3,
         "T": 0,
@@ -2217,9 +2221,9 @@
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+        "college_source_note": "JNTUK's official R23 Mechanical Engineering syllabus offers this identical 3-2 course content as Professional Elective 'Industrial Robotics' and Open Elective 'Introduction to Industrial Robotics'; this page represents both official offerings."
       },
-      "notes": "Professional Elective-III option in the official III-II structure."
+      "notes": "JNTUK's official III-II structure lists the same credits, syllabus and outcomes as Professional Elective-III 'Industrial Robotics' and Open Elective-II 'Introduction to Industrial Robotics'; consolidated here as one course page."
     },
     {
       "id": "r23-mech-3-1-thermal-engineering-lab",
@@ -4007,13 +4011,58 @@
       "units": [
         {
           "number": 1,
-          "title": "Laboratory Experiments",
+          "title": "Finite Element Analysis Experiments",
           "topics": [
-            "from each section CONTENTS 1."
+            "Determine deflection and stresses in 2D and 3D trusses and beams",
+            "Determine principal and Von Mises stresses in plane-stress, plane-strain and axisymmetric components",
+            "Determine stresses in 3D and shell structures, with at least one example of each",
+            "Estimate natural frequencies and mode shapes, and determine the harmonic response of a 2D beam",
+            "Perform steady-state heat-transfer analysis of plane and axisymmetric components",
+            "Perform buckling analysis"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "CNC Part Programming",
+          "topics": [
+            "Study CNC part-programming fundamentals, write part programs for simple components on a CNC lathe and mill, and study an RP machine",
+            "CNC part programming for turned components: plain turning and facing",
+            "CNC part programming for turned components: step turning operation",
+            "CNC part programming for turned components: taper turning",
+            "CNC programming for milled components: circular interpolation",
+            "CNC programming for milled components: end milling",
+            "CNC programming for milled components: pocket milling"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Automated Toolpath and G-Code Generation",
+          "topics": [
+            "Generate automated CNC toolpaths and G-code using CAM packages"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Rapid Prototyping Machine",
+          "topics": [
+            "Study and demonstrate an RP machine by creating simple parts"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Virtual 3D Printing Simulation",
+          "topics": [
+            "Perform virtual 3D-printing simulation experiments using the official Virtual Labs experiment list: https://3dp-dei.vlabs.ac.in/List%20of%20experiments.html"
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Perform structural, thermal and buckling analyses using FEA and interpret stress, deflection and frequency results",
+        "Develop and execute CNC part programs for basic lathe and milling operations",
+        "Generate optimized CNC toolpaths and G-codes using CAM packages for given part geometries",
+        "Create and demonstrate simple 3D models using RP machines",
+        "Perform and analyze virtual 3D-printing experiments using online simulation platforms"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4031,7 +4080,7 @@
         "status": "verified",
         "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
       },
-      "notes": null
+      "notes": "Complete experiment list and course outcomes transcribed from the official JNTUK R23 Mechanical Engineering syllabus, PDF pages 205-206. The source instructs students to perform at least three experiments from each section."
     },
     {
       "id": "r23-mech-4-1-mechatronics",
@@ -4044,6 +4093,10 @@
       "subject_code": null,
       "name": "Mechatronics",
       "category": "ProfessionalElective",
+      "offering_categories": [
+        "ProfessionalElective",
+        "OpenElective"
+      ],
       "credits": {
         "L": 3,
         "T": 0,
@@ -4104,9 +4157,9 @@
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
         "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+        "college_source_note": "JNTUK's official R23 Mechanical Engineering syllabus offers this identical 4-1 course content as Professional Elective 'Mechatronics' and Open Elective 'Introduction to Mechatronics'; this page represents both official offerings."
       },
-      "notes": null
+      "notes": "JNTUK's official IV-I structure lists the same credits, syllabus and outcomes as Professional Elective-IV 'Mechatronics' and Open Elective-III 'Introduction to Mechatronics'; consolidated here as one course page."
     },
     {
       "id": "r23-mech-4-1-computational-fluid-dynamics",
@@ -4709,81 +4762,6 @@
       "notes": null
     },
     {
-      "id": "r23-mech-4-1-introduction-to-mechatronics",
-      "regulation": "R23",
-      "branch": "MECH",
-      "specialization": null,
-      "year": 4,
-      "semester": 1,
-      "year_sem_label": "4-1",
-      "subject_code": null,
-      "name": "Introduction to Mechatronics",
-      "category": "OpenElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Mechatronics Systems",
-          "topics": [
-            "Elements & levels of mechatronics system, Mechatronics design process, system, measurement systems, control systems, microprocessor-based controllers, advantages and disadvantages of mechatronics systems. Sensors and transducers, types, displacement, position, proximity, velocity, motion, force, acceleration, torque, fluid pressure, liquid flow, liquid level, temperature and light sensors."
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Solid State Electronic Devices",
-          "topics": [
-            "PN junction diode, BJT, FET, DIAC, TRIAC and LEDs. Analog signal conditioning, operational amplifiers, noise reduction, filtering"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Hydraulic And Pneumatic Actuating Systems",
-          "topics": [
-            "Fluid systems, Hydraulic systems, and pneumatic systems, components, control valves, electro-pneumatic, hydro-pneumatic, electro-hydraulic servo systems. Mechanical actuating systems and electrical actuating systems – basic principles and elements."
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Digital Electronics And Systems",
-          "topics": [
-            "Digital logic control, microprocessors and micro controllers, programming, process controllers, programmable logic controllers, PLCs versus computers, application of PLCs for control."
-          ]
-        },
-        {
-          "number": 5,
-          "title": "System And Interfacing And Data Acquisition",
-          "topics": [
-            "Data Acquisition Systems, Analog to Digital and Digital to Analog conversions; Digital Signal Processing – data flow in DSPs, block diagrams, typical layouts, Interfacing motor drives. Design of mechatronics systems & future trends."
-          ]
-        }
-      ],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "introduction-to-mechatronics-jntuk-r23-mech-4-1",
-        "title": "Introduction to Mechatronics - MECH 4-1",
-        "meta_description": "JNTUK R23 MECH 4-1 Introduction to Mechatronics syllabus: sensors, electronics, fluid and mechanical actuation, microcontrollers, PLCs and data acquisition."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
-      },
-      "notes": null
-    },
-    {
       "id": "r23-mech-4-1-product-design-and-development",
       "regulation": "R23",
       "branch": "MECH",
@@ -5373,81 +5351,6 @@
         "slug": "energy-auditing-jntuk-r23-mech-4-1",
         "title": "Energy Auditing - MECH 4-1",
         "meta_description": "JNTUK R23 MECH 4-1 Energy Auditing syllabus: energy management, audit methods, instruments, efficiency, economic analysis and conservation opportunities."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
-      },
-      "notes": null
-    },
-    {
-      "id": "r23-mech-4-1-quantum-science-and-technology",
-      "regulation": "R23",
-      "branch": "MECH",
-      "specialization": null,
-      "year": 4,
-      "semester": 1,
-      "year_sem_label": "4-1",
-      "subject_code": null,
-      "name": "Quantum Science and Technology",
-      "category": "OpenElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Unit I",
-          "topics": [
-            "Fundamentals of Quantum Mechanics: Historical background: Blackbody radiation, photoelectric effect, and Compton scattering; Dual nature of light and matter; De Broglie hypothesis; Schrödinger equation; Free particle, infinite potential well, step potential; Operators and observables: position, momentum, Hamiltonian; Commutation relations and uncertainty principle; Quantum postulates and measurement theory; Eigenvalues, eigenfunctions."
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Unit II",
-          "topics": [
-            "Quantum Information Theory: Classical vs. quantum information; Qubit representation using Bloch sphere; Quantum superposition and quantum entanglement; Dirac notation (bra-ket), tensor products, and composite systems; Bell states and EPR paradox; Quantum gates: Pauli-X, Y, Z; Hadamard; Phase; T; CNOT; Quantum circuit models and notation; Measurement in computational basis; Quantum teleportation and no-cloning theorem; Quantum state tomography (introductory)"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Unit III",
-          "topics": [
-            "Quantum Computing: Classical computing review and limitations; Quantum parallelism and interference; Deutsch and Deutsch-Jozsa algorithms; Grover’s search algorithm, Oracle and amplitude amplification; Shor’s factoring algorithm (overview and significance); Quantum Fourier Transform (QFT); Quantum error correction: Bit-flip, phase-flip, and Shor’s 9-qubit code; Introduction to quantum programming: Qiskit, Cirq, IBM Quantum Experience (overview)"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Unit IV",
-          "topics": [
-            "Quantum Communication: Introduction to quantum cryptography; Quantum key distribution (QKD): BB84 protocol; Entanglement-based QKD: Ekert protocol (E91); Eavesdropping and security of QKD; Quantum teleportation (circuit and protocol); Quantum dense coding; Quantum networks and entanglement swapping; Role of quantum repeaters; Single-photon sources and detectors; Implementation challenges (loss, decoherence, noise)"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Unit V",
-          "topics": [
-            "Quantum Technologies and Applications: Quantum sensors: magnetometry, gravimetry; Quantum metrology: standard time, atomic clocks; Quantum imaging and lithography; Quantum materials: topological insulators, graphene, quantum dots; NV centers in diamonds for sensing; Hardware platforms: Superconducting qubits, Trapped ions, Photonic quantum processors; Quantum supremacy and NISQ era; Global initiatives: IBM, Google, D- Wave, IonQ, India’s NQM; Ethical concerns and future prospects"
-          ]
-        }
-      ],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "quantum-science-and-technology-jntuk-r23-mech-4-1",
-        "title": "Quantum Science and Technology - MECH 4-1",
-        "meta_description": "JNTUK R23 MECH 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
       },
       "legacy_equivalent_id": null,
       "source": {
@@ -6193,103 +6096,6 @@
         "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
       },
       "notes": "Named Open Elective-I option in the official III-I structure."
-    },
-    {
-      "id": "r23-mech-3-2-introduction-to-industrial-robotics",
-      "regulation": "R23",
-      "branch": "MECH",
-      "specialization": null,
-      "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": null,
-      "name": "Introduction to Industrial Robotics",
-      "category": "OpenElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Introduction and Robot Anatomy",
-          "topics": [
-            "Automation and robotics, CAD/CAM and robotics, overview of robotics - present and future applications",
-            "Classification by coordinate system and control system",
-            "Components of industrial robotics: robot anatomy, work volume, components, number of degrees of freedom",
-            "Robot drive systems, function line diagram representation of robot arms, common types of arms",
-            "Requirements and challenges of end effectors, determination of the end effectors"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Robot Actuators and Feedback Components",
-          "topics": [
-            "Actuators: pneumatic, hydraulic actuators, electric and stepper motors",
-            "Comparison of electric, hydraulic and pneumatic types of actuation devices",
-            "Feedback components: position sensors - potentiometers, resolvers, encoders",
-            "Velocity sensors"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Manipulator Kinematics",
-          "topics": [
-            "Motion analysis: homogeneous transformations as applicable to rotation and translation, problems",
-            "Manipulator kinematics: specifications of matrices, D-H notation",
-            "Joint coordinates and world coordinates",
-            "Forward and inverse kinematics, problems"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "General Considerations in Path Description and Generation",
-          "topics": [
-            "Trajectory planning and avoidance of obstacles, path planning",
-            "Skew motion, joint interpolated motion, straight line motion",
-            "Robot programming, languages and software packages",
-            "Description of paths with a robot programming language"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Image Processing and Machine Vision",
-          "topics": [
-            "Introduction to machine vision",
-            "Sensing and digitizing function in machine vision",
-            "Training and vision system",
-            "Robotic applications"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Comprehend the anatomy of a robot and identify the components, configurations, and industrial applications of robotic systems.",
-        "Describe the types, characteristics, and selection criteria of actuators and sensors used in robotic systems.",
-        "Analyze and solve problems related to forward and inverse kinematics of robotic manipulators.",
-        "Demonstrate the principles of trajectory planning, learn robot programming, and utilize programming languages for robot control.",
-        "Describe the principles and applications of image processing and machine vision in robotics."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "introduction-to-industrial-robotics-jntuk-r23-mech-3-2",
-        "title": "Introduction to Industrial Robotics - JNTUK R23 MECH 3-2",
-        "meta_description": "JNTUK R23 MECH 3-2 Introduction to Industrial Robotics: anatomy, actuators, feedback, kinematics, path planning, programming and machine vision."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
-      },
-      "notes": "Named Open Elective-II option in the official III-II structure; JNTUK separately lists the similarly scoped Industrial Robotics as Professional Elective-III."
     },
     {
       "id": "r23-mech-3-2-industrial-management",

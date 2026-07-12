@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-12 after the cross-branch official syllabus and
-practical-content reconciliation.
+Last updated: 2026-07-12 after the cross-branch syllabus reconciliation,
+canonical consolidation, and public SEO implementation.
 
 ## Architecture
 
@@ -28,22 +28,22 @@ Current JSON/build state:
 
 | Metric | Count |
 | --- | ---: |
-| Subjects | 441 |
-| Verified subjects | 412 |
-| Needs verification subjects | 29 |
+| Subjects | 427 |
+| Verified subjects | 396 |
+| Needs verification subjects | 31 |
 | Placeholder subjects | 0 |
 | Colleges | 376 |
 | Branch profiles | 6 |
-| Search docs | 794 |
-| Sitemap URLs | 421 |
+| Search docs | 778 |
+| Sitemap URLs | 405 |
 | Migration files | 24 |
 
 The parity constants in `lib/db-json.js` currently expect:
 
-- `verifiedSubjects: 412`
+- `verifiedSubjects: 396`
 - `colleges: 376`
 - `branchProfiles: 6`
-- `searchDocs: 794`
+- `searchDocs: 778`
 
 ## Verified/Draft State
 
