@@ -289,6 +289,37 @@ function auditSearchCoverage() {
   };
 }
 
+function auditResponsiveShell() {
+  const failures = [];
+  const files = htmlFiles();
+  const cssPath = path.join(DIST, 'teal-brand.css');
+  const navScriptPath = path.join(DIST, 'mobile-nav.js');
+
+  if (!fs.existsSync(cssPath)) failures.push('dist/teal-brand.css is missing');
+  if (!fs.existsSync(navScriptPath)) failures.push('dist/mobile-nav.js is missing');
+
+  for (const file of files) {
+    const html = fs.readFileSync(file, 'utf-8');
+    if (!/<meta\s+name="viewport"\s+content="width=device-width, initial-scale=1\.0">/i.test(html)) {
+      failures.push(`${rel(file)} is missing the responsive viewport meta tag`);
+    }
+    if (!html.includes('src="/mobile-nav.js"')) failures.push(`${rel(file)} is missing mobile-nav.js`);
+    if (!html.includes('id="mobileNavToggle"')) failures.push(`${rel(file)} is missing the mobile menu control`);
+    if (!html.includes('id="topNav"')) failures.push(`${rel(file)} is missing the controlled navigation target`);
+  }
+
+  if (fs.existsSync(cssPath)) {
+    const css = fs.readFileSync(cssPath, 'utf-8');
+    if (!/@media\s*\(max-width:900px\)/.test(css)) failures.push('mobile breakpoint is missing from teal-brand.css');
+    if (!/html\.js\s+\.top-nav:not\(\[data-open="true"\]\)\s*\{display:none;\}/.test(css)) {
+      failures.push('mobile navigation collapse rule is missing from teal-brand.css');
+    }
+    if (!css.includes('scroll-snap-type:x proximity')) failures.push('touch-scroll rail rules are missing from teal-brand.css');
+  }
+
+  return { ok: failures.length === 0, failures, pageCount: files.length };
+}
+
 const sourceFiles = [
   ...walk(path.join(ROOT, 'templates'), f => /\.(js|html|css)$/.test(f)),
   ...walk(path.join(ROOT, 'public'), f => /\.(js|html|css)$/.test(f)),
@@ -299,6 +330,7 @@ const hashHrefHits = findHashHref(sourceFiles);
 const missingInternalLinks = findMissingInternalLinks();
 const coverage = auditSearchCoverage();
 const indexing = auditIndexingReadiness();
+const responsive = auditResponsiveShell();
 
 console.log('Site audit');
 console.log('----------');
@@ -309,6 +341,7 @@ console.log(`Search index actual counts   : ${JSON.stringify(coverage.actual)}`)
 console.log(`Sitemap URLs                 : ${indexing.sitemapCount}`);
 console.log(`Canonical public pages       : ${indexing.canonicalCount}`);
 console.log(`Indexing warnings            : ${indexing.warnings.length}`);
+console.log(`Responsive shell pages       : ${responsive.pageCount}`);
 
 const failures = [];
 if (hashHrefHits.length) failures.push(['href="#" placeholders', hashHrefHits]);
@@ -320,6 +353,7 @@ if (!coverage.ok) {
   failures.push(['search-index coverage', details]);
 }
 if (!indexing.ok) failures.push(['indexing readiness', indexing.failures]);
+if (!responsive.ok) failures.push(['responsive shell', responsive.failures]);
 
 if (failures.length) {
   for (const [label, items] of failures) {
