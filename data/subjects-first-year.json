@@ -1373,7 +1373,7 @@
     {
       "id": "r23-cse-1-2-data-structures",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
       "specialization": null,
       "year": 1,
       "semester": 2,
@@ -1450,23 +1450,27 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "data-structures-jntuk-r23-cse-1-2",
-        "title": "Data Structures - CSE 1-2",
-        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures notes: linear data structures, linked lists, stacks, queues, trees and graphs."
+        "slug": "data-structures-jntuk-r23-1-2",
+        "title": "Data Structures - JNTUK R23 1-2",
+        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures: searching, sorting, linked lists, stacks, queues, trees and graph traversal."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
       },
-      "notes": null
+      "notes": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-cse-1-2-data-structures-lab",
       "regulation": "R23",
-      "branch": "CSE",
+      "branch": null,
       "specialization": null,
       "year": 1,
       "semester": 2,
@@ -1481,31 +1485,54 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Programming Exercises",
+          "topics": [
+            "Reverse arrays; implement linear and binary search; implement bubble, selection and insertion sorting",
+            "Implement singly, doubly and circular linked lists with insertion, deletion, traversal and reversal",
+            "Use linked lists to remove duplicates and represent and add polynomials; implement a double-ended queue",
+            "Implement stacks using arrays and linked lists; evaluate postfix expressions and check balanced parentheses",
+            "Implement linear and circular queues; simulate a printer queue; use stacks and queues for expression conversion and symmetry checks",
+            "Implement and traverse a binary search tree"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain how linear data structures organize and provide efficient access to data",
+        "Design and implement linked lists for dynamic data storage",
+        "Develop stack-based programs for recursive algorithms and program-state management",
+        "Apply queues, deques and priority queues to scheduling, traversal and data-management problems",
+        "Recognize suitable uses for hashing and design hash-based solutions"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "data-structures-lab-jntuk-r23-cse-1-2",
-        "title": "Data Structures Lab - CSE 1-2",
-        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures Lab: hands-on implementation of linked lists, stacks, queues, trees and searching/sorting algorithms."
+        "slug": "data-structures-lab-jntuk-r23-1-2",
+        "title": "Data Structures Lab - JNTUK R23 1-2",
+        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures Lab: arrays, searching, sorting, linked lists, stacks, queues and binary search trees."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
       },
-      "notes": null
+      "notes": null,
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-ece-1-2-chemistry",
       "regulation": "R23",
-      "branch": "ECE",
+      "branch": null,
       "specialization": null,
       "year": 1,
       "semester": 2,
@@ -1587,23 +1614,27 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "chemistry-jntuk-r23-ece-1-2",
-        "title": "Chemistry - ECE 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry notes: quantum structure and bonding, modern engineering materials, electrochemistry, polymer chemistry, and instrumental..."
+        "slug": "chemistry-jntuk-r23-1-2",
+        "title": "Chemistry - JNTUK R23 1-2",
+        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry: bonding models, engineering materials, electrochemistry, polymers and instrumental analysis."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
       },
-      "notes": null
+      "notes": null,
+      "branchCodes": [
+        "ECE",
+        "IT"
+      ]
     },
     {
       "id": "r23-ece-1-2-chemistry-lab",
       "regulation": "R23",
-      "branch": "ECE",
+      "branch": null,
       "specialization": null,
       "year": 1,
       "semester": 2,
@@ -1618,7 +1649,19 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "Measure 10Dq by spectrophotometry; verify the Beer-Lambert law; measure sample wavelength using UV-visible spectroscopy",
+            "Conductometric titrations of strong and weak acids against a strong base; determine cell constant and solution conductance",
+            "Use potentiometry to determine redox potentials and EMF; determine acid strength in a lead-acid battery",
+            "Prepare Bakelite and nanomaterials by precipitation; identify simple organic compounds using IR spectroscopy",
+            "Estimate ferrous iron, total water hardness, vitamin C and magnesium in an antacid"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Determine the cell constant and conductance of solutions",
         "Prepare advanced polymer Bakelite materials",
@@ -1632,18 +1675,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "chemistry-lab-jntuk-r23-ece-1-2",
-        "title": "Chemistry Lab - ECE 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry Lab: conductometric and potentiometric titrations, Bakelite preparation, UV-Visible and IR spectroscopy experiments."
+        "slug": "chemistry-lab-jntuk-r23-1-2",
+        "title": "Chemistry Lab - JNTUK R23 1-2",
+        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry Lab: conductivity, potentiometry, polymers, spectroscopy, nanomaterials, hardness and vitamin C experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
       },
-      "notes": null
+      "notes": null,
+      "branchCodes": [
+        "ECE",
+        "IT"
+      ]
     },
     {
       "id": "r23-ece-1-2-network-analysis",
@@ -1903,281 +1950,6 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": null
-    },
-    {
-      "id": "r23-it-1-2-chemistry",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": "R231104",
-      "name": "Chemistry",
-      "category": "BasicScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Structure and Bonding Models",
-          "topics": [
-            "Fundamentals of quantum mechanics, Schrodinger wave equation, significance of psi and psi-squared",
-            "Particle in a one-dimensional box",
-            "Molecular orbital theory -- bonding in homo- and hetero-nuclear diatomic molecules, energy level diagrams of O2 and CO",
-            "Pi-molecular orbitals of butadiene and benzene, calculation of bond order"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Modern Engineering Materials",
-          "topics": [
-            "Semiconductors -- introduction, basic concepts, applications",
-            "Superconductors -- introduction, basic concepts, applications",
-            "Supercapacitors -- introduction, basic concepts, classification, applications",
-            "Nanomaterials -- introduction, classification, properties and applications of fullerenes, carbon nanotubes and graphene nanoparticles"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Electrochemistry and Applications",
-          "topics": [
-            "Electrochemical cell, Nernst equation, cell potential calculations",
-            "Potentiometry -- potentiometric titrations (redox); conductivity, conductometric titrations (acid-base)",
-            "Construction and working of standard hydrogen electrode and calomel electrode",
-            "Primary cells (zinc-air battery), secondary cells (lithium-ion batteries) -- working and cell reactions",
-            "Fuel cells, hydrogen-oxygen fuel cell, polymer electrolyte membrane fuel cells (PEMFC)"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Polymer Chemistry",
-          "topics": [
-            "Introduction to polymers, functionality of monomers, chain growth and step growth polymerization",
-            "Coordination polymerization with examples and mechanisms",
-            "Thermoplastics and thermosetting plastics -- PVC, Teflon, Bakelite, Nylon-6,6, carbon fibres",
-            "Elastomers -- Buna-S, Buna-N: preparation, properties and applications",
-            "Conducting polymers -- polyacetylene, polyaniline; biodegradable polymers -- PGA, PLA"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Instrumental Methods and Applications",
-          "topics": [
-            "Electromagnetic spectrum, absorption of radiation, Beer-Lambert law -- applications and limitations",
-            "UV-visible spectroscopy -- electronic transitions and instrumentation",
-            "IR spectroscopy -- instrumentation, identification and applications",
-            "Procedure and applications of MRI and CT scans"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Understand the concepts of molecular orbitals and bond orders",
-        "Apply the principle of band diagrams in the application of conductors and semiconductors",
-        "Compare the materials of construction for battery and fuel cells",
-        "Explain the preparation, properties, and applications of thermoplastics, thermosetting polymers, elastomers, and conducting polymers",
-        "Summarize the concepts of instrumental methods and explain the principles of spectrometry"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "chemistry-jntuk-r23-it-1-2",
-        "title": "Chemistry - IT 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry notes: quantum structure and bonding, modern engineering materials, electrochemistry, polymer chemistry, and instrumental..."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
-      },
-      "notes": "Source scopes this subject to \"ECE, IT & AIML\" while ALSO scoping Data Structures to \"CSE, IT & allied branches\" in the same semester -- IT taking both is plausible (IT sits at the intersection of both source groupings) but is not independently confirmed against an IT-specific timetable."
-    },
-    {
-      "id": "r23-it-1-2-chemistry-lab",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": "R231104L",
-      "name": "Chemistry Lab",
-      "category": "BasicScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
-      "type": "lab",
-      "units": [],
-      "course_outcomes": [
-        "Determine the cell constant and conductance of solutions",
-        "Prepare advanced polymer Bakelite materials",
-        "Measure the strength of an acid present in secondary batteries",
-        "Analyse the IR spectra of some organic compounds",
-        "Calculate the strength of acid in a Pb-acid battery"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "chemistry-lab-jntuk-r23-it-1-2",
-        "title": "Chemistry Lab - IT 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry Lab: conductometric and potentiometric titrations, Bakelite preparation, UV-Visible and IR spectroscopy experiments."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
-      },
-      "notes": "Source scopes this subject to \"ECE, IT & AIML\" while ALSO scoping Data Structures to \"CSE, IT & allied branches\" in the same semester -- IT taking both is plausible (IT sits at the intersection of both source groupings) but is not independently confirmed against an IT-specific timetable."
-    },
-    {
-      "id": "r23-it-1-2-data-structures",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": null,
-      "name": "Data Structures",
-      "category": "ProfessionalCore",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Introduction to Linear Data Structures",
-          "topics": [
-            "Definition and importance of linear data structures, abstract data types (ADTs)",
-            "Stack ADT, queue ADT, time and space complexity analysis for linear data structures",
-            "Searching: linear search, binary search",
-            "Sorting: bubble sort, selection sort, insertion sort, merge sort, quick sort"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Linked Lists",
-          "topics": [
-            "Singly linked lists: representation and operations",
-            "Doubly linked lists and circular linked lists",
-            "Comparing arrays and linked lists, applications of linked lists"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Stacks",
-          "topics": [
-            "Properties and operations, implementing stacks using arrays and linked lists",
-            "Applications in expression evaluation, backtracking, reversing a list, factorial calculation",
-            "Expression conversions: infix to postfix, infix to prefix, evaluating postfix expressions"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Queues",
-          "topics": [
-            "Properties and operations, implementing queues using arrays and linked lists",
-            "Applications in breadth-first search and scheduling",
-            "Circular queues, priority queues, deques"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Trees and Graphs",
-          "topics": [
-            "Introduction to trees, basic terminology, representation using arrays and linked lists",
-            "Binary search tree -- insertion, deletion and tree traversals",
-            "Introduction to graphs, graph traversals (BFS and DFS)"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Explain the role of linear data structures in organizing and accessing data efficiently",
-        "Design, implement, and apply linked lists for dynamic data storage",
-        "Develop programs using stacks to handle recursive algorithms and manage program state",
-        "Apply queue-based algorithms for task scheduling and graph traversal",
-        "Devise solutions to programming challenges involving stacks, queues and trees",
-        "Recognize scenarios where hashing is advantageous and design hash-based solutions"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "data-structures-jntuk-r23-it-1-2",
-        "title": "Data Structures - IT 1-2",
-        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures notes: linear data structures, linked lists, stacks, queues, trees and graphs."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
-      },
-      "notes": "Source scopes this subject to \"CSE, IT & allied branches\" while ALSO scoping the ECE/IT/AIML Chemistry variant to IT in the same semester -- IT taking both a CSE-flavour and an ECE-flavour branch subject in one semester is plausible (IT sits at the intersection of both source groupings) but is not independently confirmed against an IT-specific timetable."
-    },
-    {
-      "id": "r23-it-1-2-data-structures-lab",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": null,
-      "name": "Data Structures Lab",
-      "category": "ProfessionalCore",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 3,
-        "C": 1.5
-      },
-      "type": "lab",
-      "units": [],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "data-structures-lab-jntuk-r23-it-1-2",
-        "title": "Data Structures Lab - IT 1-2",
-        "meta_description": "JNTUK R23 CSE/IT 1-2 Data Structures Lab: hands-on implementation of linked lists, stacks, queues, trees and searching/sorting algorithms."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
-      },
-      "notes": "Source scopes this subject to \"CSE, IT & allied branches\" while ALSO scoping the ECE/IT/AIML Chemistry variant to IT in the same semester -- IT taking both a CSE-flavour and an ECE-flavour branch subject in one semester is plausible (IT sits at the intersection of both source groupings) but is not independently confirmed against an IT-specific timetable."
     }
   ]
 }

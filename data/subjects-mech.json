@@ -1487,16 +1487,16 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-mech-2-2",
         "title": "Community Service Internship - R23 MECH 2-2",
-        "meta_description": "LBRCE R23 MECH 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation - no credits or evaluation detail in the source."
+        "meta_description": "JNTUK R23 MECH Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the IV-semester course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation' but gives no credits, evaluation scheme or detailed guidelines. Mirrors the same gap seen in the Tirumala CSE/ECE/IT documents. Confirm credits and requirements before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official Mechanical structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits or guidelines."
     },
     {
       "id": "r23-mech-3-1-machine-tools-and-metrology",
@@ -2431,7 +2431,12 @@
       "subject_code": null,
       "name": "Evaluation of Community Service Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -2443,16 +2448,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-mech-3-1",
         "title": "Community Service Internship - MECH 3-1",
-        "meta_description": "LBRCE R23 MECH 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+        "meta_description": "JNTUK R23 MECH 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.lbrce.ac.in/academics/syllabus/R23/R23_ME_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the V semester course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content in the source PDF. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official Mechanical III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
     },
     {
       "id": "r23-mech-3-2-heat-transfer",
@@ -5591,6 +5596,92 @@
         "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
       },
       "notes": "NEEDS VERIFICATION: the official course structure provides the title and credits but no detailed evaluation or implementation guidelines."
+    },
+    {
+      "id": "r23-mech-3-1-entrepreneurship",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Entrepreneurship",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Entrepreneurial Competence",
+          "topics": [
+            "Entrepreneurship as a concept and career",
+            "Entrepreneurial personality and characteristics of successful entrepreneurs",
+            "Knowledge and skills of an entrepreneur"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Entrepreneurial Environment",
+          "topics": [
+            "Business environment",
+            "Role of family and society",
+            "Entrepreneurship-development training and support organizations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Industrial Policies",
+          "topics": [
+            "Central and state government industrial policies and regulations",
+            "International business"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Business Plan Preparation",
+          "topics": [
+            "Product sources and pre-feasibility studies",
+            "Product-selection criteria, ownership, capital and budgeting",
+            "Project profiles, entrepreneur-project matching, feasibility reports and evaluation"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Launching a Small Business",
+          "topics": [
+            "Finance and human-resource mobilization; operations planning",
+            "Market and channel selection, growth strategies, product launches, incubation, venture capital and IT startups",
+            "Monitoring, evaluation, sickness prevention and rehabilitation of business units"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Apply the knowledge and skills needed to plan, launch and operate a small business"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "entrepreneurship-jntuk-r23-mech-3-1",
+        "title": "Entrepreneurship - JNTUK R23 MECH 3-1",
+        "meta_description": "JNTUK R23 MECH 3-1 Entrepreneurship: entrepreneurial competence, business environment, industrial policy, business plans and launching a small business."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits, objectives, five units and outcome are sourced directly from JNTUK’s official R23 Mechanical Engineering document."
+      },
+      "notes": "Listed as a 3-credit Entrepreneurship option under Open Elective-I / Entrepreneurship Development & Venture Creation in the official III-I structure."
     }
   ]
 }

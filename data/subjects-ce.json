@@ -2483,10 +2483,15 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23PI01",
+      "subject_code": null,
       "name": "Evaluation of Community Service Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -2498,16 +2503,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-ce-3-1",
         "title": "Community Service Internship - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+        "meta_description": "JNTUK R23 CE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the V Semester (3-1) course structure lists 'Evaluation of Community Service Internship' (23PI01) with 2 credits (shown as 0-0-0-2 in the table) but gives no evaluation scheme, guidelines or unit content anywhere in the document. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official Civil III-I structure confirms a 2-credit evaluation row but supplies no university course code, evaluation scheme or guidelines."
     },
     {
       "id": "r23-ce-3-2-design-and-drawing-of-steel-structures",

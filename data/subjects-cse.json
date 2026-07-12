@@ -96,39 +96,6 @@
       "notes": "3-0-0-3 credits and 5-unit syllabus read from the source PDF."
     },
     {
-      "id": "r23-cse-4-1-honors-blockchain",
-      "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
-      "year": 4,
-      "semester": 1,
-      "year_sem_label": "4-1",
-      "subject_code": null,
-      "name": "Honors Elective (placeholder -- specific title not yet sourced)",
-      "category": "Honors",
-      "credits": null,
-      "type": "theory",
-      "units": [],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "",
-        "title": "",
-        "meta_description": ""
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": null,
-        "retrieved_date": null,
-        "status": "placeholder"
-      },
-      "notes": "Pure scaffolding to show the 'placeholder' status -- R23 confirms an Honors track exists with specific registration rules, but no Honors subject list has been sourced yet. Do not generate or publish a page from this record."
-    },
-    {
       "id": "r16-cse-3-2-data-warehousing-and-mining",
       "regulation": "R16",
       "branch": "CSE",
@@ -1686,16 +1653,16 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-cse-2-2",
         "title": "Community Service Project Internship - CSE 2-2",
-        "meta_description": "JNTUK R23 CSE 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation."
+        "meta_description": "JNTUK R23 CSE Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/CSE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a ‘Mandatory Community Service Project Internship of 08 weeks duration during summer vacation’, but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official CSE structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits, assessment scheme or guidelines."
     },
     {
       "id": "r23-cse-3-1-computer-networks",
@@ -2520,8 +2487,8 @@
     {
       "id": "r23-cse-3-1-principles-of-operating-systems",
       "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
+      "branch": null,
+      "specialization": null,
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
@@ -2594,24 +2561,28 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "principles-of-operating-systems-jntuk-r23-cse-3-1",
-        "title": "Principles of Operating Systems - CSE 3-1",
-        "meta_description": "JNTUK R23 CSE 3-1 Principles of Operating Systems: OS overview & structures, processes/threads/scheduling, synchronization & deadlocks, memory, files."
+        "slug": "principles-of-operating-systems-jntuk-r23-3-1",
+        "title": "Principles of Operating Systems - R23 3-1",
+        "meta_description": "JNTUK R23 CSE/IT 3-1 Principles of Operating Systems: processes, threads, scheduling, synchronization, deadlocks, memory and file systems."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The course placement, credits and five units are published in JNTUK’s official CSE document linked here and match the official IT syllabus."
       },
-      "notes": "Open Elective-I option 1 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Shared CSE/IT Open Elective-I option (3-0-0-3), with matching official branch syllabi.",
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-cse-3-1-computer-organization-and-architecture",
       "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
+      "branch": null,
+      "specialization": null,
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
@@ -2683,18 +2654,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "computer-organization-and-architecture-jntuk-r23-cse-3-1",
-        "title": "Computer Organization & Architecture - CSE 3-1",
-        "meta_description": "JNTUK R23 CSE 3-1 Computer Organization and Architecture: computer structure & logic gates, sequential circuits, CPU & control unit, microprocessors, I/O."
+        "slug": "computer-organization-and-architecture-jntuk-r23-3-1",
+        "title": "Computer Organization & Architecture - R23 3-1",
+        "meta_description": "JNTUK R23 CSE/IT 3-1 Computer Organization and Architecture: computer structure, sequential circuits, CPU control, memory and input-output."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The course placement, credits and five units are published in JNTUK’s official CSE document linked here and match the official IT syllabus."
       },
-      "notes": "Open Elective-I option 2 of 2. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Shared CSE/IT Open Elective-I option (3-0-0-3), with matching official branch syllabi.",
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-cse-3-1-entrepreneurship-development-and-venture-creation",
@@ -2724,16 +2699,16 @@
       "seo": {
         "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-cse-3-1",
         "title": "Entrepreneurship Dev & Venture Creation - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Entrepreneurship Development & Venture Creation (Open Elective-I alternative) - listed with no detailed syllabus content found."
+        "meta_description": "JNTUK R23 CSE 3-1 Entrepreneurship Development & Venture Creation (3 credits), listed without an exact unit-wise syllabus."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: this course is listed in the III-I course structure table (page 2) as an OR-alternative to Open Elective-I with 3-0-0-3 credits, but the source document contains no syllabus section for it -- no course objectives, outcomes, units or textbooks (unlike the two Open Elective-I options Principles of Operating Systems and Computer Organization and Architecture, which are complete). Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official CSE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
     },
     {
       "id": "r23-cse-3-1-evaluation-of-community-service-internship",
@@ -2746,7 +2721,12 @@
       "subject_code": null,
       "name": "Evaluation of Community Service Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -2758,16 +2738,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-cse-3-1",
         "title": "Community Service Internship - CSE 3-1",
-        "meta_description": "Tirumala R23 CSE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+        "meta_description": "JNTUK R23 CSE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official CSE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
     },
     {
       "id": "r23-cse-3-2-compiler-design",
@@ -3913,8 +3893,8 @@
     {
       "id": "r23-cse-3-2-principles-of-database-management-systems",
       "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
+      "branch": null,
+      "specialization": null,
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
@@ -3989,109 +3969,28 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "principles-of-database-management-systems-jntuk-r23-cse-3-2",
-        "title": "Principles of DBMS - CSE 3-2",
-        "meta_description": "JNTUK R23 CSE 3-2 Open Elective-II Principles of DBMS: data models, ER & relational model, SQL, normalization (1NF-BCNF), transactions & recovery."
+        "slug": "principles-of-database-management-systems-jntuk-r23-3-2",
+        "title": "Principles of DBMS - JNTUK R23 3-2",
+        "meta_description": "JNTUK R23 CSE/IT 3-2 Principles of Database Management Systems: data models, ER design, SQL, normalization, transactions and recovery."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The course placement, credits and five units are published in JNTUK’s official CSE document linked here and match the official IT syllabus."
       },
-      "notes": "Open Elective-II (single named option). 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
-    },
-    {
-      "id": "r23-cse-3-2-soft-skills-swayam-plus-21st-century-employability-skills",
-      "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
-      "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": null,
-      "name": "Soft Skills / SWAYAM Plus - 21st Century Employability Skills",
-      "category": "SkillEnhancement",
-      "credits": {
-        "L": 0,
-        "T": 1,
-        "P": 2,
-        "C": 2
-      },
-      "type": "theory_cum_lab",
-      "units": [
-        {
-          "number": 1,
-          "title": "Analytical Thinking and Listening Skills",
-          "topics": [
-            "Self-introduction; 'Shaping Young Minds' - a talk by Azim Premji (listening activity)",
-            "Self-analysis; developing positive attitude; perception",
-            "Communication skills: verbal communication; non-verbal communication (body language)"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Self-Management Skills and Etiquette",
-          "topics": [
-            "Self-management skills: anger management, stress management, time management",
-            "Six thinking hats; team building; leadership qualities",
-            "Etiquette: social etiquette, business etiquette, telephone etiquette, dining etiquette"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Standard Operation Methods",
-          "topics": [
-            "Basic grammar, tenses, prepositions, pronunciation",
-            "Letter writing; note making, note taking, minutes preparation",
-            "Email and letter writing"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Job-Oriented Skills",
-          "topics": [
-            "Group discussion; mock group discussions",
-            "Resume preparation",
-            "Interview skills; mock interviews"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Interpersonal Relationships",
-          "topics": [
-            "Introduction, importance, types, uses",
-            "Factors affecting interpersonal relationships",
-            "Accommodating different styles; consequences of interpersonal relationships"
-          ]
-        }
-      ],
-      "course_outcomes": [],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "soft-skills-swayam-plus-21st-century-employability-skills-jntuk-r23-cse-3-2",
-        "title": "Soft Skills - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Skill Enhancement Course 'Soft Skills / SWAYAM Plus - 21st Century Employability Skills' (0-1-2-2) - no detailed syllabus in the source."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
-        "status": "needs_verification",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
-      },
-      "notes": "NEEDS VERIFICATION: this Skill Enhancement course appears only in the III-II course structure table (0-1-2-2) with no course objectives, outcomes, unit content or textbooks anywhere else in the source document. Source the unit-wise content from an official document before flipping to verified."
+      "notes": "Shared CSE/IT Open Elective-II option (3-0-0-3), with matching official branch syllabi.",
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-cse-3-2-technical-paper-writing-and-ipr",
       "regulation": "R23",
-      "branch": "CSE",
-      "specialization": "CSE",
+      "branch": null,
+      "specialization": null,
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
@@ -4160,18 +4059,22 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "technical-paper-writing-and-ipr-jntuk-r23-cse-3-2",
-        "title": "Technical Paper Writing & IPR - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Audit Course Technical Paper Writing & IPR (2-0-0, credits shown as '-') - no detailed syllabus found in this source document."
+        "slug": "technical-paper-writing-and-ipr-jntuk-r23-3-2",
+        "title": "Technical Paper Writing & IPR - R23 3-2",
+        "meta_description": "JNTUK R23 CSE/IT 3-2 Technical Paper Writing & IPR: planning, drafting, proofreading, word processing, patents and intellectual property."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
-        "status": "needs_verification",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, credits and five-unit syllabus are published in JNTUK’s official R23 CSE document linked here and match the official IT syllabus."
       },
-      "notes": "NEEDS VERIFICATION: listed as Audit Course 'Technical Paper Writing & IPR' in the III-II course structure table (L-T-P 2-0-0, credits shown as '-'), but this CSE document has no detail page for it -- no course objectives, outcomes, units or textbooks -- unlike other Tirumala/LBRCE branch documents where this course has full content. Source the unit-wise content from an official document before flipping to verified."
+      "notes": "Common CSE/IT audit course (2-0-0, non-credit); five detailed units are published in both official branch documents.",
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-cse-3-2-mandatory-industry-internship-mini-project",
@@ -4196,16 +4099,16 @@
       "seo": {
         "slug": "mandatory-industry-internship-mini-project-jntuk-r23-cse-3-2",
         "title": "Industry Internship / Mini Project - CSE 3-2",
-        "meta_description": "Tirumala R23 CSE 3-2 Mandatory Industry Internship / Mini Project (08 weeks, summer vacation) - a course-structure footnote with no unit content."
+        "meta_description": "JNTUK R23 CSE Mandatory Industry Internship / Mini Project: an eight-week summer requirement listed without detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/CSE%20III-I%20%26%20III-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship / Mini Project of 08 weeks duration during summer vacation' as a bare footnote (not a numbered/coded course row), with no evaluation scheme, credits or unit content given. A footnote adds that interested students may pursue SWAYAM Plus courses (e.g. Hands-on Masterclass on Data Analytics OR AI for Real-World Application) under Industry Internship. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official CSE III-II structure confirms an eight-week summer Industry Internship / Mini Project footnote but gives no credits or detailed guidelines."
     },
     {
       "id": "r23-cse-4-1-deep-learning",
@@ -5270,6 +5173,81 @@
         "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
       },
       "notes": "NEEDS VERIFICATION: JNTUK lists Full Semester Internship & Project Work as the sole VIII-semester item (0-0-24-12) but provides no detailed project, internship or evaluation guidelines. Confirm those requirements before marking the record verified."
+    },
+    {
+      "id": "r23-cse-3-2-big-data-analytics",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Big Data Analytics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Big Data Foundations and Applications",
+          "topics": [
+            "Big data and converging trends; unstructured data; industry examples; web, marketing, fraud, risk, credit, trading, healthcare, medicine and advertising analytics; Hadoop and open-source technologies; cloud, mobile BI, crowdsourcing and firewall analytics"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "NoSQL and Cassandra",
+          "topics": [
+            "NoSQL; aggregate, key-value, document and graph models; relationships, schemaless databases and materialized views; sharding and replication; consistency and version stamps; Cassandra table creation, loading and reading data"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hadoop, MapReduce and Hive",
+          "topics": [
+            "Data formats and Hadoop analysis; scaling, HDFS architecture, replication, availability and locality; MapReduce architecture, process and Java interface; Hadoop I/O, integrity, compression and serialization; Hive types, formats, HiveQL, joins, windows, partitioning, bucketing and indexing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Apache Spark",
+          "topics": [
+            "Spark advantages, lazy evaluation, in-memory processing and DAGs; SparkContext, SparkSession, RDDs, transformations, actions and DataFrames; Catalyst optimizer; dates, nulls, complex types and JSON; grouping, windows, joins and data sources; broadcast variables, accumulators, cluster deployment, logs, UI and debugging"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Spark Tuning and Structured Streaming",
+          "topics": [
+            "Spark performance tuning; stream-processing fundamentals; event time and stateful processing; tumbling windows, watermarks and deduplication; structured-streaming concepts, transformations, inputs and outputs"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "big-data-analytics-jntuk-r23-cse-3-2",
+        "title": "Big Data Analytics - JNTUK R23 CSE 3-2",
+        "meta_description": "JNTUK R23 CSE 3-2 Big Data Analytics: Hadoop, HDFS, MapReduce, NoSQL, Cassandra, Hive, Spark, structured streaming and performance tuning."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and five-unit syllabus are sourced directly from JNTUK’s official R23 CSE document."
+      },
+      "notes": "Professional Elective-III option (3-0-0-3); official detailed syllabus pages 100-101."
     }
   ]
 }

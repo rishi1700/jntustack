@@ -1447,16 +1447,16 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-ece-2-2",
         "title": "Community Service Project Internship - R23 ECE 2-2",
-        "meta_description": "JNTUK R23 ECE 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation."
+        "meta_description": "JNTUK R23 ECE Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "NEEDS VERIFICATION: the official ECE structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits or guidelines."
     },
     {
       "id": "r23-ece-3-1-analog-and-digital-ic-applications",
@@ -2158,16 +2158,16 @@
       "seo": {
         "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-ece-3-1",
         "title": "Entrepreneurship Dev. & Venture Creation - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Entrepreneurship Development & Venture Creation (Open Elective-I alternative), 3-0-0-3 credits - no syllabus content in the source."
+        "meta_description": "JNTUK R23 ECE 3-1 Entrepreneurship Development & Venture Creation (3 credits), listed without an exact unit-wise syllabus."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: this Open Elective-I alternative is listed only in the III-I course-structure table (page 1: 'Open Elective-I OR Entrepreneurship Development & Venture Creation', 3-0-0-3) -- no course objectives, outcomes, units or textbooks appear anywhere else in the source document. Source the unit-wise content from an official document before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official ECE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
     },
     {
       "id": "r23-ece-3-1-analog-and-digital-ic-applications-lab",
@@ -2438,7 +2438,12 @@
       "subject_code": null,
       "name": "Evaluation of Community Service Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -2450,16 +2455,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-ece-3-1",
         "title": "Community Service Internship - ECE 3-1",
-        "meta_description": "Tirumala R23 ECE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+        "meta_description": "JNTUK R23 ECE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content anywhere in the source document. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official ECE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
     },
     {
       "id": "r23-ece-3-2-vlsi-design",
@@ -3804,16 +3809,16 @@
       "seo": {
         "slug": "mandatory-industry-internship-jntuk-r23-ece-3-2",
         "title": "Mandatory Industry Internship - ECE 3-2",
-        "meta_description": "Tirumala R23 ECE 3-2: footnote entry for a mandatory 08-week industry internship during summer vacation; no detailed syllabus given."
+        "meta_description": "JNTUK R23 ECE Mandatory Industry Internship: an eight-week summer requirement listed without credits or detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/III%20B.Tech%20I%20%26%20II%20Sem%20R23%20ECE%20Syllabus-final.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship of 08 weeks duration during summer vacation' as a bare footnote row (no S.No., category, or L-T-P-C entry), not a numbered course row, and the source PDF gives no evaluation scheme, guidelines or unit content. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official ECE III-II structure confirms an eight-week mandatory summer internship but gives no credits or detailed guidelines."
     },
     {
       "id": "r23-ece-4-1-cellular-and-mobile-communications",

@@ -1090,7 +1090,12 @@
       "subject_code": null,
       "name": "Evaluation of Community Service Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -1102,16 +1107,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-eee-3-1",
         "title": "Community Service Internship - R23 EEE 3-1",
-        "meta_description": "JNTUK R23 EEE 3-1 Evaluation of Community Service Internship (2 credits) - listed in the course structure with no detailed syllabus."
+        "meta_description": "JNTUK R23 EEE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the III-I course structure lists 'Evaluation of Community Service Internship' with 2 credits (L-T-P shown as dashes) but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official EEE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
     },
     {
       "id": "r23-eee-3-1-signals-and-systems",
@@ -1323,7 +1328,54 @@
         "C": 3
       },
       "type": "theory",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Amplitude Modulation",
+          "topics": [
+            "Basic blocks of a communication system",
+            "Principles of AM, DSB-SC, SSB-SC and VSB-SC",
+            "AM transmitters and receivers"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Angle Modulation",
+          "topics": [
+            "Frequency and phase modulation",
+            "FM transmission bandwidth",
+            "FM generation and detection methods, transmitters and receivers"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Sampling and Pulse Modulation",
+          "topics": [
+            "Sampling theorem",
+            "PAM, PWM and PPM concepts",
+            "PCM systems",
+            "Data transmission using BASK, BFSK, BPSK and QPSK"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Error-Control Coding",
+          "topics": [
+            "Linear block-code encoders and decoders",
+            "Cyclic-code encoders and syndrome calculators",
+            "Convolutional codes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Modern Communication Systems",
+          "topics": [
+            "Microwave communication systems",
+            "Optical and satellite communication systems",
+            "Mobile communication systems"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1333,16 +1385,16 @@
       "seo": {
         "slug": "communication-systems-jntuk-r23-eee-3-1",
         "title": "Communication Systems - JNTUK R23 EEE 3-1",
-        "meta_description": "JNTUK R23 EEE 3-1 Communication Systems (Professional Elective-I) - listed with 3-0-0-3 credits but no syllabus content in the source document."
+        "meta_description": "JNTUK R23 EEE 3-1 Communication Systems: AM and FM, sampling, pulse and digital modulation, error-control coding and modern communication systems."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
-        "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and five-unit syllabus are sourced directly from JNTUK’s official R23 EEE document."
       },
-      "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (pages 15-16) -- only the heading 'Communication Systems' and the L-T-P-C line (3-0-0-3), with no course objectives, outcomes, units or textbooks. The other two Professional Elective-I options (Signals and Systems, Computer Architecture and Organization) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+      "notes": null
     },
     {
       "id": "r23-eee-3-1-renewable-energy-sources",
@@ -1564,16 +1616,16 @@
       "seo": {
         "slug": "entrepreneurship-development-and-venture-creation-jntuk-r23-eee-3-1",
         "title": "Entrepreneurship Development - R23 EEE 3-1",
-        "meta_description": "JNTUK R23 EEE 3-1 Entrepreneurship Development & Venture Creation - an Open Elective-I alternative with no syllabus content in the source document."
+        "meta_description": "JNTUK R23 EEE 3-1 Entrepreneurship Development & Venture Creation (3 credits), listed without an exact unit-wise syllabus."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: this is listed in the III-I course structure as an OR-alternative to Open Elective-I (3-0-0-3), but the source document contains no syllabus section for it -- no course objectives, outcomes, units or textbooks (unlike the two Open Elective-I options Renewable Energy Sources and Concepts of Energy Auditing & Management, which are complete). Source the unit-wise content from an official document before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official EEE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
     },
     {
       "id": "r23-eee-3-2-switchgear-and-protection",
@@ -4849,8 +4901,50 @@
         "C": 0
       },
       "type": "theory",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction to Indian Constitution: Constitution meaning of the term, Indian Constitution - Sources and constitutional history, Features - Citizenship, Preamble, Fundamental Rights and Duties, Directive Principles of State Policy."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Union Government and its Administration Structure of the Indian Union: Federalism, Centre- State relationship, President: Role, power and position, PM and Council of ministers, Cabinet and Central Secretariat, LokSabha, RajyaSabha, The Supreme Court and High Court: Powers and Functions;"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "State Government and its Administration Governor - Role and Position - CM and Council of ministers, State Secretariat: Organization, Structure and Functions"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "A Local Administration - District’s Administration Head - Role and Importance, Municipalities - Mayor and role of Elected Representative - CEO of Municipal Corporation PachayatiRaj: Functions PRI: Zilla Panchayat, Elected officials and their roles, CEO Zilla Panchayat: Block level Organizational Hierarchy - (Different departments), Village level - Role of Elected and Appointed officials - Importance of grass root democracy"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Election Commission: Election Commission- Role of Chief Election Commissioner and Election Commissionerate State Election Commission: Functions of Commissions for the welfare of SC/ST/OBC and women"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain the historical background and democratic importance of the Indian Constitution",
+        "Explain the functions of the executive, legislative and judicial branches of government",
+        "Relate fundamental rights and duties to responsible citizenship",
+        "Analyze the decentralization of power across central, state and local government",
+        "Explain how constitutional institutions such as the CAG, Election Commission and UPSC sustain democracy"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4858,17 +4952,17 @@
       },
       "seo": {
         "slug": "constitution-of-india-jntuk-r23-eee-4-1",
-        "title": "Constitution of India - EEE 4-1",
-        "meta_description": "JNTUK R23 EEE 4-1 Constitution of India, listed as a 2-0-0 audit course without unit-wise content in the official EEE syllabus."
+        "title": "Constitution of India - JNTUK R23 EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Constitution of India: constitutional history, rights and duties, union and state government, local administration and elections."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
         "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title and semester placement come from JNTUK's official course structure; unit-wise content was not included."
+        "status": "verified",
+        "college_source_note": "EEE placement and credits are confirmed in JNTUK’s official EEE structure; the common five-unit syllabus is published in the official ECE document linked here and matches CE and Mechanical versions."
       },
-      "notes": "NEEDS VERIFICATION: the official EEE PDF contains only the course-structure row and title page for this audit course, with no units or outcomes."
+      "notes": "EEE placement source: https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf. The EEE PDF has a heading-only detail page; official ECE pages 183-184 provide the common syllabus used here."
     }
   ]
 }

@@ -1477,16 +1477,16 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-it-2-2",
         "title": "Community Service Project Internship - IT 2-2",
-        "meta_description": "JNTUK R23 IT 2-2 mandatory Community Service Project Internship (8 weeks) during summer vacation."
+        "meta_description": "JNTUK R23 IT Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/IT%20II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Sourced from an autonomous JNTUK-affiliated college's published syllabus -- autonomous colleges may adapt content slightly from the university-wide baseline."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "NEEDS VERIFICATION: the 2-2 course structure lists a 'Mandatory Community Service Project Internship of 08 weeks duration during summer vacation', but the source document gives no credits, evaluation scheme or detailed guidelines. This mirrors the same gap seen in the CSE and ECE Tirumala documents (a structural feature of how the college publishes these syllabi). Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official IT structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits or guidelines."
     },
     {
       "id": "r23-it-3-1-advanced-java",
@@ -2225,7 +2225,7 @@
     {
       "id": "r23-it-3-2-soft-skills",
       "regulation": "R23",
-      "branch": "IT",
+      "branch": null,
       "specialization": null,
       "year": 3,
       "semester": 2,
@@ -2292,30 +2292,29 @@
           ]
         }
       ],
-      "course_outcomes": [
-        "Interpret the essence of key soft skills such as creativity & problem solving, emotional intelligence, leadership qualities, etc.",
-        "Outline interview essentials for graduate-job prospects.",
-        "Apply presentation skills in academic and professional settings.",
-        "Demonstrate knowledge about domain specific industry and the prospective workplace."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "soft-skills-jntuk-r23-it-3-2",
-        "title": "Soft Skills - R23 IT 3-2",
-        "meta_description": "JNTUK R23 IT 3-2 Soft Skills: analytical thinking & listening, self-management & etiquette, standard operation methods, job-oriented and interpersonal skills."
+        "slug": "soft-skills-jntuk-r23-3-2",
+        "title": "Soft Skills - JNTUK R23 3-2",
+        "meta_description": "JNTUK R23 CSE/IT 3-2 Soft Skills: analytical thinking, communication, self-management, etiquette, job preparation and interpersonal relationships."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
+        "college_source_note": "The title, credits and five-unit syllabus are published in JNTUK’s official R23 IT document linked here and match the official CSE syllabus."
       },
-      "notes": "Skill Enhancement Course (0-1-2-2). Five modules read from SRKR R23 IT 3-2 PDF (B23BS3201; offered commonly to AIML, CSBS, CSE, IT and MECH)."
+      "notes": "Common CSE/IT Skill Enhancement Course (0-1-2-2); the official documents publish objectives and five units but no course-outcome list.",
+      "branchCodes": [
+        "CSE",
+        "IT"
+      ]
     },
     {
       "id": "r23-it-3-2-software-testing-methodologies",
@@ -3085,102 +3084,6 @@
       "notes": "Professional Elective (PE-III, 3-0-0-3), an elective option -- not mandatory for every IT student. Five-unit syllabus read from SRKR R23 IT 3-2 PDF (B23IT3212)."
     },
     {
-      "id": "r23-it-3-2-technical-paper-writing-and-ipr",
-      "regulation": "R23",
-      "branch": "IT",
-      "specialization": null,
-      "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": null,
-      "name": "Technical Paper Writing & IPR",
-      "category": "MandatoryNonCredit",
-      "credits": {
-        "L": 2,
-        "T": 0,
-        "P": 0,
-        "C": 0
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Introduction, Planning and Structuring",
-          "topics": [
-            "Introduction to writing technical reports; forming technical sentences and using transitions",
-            "Using tenses for technical writing",
-            "Planning the report and identifying readers; voice, formatting and structuring",
-            "Sections of a technical report and writing minutes of a meeting"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Drafting and Final Edits",
-          "topics": [
-            "The use of drafts; illustrations and graphics",
-            "Grammar, spelling and readability; writing in plain English",
-            "Jargon and final layout issues",
-            "Spelling, punctuation, grammar, padding, paragraphs and ambiguity"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Proofreading and Presenting Reports",
-          "topics": [
-            "Proofreading and writing summaries",
-            "Activities on summaries",
-            "Presenting final reports: printed presentation",
-            "Verbal presentation skills and an introduction to proposals"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Using a Word Processor",
-          "topics": [
-            "Adding, updating and deleting a table of contents; adding an index and creating an outline",
-            "Adding comments; tracking, viewing, accepting and rejecting changes",
-            "Working with footnotes and endnotes; inserting citations and bibliography",
-            "Comparing and combining documents; marking final, read-only and password protection; using macros"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Intellectual Property Rights",
-          "topics": [
-            "Nature of intellectual property: patents, designs, trade and copyright",
-            "Process of patenting and development",
-            "Technological research, innovation, patenting and development",
-            "International scenario and cooperation on intellectual property"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Construct grammatically sound and concise technical write-ups.",
-        "Prepare the outline and structure of a technical paper with essential sections.",
-        "Develop a project proposal and dissertation framework aligned with academic conventions.",
-        "Use a word processor effectively for document formatting, citations, and version control.",
-        "Identify appropriate IPR mechanisms for protecting various types of intellectual creations."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "technical-paper-writing-and-ipr-jntuk-r23-it-3-2",
-        "title": "Technical Paper Writing & IPR - R23 IT 3-2",
-        "meta_description": "SRKR R23 IT 3-2 audit course Technical Paper Writing & IPR: technical report writing, drafting & editing, proofreading, word processing and IPR."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-11",
-        "status": "needs_verification",
-        "college_source_note": "Subject name, credits, and unit-wise syllabus are sourced directly from JNTUK's own official R23 course structure and syllabus document; JNTUK's own document does not publish course outcomes for this subject, so the outcomes shown are the college's own material and have not been verified against JNTUK's syllabus."
-      },
-      "notes": "HELD as needs_verification (not published). Audit course / Mandatory Non-Credit (2-0-0-0, no credits) from SRKR R23 IT 3-2 PDF (B23AC3201, common to several branches). Per the project's audit-course discipline, content-light non-credit/audit rows require an explicit publication decision before going public, so this is retained as a draft rather than published."
-    },
-    {
       "id": "r23-it-3-1-object-oriented-analysis-and-design",
       "regulation": "R23",
       "branch": "IT",
@@ -3769,16 +3672,16 @@
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-it-3-1",
         "title": "Evaluation of Community Service Internship - R23 IT 3-1",
-        "meta_description": "SRKR R23 IT 3-1 Community Service Internship (evaluation): summer community-service internship assessed as a project row; held pending review."
+        "meta_description": "JNTUK R23 IT 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://srkrec.edu.in/files/SYLLABUS/R23/R23_3rd_YEAR_IT_SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Sourced from Sagi Rama Krishnam Raju Engineering College (SRKR, Bhimavaram) -- an autonomous JNTUK-affiliated college -- from its own published R23 syllabus. The subject list and unit topics here are SRKR's autonomous curriculum and have NOT been cross-confirmed against JNTUK's own centrally-administered exam records, so another college's IT 3-1 may differ."
+        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
-      "notes": "HELD as needs_verification (not published). Evaluation of Community Service Internship (B23IT3114, PR, 2 credits) from SRKR R23 IT 3-1 PDF -- a content-less activity/evaluation row with no gradeable syllabus, so it is retained as a draft rather than published, consistent with the project's treatment of internship/project rows."
+      "notes": "NEEDS VERIFICATION: the official IT III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
     },
     {
       "id": "r23-it-4-1-internet-of-things",
