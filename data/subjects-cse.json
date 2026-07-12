@@ -4206,6 +4206,1070 @@
         "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
       },
       "notes": "NEEDS VERIFICATION: the III-II course structure lists 'Mandatory Industry Internship / Mini Project of 08 weeks duration during summer vacation' as a bare footnote (not a numbered/coded course row), with no evaluation scheme, credits or unit content given. A footnote adds that interested students may pursue SWAYAM Plus courses (e.g. Hands-on Masterclass on Data Analytics OR AI for Real-World Application) under Industry Internship. Confirm credits and requirements against official JNTUK internship guidelines before flipping to verified."
+    },
+    {
+      "id": "r23-cse-4-1-deep-learning",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Deep Learning",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 2,
+        "T": 1,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals of Deep Learning",
+          "topics": [
+            "Artificial intelligence and machine learning history; probabilistic modeling; early neural networks; kernel methods; decision trees, random forests and gradient boosting; branches of machine learning; model evaluation; overfitting and underfitting"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Introducing Deep Learning",
+          "topics": [
+            "Biological and machine vision; human and machine language; artificial neural networks; training and improving deep neural networks"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Neural Networks and Frameworks",
+          "topics": [
+            "Anatomy of neural networks; Keras, TensorFlow, Theano and CNTK; setting up a deep-learning workstation; binary movie-review classification; multiclass newswire classification"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Convolutional and Recurrent Neural Networks",
+          "topics": [
+            "Representation learning and convolution; multichannel convolution; recurrent neural networks and implementation; PyTorch tensors; convolutional neural networks in PyTorch"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Applications and Research Topics",
+          "topics": [
+            "Computer vision and natural language processing; generative adversarial networks; deep reinforcement learning; autoencoders; Boltzmann machines, restricted Boltzmann machines and deep belief networks"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "deep-learning-jntuk-r23-cse-4-1",
+        "title": "Deep Learning - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Deep Learning syllabus: neural networks, CNNs, RNNs, PyTorch, computer vision, NLP, GANs, reinforcement learning and autoencoders."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-human-resources-and-project-management",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Human Resources & Project Management",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Human Resource Management and Planning",
+          "topics": [
+            "Nature, scope, functions and role of HRM; current trends, e-HRM, HR audit and ethics; HR planning and forecasting; job design; recruitment and selection"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Human Resource Development",
+          "topics": [
+            "HRD concepts, accounting and models; training and development; performance appraisal; career development and counselling; group interaction"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Project Fundamentals and Appraisal",
+          "topics": [
+            "Project basics, resources, environment and types; networks and detailed project reports; project lifecycle and proposals; progress, appraisal and selection; production technology and communication matrix"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Project Implementation and Control",
+          "topics": [
+            "Project types, challenges and strategies; implementation and review; project organization, planning and control; human aspects, prerequisites, evaluation and abandonment"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Project Review and Evaluation",
+          "topics": [
+            "Project implementation and review; organizational and planning considerations; control systems; human aspects; prerequisites; project evaluation and abandonment"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "human-resources-and-project-management-jntuk-r23-cse-4-1",
+        "title": "HR & Project Management - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Human Resources & Project Management syllabus: HR planning, recruitment, training, appraisal, project selection, implementation and control."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-software-architecture-and-design-patterns",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Software Architecture & Design Patterns",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Design Patterns and Object-Oriented Development",
+          "topics": [
+            "Design-pattern concepts, catalogue, selection and use; object-oriented development concepts, benefits and drawbacks"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Object-Oriented Analysis and Design",
+          "topics": [
+            "Analysis phase and requirements gathering; functional specifications; conceptual classes, relationships and domain models; design and implementation"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Structural Design Patterns",
+          "topics": [
+            "Adapter, Bridge, Composite, Decorator, Facade, Flyweight and Proxy patterns"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Model-View-Controller and Pattern Application",
+          "topics": [
+            "MVC; analysis, design, subsystems and implementation of a drawing program; undo, incomplete items and adding features through pattern solutions"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Distributed and Web Object Systems",
+          "topics": [
+            "Distributed objects and client-server systems; Java RMI; object-oriented web systems; SOAP and REST web services; enterprise service bus"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "software-architecture-and-design-patterns-jntuk-r23-cse-4-1",
+        "title": "Software Architecture & Patterns - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Software Architecture & Design Patterns syllabus: object-oriented design, structural patterns, MVC, distributed objects and web services."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-blockchain-technology",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Blockchain Technology",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Blockchain Fundamentals",
+          "topics": [
+            "Blockchain components, types and consensus; Bitcoin, altcoins and tokens: fundamentals, types and usage"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Public Blockchains and Smart Contracts",
+          "topics": [
+            "Public blockchains, Bitcoin and Ethereum; smart-contract characteristics and types; oracles; Ethereum smart contracts and industry applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Private and Consortium Blockchains",
+          "topics": [
+            "Private blockchains, e-commerce examples, commands, state machines and permissioned consensus; Byzantine fault tolerance; Multichain; Hyperledger, Ripple and Corda; initial coin offerings"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Blockchain Challenges and Applications",
+          "topics": [
+            "Security, privacy, scalability, identity and compliance; decentralized applications and Hyperledger security; banking, education, energy, healthcare, real estate, supply-chain and IoT applications; limitations"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Case Studies and Implementation",
+          "topics": [
+            "Retail, banking, healthcare and energy case studies; building a blockchain with Python; Hyperledger Fabric networks, chaincode and Java SDK"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "blockchain-technology-jntuk-r23-cse-4-1",
+        "title": "Blockchain Technology - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Blockchain Technology syllabus: Bitcoin, Ethereum, smart contracts, private and consortium chains, security and Hyperledger Fabric."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-augmented-reality-and-virtual-reality",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Augmented Reality & Virtual Reality",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Augmented Reality Foundations",
+          "topics": [
+            "AR introduction, history and examples; displays, perception, requirements and spatial models; tracking, calibration, registration, coordinate systems and sensors"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Computer Vision and Interaction for AR",
+          "topics": [
+            "Marker, multicamera, natural-feature and outdoor tracking; interaction modalities, interfaces and haptics; software architecture, dataflow and scene graphs"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Virtual Reality Geometry and Optics",
+          "topics": [
+            "VR introduction, history and physiology; geometric models, rotations and viewing transforms; light, optics, the human eye, cameras and displays"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Visual Perception and Rendering",
+          "topics": [
+            "Vision physiology, eye movements, depth, motion and colour perception; ray tracing, shading and rasterization; distortion, latency and immersive media"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Motion, Interaction and Audio",
+          "topics": [
+            "Motion and vestibular systems; physics, vection, locomotion and social interaction; audio physics, hearing, perception and rendering"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "augmented-reality-and-virtual-reality-jntuk-r23-cse-4-1",
+        "title": "AR & VR - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 AR & VR syllabus: displays, tracking, computer vision, interaction, geometry, optics, rendering, perception, locomotion and spatial audio."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-internet-of-things",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Internet of Things",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "IoT Foundations",
+          "topics": [
+            "Wireless sensor networks, machine-to-machine systems and cyber-physical systems; IoT evolution, enabling technologies, components and addressing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Sensing, Actuation and Processing",
+          "topics": [
+            "Sensor and actuator types, characteristics and deviations; data-processing formats and topologies; device design and computation offloading"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "IoT Connectivity and Communication",
+          "topics": [
+            "IEEE 802.15.4, Zigbee, Thread and Bluetooth families; infrastructure, discovery, data, identity, device-management and semantic communication protocols"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Interoperability and Fog Computing",
+          "topics": [
+            "IoT interoperability standards and frameworks; fog-computing architecture and IoT applications"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "IoT Paradigms and Case Studies",
+          "topics": [
+            "IoT paradigms, challenges and future directions; agriculture and connected-vehicle case studies"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "internet-of-things-jntuk-r23-cse-4-1",
+        "title": "Internet of Things - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Internet of Things syllabus: sensing, actuation, connectivity protocols, interoperability, fog computing, challenges and case studies."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-agentic-ai",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Agentic AI",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Foundations of Agentic AI",
+          "topics": [
+            "Agentic, generative and reactive AI; autonomy, proactivity and goals; agent components and architectures; rationality and applications"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Decision-Making, Planning and Learning",
+          "topics": [
+            "Utility, Markov decision processes and uncertainty; reinforcement learning; PPO, DQN and A3C; metacognition and aligned decision-making"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Large Language Models and Agent Behaviour",
+          "topics": [
+            "Transformers and attention; LLMs; zero-shot, chain-of-thought and ReAct prompting; retrieval-augmented generation, memory, context, embeddings and tool use"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Agent Tools and Frameworks",
+          "topics": [
+            "LangChain, LangGraph, AutoGen and CrewAI; vector databases; orchestration, multi-agent communication, deployment, monitoring and scaling"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Responsible and Applied Agentic AI",
+          "topics": [
+            "Risk, bias, fairness, interpretability, privacy, transparency, accountability and safety; healthcare, cybersecurity and business case studies"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain agentic AI concepts and architectures and distinguish agentic systems from generative and reactive systems",
+        "Apply decision-making, planning and reinforcement-learning techniques to autonomous agents",
+        "Analyze the role of large language models, prompts, memory and tools in agent behaviour",
+        "Design single-agent and multi-agent solutions using contemporary frameworks and coordination mechanisms",
+        "Evaluate agentic AI applications with attention to ethics, safety and value alignment"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "agentic-ai-jntuk-r23-cse-4-1",
+        "title": "Agentic AI - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Agentic AI syllabus: autonomous-agent architectures, planning, reinforcement learning, LLM agents, tools, multi-agent systems and AI safety."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-agile-methodologies",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Agile Methodologies",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Agile Foundations",
+          "topics": [
+            "Agile development; values and manifesto; agile perspectives and getting started"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Agile Principles",
+          "topics": [
+            "The twelve principles; customer focus, delivery, communication, execution and continuous improvement"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Scrum",
+          "topics": [
+            "Scrum rules, team ownership, daily scrum, feedback and adaptation; last responsible moment; sprints, planning and retrospectives; user stories, velocity and values"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Extreme Programming",
+          "topics": [
+            "Extreme Programming practices and values; managing change; simplicity and incremental design"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Lean and Kanban",
+          "topics": [
+            "Lean principles, waste, product understanding and fast delivery; Kanban flow; agile coaching"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "agile-methodologies-jntuk-r23-cse-4-1",
+        "title": "Agile Methodologies - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Agile Methodologies syllabus: Agile values and principles, Scrum, user stories, Extreme Programming, Lean, Kanban and agile coaching."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-generative-ai",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Generative AI",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Generative AI Foundations",
+          "topics": [
+            "History; generative versus discriminative models; GANs, VAEs, autoregressive, vector-quantized and diffusion models; probabilistic processes, challenges, future directions, ethics and use cases"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Language Models and Transformers",
+          "topics": [
+            "Language models, transformers and attention; BERT and GPT; autoencoding and autoregression; ChatGPT, prompting, RLHF, RAG, multimodality and hallucination"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Image Generation",
+          "topics": [
+            "GANs and game theory; VAEs and encoder-decoder models; stable diffusion; transformer image models; CLIP, ViT, DALL-E and GPT-4V; mode collapse"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Creative Models and Autonomous Agents",
+          "topics": [
+            "GAN variants and CycleGAN; painting, style transfer and music generation with RNNs and MuseGAN; autonomous agents, deep Q-learning and actor-critic methods"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Training, Tools and Deployment",
+          "topics": [
+            "Training and fine-tuning; GPT4All; transfer learning and pretrained models; Copilot and programming LLMs; LangChain, Llama and TimeSformer; deployment and Hugging Face"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "generative-ai-jntuk-r23-cse-4-1",
+        "title": "Generative AI - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Generative AI syllabus: transformers, GPT, GANs, VAEs, diffusion, multimodal models, agents, fine-tuning, LangChain and deployment."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-computer-vision",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Computer Vision",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Image Formation",
+          "topics": [
+            "Cameras, radiometry, light and surfaces; shading, photometric stereo, interreflections and colour"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Image Processing and Texture",
+          "topics": [
+            "Filters, convolution, Fourier methods, sampling, edges, noise and derivatives; texture, pyramids, synthesis and shape"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Multiview Vision and Segmentation",
+          "topics": [
+            "Stereopsis, reconstruction, fusion and multicamera systems; segmentation and perceptual grouping; shot and background segmentation; clustering and graph methods"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Fitting and Tracking",
+          "topics": [
+            "Hough transforms, line and curve fitting, probabilistic and robust fitting, expectation maximization; tracking, linear models, Kalman filtering and data association"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Camera Geometry and Model-Based Vision",
+          "topics": [
+            "Camera models, projection, calibration, distortion and photogrammetry; robot localization; model-based vision, pose, invariants, medical-image registration and curved surfaces"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computer-vision-jntuk-r23-cse-4-1",
+        "title": "Computer Vision - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Computer Vision syllabus: image formation, filters, texture, multiview geometry, segmentation, Hough methods, tracking and camera calibration."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-cyber-physical-systems",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Cyber Physical Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Symbolic Controller Synthesis",
+          "topics": [
+            "Basic and advanced symbolic synthesis; model construction, controllers and synthesis tools"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Cyber-Physical System Security",
+          "topics": [
+            "Security requirements, attacks and countermeasures; system-theoretic approaches to CPS security"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Distributed Cyber-Physical Systems",
+          "topics": [
+            "Synchronization, complexity reduction and formal systems engineering; consensus, lockstep operation and time-triggered systems"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Real-Time Scheduling",
+          "topics": [
+            "Fixed-parameter scheduling; memory and multicore considerations; handling execution-time variability"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Model Integration",
+          "topics": [
+            "Causality, time and process interaction; domain-specific modelling languages; Forspec and CyPhyML; language semantics"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cyber-physical-systems-jntuk-r23-cse-4-1",
+        "title": "Cyber Physical Systems - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Cyber Physical Systems syllabus: controller synthesis, CPS security, distributed synchronization, real-time scheduling and model integration."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-prompt-engineering",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Prompt Engineering",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 1,
+        "P": 2,
+        "C": 2
+      },
+      "type": "theory_cum_lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Prompt Engineering Foundations",
+          "topics": [
+            "Prompt engineering versus fine-tuning; benefits, principles and prompt anatomy; Python and iterative prompt lifecycle; common pitfalls",
+            "Labs: environment setup, baseline and enhanced prompts, iterative refinement and failure diagnosis"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Context, Examples and Constraints",
+          "topics": [
+            "Contextual and output specifications; few-shot prompting; templates, roles, negative prompts, constraints and refinement",
+            "Labs: zero-shot and few-shot prompts, role and negative prompting, and constraint-based refinement"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Structured Outputs and Reasoning",
+          "topics": [
+            "Lists, tables, Markdown, JSON and YAML; chain-of-thought and problem decomposition",
+            "Labs: format control, JSON/YAML validation, chain-of-thought and decomposition"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Retrieval-Augmented Generation",
+          "topics": [
+            "RAG, LangChain and LCEL; indexing, embeddings, vector stores, retrieval and generation",
+            "Labs: LCEL pipelines, document indexing and a RAG chain"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Agents, Evaluation and Safety",
+          "topics": [
+            "Agents, multimodal prompting, evaluation and LLM-as-judge; security, prompt injection, ethics and UI frameworks",
+            "Labs: tool-using agent, multimodal prompt, evaluation and ethics exercises"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "prompt-engineering-jntuk-r23-cse-4-1",
+        "title": "Prompt Engineering - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Prompt Engineering theory and lab syllabus: prompt design, few-shot learning, structured output, RAG, LangChain, agents and evaluation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-constitution-of-india",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Constitution of India",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Constitutional History and Features",
+          "topics": [
+            "Historical background and drafting of the Constitution; Preamble and salient features"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Rights, Duties and Directive Principles",
+          "topics": [
+            "Fundamental rights and duties; equality, freedom, protection from exploitation, religious freedom, cultural and educational rights, constitutional remedies and Directive Principles of State Policy"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Parliament, Executive and Judiciary",
+          "topics": [
+            "Parliament and executive; President, Governor and Councils of Ministers; judiciary and appointment of judges"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Local Administration",
+          "topics": [
+            "District administration; municipalities, Mayor and Chief Executive Officer; Panchayati Raj, Zila Parishad, block and village administration; grassroots democracy"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Elections and Welfare Institutions",
+          "topics": [
+            "Election Commission of India, Chief Election Commissioner and State Election Commissions; welfare institutions for SC, ST, OBC and women"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "constitution-of-india-jntuk-r23-cse-4-1",
+        "title": "Constitution of India - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Constitution of India syllabus: constitutional history, rights and duties, government institutions, local administration and elections."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 CSE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-cse-4-1-evaluation-of-industry-internship-mini-project",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Evaluation of Industry Internship / Mini Project",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-industry-internship-mini-project-jntuk-r23-cse-4-1",
+        "title": "Internship / Mini Project Evaluation - CSE 4-1",
+        "meta_description": "JNTUK R23 CSE 4-1 Evaluation of Industry Internship / Mini Project (2 credits), listed in the official structure without detailed evaluation guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: JNTUK lists this as a 2-credit internship evaluation row but provides no detailed evaluation scheme or guidelines in the syllabus. Confirm those requirements before marking the record verified."
+    },
+    {
+      "id": "r23-cse-4-2-full-semester-internship-and-project-work",
+      "regulation": "R23",
+      "branch": "CSE",
+      "specialization": "CSE",
+      "year": 4,
+      "semester": 2,
+      "year_sem_label": "4-2",
+      "subject_code": null,
+      "name": "Full Semester Internship & Project Work",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 24,
+        "C": 12
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "full-semester-internship-and-project-work-jntuk-r23-cse-4-2",
+        "title": "Internship & Project Work - CSE 4-2",
+        "meta_description": "JNTUK R23 CSE 4-2 Full Semester Internship & Project Work (0-0-24-12), listed as the sole final-semester item without detailed guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: JNTUK lists Full Semester Internship & Project Work as the sole VIII-semester item (0-0-24-12) but provides no detailed project, internship or evaluation guidelines. Confirm those requirements before marking the record verified."
     }
   ]
 }
