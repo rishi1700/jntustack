@@ -89,12 +89,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 48–50."
     },
     {
       "id": "r23-eee-3-1-digital-circuits",
@@ -185,12 +185,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 51–52."
     },
     {
       "id": "r23-eee-3-1-power-systems-ii",
@@ -281,12 +281,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 53–55."
     },
     {
       "id": "r23-eee-3-1-power-electronics-lab",
@@ -306,7 +306,28 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Plot characteristics of SCR, power MOSFET and power IGBT devices",
+            "Study R, RC and UJT firing circuits for an SCR",
+            "Analyze a single-phase semi-converter with R and RL loads",
+            "Analyze a single-phase full converter with R and RL loads",
+            "Analyze a three-phase full converter with R and RL loads",
+            "Operate a single-phase dual converter in circulating- and non-circulating-current modes",
+            "Analyze a single-phase AC voltage regulator with R and RL loads",
+            "Analyze a single-phase step-down cycloconverter with R and RL loads",
+            "Operate a boost converter in continuous-conduction mode",
+            "Operate a buck converter in continuous-conduction mode",
+            "Analyze a single-phase square-wave bridge inverter with R and RL loads",
+            "Analyze a single-phase PWM inverter",
+            "Analyze a three-phase bridge inverter in 120-degree and 180-degree conduction modes",
+            "Apply SPWM control to a three-phase bridge inverter"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Analyse characteristics of various power electronic devices and design firing circuits for SCR.",
         "Analyse the performance of single–phase dual, three–phase full–wave bridge converters and dual converter with both resistive and inductive loads.",
@@ -326,12 +347,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: device characteristics, R/RC/UJT firing circuits, single-phase full/semi/dual and three-phase full converters, AC voltage regulator, cycloconverter, buck/boost converters, square-wave and SPWM inverters."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE pages 65–66."
     },
     {
       "id": "r23-eee-3-1-analog-and-digital-circuits-lab",
@@ -351,7 +372,32 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Analyze diode clipper and clamper circuits",
+            "Analyze transistor self-bias",
+            "Analyze voltage-series and current-series feedback amplifiers",
+            "Analyze Wien-bridge and RC phase-shift oscillators",
+            "Analyze IC 741 integrator and differentiator circuits",
+            "Analyze IC 555 monostable and astable multivibrators",
+            "Analyze Schmitt-trigger circuits using IC 741 and IC 555",
+            "Verify PLL characteristics using IC 565",
+            "Analyze eight-bit ADC and DAC circuits",
+            "Design a full adder and full subtractor",
+            "Realize a parallel adder/subtractor using IC 7483",
+            "Implement a 3-to-8 decoder using gates and IC 7445",
+            "Implement an 8-to-1 multiplexer using gates and IC 74151",
+            "Verify a master-slave JK flip-flop using IC 7476",
+            "Realize SISO, SIPO, PISO and PIPO shift registers using IC 7495",
+            "Implement a MOD-10 ripple counter",
+            "Implement a MOD-8 synchronous up/down counter",
+            "Implement four-bit ring and Johnson counters"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Analyse diode clipper/clamper circuits and transistor biasing.",
         "Illustrate the operation of feedback amplifiers and oscillator circuits.",
@@ -370,12 +416,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core lab (0-0-3-1.5). Part A (analog): clipper/clamper, transistor biasing, feedback amplifiers, Wien-bridge and RC phase-shift oscillators, IC 741 integrator/differentiator, IC 555 multivibrators/Schmitt trigger, IC 565 PLL, ADC/DAC. Part B (digital): full adder/subtractor, IC 7483 adder, decoders, multiplexers, IC 7476 JK flip-flop, IC 7495 shift registers, ripple/synchronous/ring/Johnson counters. Read from the source PDF."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 67."
     },
     {
       "id": "r23-eee-3-1-soft-skills",
@@ -460,12 +506,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, course objectives and five-unit syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF; that entry does not publish a separate course-outcomes list."
       },
-      "notes": "Skill Enhancement Course (0-1-2-2). Name, credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official 0-1-2-2 skill-enhancement syllabus verified on JNTUK R23 EEE page 68; the official entry provides objectives and five units but no separate course-outcomes list."
     },
     {
       "id": "r23-eee-3-1-tinkering-lab",
@@ -485,7 +531,27 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Build parallel and series breadboard circuits",
+            "Demonstrate a traffic-light circuit",
+            "Build an automatic street light using an LDR",
+            "Simulate Arduino LED blinking in Tinkercad",
+            "Build Arduino LED blinking using the Arduino IDE",
+            "Interface an IR sensor and servo motor with Arduino",
+            "Blink an LED using ESP32",
+            "Interface an LDR with ESP32",
+            "Control an LED using a mobile application",
+            "Design and 3D-print a walking robot",
+            "Design and 3D-print a rocket",
+            "Build remote soil-moisture monitoring with a computer dashboard",
+            "Apply the design-thinking process to redesign a motorbike"
+          ]
+        }
+      ],
       "course_outcomes": [
         "The students will be able to experiment, innovate, and solve real-world challenges."
       ],
@@ -501,12 +567,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Engineering Science lab (0-0-2-1). Experiment list read from the source PDF: breadboard series/parallel circuits, traffic-light circuit, automatic street light using LDR, Arduino LED blinking (Tinkercad and IDE), IR sensor and servo motor interfacing, ESP32 LED/LDR, mobile-app LED control, 3D-printed walking robot and rocket, soil-moisture monitoring, and a design-thinking motorbike redesign."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 69."
     },
     {
       "id": "r23-eee-3-2-electrical-measurements-and-instrumentation",
@@ -597,12 +663,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 71–72."
     },
     {
       "id": "r23-eee-3-2-microprocessors-and-microcontrollers",
@@ -693,12 +759,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 73–74."
     },
     {
       "id": "r23-eee-3-2-power-system-analysis",
@@ -789,12 +855,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core. Name, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Official title, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 75–76."
     },
     {
       "id": "r23-eee-3-2-electrical-measurements-and-instrumentation-lab",
@@ -814,7 +880,30 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Calibrate a dynamometer wattmeter using phantom loading",
+            "Measure resistance using a Kelvin double bridge",
+            "Measure capacitance using a Schering bridge",
+            "Measure inductance using an Anderson bridge",
+            "Calibrate an LPF wattmeter by direct loading",
+            "Measure balanced three-phase reactive power using a single wattmeter",
+            "Test a current transformer and measure ratio and phase-angle errors",
+            "Test a potential transformer by comparison and measure errors",
+            "Determine thermocouple characteristics",
+            "Determine LVDT characteristics",
+            "Determine capacitive-transducer characteristics",
+            "Measure strain using a bridge strain gauge",
+            "Measure choke-coil parameters and single-phase power using three-voltmeter and three-ammeter methods",
+            "Calibrate a single-phase induction energy meter",
+            "Calibrate DC current and voltage using a Crompton DC potentiometer",
+            "Use an AC potentiometer in polar and Cartesian forms to calibrate voltage and determine choke parameters"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Know about the phantom loading and calibration process.",
         "Measure the electrical parameters voltage - current - power- energy and electrical characteristics of resistance - inductance and capacitance.",
@@ -834,12 +923,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: dynamometer wattmeter calibration (phantom loading), Kelvin's double / Schering / Anderson bridges, LPF wattmeter calibration, three-phase reactive power, CT and PT testing, thermocouple/LVDT/capacitive transducer characteristics, strain gauge, choke coil parameters, energy meter calibration, DC and AC potentiometer calibration."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE pages 95–96."
     },
     {
       "id": "r23-eee-3-2-microprocessors-and-microcontrollers-lab",
@@ -859,7 +948,32 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Write 8086 programs for signed, unsigned, ASCII and multibyte arithmetic",
+            "Write 8086 logic, shift, rotate, BCD-unpacking and BCD-to-ASCII programs",
+            "Sort an array in ascending and descending order",
+            "Determine the factorial of a number",
+            "Implement block moves, reversal, sorting, insertion, deletion, length and comparison string operations",
+            "Generate terms of a Fibonacci series",
+            "Count and sum even and odd array elements",
+            "Find sums of natural numbers and their squares",
+            "Perform arithmetic operations on the 8051",
+            "Convert between decimal and hexadecimal",
+            "Find the sum, largest and smallest values in an array using the 8051",
+            "Interface the 8255 PPI with the 8086",
+            "Control a stepper motor using the 8253/8255",
+            "Read and write a parallel port using the 8051",
+            "Use 8051 timers in different modes",
+            "Implement serial communication using the 8051",
+            "Explore 8051 memory areas using external interrupts",
+            "Implement a traffic-light controller using the 8051"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Write assembly language program using 8086 microprocessor based on arithmetic - logical number systems and shift operations.",
         "Write assembly language programs for numeric operations and array handling problems.",
@@ -880,12 +994,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core lab (0-0-3-1.5). Experiment list read from the source PDF: 8086 arithmetic, logic, array, factorial, Fibonacci and string programs; 8051 arithmetic, number conversion and array programs; interfacing 8255 PPI, stepper motor (8253/8255), parallel port, timers, serial communication and a traffic-light controller."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE pages 97–98."
     },
     {
       "id": "r23-eee-3-2-iot-applications-of-electrical-engineering-lab",
@@ -955,6 +1069,28 @@
             "ZigBee and their integration with Arduino/Raspberry Pi",
             "Features of Alexa"
           ]
+        },
+        {
+          "number": 6,
+          "title": "Laboratory Experiments (Any 10)",
+          "topics": [
+            "Familiarize with Arduino/Raspberry Pi and perform the necessary software installation",
+            "Interface an LED/buzzer and turn the LED on for one second after every two seconds",
+            "Interface a push button or digital IR/LDR sensor and turn an LED on when the button is pressed or the sensor detects an event",
+            "Interface a temperature sensor and print temperature and humidity readings",
+            "Interface an organic light-emitting diode (OLED)",
+            "Interface Bluetooth and send sensor data to a smartphone",
+            "Interface Bluetooth and turn an LED on/off when 1/0 is received from a smartphone",
+            "Upload and retrieve temperature and humidity data from the ThingSpeak cloud",
+            "Interface a seven-segment display",
+            "Interface a joystick",
+            "Interface analog input and digital output",
+            "Build a night-light control and monitoring system",
+            "Interface a fire alarm",
+            "Build an IR remote control for home appliances",
+            "Build a heart-rate monitoring system",
+            "Build an Alexa-based home-automation system"
+          ]
         }
       ],
       "course_outcomes": [
@@ -976,12 +1112,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five tutorial modules, complete 16-item experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Skill Enhancement Course (0-1-2-2). Five tutorial modules plus an experiment list read from the source PDF."
+      "notes": "Official five-module tutorial syllabus, stated course outcomes and complete 16-item experiment list verified on JNTUK R23 EEE pages 99–100."
     },
     {
       "id": "r23-eee-3-2-research-methodology",
@@ -992,7 +1128,7 @@
       "semester": 2,
       "year_sem_label": "3-2",
       "subject_code": null,
-      "name": "Research Methodology",
+      "name": "Research Methodology & IPR",
       "category": "MandatoryNonCredit",
       "credits": {
         "L": 2,
@@ -1066,18 +1202,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "research-methodology-jntuk-r23-eee-3-2",
-        "title": "Research Methodology - JNTUK R23 EEE 3-2",
-        "meta_description": "JNTUK R23 EEE 3-2 Research Methodology (audit): research problem, literature and ethics, intellectual property, patent rights and IPR developments."
+        "slug": "research-methodology-and-ipr-jntuk-r23-eee-3-2",
+        "title": "Research Methodology & IPR - EEE 3-2",
+        "meta_description": "JNTUK R23 EEE 3-2 Research Methodology and IPR syllabus: research formulation, literature and ethics, patents, rights and IPR developments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '--' in the source). 5-unit syllabus read from the source PDF."
+      "notes": "Stable entity ID retained; official title and five-unit audit-course syllabus verified on JNTUK R23 EEE pages 101–102."
     },
     {
       "id": "r23-eee-3-1-evaluation-of-community-service-internship",
@@ -1207,12 +1343,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-I option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 56–57."
     },
     {
       "id": "r23-eee-3-1-computer-architecture-and-organization",
@@ -1303,12 +1439,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-I option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 58–59."
     },
     {
       "id": "r23-eee-3-1-communication-systems",
@@ -1485,12 +1621,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Open Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Open Elective-I option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 61–62."
     },
     {
       "id": "r23-eee-3-1-concepts-of-energy-auditing-and-management",
@@ -1581,12 +1717,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Open Elective-I option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Open Elective-I option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 63–64."
     },
     {
       "id": "r23-eee-3-1-entrepreneurship-development-and-venture-creation",
@@ -1716,12 +1852,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-II option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 77–79."
     },
     {
       "id": "r23-eee-3-2-advanced-control-systems",
@@ -1812,12 +1948,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-II option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 80–81."
     },
     {
       "id": "r23-eee-3-2-renewable-and-distributed-energy-technologies",
@@ -1908,12 +2044,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-II option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 82–84."
     },
     {
       "id": "r23-eee-3-2-electric-drives",
@@ -2004,12 +2140,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-III option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 85–86."
     },
     {
       "id": "r23-eee-3-2-digital-signal-processing",
@@ -2100,12 +2236,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-III option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 87–88."
     },
     {
       "id": "r23-eee-3-2-high-voltage-engineering",
@@ -2196,12 +2332,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Elective-III option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Professional Elective-III option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 89–90."
     },
     {
       "id": "r23-eee-3-2-fundamentals-of-electric-vehicles",
@@ -2292,12 +2428,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Open Elective-II option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 91–92."
     },
     {
       "id": "r23-eee-3-2-electrical-wiring-estimation-and-costing",
@@ -2388,12 +2524,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/THIRD%20YEAR/EEE-R23-III%20YEAR%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Open Elective-II option. Name, 3-0-0-3 credits and full 5-unit syllabus read from the source PDF."
+      "notes": "Official Open Elective-II option, 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 93–94."
     },
     {
       "id": "r23-eee-2-1-dc-machines-and-transformers",
@@ -2414,10 +2550,10 @@
       },
       "type": "theory",
       "course_outcomes": [
-        "Understand the process of voltage build-up in DC generators and characteristics.",
-        "Understand the process of torque production, starting and speed control of DC motors and illustrate their characteristics.",
-        "Obtain the equivalent circuit of single-phase transformer and determine its efficiency & regulation.",
-        "Analyse various configurations of three-phase transformers."
+        "Explain voltage build-up and characteristics of DC generators.",
+        "Explain torque production, starting and speed control of DC motors and analyze their characteristics.",
+        "Obtain a single-phase transformer equivalent circuit and determine efficiency and regulation.",
+        "Analyze common three-phase transformer configurations."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2426,17 +2562,60 @@
       },
       "seo": {
         "slug": "r23-eee-2-1-dc-machines-and-transformers",
-        "title": "DC Machines & Transformers",
-        "meta_description": "JNTUK R23 EEE 2-1 DC Machines & Transformers subject page with verified 3-0-0-3 credits and source details."
+        "title": "DC Machines & Transformers - EEE 2-1",
+        "meta_description": "JNTUK R23 EEE 2-1 DC Machines and Transformers syllabus: DC generators and motors, transformer operation, testing and three-phase connections."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Extracted candidate from parsed source evidence. Requires human verification."
+      "notes": "Five-unit official syllabus transcribed from JNTUK R23 EEE pages 14–15.",
+      "units": [
+        {
+          "number": 1,
+          "title": "DC Generators",
+          "topics": [
+            "Construction and operating principle, generator EMF equation, excitation and characteristics",
+            "Applications, motor back EMF and torque, armature reaction and commutation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "DC Motors: Starting, Speed Control and Testing",
+          "topics": [
+            "Motor characteristics, losses, efficiency and applications",
+            "Three- and four-point starters, armature-voltage and field-current speed control",
+            "Brake, Swinburne, Hopkinson and field tests"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Single-Phase Transformers",
+          "topics": [
+            "Construction, operating principle, EMF equation and no-load and on-load phasor diagrams",
+            "Equivalent circuit, regulation, losses, efficiency, frequency and voltage effects and all-day efficiency"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Transformer Testing and Operation",
+          "topics": [
+            "Open-circuit, short-circuit and Sumpner tests and separation of losses",
+            "Parallel operation, autotransformer equivalent circuit and comparison with two-winding transformers"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Three-Phase Transformers",
+          "topics": [
+            "Y/Y, Y/delta, delta/Y, delta/delta, open-delta and vector-group connections",
+            "Third harmonics, parallel operation, three-winding transformers, switching transients, tap changers and Scott connection"
+          ]
+        }
+      ]
     },
     {
       "id": "r23-eee-2-1-complex-variables-and-numerical-methods",
@@ -2523,16 +2702,16 @@
       "seo": {
         "slug": "complex-variables-and-numerical-methods-jntuk-r23-eee-2-1",
         "title": "Complex Variables & Numerical Methods - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Complex Variables & Numerical Methods: iterative methods, numerical integration & ODEs, complex integration and conformal mapping."
+        "meta_description": "JNTUK R23 EEE 2-1 Complex Variables & Numerical Methods: iterative methods, numerical integration & ODEs, complex integration and conformal mapping."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Basic Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Basic Science course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 2–3."
     },
     {
       "id": "r23-eee-2-1-universal-human-values",
@@ -2620,16 +2799,16 @@
       "seo": {
         "slug": "universal-human-values-jntuk-r23-eee-2-1",
         "title": "Universal Human Values - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Universal Human Values: value education, harmony in the human being, family & society, nature/existence, and professional ethics."
+        "meta_description": "JNTUK R23 EEE 2-1 Universal Human Values: value education, harmony in the human being, family and society, nature/existence, and professional ethics."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "HSMC theory (2-1-0-3). AICTE Universal Human Values (UHV-II) module list read from Tirumala R23 EEE II-I & II-II PDF; content is the standard cross-branch UHV course."
+      "notes": "Official 2-1-0-3 Universal Human Values syllabus and six course outcomes verified on JNTUK R23 EEE pages 4–8."
     },
     {
       "id": "r23-eee-2-1-electromagnetic-field-theory",
@@ -2716,16 +2895,16 @@
       "seo": {
         "slug": "electromagnetic-field-theory-jntuk-r23-eee-2-1",
         "title": "Electromagnetic Field Theory - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Electromagnetic Field Theory: electrostatics, conductors & dielectrics, magnetostatics, inductance and time-varying fields."
+        "meta_description": "JNTUK R23 EEE 2-1 Electromagnetic Field Theory: electrostatics, conductors and dielectrics, magnetostatics, inductance and time-varying fields."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Engineering Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Engineering Science course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 9–11."
     },
     {
       "id": "r23-eee-2-1-electrical-circuit-analysis-ii",
@@ -2812,16 +2991,16 @@
       "seo": {
         "slug": "electrical-circuit-analysis-ii-jntuk-r23-eee-2-1",
         "title": "Electrical Circuit Analysis-II - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Electrical Circuit Analysis-II: three-phase circuits, Laplace & transient analysis, network parameters, Fourier analysis and filters."
+        "meta_description": "JNTUK R23 EEE 2-1 Electrical Circuit Analysis-II: three-phase circuits, Laplace and transient analysis, network parameters, Fourier analysis and filters."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft of the same subject."
+      "notes": "Official Professional Core course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 12–13."
     },
     {
       "id": "r23-eee-2-1-electrical-circuit-analysis-ii-and-simulation-lab",
@@ -2841,7 +3020,26 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Measure active and reactive power for balanced loads",
+            "Measure active and reactive power for unbalanced loads",
+            "Determine Z and Y parameters",
+            "Determine ABCD and hybrid parameters",
+            "Verify Kirchhoff current and voltage laws using simulation",
+            "Verify mesh and nodal analysis using simulation",
+            "Verify superposition and maximum-power-transfer theorems using simulation",
+            "Verify reciprocity and compensation theorems using simulation",
+            "Verify Thevenin and Norton theorems using simulation",
+            "Verify series and parallel resonance using simulation",
+            "Simulate transient responses of RL, RC and RLC circuits",
+            "Verify self-inductance and mutual inductance using simulation"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Understand the power calculations in three phase circuits.",
         "Evaluate the time response of given network.",
@@ -2856,16 +3054,16 @@
       "seo": {
         "slug": "electrical-circuit-analysis-ii-and-simulation-lab-jntuk-r23-eee-2-1",
         "title": "Circuit Analysis-II & Simulation Lab - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Electrical Circuit Analysis-II & Simulation Lab: 3-phase power, transients, two-port parameters, and network-theorem simulations."
+        "meta_description": "JNTUK R23 EEE 2-1 Electrical Circuit Analysis-II & Simulation Lab: three-phase power, transients, two-port parameters and network simulations."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): Part A -- measurement of active and reactive power for balanced and unbalanced loads, three-phase power by the two-wattmeter method, R-L and R-C time constants using a CRO, Z/Y and ABCD/hybrid parameters; Part B (simulation) -- verification of Kirchhoff's laws, mesh and nodal analysis, superposition and maximum power transfer, reciprocity and compensation, Thevenin's and Norton's theorems, series and parallel resonance, transient response of RL/RC/RLC circuits, and self/mutual inductance. Supersedes a pipeline-extracted needs_verification draft."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 16."
     },
     {
       "id": "r23-eee-2-1-dc-machines-and-transformers-lab",
@@ -2885,7 +3083,27 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Control DC shunt-motor speed using field current and armature voltage",
+            "Conduct a brake test on a DC shunt motor",
+            "Use Swinburne test to predetermine DC generator and motor efficiencies",
+            "Conduct Hopkinson test on DC shunt machines",
+            "Conduct a load test on a DC compound generator",
+            "Conduct a load test on a DC shunt generator",
+            "Conduct a field test on DC series machines",
+            "Conduct a brake test on a DC compound motor",
+            "Conduct open-circuit and short-circuit tests on a single-phase transformer",
+            "Conduct Sumpner test on a single-phase transformer",
+            "Study the Scott connection of transformers",
+            "Operate single-phase transformers in parallel",
+            "Separate core losses of a single-phase transformer"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Demonstrate starting and speed control methods of DC Machines.",
         "Apply theoretical concepts in analyzing the performance characteristics of DC Machines.",
@@ -2900,16 +3118,16 @@
       "seo": {
         "slug": "dc-machines-and-transformers-lab-jntuk-r23-eee-2-1",
         "title": "DC Machines & Transformers Lab - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 DC Machines & Transformers Lab: speed control, brake/Swinburne/Hopkinson tests, and single-phase transformer OC/SC & Sumpner tests."
+        "meta_description": "JNTUK R23 EEE 2-1 DC Machines & Transformers Lab: speed control, machine tests and single-phase transformer OC, SC and Sumpner tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): speed control of a DC shunt motor by field-current and armature-voltage control; brake test on DC shunt and compound motors; Swinburne's, Hopkinson's and field tests; load tests on DC shunt and compound generators; OC and SC tests, Sumpner's test, Scott connection, parallel operation and separation of core losses of single-phase transformers. Supersedes a pipeline-extracted needs_verification draft."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 17."
     },
     {
       "id": "r23-eee-2-1-data-structures-lab",
@@ -2937,7 +3155,11 @@
             "Definition and importance of data structures; abstract data types (ADTs)",
             "1-D and 2-D arrays; row-major and column-major storage",
             "Searching techniques: linear and binary search",
-            "Sorting techniques: bubble, selection and quick sort"
+            "Sorting techniques: bubble, selection and quick sort",
+            "Sample experiment: find the minimum and maximum elements in an array",
+            "Sample experiment: implement matrix multiplication",
+            "Sample experiment: locate an element in a sorted array using binary search",
+            "Sample experiment: implement selection sort and quick sort"
           ]
         },
         {
@@ -2947,7 +3169,10 @@
             "Singly linked lists: representation and operations",
             "Doubly linked lists and circular linked lists",
             "Comparing arrays and linked lists",
-            "Applications of linked lists, including polynomial addition"
+            "Applications of linked lists, including polynomial addition",
+            "Sample experiment: implement insertion, deletion and traversal operations",
+            "Sample experiment: store student name, roll number and marks using a circular doubly linked list",
+            "Sample experiment: add two polynomial expressions using linked lists"
           ]
         },
         {
@@ -2957,7 +3182,11 @@
             "Introduction to stacks: properties and operations",
             "Implementing stacks using arrays and linked lists",
             "Applications: expression evaluation and infix-to-postfix conversion",
-            "Backtracking and reversing a list using a stack"
+            "Backtracking and reversing a list using a stack",
+            "Sample experiment: implement stack operations using arrays and linked lists",
+            "Sample experiment: convert an infix expression to postfix using a stack",
+            "Sample experiment: evaluate a postfix expression using a stack",
+            "Sample experiment: reverse a linked list using a stack"
           ]
         },
         {
@@ -2967,7 +3196,10 @@
             "Introduction to queues: properties and operations",
             "Circular queues; implementing queues using arrays and linked lists",
             "Applications of queues such as scheduling",
-            "Double-ended queues (deques) and their operations"
+            "Double-ended queues (deques) and their operations",
+            "Sample experiment: implement queue operations using arrays and linked lists",
+            "Sample experiment: implement a circular queue using arrays and linked lists",
+            "Sample experiment: implement a deque using a linked list"
           ]
         },
         {
@@ -2977,7 +3209,9 @@
             "Introduction to trees",
             "Binary trees and traversals",
             "Binary search tree: insertion, deletion and traversal",
-            "Implementing tree operations using linked lists"
+            "Implementing tree operations using linked lists",
+            "Sample experiment: implement binary-tree traversals using a linked list",
+            "Sample experiment: create a binary search tree, perform in-order traversal, insertion and deletion"
           ]
         }
       ],
@@ -2996,16 +3230,16 @@
       "seo": {
         "slug": "data-structures-lab-jntuk-r23-eee-2-1",
         "title": "Data Structures Lab - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Data Structures Lab: arrays, searching & sorting, linked lists, stacks, queues & deques, and binary trees."
+        "meta_description": "JNTUK R23 EEE 2-1 Data Structures Lab: arrays, searching and sorting, linked lists, stacks, queues, deques and binary trees."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus, complete sample-experiment lists and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Skill Enhancement Course (0-1-2-2). Five-unit syllabus with sample experiments read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft."
+      "notes": "Official 0-1-2-2 skill-enhancement syllabus, five course outcomes and complete sample experiments verified on JNTUK R23 EEE pages 18–20."
     },
     {
       "id": "r23-eee-2-1-environmental-science",
@@ -3092,16 +3326,16 @@
       "seo": {
         "slug": "environmental-science-jntuk-r23-eee-2-1",
         "title": "Environmental Science - R23 EEE 2-1",
-        "meta_description": "Tirumala R23 EEE 2-1 Environmental Science: natural resources, ecosystems & biodiversity, pollution, social issues and human population."
+        "meta_description": "JNTUK R23 EEE 2-1 Environmental Science: natural resources, ecosystems and biodiversity, pollution, social issues and human population."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Mandatory Non-Credit / audit course (2-0-0, no credits). Published as verified because it carries substantive syllabus content, consistent with the site's other Environmental Science pages. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official 2-0-0 non-credit audit course with five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 21–23."
     },
     {
       "id": "r23-eee-2-2-managerial-economics-and-financial-analysis",
@@ -3112,7 +3346,7 @@
       "semester": 2,
       "year_sem_label": "2-2",
       "subject_code": null,
-      "name": "Managerial Economics and Financial Analysis",
+      "name": "Managerial Economics & Financial Analysis",
       "category": "HSMC",
       "credits": {
         "L": 2,
@@ -3189,16 +3423,16 @@
       "seo": {
         "slug": "managerial-economics-and-financial-analysis-jntuk-r23-eee-2-2",
         "title": "Managerial Economics & Financial Analysis - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Managerial Economics & Financial Analysis: demand & elasticity, production & cost, markets, capital budgeting and accounting."
+        "meta_description": "JNTUK R23 EEE 2-2 Managerial Economics & Financial Analysis: demand and elasticity, production and cost, markets, capital budgeting and accounting."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "HSMC theory (2-0-0-2). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Management Course-I with 2-0-0-2 credits, five-unit syllabus and six course outcomes verified on JNTUK R23 EEE pages 24–25."
     },
     {
       "id": "r23-eee-2-2-analog-circuits",
@@ -3285,16 +3519,16 @@
       "seo": {
         "slug": "analog-circuits-jntuk-r23-eee-2-2",
         "title": "Analog Circuits - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Analog Circuits: clippers & BJT biasing, small-signal modelling, feedback, oscillators, op-amps and data converters."
+        "meta_description": "JNTUK R23 EEE 2-2 Analog Circuits: clippers and BJT biasing, small-signal modelling, feedback, oscillators, op-amps and data converters."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Engineering Science theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Engineering Science/Basic Science course with 3-0-0-3 credits, five-unit syllabus and outcomes verified on JNTUK R23 EEE pages 26–28."
     },
     {
       "id": "r23-eee-2-2-power-systems-i",
@@ -3380,16 +3614,16 @@
       "seo": {
         "slug": "power-systems-i-jntuk-r23-eee-2-2",
         "title": "Power Systems-I - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Power Systems-I: hydro & thermal stations, nuclear stations, substations, underground cables & distribution, and economics & tariffs."
+        "meta_description": "JNTUK R23 EEE 2-2 Power Systems-I: hydro and thermal stations, nuclear stations, substations, underground cables and distribution, and economics and tariffs."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF. Supersedes a pipeline-extracted needs_verification draft of the same subject."
+      "notes": "Official Professional Core course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 29–31."
     },
     {
       "id": "r23-eee-2-2-induction-and-synchronous-machines",
@@ -3475,16 +3709,16 @@
       "seo": {
         "slug": "induction-and-synchronous-machines-jntuk-r23-eee-2-2",
         "title": "Induction and Synchronous Machines - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Induction and Synchronous Machines: 3-phase induction motors, performance, single-phase motors, synchronous generators and motors."
+        "meta_description": "JNTUK R23 EEE 2-2 Induction and Synchronous Machines: three-phase induction motors, performance, single-phase motors, synchronous generators and motors."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Professional Core course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 32–34."
     },
     {
       "id": "r23-eee-2-2-control-systems",
@@ -3571,16 +3805,16 @@
       "seo": {
         "slug": "control-systems-jntuk-r23-eee-2-2",
         "title": "Control Systems - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Control Systems: mathematical modelling, time response & stability, frequency response, compensator design and state-space analysis."
+        "meta_description": "JNTUK R23 EEE 2-2 Control Systems: mathematical modelling, time response and stability, frequency response, compensator design and state-space analysis."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Professional Core theory (3-0-0-3). Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official Professional Core course with 3-0-0-3 credits, five-unit syllabus and course outcomes verified on JNTUK R23 EEE pages 35–36."
     },
     {
       "id": "r23-eee-2-2-induction-and-synchronous-machines-lab",
@@ -3600,7 +3834,27 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Conduct a brake test on a three-phase induction motor",
+            "Develop the circle diagram of a three-phase induction motor",
+            "Control three-phase induction-motor speed using the V/f method",
+            "Determine the equivalent circuit of a single-phase induction motor",
+            "Improve single-phase induction-motor power factor using capacitors",
+            "Conduct a load test on a single-phase induction motor",
+            "Determine alternator regulation using synchronous-impedance and MMF methods",
+            "Determine alternator regulation using the Potier-triangle method",
+            "Plot V and inverted-V curves of a three-phase synchronous motor",
+            "Determine Xd, Xq and regulation of a salient-pole synchronous generator",
+            "Determine three-phase alternator efficiency using an induction-motor load",
+            "Operate three-phase alternators in parallel under no-load and load conditions",
+            "Determine single-phase AC series-motor efficiency using a brake test"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Analyze the speed control methods on 3-phase Induction Motor.",
         "Evaluate the performance of 3-phase Induction Motor by obtaining the locus diagram and equivalent circuit of 3-phase Induction Motor",
@@ -3616,16 +3870,16 @@
       "seo": {
         "slug": "induction-and-synchronous-machines-lab-jntuk-r23-eee-2-2",
         "title": "Induction & Synchronous Machines Lab - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Induction & Synchronous Machines Lab: induction-motor tests, single-phase motor tests, and alternator regulation experiments."
+        "meta_description": "JNTUK R23 EEE 2-2 Induction & Synchronous Machines Lab: induction and single-phase motor tests plus alternator regulation experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): brake test and circle diagram of a three-phase induction motor; V/f speed control; equivalent circuit, power-factor improvement and load test on a single-phase induction motor; regulation of a three-phase alternator by synchronous-impedance, MMF and Potier-triangle methods; V and inverted-V curves; Xd/Xq and regulation of a salient-pole alternator; efficiency and parallel operation of alternators; and brake test on a single-phase AC series motor."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 37."
     },
     {
       "id": "r23-eee-2-2-control-systems-lab",
@@ -3645,7 +3899,26 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Analyze a second-order system in the time domain",
+            "Study synchro characteristics",
+            "Study the effects of P, PD, PI and PID controllers on a second-order system",
+            "Design lag and lead compensation using magnitude and phase plots",
+            "Determine the transfer function of a DC motor",
+            "Plot root locus, Bode and Nyquist diagrams for systems up to fifth order using MATLAB",
+            "Apply Kalman tests of controllability and observability using MATLAB",
+            "Implement PID temperature control",
+            "Study magnetic-amplifier characteristics",
+            "Study AC servo-motor characteristics",
+            "Study DC servo-motor characteristics",
+            "Verify logic-gate truth tables and simple Boolean expressions using a PLC"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Analyze the performance of Magnetic amplifier D.C and A.C. servo motors and synchrous.",
         "Design of PID controllers and compensators.",
@@ -3661,16 +3934,16 @@
       "seo": {
         "slug": "control-systems-lab-jntuk-r23-eee-2-2",
         "title": "Control Systems Lab - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Control Systems Lab: DC/AC servo motors, magnetic amplifiers, synchros, PID control, and MATLAB root-locus/Bode/Nyquist experiments."
+        "meta_description": "JNTUK R23 EEE 2-2 Control Systems Lab: servo motors, magnetic amplifiers, synchros, PID control and MATLAB response-analysis experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, complete experiment list and course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Lab (0-0-3-1.5). Experiment list from Tirumala R23 EEE II-I & II-II PDF (any 10 to be conducted): transfer function of a DC motor; characteristics of AC and DC servo motors, magnetic amplifiers and synchros; second-order system time-domain analysis; effect of P/PD/PI/PID controllers; temperature control using a PID controller; root-locus, Bode and Nyquist plots in MATLAB; lag and lead compensation design; Kalman's test of controllability and observability in MATLAB; and verification of logic-gate truth tables and Boolean expressions using a PLC."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 EEE page 38."
     },
     {
       "id": "r23-eee-2-2-python-programming-lab",
@@ -3698,7 +3971,13 @@
             "History and thrust areas of Python; Anaconda distribution and Jupyter Notebook",
             "Identifiers, keywords, statements, variables, operators, precedence and data types",
             "Indentation, comments, input/output and type conversions",
-            "Control-flow statements: if/elif/else, while and for loops, break/continue, try/except"
+            "Control-flow statements: if/elif/else, while and for loops, break/continue, try/except",
+            "Sample experiment: find the largest of three numbers",
+            "Sample experiment: display all prime numbers within an interval",
+            "Sample experiment: swap two numbers without a temporary variable",
+            "Sample experiment: demonstrate arithmetic, relational, assignment, logical, bitwise, ternary, membership and identity operators",
+            "Sample experiment: add and multiply complex numbers",
+            "Sample experiment: print the multiplication table of a given number"
           ]
         },
         {
@@ -3708,7 +3987,13 @@
             "Built-in functions and commonly used modules; function definition and calling",
             "Return statement, scope and lifetime, default and keyword arguments, *args and **kwargs",
             "Strings: operations, indexing, slicing, methods and formatting",
-            "Lists: operations, indexing and slicing, built-in functions and methods"
+            "Lists: operations, indexing and slicing, built-in functions and methods",
+            "Sample experiment: define a function with multiple return values",
+            "Sample experiment: define a function using default arguments",
+            "Sample experiment: find a string's length without library functions",
+            "Sample experiment: check whether a substring is present in a string",
+            "Sample experiment: perform addition, insertion and slicing operations on a list",
+            "Sample experiment: apply any five built-in functions to a list"
           ]
         },
         {
@@ -3718,7 +4003,12 @@
             "Dictionaries: creating, accessing and modifying key:value pairs, built-in functions and methods",
             "Tuples: creating, operations, indexing and slicing",
             "Sets and set methods; the zip() function",
-            "Relation between tuples, lists and frozensets"
+            "Relation between tuples, lists and dictionaries; zip(), sets, set methods and frozensets",
+            "Sample experiment: create and concatenate name, age, address and college tuples for two members",
+            "Sample experiment: count vowels in a string without control flow",
+            "Sample experiment: check whether a key exists in a dictionary",
+            "Sample experiment: add a new key-value pair to a dictionary",
+            "Sample experiment: sum all items in a dictionary"
           ]
         },
         {
@@ -3728,7 +4018,13 @@
             "File types; reading and writing text and binary files; the pickle module",
             "Reading and writing CSV files; os and os.path modules",
             "Classes and objects; constructor method; class vs data attributes",
-            "Encapsulation, inheritance and polymorphism"
+            "Encapsulation, inheritance and polymorphism",
+            "Sample experiment: sort words from one file into another as lowercase words",
+            "Sample experiment: print every line of a file in reverse order",
+            "Sample experiment: count the characters, words and lines in a file",
+            "Sample experiment: create, display, append, insert and reverse array items",
+            "Sample experiment: add, transpose and multiply two matrices",
+            "Sample experiment: implement a Shape class with area/perimeter methods and Circle, Triangle and Square subclasses"
           ]
         },
         {
@@ -3738,7 +4034,14 @@
             "Functional programming in Python",
             "JSON and XML in Python",
             "NumPy arrays with Python",
-            "Pandas data frames"
+            "Pandas data frames",
+            "Sample experiment: check whether a JSON string contains a complex object",
+            "Sample experiment: create NumPy arrays using array()",
+            "Sample experiment: demonstrate ndarray ndim, shape, size and dtype",
+            "Sample experiment: demonstrate basic slicing plus integer and Boolean indexing",
+            "Sample experiment: find an array's minimum, maximum, sum and cumulative sum",
+            "Sample experiment: convert a five-key dictionary of ten-value lists to a Pandas data frame, apply head() and perform data-selection operations",
+            "Sample experiment: select two data-frame columns and compare them using scatter and plot operations in Matplotlib"
           ]
         }
       ],
@@ -3751,16 +4054,16 @@
       "seo": {
         "slug": "python-programming-lab-jntuk-r23-eee-2-2",
         "title": "Python Programming Lab - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Python Programming Lab: basics & control flow, functions, strings & lists, collections, files & OOP, and data science."
+        "meta_description": "JNTUK R23 EEE 2-2 Python Programming Lab: basics and control flow, functions, strings and lists, collections, files, OOP and data science."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and complete sample-experiment lists are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF; that entry does not publish a separate course-outcomes list."
       },
-      "notes": "Skill Enhancement Course (0-1-2-2). Five-unit syllabus with sample experiments read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official 0-1-2-2 skill-enhancement syllabus and complete sample experiments verified on JNTUK R23 EEE pages 39–41; the official entry does not publish a separate course-outcomes list."
     },
     {
       "id": "r23-eee-2-2-design-thinking-and-innovation",
@@ -3847,16 +4150,16 @@
       "seo": {
         "slug": "design-thinking-and-innovation-jntuk-r23-eee-2-2",
         "title": "Design Thinking & Innovation - R23 EEE 2-2",
-        "meta_description": "Tirumala R23 EEE 2-2 Design Thinking & Innovation: design fundamentals, design-thinking process, innovation, product design, and business processes."
+        "meta_description": "JNTUK R23 EEE 2-2 Design Thinking & Innovation: design fundamentals, design-thinking process, innovation, product design and business processes."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/EEE-II-I%20%26%20II-II%20SYLLABUS.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement, credits, five-unit syllabus and stated course outcomes are sourced directly from JNTUK's official R23 EEE course structure and syllabus PDF."
       },
-      "notes": "Engineering Science, theory-cum-lab (1-0-2-2), common to all branches. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+      "notes": "Official 1-0-2-2 Engineering Science syllabus, activities and course outcomes verified on JNTUK R23 EEE pages 42–43."
     },
     {
       "id": "r23-eee-4-1-power-system-operation-and-control",

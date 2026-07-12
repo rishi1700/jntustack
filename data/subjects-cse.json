@@ -665,7 +665,28 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Advanced Data Structures and Algorithm Experiments",
+          "topics": [
+            "Construct an AVL tree from file-based input; implement insertion and deletion, then write an in-order traversal to a new file",
+            "Construct an order-5 B-tree from 100 random array elements and implement search, insertion and deletion",
+            "Construct min-heaps and max-heaps using arrays, delete an element and display the heap",
+            "Implement breadth-first and depth-first traversals using adjacency-matrix and adjacency-list graph representations",
+            "Find the biconnected components of a graph",
+            "Implement quick sort and merge sort and compare execution time for average, worst and best-case inputs",
+            "Compare greedy single-source shortest paths using adjacency-matrix and adjacency-list representations",
+            "Implement job sequencing with deadlines using a greedy strategy",
+            "Solve the 0/1 knapsack problem using dynamic programming",
+            "Solve the N-Queens problem using backtracking",
+            "Solve the 0/1 knapsack problem using backtracking",
+            "Solve the travelling salesperson problem using branch and bound",
+            "Minimum-cost spanning-tree algorithms",
+            "Optimal binary search trees"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Implement and manipulate advanced tree data structures such as AVL Trees, B-Trees, and Heaps to perform operations including insertion, deletion, traversal, and file/array-based storage",
         "Develop and analyze graph traversal and graph-based algorithms such as BFS, DFS, connected and biconnected components using multiple graph representations",
@@ -685,11 +706,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "Subject name, credits, and published laboratory experiment list are sourced directly from JNTUK's official R23 course structure and syllabus document."
       },
-      "notes": "Experiment-based lab (AVL and B-trees, min/max heaps, BFT/DFT, biconnected components, quick/merge sort timing, job sequencing, 0/1 knapsack via DP and backtracking, TSP via branch and bound). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty."
+      "notes": null
     },
     {
       "id": "r23-cse-2-1-object-oriented-programming-through-java-lab",
@@ -709,7 +730,23 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Java Laboratory Exercises",
+          "topics": [
+            "Display default primitive-data-type values and determine the nature of roots of a quadratic equation",
+            "Implement binary search, bubble sort and StringBuffer character deletion",
+            "Create classes and methods and demonstrate method overloading, constructors and constructor overloading",
+            "Implement single and multilevel inheritance and use an abstract class to calculate areas of shapes",
+            "Demonstrate the super keyword, interfaces and runtime polymorphism",
+            "Implement exception handling with multiple catch clauses, built-in exceptions and user-defined exceptions",
+            "Create threads with Thread and Runnable; demonstrate isAlive, join, daemon threads and the producer-consumer problem",
+            "Use a user-defined package and build JavaFX text/image and tip-calculator interfaces",
+            "Connect to a database with JDBC and insert and delete records"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Apply object-oriented programming fundamentals, including data types, control structures, classes, methods, inheritance, and polymorphism, to develop structured Java programs",
         "Implement and demonstrate Java features such as interfaces, packages, exception handling, and multithreading to build modular, robust, and concurrent applications",
@@ -729,11 +766,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "Subject name, credits, and published laboratory experiment list are sourced directly from JNTUK's official R23 course structure and syllabus document."
       },
-      "notes": "Experiment-based lab (data types, binary search and bubble sort, classes and constructor overloading, inheritance, super and interfaces, runtime polymorphism, exception handling, threads, packages, JavaFX GUI, JDBC). Name, 0-0-3-1.5 credits and exercise list confirmed from the source PDF; units left empty (lab)."
+      "notes": null
     },
     {
       "id": "r23-cse-2-1-python-programming",
@@ -1420,14 +1457,28 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [
-        "Use Unix utilities and perform basic shell control of the utilities",
-        "Use the Unix file system and file access control",
-        "Use of an operating system to develop software",
-        "Use Linux environment efficiently",
-        "Solve problems using bash for shell scripting"
+      "units": [
+        {
+          "number": 1,
+          "title": "Operating Systems Laboratory Experiments",
+          "topics": [
+            "Practice basic UNIX commands",
+            "Use UNIX system calls including fork, exec, getpid, exit, wait, close, stat, opendir and readdir",
+            "Simulate UNIX commands such as cp, ls and grep",
+            "Simulate FCFS, SJF, priority and round-robin CPU scheduling",
+            "Control open ports using semaphores and monitors",
+            "Illustrate concurrent thread execution with the pthreads library",
+            "Solve the producer-consumer problem using semaphores",
+            "Implement first-fit, worst-fit and best-fit fixed-partition memory allocation",
+            "Simulate FIFO, LRU and LFU page replacement",
+            "Simulate paging memory management",
+            "Implement Banker's algorithm for deadlock avoidance and prevention",
+            "Simulate sequential, indexed and linked file-allocation strategies",
+            "Install Nachos and conduct operating-system experiments with it"
+          ]
+        }
       ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1441,11 +1492,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "Subject name, credits, and published laboratory experiment list are sourced directly from JNTUK's official R23 course structure and syllabus document."
       },
-      "notes": "Experiment-based lab (basic UNIX commands and system calls; simulating cp/ls/grep; FCFS/SJF/Priority/Round Robin scheduling; semaphores and monitors; pthreads; producer-consumer; first/worst/best fit; FIFO/LRU/LFU page replacement; paging; Banker’s algorithm; file allocation strategies; Nachos). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
+      "notes": null
     },
     {
       "id": "r23-cse-2-2-database-management-systems-lab",
@@ -1465,13 +1516,30 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [
-        "Utilize SQL to execute queries for creating database and performing data manipulation operations",
-        "Examine integrity constraints to build efficient databases",
-        "Apply Queries using Advanced Concepts of SQL",
-        "Build PL/SQL programs including stored procedures, functions, cursors and triggers"
+      "units": [
+        {
+          "number": 1,
+          "title": "Database Management Laboratory Experiments",
+          "topics": [
+            "Create, alter and drop tables; insert rows and apply constraints",
+            "Write queries and subqueries using ANY, ALL, IN, EXISTS, NOT EXISTS, UNION and INTERSECT",
+            "Use aggregate functions, GROUP BY and HAVING, and create and drop views",
+            "Use conversion, string and date functions",
+            "Write PL/SQL blocks with declarations, executable and exception-handling sections; use COMMIT, ROLLBACK and SAVEPOINT",
+            "Use nested IF, CASE, NULLIF and COALESCE expressions",
+            "Use WHILE and numeric FOR loops, nested loops, built-in and user-defined exceptions and RAISE_APPLICATION_ERROR",
+            "Create procedures with IN and OUT parameters",
+            "Create stored functions and invoke them in SQL statements",
+            "Use parameterized cursors, FOR UPDATE, WHERE CURRENT OF and cursor variables",
+            "Create BEFORE, AFTER, row, statement and INSTEAD OF triggers",
+            "Compare indexed and non-indexed table searches",
+            "Connect a Java program to a database using JDBC",
+            "Insert database records through JDBC",
+            "Delete database records through JDBC"
+          ]
+        }
       ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1485,11 +1553,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "Subject name, credits, and published laboratory experiment list are sourced directly from JNTUK's official R23 course structure and syllabus document."
       },
-      "notes": "Experiment-based lab (create/alter/drop tables and constraints; sub-queries with ANY/ALL/IN/EXISTS/UNION/INTERSECT; aggregate functions and views; conversion, string and date functions; PL/SQL blocks with COMMIT/ROLLBACK/SAVEPOINT; loops and exception handling; procedures, functions, cursors and triggers; indexing; JDBC connectivity). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab)."
+      "notes": null
     },
     {
       "id": "r23-cse-2-2-full-stack-development-1",
@@ -1509,13 +1577,53 @@
         "C": 2
       },
       "type": "theory_cum_lab",
-      "units": [],
-      "course_outcomes": [
-        "Analyze a web page and identify its elements and attributes",
-        "Demonstrate the important HTML tags for designing static pages and separate design from content using Cascading Style Sheets",
-        "Implement MVC and responsive design to scale well across PC, tablet and Mobile Phone",
-        "Create web pages using HTML and Cascading Style Sheets"
+      "units": [
+        {
+          "number": 1,
+          "title": "HTML Fundamentals",
+          "topics": [
+            "Create ordered, unordered, nested and definition lists",
+            "Create hyperlinks and linked profile images",
+            "Build a thumbnail-based image gallery linked to full-size images",
+            "Build tables and a timetable using caption, spacing, padding, borders, rowspan and colspan",
+            "Design a registration form with text, password, number, date, checkbox, radio, select, textarea, submit and reset controls",
+            "Create a framed page with image, paragraph and hyperlink regions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "HTML5 and CSS",
+          "topics": [
+            "Use semantic HTML5 elements and embed audio and video",
+            "Apply inline, internal and external CSS",
+            "Use simple, combinator, pseudo-class, pseudo-element and attribute selectors",
+            "Work with CSS colors, backgrounds, fonts and text properties",
+            "Demonstrate the CSS box model with content, borders, margins and padding"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "JavaScript Input and Objects",
+          "topics": [
+            "Embed internal and external JavaScript and demonstrate input, output and type conversion",
+            "Collect voter details with a prompt and display voting eligibility in a table",
+            "Use document, window, array, math, string, regular-expression and date objects",
+            "Create user-defined objects with properties, methods, accessors and constructors"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "JavaScript Control Flow, Events and Validation",
+          "topics": [
+            "Use conditional statements and for, while, do-while, for-in, for-each and for-of loops",
+            "Implement larger-number, weekday, Armstrong-number and currency-denomination exercises",
+            "Use functions and events for factorial, Fibonacci, prime-number and palindrome tasks",
+            "Validate name, mobile-number and email fields in a registration page",
+            "Introduction to Node.js as listed in the official practical coverage"
+          ]
+        }
       ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1529,11 +1637,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-09",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "Subject name, credits, and published practical exercise list are sourced directly from JNTUK's official R23 course structure and syllabus document."
       },
-      "notes": "Skill Enhancement Course delivered as experiments covering: lists/links/images; HTML tables, forms and frames; HTML5 and CSS (types, selectors, colour/background/font/text, box model); JavaScript (I/O, type conversion, conditionals and loops, predefined and user-defined objects, functions and events, form validation); Node.js. Name, 0-1-2-2 credits and topic/experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
+      "notes": null
     },
     {
       "id": "r23-cse-2-2-design-thinking-and-innovation",
@@ -2149,7 +2257,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "NEEDS VERIFICATION: this Professional Elective-I option is a content-less stub in the source PDF (page 2 course-structure table only) -- only the name 'Microprocessors & Microcontrollers' with 3-0-0-3 credits, no course objectives, outcomes, units or textbooks found anywhere in the document. The other three Professional Elective-I options (Object Oriented Analysis and Design, Artificial Intelligence, Quantum Computing) have full syllabi. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+      "notes": "Professional Elective-I option 3 of 4. The official JNTUK PDF confirms the 3-0-0-3 credits, course outcomes and complete five-unit syllabus."
     },
     {
       "id": "r23-cse-3-1-quantum-computing",
@@ -2422,7 +2530,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Skill Enhancement Course delivered as experiments covering: ExpressJS (routing, HTTP methods, middleware, templating, form data, cookies, sessions, authentication, RESTful APIs, database connectivity via Mongoose); ReactJS (rendering HTML/JSX, function & class components, props/state, styles, events, conditional rendering, rendering lists, React forms, React Router, hooks, sharing data between components); MongoDB (installation, configuration, CRUD operations, databases, collections and records); plus augmented programs (to-do list app, quiz app, MongoDB certification). Name, 0-1-2-2 credits and topic/experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty."
+      "notes": "Skill Enhancement Course delivered through official practical modules covering ExpressJS, ReactJS and MongoDB. The 0-1-2-2 credits, course outcomes and exercises are confirmed by the official JNTUK PDF."
     },
     {
       "id": "r23-cse-3-1-user-interface-design-using-flutter",

@@ -1,5 +1,5 @@
 {
-  "_source_note": "ECE R23 II-Year (2-1 and 2-2) subject data sourced from Tirumala Engineering College's published JNTUK R23 ECE syllabus PDF: https://www.tecnrt.org/R23_FINIAL_SYLLABUS/SECOND%20YEAR/ECE%20II-I%20%26%20II-II%20SYLLABUS.pdf (downloaded 2026-07-01, 20 pages, extracted with pdf-parse). Tirumala Engineering College (Narasaraopet) is a JNTUK-affiliated AUTONOMOUS college -- confirmed by the source PDF's own letterhead ('TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'). As an autonomous college it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline, so every record below carries an autonomous-college local-adaptation caveat in its notes; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text. (The JNTUK DAA portal's autonomous list is a real but NON-exhaustive source -- it omits Tirumala -- so it is not a definitive autonomous/non-autonomous check.) The university's own forum PDF (forum.universityupdates.in) is login-gated and could not be fetched; this affiliated-college copy was used instead. Every record's source.origin_url points at the actual file used. verified = subject name, L-T-P-C credits AND full unit topics confirmed by reading the document; needs_verification = name/credits confirmed but full unit detail not transcribed in this pass (see each record's notes).",
+  "_source_note": "ECE R23 records are reconciled primarily against JNTUK's official central course-structure and syllabus PDFs. A small number of first-year shared practical records retain clearly labelled affiliated-college sources where the central detailed syllabus was unavailable. The source object on each record is authoritative for its provenance and verification state.",
   "subjects": [
     {
       "id": "r23-ece-2-1-signals-and-systems",
@@ -96,7 +96,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the Tirumala Engineering College JNTUK R23 ECE PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits, five-unit syllabus and outcomes confirmed from JNTUK's official R23 ECE syllabus."
     },
     {
       "id": "r23-ece-2-1-electronic-devices-and-circuits",
@@ -192,7 +192,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-1-switching-theory-and-logic-design",
@@ -290,7 +290,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits, and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-1-environmental-science",
@@ -385,7 +385,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as '-' (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Audit course (non-credit): the source lists L-T-P as 2-0-0 with credits shown as '-' (no credit); recorded as C:0. Full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-1-electronic-devices-and-circuits-lab",
@@ -405,7 +405,26 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Diode clipper circuit",
+            "Diode clamping circuit",
+            "Half-wave and full-wave rectifiers, with and without capacitor filters",
+            "BJT common-emitter input and output characteristics",
+            "FET common-source drain and transfer characteristics",
+            "SCR characteristics",
+            "UJT characteristics",
+            "Transistor biasing",
+            "CRO operation and measurements",
+            "BJT common-emitter amplifier",
+            "Emitter-follower common-collector amplifier",
+            "FET common-source amplifier"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -420,11 +439,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The title, semester placement, credits and complete experiment list are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
       },
-      "notes": "Experiment-based lab (clippers/clampers, rectifiers, BJT-CE and FET-CS characteristics, SCR/UJT, biasing, CE/CC/CS amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus exists for a lab, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 ECE page 17."
     },
     {
       "id": "r23-ece-2-1-switching-theory-and-logic-design-lab",
@@ -444,7 +463,31 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Verify truth tables of OR, AND, NOR, NAND, XOR and XNOR gates",
+            "Design and verify a minimized four-variable combinational circuit",
+            "Verify a 3-to-8 decoder/de-multiplexer",
+            "Verify a four-variable logic function using an 8-to-1 multiplexer",
+            "Design and verify a full-adder circuit",
+            "Verify JK edge-triggered, JK master-slave and D flip-flops",
+            "Design and verify a four-bit ring counter",
+            "Design and verify a four-bit Johnson counter",
+            "Verify a four-bit universal shift register in its operating modes",
+            "Construct and test a MOD-8 ripple counter",
+            "Design and verify a MOD-8 synchronous counter",
+            "Test a one-bit comparator and a decoder-driven seven-segment display",
+            "Design and test a BCD adder",
+            "Design and test an Excess-3 to 9's-complement converter",
+            "Demonstrate a 74154 de-multiplexer using LED outputs",
+            "Design a combinational circuit using a hardware description language",
+            "Design a sequential circuit using a hardware description language"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -459,11 +502,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The title, semester placement, credits and complete experiment list are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
       },
-      "notes": "Experiment-based lab covering logic gates, combinational circuits, decoders and multiplexers, flip-flops, counters, shift registers, and seven-segment displays. Name, 0-0-3-1.5 credits, experiment list, and II Year-I Semester placement are confirmed from JNTUK's official R23 ECE course structure and syllabus PDF."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 ECE page 18."
     },
     {
       "id": "r23-ece-2-1-data-structures-using-python",
@@ -483,7 +526,26 @@
         "C": 2
       },
       "type": "theory_cum_lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Create a Flower class with typed state, a constructor, setters and getters",
+            "Build a Polygon inheritance hierarchy with area and perimeter implementations",
+            "Demonstrate method overloading and method overriding",
+            "Use list, dictionary, set and generator comprehensions",
+            "Generate combinations of distinct objects from a list",
+            "Implement linear search and binary search",
+            "Implement bubble sort and selection sort",
+            "Implement merge sort and quick sort",
+            "Implement stacks and queues",
+            "Implement a singly linked list",
+            "Implement a doubly linked list",
+            "Implement a binary search tree"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -498,11 +560,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The title, semester placement, credits and complete experiment list are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
       },
-      "notes": "Skill Enhancement course delivered as programming experiments (classes/inheritance, comprehensions, linear/binary search, bubble/selection/merge/quick sort, stacks, queues, singly/doubly linked lists, BST). Name, 0-1-2-2 credits and experiment list confirmed from the source PDF; no unit-wise theory syllabus given, so units left empty. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 ECE page 19."
     },
     {
       "id": "r23-ece-2-1-probability-theory-and-stochastic-process",
@@ -597,7 +659,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
     },
     {
       "id": "r23-ece-2-1-universal-human-values",
@@ -693,7 +755,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
     },
     {
       "id": "r23-ece-2-2-managerial-economics-and-financial-analysis",
@@ -785,7 +847,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 2-0-0-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-linear-control-systems",
@@ -878,7 +940,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-electromagnetic-waves-and-transmission-lines",
@@ -972,7 +1034,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-electronic-circuit-analysis",
@@ -1065,7 +1127,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-analog-communications",
@@ -1162,7 +1224,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 3-0-0-3 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-signals-and-systems-lab",
@@ -1182,7 +1244,24 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Generate analog and discrete unit-step, unit-impulse, unit-ramp, sinusoidal and signum signals",
+            "Perform addition, subtraction, multiplication, division, maximum and minimum operations on signals",
+            "Determine signal energy and power and decompose signals into even and odd parts",
+            "Perform shifting, reversal and scaling of the independent variable",
+            "Perform convolution and deconvolution",
+            "Compute correlation",
+            "Obtain Fourier-series representations",
+            "Compute Fourier transforms and analyze Fourier spectra",
+            "Compute Laplace transforms",
+            "Compute Z-transforms"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1197,11 +1276,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The title, semester placement, credits and complete experiment list are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
       },
-      "notes": "Experiment-based lab covering signal generation and operations, energy and power, convolution and correlation, Fourier analysis, Laplace transforms, and Z-transforms. Name, 0-0-3-1.5 credits, experiment list, and II Year-II Semester placement are confirmed from JNTUK's official R23 ECE course structure and syllabus PDF."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 ECE page 33."
     },
     {
       "id": "r23-ece-2-2-electronic-circuit-analysis-lab",
@@ -1221,7 +1300,28 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments",
+          "topics": [
+            "Determine the transition frequency of a transistor",
+            "Design and test a voltage-series feedback amplifier",
+            "Design and test a current-shunt feedback amplifier",
+            "Design and test an RC phase-shift or Wien-bridge oscillator",
+            "Design and test a Hartley or Colpitts oscillator",
+            "Analyze a two-stage RC-coupled amplifier",
+            "Analyze a Darlington-pair amplifier",
+            "Analyze a bootstrapped emitter follower",
+            "Analyze a Class-A series-fed power amplifier",
+            "Analyze a transformer-coupled Class-A power amplifier",
+            "Analyze a Class-B push-pull power amplifier",
+            "Analyze a complementary-symmetry Class-B push-pull power amplifier",
+            "Analyze a single-tuned voltage amplifier",
+            "Analyze a double-tuned voltage amplifier"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1236,11 +1336,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
+        "college_source_note": "The title, semester placement, credits and complete experiment list are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
       },
-      "notes": "Simulation (Multisim) + hardware lab (Ft determination, voltage-series/current-shunt feedback amplifiers, RC/Wien/Hartley/Colpitts oscillators, RC coupled and Darlington amplifiers, Class A/B power amplifiers, tuned amplifiers). Name, 0-0-3-1.5 credits and experiment list confirmed from the source PDF; units left empty (lab). Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Official experiment-based syllabus transcribed from JNTUK R23 ECE page 34."
     },
     {
       "id": "r23-ece-2-2-soft-skills",
@@ -1331,7 +1431,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Name, 0-1-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Name, 0-1-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-design-thinking-and-innovation",
@@ -1422,7 +1522,7 @@
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF. Autonomous-college source: Tirumala Engineering College is autonomous (its source-PDF letterhead reads 'TIRUMALA ENGINEERING COLLEGE (AUTONOMOUS)'), so it has legal authority to adapt the JNTUK curriculum locally and may deviate from the university-wide R23 ECE baseline; treat this as an affiliated autonomous-college copy of the syllabus, not the definitive university text."
+      "notes": "Common to all branches of engineering. Name, 1-0-2-2 credits and full 5-unit syllabus confirmed by reading the source PDF."
     },
     {
       "id": "r23-ece-2-2-community-service-project-internship",
@@ -3819,6 +3919,694 @@
         "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
       },
       "notes": "NEEDS VERIFICATION: the official ECE III-II structure confirms an eight-week mandatory summer internship but gives no credits or detailed guidelines."
+    },
+    {
+      "id": "r23-ece-3-1-electronic-devices-and-circuits",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Electronic Devices and Circuits",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Semiconductor Physics and Junction Diodes",
+          "topics": [
+            "Hall effect, continuity equation, law of junction, Fermi-Dirac function and Fermi levels in intrinsic and extrinsic semiconductors",
+            "PN-junction energy bands, biasing, diode equation, V-I characteristics, temperature dependence, resistance and capacitance"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Special Devices, Rectifiers and Filters",
+          "topics": [
+            "Zener, LED, varactor, photodiode, tunnel diode, UJT, PNPN diode and SCR construction, operation and characteristics",
+            "Half-wave, full-wave and bridge rectifiers; series-inductor, capacitor and pi filters; ripple-factor comparison"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Transistor Characteristics",
+          "topics": [
+            "BJT current components, configurations, amplification, characteristics, Ebers-Moll model, punch-through and phototransistors",
+            "JFET and MOSFET types, construction, operation, characteristics and parameters"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Biasing and Thermal Stabilization",
+          "topics": [
+            "Operating point and load-line analysis; fixed, collector-to-base and self-bias methods",
+            "Stability factors, bias compensation, thermal runaway, thermal stability and FET biasing"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Small-Signal Amplifier Models",
+          "topics": [
+            "BJT hybrid model, h-parameters and exact and approximate analysis of CB, CE and CC amplifiers",
+            "Small-signal FET model and analysis of CG, CS and CD amplifiers"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Apply basic semiconductor-physics concepts.",
+        "Explain p-n junction formation and diode operation in different modes.",
+        "Analyze rectifiers with and without filters.",
+        "Explain BJT and FET construction, operation and characteristics.",
+        "Apply transistor-biasing and stabilization techniques."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electronic-devices-and-circuits-jntuk-r23-ece-3-1",
+        "title": "Electronic Devices and Circuits - ECE 3-1",
+        "meta_description": "JNTUK R23 ECE 3-1 Electronic Devices and Circuits Open Elective syllabus: diodes, rectifiers, transistors, biasing and amplifier models."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-I, listed in the official pool on page 41; detailed syllabus transcribed from pages 56–57."
+    },
+    {
+      "id": "r23-ece-3-1-signals-and-systems",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Signals and Systems",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Signals and Systems Fundamentals",
+          "topics": [
+            "Definitions and classifications of signals and systems; time and amplitude operations",
+            "Complex exponential, sinusoidal, impulse, step, signum and ramp signals"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Fourier Series and Fourier Transform",
+          "topics": [
+            "Trigonometric and exponential Fourier series, Dirichlet conditions and complex Fourier spectrum",
+            "Fourier transform derivation, standard transforms, properties and impulse/signum applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Correlation and Sampling",
+          "topics": [
+            "Auto-correlation, cross-correlation, energy and power spectra, Parseval theorem and noise filtering",
+            "Sampling theorem, impulse, natural and flat-top sampling, reconstruction and aliasing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Laplace Transforms",
+          "topics": [
+            "Region of convergence, properties, inverse Laplace transform and relationship with Fourier transform",
+            "Laplace transforms using waveform synthesis"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Z-Transforms",
+          "topics": [
+            "Z-transform, region of convergence, inverse transform and properties",
+            "Distinctions among Laplace, Fourier and Z-transforms"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Differentiate classifications of signals and systems.",
+        "Analyze frequency-domain signal representations using Fourier methods.",
+        "Classify systems and determine LTI-system responses.",
+        "Explain sampling and common sampling techniques.",
+        "Apply Laplace and Z-transforms to continuous- and discrete-time signals and systems."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "signals-and-systems-jntuk-r23-ece-3-1",
+        "title": "Signals and Systems - ECE 3-1",
+        "meta_description": "JNTUK R23 ECE 3-1 Signals and Systems Open Elective syllabus: signal classification, Fourier analysis, correlation, sampling, Laplace and Z-transforms."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-I, listed in the official pool on page 41; detailed syllabus transcribed from pages 58–59."
+    },
+    {
+      "id": "r23-ece-3-1-probability-theory-and-random-variables",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Probability Theory and Random Variables",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "The Random Variable",
+          "topics": [
+            "Probability review, random-variable definition and conditions, discrete, continuous and mixed variables",
+            "Distribution and density functions; binomial, Poisson, uniform, Gaussian, exponential and Rayleigh variables; conditional distributions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Operations and Expectations",
+          "topics": [
+            "Expected value, functions of a random variable, moments, variance, skew and Chebyshev inequality",
+            "Characteristic and moment-generating functions; monotonic and non-monotonic transformations"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Multiple Random Variables",
+          "topics": [
+            "Joint, marginal and conditional distributions; independence, sums and the central-limit theorem",
+            "Joint moments, characteristic functions, jointly Gaussian variables and linear transformations"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Random Processes: Temporal Characteristics",
+          "topics": [
+            "Process classification, stationarity, statistical independence, time averages and ergodicity",
+            "Auto-correlation, cross-correlation, covariance, Gaussian and Poisson processes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Spectral Characteristics and Linear Systems",
+          "topics": [
+            "Power and cross-power density spectra and their correlation relationships",
+            "Random input response of linear systems; mean-square response, input-output spectra and band-limited processes"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Model random phenomena and solve basic probability problems.",
+        "Identify random-variable types and compute statistical averages.",
+        "Characterize random processes in time and frequency domains.",
+        "Analyze LTI systems driven by random inputs."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "probability-theory-and-random-variables-jntuk-r23-ece-3-1",
+        "title": "Probability Theory and Random Variables - ECE 3-1",
+        "meta_description": "JNTUK R23 ECE 3-1 Probability Theory and Random Variables Open Elective syllabus: random variables, expectations, random processes and spectra."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-I, listed in the official pool on page 41; detailed syllabus transcribed from pages 60–61."
+    },
+    {
+      "id": "r23-ece-3-1-network-analysis",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Network Analysis",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Electrical-Circuit Fundamentals",
+          "topics": [
+            "Network-element classification, sources, transformations, Kirchhoff laws, mesh and nodal analysis with dependent sources",
+            "Periodic quantities, phasors and duality; graph, tree, incidence, tie-set and cut-set concepts"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Transients",
+          "topics": [
+            "First-order RL and RC responses, time constants and initial conditions",
+            "Second-order RLC equations with DC and AC excitation and Laplace-transform solutions"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "AC and Coupled Circuits",
+          "topics": [
+            "Steady-state RLC analysis using impedance, phasors, mesh and nodal methods and star-delta conversion",
+            "Self and mutual inductance, coefficient of coupling, dot rule and coupled-circuit equivalents"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Resonance and Network Theorems",
+          "topics": [
+            "Series and parallel resonance, Q, bandwidth and anti-resonance",
+            "Thevenin, Norton, Millman, reciprocity, compensation, substitution, superposition, maximum-power-transfer and Tellegen theorems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Two-Port Networks",
+          "topics": [
+            "Z, Y, ABCD, h and inverse parameter sets and their relationships",
+            "Parallel, cascade and series connections of two-port networks"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain basic network elements and circuit-analysis concepts.",
+        "Analyze RLC-circuit behavior.",
+        "Analyze periodic waveforms.",
+        "Determine two-port network parameters.",
+        "Apply resonance, theorem and network-design concepts."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "network-analysis-jntuk-r23-ece-3-1",
+        "title": "Network Analysis - ECE 3-1",
+        "meta_description": "JNTUK R23 ECE 3-1 Network Analysis Open Elective syllabus: circuit methods, transients, AC analysis, resonance, theorems and two-port networks."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-I, listed in the official pool on page 41; detailed syllabus transcribed from pages 62–63."
+    },
+    {
+      "id": "r23-ece-3-2-linear-and-digital-ic-applications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Linear and Digital IC Applications",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Operational Amplifiers and Regulators",
+          "topics": [
+            "Ideal and practical op-amps, 741 characteristics and inverting, non-inverting, differential and instrumentation configurations",
+            "Differentiators, integrators, comparators, Schmitt trigger and 723 and three-terminal regulators"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Op-Amp, Timer and PLL Applications",
+          "topics": [
+            "Active band-pass, band-reject, all-pass, low-pass and high-pass filters",
+            "Waveform generators, IC 555 monostable and astable operation and IC 565 PLL"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Data Converters",
+          "topics": [
+            "Weighted-resistor, R-2R ladder and inverted R-2R DACs",
+            "Parallel-comparator, counter, successive-approximation and dual-slope ADCs and converter specifications"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Combinational Logic ICs",
+          "topics": [
+            "TTL 74XX and CMOS 40XX code converters, decoders, display drivers, encoders and priority encoders",
+            "Multiplexers, de-multiplexers, parity circuits, adders/subtractors and magnitude comparators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Sequential Logic and Memories",
+          "topics": [
+            "Flip-flops, synchronous and decade counters and shift registers using common TTL and CMOS ICs",
+            "ROM architecture and types; static and dynamic RAM architecture"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Analyze op-amp configurations and applications.",
+        "Design active filters and waveform generators using op-amps, IC 555 and IC 565.",
+        "Compare and implement ADC and DAC techniques.",
+        "Apply combinational logic ICs to digital-design problems.",
+        "Develop sequential circuits using flip-flops, counters, registers and memories."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "linear-and-digital-ic-applications-jntuk-r23-ece-3-2",
+        "title": "Linear and Digital IC Applications - ECE 3-2",
+        "meta_description": "JNTUK R23 ECE 3-2 Linear and Digital IC Applications Open Elective syllabus: op-amps, timers, PLLs, converters, logic ICs and memories."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-II, listed in the official pool on page 41; detailed syllabus transcribed from pages 89–90."
+    },
+    {
+      "id": "r23-ece-3-2-principles-of-communications",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Principles of Communications",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Communication Fundamentals and AM",
+          "topics": [
+            "Fourier series and transform, autocorrelation, energy spectral density and Parseval relation",
+            "Amplitude modulation spectrum, envelope detection, power efficiency and modulation index"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Suppressed-Carrier and Single-Sideband Modulation",
+          "topics": [
+            "DSB-SC modulation, demodulation and Costas receiver",
+            "SSB, Hilbert transform, complex envelope, SSB demodulation and VSB"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Angle Modulation",
+          "topics": [
+            "FM and PM, modulation index, instantaneous frequency, FM spectrum and Carson rule",
+            "Narrowband and indirect wideband FM generation and FM demodulation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sampling and Pulse Modulation",
+          "topics": [
+            "Sampling spectrum, aliasing, Nyquist criterion and reconstruction",
+            "PAM, uniform and non-uniform quantization, quantization noise, delta modulation and DPCM"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Probability, Random Processes and Noise",
+          "topics": [
+            "Probability, conditional probability and the MAP principle",
+            "Random variables, density functions, wireless-channel applications, Gaussian processes and noise"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Analyze analog modulation in time and frequency domains.",
+        "Analyze angle-modulated signals.",
+        "Characterize analog signals as random processes and noise.",
+        "Explain channel effects on analog-modulated signals.",
+        "Evaluate analog communication systems using signal-to-noise ratio.",
+        "Analyze PAM, PPM, PCM and TDM systems."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "principles-of-communications-jntuk-r23-ece-3-2",
+        "title": "Principles of Communications - ECE 3-2",
+        "meta_description": "JNTUK R23 ECE 3-2 Principles of Communications Open Elective syllabus: AM, DSB-SC, SSB, FM, sampling, quantization and random noise."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-II, listed in the official pool on page 41; detailed syllabus transcribed from page 91."
+    },
+    {
+      "id": "r23-ece-3-2-principles-of-signal-processing",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Principles of Signal Processing",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Signals, Systems and Convolution",
+          "topics": [
+            "Signal and system classification and time and amplitude operations",
+            "LTI and time-varying systems, impulse response, convolution and transfer functions"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Continuous-Time Transforms",
+          "topics": [
+            "Trigonometric and exponential Fourier series and Fourier-transform properties",
+            "Laplace transform, region of convergence, inverse transform and its Fourier relationship"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Sampling and Z-Transforms",
+          "topics": [
+            "Sampling theorem, impulse sampling, reconstruction and aliasing",
+            "Z-transform, region of convergence, inverse transform and properties"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Discrete Fourier Analysis",
+          "topics": [
+            "Fourier transform of discrete signals and inverse transform",
+            "DFT and inverse DFT; decimation-in-time and decimation-in-frequency FFT algorithms"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Digital Filters",
+          "topics": [
+            "Direct, cascade and parallel IIR and FIR structures and Butterworth analog filters",
+            "Impulse-invariance and bilinear IIR design and FIR window design using rectangular, Hamming and Hanning windows"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain foundational signals-and-systems concepts.",
+        "Apply transforms to continuous-time signals.",
+        "Apply sampling and Z-transform concepts.",
+        "Analyze discrete-time signals using Fourier methods.",
+        "Design digital filters."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "principles-of-signal-processing-jntuk-r23-ece-3-2",
+        "title": "Principles of Signal Processing - ECE 3-2",
+        "meta_description": "JNTUK R23 ECE 3-2 Principles of Signal Processing Open Elective syllabus: transforms, sampling, DFT, FFT and digital-filter design."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-II, listed in the official pool on page 41; detailed syllabus transcribed from pages 92–93."
+    },
+    {
+      "id": "r23-ece-3-2-microprocessors-and-microcontrollers-open-elective",
+      "regulation": "R23",
+      "branch": "ECE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Microprocessors & Microcontrollers (Open Elective)",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Microprocessor Systems and 8086 Architecture",
+          "topics": [
+            "Microprocessor-based systems, origins, Harvard and Von Neumann architectures and MPU versus MCU",
+            "8086 internal architecture, registers, physical memory and general bus operation"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "8086 Programming",
+          "topics": [
+            "Instruction set, addressing modes, assembler directives and simple programs",
+            "Stack, interrupts, interrupt-service routines and interrupt cycle"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "8086 Interfacing",
+          "topics": [
+            "RAM and ROM interfacing and Intel 8255 programmable peripheral interface",
+            "Switches, LEDs, seven-segment displays, Intel 8251 USART, stepper motor and ADC/DAC interfacing"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "8051 Microcontroller and Interfacing",
+          "topics": [
+            "8051 internal architecture, ports, memory, addressing modes, instruction set, timers, serial I/O and interrupts",
+            "ADC, DAC, keyboard and LCD interfacing"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "ARM Architectures and Processors",
+          "topics": [
+            "CISC and RISC architectures, ARM architecture and processor families",
+            "ARM7 organization, Thumb instructions and the ARM Cortex-M3 functional description"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain the 8086 architecture and operation.",
+        "Write 8086 assembly-language programs.",
+        "Interface memory and peripherals with the 8086.",
+        "Explain the 8051 architecture, programming and interfacing.",
+        "Explain introductory ARM architectures and processors."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "microprocessors-and-microcontrollers-open-elective-jntuk-r23-ece-3-2",
+        "title": "Microprocessors & Microcontrollers OE - ECE 3-2",
+        "meta_description": "JNTUK R23 ECE 3-2 Microprocessors and Microcontrollers Open Elective syllabus: 8086, interfacing, 8051 and ARM processors."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The title, departmental Open Elective pool placement, credits, unit-wise syllabus and course outcomes are sourced directly from JNTUK's official R23 ECE course structure and syllabus PDF."
+      },
+      "notes": "Department-offered Open Elective-II, listed in the official pool on page 41; detailed syllabus transcribed from pages 94–95."
     },
     {
       "id": "r23-ece-4-1-cellular-and-mobile-communications",

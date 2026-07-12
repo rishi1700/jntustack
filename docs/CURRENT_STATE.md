@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-11 after the official CSE/ECE/IT source passes and
-immediate content-integrity corrections.
+Last updated: 2026-07-12 after the cross-branch official syllabus and
+practical-content reconciliation.
 
 ## Architecture
 
@@ -28,22 +28,22 @@ Current JSON/build state:
 
 | Metric | Count |
 | --- | ---: |
-| Subjects | 421 |
-| Verified subjects | 392 |
+| Subjects | 441 |
+| Verified subjects | 412 |
 | Needs verification subjects | 29 |
 | Placeholder subjects | 0 |
 | Colleges | 376 |
 | Branch profiles | 6 |
-| Search docs | 774 |
-| Sitemap URLs | 401 |
+| Search docs | 794 |
+| Sitemap URLs | 421 |
 | Migration files | 24 |
 
 The parity constants in `lib/db-json.js` currently expect:
 
-- `verifiedSubjects: 392`
+- `verifiedSubjects: 412`
 - `colleges: 376`
 - `branchProfiles: 6`
-- `searchDocs: 774`
+- `searchDocs: 794`
 
 ## Verified/Draft State
 
@@ -62,8 +62,17 @@ Recent RC13 verified promotions:
 
 Recent integrity corrections:
 
-- CSE, ECE, and IT subjects through 3-2 were re-sourced from JNTUK's own
-  official R23 PDFs.
+- CSE, ECE, EEE, IT, Mechanical, and Civil subjects through 3-2 were
+  reconciled against JNTUK's official R23 PDFs.
+- Twenty-two missing official open-elective subjects were added across ECE,
+  Mechanical, and Civil, and the missing CSE Big Data Analytics and Mechanical
+  Entrepreneurship subjects were restored in the preceding content pass.
+- Every verified R23 lab, workshop, and practical record now contains its
+  published experiment or activity list; stale autonomous-college experiment
+  sets and unsupported outcome claims were removed.
+- Misnamed or misplaced EEE, Mechanical, and Civil courses now use the official
+  title and semester, with permanent redirects from every previously public
+  canonical URL.
 - ECE Switching Theory and Logic Design Lab is correctly assigned to 2-1;
   Signals and Systems Lab is correctly assigned to 2-2. The previously public
   swapped-semester URLs redirect permanently to the corrected URLs.

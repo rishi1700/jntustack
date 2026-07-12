@@ -8,7 +8,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23FE08",
+      "subject_code": null,
       "name": "Numerical Techniques and Statistical Methods",
       "category": "BasicScience",
       "credits": {
@@ -85,27 +85,27 @@
       "seo": {
         "slug": "numerical-techniques-and-statistical-methods-jntuk-r23-ce-2-1",
         "title": "Numerical Techniques & Statistical Methods - CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Numerical Techniques & Statistical Methods: iterative methods, integration & ODEs, distributions, sampling and hypothesis tests."
+        "meta_description": "JNTUK R23 CE 2-1 Numerical Techniques & Statistical Methods: iterative methods, integration & ODEs, distributions, sampling and hypothesis tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23FE08, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
-      "id": "r23-ce-2-1-universal-human-values-2",
+      "id": "r23-ce-2-1-universal-human-values",
       "regulation": "R23",
       "branch": "CE",
       "specialization": null,
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23HS01",
-      "name": "UHV 2 - Understanding Harmony and Ethical Human Conduct",
+      "subject_code": null,
+      "name": "Universal Human Values – Understanding Harmony and Ethical Human Conduct",
       "category": "HSMC",
       "credits": {
         "L": 2,
@@ -167,11 +167,12 @@
         }
       ],
       "course_outcomes": [
-        "Describe the terms like Natural Acceptance, Happiness and Prosperity",
-        "Identify one's self, and one's surroundings (family, society nature)",
-        "Relate human values with human relationship and human society.",
-        "Illustrate the need for universal human values and harmonious existence",
-        "Develop as socially and ecologically responsible engineers"
+        "Define terms such as natural acceptance, happiness and prosperity.",
+        "Identify one's self and surroundings, including family, society and nature.",
+        "Apply the learning to day-to-day real-life settings.",
+        "Relate human values to human relationships and society.",
+        "Justify the need for universal human values and harmonious existence.",
+        "Develop as a socially and ecologically responsible engineer."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -179,18 +180,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "universal-human-values-2-jntuk-r23-ce-2-1",
-        "title": "Universal Human Values 2 - R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Universal Human Values 2: value education, harmony in the human being, family and society, harmony in nature and professional ethics."
+        "slug": "universal-human-values-jntuk-r23-ce-2-1",
+        "title": "Universal Human Values - JNTUK R23 CE 2-1",
+        "meta_description": "JNTUK R23 CE 2-1 Universal Human Values: value education, harmony in the self, family, society and nature, and ethical human conduct."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23HS01, 2-1-0-3 credits and the 5-module (28 lectures + 14 tutorials) structure read from the source PDF."
+      "notes": "The title, 2-1 placement, 2-1-0-3 credits, five-module syllabus and six outcomes follow JNTUK's official R23 Civil Engineering PDF."
     },
     {
       "id": "r23-ce-2-1-surveying",
@@ -200,9 +201,9 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CE01",
+      "subject_code": null,
       "name": "Surveying",
-      "category": "ProfessionalCore",
+      "category": "EngineeringScience",
       "credits": {
         "L": 3,
         "T": 0,
@@ -277,16 +278,16 @@
       "seo": {
         "slug": "surveying-jntuk-r23-ce-2-1",
         "title": "Surveying - JNTUK R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Surveying: compass & levelling, contouring, areas & volumes, theodolite & traversing, curves, modern surveying and photogrammetry."
+        "meta_description": "JNTUK R23 CE 2-1 Surveying: distance, compass, levelling, theodolite, curves, areas, volumes, contours and modern surveying instruments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE01, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Categorized as Engineering Science in JNTUK’s official R23 Civil Engineering II-I structure."
     },
     {
       "id": "r23-ce-2-1-strength-of-materials",
@@ -296,7 +297,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CE02",
+      "subject_code": null,
       "name": "Strength of Materials",
       "category": "ProfessionalCore",
       "credits": {
@@ -359,11 +360,11 @@
         }
       ],
       "course_outcomes": [
-        "To relate the deformations with the stress strain characteristics of materials under axial loading.",
-        "To draw the diagrams indicating the variation of the key performance features like axial forces, bending moment and shear forces in structural members.",
-        "To calculate section modulus and for determination of stresses developed in the beams.",
-        "To compute the deflections due to various loading conditions.",
-        "To determine stresses across sections of the thin, thick cylinders and columns to arrive at optimum sections to withstand the internal pressure using Lame's equation."
+        "Understand basic material behaviour under different external loading and support conditions.",
+        "Draw diagrams showing axial forces, bending moments and shear forces in structural members.",
+        "Apply bending concepts and section-modulus calculations to determine stresses in beams.",
+        "Analyze beam deflections under various loading conditions.",
+        "Assess stresses in thin and thick cylinders and columns, including the use of Lame's equations."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -373,16 +374,16 @@
       "seo": {
         "slug": "strength-of-materials-jntuk-r23-ce-2-1",
         "title": "Strength of Materials - JNTUK R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Strength of Materials: stresses & strains, shear force & bending moment, flexural & shear stresses, beam deflection, columns and cylinders."
+        "meta_description": "JNTUK R23 CE 2-1 Strength of Materials: stresses & strains, shear force & bending moment, flexural & shear stresses, beam deflection, columns and cylinders."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE02, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-1-fluid-mechanics",
@@ -392,7 +393,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CE03",
+      "subject_code": null,
       "name": "Fluid Mechanics",
       "category": "ProfessionalCore",
       "credits": {
@@ -405,61 +406,59 @@
       "units": [
         {
           "number": 1,
-          "title": "Basic Concepts and Fluid Pressure",
+          "title": "Basic Concepts and Definitions",
           "topics": [
-            "Distinction between fluid and solid; density, specific weight and gravity; kinematic and dynamic viscosity, Newton's law of viscosity",
-            "Vapor pressure, surface tension, capillarity, bulk modulus of elasticity, compressibility",
-            "Fluid pressure: pressure at a point, Pascal's law, variation with temperature/density/altitude",
-            "Piezometer, U-tube, single column and differential manometers; pressure gauges"
+            "Distinction between fluids and solids; density, specific weight, specific gravity, and kinematic and dynamic viscosity",
+            "Variation of viscosity with temperature; Newton's law of viscosity; vapour pressure, boiling point, surface tension, capillarity, bulk modulus and compressibility"
           ]
         },
         {
           "number": 2,
           "title": "Fluid Statics",
           "topics": [
+            "Pressure at a point, Pascal's law, and pressure variation with temperature, density and altitude",
+            "Piezometer, U-tube, single-column and differential manometers, and pressure gauges",
             "Hydrostatic pressure and force on horizontal, vertical and inclined surfaces",
-            "Buoyancy and stability of floating bodies",
-            "Centre of buoyancy and metacenter",
-            "Conditions of equilibrium for floating and submerged bodies"
+            "Buoyancy and stability of floating bodies"
           ]
         },
         {
           "number": 3,
           "title": "Fluid Kinematics",
           "topics": [
-            "Classification of fluid flow: steady/unsteady, uniform/non-uniform, laminar/turbulent, rotational/irrotational, compressible/incompressible, ideal/real, 1D/2D/3D",
-            "Stream line, path line, streak line and stream tube",
-            "Stream function and velocity potential function",
-            "One, two and three dimensional continuity equations in Cartesian coordinates"
+            "Steady and unsteady, uniform and non-uniform, laminar and turbulent, rotational and irrotational, compressible and incompressible, ideal and real, and one-, two- and three-dimensional flows",
+            "Streamline, pathline, streakline and stream tube",
+            "Stream function and velocity-potential function",
+            "One-, two- and three-dimensional continuity equations in Cartesian coordinates"
           ]
         },
         {
           "number": 4,
           "title": "Fluid Dynamics",
           "topics": [
-            "Surface and body forces; Euler's equation; Bernoulli's equation - derivation; energy principle",
-            "Applications of Bernoulli's equation: venturimeter, orifice meter and Pitot tube",
-            "Momentum principle; forces exerted by fluid flow on a pipe bend",
-            "Free and forced vortex flow - governing equations and applications"
+            "Surface and body forces; equations of motion and Euler's equation",
+            "Bernoulli's equation, energy principle, and applications to venturimeters, orifice meters and Pitot tubes",
+            "Momentum principle and forces exerted by flow on a pipe bend",
+            "Free and forced vortex flow; Reynolds, Froude, Mach, Weber and Euler numbers"
           ]
         },
         {
           "number": 5,
           "title": "Analysis of Pipe Flow",
           "topics": [
-            "Energy losses in pipelines; Darcy-Weisbach equation; minor losses",
-            "Hydraulic grade line and total energy line; concept of equivalent length",
-            "Pipes in series and parallel",
-            "Dimensionless numbers: Reynolds, Froude, Mach, Weber and Euler numbers"
+            "Energy losses in pipelines, the Darcy-Weisbach equation and minor losses",
+            "Hydraulic grade line and total energy line",
+            "Equivalent length",
+            "Pipes in parallel and series"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand the fluid properties, principles of fluid statics, and buoyancy.",
-        "Apply the laws of fluid statics and buoyancy.",
-        "Understand the fundamentals of fluid kinematics, dynamics, differentiate types of fluid flows and loss in pipes.",
-        "Derive and apply the principle of conservation of mass energy and momentum for flow measurement.",
-        "Compute the losses in pipes and discharge through pipe flows."
+        "Understand the principles of fluid statics, kinematics and dynamics.",
+        "Apply the laws of fluid statics and concepts of buoyancy.",
+        "Understand fluid-kinematics fundamentals and differentiate types of fluid flow.",
+        "Apply the principle of conservation of energy to flow measurement.",
+        "Analyze losses in pipes and discharge through pipe networks."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -469,16 +468,16 @@
       "seo": {
         "slug": "fluid-mechanics-jntuk-r23-ce-2-1",
         "title": "Fluid Mechanics - JNTUK R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Fluid Mechanics: fluid properties & pressure, fluid statics, fluid kinematics, fluid dynamics (Bernoulli, momentum) and analysis of pipe flow."
+        "meta_description": "JNTUK R23 CE 2-1 Fluid Mechanics: fluid properties & pressure, fluid statics, fluid kinematics, fluid dynamics (Bernoulli, momentum) and analysis of pipe flow."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE03, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-1-surveying-lab",
@@ -488,7 +487,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CE52",
+      "subject_code": null,
       "name": "Surveying Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -498,7 +497,22 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments and Tasks",
+          "topics": [
+            "Conduct a chain survey of a road profile with offsets for road widening",
+            "Determine the distance between inaccessible points using a compass",
+            "Find a boundary area by plane-table radiation",
+            "Perform fly levelling using height-of-instrument and rise-and-fall methods",
+            "Measure horizontal and vertical angles by theodolite repetition",
+            "Use a theodolite to find inaccessible distances and object heights",
+            "Determine area, perimeter and inaccessible distances using a total station",
+            "Set out a curve and determine contour levels"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Handle various linear and angular measuring instruments",
         "Measure the linear and angular measurements",
@@ -514,16 +528,16 @@
       "seo": {
         "slug": "surveying-lab-jntuk-r23-ce-2-1",
         "title": "Surveying Lab - JNTUK R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Surveying Lab: chain, compass and plane-table surveys, fly levelling, theodolite work, total station and curve/contour setting."
+        "meta_description": "JNTUK R23 CE 2-1 Surveying Lab fieldwork: chain, compass, plane-table, levelling, theodolite, total-station, curve and contour surveys."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE52). Field works read from the source PDF: chain survey with offsets, distance between inaccessible points by compass, plane table (radiation), fly levelling (height-of-instrument and rise-and-fall), theodolite (horizontal/vertical angles, inaccessible distances, object heights), total station (area/perimeter/distance), setting out a curve and determining contour levels."
+      "notes": "Fieldwork is sourced from the official JNTUK Surveying Lab syllabus."
     },
     {
       "id": "r23-ce-2-1-strength-of-materials-lab",
@@ -533,7 +547,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CE53",
+      "subject_code": null,
       "name": "Strength of Materials Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -543,7 +557,22 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments and Tasks",
+          "topics": [
+            "Conduct a tension test and plot the stress-strain curve",
+            "Conduct bending tests on cantilever and simply supported steel or wood beams",
+            "Conduct a torsion test",
+            "Conduct hardness and shear tests on metals",
+            "Conduct compression and tension tests on open- and closely-coiled springs",
+            "Conduct compression tests on wood or concrete",
+            "Conduct Izod or Charpy impact tests",
+            "Use electrical-resistance strain gauges and conduct a continuous-beam deflection test"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Conduct tensile strength test and draw stress-strain diagrams for ductile metals",
         "Perform bending test and determine load-deflection curve of steel/wood",
@@ -559,16 +588,16 @@
       "seo": {
         "slug": "strength-of-materials-lab-jntuk-r23-ce-2-1",
         "title": "Strength of Materials Lab - R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Strength of Materials Lab: tension, bending, torsion, hardness, spring, impact and shear tests, strain gauges and continuous-beam deflection."
+        "meta_description": "JNTUK R23 CE 2-1 Strength of Materials Lab: tension, bending, torsion, hardness, spring, compression, impact, shear and strain tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE53). Experiments read from the source PDF: tension test, bending tests (cantilever/overhanging/simply supported), torsion, hardness, open- and closely-coiled spring tests, compression on wood/concrete, Izod/Charpy impact, shear on metals, electrical resistance strain gauges and continuous-beam deflection."
+      "notes": "Experiments are sourced from the official JNTUK Strength of Materials Lab syllabus."
     },
     {
       "id": "r23-ce-2-1-building-planning-and-drawing",
@@ -578,7 +607,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23CES1",
+      "subject_code": null,
       "name": "Building Planning and Drawing",
       "category": "SkillEnhancement",
       "credits": {
@@ -588,7 +617,20 @@
         "C": 2
       },
       "type": "theory_cum_lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments and Tasks",
+          "topics": [
+            "Detail and draw standard sign conventions",
+            "Detail and draw English and Flemish bonds",
+            "Detail and draw doors, windows, ventilators and roofs",
+            "Draw a residential-building line diagram using building bye-laws",
+            "Prepare plan, elevation and section from a single-storey building line diagram",
+            "Prepare plan, elevation and section for hospital and industrial buildings"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Draw signs and bonds",
         "Draw different building units",
@@ -603,16 +645,16 @@
       "seo": {
         "slug": "building-planning-and-drawing-jntuk-r23-ce-2-1",
         "title": "Building Planning and Drawing - R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Building Planning and Drawing: sign conventions, brick bonds, doors/windows/roofs, and plan/elevation/section of buildings."
+        "meta_description": "JNTUK R23 CE 2-1 Building Planning and Drawing tasks: conventions, bonds, openings, roofs, bye-laws, residential, hospital and industrial drawings."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Skill-enhancement drawing course (0-1-2-2, course code 23CES1). Exercises read from the source PDF: sign conventions, English and Flemish bonds, doors, windows, ventilators and roofs, line diagrams of residential buildings per building bye-laws, and plan/elevation/section drawings for single-storey, hospital and industrial buildings."
+      "notes": "Drawing tasks are sourced from the official JNTUK syllabus; credits follow the controlling II-I course-structure row (0-1-2-2)."
     },
     {
       "id": "r23-ce-2-1-environmental-science",
@@ -622,7 +664,7 @@
       "year": 2,
       "semester": 1,
       "year_sem_label": "2-1",
-      "subject_code": "23MC01",
+      "subject_code": null,
       "name": "Environmental Science",
       "category": "MandatoryNonCredit",
       "credits": {
@@ -667,10 +709,10 @@
           "number": 4,
           "title": "Social Issues and the Environment",
           "topics": [
-            "From unsustainable to sustainable development; resettlement and rehabilitation",
-            "Environmental ethics; climate change, global warming, acid rain, ozone layer depletion",
-            "Carbon credits and Mission LiFE; wasteland reclamation; consumerism and waste products",
-            "Environment Protection Act, Air Act, Water Act, Wildlife and Forest Conservation Acts; public awareness"
+            "From unsustainable to sustainable development; urban energy problems",
+            "Water conservation, rainwater harvesting and watershed management; resettlement and rehabilitation",
+            "Environmental ethics; climate change, global warming, acid rain, ozone depletion, nuclear accidents and wasteland reclamation",
+            "Consumerism and waste products; environmental protection, air, water, wildlife and forest laws; enforcement and public awareness"
           ]
         },
         {
@@ -685,11 +727,11 @@
         }
       ],
       "course_outcomes": [
-        "The necessity of resources, their exploitation and sustainable management",
-        "The interactions of human and ecosystems and their role in the food web in the natural world and the global biodiversity, threats to biodiversity and its conservation.",
-        "Environmental problems like pollution, disasters and possible solutions.",
-        "The importance of environmental decision making in organizations through understanding the environmental law and environmental audits.",
-        "Environmental issues like over population, human health etc related to local, regional and global levels."
+        "Grasp the multidisciplinary nature of environmental studies and renewable and non-renewable resources.",
+        "Understand energy flow, biogeochemical cycles and ecological pyramids.",
+        "Understand causes of pollution, solid-waste management and related preventive measures.",
+        "Understand rainwater harvesting, watershed management, ozone-layer depletion and wasteland reclamation.",
+        "Illustrate causes of population explosion, value education and welfare programmes."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -699,16 +741,16 @@
       "seo": {
         "slug": "environmental-science-jntuk-r23-ce-2-1",
         "title": "Environmental Science - JNTUK R23 CE 2-1",
-        "meta_description": "LBRCE R23 CE 2-1 Environmental Science (audit): natural resources, ecosystems, biodiversity, pollution, social issues and human population."
+        "meta_description": "JNTUK R23 CE 2-1 Environmental Science (audit): natural resources, ecosystems, biodiversity, pollution, social issues and human population."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '-'). Course code 23MC01. 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-managerial-economics-and-financial-analysis",
@@ -718,7 +760,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23HS02",
+      "subject_code": null,
       "name": "Managerial Economics and Financial Analysis",
       "category": "HSMC",
       "credits": {
@@ -731,61 +773,62 @@
       "units": [
         {
           "number": 1,
-          "title": "Introduction to Managerial Economics",
+          "title": "Managerial Economics",
           "topics": [
-            "Economics and managerial economics - nature and scope",
-            "Demand and law of demand",
-            "Elasticity of demand and its types",
-            "Demand forecasting methods"
+            "Nature, meaning, significance, functions and advantages of managerial economics",
+            "Demand concept, function and law; types and measurement of demand elasticity",
+            "Demand forecasting: governing factors and methods",
+            "Relationship among managerial economics, financial accounting and management"
           ]
         },
         {
           "number": 2,
-          "title": "Theory of Production and Cost Analysis",
+          "title": "Production and Cost Analysis",
           "topics": [
-            "Production function; isoquant and isocost; least cost combination of inputs",
-            "Law of returns",
-            "Internal and external economies of scale",
-            "Cost concepts and break-even analysis"
+            "Nature, meaning, significance, functions and advantages of production and cost analysis",
+            "Production functions, least-cost combination, short-run and long-run production, isoquants and isocosts",
+            "Cost concepts and behaviour; break-even analysis",
+            "Determination of the break-even point through simple problems"
           ]
         },
         {
           "number": 3,
-          "title": "Markets and Pricing Policies",
+          "title": "Business Organizations and Markets",
           "topics": [
-            "Market structures: types of markets",
-            "Features and price determination under perfect competition, monopoly and monopolistic competition",
-            "Pricing policies and objectives",
-            "Pricing methods and applications in business"
+            "Sole proprietorships, partnerships, joint-stock companies and public-sector enterprises",
+            "Perfect and imperfect competition; monopoly, monopolistic competition and oligopoly",
+            "Price-output determination",
+            "Pricing methods and strategies"
           ]
         },
         {
           "number": 4,
-          "title": "Capital and Capital Budgeting",
+          "title": "Capital Budgeting",
           "topics": [
-            "Nature and significance of capital; types of capital",
-            "Sources of raising capital",
-            "Capital budgeting: significance and process",
-            "Techniques of capital budgeting: non-discounted and discounted cash flow techniques"
+            "Nature, meaning and significance of capital budgeting",
+            "Types and components of working capital; short-term and long-term capital sources; estimation of working-capital requirements",
+            "Capital-budgeting features, proposals, methods and evaluation",
+            "Payback, accounting rate of return, net present value and internal rate of return methods"
           ]
         },
         {
           "number": 5,
           "title": "Financial Accounting and Analysis",
           "topics": [
-            "Accounting significance; book keeping; double entry system",
-            "Journal, ledger and trial balance",
-            "Final accounts with simple adjustments",
-            "Financial statement analysis through ratios"
+            "Accounting concepts and conventions; double-entry bookkeeping, journal, ledger and trial balance",
+            "Final accounts: trading account, profit and loss account, and balance sheet with simple adjustments",
+            "Introduction to financial analysis",
+            "Liquidity, activity, capital-structure and profitability-ratio analysis and interpretation"
           ]
         }
       ],
       "course_outcomes": [
-        "Define the concepts related to Managerial Economics, Financial Accounting and Management",
-        "Understand the Fundamentals of Economics viz., Demand, Production, Cost, Revenue and Markets",
-        "Apply the Concept of Production cost and Revenues for effective Business Decision",
-        "Evaluate the Capital Budgeting Techniques.",
-        "Develop the Accounting Statements and Evaluate the Financial Performance of Business Entity"
+        "Define concepts related to managerial economics, financial accounting and management.",
+        "Understand fundamentals of demand, production, cost, revenue and markets.",
+        "Apply production-cost and revenue concepts to effective business decisions.",
+        "Analyze how to invest capital and maximize returns.",
+        "Evaluate capital-budgeting techniques.",
+        "Develop accounting statements and evaluate the financial performance of a business entity."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -795,16 +838,16 @@
       "seo": {
         "slug": "managerial-economics-and-financial-analysis-jntuk-r23-ce-2-2",
         "title": "Managerial Economics & Financial Analysis-CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Managerial Economics & Financial Analysis: demand, production & cost, markets & pricing, capital budgeting and financial accounting."
+        "meta_description": "JNTUK R23 CE 2-2 Managerial Economics & Financial Analysis: demand, production & cost, markets & pricing, capital budgeting and financial accounting."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23HS02, 2-0-0-2 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-engineering-geology",
@@ -814,9 +857,9 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE04",
+      "subject_code": null,
       "name": "Engineering Geology",
-      "category": "ProfessionalCore",
+      "category": "EngineeringScience",
       "credits": {
         "L": 3,
         "T": 0,
@@ -890,16 +933,16 @@
       "seo": {
         "slug": "engineering-geology-jntuk-r23-ce-2-2",
         "title": "Engineering Geology - JNTUK R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Engineering Geology: geological processes, mineralogy & petrology, structural geology, groundwater & geophysics and geology of dams & tunnels."
+        "meta_description": "JNTUK R23 CE 2-2 Engineering Geology: minerals, rocks, structural geology, groundwater, site investigation and geological hazards."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE04, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "The official structure categorizes this course as Engineering Science / Basic Science; Engineering Science is used for the site’s single category field."
     },
     {
       "id": "r23-ce-2-2-concrete-technology",
@@ -909,7 +952,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE05",
+      "subject_code": null,
       "name": "Concrete Technology",
       "category": "ProfessionalCore",
       "credits": {
@@ -924,59 +967,59 @@
           "number": 1,
           "title": "Cements and Aggregates",
           "topics": [
-            "Portland cement: chemical composition, hydration, setting, fineness; test for physical properties; grades",
-            "Admixtures: mineral and chemical - accelerators, retarders, air entrainers, plasticizers, fly ash, silica fume",
-            "Aggregates: classification, particle shape and texture, mechanical properties, specific gravity, bulk density, bulking of sand",
-            "Deleterious substances, alkali-aggregate reaction, sieve analysis, fineness modulus, grading"
+            "Portland cement composition, hydration, setting, fineness, hydrate structure, physical-property tests and grades",
+            "Mineral and chemical admixtures: accelerators, retarders, air entrainers, plasticizers, superplasticizers, fly ash and silica fume",
+            "Aggregate classification, shape, texture, bond, strength, specific gravity, bulk density, porosity, adsorption, moisture and bulking of sand",
+            "Deleterious substances, soundness, alkali-aggregate reaction, thermal properties, sieve analysis, fineness modulus, grading, maximum aggregate size and mixing-water quality"
           ]
         },
         {
           "number": 2,
           "title": "Fresh Concrete",
           "topics": [
-            "Steps in manufacture: proportioning, mixing, placing, compaction, finishing and curing",
-            "Workability and factors affecting it; measurement by different tests",
-            "Setting times; effect of time and temperature on workability",
-            "Segregation and bleeding; ready mixed concrete; shotcrete"
+            "Manufacture of concrete: proportioning, mixing, placing, compaction, finishing and curing",
+            "Workability, influencing factors and measurement by different tests",
+            "Setting times and the effects of time and temperature on workability",
+            "Segregation, bleeding, mixing, vibration, ready-mixed concrete and shotcrete"
           ]
         },
         {
           "number": 3,
           "title": "Hardened Concrete",
           "topics": [
-            "Water/cement ratio, Abram's law, gel/space ratio; maturity concept",
-            "Strength in tension and compression; factors affecting strength; relation between compressive and tensile strength",
-            "Curing; testing: compression, tension, flexure and splitting tests",
-            "Non-destructive testing methods and codal provisions for NDT"
+            "Water-cement ratio, Abram's law, gel-space ratio, nature of concrete strength and maturity concept",
+            "Tensile and compressive strength, influencing factors and their relationship",
+            "Curing and compression, tension, flexure and splitting tests",
+            "Non-destructive testing methods and codal provisions"
           ]
         },
         {
           "number": 4,
           "title": "Elasticity, Creep and Shrinkage",
           "topics": [
-            "Modulus of elasticity; dynamic modulus of elasticity; Poisson's ratio",
-            "Creep of concrete and factors influencing creep",
-            "Relation between creep and time; nature and effects of creep",
-            "Shrinkage and types of shrinkage"
+            "Static and dynamic modulus of elasticity and Poisson's ratio",
+            "Concrete creep and influencing factors",
+            "Relationship between creep and time, nature and effects of creep",
+            "Shrinkage and its types"
           ]
         },
         {
           "number": 5,
           "title": "Mix Design and Special Concretes",
           "topics": [
-            "Ready mixed concrete; fibre reinforced concrete - types of fibres and factors affecting FRC properties",
-            "High performance concrete; self-consolidating and self-healing concrete",
-            "Factors in the choice of mix proportions; quality control and statistical methods; acceptance criteria",
-            "Proportioning of concrete mixes by ACI method and IS code method"
+            "Ready-mixed and fibre-reinforced concrete; fibre types and factors affecting FRC properties",
+            "High-performance, self-consolidating and self-healing concrete",
+            "Choice of mix proportions, quality control, statistical methods and acceptance criteria",
+            "Concrete-mix proportioning by ACI and IS Code methods"
           ]
         }
       ],
       "course_outcomes": [
-        "Familiarize the basic ingredients of concrete and their role in the production of concrete and its behaviour in the field.",
-        "Test the fresh concrete properties and the hardened concrete properties. Understand the basic concepts of concrete. Design the concrete mix by BIS method.",
-        "Determine the ingredients of concrete through lab test results. realize the importance of quality of concrete",
-        "Understand the behaviour of concrete in various environments.",
-        "Familiarize the basic concepts of special concrete and their production and applications."
+        "Explain the basic ingredients of concrete and their role in concrete production and field behaviour.",
+        "Test fresh- and hardened-concrete properties, explain basic concrete concepts, and design a concrete mix by the BIS method.",
+        "Evaluate concrete ingredients through laboratory results and explain the importance of concrete quality.",
+        "Explain the behaviour of concrete in various environments.",
+        "Explain the basic concepts, production and applications of special concretes."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -986,16 +1029,16 @@
       "seo": {
         "slug": "concrete-technology-jntuk-r23-ce-2-2",
         "title": "Concrete Technology - JNTUK R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Concrete Technology: cements & aggregates, fresh concrete, hardened concrete, elasticity/creep/shrinkage, and mix design & special concretes."
+        "meta_description": "JNTUK R23 CE 2-2 Concrete Technology: cements & aggregates, fresh concrete, hardened concrete, elasticity/creep/shrinkage, and mix design & special concretes."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE05, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-structural-analysis",
@@ -1005,7 +1048,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE06",
+      "subject_code": null,
       "name": "Structural Analysis",
       "category": "ProfessionalCore",
       "credits": {
@@ -1052,8 +1095,7 @@
           "topics": [
             "Derivation of slope-deflection equations",
             "Application to continuous beams with and without settlement of supports",
-            "Analysis of single bay portal frames without sway",
-            "Worked applications"
+            "Analysis of single bay portal frames without sway"
           ]
         },
         {
@@ -1062,17 +1104,16 @@
           "topics": [
             "Introduction to the moment distribution method",
             "Application to continuous beams with and without settlement of supports",
-            "Analysis of single bay single storey portal frames without sway",
-            "Worked applications"
+            "Analysis of single bay single storey portal frames without sway"
           ]
         }
       ],
       "course_outcomes": [
-        "Apply energy theorems to analyze trusses",
-        "Determine unknown reactions of indeterminate structures by using Castigliano's–II Theorem.",
-        "Compute the internal forces of members in fixed and continuous beams",
-        "Evaluate the internal forces of members portal frames by using slope-deflection method",
-        "Analyze continuous beams and portal frames by using Moment – distribution method"
+        "Apply energy theorems to analyze trusses.",
+        "Analyze indeterminate structures using Castigliano's second theorem.",
+        "Analyze fixed and continuous beams.",
+        "Analyze continuous beams and portal frames using the slope-deflection method.",
+        "Analyze continuous beams and portal frames using the moment-distribution method."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1082,16 +1123,16 @@
       "seo": {
         "slug": "structural-analysis-jntuk-r23-ce-2-2",
         "title": "Structural Analysis - JNTUK R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Structural Analysis: energy theorems, indeterminate structures, fixed & continuous beams, slope-deflection and moment distribution methods."
+        "meta_description": "JNTUK R23 CE 2-2 Structural Analysis: energy theorems, indeterminate structures, fixed & continuous beams, slope-deflection and moment distribution methods."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE06, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-hydraulics-and-hydraulic-machinery",
@@ -1101,7 +1142,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE07",
+      "subject_code": null,
       "name": "Hydraulics and Hydraulic Machinery",
       "category": "ProfessionalCore",
       "credits": {
@@ -1157,7 +1198,7 @@
           "title": "Pumps",
           "topics": [
             "Working principle of a centrifugal pump; work done by impeller; heads, losses and efficiencies",
-            "Minimum starting speed; priming; specific speed; net positive suction head (NPSH)",
+            "Minimum starting speed, priming, specific speed, limitation of suction lift and net positive suction head (NPSH)",
             "Performance and characteristic curves; cavitation effects",
             "Multistage centrifugal pumps; troubles and remedies"
           ]
@@ -1165,10 +1206,10 @@
       ],
       "course_outcomes": [
         "Understand the characteristics of laminar and turbulent flows.",
-        "Understand the fundamentals in open channel flow",
-        "Apply the knowledge of fluid mechanics to solve the uniform and non-uniform flow problems in open channels.",
-        "Understand the principles, losses and its efficiencies of centrifugal pumps",
-        "Determine the performance of impact of jets on plates, Pelton wheel, and Francis turbine and centrifugal pump"
+        "Apply fluid-mechanics knowledge to uniform-flow problems in open channels.",
+        "Solve non-uniform-flow problems and hydraulic-jump phenomena in open channels.",
+        "Evaluate jet impact on plates and design Pelton, Francis and Kaplan turbines.",
+        "Understand the principles, losses and efficiencies of centrifugal pumps."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1178,16 +1219,16 @@
       "seo": {
         "slug": "hydraulics-and-hydraulic-machinery-jntuk-r23-ce-2-2",
         "title": "Hydraulics & Hydraulic Machinery - CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Hydraulics & Hydraulic Machinery: laminar & turbulent pipe flow, open channel flow, impact of jets, turbines and pumps."
+        "meta_description": "JNTUK R23 CE 2-2 Hydraulics & Hydraulic Machinery: laminar & turbulent pipe flow, open channel flow, impact of jets, turbines and pumps."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core. Course code 23CE07, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-concrete-technology-lab",
@@ -1197,7 +1238,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE54",
+      "subject_code": null,
       "name": "Concrete Technology Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -1207,7 +1248,20 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments and Tasks",
+          "topics": [
+            "Test cement consistency, fineness, setting times, specific gravity, soundness and compressive strength",
+            "Determine fine-aggregate grading, fineness modulus, specific gravity, water absorption and bulking",
+            "Determine coarse-aggregate grading, specific gravity and water absorption",
+            "Measure concrete workability by compaction-factor, slump and Vee-Bee tests",
+            "Determine concrete compressive strength, modulus of rupture, Young’s modulus, Poisson’s ratio and split-tensile strength",
+            "Demonstrate non-destructive testing of concrete"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Outline importance of testing cement and its properties",
         "Assess different properties of aggregates",
@@ -1222,16 +1276,16 @@
       "seo": {
         "slug": "concrete-technology-lab-jntuk-r23-ce-2-2",
         "title": "Concrete Technology Lab - R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Concrete Technology Lab: tests on cement, fine and coarse aggregates, fresh concrete (slump, compaction factor, Vee-bee) and hardened concrete."
+        "meta_description": "JNTUK R23 CE 2-2 Concrete Technology Lab: cement, aggregate, workability, strength, elastic-property and non-destructive tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE54). Experiments read from the source PDF: cement tests (consistency, fineness, setting times, specific gravity, soundness, compressive strength), fine and coarse aggregate tests (grading, specific gravity, water absorption, bulking), fresh concrete workability (compaction factor, slump, Vee-bee) and hardened concrete (compressive strength, modulus of rupture, Young's modulus and Poisson's ratio, split tensile strength, NDT)."
+      "notes": "Detailed tests are sourced from the official JNTUK Concrete Technology Laboratory syllabus."
     },
     {
       "id": "r23-ce-2-2-engineering-geology-lab",
@@ -1241,7 +1295,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CE55",
+      "subject_code": null,
       "name": "Engineering Geology Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -1251,7 +1305,21 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Experiments and Tasks",
+          "topics": [
+            "Identify rock-forming and ore-forming minerals and their physical properties",
+            "Describe and identify igneous, sedimentary and metamorphic rocks",
+            "Interpret geological maps and draw sections showing tilted beds, faults and unconformities",
+            "Solve structural-geology and strike-and-dip problems",
+            "Interpret bore-hole data",
+            "Determine rock strength using laboratory tests",
+            "Conduct fieldwork to identify minerals, rocks, geomorphology and structural geology"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Demonstrate the importance of geological principles.",
         "Distinguish various types of minerals and rocks based on physical properties and physical observations.",
@@ -1265,16 +1333,16 @@
       "seo": {
         "slug": "engineering-geology-lab-jntuk-r23-ce-2-2",
         "title": "Engineering Geology Lab - R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Engineering Geology Lab: identification of minerals and rocks, geological map interpretation, structural geology problems and bore-hole data."
+        "meta_description": "JNTUK R23 CE 2-2 Engineering Geology Lab: mineral and rock identification, geological maps, structural problems, boreholes and fieldwork."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE55). Experiments read from the source PDF: megascopic identification of rock-forming and ore-forming minerals and of igneous, sedimentary and metamorphic rocks; interpretation and drawing of sections for geological maps (tilted beds, faults, unconformities); simple structural geology and strike/dip problems; bore-hole data; rock strength tests; and field work."
+      "notes": "Experiments and fieldwork are sourced from the official JNTUK Engineering Geology Laboratory syllabus."
     },
     {
       "id": "r23-ce-2-2-remote-sensing-and-geographical-information-systems",
@@ -1284,7 +1352,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23CES2",
+      "subject_code": null,
       "name": "Remote Sensing and Geographical Information Systems",
       "category": "SkillEnhancement",
       "credits": {
@@ -1324,14 +1392,28 @@
             "Spatial data analysis: vector and raster overlay operations, arithmetic/comparison/logical operators, conditional expressions",
             "Network analysis: components of a network, transportation network, optimum path analysis"
           ]
+        },
+        {
+          "number": 4,
+          "title": "GIS Practical Exercises",
+          "topics": [
+            "Georeference a topographic sheet or map",
+            "Digitize features and create an attribute table",
+            "Create a thematic map and calculate feature length, area and perimeter",
+            "Develop a TIN and DEM from a contour map",
+            "Create a stream-ordering map from a stream network",
+            "Calculate watershed hydro-geomorphological parameters",
+            "Create a transportation-network map and perform route analysis",
+            "Use QGIS or ArcGIS for the practical exercises"
+          ]
         }
       ],
       "course_outcomes": [
-        "Acquire knowledge about concepts of Remote Sensing and GIS applications.",
-        "Perform digital image analysis and interpret digital image characteristics.",
-        "Digitize and create thematic map and extract important features to calculate geometry.",
-        "Illustrate the GIS applications for developing elevations using TIN/DEM and stream ordering map.",
-        "Apply GIS software to perform simple analysis for Civil Engineering problems"
+        "Explain remote-sensing concepts, sensors and their characteristics.",
+        "Use data models and structures for raster and vector analysis in GIS.",
+        "Digitize and create thematic maps and calculate feature geometry.",
+        "Perform surface analysis over contours to develop a digital elevation model.",
+        "Use GIS software for simple water-resources and transportation-engineering analyses."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1341,16 +1423,16 @@
       "seo": {
         "slug": "remote-sensing-and-geographical-information-systems-jntuk-r23-ce-2-2",
         "title": "Remote Sensing & GIS - JNTUK R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Remote Sensing & Geographical Information Systems: remote sensing fundamentals, digital image analysis and GIS, plus QGIS/ArcGIS practicals."
+        "meta_description": "JNTUK R23 CE 2-2 Remote Sensing & Geographical Information Systems: remote sensing fundamentals, digital image analysis and GIS, plus QGIS/ArcGIS practicals."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Skill-enhancement course (0-1-2-2, course code 23CES2). The source gives 3 theory units plus a practical experiment list (georeferencing, digitization, thematic maps, feature geometry, TIN/DEM from contours, stream ordering, watershed parameters and route analysis using QGIS/ArcGIS) read from the source PDF."
+      "notes": "The II-II course-structure row controls the 0-1-2-2 credits; the detailed page's conflicting 3-0-0-3 line is not used. All three theory units and eight GIS practicals are included."
     },
     {
       "id": "r23-ce-2-2-design-thinking-and-innovation",
@@ -1360,7 +1442,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23ME57",
+      "subject_code": null,
       "name": "Design Thinking & Innovation",
       "category": "EngineeringScience",
       "credits": {
@@ -1388,7 +1470,8 @@
             "Design thinking process: empathize, analyze, idea and prototype",
             "Implementing the process in driving inventions",
             "Design thinking in social innovations",
-            "Tools of design thinking - persona, customer journey map, brainstorming, product development"
+            "Tools of design thinking - persona, customer journey map, brainstorming, product development",
+            "Activities: three-minute presentation of an idea, a flow diagram of the design process, and an explanation of product development"
           ]
         },
         {
@@ -1398,7 +1481,8 @@
             "Art of innovation; difference between innovation and creativity",
             "Role of creativity and innovation in organizations",
             "Creativity to innovation; teams for innovation",
-            "Measuring the impact and value of creativity"
+            "Measuring the impact and value of creativity",
+            "Activities: debates on innovation and creativity and value-based innovation, and planning the path from idea to innovation"
           ]
         },
         {
@@ -1408,7 +1492,8 @@
             "Problem formation; introduction to product design",
             "Product strategies, product value, product planning and specifications",
             "Innovation towards product design",
-            "Case studies"
+            "Case studies",
+            "Activities: explain the importance of modelling, how to set specifications, and an original product design"
           ]
         },
         {
@@ -1418,16 +1503,17 @@
             "Design thinking applied in business and strategic innovation; principles that redefine business",
             "Business challenges: growth, predictability, change, maintaining relevance, extreme competition, standardization",
             "Design thinking to meet corporate needs; design thinking for startups",
-            "Defining and testing business models and cases; developing and testing prototypes"
+            "Defining and testing business models and cases; developing and testing prototypes",
+            "Activity: plan how to market and maintain an original product, address reliability, and prepare for a startup"
           ]
         }
       ],
       "course_outcomes": [
-        "Apply fundamental design components, principles, and new materials to create and improve design projects.",
-        "Apply the design thinking process to develop and present innovative product solutions.",
-        "Analyze the relationship between creativity and innovation, evaluate their roles in organizations, and develop strategic plans for transforming creative ideas into innovative solutions.",
-        "Analyze to work in a multidisciplinary environment.",
-        "Apply design thinking principles to address business challenges, develop and test business models and prototypes, and evaluate the value of creativity."
+        "Define concepts related to design thinking.",
+        "Explain the fundamentals of design thinking and innovation.",
+        "Apply design-thinking techniques to solve problems in various sectors.",
+        "Analyze work in a multidisciplinary environment.",
+        "Evaluate the value of creativity."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1437,16 +1523,16 @@
       "seo": {
         "slug": "design-thinking-and-innovation-jntuk-r23-ce-2-2",
         "title": "Design Thinking & Innovation - R23 CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Design Thinking & Innovation: elements & principles of design, design thinking process, innovation, product design and business processes."
+        "meta_description": "JNTUK R23 CE 2-2 Design Thinking & Innovation: elements & principles of design, design thinking process, innovation, product design and business processes."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23ME57, 1-0-2-2 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-2-2-building-materials-and-construction",
@@ -1456,7 +1542,7 @@
       "year": 2,
       "semester": 2,
       "year_sem_label": "2-2",
-      "subject_code": "23MC02",
+      "subject_code": null,
       "name": "Building Materials and Construction",
       "category": "MandatoryNonCredit",
       "credits": {
@@ -1469,61 +1555,61 @@
       "units": [
         {
           "number": 1,
-          "title": "Stones and Bricks",
+          "title": "Stones, Bricks and Tiles",
           "topics": [
-            "Classification of rocks; characteristics of a good building stone; dressing of stones",
-            "Common building stones - properties, composition and uses",
-            "Bricks: composition, constituents of brick earth, manufacturing process",
-            "Characteristics of good bricks; classification; fly ash and hollow bricks"
+            "Building-stone properties and structural requirements; classification, quarrying, blasting precautions and dressing",
+            "Composition of good brick earth and methods of manufacturing bricks",
+            "Characteristics, manufacture and types of tiles",
+            "Uses of aluminium, gypsum, glass and bituminous materials"
           ]
         },
         {
           "number": 2,
-          "title": "Lime and Cement",
+          "title": "Masonry and Wood",
           "topics": [
-            "Lime: limestone cycle, sources, properties, constituents, classification and storage",
-            "Cement: classification and properties; comparison between cement and lime",
-            "Constituents and functions of ingredients; outline of Portland cement manufacture",
-            "Field tests for cement; types, uses and storage of cements"
+            "Types of masonry; English and Flemish bonds; rubble and ashlar masonry",
+            "Cavity and partition walls",
+            "Wood structure, properties, seasoning, classification and defects",
+            "Alternative materials for wood: galvanized iron, fibre-reinforced plastics, steel and aluminium"
           ]
         },
         {
           "number": 3,
-          "title": "Mortar and Masonry",
+          "title": "Lime, Cement and Concrete",
           "topics": [
-            "Classification and characteristics of good mortar; types and preparation; precautions",
-            "Types of masonry; joints in stone masonry",
-            "Bonds in bricks: English and Flemish bonds; tools for brick laying",
-            "Defects in brick masonry; importance of cavity and partition walls"
+            "Ingredients of lime, constituents of limestone, classification and manufacture of lime",
+            "Portland cement composition, hydration, setting and fineness",
+            "Types and properties of cement; field and laboratory tests",
+            "Ingredients of cement concrete, their importance and tests for concrete"
           ]
         },
         {
           "number": 4,
           "title": "Building Components",
           "topics": [
-            "Components of a building: substructure and superstructure",
-            "Importance, functions and requirements of good foundations; types of foundations",
-            "Lintels, arches and walls",
-            "Staircases; types of floors and roofs"
+            "Lintels, arches, vaults and types of staircases",
+            "Concrete, mosaic and terrazzo floors",
+            "Pitched and flat roofs; lean-to, coupled, king-post and queen-post trussed roofs",
+            "RCC, Madras-terrace and prefabricated roofs"
           ]
         },
         {
           "number": 5,
-          "title": "Timber and Finishings in Buildings",
+          "title": "Finishings, Formwork and Aggregates",
           "topics": [
-            "Classification of timber trees; cross section of an exogenous tree; seasoning of timber; types and uses; plywood",
-            "Paints: functions, types, constituents, characteristics and defects",
-            "Damp proofing: effects of dampness, methods",
-            "Materials used for damp-proof course and treatment in buildings"
+            "Damp-proofing and waterproofing materials and uses; plastering, pointing, whitewashing and distempering",
+            "Paint constituents and types; painting new and old wood; varnish",
+            "Formwork and scaffolding",
+            "Aggregate classification, shape, texture, bond, strength, specific gravity, bulk density, porosity, absorption, moisture, bulking and sieve analysis"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand the preparation process and the composition of construction materials such as Stones, bricks and timber.",
-        "Describe the sources, constituents and storage of lime and cement for their appropriate usage as building materials based on their specific attributes.",
-        "Identify the different components in a building and their specific purpose in the building.",
-        "Classify the various types of mortars, masonry components and finishings used in the buildings.",
-        "Identify the uses, good and faulty characteristics of different building materials."
+        "Identify different building materials and explain their importance in building construction.",
+        "Explain the fundamentals of design thinking and innovation.",
+        "Apply design-thinking techniques to solve problems in various sectors.",
+        "Analyze work in a multidisciplinary environment.",
+        "Evaluate the value of creativity."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1533,16 +1619,16 @@
       "seo": {
         "slug": "building-materials-and-construction-jntuk-r23-ce-2-2",
         "title": "Building Materials & Construction - CE 2-2",
-        "meta_description": "LBRCE R23 CE 2-2 Building Materials and Construction (audit): stones & bricks, lime & cement, mortar & masonry, building components, and timber & finishings."
+        "meta_description": "JNTUK R23 CE 2-2 Building Materials and Construction: stones, bricks, tiles, masonry, wood, lime, cement, roofs, finishes, formwork and aggregates."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-01",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Audit course - no credit (L-T-P 3-0-0, credits shown as '-'). Course code 23MC02. 5-unit syllabus read from the source PDF."
+      "notes": "The five units follow JNTUK's official R23 Civil Engineering PDF. Its published outcomes list contains one building-material outcome followed by four statements that appear duplicated from Design Thinking & Innovation; they are retained as published."
     },
     {
       "id": "r23-ce-3-1-design-and-drawing-of-reinforced-concrete-structures",
@@ -1552,7 +1638,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE08",
+      "subject_code": null,
       "name": "Design and Drawing of Reinforced Concrete Structures",
       "category": "ProfessionalCore",
       "credits": {
@@ -1610,16 +1696,16 @@
           "topics": [
             "Classification of slabs",
             "Design of one-way slabs, two-way slabs and continuous slabs using IS coefficients (conventional method)",
-            "Design of a waist-slab staircase"
+            "Design of a waist-slab staircase",
+            "Prepare weekly reinforcement-detailing plates for T-, L-, continuous and cantilever beams; columns and isolated footings; one-way, two-way and continuous slabs; and a waist-slab staircase"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand the fundamental procedures and guidelines given in relevant IS Codes for design of various RCC elements such as beams, columns, foundations, slabs, shear reinforcement, under Working stress and Limit State methods",
-        "Design and detailing of various flexural members",
-        "Limit state design of structures subjected to shear, bond and torsion",
-        "Design of compression members subjected to axial load, uni-axial and bi-axial moments, Design of different types of shallow foundations",
-        "Design the one way and two-way slabs with different end conditions using appropriate design guidelines"
+        "Apply different design philosophies.",
+        "Analyze, design and detail flexural members.",
+        "Design structures subjected to shear, bond and torsion.",
+        "Design different types of compression members and footings."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1629,16 +1715,16 @@
       "seo": {
         "slug": "design-and-drawing-of-reinforced-concrete-structures-jntuk-r23-ce-3-1",
         "title": "Design & Drawing of RCC Structures - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Design and Drawing of RCC Structures: working stress & limit state design, flexure, shear/torsion/bond, columns/footings and slab design."
+        "meta_description": "JNTUK R23 CE 3-1 Design and Drawing of RCC Structures: working stress & limit state design, flexure, shear/torsion/bond, columns/footings and slab design."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE08, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-1-engineering-hydrology",
@@ -1648,7 +1734,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE09",
+      "subject_code": null,
       "name": "Engineering Hydrology",
       "category": "ProfessionalCore",
       "credits": {
@@ -1712,11 +1798,14 @@
         }
       ],
       "course_outcomes": [
-        "Understand the basic concepts of hydrology and factors affecting the hydrological components.",
-        "Compute the average rainfall over an area and estimate the runoff for a given data",
-        "Understand concepts of Hydrographs. flood frequency analysis, groundwater movement and well hydraulics.",
-        "Develop unit hydrograph and synthetic hydrograph, and estimate flood magnitude and carry out flood routing.",
-        "Determine aquifer parameters and yield of wells."
+        "Explain the theories and principles governing hydrologic processes.",
+        "Quantify hydrologic components and apply them in the hydrologic design of water-resources projects.",
+        "Develop intensity-duration-frequency and depth-area-duration curves for hydraulic-structure design.",
+        "Develop design storms and carry out frequency analysis.",
+        "Develop flow-mass and flow-duration curves and apply hydrograph analysis in water-resources design.",
+        "Develop unit hydrographs and synthetic hydrographs.",
+        "Estimate flood magnitude and carry out flood routing.",
+        "Determine aquifer parameters and well yield."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1726,16 +1815,16 @@
       "seo": {
         "slug": "engineering-hydrology-jntuk-r23-ce-3-1",
         "title": "Engineering Hydrology - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Engineering Hydrology: precipitation, abstractions, runoff & hydrographs, floods & flood routing, and groundwater & wells."
+        "meta_description": "JNTUK R23 CE 3-1 Engineering Hydrology: precipitation, abstractions, runoff & hydrographs, floods & flood routing, and groundwater & wells."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE09, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-1-geotechnical-engineering-i",
@@ -1745,7 +1834,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE10",
+      "subject_code": null,
       "name": "Geotechnical Engineering-I",
       "category": "ProfessionalCore",
       "credits": {
@@ -1808,11 +1897,11 @@
         }
       ],
       "course_outcomes": [
-        "Understand the soil formation, its index properties and classification.",
-        "Understand the soil moisture and flow of water through soils and its effects.",
-        "Evaluate the stress distribution of soil subjected to different loading conditions.",
-        "Understand Compaction and Compressibility characteristics under partially saturated and fully saturated conditions.",
-        "Evaluate the shear strength of soil at different loading & drainage conditions for different soils."
+        "Understand soil formation, index properties and classification.",
+        "Understand soil moisture, water flow through soils and its effects.",
+        "Understand stress distribution in soils.",
+        "Understand compressibility under partially and fully saturated conditions.",
+        "Understand soil shear strength under different loading and drainage conditions."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1822,16 +1911,16 @@
       "seo": {
         "slug": "geotechnical-engineering-i-jntuk-r23-ce-3-1",
         "title": "Geotechnical Engineering-I - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Geotechnical Engineering-I: soil classification, permeability, seepage & stress distribution, compaction & consolidation, shear strength."
+        "meta_description": "JNTUK R23 CE 3-1 Geotechnical Engineering-I: soil classification, permeability, seepage & stress distribution, compaction & consolidation, shear strength."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE10, 3-0-0-3 credits and 5-unit syllabus read from the source PDF. The course structure table lists this in V Semester (3-1); the detail page header in the source PDF mislabels it 'VI Sem.', which appears to be a typo in the source document."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-1-advanced-structural-analysis",
@@ -1841,7 +1930,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE11",
+      "subject_code": null,
       "name": "Advanced Structural Analysis",
       "category": "ProfessionalElective",
       "credits": {
@@ -1903,11 +1992,11 @@
         }
       ],
       "course_outcomes": [
-        "Differentiate Determinate and Indeterminate Structures",
-        "Analyze three and two hinged arches",
-        "Carryout lateral Load analysis of structures",
-        "Analyze Cable and Suspension Bridge structures",
-        "Analyze structures using Moment Distribution, Kani's Method"
+        "Differentiate determinate and indeterminate structures.",
+        "Carry out lateral-load analysis of structures.",
+        "Analyze cable and suspension-bridge structures.",
+        "Analyze structures using the moment-distribution and Kani's methods.",
+        "Analyze structures using the matrix method."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1917,16 +2006,16 @@
       "seo": {
         "slug": "advanced-structural-analysis-jntuk-r23-ce-3-1",
         "title": "Advanced Structural Analysis - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Advanced Structural Analysis: energy theorems & trusses, arches, approximate methods, cable structures, moment distribution & Kani's method."
+        "meta_description": "JNTUK R23 CE 3-1 Advanced Structural Analysis: energy theorems & trusses, arches, approximate methods, cable structures, moment distribution & Kani's method."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-I option 1 of 4. Course code 23CE11, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-I option in JNTUK's official III-I structure; credits, five units and five outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-1-architecture-and-town-planning",
@@ -1936,7 +2025,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE12",
+      "subject_code": null,
       "name": "Architecture and Town Planning",
       "category": "ProfessionalElective",
       "credits": {
@@ -1997,10 +2086,10 @@
         }
       ],
       "course_outcomes": [
-        "Understand the distinguish architectural styles of eastern and western world.",
-        "Understand the importance of Orders of architecture.",
-        "Assess the compose spaces of buildings using design concepts, planning principles.",
-        "Understand the town planning standards, landscaping features and regulations controlling expansion of the towns and the cities."
+        "Distinguish architectural styles of the eastern and western world.",
+        "Explain the importance of orders of architecture.",
+        "Compose building spaces using design concepts and planning principles.",
+        "Explain town-planning standards, landscaping features and regulations controlling the expansion of towns and cities."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2010,16 +2099,16 @@
       "seo": {
         "slug": "architecture-and-town-planning-jntuk-r23-ce-3-1",
         "title": "Architecture and Town Planning - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Architecture and Town Planning: history of architecture, planning principles, town-planning history, modern planning and landscaping."
+        "meta_description": "JNTUK R23 CE 3-1 Architecture and Town Planning: history of architecture, planning principles, town-planning history, modern planning and landscaping."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-I option 2 of 4. Course code 23CE12, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-I option in JNTUK's official III-I structure; credits, five units and four outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-1-construction-technology-and-management",
@@ -2029,7 +2118,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE13",
+      "subject_code": null,
       "name": "Construction Technology and Management",
       "category": "ProfessionalElective",
       "credits": {
@@ -2090,10 +2179,10 @@
         }
       ],
       "course_outcomes": [
-        "Appreciate the importance of construction planning and the Stakeholders involved",
-        "Understand the functioning of various earthmoving equipment and construction techniques",
-        "Distinguish the methods of production of aggregate products and concreting",
-        "Apply the project management and construction techniques using CPM and PERT to practical problems"
+        "Explain the importance of construction planning.",
+        "Explain the functioning of earth-moving equipment.",
+        "Explain methods of aggregate production and concreting.",
+        "Apply project-management and construction techniques."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2103,28 +2192,28 @@
       "seo": {
         "slug": "construction-technology-and-management-jntuk-r23-ce-3-1",
         "title": "Construction Technology & Management - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Construction Technology & Management: project management, PERT/cost optimization, construction & concreting equipment, methods & BIM."
+        "meta_description": "JNTUK R23 CE 3-1 Construction Technology & Management: project management, PERT/cost optimization, construction & concreting equipment, methods & BIM."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-I option 3 of 4. Course code 23CE13, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-I option in JNTUK's official III-I structure; credits, five units and four outcomes follow the detailed course page."
     },
     {
-      "id": "r23-ce-3-1-safety-engineering",
+      "id": "r23-ce-3-1-construction-technology-and-management-open-elective",
       "regulation": "R23",
       "branch": "CE",
       "specialization": null,
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE14",
-      "name": "Safety Engineering",
-      "category": "ProfessionalElective",
+      "subject_code": null,
+      "name": "Construction Technology and Management (Open Elective)",
+      "category": "OpenElective",
       "credits": {
         "L": 3,
         "T": 0,
@@ -2135,61 +2224,58 @@
       "units": [
         {
           "number": 1,
-          "title": "Introduction",
+          "title": "Construction Project Management",
           "topics": [
-            "Introduction to the construction industry and safety issues in construction; human factors in construction safety management",
-            "Roles of various groups and stake-holders in ensuring safety in the construction industry",
-            "Framing of contract conditions on safety and related matters",
-            "Relevance of ergonomics in construction safety"
+            "Construction project management and its relevance; qualities of a project manager",
+            "Project planning, coordination, scheduling and monitoring",
+            "Bar charts and milestone charts",
+            "Critical path method"
           ]
         },
         {
           "number": 2,
-          "title": "Safety in Construction Operations",
+          "title": "PERT, Cost/Resource Optimization and Project Management Software",
           "topics": [
-            "Safety in various construction operations: excavation and filling, under-water works, underpinning & shoring, ladders & scaffolds, tunnelling, blasting, dismantling, confined space, temporary structures",
-            "Noise standards and limit values; noise instrumentation and monitoring procedure; noise indices",
-            "Effects of air pollution in industry, air pollution episodes; emission factors inventory and predictive equations",
-            "Familiarization with relevant Indian Standards and the National Building Code provisions on construction safety"
+            "Project evaluation and review technique; cost analysis and updating",
+            "Crashing for optimum cost and crashing for optimum resources",
+            "Allocation of resources",
+            "Introduction to software for construction management; project management using PRIMAVERA (or equivalent)"
           ]
         },
         {
           "number": 3,
-          "title": "Construction Machinery Safety",
+          "title": "Construction Equipment",
           "topics": [
-            "Safety in material handling and equipment; safety in storage and stacking of construction materials",
-            "Safety in the use of construction equipment/vehicles - excavators, graders and dozers, cranes, hoists & lifts, other lifting gears, wire ropes, chain-pulley blocks, mixers",
-            "Conveyors, pneumatic and hydraulic tools in construction",
-            "Safety in temporary power supply and fire safety at the construction site"
+            "Construction equipment: economical considerations, earthwork equipment",
+            "Trucks and handling equipment - rear dump trucks, capacities of trucks and handling equipment, calculation of truck production",
+            "Compaction equipment: types of compaction rollers",
+            "Hoisting and earthwork equipment: hoists, cranes, tractors, bulldozers, graders, scrapers, draglines, clam shell buckets"
           ]
         },
         {
           "number": 4,
-          "title": "Construction Act and Code of Practices",
+          "title": "Concreting Equipment",
           "topics": [
-            "Contract Labour (R&A) Act and Central Rules: definitions, registration of establishments, licensing of contractors, welfare and health provisions, penalties, rules regarding wages",
-            "Building & Other Construction Work (RE & CS) Act, 1996 and Central Rules, 1998: applicability, administration, registration",
-            "Welfare Board & Welfare Fund, training of building workers, general safety, health & welfare provisions",
-            "Code of practices - preventive measures against hazards at workplaces, Part 1 & 2"
+            "Concreting equipment: concrete mixers, batching plants, mobile mixing plants like 'Ajax'",
+            "Mixing and placing of concrete",
+            "Consolidating and finishing"
           ]
         },
         {
           "number": 5,
-          "title": "Safety in Demolition Work",
+          "title": "Construction Methods, Quality Control and BIM",
           "topics": [
-            "Safety in demolition work: manual, mechanical, using explosive - keys to safe demolition, pre-survey inspection, method statement",
-            "Site supervision, safe clearance zone, health hazards from demolition",
-            "Indian standard for trusses, girders and beams; first aid",
-            "Fire hazards and preventing methods; case studies in construction sites against fire accidents"
+            "Construction methods: earthwork, piling, placing of concrete, form work, fabrication and erection",
+            "Quality control and safety engineering",
+            "BIM for civil engineers (Building Information Modelling)"
           ]
         }
       ],
       "course_outcomes": [
-        "Identify the causes of accidents related to construction activities, role of stakeholders, and human factors associated with these accidents.",
-        "Recognize the safety requirements in the construction operations and develop guidelines to ensure safety at construction site.",
-        "Describe and deal with the safety requirements while dealing with machinery and materials during construction.",
-        "Realize the legal provisions and Acts with respect to the health and welfare of workers at construction site.",
-        "Identify the appropriate safety and precautionary measures to be taken at a demolition site."
+        "Explain the importance of construction planning.",
+        "Explain the functioning of earth-moving equipment.",
+        "Explain methods of aggregate production and concreting.",
+        "Apply project-management and construction techniques."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2197,18 +2283,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "safety-engineering-jntuk-r23-ce-3-1",
-        "title": "Safety Engineering - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Safety Engineering: safety fundamentals, construction operations, machinery safety, labour/construction acts and demolition safety."
+        "slug": "construction-technology-and-management-open-elective-jntuk-r23-ce-3-1",
+        "title": "CTM Open Elective - JNTUK R23 CE 3-1",
+        "meta_description": "JNTUK R23 CE 3-1 Construction Technology and Management Open Elective: planning, PERT, construction equipment, concreting, methods, safety and BIM."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-I option 4 of 4. Course code 23CE14, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Distinct Open Elective-I offering in JNTUK's official III-I structure; its detailed syllabus and outcomes match the Professional Elective-I course of the same title."
     },
     {
       "id": "r23-ce-3-1-geotechnical-engineering-lab",
@@ -2218,7 +2304,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE56",
+      "subject_code": null,
       "name": "Geotechnical Engineering Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -2244,9 +2330,9 @@
         }
       ],
       "course_outcomes": [
-        "Perform the index and engineering properties of the soil and interpret the results.",
-        "Perform the Strength, compaction and consolidation properties of the soil and interpret the results.",
-        "Apply field conditions for computing and analyzing experimental data."
+        "Determine soil index properties and classify soils.",
+        "Determine soil permeability.",
+        "Determine compaction, consolidation and shear-strength characteristics."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2256,27 +2342,27 @@
       "seo": {
         "slug": "geotechnical-engineering-lab-jntuk-r23-ce-3-1",
         "title": "Geotechnical Engineering Lab - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Geotechnical Engineering Lab: index/engineering properties, permeability, compaction, consolidation, shear strength and field tests."
+        "meta_description": "JNTUK R23 CE 3-1 Geotechnical Engineering Lab: index/engineering properties, permeability, compaction, consolidation, shear strength and field tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE56). At least eight of the listed experiments are conducted; experiments read from the source PDF: specific gravity and Atterberg's limits, field density (core cutter and sand replacement methods), grain size analysis by sieving, permeability (constant and variable head tests), compaction test, consolidation test (demonstration), direct shear, triaxial compression, unconfined compression and vane shear tests, differential free swell (DFS), and field plate load and field CBR test demonstrations."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
-      "id": "r23-ce-3-1-hydraulics-and-hydraulic-machinery-lab",
+      "id": "r23-ce-3-1-fluid-mechanics-and-hydraulic-machines-lab",
       "regulation": "R23",
       "branch": "CE",
       "specialization": null,
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CE57",
-      "name": "Hydraulics and Hydraulic Machinery Lab",
+      "subject_code": null,
+      "name": "Fluid Mechanics and Hydraulic Machines Lab",
       "category": "ProfessionalCore",
       "credits": {
         "L": 0,
@@ -2311,18 +2397,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "hydraulics-and-hydraulic-machinery-lab-jntuk-r23-ce-3-1",
-        "title": "Hydraulics & Hydraulic Machinery Lab - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Hydraulics & Hydraulic Machinery Lab: Bernoulli's equation, Venturi/orifice meter calibration, notches, friction factor, pipe head-loss."
+        "slug": "fluid-mechanics-and-hydraulic-machines-lab-jntuk-r23-ce-3-1",
+        "title": "Fluid Mechanics & Hydraulic Machines Lab - CE 3-1",
+        "meta_description": "JNTUK R23 CE 3-1 Fluid Mechanics and Hydraulic Machines Lab: Bernoulli, flow meters, notches, pipe friction and head-loss experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course title, placement, credits and experiments are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE57). Experiments read from the source PDF: verification of Bernoulli's equation, calibration of a Venturi meter and an orifice meter, coefficient of discharge of a small orifice (constant head method) and an external cylindrical mouth piece (variable head method), calibration of a contracted rectangular notch and a triangular notch, determination of the friction factor of the pipe material, and determination of head loss coefficients due to a sudden expansion/contraction and a bend in a pipeline."
+      "notes": "The title and ten experiments follow the official JNTUK III-I structure and laboratory page."
     },
     {
       "id": "r23-ce-3-1-estimation-specifications-and-contracts",
@@ -2332,7 +2418,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23CES3",
+      "subject_code": null,
       "name": "Estimation, Specifications & Contracts",
       "category": "SkillEnhancement",
       "credits": {
@@ -2405,16 +2491,16 @@
       "seo": {
         "slug": "estimation-specifications-and-contracts-jntuk-r23-ce-3-1",
         "title": "Estimation, Specifications & Contracts - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Estimation, Specifications & Contracts: contracts, quantity estimation, rate analysis, and detailed estimation by wall & centre-line methods."
+        "meta_description": "JNTUK R23 CE 3-1 Estimation, Specifications & Contracts: contracts, quantity estimation, rate analysis, and detailed estimation by wall & centre-line methods."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Skill-enhancement course (0-1-2-2, course code 23CES3). 5-unit syllabus covering contracts, quantity estimation, rate analysis and detailed building estimation (individual wall and centre line methods) read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-1-tinkering-lab",
@@ -2424,7 +2510,7 @@
       "year": 3,
       "semester": 1,
       "year_sem_label": "3-1",
-      "subject_code": "23EM01",
+      "subject_code": null,
       "name": "Tinkering Lab",
       "category": "EngineeringScience",
       "credits": {
@@ -2451,10 +2537,7 @@
         }
       ],
       "course_outcomes": [
-        "Turn ideas into reality by brainstorming, modelling and prototyping.",
-        "Inculcate innovative and entrepreneurial mind-set through Design thinking and Hands-on Learning.",
-        "Develop basic knowledge in electrical and mechanical engineering principles.",
-        "Develop skills of using hand tools to construct a prototype of an engineering design."
+        "Experiment, innovate and solve real-world challenges."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2464,16 +2547,16 @@
       "seo": {
         "slug": "tinkering-lab-jntuk-r23-ce-3-1",
         "title": "Tinkering Lab - CE 3-1",
-        "meta_description": "LBRCE R23 CE 3-1 Tinkering Lab: breadboard circuits, Arduino/ESP32 projects, 3D-printed robot & rocket, soil-moisture monitoring and design thinking."
+        "meta_description": "JNTUK R23 CE 3-1 Tinkering Lab: breadboard circuits, Arduino/ESP32 projects, 3D-printed robot & rocket, soil-moisture monitoring and design thinking."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Engineering Science lab (0-0-2-1, course code 23EM01; structure-table credits used, matching the detail-page L-T-P-C line). Experiments read from the source PDF: breadboard series/parallel circuits, a traffic-light circuit, an automatic street light using an LDR, Arduino LED blinking (Tinkercad and Arduino IDE), IR sensor and servo motor interfacing with Arduino, ESP32 LED blink and LDR interfacing, mobile-app LED control, a 3D-printed walking robot and rocket, a live soil-moisture monitoring dashboard, and a design-thinking motorbike-redesign exercise."
+      "notes": "All 13 published experiments and the single published course outcome follow JNTUK's official R23 Civil Engineering syllabus."
     },
     {
       "id": "r23-ce-3-1-evaluation-of-community-service-internship",
@@ -2522,7 +2605,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE15",
+      "subject_code": null,
       "name": "Design and Drawing of Steel Structures",
       "category": "ProfessionalCore",
       "credits": {
@@ -2582,16 +2665,17 @@
             "Design considerations and IS Code recommendations",
             "Design of welded plate girder",
             "Curtailment of flange plates",
-            "Stiffeners, splicing and connections"
+            "Stiffeners, splicing and connections",
+            "Prepare weekly detailing plates for simple and compound beams, columns with lacing and battens, slab and gusseted bases, steel roof trusses, plate girders and gantry girders"
           ]
         }
       ],
       "course_outcomes": [
-        "Design the different types of connections (Riveted and Welded) in steel members",
-        "Design of Simple and compound beams and check its stability as per IS code",
-        "Design of Tension, compression members",
-        "Design of compression members, column bases subjected to point loads and moments",
-        "Design of Plate girder and IS code Recommendations"
+        "Analyze and design steel structural members using relevant IS codes.",
+        "Analyze, design and detail flexural members.",
+        "Design different types of compression members with connection detailing.",
+        "Design plate girders and gantry girders with connection detailing.",
+        "Produce drawings for different steel-structure components."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2601,16 +2685,16 @@
       "seo": {
         "slug": "design-and-drawing-of-steel-structures-jntuk-r23-ce-3-2",
         "title": "Design & Drawing of Steel Structures - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Design & Drawing of Steel Structures: riveted/welded connections, beams, tension & compression members, roof trusses, columns, plate girders."
+        "meta_description": "JNTUK R23 CE 3-2 Design & Drawing of Steel Structures: riveted/welded connections, beams, tension & compression members, roof trusses, columns, plate girders."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE15, 3-0-0-3 credits and 5-unit syllabus (plus weekly drawing plates covering beams, columns, bases, trusses and plate girders) read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-highway-engineering",
@@ -2620,7 +2704,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE16",
+      "subject_code": null,
       "name": "Highway Engineering",
       "category": "ProfessionalCore",
       "credits": {
@@ -2685,10 +2769,10 @@
         }
       ],
       "course_outcomes": [
-        "Understand the fundamentals of planning, development, geometric elements, maintenance strategies and traffic parameters of highway.",
-        "Determine the geometric elements of highway in accordance with IRC Standards for the effective road layout.",
-        "Identify the suitable highway materials based on their physical and mechanical properties.",
-        "Design the elements of highway in accordance with the IRC standards."
+        "Plan a highway network for a given area.",
+        "Determine highway alignment and design highway geometrics.",
+        "Design intersections and prepare traffic-management plans.",
+        "Judge the suitability of pavement materials and design flexible and rigid pavements."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2698,16 +2782,16 @@
       "seo": {
         "slug": "highway-engineering-jntuk-r23-ce-3-2",
         "title": "Highway Engineering - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Highway Engineering: planning & alignment, geometric design, traffic engineering, highway materials, flexible & rigid pavement design."
+        "meta_description": "JNTUK R23 CE 3-2 Highway Engineering: planning & alignment, geometric design, traffic engineering, highway materials, flexible & rigid pavement design."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE16, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-environmental-engineering",
@@ -2717,7 +2801,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE17",
+      "subject_code": null,
       "name": "Environmental Engineering",
       "category": "ProfessionalCore",
       "credits": {
@@ -2730,62 +2814,60 @@
       "units": [
         {
           "number": 1,
-          "title": "Water Demand, Water Sources and Conveyance",
+          "title": "Water Demand, Sources and Conveyance",
           "topics": [
-            "Importance and necessity of protected water supply systems; components of a water supply system",
-            "Per capita demand and factors influencing it; types of water demand and their variations; factors affecting water demand",
-            "Population forecasting",
-            "Surface and subsurface water sources and their quality characteristics",
-            "Overview of gravity and pressure conduits"
+            "Protected water-supply systems, water-borne diseases and planning public water supplies",
+            "Per-capita demand, types and variations of demand, design period and population forecasting",
+            "Surface and subsurface water sources and reservoir storage capacity",
+            "Gravity and pressure conveyance, pipes and pipe joints"
           ]
         },
         {
           "number": 2,
           "title": "Water Quality and Distribution",
           "topics": [
-            "Physical, chemical and bacteriological characteristics of water",
-            "Water-borne diseases; drinking water quality standards as per IS 10500-2012",
-            "Methods of water distribution systems",
-            "Layouts of distribution networks"
+            "Physical, chemical and biological water characteristics and quality criteria for rural, municipal, industrial and agricultural uses",
+            "IS and WHO drinking-water guidelines",
+            "Distribution methods, network layouts and pressure requirements",
+            "Hardy Cross and equivalent-pipe analysis; distribution appurtenances and pipeline laying and testing"
           ]
         },
         {
           "number": 3,
           "title": "Water Treatment",
           "topics": [
-            "Unit operations: screens, aerators and adsorption and their applications in water treatment",
-            "Sedimentation: Stokes law, plain sedimentation and coagulation, sedimentation analysis, factors affecting coagulant dose, comparison of alum and iron salts as coagulants",
-            "Filtration: mechanism of filtration, RSF and SSF concept, working and sizing of beds",
-            "Disinfection: chlorination, forms of chlorination, residual chlorine and chlorine demand"
+            "Typical municipal water-treatment flow and unit operations",
+            "Theory and design of sedimentation, coagulation, flocculation and filtration",
+            "Water conditioning, softening and disinfection; colour and odour removal",
+            "Iron and manganese removal, fluoridation and defluoridation, ion exchange, ultrafiltration and reverse osmosis"
           ]
         },
         {
           "number": 4,
-          "title": "Sewerage System and Primary Treatment of Sewage",
+          "title": "Sewerage Systems and Primary Treatment",
           "topics": [
-            "Sewage, sullage and storm water; approximate estimation of sewage and storm water quantity",
-            "Sewage quality: physical parameters (pH, temperature, solids, colour) and chemical parameters (DO, BOD, COD, BOD rate equation)",
-            "Preliminary and primary treatment: concept, construction and working of screens, oil trap, grit channels and primary sedimentation tank (PST)",
-            "Calculations for design parameters of grit channels and PST"
+            "Sewage characteristics, population equivalent, sanitary-flow estimation, sewer materials, sewer hydraulics and design",
+            "Storm drainage and runoff, sewer appurtenances, corrosion control, pumping and building-drainage plumbing",
+            "Treatment-process selection, onsite sanitation, septic tanks and grey-water harvesting",
+            "Screens, grit chambers and primary sedimentation tanks: principles, design, construction, operation and maintenance"
           ]
         },
         {
           "number": 5,
-          "title": "Secondary Treatment of Sewage and Sewage Disposal",
+          "title": "Secondary Treatment and Sewage Disposal",
           "topics": [
-            "Aerobic treatment: mechanism of activated sludge process (ASP); suspended vs attached growth processes",
-            "Construction and working of complete-mix and diffused aeration treatment; estimation of ASP operating parameters and secondary sedimentation tank",
-            "Sludge handling: types and properties of sludge; anaerobic digestion mechanism, working and factors affecting it; sludge drying beds",
-            "Concept and working of septic tanks and soak pits"
+            "Activated-sludge and extended-aeration systems, trickling filters, SBR, membrane bioreactors, UASB and stabilization ponds",
+            "Sewage reclamation, reuse and recent treatment advances; construction, operation and maintenance",
+            "Disposal standards, dilution and river self-purification; oxygen-sag and Streeter-Phelps concepts",
+            "Land disposal, sewage farming and sodium hazards"
           ]
         }
       ],
       "course_outcomes": [
-        "Recognize the basic aspects involved in the population projection, water conveyance and distribution approaches for a community, classify the appropriate water sources and estimate the water demand",
-        "Establish the proper water and wastewater quality parameters and the associated environmental impacts on the receptors",
-        "Identify the appropriate water treatment system to be adopted based on the fundamental principles",
-        "Identify the appropriate wastewater treatment system, sludge disposal and septic tank options to be adopted based on the fundamental principles",
-        "Estimate the quantity of sewage generation, and design the appropriate treatment units for the treatment of water and wastewater"
+        "Plan and design water-distribution networks and sewerage systems.",
+        "Identify an appropriate water source from its quality and quantity requirements.",
+        "Select suitable treatment for raw water and sewage.",
+        "Decide an appropriate method of wastewater disposal."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2795,16 +2877,16 @@
       "seo": {
         "slug": "environmental-engineering-jntuk-r23-ce-3-2",
         "title": "Environmental Engineering - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Environmental Engineering: water demand & sources, quality & distribution, water treatment, sewerage, primary & secondary sewage treatment."
+        "meta_description": "JNTUK R23 CE 3-2 Environmental Engineering: water demand & sources, quality & distribution, water treatment, sewerage, primary & secondary sewage treatment."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE17, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-ground-improvement-techniques",
@@ -2814,7 +2896,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE18",
+      "subject_code": null,
       "name": "Ground Improvement Techniques",
       "category": "ProfessionalElective",
       "credits": {
@@ -2878,11 +2960,10 @@
         }
       ],
       "course_outcomes": [
-        "Understand the knowledge of various densification methods of ground improvement and their suitability to different field situations.",
-        "Understand the dewatering and well points techniques to improve the ground.",
-        "Understand the different types of stabilization methods and grouting techniques to improve the ground.",
-        "Understand the concept and principles of Reinforced earth to stabilize the ground.",
-        "Understand the various functions of Geosynthetics and their applications in Civil Engineering practice."
+        "Select suitable ground-improvement methods for different field situations.",
+        "Design a reinforced-earth embankment and check its stability.",
+        "Explain geosynthetic functions and applications in civil-engineering practice.",
+        "Explain the concepts and applications of grouting."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -2892,111 +2973,16 @@
       "seo": {
         "slug": "ground-improvement-techniques-jntuk-r23-ce-3-2",
         "title": "Ground Improvement Techniques - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Ground Improvement Techniques (Elective-II): in-situ densification, dewatering, stabilization & grouting, reinforced earth, geosynthetics."
+        "meta_description": "JNTUK R23 CE 3-2 Ground Improvement Techniques (Elective-II): in-situ densification, dewatering, stabilization & grouting, reinforced earth, geosynthetics."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-II option 1 of 4. Course code 23CE18, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
-    },
-    {
-      "id": "r23-ce-3-2-low-cost-and-eco-friendly-building-techniques",
-      "regulation": "R23",
-      "branch": "CE",
-      "specialization": null,
-      "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": "23CE19",
-      "name": "Low-Cost and Eco-Friendly Building Techniques",
-      "category": "ProfessionalElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Traditional Building Materials",
-          "topics": [
-            "Introduction and housing scenario in India",
-            "Traditional materials: stabilized soil bricks, improved mud and thatch, burnt and unburned bricks, laterite-lime bricks and sand-lime blocks",
-            "Stone block masonry units, bamboo, hollow cement blocks and light-weight concrete blocks",
-            "Wood-cement products, fly ash bricks, cementitious binder from rice husk and lime-based binders"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Eco-Friendly Building Materials",
-          "topics": [
-            "Basics and applications of locally available materials: soil, fly ash, ferrocement, lime, fibres, stone dust, red mud, gypsum",
-            "Alternate wood, polymer, ADOBE, light clay, straw-bale, bamboo and agro-industrial waste",
-            "Innovative materials developed by CBRI and SERC; structural properties of alternate building materials",
-            "Earthen finishes, earth plasters and earth floors"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Improved Building Technologies: Foundations, Walls and Roofs",
-          "topics": [
-            "Foundations: types of soil, types of foundations, permissible settlements and soil investigations",
-            "Walls: stabilized earth wall construction, lato blocks from lateritic soil, brick masonry walls, cellular and hollow concrete blocks, shell-type houses and precast concrete panels",
-            "Roofs: catenary hollow clay block/brick shell roofs, precast RC channel and cored units",
-            "Roofing systems with cellular units and cellular light-weight concrete"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Pre-Fabrication and Wind Effects on Low-Rise Buildings",
-          "topics": [
-            "Pre-fabrication: advantages, areas of application and joints in precast concrete structures",
-            "Approval and technical sanction; plinth area, floor area and carpet area; approximate, plinth area, revised and supplementary estimates",
-            "Wind effects on low-rise buildings: wind-structure interaction concepts and codal provisions",
-            "Housing in cyclone-prone areas; cyclone-resisting core units"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Rural Housing and Housing in Disaster-Prone Areas",
-          "topics": [
-            "Traditional practice of rural house construction; appropriate rural housing technology",
-            "Mud housing technology: mud roofs, characteristics of mud and fire-retardant treatment for trench roofs",
-            "Traditional houses in disaster-prone areas; types of damage and failure of non-engineered buildings",
-            "Repair and rehabilitation of earthquake-damaged non-engineered buildings; recommendations for future construction"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Illustrate the concepts of traditional building materials and eco-friendly building materials for construction.",
-        "Understand the developments of building technologies in foundations, walls and roofs.",
-        "Describe prefabrication techniques and assess the wind effects on low rise buildings.",
-        "Demonstrate the construction of houses in rural areas and disaster prone areas."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "low-cost-and-eco-friendly-building-techniques-jntuk-r23-ce-3-2",
-        "title": "Low-Cost & Eco-Friendly Building Techniques - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Low-Cost & Eco-Friendly Building Techniques (Elective-II): traditional & eco materials, building tech, pre-fab, rural & disaster housing."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
-        "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
-      },
-      "notes": "Program Elective-II option 2 of 4. Course code 23CE19, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-II option in JNTUK's official III-II structure; credits, five units and four outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-2-repair-and-rehabilitation-of-structures",
@@ -3006,7 +2992,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE20",
+      "subject_code": null,
       "name": "Repair and Rehabilitation of Structures",
       "category": "ProfessionalElective",
       "credits": {
@@ -3072,10 +3058,12 @@
         }
       ],
       "course_outcomes": [
-        "Understand the mechanisms of degradation of concrete structures.",
-        "Design and suggest repair strategies for deteriorated concrete structures including Repairing with composites.",
-        "Select appropriate repair material and rehabilitation strategy.",
-        "Describe the application and use of fiber reinforced concrete, high performance concrete and self compacting concrete."
+        "Recognize concrete-degradation mechanisms and design durable concrete structures.",
+        "Conduct field monitoring and non-destructive evaluation of concrete structures.",
+        "Design and recommend repair strategies for deteriorated concrete structures.",
+        "Explain repair using composite materials.",
+        "Explain strengthening methods for concrete structures.",
+        "Assess serviceability and residual life through visual inspection and in-situ tests."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3085,16 +3073,16 @@
       "seo": {
         "slug": "repair-and-rehabilitation-of-structures-jntuk-r23-ce-3-2",
         "title": "Repair & Rehabilitation of Structures - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Repair & Rehabilitation of Structures (Elective-II): repair materials & NDT, strengthening, FRP bonding, fiber-reinforced & HPC concrete."
+        "meta_description": "JNTUK R23 CE 3-2 Repair & Rehabilitation of Structures (Elective-II): repair materials & NDT, strengthening, FRP bonding, fiber-reinforced & HPC concrete."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-II option 3 of 4. Course code 23CE20, 3-0-0-3 credits and 5-unit syllabus read from the source PDF; the source labels the final two sections both 'UNIT:IV' -- transcribed here as Units IV and V in sequence."
+      "notes": "Named Professional Elective-II option in JNTUK's official III-II structure; the official page labels both final sections Unit IV, represented here in sequence as Units IV and V."
     },
     {
       "id": "r23-ce-3-2-valuation-and-quantity-survey",
@@ -3104,7 +3092,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE21",
+      "subject_code": null,
       "name": "Valuation and Quantity Survey",
       "category": "ProfessionalElective",
       "credits": {
@@ -3169,10 +3157,12 @@
         }
       ],
       "course_outcomes": [
-        "Estimate the quantities for various types of structures and contract document.",
-        "Calculate the quantities of different items in buildings and roads from drawings and explain its general specification and rate analysis.",
-        "Prepare detailed measurements (including BBS) and BoQ of various work like buildings, earth work for road, sanitary and water supply work.",
-        "Perform valuation of land buildings using different methods of valuation."
+        "Define basic terms in estimation, quantity surveying and contract documents.",
+        "Interpret items of work from drawings and explain their specifications and units of measurement.",
+        "Use CPWD DAR and DSR data to calculate unit rates for building-construction items.",
+        "Develop detailed measurements, bar-bending schedules and bills of quantities for buildings, road earthwork, sanitation and water-supply work.",
+        "Explain basic terms related to valuation of land and buildings.",
+        "Value buildings using different valuation methods."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3182,28 +3172,28 @@
       "seo": {
         "slug": "valuation-and-quantity-survey-jntuk-r23-ce-3-2",
         "title": "Valuation & Quantity Survey - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Valuation & Quantity Survey (Elective-II): estimating basics, DSR/DAR rates, detailed estimates, BBS, road estimation, valuation methods."
+        "meta_description": "JNTUK R23 CE 3-2 Valuation & Quantity Survey (Elective-II): estimating basics, DSR/DAR rates, detailed estimates, BBS, road estimation, valuation methods."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-II option 4 of 4. Course code 23CE21, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-II option in JNTUK's official III-II structure; credits, five units and six outcomes follow the detailed course page."
     },
     {
-      "id": "r23-ce-3-2-green-buildings",
+      "id": "r23-ce-3-1-green-buildings",
       "regulation": "R23",
       "branch": "CE",
       "specialization": null,
       "year": 3,
-      "semester": 2,
-      "year_sem_label": "3-2",
-      "subject_code": "23CE22",
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
       "name": "Green Buildings",
-      "category": "ProfessionalElective",
+      "category": "OpenElective",
       "credits": {
         "L": 3,
         "T": 0,
@@ -3279,29 +3269,29 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "green-buildings-jntuk-r23-ce-3-2",
-        "title": "Green Buildings - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Green Buildings (Elective-III): concept, global warming & climate design, green materials, energy conservation, LEED/GRIHA/IGBC ratings."
+        "slug": "green-buildings-jntuk-r23-ce-3-1",
+        "title": "Green Buildings - JNTUK R23 CE 3-1",
+        "meta_description": "JNTUK R23 CE 3-1 Green Buildings: concepts, rating systems, energy-efficient design, HVAC, material conservation and indoor environmental quality."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-III option 1 of 4. Course code 23CE22, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Open Elective-I option in the official III-I structure."
     },
     {
-      "id": "r23-ce-3-2-finite-element-method-in-civil-engineering",
+      "id": "r23-ce-3-2-finite-element-method",
       "regulation": "R23",
       "branch": "CE",
       "specialization": null,
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE23",
-      "name": "Finite Element Method (in Civil Engineering)",
+      "subject_code": null,
+      "name": "Finite Element Method",
       "category": "ProfessionalElective",
       "credits": {
         "L": 3,
@@ -3363,11 +3353,11 @@
         }
       ],
       "course_outcomes": [
-        "Develop finite element formulations of 1degree of freedom problems and solve Them.",
-        "Understand any Finite Elements of ware to perform stress, thermal and modal Analysis.",
-        "Compute the stiffness matrices of different elements and system",
-        "Interpret displacements, strains and stress resultants",
-        "Analyze planar structural systems using finite element modeling"
+        "Develop and solve finite-element formulations of one-degree-of-freedom problems.",
+        "Use finite-element software for stress, thermal and modal analysis.",
+        "Compute element and system stiffness matrices.",
+        "Interpret displacement, strain and stress resultants.",
+        "Analyze planar structural systems using finite-element modelling."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3375,18 +3365,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "finite-element-method-in-civil-engineering-jntuk-r23-ce-3-2",
-        "title": "Finite Element Method - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Finite Element Method (Elective-III): FEM basics, truss & beam elements, plane stress/strain problems, isoparametric formulation."
+        "slug": "finite-element-method-jntuk-r23-ce-3-2",
+        "title": "Finite Element Method - JNTUK R23 CE 3-2",
+        "meta_description": "JNTUK R23 CE 3-2 Finite Element Method: variational foundations, truss and beam elements, plane stress and strain, axisymmetry and isoparametric formulation."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-III option 2 of 4. Course code 23CE23, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-III option in JNTUK's official III-II structure; title, credits, five units and five outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-2-bridge-engineering",
@@ -3396,7 +3386,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE24",
+      "subject_code": null,
       "name": "Bridge Engineering",
       "category": "ProfessionalElective",
       "credits": {
@@ -3460,10 +3450,10 @@
         }
       ],
       "course_outcomes": [
-        "Understand the different types of Bridges with diagrams and Loading standards.",
-        "Evaluate the analysis and design of Slab bridges, T Beam bridges, Box culvers and suggest structural detailing.",
-        "Evaluate the analysis and design of Plate girder bridges.",
-        "Understand the attending inspections and maintenance of bridges and prepare reports."
+        "Explain bridge types and loading standards with diagrams.",
+        "Analyze and design slab bridges, T-beam bridges and box culverts and provide structural detailing.",
+        "Analyze and design plate-girder bridges.",
+        "Organize bridge inspections and maintenance and prepare reports."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3473,16 +3463,16 @@
       "seo": {
         "slug": "bridge-engineering-jntuk-r23-ce-3-2",
         "title": "Bridge Engineering - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Bridge Engineering (Elective-III): bridge types & loading, slab & T-beam bridges, plate girder bridges, box culverts, inspection & maintenance."
+        "meta_description": "JNTUK R23 CE 3-2 Bridge Engineering (Elective-III): bridge types & loading, slab & T-beam bridges, plate girder bridges, box culverts, inspection & maintenance."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-III option 3 of 4. Course code 23CE24, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-III option in JNTUK's official III-II structure; credits, five units and four outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-2-water-resource-engineering",
@@ -3492,7 +3482,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE25",
+      "subject_code": null,
       "name": "Water Resource Engineering",
       "category": "ProfessionalElective",
       "credits": {
@@ -3557,11 +3547,12 @@
         }
       ],
       "course_outcomes": [
-        "Estimate irrigation water requirements.",
+        "Estimate irrigation-water requirements.",
         "Design irrigation canals.",
-        "Design irrigation canal structures.",
-        "Plan and design diversion head works.",
-        "Analyze stability of gravity and earth dams. Design of hydraulic ogee spillways."
+        "Design irrigation-canal structures.",
+        "Plan and design diversion headworks.",
+        "Analyze the stability of gravity and earth dams.",
+        "Design hydraulic ogee spillways."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3571,16 +3562,16 @@
       "seo": {
         "slug": "water-resource-engineering-jntuk-r23-ce-3-2",
         "title": "Water Resource Engineering - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Water Resource Engineering (Elective-III): irrigation, canals, canal structures, diversion head works, reservoirs/dams/spillways."
+        "meta_description": "JNTUK R23 CE 3-2 Water Resource Engineering (Elective-III): irrigation, canals, canal structures, diversion head works, reservoirs/dams/spillways."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-III option 4 of 4. Course code 23CE25, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": "Named Professional Elective-III option in JNTUK's official III-II structure; credits, five units and six outcomes follow the detailed course page."
     },
     {
       "id": "r23-ce-3-2-environmental-engineering-lab",
@@ -3590,7 +3581,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE58",
+      "subject_code": null,
       "name": "Environmental Engineering Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -3605,21 +3596,23 @@
           "number": 1,
           "title": "Experiments",
           "topics": [
-            "Determination of pH and electrical conductivity (salinity) of water and soil",
-            "Determination and estimation of total hardness - calcium and magnesium",
-            "Determination of alkalinity/acidity, and of chlorides in water and soil",
-            "Determination and estimation of total, organic and inorganic solids, and settleable solids by Imhoff cone",
-            "Determination of dissolved oxygen (DO meter and Winkler's method) and BOD",
-            "Determination of COD and of optimum coagulant dose",
-            "Determination of chlorine demand and the presumptive coliform test",
-            "Visit to a water treatment plant and technical report"
+            "Determine pH and electrical conductivity (salinity) of water and soil",
+            "Determine total hardness, calcium and magnesium",
+            "Determine alkalinity or acidity and chlorides in water and soil",
+            "Determine total, organic, inorganic and settleable solids using an Imhoff cone",
+            "Determine iron, dissolved oxygen by DO meter and Winkler method, and biochemical oxygen demand",
+            "Determine nitrogen, phosphorus and potassium in solid waste and measure temperature, colour, odour, turbidity and taste",
+            "Determine chemical oxygen demand and optimum coagulant dose",
+            "Determine chlorine demand and conduct the presumptive coliform test",
+            "Visit a water-treatment plant and prepare a technical report"
           ]
         }
       ],
       "course_outcomes": [
-        "Determine few important characteristics of water and wastewater in the laboratory",
-        "Draw some conclusions based on prevailing standards about (i) suitability of water for a specific purpose (ii) options for the appropriate treatment options and ultimate disposal of sewage.",
-        "Interpret the impacts of the water or wastewater on the local environment"
+        "Estimate important water and wastewater characteristics in the laboratory.",
+        "Decide from laboratory results whether water is suitable for construction or drinking and whether an effluent meets disposal standards.",
+        "Decide whether a water body is polluted with reference to the tested parameters.",
+        "Assess raw and treated laboratory effluents using BOD, COD, pH, TDS and chloride."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3629,16 +3622,16 @@
       "seo": {
         "slug": "environmental-engineering-lab-jntuk-r23-ce-3-2",
         "title": "Environmental Engineering Lab - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Environmental Engineering Lab: water/soil pH, hardness, alkalinity, solids, DO/BOD, COD, coagulant dose, chlorine demand and coliform tests."
+        "meta_description": "JNTUK R23 CE 3-2 Environmental Engineering Lab: water/soil pH, hardness, alkalinity, solids, DO/BOD, COD, coagulant dose, chlorine demand and coliform tests."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE58). List of Experiments read from the source PDF (at least 10 of 14 listed experiments to be conducted): pH/conductivity, hardness, alkalinity/acidity, chlorides, solids, iron, DO/BOD, N-P-K in solid waste, physical parameters, COD, optimum coagulant dose, chlorine demand, presumptive coliform test, and a water treatment plant visit report."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-highway-engineering-lab",
@@ -3648,7 +3641,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CE59",
+      "subject_code": null,
       "name": "Highway Engineering Lab",
       "category": "ProfessionalCore",
       "credits": {
@@ -3673,9 +3666,11 @@
         }
       ],
       "course_outcomes": [
-        "Assess the properties of highway construction materials such as aggregates and bitumen.",
-        "Determine the optimum binder content with Marshall stability value.",
-        "Analyze the test results and evaluate their suitability for pavement design and construction."
+        "Test aggregates and judge their suitability for road construction.",
+        "Test bitumen samples and judge their suitability for road construction.",
+        "Determine optimum bitumen content for bituminous concrete.",
+        "Determine traffic-volume, speed and parking characteristics.",
+        "Draw highway cross-sections and intersections."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3685,16 +3680,16 @@
       "seo": {
         "slug": "highway-engineering-lab-jntuk-r23-ce-3-2",
         "title": "Highway Engineering Lab - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Highway Engineering Lab: aggregate & bitumen tests, Marshall stability, traffic volume/spot speed/parking surveys, road earthwork & design."
+        "meta_description": "JNTUK R23 CE 3-2 Highway Engineering Lab: aggregate & bitumen tests, Marshall stability, traffic volume/spot speed/parking surveys, road earthwork & design."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Professional Core lab (0-0-3-1.5, course code 23CE59). List of Experiments read from the source PDF, grouped as road aggregate tests, bituminous material tests, bituminous mix (Marshall stability), traffic surveys (volume, turning movement, spot speed, parking) and design & drawing (earthwork, cross-sections, rotary intersection)."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-cad-lab",
@@ -3704,7 +3699,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23CES4",
+      "subject_code": null,
       "name": "CAD Lab",
       "category": "SkillEnhancement",
       "credits": {
@@ -3731,9 +3726,10 @@
         }
       ],
       "course_outcomes": [
-        "Apply structural analysis software to analyze and design the beams, 2D and 3D frames",
-        "Design the retaining walls and foundations using STAAD Pro",
-        "Draw the details of RCC and steel structural elements suing Auto CAD."
+        "Model the geometry and physical representation of a real-world structural element or structure.",
+        "Perform structural analysis.",
+        "Interpret post-processing results.",
+        "Design structural elements and systems according to IS codes."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3743,16 +3739,16 @@
       "seo": {
         "slug": "cad-lab-jntuk-r23-ce-3-2",
         "title": "CAD Lab - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 CAD Lab: STAAD Pro analysis & design of beams, frames, trusses & buildings, spreadsheet foundation design, AutoCAD detailing of RCC/steel."
+        "meta_description": "JNTUK R23 CE 3-2 CAD Lab: STAAD Pro analysis & design of beams, frames, trusses & buildings, spreadsheet foundation design, AutoCAD detailing of RCC/steel."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits, syllabus, practical work and outcomes are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Skill-enhancement course (0-1-2-2, course code 23CES4). List of Experiments read from the source PDF: analysis and design of determinate structures, fixed/continuous beams, plane and space frames, a residential building under DL/LL/WL/EQL, and roof trusses using structural analysis software; design and detailing of a built-up steel beam; a spreadsheet-based foundation design program; and AutoCAD detailing of RCC beam/slab and a steel built-up compression member."
+      "notes": "Course placement, credits and detailed content follow JNTUK's official R23 Civil Engineering course structure and syllabus."
     },
     {
       "id": "r23-ce-3-2-technical-paper-writing-and-ipr",
@@ -3762,7 +3758,7 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": "23MC04",
+      "subject_code": null,
       "name": "Technical Paper Writing & IPR",
       "category": "MandatoryNonCredit",
       "credits": {
@@ -3833,16 +3829,16 @@
       "seo": {
         "slug": "technical-paper-writing-and-ipr-jntuk-r23-ce-3-2",
         "title": "Technical Paper Writing & IPR - CE 3-2",
-        "meta_description": "LBRCE R23 CE 3-2 Technical Paper Writing & IPR: report writing & structuring, drafting & editing, proofreading & presentation, word processor skills, IPR."
+        "meta_description": "JNTUK R23 CE 3-2 Technical Paper Writing & IPR: report writing & structuring, drafting & editing, proofreading & presentation, word processor skills, IPR."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course placement, credits and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus; the official course page does not publish course outcomes."
       },
-      "notes": "Audit course - no credit (L-T-P 2-0-0, credits shown as '-' in the source). 5-unit syllabus read from the source PDF."
+      "notes": "The official audit-course page publishes five units but no course-outcomes section; no outcomes are inferred."
     },
     {
       "id": "r23-ce-4-1-geotechnical-engineering-2",
@@ -4718,6 +4714,363 @@
         "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
       "notes": null
+    },
+    {
+      "id": "r23-ce-3-1-climate-change-impact-on-eco-system",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 3,
+      "semester": 1,
+      "year_sem_label": "3-1",
+      "subject_code": null,
+      "name": "Climate Change Impact on Eco-System",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Climate System and Atmospheric Temperature",
+          "topics": [
+            "Climate, weather and climate change; atmospheric structure",
+            "Radiation laws and the earth-atmosphere heat balance",
+            "Vertical, temporal and soil-temperature variation; thermal time and extremes"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Hydrologic Cycle",
+          "topics": [
+            "Global water balance",
+            "Cycling of water on land",
+            "A simple water-balance model"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Climate Variables Affecting Precipitation",
+          "topics": [
+            "Humidity, vapour pressure, precipitation forms and types, clouds and atmospheric stability",
+            "Monsoon, Indian wind patterns and global circulation",
+            "Evaporation, transpiration, vadose-zone processes, runoff and streamflow"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Climate Variability",
+          "topics": [
+            "Floods and droughts",
+            "Drought indicators and heat waves",
+            "Climate extremes"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Climate Change Models and Scenarios",
+          "topics": [
+            "Causes of climate change",
+            "Climate modelling, global climate models and general circulation models",
+            "Downscaling and IPCC scenarios"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "climate-change-impact-on-eco-system-jntuk-r23-ce-3-1",
+        "title": "Climate Change Impact on Eco-System - JNTUK R23 CE 3-1",
+        "meta_description": "JNTUK R23 CE 3-1 Climate Change Impact on Eco-System: atmosphere, hydrologic cycle, precipitation, climate variability, models and IPCC scenarios."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+      },
+      "notes": "Named Open Elective-I option in the official III-I structure."
+    },
+    {
+      "id": "r23-ce-3-2-disaster-management",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Disaster Management",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Natural Hazards and Disaster Management",
+          "topics": [
+            "Interdisciplinary disaster management and the disaster-management cycle",
+            "Five priorities for action",
+            "Case studies of floods, droughts, earthquakes, landslides, cyclones, tsunamis and global warming"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Man-Made Disasters",
+          "topics": [
+            "Fire and transport hazards, solid-waste and post-disaster management",
+            "Bioterrorism, megacity threats, rail and aircraft accidents",
+            "Groundwater, industrial and emerging-infectious-disease disasters"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Risk and Vulnerability",
+          "topics": [
+            "Building codes and land-use planning",
+            "Social and environmental vulnerability",
+            "Macroeconomic management, sustainable development, climate risk and financial loss management"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Technology in Disaster Management",
+          "topics": [
+            "Infrastructure taxonomy and mitigation programmes",
+            "Geospatial information for agricultural drought assessment",
+            "Multimedia training, indigenous knowledge, remote sensing and GIS"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Education and Community Preparedness",
+          "topics": [
+            "Disaster impacts on poverty, health, forests and environmental risk",
+            "Corporate, Red Cross and education roles in risk reduction",
+            "Community capacity, resilience, recovery, social capital and action"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Apply management principles to disaster mitigation.",
+        "Distinguish pre-disaster, response and post-disaster management approaches.",
+        "Explain the risk-management process.",
+        "Describe mechanisms for risk transfer."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "disaster-management-jntuk-r23-ce-3-2",
+        "title": "Disaster Management - JNTUK R23 CE 3-2",
+        "meta_description": "JNTUK R23 CE 3-2 Disaster Management: natural and man-made hazards, risk and vulnerability, technology, education and community resilience."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+      },
+      "notes": "Named Open Elective-II option in the official III-II structure."
+    },
+    {
+      "id": "r23-ce-3-2-sustainability-in-engineering-practices",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Sustainability in Engineering Practices",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Sustainable Engineering, Ethics and Law",
+          "topics": [
+            "Sustainable-development models, principles, engineering and threats",
+            "Environmental ethics and education",
+            "Environmental agreements, protocols and Indian water, air and environment laws"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Local and Global Environmental Issues",
+          "topics": [
+            "Solid waste, resource impacts, zero waste and the three-R concept",
+            "Thermochemical and biochemical waste-to-energy conversion",
+            "Water, land and air degradation, climate change, ozone depletion, carbon footprint and trading"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Tools for Sustainability",
+          "topics": [
+            "Environmental management systems and ISO 14000",
+            "Life-cycle assessment and case studies",
+            "Environmental impact assessment, auditing and biomimicry"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sustainable Habitat and Industrialization",
+          "topics": [
+            "Green buildings, materials, GRIHA and LEED ratings and energy efficiency",
+            "Sustainable cities, transport and pavements",
+            "Urbanization, industrialization, material selection, pollution prevention, industrial ecology and symbiosis"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Renewable Energy and Green Business",
+          "topics": [
+            "Solar, fuel cells, wind, small hydro, biogas, biofuels, ocean and geothermal energy",
+            "Energy conservation",
+            "Sustainable business, green energy, construction, transport, chemistry and computing"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain sustainable development and environmental agreements and protocols.",
+        "Relate engineering activities to environmental impacts and renewable resources.",
+        "Explain local and global environmental issues.",
+        "Compare conventional and sustainable cities and industrial practices.",
+        "Explain renewable-energy and green-technology implementation."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "sustainability-in-engineering-practices-jntuk-r23-ce-3-2",
+        "title": "Sustainability in Engineering Practices - JNTUK R23 CE 3-2",
+        "meta_description": "JNTUK R23 CE 3-2 Sustainability in Engineering Practices: environmental law, waste, assessment tools, green buildings, cities and renewable energy."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+      },
+      "notes": "Named Open Elective-II option in the official III-II structure."
+    },
+    {
+      "id": "r23-ce-3-2-water-supply-systems",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Water Supply Systems",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Water and Life",
+          "topics": [
+            "Domestic, public and irrigation demand",
+            "Transportation, sanitation and wastewater dilution",
+            "Dust control, recreation and fire protection"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Sources of Water",
+          "topics": [
+            "Surface, groundwater and atmospheric sources",
+            "Desalination",
+            "Wastewater recycling and aquifer recharge"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Dual Water Supply",
+          "topics": [
+            "Potable, non-potable and protected water",
+            "Grey water and black water",
+            "Water-borne and water-related diseases and sewage irrigation"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Water Distribution",
+          "topics": [
+            "Gravity, direct-pumping and combined systems",
+            "Service reservoirs and continuous and intermittent supply",
+            "Distribution networks, emergency supply, valves, hydrants and meters"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Industrial Water",
+          "topics": [
+            "Industry location in relation to surface-water sources",
+            "Water-quality needs for industrial operations",
+            "Wastewater characteristics and effluent-discharge standards"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Outline major uses of water in daily life.",
+        "Explain natural water sources and preparation for regular use.",
+        "Discuss non-potable-water use.",
+        "Describe reservoir-based water-supply systems.",
+        "Explain industrial-wastewater characteristics."
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "water-supply-systems-jntuk-r23-ce-3-2",
+        "title": "Water Supply Systems - JNTUK R23 CE 3-2",
+        "meta_description": "JNTUK R23 CE 3-2 Water Supply Systems: water demand and sources, dual supply, distribution networks, industrial water and effluent standards."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+      },
+      "notes": "Named Open Elective-II option in the official III-II structure."
     }
   ]
 }

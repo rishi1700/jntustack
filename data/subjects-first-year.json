@@ -233,7 +233,28 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "Determination of crystal-field splitting energy (10Dq) by spectrophotometric method",
+            "Conductometric titration of a strong acid against a strong base",
+            "Conductometric titration of a weak acid against a strong base",
+            "Determination of cell constant and conductance of solutions",
+            "Potentiometric determination and redox titration experiments",
+            "Determination of acid concentration in a lead-acid battery",
+            "Preparation of Bakelite",
+            "Verification of Beer-Lambert law using a colorimeter or UV-visible spectrophotometer",
+            "Identification of functional groups using infrared spectroscopy",
+            "Preparation of nanomaterials by precipitation method",
+            "Determination of ferrous iron by dichrometry",
+            "Determination of total hardness of water by EDTA method",
+            "Estimation of vitamin C",
+            "Determination of magnesium in an antacid"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Determine the cell constant and conductance of solutions",
         "Prepare advanced polymer Bakelite materials",
@@ -398,7 +419,24 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Language and Professional Communication Activities",
+          "topics": [
+            "English speech sounds: vowels, consonants and pronunciation practice",
+            "Accent neutralization, word stress, rhythm and intonation",
+            "Everyday communication and just-a-minute speaking",
+            "Role plays for social and professional situations",
+            "Email writing and netiquette",
+            "Resume, cover-letter and statement-of-purpose preparation",
+            "Group discussions and collaborative communication",
+            "Debates and structured argument",
+            "PowerPoint and poster presentations",
+            "Interview skills and mock interviews"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Understand different aspects of English language proficiency with emphasis on LSRW skills",
         "Apply communication skills through various language-learning activities",
@@ -451,7 +489,28 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Programming Laboratory Exercises",
+          "topics": [
+            "Familiarization with the programming environment and basic problem solving",
+            "Algorithms and flowcharts for simple computational problems",
+            "Programs using arithmetic expressions and operators",
+            "Operator precedence, type conversion and formatted input/output",
+            "Programs using conditional statements",
+            "Programs using iterative statements",
+            "One-dimensional arrays and searching techniques",
+            "Matrices, strings and bubble sort",
+            "Pointers, structures and dynamic memory allocation",
+            "Bit fields and linked-list operations",
+            "User-defined functions and numerical applications such as Euler's method",
+            "Recursive functions",
+            "Call by reference and pointer-based argument passing",
+            "Text and binary file operations"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Read, understand, and trace the execution of programs written in C",
         "Select the right control structure for solving a problem",
@@ -503,8 +562,51 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Tools, Instruments and Components",
+          "topics": [
+            "Identification and safe use of common electrical and electronic workshop tools",
+            "Use of voltmeters, ammeters, multimeters, LCR-Q meters, power supplies, CROs, DSOs, function generators and frequency counters",
+            "Identification, colour coding, testing and comparison of resistors, capacitors, inductors, diodes, transistors and integrated circuits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Electrical Engineering Experiments",
+          "topics": [
+            "Demonstration of basic electrical equipment",
+            "Verification of Kirchhoff's current and voltage laws",
+            "Verification of the superposition theorem",
+            "Magnetization characteristics of a DC shunt generator",
+            "Measurement of power and power factor using a single-phase wattmeter",
+            "Measurement of earth resistance using a megger",
+            "Calculation of electrical energy for domestic premises"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Electronics Engineering Experiments",
+          "topics": [
+            "Forward- and reverse-bias V-I characteristics of a PN-junction diode",
+            "V-I characteristics of a Zener diode and its use as a voltage regulator",
+            "Implementation of half-wave and full-wave rectifiers",
+            "Verification of AND, OR and NOT gates using integrated circuits",
+            "Verification of XOR and XNOR gates using integrated circuits",
+            "Verification of universal gates using integrated circuits",
+            "Implementation of Boolean functions using logic gates"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Measure voltage, current and power in an electrical circuit",
+        "Measure resistance using a Wheatstone bridge",
+        "Investigate critical field resistance and critical speed of a DC shunt generator",
+        "Investigate reactive power and power factor in electrical loads",
+        "Identify and test common electronic components and use electronic measuring instruments",
+        "Plot characteristics of semiconductor devices and implement basic digital circuits"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -648,7 +750,23 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Workshop Practice",
+          "topics": [
+            "Workshop safety, tools and measurement practice",
+            "Woodworking joints and basic carpentry operations",
+            "Sheet-metal development and fabrication exercises",
+            "Fitting operations and two-wheeler tyre servicing",
+            "Domestic electrical wiring exercises",
+            "Foundry and mould preparation practice",
+            "Arc-welding and basic joining exercises",
+            "Plumbing joints and pipe-fitting practice",
+            "Basic two-wheeler inspection, maintenance and repairs"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Identify workshop tools and their operational capabilities",
         "Practice manufacturing of components using fitting, carpentry, foundry and welding trades",
@@ -700,7 +818,38 @@
         "C": 0.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Health and Wellness",
+          "topics": [
+            "Meaning and dimensions of health, wellness and physical fitness",
+            "Components of health-related fitness and their assessment",
+            "Nutrition, balanced diet, immunity and healthy lifestyle practices",
+            "Body-mass index and personal fitness evaluation",
+            "Practical fitness and wellness activities"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Yoga",
+          "topics": [
+            "History, meaning and classifications of yoga",
+            "Asanas, pranayama and meditation techniques",
+            "Yoga for stress management, health and personality development",
+            "Guided yoga practice"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Sports and Fitness Activities",
+          "topics": [
+            "Role, history and organization of sports and the Olympic movement",
+            "Rules, skills and practice in selected games and sports",
+            "Strength, endurance, flexibility, coordination and recreational fitness activities"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Understand the importance of yoga and sports for physical fitness and sound health",
         "Demonstrate an understanding of health-related fitness components",
@@ -855,8 +1004,66 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "PC Hardware and Software Installation",
+          "topics": [
+            "Identify computer peripherals and CPU components and prepare a system block diagram",
+            "Disassemble and reassemble a personal computer",
+            "Install Windows on a personal computer",
+            "Install Linux and configure a Windows/Linux dual-boot environment",
+            "Install BOSS and configure a dual-boot environment"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Internet and World Wide Web",
+          "topics": [
+            "LAN connectivity, TCP/IP configuration, website access and email",
+            "Browser configuration, bookmarks, proxy settings, pop-up blockers and plug-ins",
+            "Search-engine use and netiquette",
+            "Cyber hygiene, browser hardening and protection from malware"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "LaTeX and Word Processing",
+          "topics": [
+            "Word-processor and LaTeX orientation, toolbars, file handling and help resources",
+            "Create a project certificate with text, border, header, footer, date and time formatting",
+            "Create a project abstract using styles, tables, lists, links, symbols and tracked changes",
+            "Create a newsletter using contents, columns, images, drawing tools, text boxes and mail merge"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Spreadsheets and Presentations",
+          "topics": [
+            "Create a scheduler using cell formatting, summation and autofill",
+            "Calculate GPA using formulas, functions, charts, worksheet operations and lookups",
+            "Use split cells, freeze panes, grouping, sorting, logical operators and conditional formatting",
+            "Create presentations with layouts, formatted content, shapes, media, tables and charts",
+            "Use hyperlinks, master layouts, views, backgrounds, templates and hidden slides"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "AI Tools",
+          "topics": [
+            "Experiment with prompt engineering and compare model responses",
+            "Use a generative AI assistant for creative-writing exercises",
+            "Evaluate AI-assisted language translation for accuracy and fluency"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Perform basic computer-hardware troubleshooting",
+        "Explain computer hardware components and their interdependencies",
+        "Safeguard computer systems from viruses and worms",
+        "Prepare documents and presentations using productivity tools",
+        "Perform calculations and data presentation using spreadsheets"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1005,7 +1212,35 @@
         "C": 0.5
       },
       "type": "lab",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Orientation",
+          "topics": [
+            "Introduction to NSS, NCC, Scouts and Guides and community-service objectives",
+            "Understanding social responsibility, citizenship and volunteerism",
+            "Orientation activities and local-community awareness"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Nature and Care Activities",
+          "topics": [
+            "Environmental awareness and conservation activities",
+            "Campus and neighbourhood cleanliness and plantation work",
+            "Health, hygiene and public-awareness activities"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Community Service",
+          "topics": [
+            "Community needs assessment and service planning",
+            "Participation in village, school or neighbourhood outreach",
+            "Team-based service, reflection and reporting"
+          ]
+        }
+      ],
       "course_outcomes": [
         "Understand the importance of discipline, character and the service motto",
         "Solve societal issues by applying acquired knowledge, facts, and techniques",
@@ -1349,8 +1584,40 @@
         "C": 1
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "Determine the radius of curvature of a plano-convex lens using Newton's rings",
+            "Determine wavelengths of mercury spectral lines using a diffraction grating at normal incidence",
+            "Verify Brewster's law",
+            "Determine dielectric constant using the charging and discharging method",
+            "Study the B-H curve of a magnetic material",
+            "Determine the wavelength of laser light using a diffraction grating",
+            "Estimate Planck's constant using the photoelectric effect",
+            "Determine semiconductor resistivity using the four-probe method",
+            "Determine the energy gap of a semiconductor using a PN-junction diode",
+            "Measure magnetic field along the axis of a current-carrying circular coil using Stewart and Gee's method",
+            "Determine Hall voltage and Hall coefficient of a semiconductor",
+            "Determine the temperature coefficient of a thermistor",
+            "Determine acceleration due to gravity and radius of gyration using a compound pendulum",
+            "Determine magnetic susceptibility using Kundt's tube",
+            "Determine rigidity modulus using a torsional pendulum",
+            "Verify the laws of a stretched string using a sonometer",
+            "Determine Young's modulus by non-uniform bending",
+            "Determine the frequency of an electrically maintained tuning fork using Melde's experiment"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Operate optical instruments such as travelling microscopes and spectrometers",
+        "Estimate wavelengths of light using a diffraction grating",
+        "Plot magnetic-field intensity along the axis of a current-carrying circular coil",
+        "Evaluate dielectric constant and magnetic susceptibility of materials",
+        "Calculate the band gap of a semiconductor",
+        "Identify semiconductor type using the Hall effect"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1801,8 +2068,33 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Network Analysis Experiments",
+          "topics": [
+            "Study circuit components and verify Kirchhoff's current and voltage laws",
+            "Verify mesh and nodal analysis for AC circuits",
+            "Determine Q factor and bandwidth of series- and parallel-resonance circuits",
+            "Verify superposition, Thevenin and Norton theorems for AC circuits",
+            "Verify the maximum-power-transfer theorem for AC circuits",
+            "Verify Tellegen's theorem for two networks with the same topology",
+            "Study DC transients in RL, RC and RLC circuits",
+            "Study frequency response of first-order RL and RC networks",
+            "Study transient and steady-state responses of a second-order circuit as its parameters vary",
+            "Determine open-circuit Z and short-circuit Y parameters",
+            "Determine hybrid H and transmission ABCD parameters",
+            "Measure two-port parameters and frequency response of a twin-T network"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Verify Kirchhoff's laws and network theorems",
+        "Measure time constants of RL and RC circuits",
+        "Analyze RLC-circuit behaviour under different conditions",
+        "Design a resonant circuit for given specifications",
+        "Characterize a two-port network using standard network parameters"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -1930,8 +2222,34 @@
         "C": 1.5
       },
       "type": "lab",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Electrical Circuits Experiments",
+          "topics": [
+            "Verify Kirchhoff's circuit laws",
+            "Verify node and mesh analysis",
+            "Verify network-reduction techniques",
+            "Determine the cold and hot resistance of an electric lamp",
+            "Determine the parameters of a choke coil",
+            "Determine self-inductance, mutual inductance and coefficient of coupling",
+            "Study series and parallel resonance",
+            "Plot locus diagrams of RL and RC series circuits",
+            "Verify the superposition theorem",
+            "Verify Thevenin's and Norton's theorems",
+            "Verify the maximum-power-transfer theorem",
+            "Verify the compensation theorem",
+            "Verify reciprocity and Millman's theorems"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain network theorems, node and mesh analysis, resonance and locus diagrams",
+        "Apply network theorems and compare practical results with theoretical calculations",
+        "Determine choke-coil parameters, self- and mutual inductance and coefficient of coupling",
+        "Analyze circuit characteristics using fundamental laws and network configurations",
+        "Create locus diagrams and examine series and parallel resonance"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
