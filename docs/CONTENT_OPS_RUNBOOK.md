@@ -234,9 +234,9 @@ After every successful live apply:
 
 Current expected JSON/build state:
 
-- Subjects: 427
+- Subjects: 426
 - Verified: 387
-- Needs verification: 39
+- Needs verification: 38
 - Placeholder: 1
 - Search docs: 769
 - Sitemap URLs: 396

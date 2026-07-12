@@ -28,9 +28,9 @@ Current JSON/build state:
 
 | Metric | Count |
 | --- | ---: |
-| Subjects | 427 |
+| Subjects | 426 |
 | Verified subjects | 387 |
-| Needs verification subjects | 39 |
+| Needs verification subjects | 38 |
 | Placeholder subjects | 1 |
 | Colleges | 376 |
 | Branch profiles | 6 |

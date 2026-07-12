@@ -1069,10 +1069,10 @@
       ],
       "course_outcomes": [
         "Apply energy theorems to analyze trusses",
-        "Determine unknown reactions of indeterminate structures by using Castigliano's\u2013II Theorem.",
+        "Determine unknown reactions of indeterminate structures by using Castigliano's–II Theorem.",
         "Compute the internal forces of members in fixed and continuous beams",
         "Evaluate the internal forces of members portal frames by using slope-deflection method",
-        "Analyze continuous beams and portal frames by using Moment \u2013 distribution method"
+        "Analyze continuous beams and portal frames by using Moment – distribution method"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3860,67 +3860,41 @@
       "units": [
         {
           "number": 1,
-          "title": "Site Investigation and Selection of Foundations",
+          "title": "Unit I",
           "topics": [
-            "Objectives and methods of site investigation; planning of site investigation",
-            "Depth of soil exploration, significant depth and spacing of bore holes",
-            "Standard penetration test and its significance; correction to SPT values",
-            "Soil sampling techniques, sampling disturbance and methods of obtaining undisturbed samples; requirements of an undisturbed sample",
-            "Functions and requisites of foundations; types of shallow foundations and situations for their adoption"
+            "Soil Exploration: Need – Methods of soil exploration – Boring and Sampling methods – Plate load test – Standard Penetration and cone penetration. Earth Pressure theories: Rankine’s & Coulomb’s theory of earth pressure – Culmann’s graphical method - earth pressures in layered soils."
           ]
         },
         {
           "number": 2,
-          "title": "Shallow Foundations and Bearing Capacity of Soils",
+          "title": "Unit II",
           "topics": [
-            "Bearing capacity of soils and factors affecting bearing capacity",
-            "Terzaghi's and Meyerhof's bearing capacity theories; general principles of design of shallow foundations",
-            "Plate bearing test and its limitations",
-            "Settlement of foundations: causes of total and differential settlement in sand and clays; methods of controlling settlement",
-            "Code provisions; conventional procedure for proportioning footings for equal settlement"
+            "Stability of Slopes: Infinite and finite earth slopes in sand and clay – types of failures – factor of safety of infinite slopes – stability analysis by Swedish arc method, standard method of slices – Bishop’s method -- Taylor’s Stability Number-Stability of slopes of dams and embankments - different conditions. Shallow foundations – Terzaghi’s and Meyerhoff’s bearing capacity theories, effect of water table; Combined footing and raft foundation; Contact pressure; Settlement analysis in sands and clays."
           ]
         },
         {
           "number": 3,
-          "title": "Deep Foundations and Group Capacity of Piles",
+          "title": "Unit III",
           "topics": [
-            "Pile foundations: considerations for selection, functions and types of piles (friction pile, end bearing pile)",
-            "Pile grouping; estimation of individual pile capacity by static and dynamic approaches",
-            "Pile group efficiency",
-            "Downward drag phenomenon on piles and its significance in the design of pile foundations",
-            "Pile load test (constant rate of penetration test) and its interpretation; impact of pile driving within the site and neighbouring area"
+            "Shallow Foundations – Bearing Capacity Criteria: Types of foundations and factors to be considered in their location - Bearing capacity – criteria for determination of bearing capacity – factors influencing bearing capacity – analytical methods to determine bearing capacity – Terzaghi’s theory Meyerhof theory- IS Methods – effect of water table."
           ]
         },
         {
           "number": 4,
-          "title": "Earth Pressure Theories and Retaining Walls",
+          "title": "Unit IV",
           "topics": [
-            "Rankine's and Coulomb's earth pressure theories and their comparison",
-            "Earth pressure at rest; active and passive earth pressures for cohesive and non-cohesive soils",
-            "Determination of earth pressures by analytical methods only (graphical procedures excluded)",
-            "Types of retaining walls",
-            "Design principles of cantilever and counterfort retaining walls (structural design not included)"
+            "Shallow Foundations – Settlement Criteria: Safe bearing pressure based on N- value – allowable bearing pressure; safe bearing capacity and settlement from plate load test – Types of foundation settlements and their determination - allowable settlements of structures. Design of Shallow Foundations: Proportioning of footings for Equal Settlement –– Combine footing -- Rectangular, Trapezoidal and Strap footing – Principles of Design of Raft Foundation."
           ]
         },
         {
           "number": 5,
-          "title": "Special Foundations and Stability of Slopes",
+          "title": "Unit V",
           "topics": [
-            "Caisson foundations: necessity, selection, types and design principles (structural design not included)",
-            "Foundations in filled-up grounds and on expansive soil; under-reamed pile foundations",
-            "Introduction to machine foundations",
-            "Stability analysis of finite earth slopes and factors of safety",
-            "Taylor's stability number and its significance; different conditions of slope stability analysis"
+            "Pile Foundation: Types of piles – Load carrying capacity of piles based on static pile formulae – Dynamic pile formulae– Pile load test – Pile under lateral loading -- Load carrying capacity of pile groups in sands and clays – Negative Skin Friction."
           ]
         }
       ],
-      "course_outcomes": [
-        "understand Soil exploration methods and field tests.",
-        "understand earth pressure theories.",
-        "understand stability of slopes.",
-        "analyze the shallow foundations.",
-        "analyze the deep foundations."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -3929,16 +3903,16 @@
       "seo": {
         "slug": "geotechnical-engineering-2-jntuk-r23-ce-4-1",
         "title": "Geotechnical Engineering-2 - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Geotechnical Engineering-2: site investigation, shallow & deep foundations, earth pressure & retaining walls, special foundations & slopes."
+        "meta_description": "JNTUK R23 CE 4-1 Geotechnical Engineering-2 syllabus: exploration, earth pressure, slope stability, bearing capacity, settlements and pile foundations."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE26, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-advance-construction-management",
@@ -3949,8 +3923,8 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": "23CE27",
-      "name": "Advance Construction Management",
-      "category": "ProfessionalCore",
+      "name": "Advanced Construction Management",
+      "category": "HSMC",
       "credits": {
         "L": 2,
         "T": 0,
@@ -3961,85 +3935,59 @@
       "units": [
         {
           "number": 1,
-          "title": "Quality and Safety Management",
+          "title": "Unit I",
           "topics": [
-            "Quality management in construction: need for quality, quality planning, QA and QC and the difference between them",
-            "Total Quality Management (TQM), ISO 9001 standards and quality audits",
-            "Safety management: causes of accidents in construction, hazard identification and risk assessment",
-            "Safety planning and safety training",
-            "Accident investigation and reporting; safety audit protocol"
+            "Quality and Safety Management, Quality assurance and Control Principles and managing On-Site safety procedure to minimize risks"
           ]
         },
         {
           "number": 2,
-          "title": "Cost Estimation and Control",
+          "title": "Unit II",
           "topics": [
-            "Introduction to project costing: direct cost, indirect cost, fixed and variable cost",
-            "Approximate and detailed estimates, quantity take-off, rate analysis and Bill of Quantities (BOQ)",
-            "Cost control: budgeting, cash flow forecasting and cost monitoring; Earned Value Management basics",
-            "Economic analysis: Benefit Cost Ratio, Net Present Value and Internal Rate of Return",
-            "Break-even analysis and payback period"
+            "Cost Estimation and Control methods for calculating project cost, managing budgets, and performing economic analysis such as benefit cost analysis"
           ]
         },
         {
           "number": 3,
-          "title": "Material and Machinery Management",
+          "title": "Unit III",
           "topics": [
-            "Material management: material requirement planning, procurement procedure and vendor selection",
-            "Inventory control: EOQ, ABC analysis, stores management, material handling and waste reduction",
-            "Machinery management: selection and planning of construction equipment; productivity of machinery",
-            "Ownership cost, operating cost, depreciation, maintenance management and repair/replacement policy",
-            "Heavy equipment: excavators, cranes, rollers, bulldozers, mixers and dumpers"
+            "Material and machinery management optimizing the procurement, use and maintenance of construction materials and heavy equipment."
           ]
         },
         {
           "number": 4,
-          "title": "Introduction to BIM and Advanced Design Tools",
+          "title": "Unit IV",
           "topics": [
-            "Introduction to BIM: evolution from CAD to BIM, need and dimensions",
-            "Applications, benefits and limitations of BIM",
-            "Importance of software applications in civil engineering projects",
-            "Objectives, features, working principles and applications of Autodesk, 3Ds Max, STAAD Pro, ETABS and SketchUp",
-            "Revit and Primavera/MS Project integration; case studies"
+            "Building Information Modeling (BIM)- The use of 3D Modeling and other technologies to improve Project Management, Collaboration and efficiency"
           ]
         },
         {
           "number": 5,
-          "title": "Smart Sustainable Construction and Green Buildings",
+          "title": "Unit V",
           "topics": [
-            "Smart sustainable construction: concept and need for sustainable development; principles of green and smart construction",
-            "Smart construction technologies: IoT in construction, smart sensors for structural health monitoring, AI and machine learning applications",
-            "Green buildings: concepts, life cycle approach, carbon footprint and low energy consumption materials",
-            "Green building rating systems: GRIHA, IGBC, LEED and Net Zero Energy Buildings concepts",
-            "Construction and demolition waste management: reduce, reuse, recycle, segregation and disposal methods; case studies"
+            "Sustainable Construction and Green Buildings techniques and Practices for reducing a project’s Environmental impacts, including Green Building certification and waste management strateg"
           ]
         }
       ],
-      "course_outcomes": [
-        "Explore the quality assurance, quality control and construction safety methods",
-        "Prepare project estimates and perform cost control analysis.",
-        "Plan and manage construction materials and machinery efficiently.",
-        "Utilize BIM & Advanced Design Tools applications in planning, coordination and project management.",
-        "Summarize the principles of smart sustainable construction techniques and green building practices."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "advance-construction-management-jntuk-r23-ce-4-1",
-        "title": "Advance Construction Management - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Advance Construction Management: quality & safety, cost control, material & machinery, BIM & design tools, smart & green construction."
+        "slug": "advanced-construction-management-jntuk-r23-ce-4-1",
+        "title": "Advanced Construction Management - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Advanced Construction Management syllabus: quality, estimation, contracts, equipment, BIM, sustainability and green construction."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Course code 23CE27, 2-0-0-2 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-pre-stressed-concrete",
@@ -4050,7 +3998,7 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": "23CE28",
-      "name": "Pre-stressed Concrete",
+      "name": "Prestressed Concrete",
       "category": "ProfessionalElective",
       "credits": {
         "L": 3,
@@ -4062,83 +4010,59 @@
       "units": [
         {
           "number": 1,
-          "title": "Basic Concepts of Prestressing",
+          "title": "Unit I",
           "topics": [
-            "Advantages and applications of prestressed concrete",
-            "High strength concrete: permissible stresses, shrinkage, creep and deformation characteristics",
-            "High strength steel: types, strength, permissible stresses and relaxation of stress",
-            "Stress corrosion, durability and fire resistance",
-            "Cover requirements"
+            "Flexural, shear; Torsional resistance and design of Prestressed concrete section. Types of flexural failure– code procedures‐ shear and principal stresses– Prestressed concrete members in torsion– Design of sections for flexure, Axial Tension, Compression and bending, shear, Bond"
           ]
         },
         {
           "number": 2,
-          "title": "Pre-stressing Systems",
+          "title": "Unit II",
           "topics": [
-            "Tensioning devices; pre-tensioning and post-tensioning systems",
-            "Basic assumptions in analysis of prestress and design",
-            "Analysis of prestress and resultant stresses at a section; concept of pressure line",
-            "Concept of load balancing and stresses in tendons",
-            "Cracking moment"
+            "Analysis of continuous beams –Elastic theory‐ Linear transformation and Concordant tendons‐Deflections of pre‐stressed concrete beams: Importance of control of deflections‐ factors influencing deflections ‐short term deflections of un‐cracked member–prediction of long term deflections."
           ]
         },
         {
           "number": 3,
-          "title": "Losses of Pre-stressing",
+          "title": "Unit III",
           "topics": [
-            "Losses of prestress in pre-tensioned and post-tensioned members",
-            "Elastic shortening, shrinkage and creep of concrete",
-            "Relaxation of steel and slip in anchorage",
-            "Differential shrinkage, bending of members and frictional losses",
-            "Total losses allowed for design"
+            "Analysis of end blocks: By Guyon’s method and Magnel’s method, Anchorage zone stresses‐ Approximate method of design‐anchorage zone reinforcement‐transfer of prestresses‐ pretensioned members‐Composite sections: Introduction Analysis for stresses‐ differential shrinkage‐ general design considerations."
           ]
         },
         {
           "number": 4,
-          "title": "Design for Flexural Resistance",
+          "title": "Unit IV",
           "topics": [
-            "Types of flexural failure",
-            "Code procedures for design of sections for flexure",
-            "Control of deflections; factors influencing deflection",
-            "Prediction of short-term and long-term deflections"
+            "Statically Indeterminate Structures: Advantages of Continuous Members— Effect of Prestressing Indeterminate Structures‐‐Methods of Achieving Continuity‐‐ Definitions of Common Terms‐‐Methods of Analysis of Secondary Moments‐‐‐Concordant Cable Profile‐ Guyon’s Theorem‐‐ Effect of Axial Deformation and Tertiary Moments‐‐‐Ultimate Load Analysis of Continuous Prestressed Members ‐‐‐Determination of Concordant Tendon Profile‐‐ Design of Continuous Prestressed Concrete Beams‐‐‐Design of Prestressed Portal Frames."
           ]
         },
         {
           "number": 5,
-          "title": "Design for Shear and Torsion",
+          "title": "Unit V",
           "topics": [
-            "Shear and principal stresses; design of shear reinforcement per codal provisions",
-            "Design for torsion and for combined bending, shear and torsion",
-            "Transfer of prestress in pre-tensioned members: transmission length, bond stresses and end zone reinforcement",
-            "Anchorage zone stresses in post-tensioned members: stress distribution in end block",
-            "Anchorage zone reinforcement per codal provisions"
+            "Composite Construction of Prestressed and in situ Concrete: Composite Structural Members Types of Composite Construction ‐‐Analysis of Stresses‐‐Differential Shrinkage ‐‐‐Deflection of Composite Members ‐‐ Stresses at Serviceability Limit State‐‐‐ Flexural Strength of Composite Sections ‐‐ Shear Strength of Composite Sections ‐‐ Design of Composite Sections."
           ]
         }
       ],
-      "course_outcomes": [
-        "Describe the basic concepts and general mechanical behavior of prestressed concrete, available IS Codes, and various methods of prestressing.",
-        "Analyze the different losses of pre-stressing",
-        "Design prestressed concrete beams under flexure.",
-        "Design prestressed concrete beams under shear and torsion and interpret the relevant IS code provisions for prestressed concrete."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "pre-stressed-concrete-jntuk-r23-ce-4-1",
-        "title": "Pre-stressed Concrete - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Pre-stressed Concrete: basic concepts, prestressing systems, losses of prestress, flexural design, shear & torsion design."
+        "slug": "prestressed-concrete-jntuk-r23-ce-4-1",
+        "title": "Prestressed Concrete - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Prestressed Concrete syllabus: materials, losses, flexure, shear, anchorage zones, continuous members and composite construction."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-IV option 1 of 4. Course code 23CE28, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-advanced-environmental-engineering",
@@ -4161,65 +4085,41 @@
       "units": [
         {
           "number": 1,
-          "title": "Natural Purification of Streams",
+          "title": "Unit I",
           "topics": [
-            "Concept of dilution and self-purification in streams; factors affecting self-purification",
-            "Streeter-Phelps's Dissolved Oxygen Model",
-            "Zones of self-purification",
-            "Impact of pollutants on stream water and its usage, with special reference to flora and fauna"
+            "Stream Sanitation Introduction; Self-purification in streams; factors affecting self- purification; Dissolved Oxygen Balance in streams; Streeter-Phelps’s Dissolved Oxygen Model; Zones of Self-purification; Impact of pollutants on stream waters and usage of stream water with special reference to flora and fauna."
           ]
         },
         {
           "number": 2,
-          "title": "New Concepts in Biological Waste Treatment",
+          "title": "Unit II",
           "topics": [
-            "Nitrogen removal by biological nitrification and de-nitrification",
-            "Phosphate removal",
-            "Rotating Disc Biological Contactor and anaerobic filters",
-            "MBR, SBR and SBBR systems",
-            "UASB and U-tube aeration systems"
+            "New Concepts in Biological Waste Treatment (theory only) Introduction; Nitrogen removal by biological nitrification and de-nitrification; Phosphate removal from the activated sludge process; Rotating Disc Biological Contactor; Anaerobic filters; U-Tube aeration systems."
           ]
         },
         {
           "number": 3,
-          "title": "Industrial Wastewater Treatment",
+          "title": "Unit III",
           "topics": [
-            "Basic terminology of industrial wastewater treatment",
-            "Sugar plant case study: quantity and characteristics of liquid waste, treatment and disposal methods",
-            "Dairy industry case study: quantity and characteristics of liquid waste, treatment and disposal methods",
-            "Pulp and paper industry case study: quantity and characteristics of liquid waste, treatment and disposal methods"
+            "Industrial Wastewater Treatment Introduction to Industrial Wastewater treatment; Sugar Plant: Quantity of liquid waste; Characteristics of liquid waste; Methods of its treatment and disposal. Dairy Industry: Quantity of liquid waste; Characteristics of liquid waste; Methods of its treatment and disposal. Pulp and Paper Industry: Quantity of liquid waste; Characteristics of liquid waste; Methods of its treatment and disposal."
           ]
         },
         {
           "number": 4,
-          "title": "Fundamentals of Solid Waste Management and Noise Pollution",
+          "title": "Unit IV",
           "topics": [
-            "Solid waste management: sources, quantities, characteristics and classification; collection and transportation",
-            "Recovery and reuse; principles of composting, incineration, pyrolysis and sanitary landfill",
-            "Gas and leachate generation and their control measures",
-            "Noise pollution: definitions, noise levels, rating systems and measurement; sources and impacts of noise",
-            "Acceptable noise levels and control measures for noise pollution"
+            "Urban Solid Waste Management Sources; Quantities and characteristics; Classification; Collection and transportation; Recovery and reuse; Treatment methods such as compositing, incineration, sanitary landfill and pyrolysis. Sources and Classification of Air Pollution Stationary and mobile sources; Primary and secondary pollutants; Natural contaminants; Particulate matter; Aerosols; Gaseous pollutants. Meteorology and Air Pollution Atmospheric stability and temperature inversions; Maximum Mixing Depth; Wind direction and speed; Plume behaviour; Gaussian Dispersion Model; Plume rise; Wind rose."
           ]
         },
         {
           "number": 5,
-          "title": "Basics of Air Pollution",
+          "title": "Unit V",
           "topics": [
-            "Sources and classification of air pollution: stationary and mobile sources, primary and secondary pollutants",
-            "Impacts of air pollutants on human health, materials and plants",
-            "Meteorology and air pollution: atmospheric stability, temperature inversions, wind rose and plume behaviour",
-            "Gaussian Dispersion Model and plume rise",
-            "Particulate air pollution control: gravity chamber, bag filters, cyclones, ESP and scrubbers"
+            "Effects of Air Pollution Global Effects: Global warming; Ozone depletion; Acid rains; Effects of air pollutants on human health; Effects on plants; Economical effects.Control of Air Pollution Objectives; Types of collection equipment: Settling chamber; Inertial separators; Cyclones; Filters; Electrostatic Precipitators; Scrubbers. Noise Pollution Introduction; Levels of noise; Noise rating systems; Measurement of noise; Sources of noise and their noise levels; Acceptable noise levels; Effects of noise; Control of noise."
           ]
         }
       ],
-      "course_outcomes": [
-        "Comprehend the importance of self-purification of streams, DO balance in streams, and the impacts of various pollutants on receiving streams.",
-        "Categorize the advanced treatment approaches in the advanced biological treatment of wastewater",
-        "Analyze the wastewater generation, its characteristics and treatment operations from selected industries, and develop plans for the treatment of wastewater from other industrial sectors.",
-        "Recognize the options available for development of strategies for a comprehensive solid waste management and noise pollution in the community.",
-        "Identify the basic principles of air pollution, its impacts, dispersion, and control strategies."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4228,16 +4128,16 @@
       "seo": {
         "slug": "advanced-environmental-engineering-jntuk-r23-ce-4-1",
         "title": "Advanced Environmental Engineering - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Advanced Environmental Engg: stream self-purification, biological treatment, industrial wastewater, solid waste & noise, air pollution."
+        "meta_description": "JNTUK R23 CE 4-1 Advanced Environmental Engineering syllabus: stream pollution, nutrient removal, industrial wastewater, air pollution and solid waste."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-IV option 2 of 4. Course code 23CE29, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-design-drawing-of-irrigation-structures",
@@ -4260,171 +4160,59 @@
       "units": [
         {
           "number": 1,
-          "title": "Surplus Weir",
+          "title": "Unit I",
           "topics": [
-            "Hydraulic design of a surplus weir",
-            "Detailed drawing of a surplus weir"
+            "Design and drawing of Surplus weir"
           ]
         },
         {
           "number": 2,
-          "title": "Tank Sluice with Tower Head",
+          "title": "Unit II",
           "topics": [
-            "Hydraulic design of a tank sluice with a tower head",
-            "Detailed drawing of a tank sluice with a tower head"
+            "Design and drawing of Tank sluice with a tower head"
           ]
         },
         {
           "number": 3,
-          "title": "Canal Drop - Notch Type",
+          "title": "Unit III",
           "topics": [
-            "Hydraulic design of a notch-type canal drop",
-            "Detailed drawing of a notch-type canal drop"
+            "Design and drawing of Canal drop-Notch type"
           ]
         },
         {
           "number": 4,
-          "title": "Canal Regulator",
+          "title": "Unit IV",
           "topics": [
-            "Hydraulic design of a canal regulator",
-            "Detailed drawing of a canal regulator"
+            "Design and drawing of Canal regulator"
           ]
         },
         {
           "number": 5,
-          "title": "Syphon Aqueduct Type III",
+          "title": "Unit V",
           "topics": [
-            "Hydraulic design of a type III syphon aqueduct",
-            "Detailed drawing of a type III syphon aqueduct"
+            "Design and drawing of Syphon aqueduct type III Final Examination pattern: Any two question of the above five designs may be asked out of which the candidate has to answer one question. The duration of the examination is three hours."
           ]
         }
       ],
-      "course_outcomes": [
-        "Understand the principles and design criteria of surplus weirs and prepare detailed drawings.",
-        "Analyze and design tank sluice with tower heads, including structural and hydraulic considerations.",
-        "Design and draw canal drops (notch type) by applying hydraulic principles and standard design",
-        "Develop design and drawing skills for canal regulators with proper understanding of flow control mechanisms.",
-        "Design and prepare detailed drawings of syphon aqueducts considering hydraulic and structural requirements."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "design-drawing-of-irrigation-structures-jntuk-r23-ce-4-1",
+        "slug": "design-and-drawing-of-irrigation-structures-jntuk-r23-ce-4-1",
         "title": "Design & Drawing of Irrigation Structures - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Design & Drawing of Irrigation Structures: surplus weir, tank sluice, notch-type canal drop, canal regulator, syphon aqueduct design & drawing."
+        "meta_description": "JNTUK R23 CE 4-1 Design & Drawing of Irrigation Structures syllabus: canals, regulators, cross-drainage works, weirs, barrages and energy dissipation."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-IV option 3 of 4. Course code 23CE30, 3-0-0-3 credits; the source gives each unit as a single design-and-drawing exercise heading (surplus weir, tank sluice with tower head, notch-type canal drop, canal regulator, syphon aqueduct type III) with no further elaboration."
-    },
-    {
-      "id": "r23-ce-4-1-building-services",
-      "regulation": "R23",
-      "branch": "CE",
-      "specialization": null,
-      "year": 4,
-      "semester": 1,
-      "year_sem_label": "4-1",
-      "subject_code": "23CE31",
-      "name": "Building Services",
-      "category": "ProfessionalElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Machineries",
-          "topics": [
-            "Hot water boilers, lifts and escalators",
-            "Special features required for physically handicapped and elderly persons",
-            "Conveyors, vibrators and concrete mixers",
-            "DC/AC motors and generators",
-            "Laboratory services: gas, water, air and electricity"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Electrical Systems in Buildings",
-          "topics": [
-            "Basics of electricity; single/three phase supply",
-            "Protective devices in electrical installations; earthing for safety, types of earthing and ISI specifications",
-            "Types of wires, wiring systems and their choice; planning electrical wiring for buildings",
-            "Main and distribution boards",
-            "Transformers, switch gears and layout of substations"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Principles of Illumination and Design",
-          "topics": [
-            "Visual tasks and factors affecting them; modern theory of light and colour; additive and subtractive synthesis of colour",
-            "Luminous flux, candela, solid angle illumination, utilization factor and depreciation factor; MSCP, MHCP and laws of illumination",
-            "Classification of lighting and artificial light sources; spectral energy distribution, luminous efficiency, colour temperature and colour rendering",
-            "Design of modern lighting for stores, offices, schools, hospitals and house lighting",
-            "Special features and minimum illumination levels required for physically handicapped and elderly persons"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Refrigeration Principles and Applications",
-          "topics": [
-            "Thermodynamics: heat, temperature measurement and transfer, change of state, sensible and latent heat",
-            "Saturation temperature, superheated vapour, subcooled liquid and pressure-temperature relationship for liquids; refrigerants",
-            "Vapour compression cycle: compressors, evaporators, refrigerant control devices, electric motors and starters",
-            "Air handling units, cooling towers, window and packaged air-conditioners, chilled water plant and fan coil systems",
-            "Water piping, cooling load, air conditioning systems for different buildings and fire protection for A.C. systems"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Fire Safety Installation",
-          "topics": [
-            "Causes of fire in buildings; safety regulations and the National Building Code (NBC)",
-            "Planning considerations: non-combustible materials, construction, staircases, lift lobbies, fire escapes and A.C. systems",
-            "Special features required for physically handicapped and elderly persons in building types",
-            "Heat and smoke detectors; fire alarm system and snorkel ladder",
-            "Fire fighting pump and water storage; dry and wet risers and automatic sprinklers"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Identify the services like lift, elevators, conveyors and escalators, etc. & plan various types of mechanical services as per requirements of building",
-        "Explain the electrical services requirement and Layout of a building",
-        "Analyze the basic principles of illumination for different types of buildings.",
-        "Analyze the refrigeration principles & applications for different types of buildings.",
-        "Describe the damage caused by fire & exercise due care for fire safety."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "building-services-jntuk-r23-ce-4-1",
-        "title": "Building Services - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Building Services: machinery, electrical systems, illumination principles, refrigeration & AC, fire safety installations in buildings."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
-        "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
-      },
-      "notes": "Program Elective-IV option 4 of 4. Course code 23CE31, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-advanced-structural-engineering",
@@ -4447,55 +4235,41 @@
       "units": [
         {
           "number": 1,
-          "title": "Raft Foundations and RCC Retaining Walls",
+          "title": "Unit I",
           "topics": [
-            "Analysis and design of raft foundations",
-            "Design of RCC cantilever retaining walls",
-            "Design of RCC counterfort retaining walls"
+            "Analysis and Design of Raft Foundations – Design of RCC Retaining walls: Cantilever and Counter fort"
           ]
         },
         {
           "number": 2,
-          "title": "RCC Water Tanks",
+          "title": "Unit II",
           "topics": [
-            "Analysis and design of circular RCC water tanks",
-            "Analysis and design of rectangular RCC water tanks",
-            "Intze tank design including staging"
+            "Analysis and Design of RCC Water Tanks, Circular and Rectangular types- Intze tank including staging."
           ]
         },
         {
           "number": 3,
-          "title": "Flat Slabs",
+          "title": "Unit III",
           "topics": [
-            "Analysis and design of flat slabs",
-            "Direct Design Method",
-            "Equivalent Frame Method",
-            "Check for punching shear"
+            "Analysis and Design of Flat Slabs- Direct Design and Equivalent Frame Methods- Check for Punching shear"
           ]
         },
         {
           "number": 4,
-          "title": "RCC Chimney",
+          "title": "Unit IV",
           "topics": [
-            "Analysis and design of RCC chimney",
-            "Concepts of loading for chimney design"
+            "Analysis and Design of RCC Chimney, Concepts of loading"
           ]
         },
         {
           "number": 5,
-          "title": "Pressed Steel Tanks",
+          "title": "Unit V",
           "topics": [
-            "Analysis of pressed steel tanks",
-            "Design of pressed steel tanks"
+            "Analysis and design of Pressed Steel Tanks"
           ]
         }
       ],
-      "course_outcomes": [
-        "Design raft foundations and different types of RCC retaining walls",
-        "Carryout analysis and design of different types of RCC water tanks",
-        "Solve the problems regarding design of RCC Bunkers, Silos and Chimneys",
-        "Understand the concepts of prefabricated construction."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4504,16 +4278,16 @@
       "seo": {
         "slug": "advanced-structural-engineering-jntuk-r23-ce-4-1",
         "title": "Advanced Structural Engineering - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Advanced Structural Engineering: raft foundations & retaining walls, RCC water tanks, flat slabs, RCC chimney, pressed steel tanks."
+        "meta_description": "JNTUK R23 CE 4-1 Advanced Structural Engineering syllabus: raft foundations, retaining walls, water tanks, flat slabs and bridge components."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-V option 1 of 4. Course code 23CE32, 3-0-0-3 credits; the source gives each unit as a brief analysis-and-design topic list (raft foundations & retaining walls, RCC water tanks, flat slabs, RCC chimney, pressed steel tanks) with minimal elaboration."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-environmental-impact-assessment",
@@ -4536,67 +4310,41 @@
       "units": [
         {
           "number": 1,
-          "title": "Basic Concepts of EIA",
+          "title": "Unit I",
           "topics": [
-            "Elements and factors affecting EIA; Initial Environmental Examination and life cycle analysis",
-            "Preparation of environmental base map; classification of environmental parameters and attributes",
-            "Role of stakeholders in EIA preparation; stages in EIA, EIS and EMP",
-            "Identification of activities in EIA; application of remote sensing and GIS for EIA; difference between rapid and comprehensive EIA",
-            "Environmental economics and cost/benefit analysis"
+            "Basic concepts of EIA: Elements of EIA-factors affecting EIA-Initial Environmental Examination- life cycle analysis preparation of Environmental Base map- Classification of environmental parameters – role of stakeholders in the EIA preparation – stages in EIA, Environmental economics, Cost/benefit Analysis - EIS and EMP. Identification of activities- application of remote sensing and GIS for EIA."
           ]
         },
         {
           "number": 2,
-          "title": "EIA Methodologies",
+          "title": "Unit II",
           "topics": [
-            "Criteria for selection of EIA methodology",
-            "EIA methods: ad-hoc, matrix and network methods",
-            "Environmental Media Quality Index method and overlay method",
-            "Impacts of developmental activities and land use patterns",
-            "Delineation of study area"
+            "EIA Methodologies: Introduction, Criteria for the selection of EIA Methodology, E I A methods, Ad-hoc methods, matrix methods, Network method Environmental Media Quality Index method, overlay methods. Impact of Developmental Activities and Land use: Introduction and Methodology for the assessment of soil and ground water, Delineation of study area."
           ]
         },
         {
           "number": 3,
-          "title": "EIA Analysis of Water, Air and Soil",
+          "title": "Unit III",
           "topics": [
-            "Methodology for assessment of impacts on surface water environment",
-            "Generalized approach for assessment of air pollution impact",
-            "Methodology for assessment of soil and ground water; procurement of relevant soil quality",
-            "Impact prediction and assessment of impact significance",
-            "Identification and incorporation of mitigation measures"
+            "Procurement of relevant soil quality, Impact prediction, Assessment of Impact significance, Identification and Incorporation of mitigation measures - E I A with reference to surface water, Air and Biological environment: Methodology for the assessment of Impacts on surface water environment, generalized approach for assessment of Air pollution Impact."
           ]
         },
         {
           "number": 4,
-          "title": "EIA Analysis of Vegetation and Wild Life, Risk Assessment",
+          "title": "Unit IV",
           "topics": [
-            "Afforestation and deforestation",
-            "Impact assessment of development activities on vegetation and wildlife",
-            "Environmental risk assessment and risk management; treatment of uncertainty",
-            "Key stages in performing an environmental risk assessment",
-            "Advantages of environmental risk assessment"
+            "Assessment of Impact of development Activities on Vegetation and wildlife, Environmental Impact of Deforestation. Environmental Risk Assessment and Risk management in EIA: Risk assessment and treatment of uncertainty-key stages in performing an Environmental Risk Assessment- Advantages of Environmental Risk Assessment"
           ]
         },
         {
           "number": 5,
-          "title": "Acts and Regulatory Requirements",
+          "title": "Unit V",
           "topics": [
-            "Environmental legislation: MoEF&CC Acts for EIA, notifications and guidelines",
-            "Provisions in the EIA notification; procedure for environmental clearance and for conducting an EIA report; evaluation of EIA report",
-            "Environmental audit: objectives, evaluation of audit data and preparation of audit report; post-audit activities",
-            "ISO 14000 concept and environmental compliance reports",
-            "Case studies and preparation of EIA statement for various industries"
+            "EIA: MoEF&CC Acts, Notifications and Guidelines: Provisions in the EIA notification, procedure for environmental clearance, and procedure for conducting environmental impact assessment report- evaluation of EIA report. Environmental legislation objectives, evaluation of Audit data and preparation of Audit report. Post Audit activities, Concept of ISO and ISO14000. Environmental compliance reports. Case studies and preparation of EIA statement for various Industries."
           ]
         }
       ],
-      "course_outcomes": [
-        "Understand the basics, types and terminology of EIA, Role of stakeholders and GIS in EIA, and Environmental economics",
-        "Explore the different EIA methodologies, their advantages and disadvantages",
-        "Interpret the methodologies available for analyzing air, water and soil environments",
-        "Comprehend the methodologies available for Risk assessment in EIA, analyzing impacts on vegetation and wild life",
-        "Recognize the available Regulatory guidelines available for executing EIA, ISO and other Environmental Management procedures"
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4605,16 +4353,16 @@
       "seo": {
         "slug": "environmental-impact-assessment-jntuk-r23-ce-4-1",
         "title": "Environmental Impact Assessment - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Environmental Impact Assessment: EIA basics, methodologies, water/air/soil analysis, vegetation/wildlife risk assessment, acts & regulations."
+        "meta_description": "JNTUK R23 CE 4-1 Environmental Impact Assessment syllabus: EIA process, methods, impact prediction, risk assessment, legislation, audits and ISO 14001."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-V option 2 of 4. Course code 23CE33, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-railways-and-airport-engineering",
@@ -4625,7 +4373,7 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": "23CE34",
-      "name": "Railways and Airport Engineering",
+      "name": "Railway and Airport Engineering",
       "category": "ProfessionalElective",
       "credits": {
         "L": 3,
@@ -4637,184 +4385,59 @@
       "units": [
         {
           "number": 1,
-          "title": "Components of Railway Engineering",
+          "title": "Unit I",
           "topics": [
-            "Permanent way components; railway track gauge and cross-section of permanent way",
-            "Functions of rails, sleepers and ballast; rail fastenings",
-            "Creep of rails and theories related to creep",
-            "Adzing of sleepers and sleeper density",
-            "Rail joints"
+            "Components of Railway Engineering: Permanent way components – Railway Track Gauge - Cross Section of Permanent Way - Functions of various Components like Rails, Sleepers and Ballast –Rail Fastenings – Creep of Rails- Theories related to creep – Adzing of Sleepers- Sleeper density – Rail joints."
           ]
         },
         {
           "number": 2,
-          "title": "Geometric Design of Railway Track",
+          "title": "Unit II",
           "topics": [
-            "Alignment engineering surveys; gradients and grade compensation",
-            "Cant, negative super-elevation and cant deficiency; degree of curve and safe speed on curves",
-            "Transition curves, compound curves and reverse curves",
-            "Extra clearance and widening of gauge on curves",
-            "Vertical curves and cheek rails on curves"
+            "Geometric Design of Railway Track: Alignment – Engineering Surveys - Gradients- Grade Compensation- Cant and Negative Super elevation- Cant Deficiency – Degree of Curve – safe speed on curves – Transition curve – Compound curves – Reverse curves – Extra clearance on curves – widening of gauge on curves – vertical curves – cheek rails on curves."
           ]
         },
         {
           "number": 3,
-          "title": "Turnouts and Controllers",
+          "title": "Unit III",
           "topics": [
-            "Track layouts, switches and design of tongue rails",
-            "Crossings and turnouts; layout of turnout, double turnout, diamond crossing and scissors crossing",
-            "Signal objectives and classification; fixed signals and stop signals",
-            "Mechanical and electrical signalling systems",
-            "System for controlling train movement: interlocking and modern signalling installations"
+            "Turnouts & Controllers: Track layouts – Switches – Design of Tongue Rails – Crossings – Turnouts – Layout of Turnout – Double Turnout – Diamond crossing – Scissors crossing. Signal Objectives – Classification – Fixed signals – Stop signals – Signalling systems – Mechanical signalling system – Electrical signalling system – System for Controlling Train Movement – Interlocking – Modern signalling Installations."
           ]
         },
         {
           "number": 4,
-          "title": "Airport Planning and Design",
+          "title": "Unit IV",
           "topics": [
-            "Airport master plan and airport site selection",
-            "Aircraft characteristics, zoning laws and airport classification",
-            "Runway orientation and wind rose diagram; runway length",
-            "Taxiway design; terminal area and airport layout",
-            "Visual aids and air traffic control"
+            "Airport Planning & Design: Airport Master plan – Airport site selection – Air craft characteristics – Zoning laws – Airport classification – Runway orientation – Wind rose diagram – Runway length – Taxiway design – Terminal area and Airport layout – Visual aids and Air traffic control."
           ]
         },
         {
           "number": 5,
-          "title": "Runway Design",
+          "title": "Unit V",
           "topics": [
-            "Design factors for runway pavements; design methods for flexible pavements",
-            "Design methods for rigid pavements; LCN system of pavement design",
-            "Airfield pavement failures; maintenance and rehabilitation of airfield pavements",
-            "Evaluation and strengthening of airfield pavements",
-            "Airport drainage: design of surface and subsurface drainage"
+            "Runway Design: Various Design factors – Design methods for Flexible pavements – Design methods for Rigid pavements – LCN system of Pavement Design – Airfield Pavement Failures – Maintenance and Rehabilitation of Airfield pavements – Evaluation & Strengthening of Airfield pavements – Airport Drainage – Design of surface and subsurface drainage."
           ]
         }
       ],
-      "course_outcomes": [
-        "Understand and explain the components and behavior of railway track systems including permanent way elements and rail interactions.",
-        "Analyze and design railway track geometry for safe and efficient train movement.",
-        "Evaluate railway track layouts, turnouts, crossings, and signaling systems for operational control.",
-        "Assess and plan airport layout, site selection, and operational facilities.",
-        "Design and evaluate airfield pavements, drainage systems, and maintenance strategies."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "railways-and-airport-engineering-jntuk-r23-ce-4-1",
-        "title": "Railways & Airport Engineering - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Railways & Airport Engineering: railway track components, track geometry, turnouts & signalling, airport planning, runway pavement design."
+        "slug": "railway-and-airport-engineering-jntuk-r23-ce-4-1",
+        "title": "Railway and Airport Engineering - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Railway and Airport Engineering syllabus: track components, geometrics, points, signalling, airport planning, runways and pavements."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Program Elective-V option 3 of 4. Course code 23CE34, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
-    },
-    {
-      "id": "r23-ce-4-1-watershed-management",
-      "regulation": "R23",
-      "branch": "CE",
-      "specialization": null,
-      "year": 4,
-      "semester": 1,
-      "year_sem_label": "4-1",
-      "subject_code": "23CE35",
-      "name": "Watershed Management",
-      "category": "ProfessionalElective",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Watershed Characteristics",
-          "topics": [
-            "Concept, objectives and need for watershed development",
-            "Integrated and multidisciplinary approach for watershed management",
-            "Characteristics of watersheds: size, shape, physiography, slope and climate",
-            "Drainage, land use, vegetation, geology and soils, hydrology and hydrogeology",
-            "Socio-economic characteristics and basic data on watersheds"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Principles of Erosion",
-          "topics": [
-            "Types and causes of erosion; factors affecting erosion",
-            "Estimation of soil loss due to erosion; Universal Soil Loss Equation",
-            "Erosion control measures: contour techniques, ploughing, furrowing and trenching",
-            "Bunding, terracing and gully control",
-            "Check dams, rock-fill dams, brushwood dams and gabions"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Water Harvesting",
-          "topics": [
-            "Rainwater harvesting from roof top",
-            "Surface flow harvesting and subsurface flow harvesting",
-            "Stop dams",
-            "Farm ponds and dugout ponds",
-            "Percolation tanks"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Land Management",
-          "topics": [
-            "Land use and land capability classification",
-            "Management of forest, agricultural, grassland and wild land",
-            "Land grading operation",
-            "Reclamation of saline and alkaline soils"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Watershed Modelling",
-          "topics": [
-            "Data of watershed for modelling",
-            "Application and comparison of watershed models",
-            "Model calibration and validation",
-            "Advances of watershed models"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Determine watershed parameters and analyse watershed characteristics to take appropriate management action.",
-        "Quantify soil erosion and design control measures.",
-        "Recommend suitable harvesting techniques for better watershed management.",
-        "Describe the land grading techniques for proper land management.",
-        "Discuss the appropriate models for watershed management."
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "watershed-management-jntuk-r23-ce-4-1",
-        "title": "Watershed Management - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Watershed Management: watershed characteristics, erosion principles, water harvesting, land management, watershed modelling."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
-        "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
-      },
-      "notes": "Program Elective-V option 4 of 4. Course code 23CE35, 3-0-0-3 credits and 5-unit syllabus read from the source PDF."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-structural-analysis-and-design-laboratory-using-etabs",
@@ -4825,7 +4448,7 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": "23CES5",
-      "name": "Structural Analysis and Design Laboratory Using ETABS",
+      "name": "Skills on Civil Engineering Software",
       "category": "SkillEnhancement",
       "credits": {
         "L": 0,
@@ -4833,47 +4456,35 @@
         "P": 2,
         "C": 2
       },
-      "type": "theory_cum_lab",
+      "type": "lab",
       "units": [
         {
           "number": 1,
-          "title": "Experiments",
+          "title": "ETABS Structural Analysis Exercises",
           "topics": [
-            "Introduction to ETABS interface",
-            "Modelling of a G+3 RCC building",
-            "Assignment of material and section properties and application of loads",
-            "Linear static analysis of building",
-            "Seismic analysis using equivalent static method",
-            "Wind load analysis of building",
-            "Design of RCC beams and columns",
-            "Effect of shear walls on building behaviour"
+            "1. Introduction to ETABS 2. 3D analysis of multi-storey buildings 3. Analysis of continuous beams 4. Analysis of portal frames 5. Analysis of trusses"
           ]
         }
       ],
-      "course_outcomes": [
-        "Understand and apply the fundamentals of structural modelling, load assignment and analysis of RCC buildings using ETABS.",
-        "Analyse building structures under dead load, live load, seismic load and wind load conditions using relevant IS Codes and interpret structural behaviour.",
-        "Design RCC structural components such as beams, columns, slabs and shear walls based on analysis results for safe and economical construction.",
-        "Prepare structural analysis reports, design documentation and engineering interpretations using ETABS software for practical civil engineering applications."
-      ],
+      "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "structural-analysis-and-design-laboratory-using-etabs-jntuk-r23-ce-4-1",
-        "title": "Structural Analysis & Design Lab (ETABS) - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Structural Analysis & Design Lab Using ETABS: modelling, static/seismic/wind load analysis, and RCC beam, column & shear wall design in ETABS."
+        "slug": "skills-on-civil-engineering-software-jntuk-r23-ce-4-1",
+        "title": "Civil Engineering Software Skills - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Skills on Civil Engineering Software lab: ETABS modelling and analysis of buildings, beams, portal frames and trusses."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "verified",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "Skill-enhancement lab (0-1-2-2, course code 23CES5). Students perform any 10 of the 12 listed ETABS experiments read from the source PDF: interface introduction, G+3 building modelling, material/section/load assignment, linear static/seismic/wind analysis, RCC beam and column design, shear wall effects, soft storey and flat slab analysis, and design report preparation."
+      "notes": "The official detail page provides ETABS exercises under the broader course-structure title covering civil engineering software."
     },
     {
       "id": "r23-ce-4-1-constitution-of-india",
@@ -4883,7 +4494,7 @@
       "year": 4,
       "semester": 1,
       "year_sem_label": "4-1",
-      "subject_code": "23MC05",
+      "subject_code": null,
       "name": "Constitution of India",
       "category": "MandatoryNonCredit",
       "credits": {
@@ -4893,7 +4504,43 @@
         "C": 0
       },
       "type": "theory",
-      "units": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction to Indian Constitution: Constitution meaning of the term, Indian Constitution - Sources and constitutional history, Features - Citizenship, Preamble, Fundamental Rights and Duties, Directive Principles of State Policy."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Union Government and its Administration Structure of the Indian Union: Federalism, Centre- State relationship, President: Role, power and position, PM and Council of ministers, Cabinet and Central Secretariat, LokSabha, RajyaSabha, The Supreme Court and High Court: Powers and Functions;"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "State Government and its Administration Governor - Role and Position - CM and Council of ministers, State Secretariat: Organization, Structure and Functions"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "A.Local Administration - District’s Administration Head - Role and Importance, Municipalities - Mayor and role of Elected Representative - CEO of Municipal Corporation PachayatiRaj: Functions PRI: ZilaPanchayat, Elected officials and their roles, CEO ZilaPanchayat: Block level Organizational Hierarchy - (Different departments), Village level - Role of Elected and Appointed officials - Importance of grass root democracy"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Election Commission: Election Commission- Role of Chief Election Commissioner and Election Commissionerate State Election Commission:, Functions of Commissions for the welfare of SC/ST/OBC and women"
+          ]
+        }
+      ],
       "course_outcomes": [],
       "resources": {
         "lecture_notes_pdf": null,
@@ -4903,16 +4550,16 @@
       "seo": {
         "slug": "constitution-of-india-jntuk-r23-ce-4-1",
         "title": "Constitution of India - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Constitution of India - listed with 2-0-0-0 credits (MandatoryNonCredit) but no syllabus content in the source document."
+        "meta_description": "JNTUK R23 CE 4-1 Constitution of India syllabus: constitutional history, rights and duties, union and state government, local administration and elections."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
-        "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
-      "notes": "NEEDS VERIFICATION: 23MC05 Constitution of India appears only as a row in the VII semester course-structure table (2-0-0, credits shown as '-', 30 internal + 30 total marks) -- no course objectives, outcomes, units or textbooks appear anywhere in the source PDF. Source the unit-wise content from an official JNTUK/college document before flipping to verified."
+      "notes": null
     },
     {
       "id": "r23-ce-4-1-evaluation-of-industry-internship",
@@ -4922,10 +4569,15 @@
       "year": 4,
       "semester": 1,
       "year_sem_label": "4-1",
-      "subject_code": "23PI02",
+      "subject_code": null,
       "name": "Evaluation of Industry Internship",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -4936,17 +4588,17 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-jntuk-r23-ce-4-1",
-        "title": "Evaluation of Industry Internship - CE 4-1",
-        "meta_description": "LBRCE R23 CE 4-1 Evaluation of Industry Internship (2 credits, 0-0-0-2) - listed in the course structure with no detailed syllabus."
+        "title": "Industry Internship Evaluation - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Evaluation of Industry Internship (2 credits), listed without detailed evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
       },
-      "notes": "NEEDS VERIFICATION: the VII semester course structure lists 'Evaluation of Industry Internship' (23PI02) with credits shown as 0-0-0-2 in the table but gives no evaluation scheme, guidelines or unit content. Confirm the credit split and requirements against official JNTUK internship guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official structure lists a 2-credit internship evaluation but provides no detailed evaluation scheme or guidelines."
     },
     {
       "id": "r23-ce-4-2-full-semester-internship-and-project-work",
@@ -4957,9 +4609,14 @@
       "semester": 2,
       "year_sem_label": "4-2",
       "subject_code": null,
-      "name": "Full Semester Internship & Project Work",
+      "name": "Internship and Project",
       "category": "Internship",
-      "credits": null,
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 24,
+        "C": 12
+      },
       "type": "internship",
       "units": [],
       "course_outcomes": [],
@@ -4969,18 +4626,93 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "full-semester-internship-and-project-work-jntuk-r23-ce-4-2",
-        "title": "Internship & Project Work - CE 4-2",
-        "meta_description": "LBRCE R23 CE 4-2 Full Semester Internship & Project Work (12 credits), the entire VIII semester as one line item with no syllabus content in the source."
+        "slug": "internship-and-project-jntuk-r23-ce-4-2",
+        "title": "Internship and Project - CE 4-2",
+        "meta_description": "JNTUK R23 CE 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed project or evaluation guidelines."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://lbrce.ac.in/academics/syllabus/R23/R23_CE_Syllabus.pdf",
-        "retrieved_date": "2026-07-02",
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
         "status": "needs_verification",
-        "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
       },
-      "notes": "NEEDS VERIFICATION: the VIII-semester course structure table lists a single entry, 'Full semester Internship & Project Work' (0-0-24, 12 credits, CIE 60 / SEE 140 / Total 200), which occupies the entire final semester. The source PDF gives no unit content, evaluation scheme detail, or project/internship guidelines beyond this one table row -- this is the only course structure LBRCE publishes for VIII semester CE. Confirm requirements against official guidelines before flipping to verified."
+      "notes": "NEEDS VERIFICATION: the official structure lists Internship and Project as the sole VIII-semester item but provides no detailed implementation or evaluation guidelines."
+    },
+    {
+      "id": "r23-ce-4-1-quantum-science-and-technology",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Quantum Science and Technology",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Fundamentals of Quantum Mechanics: Historical background: Blackbody radiation, photoelectric effect, and Compton scattering; Dual nature of light and matter; De Broglie hypothesis; Schrödinger equation; Free particle, infinite potential well, step potential; Operators and observables: position, momentum, Hamiltonian; Commutation relations and uncertainty principle; Quantum postulates and measurement theory; Eigenvalues, eigenfunctions."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Quantum Information Theory: Classical vs. quantum information; Qubit representation using Bloch sphere; Quantum superposition and quantum entanglement; Dirac notation (bra-ket), tensor products, and composite systems; Bell states and EPR paradox; Quantum gates: Pauli-X, Y, Z; Hadamard; Phase; T; CNOT; Quantum circuit models and notation; Measurement in computational basis; Quantum teleportation and no-cloning theorem; Quantum state tomography (introductory)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Quantum Computing: Classical computing review and limitations; Quantum parallelism and interference; Deutsch and Deutsch-Jozsa algorithms; Grover’s search algorithm, Oracle and amplitude amplification; Shor’s factoring algorithm (overview and significance); Quantum Fourier Transform (QFT); Quantum error correction: Bit-flip, phase- flip, and Shor’s 9-qubit code; Introduction to quantum programming: Qiskit, Cirq, IBM Quantum Experience (overview)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Quantum Communication: Introduction to quantum cryptography; Quantum key distribution (QKD): BB84 protocol; Entanglement-based QKD: Ekert protocol (E91); Eavesdropping and security of QKD; Quantum teleportation (circuit and protocol); Quantum dense coding; Quantum networks and entanglement swapping; Role of quantum repeaters; Single-photon sources and detectors; Implementation challenges (loss, decoherence, noise)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Quantum Technologies and Applications: Quantum sensors: magnetometry, gravimetry; Quantum metrology: standard time, atomic clocks; Quantum imaging and lithography; Quantum materials: topological insulators, graphene, quantum dots; NV centers in diamonds for sensing; Hardware platforms: Superconducting qubits, Trapped ions, Photonic quantum processors; Quantum supremacy and NISQ era; Global initiatives: IBM, Google, D-Wave, IonQ, India’s NQM; Ethical concerns and future prospects"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "quantum-science-and-technology-jntuk-r23-ce-4-1",
+        "title": "Quantum Science and Technology - CE 4-1",
+        "meta_description": "JNTUK R23 CE 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
+      },
+      "notes": null
     }
   ]
 }
