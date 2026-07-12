@@ -73,7 +73,7 @@
       "course_outcomes": [
         "Illustrate the static and dynamic characteristics of SCR, Power-MOSFET and Power-IGBT.",
         "Analyse the operation of phase-controlled rectifiers.",
-        "Analyse the operation of three-phase full\u2013wave converters, AC Voltage Controllers and Cyclo converters.",
+        "Analyse the operation of three-phase full–wave converters, AC Voltage Controllers and Cyclo converters.",
         "Examine the operation and design of different types of DC-DC converters.",
         "Analyse the operation of Square wave inverters and PWM inverters for voltage control."
       ],
@@ -309,7 +309,7 @@
       "units": [],
       "course_outcomes": [
         "Analyse characteristics of various power electronic devices and design firing circuits for SCR.",
-        "Analyse the performance of single\u2013phase dual, three\u2013phase full\u2013wave bridge converters and dual converter with both resistive and inductive loads.",
+        "Analyse the performance of single–phase dual, three–phase full–wave bridge converters and dual converter with both resistive and inductive loads.",
         "Examine the operation of Single-phase AC voltage regulator and Cyclo converter with resistive and inductive loads.",
         "Differentiate the working and control of Buck converter and Boost converter.",
         "Differentiate the working & control of Square wave inverter and PWM inverter."
@@ -3805,6 +3805,1070 @@
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
       "notes": "Engineering Science, theory-cum-lab (1-0-2-2), common to all branches. Five-unit syllabus read from Tirumala R23 EEE II-I & II-II PDF."
+    },
+    {
+      "id": "r23-eee-4-1-power-system-operation-and-control",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Power System Operation and Control",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Economic Operation of Power Systems Optimal operation of Generators in Thermal power stations - – Heat rate curve – Cost Curve – Incremental fuel and Production costs – Input–output characteristics – Optimum generation allocation with line losses neglected – Optimum generation allocation including the effect of transmission line losses – Loss Coefficients – General transmission line loss formula."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Hydrothermal Scheduling Mathematical Formulation – Short term Solution Technique. Unit Commitment Need for unit commitment – Constraints in unit commitment – Cost function formulation – Solution methods – Priority ordering – Dynamic programming."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Load Frequency Control-I Modelling of steam turbine – Generator – Mathematical modelling of speed governing system – Transfer function – Necessity of keeping frequency constant. Definitions of Control area – Single area control system – Block diagram representation of an isolated power system – Steady state analysis – Dynamic response – Uncontrolled case. Proportional plus Integral control of single area and its block diagram representation – Steady state response."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Load Frequency Control-II Block diagram development of load frequency control of two area system: uncontrolled case and controlled case – Tie-line bias control – Load frequency control and economic dispatch control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Compensation in Power Systems Overview of Reactive Power control – Reactive power compensation in transmission systems – Advantages and disadvantages of different types of compensating equipment for transmission systems – Load compensation – Specifications of load compensator – Compensated transmission lines. Introduction of FACTS devices – Need of FACTS controllers – Types of FACTS devices."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-system-operation-and-control-jntuk-r23-eee-4-1",
+        "title": "Power System Operation and Control - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Power System Operation and Control syllabus: load frequency control, economic dispatch, reactive power and state estimation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-energy-management-and-auditing",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Energy Management & Auditing",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Basic Principles of Energy Audit Energy audit- definitions - concept - types of audit - energy index - cost index - pie charts - Sankey diagrams and load profiles - Energy conservation schemes- Energy audit of industries- energy saving potential - energy audit of process industry - thermal power station - building energy audit - Conservation of Energy Building Codes (ECBC-2017)."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Energy Management Principles of energy management - organizing energy management program - initiating - planning - controlling - promoting - monitoring - reporting. Energy manager - qualities and functions - language - Questionnaire – check list for top management."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Energy Efficient Motors and Lighting Energy efficient motors - factors affecting efficiency - loss distribution - constructional details - characteristics – variable speed - RMS - voltage variation-voltage unbalance-over motoring-motor energy audit. lighting system design and practice - lighting control - lighting energy audit."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Demand Side Management and Energy Instruments Introduction to DSM - concept of DSM - benefits of DSM - Different techniques of DSM – time of day pricing - multi-utility power exchange model - time of day models for planning. Load management - load priority technique - peak clipping - peak shifting - valley filling - strategic conservation– Energy Instruments- data loggers - thermocouples - pyrometers - lux meters - tongue testers."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Economic Aspects and Their Computation Economics Analysis depreciation Methods - time value of money - rate of return - present worth method - replacement analysis - life cycle costing analysis – Energy efficient motors. Calculation of simple payback method - net present value method – Applications of life cycle costing analysis - return on investment."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "energy-management-and-auditing-jntuk-r23-eee-4-1",
+        "title": "Energy Management & Auditing - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Energy Management & Auditing syllabus: energy policy, audits, efficiency, economic analysis, instruments and conservation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-ehvac-and-hvdc-transmission-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "EHVAC & HVDC Transmission Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction of EHV AC transmission Necessity of EHV AC transmission – Advantages and problems– Power handling capacity and line losses– Mechanical considerations in line performance –Electrostatics – Field of sphere gap – Field of line charges and properties – Charge – potential relations for multi–conductors – Surface voltage gradient on conductors – Bundle spacing and bundle radius– Examples – Distribution of voltage gradient on sub conductors of bundle – Examples."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Corona effects Power loss and audible noise (AN) – Corona loss formulae – Charge voltage diagram – Generation – Characteristics – Limits and measurements of AN – Relation between 1–phase and 3–phase AN levels – Examples – Radio interference (RI) – Corona pulses and thier generation – Properties and limits – Frequency spectrum – Modes of propagation – Excitation function – Measurement of RI, RIV and excitation functions – Examples."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Basic Concepts of DC Transmission Economics & Terminal equipment of HVDC transmission systems: Types of HVDC Links – Apparatus required for HVDC Systems – Comparison of AC &DC transmission – Application of DC Transmission System – Planning & Modern trends in DC transmission – Types of MTDC systems."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Analysis of HVDC Converters and System Control Choice of Converter configuration – Analysis of Graetz circuit – Characteristics of 6 Pulse & 12 Pulse converters –– Principal of DC Link Control – Converters Control Characteristics – Firing angle control –Constant Current and extinction angle control –Starting and stopping of DC link – Power Control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Harmonics in HVDC System Generation of Harmonics – Characteristics harmonics – Calculation of AC Harmonics – Non– Characteristics harmonics – Adverse effects of harmonics – Calculation of voltage & current harmonics – Effect of Pulse number on harmonics. Types of AC filters, Design of Single tuned filters –Design of High pass filters."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "ehvac-and-hvdc-transmission-systems-jntuk-r23-eee-4-1",
+        "title": "EHVAC & HVDC Transmission Systems - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 EHVAC & HVDC Transmission Systems syllabus: EHV AC effects, compensation, HVDC converters, controls, harmonics and filters."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-programmable-logic-controllers",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Programmable Logic Controllers",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "PLC Basics: PLC Advantages and disadvantages – Overall PLC system – Central Processing"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "/O modules Power supplies- programming Equipment - programming formats - construction of PLC ladder diagrams – Input On/Off Switching Devices – Input Analog Devices - Output On/Off Switching Devices – Output Analog Devices."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "PLC Programming: PLC Input instructions - outputs - operational procedures - programming examples using contacts and coils - Drill press operation. Digital logic gates - Boolean algebra PLC programming - conversion examples- Ladder diagrams and sequence listings - ladder diagram construction and flowchart for spray process system."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Basic and Intermediate PLC Functions: General Characteristics of Registers - module addressing - holding registers - Input Registers - Output Registers. PLC Timer functions & Industrial applications - counters - counter function industrial applications - Arithmetic functions - Number comparison functions - number conversion functions."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Data Handling functions: SKIP - Master control Relay - Jump - Move - FIFO - FAL - ONS - CLR & Sweep functions and their applications. Bit Pattern and changing a bit shift register - sequence functions and applications - controlling of two-axis & three axis Robots with PLC - Matrix functions."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "programmable-logic-controllers-jntuk-r23-eee-4-1",
+        "title": "Programmable Logic Controllers - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Programmable Logic Controllers syllabus: PLC hardware, programming, timers, counters, data handling, process control and applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-electrical-distribution-system",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Electrical Distribution System",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "General Concepts Introduction to distribution systems - Distribution system losses – Coincidence factor – Contribution factor – loss factor – Relationship between the load factor and loss factor – Numerical Problems – Load modeling and characteristics – Classification and characteristics of loads (Residential - Commercial - Agricultural and Industrial)."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Substations Selection for location of substations - Rating of distribution substation – Service area with ‘n’ primary feeders – Benefits and methods of optimal location of substations. Distribution Feeders Design Considerations of distribution feeders: Radial and loop types of primary feeders – Voltage levels – Feeder loading – Basic design practice of the secondary distribution system."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "System Analysis Voltage drop and power loss calculations: Derivation for voltage drop and power loss in lines – Uniformly distributed loads and non-uniformly distributed loads – Three phase balanced primary lines and Non three phase balanced primary lines."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Protection Objectives of distribution system protection –Time current characteristics – Protective devices: Principle of operation of fuses – Circuit reclosures – Line sectionaliser and circuit breakers - Earth leakage circuit breakers – Protection schemes of parallel & Ring-main feeders. Coordination of protective devices General coordination procedure –Various types of co-ordinated operation of protective devices - Residual Current Circuit Breaker."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Compensation for Power Factor Improvement Capacitive compensation for power factor control – Different types of power capacitors – shunt and series capacitors – Effect of shunt capacitors (Fixed and switched) – Power factor correction – Capacitor allocation – Economic justification – Procedure to determine the best capacitor location. Voltage Control Equipment for voltage control – Effect of series capacitors – Effect of AVB/AVR – Line drop compensation."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electrical-distribution-system-jntuk-r23-eee-4-1",
+        "title": "Electrical Distribution System - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Electrical Distribution System syllabus: feeders, substations, load characteristics, voltage drop, losses, capacitors and automation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-electric-vehicles",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Electric Vehicles",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction Fundamentals of vehicle - components of conventional vehicle and propulsion load; Drive cycles and drive terrain; Concept of electric vehicle and hybrid electric vehicle; History of hybrid vehicles - advantages and applications of Electric and Hybrid Electric Vehicles."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Hybridization of Automobile Architectures of HEVs - series and parallel HEVs - complex HEVs. Plug-in hybrid vehicle(PHEV) - constituents of PHEV - comparison of HEV and PHEV; Extended range hybrid electric vehicles(EREVs) - blended PHEVs - Fuel Cell vehicles and its constituents."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Special Machines for EV and HEVs Characteristics of traction drive - requirement of electric motors for EV/HEVs. Induction Motor drives - their control and applications in EV/HEVs. Permanent magnet Synchronous motor: configuration - control and applications in EV/HEVs. Brushless DC Motors: Advantages - control of application in EV/HEVs. Switch reluctance motors: Merits limitations - converter configuration - control of SRM for EV/HEVs."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Power Electronics in HEVs Boost and Buck-Boost converters - Multi Quadrant DC-DC converters - DC-AC Inverter for EV and HEV applications - Three Phase DC-AC inverters - Voltage control of DC-AC inverters using PWM - EV and PHEV battery chargers."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Energy Sources for HEVs Energy Storage - Battery based energy storage and simplified models of battery - fuel cells - their characteristics and simplified models - super capacitor based energy storage - its analysis and simplified models - flywheels and their modeling for energy storage in EV/HEV - Hybridization of various energy storage devices."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "electric-vehicles-jntuk-r23-eee-4-1",
+        "title": "Electric Vehicles - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Electric Vehicles syllabus: vehicle dynamics, electric powertrains, motors, converters, batteries, charging and energy management."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-switched-mode-power-conversion",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Switched Mode Power Conversion",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Non-Isolated Switch Mode Converters Control of DC-DC converters: Buck converters - Boost converters - Buck-Boost converter - CUK Converter - continuous and discontinuous operation - Converter realization with non- ideal components."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Isolated Switched Mode Converters Forwarded converter - flyback converter - push-pull converter - half-bridge converter - full bridge converter."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Resonant Converters Basic resonant circuit concepts - series resonant circuits - parallel resonant circuits - zero current switching quasi-resonant buck converter - zero current switching quasi-resonant boost converter - zero voltage switching quasi-resonant buck converter - zero voltage switching quasi-resonant boost converter."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Control Schemes of Converters and Magnetic Design Voltage mode control - Current mode control - Current control mode instability. Magnetic Design: Transformer design - inductor and capacitor design."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Modelling of Converters and Controller Design Based on Linearization: Formulation of large signal models for buck and boost converters using state space analysis- derivation of averaged large signal model using circuit averaging method-small signal model derivation- average switch modelling technique to obtain small signal models of buck and boost converters- Transfer function of converters-Controller design based on linearization."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "switched-mode-power-conversion-jntuk-r23-eee-4-1",
+        "title": "Switched Mode Power Conversion - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Switched Mode Power Conversion syllabus: DC-DC converters, isolated converters, resonant conversion, control and power supplies."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-design-of-pv-systems",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Design of PV Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Solar Energy Basics: Solar radiation – Extraterrestrial and terrestrial, Solar geometry – Declination, altitude angle, hour angle, air mass Radiation measurement and estimation, Effect of tilt angle on radiation, Overview of solar energy conversion technologies, Introduction to PV effect and materials used"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Solar Photovoltaic Cell Technologies Types of solar cells: Crystalline silicon, thin-film, multi-junction, emerging technologies, Cell structure and working principle, I-V characteristics of solar cells – Effect of irradiance and temperature, Efficiency, fill factor, and performance parameters, Maximum Power Point Tracking (MPPT) – Algorithms and techniques"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "PV Module and System Components PV module characteristics and rating, Module interconnections – Series and parallel configurations, Balance of System (BoS): Batteries, charge controllers, inverters, protection devices PV system configurations: Standalone, grid-connected, hybrid Energy storage options – Battery types and characteristics"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "PV System Design Load estimation and energy requirement analysis-Sizing of PV array, battery bank, and inverter-Shadow analysis and tilt optimization -Wiring, cabling, earthing, and protection design-Simulation tools (e.g., PVsyst, HOMER, SAM) – Basic introduction"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Installation, Operation & Maintenance Installation guidelines and standards (e.g., MNRE, IEC codes)-Testing, Commissioning, and troubleshooting of PV systems Maintenance strategies and fault diagnostics-Performance evaluation and economic analysis (Payback period, LCOE)-Environmental and safety considerations"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "design-of-pv-systems-jntuk-r23-eee-4-1",
+        "title": "Design of PV Systems - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Design of PV Systems syllabus: solar cells, arrays, MPPT, converters, grid integration, sizing, protection and economics."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-battery-management-systems-and-charging-stations",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Battery Management Systems and Charging Stations",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction Introduction to Battery Management System, Cells & Batteries, Nominal voltage and capacity, C rate, Energy and power, Cells connected in series, Cells connected in parallel, Electrochemical and lithium-ion cells, Rechargeable cells, Charging and Discharging Process, Overcharge and Undercharge, Modes of Charging"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Battery Management System Requirement Introduction and BMS functionality, Battery pack topology, BMS Functionality, Voltage Sensing, Temperature Sensing, Current Sensing, BMS Functionality, High-voltage contactor control, Isolation sensing, Thermal control, Protection, Communication Interface, Range estimation, State-of charge estimation, Cell total energy and cell total power."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Battery State of Charge and State of Health Estimation, Cell Balancing Battery state of charge estimation (SOC), voltage-based methods to estimate SOC, Model- based state estimation, Battery Health Estimation, Lithium-ion aging: Negative electrode, Lithium-ion aging: Positive electrode, Cell Balancing, Causes of imbalance, Circuits for balancing."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Modelling and Simulation Equivalent-circuit models (ECMs), Physics-based models (PBMs), Empirical modelling approach, Physics-based modelling approach, simulating an electric vehicle, Vehicle range calculations, simulating constant power and voltage, Simulating battery packs. Battery-Management-System Requirements"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Charging Infrastructure Domestic Charging Infrastructure, Public charging Infrastructure, Normal Charging Station, Occasional Charging Station, Fast Charging Station, Battery Swapping Station, Move-and- charge zone"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "battery-management-systems-and-charging-stations-jntuk-r23-eee-4-1",
+        "title": "Battery Management Systems and Charging Stations - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Battery Management Systems and Charging Stations syllabus: batteries, state estimation, balancing, thermal management and EV charging."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-concepts-of-smart-grid-technologies",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Concepts of Smart Grid Technologies",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction to Smart Grid Evolution of Electric Grid - Concept of Smart Grid - Definitions - Need of Smart Grid - Functions of Smart Grid - Opportunities & Barriers of Smart Grid - Difference between conventional & smart grid - Concept of Resilient & Self-Healing Grid - Present development & International policies on Smart Grid."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Smart Grid Technologies: Part 1 Introduction to Smart Meters - Real Time Pricing - Smart Appliances - Automatic Meter Reading(AMR) - Outage Management System(OMS) - Plug in Hybrid Electric Vehicles(PHEV) - Vehicle to Grid - Smart Sensors - Home & Building Automation - Phase Shifting Transformers - Net Metering."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Smart Grid Technologies: Part 2 Smart Substations - Substation Automation - Feeder Automation. Geographic Information System(GIS) - Intelligent Electronic Devices (IED) & their application for monitoring & protection. Smart storage like Battery Energy Storage Systems (BESS) - Super Conducting Magnetic Energy Storage Systems (SMES) - Pumped Hydro - Compressed Air Energy Storage (CAES)."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Micro grids and Distributed Energy Resources Concept of micro grid - need & applications of microgrid - formation of microgrid - Issues of interconnection - protection & control of microgrid - Integration of renewable energy sources - Demand Response."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Information and Communication Technology for Smart Grid Advanced Metering Infrastructure (AMI) - Home Area Network (HAN) - Neighborhood Area Network (NAN) - Wide Area Network (WAN)."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "concepts-of-smart-grid-technologies-jntuk-r23-eee-4-1",
+        "title": "Concepts of Smart Grid Technologies - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Smart Grid Technologies syllabus: architecture, communication, AMI, demand response, distributed generation and security."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-concepts-of-power-quality",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Concepts of Power Quality",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction - Terms & Definitions Overview of power quality – Concern about the power quality – General classes of power quality and voltage quality problems – Transients – Long–duration voltage variations – Short–duration voltage variations – Voltage unbalance – Waveform distortion – Voltage fluctuation – Power frequency variations – Voltage Sags – Voltage Swell."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Transient Over Voltages Sources of Transient Over voltages - Principles of Over voltage protection- Devices for Over voltage protection – Utility Capacitor Switching Transients - Utility System Lightning Protection – Managing Ferro resonance – Switching Transient Problems with Loads."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Long – Duration Voltage Variations Principles of regulating the voltage – Device for voltage regulation – Utility voltage regulator application – Capacitor for voltage regulation – End–user capacitor application – Regulating utility voltage with distributed resources – Flicker."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Harmonic distortion and solutions Voltage distortion vs. Current distortion –Harmonic indices: THD - TDD and True Power Factor– Sources of harmonics – Effect of harmonic distortion – Impact on capacitors - transformers - motors and meters – Concept of Point of common coupling – Passive and active filtering – Numerical problems."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Distributed Generation and Monitoring Resurgence of distributed generation – DG technologies – Interface to the utility system – Power quality issues and operating conflicts – DG on low voltage distribution networks. Monitoring Power quality monitoring and considerations – Historical perspective of PQ measuring instruments – PQ measurement equipment – Assessment of PQ measuring data."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "concepts-of-power-quality-jntuk-r23-eee-4-1",
+        "title": "Concepts of Power Quality - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Concepts of Power Quality syllabus: disturbances, harmonics, monitoring, mitigation, filters, conditioners and standards."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-quantum-science-and-technology",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Quantum Science and Technology",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Fundamentals of Quantum Mechanics: Historical background: Blackbody radiation, photoelectric effect, and Compton scattering; Dual nature of light and matter; De Broglie hypothesis; Schrödinger equation; Free particle, infinite potential well, step potential; Operators and observables: position, momentum, Hamiltonian; Commutation relations and uncertainty principle; Quantum postulates and measurement theory; Eigenvalues, eigenfunctions."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Quantum Information Theory: Classical vs. quantum information; Qubit representation using Bloch sphere; Quantum superposition and quantum entanglement; Dirac notation (bra-ket), tensor products, and composite systems; Bell states and EPR paradox; Quantum gates: Pauli-X, Y, Z; Hadamard; Phase; T; CNOT; Quantum circuit models and notation; Measurement in computational basis; Quantum teleportation and no-cloning theorem; Quantum state tomography (introductory)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Quantum Computing: Classical computing review and limitations; Quantum parallelism and interference; Deutsch and Deutsch-Jozsa algorithms; Grover’s search algorithm, Oracle and amplitude amplification; Shor’s factoring algorithm (overview and significance); Quantum Fourier Transform (QFT); Quantum error correction: Bit-flip, phase- flip, and Shor’s 9-qubit code; Introduction to quantum programming: Qiskit, Cirq, IBM Quantum Experience (overview)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Quantum Communication: Introduction to quantum cryptography; Quantum key distribution (QKD): BB84 protocol; Entanglement-based QKD: Ekert protocol (E91); Eavesdropping and security of QKD; Quantum teleportation (circuit and protocol); Quantum dense coding; Quantum networks and entanglement swapping; Role of quantum repeaters; Single-photon sources and detectors; Implementation challenges (loss, decoherence, noise)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Quantum Technologies and Applications: Quantum sensors: magnetometry, gravimetry; Quantum metrology: standard time, atomic clocks; Quantum imaging and lithography; Quantum materials: topological insulators, graphene, quantum dots; NV centers in diamonds for sensing; Hardware platforms: Superconducting qubits, Trapped ions, Photonic quantum processors; Quantum supremacy and NISQ era; Global initiatives: IBM, Google, D- Wave, IonQ, India’s NQM; Ethical concerns and future prospects"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "quantum-science-and-technology-jntuk-r23-eee-4-1",
+        "title": "Quantum Science and Technology - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-power-systems-simulation-lab",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Power Systems Simulation Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 4,
+        "C": 2
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Power System Simulation Experiments",
+          "topics": [
+            "Any 10 of the following experiments are to be conducted 1. Formation of Y- Bus by Direct-Inspection Method. 2. Load Flow Solution Using Gauss Siedel Method 3. Load Flow Solution Using Newton Raphson Method 4. Load Flow Solution Using Decoupled Method 5. Load Flow Solution Using Fast Decoupled Method 6. Formation of Z-Bus by Z-bus building algorithm 7. Symmetrical Fault analysis using Z-bus 8. Unsymmetrical Fault analysis using Z-bus 9. Economic Load Dispatch with & without transmission losses 10. Transient Stability Analysis Using Point By Point Method 11. Load Frequency Control of Single Area Control & Two Area Control system with and without controllers."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "power-systems-simulation-lab-jntuk-r23-eee-4-1",
+        "title": "Power Systems Simulation Lab - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Power Systems Simulation Lab: load flow, fault analysis, stability, economic dispatch, load-frequency and reactive-power control."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 EEE course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-eee-4-1-evaluation-of-industry-internship",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Evaluation of Industry Internship",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-industry-internship-jntuk-r23-eee-4-1",
+        "title": "Industry Internship Evaluation - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Evaluation of Industry Internship (2 credits), listed without detailed evaluation guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: the official course structure supplies the title and credits but no detailed evaluation or implementation guidelines."
+    },
+    {
+      "id": "r23-eee-4-2-internship-and-project",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 2,
+      "year_sem_label": "4-2",
+      "subject_code": null,
+      "name": "Internship and Project",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 24,
+        "C": 12
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "internship-and-project-jntuk-r23-eee-4-2",
+        "title": "Internship and Project - EEE 4-2",
+        "meta_description": "JNTUK R23 EEE 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: the official course structure supplies the title and credits but no detailed evaluation or implementation guidelines."
+    },
+    {
+      "id": "r23-eee-4-1-constitution-of-india",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Constitution of India",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "constitution-of-india-jntuk-r23-eee-4-1",
+        "title": "Constitution of India - EEE 4-1",
+        "meta_description": "JNTUK R23 EEE 4-1 Constitution of India, listed as a 2-0-0 audit course without unit-wise content in the official EEE syllabus."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title and semester placement come from JNTUK's official course structure; unit-wise content was not included."
+      },
+      "notes": "NEEDS VERIFICATION: the official EEE PDF contains only the course-structure row and title page for this audit course, with no units or outcomes."
     }
   ]
 }

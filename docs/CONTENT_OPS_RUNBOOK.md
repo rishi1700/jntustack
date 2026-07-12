@@ -234,12 +234,12 @@ After every successful live apply:
 
 Current expected JSON/build state:
 
-- Subjects: 385
-- Verified: 350
-- Needs verification: 34
+- Subjects: 401
+- Verified: 363
+- Needs verification: 37
 - Placeholder: 1
-- Search docs: 732
-- Sitemap URLs: 359
+- Search docs: 745
+- Sitemap URLs: 372
 
 ## DB Import and Parity
 
