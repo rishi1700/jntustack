@@ -1,7 +1,7 @@
 # Content Operations Runbook
 
-Last updated: 2026-07-11 after the official CSE/ECE/IT source passes and
-immediate content-integrity corrections.
+Last updated: 2026-07-12 after the simplified admin content-desk workflow and
+freshness review queue were introduced.
 
 This runbook is for controlled content work. It does not authorize broad rewrites, unverified publishing, crawler/scheduler work, `/api/ask`, or DB-backed serving.
 
@@ -15,12 +15,27 @@ This runbook is for controlled content work. It does not authorize broad rewrite
 - After every guarded live apply, immediately sync Git and update the DB mirror.
 - Do not manually edit live JSON if the guarded apply workflow has failed; use resume, recovery, or rollback paths.
 
+## Simple Admin Workflow
+
+The primary admin navigation follows owner tasks rather than database tables:
+
+1. **Today** shows the next safe action and any blocked automation, review, release, or Git reconciliation work.
+2. **Start an update** fetches an official URL or stores an uploaded source file, then runs the guarded parse → extract → validate → diff pipeline.
+3. **Review** combines existing `needs_verification` drafts and DB-backed proposed changes. Automation stops here for a human decision.
+4. **Publish** prepares small approved release batches, applies the guarded plan, verifies the site, and records Git reconciliation state.
+5. **Content** provides the read-only libraries and source freshness review cadence.
+
+Parsers, extraction rows, diffs, source assets, revisions, checks, cleanup, and recovery tools remain available under **Advanced**. Use them when a guided run stops or when an audit needs the raw artifact trail.
+
+Freshness is calculated from recorded source retrieval dates. The default review window is 180 days and can be changed with `CONTENT_REVIEW_DAYS` (30–730). A “current” label means the source was reviewed within that window; it does not prove the upstream document is unchanged. Open the official source before approving any content change.
+
 ## Standard Commands
 
 Local checks:
 
 ```sh
 npm run test:parsers
+npm run test:admin-ui
 npm run build
 npm run test:retrieve
 npm run test:content-store

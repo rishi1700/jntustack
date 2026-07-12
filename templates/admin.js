@@ -80,28 +80,36 @@ function canonicalSubjectPathRows(changes = []) {
 }
 
 function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
-  const nav = [
-    ['dashboard', '/admin/', 'Dashboard'],
-    ['checks', '/admin/checks', 'Checks'],
-    ['subjects', '/admin/subjects', 'Subjects'],
-    ['verification_reviews', '/admin/verification-reviews', 'Verify drafts'],
+  const primaryNav = [
+    [['dashboard'], '/admin/', 'Today'],
+    [['content_new'], '/admin/content/new', 'Start an update'],
+    [['review', 'proposals', 'verification_reviews'], '/admin/review', 'Review'],
+    [['release_candidates'], '/admin/release-candidates', 'Publish'],
+    [['subjects'], '/admin/subjects', 'Content'],
+  ];
+  const libraryNav = [
+    ['freshness', '/admin/freshness', 'Freshness'],
     ['colleges', '/admin/colleges', 'Colleges'],
     ['branch_profiles', '/admin/branch-profiles', 'Branch profiles'],
-    ['proposals', '/admin/proposals', 'Review queue'],
-    ['release_candidates', '/admin/release-candidates', 'Releases'],
-    ['revisions', '/admin/revisions', 'Revisions'],
-    ['sources', '/admin/sources', 'Sources'],
-    ['assets', '/admin/assets', 'Assets'],
+  ];
+  const advancedNav = [
+    ['checks', '/admin/checks', 'System checks'],
+    ['sources', '/admin/sources', 'Source registry'],
+    ['assets', '/admin/assets', 'Source assets'],
+    ['pipeline_runs', '/admin/pipeline-runs', 'Pipeline runs'],
     ['parse_results', '/admin/parse-results', 'Parse results'],
     ['extraction_results', '/admin/extraction-results', 'Extractions'],
     ['diff_results', '/admin/diff-results', 'Diffs'],
-    ['pipeline_runs', '/admin/pipeline-runs', 'Pipelines'],
-    ['source_evidence', '/admin/source-evidence', 'Evidence'],
+    ['source_evidence', '/admin/source-evidence', 'Published evidence'],
+    ['revisions', '/admin/revisions', 'Revision history'],
     ['cleanup', '/admin/cleanup', 'Cleanup'],
   ];
   if (String(process.env.ADMIN_TEST_TOOLS || '').trim().toLowerCase() === 'true') {
-    nav.push(['test_tools', '/admin/test-tools', 'Test tools']);
+    advancedNav.push(['test_tools', '/admin/test-tools', 'Test tools']);
   }
+  const current = keys => keys.includes(active);
+  const libraryOpen = libraryNav.some(([key]) => key === active);
+  const advancedOpen = advancedNav.some(([key]) => key === active);
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -115,20 +123,19 @@ function adminShell({ title, active = 'dashboard', breadcrumbs = [], body }) {
 <script src="/theme-toggle.js"></script>
 <link rel="stylesheet" href="/teal-brand.css">
 <style>
-/* Same tokens/back-compat-alias philosophy as teal-brand.css: rename the
-   VALUES onto the shared design system, keep every class/var name the same
-   so none of this file's ~2000 lines of route-handler markup needs touching.
-   --warn/--bad/--ok map onto the site's amber/danger/teal semantics; --bad
-   has no shared-system equivalent (public pages never need a "this failed"
-   red) so it stays admin-local. */
-:root{--ink:var(--text);--muted:var(--muted);--line:var(--border);--paper:var(--bg);--panel:var(--surface);--accent:var(--accent);--warn:var(--draft);--bad:#D6455B;--ok:var(--green);}
+/* Extend the public teal token system for the private operations interface.
+   --warn/--bad/--ok map to review, failure, and verified states; --bad stays
+   admin-local because public pages do not expose destructive controls. */
+:root{--ink:var(--text);--line:var(--border);--paper:var(--bg);--panel:var(--surface);--warn:var(--draft);--bad:#D6455B;--ok:var(--green);}
 html[data-theme="dark"]{--bad:#E5677D;}
 *{box-sizing:border-box}body{margin:0;font-family:"IBM Plex Sans",system-ui,sans-serif;color:var(--ink);background:var(--paper);font-size:14px;line-height:1.45}
-a{color:inherit}.admin-frame{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.admin-rail{background:var(--panel);color:var(--ink);padding:18px 14px;position:sticky;top:0;height:100vh;border-right:1px solid var(--line)}
+a{color:inherit}.admin-frame{display:grid;grid-template-columns:236px 1fr;min-height:100vh}.admin-rail{background:var(--panel);color:var(--ink);padding:18px 14px;position:sticky;top:0;height:100vh;border-right:1px solid var(--line);overflow:auto}
 .admin-brand{display:flex;align-items:center;gap:8px;font-weight:700;font-size:16px;margin-bottom:4px}.admin-source{font-size:11.5px;font-family:"IBM Plex Mono",monospace;letter-spacing:.06em;color:var(--muted);margin-bottom:20px;text-transform:uppercase}
-.admin-nav{display:grid;gap:3px;font-size:13px}.admin-nav a{display:block;text-decoration:none;padding:8px 10px;border-radius:8px;color:var(--muted)}
+.admin-nav{display:grid;gap:4px;font-size:13px}.admin-nav a{display:block;text-decoration:none;padding:9px 10px;border-radius:8px;color:var(--muted)}
 .admin-nav a[aria-current="page"]{background:var(--accent-soft);color:var(--accent);font-weight:600}.admin-nav a:hover{color:var(--accent)}
-.admin-main{padding:22px 28px;min-width:0}.admin-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.admin-nav-create{background:var(--accent)!important;color:var(--accent-ink)!important;font-weight:700;text-align:center;margin:6px 0 8px}.admin-nav-create:hover{filter:brightness(1.05)}
+.admin-nav-group{border-top:1px solid var(--line);margin-top:10px;padding-top:8px}.admin-nav-group summary{cursor:pointer;list-style:none;padding:8px 10px;color:var(--muted);font-family:"IBM Plex Mono",monospace;font-size:10px;text-transform:uppercase;letter-spacing:.09em}.admin-nav-group summary::-webkit-details-marker{display:none}.admin-nav-group summary::after{content:'+';float:right}.admin-nav-group[open] summary::after{content:'\\2212'}.admin-nav-group>div{display:grid;gap:2px;padding-bottom:4px}.admin-nav-group a{padding:7px 10px 7px 18px;font-size:12.5px}
+.admin-main{padding:24px 30px;min-width:0;max-width:1280px;width:100%}.admin-top{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
 .admin-top-right{display:flex;align-items:center;gap:.8rem;font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--muted)}
 h1{font-size:23px;margin:0;letter-spacing:-.02em}h2{font-size:17px;margin:26px 0 10px}.admin-sub{color:var(--muted);font-size:12.5px;margin-top:2px}.logout{font-size:13px;color:var(--muted)}
 .metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}.metric{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
@@ -140,7 +147,13 @@ tr:last-child td{border-bottom:0}.mono{font-family:"IBM Plex Mono",monospace;fon
 .proposal-actions{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin-top:16px}.action-box{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px}.action-box textarea{width:100%;min-height:74px;border:1px solid var(--line);border-radius:8px;padding:8px;font:inherit;margin-top:8px;background:var(--bg);color:var(--ink)}.action-box button{margin-top:8px;padding:8px 10px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}.action-box button.reject{background:var(--bad);color:#fff}.action-box button.warn{background:var(--warn);color:var(--accent-ink)}.danger-zone{border:2px solid var(--bad);background:var(--panel)}.danger-zone strong{color:var(--bad)}.danger-copy{border:1px solid var(--bad);background:var(--panel);color:var(--bad);border-radius:8px;padding:10px;margin-top:10px;font-weight:700}.json-block{white-space:pre-wrap;overflow:auto;background:#0E1211;color:#8FE3D3;border-radius:12px;padding:12px;font-size:12px;line-height:1.55;font-family:"IBM Plex Mono",monospace}.notice{border:1px solid var(--line);background:var(--panel);padding:12px;border-radius:12px;color:var(--muted)}.evidence-warning{border-color:var(--warn);background:var(--draft-bg);color:var(--warn)}.empty-state{padding:18px;color:var(--muted)}.empty-state strong{display:block;color:var(--ink);margin-bottom:4px}.breadcrumbs{font-size:12px;color:var(--muted);margin-bottom:12px}.breadcrumbs a{color:var(--muted);text-decoration:none}.breadcrumbs a:hover{text-decoration:underline}.workflow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:12px 0}.workflow a,.workflow span{border:1px solid var(--line);border-radius:999px;padding:4px 10px;text-decoration:none;background:var(--panel);color:var(--muted);font-size:12px;font-family:"IBM Plex Mono",monospace}.workflow a:hover{border-color:var(--accent);color:var(--accent)}.workflow [aria-current="step"]{background:var(--accent-soft);color:var(--accent);border-color:var(--green-border)}
 .login-page{min-height:100vh;display:grid;place-items:center;padding:20px}.login-box{width:min(380px,100%);background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px}
 .login-box h1{margin-bottom:4px}.login-box label{display:block;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin-top:14px}.login-box input{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;margin-top:5px;font:inherit;background:var(--bg);color:var(--ink)}.login-box button{width:100%;margin-top:18px;padding:10px 12px;border:0;border-radius:8px;background:var(--accent);color:var(--accent-ink);font-weight:700;cursor:pointer}.error{border:1px solid var(--bad);color:var(--bad);background:var(--panel);border-radius:8px;padding:9px;margin:12px 0 0}
-@media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top{align-items:flex-start;flex-direction:column}}
+.content-desk-head{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:end;padding:8px 0 20px;border-bottom:1px solid var(--line);margin-bottom:20px}.content-desk-kicker{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;color:var(--accent);font-weight:600}.content-desk-head h1{font-size:32px;line-height:1.05;margin:.35rem 0 .55rem;max-width:680px}.content-desk-head p{margin:0;color:var(--muted);max-width:68ch}.primary-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 14px;border-radius:9px;background:var(--accent);color:var(--accent-ink);text-decoration:none;font-weight:700;white-space:nowrap;border:0;cursor:pointer}.secondary-action{display:inline-flex;align-items:center;justify-content:center;padding:9px 12px;border:1px solid var(--line);border-radius:9px;text-decoration:none;font-weight:600;background:var(--panel)}
+.proof-rail{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--panel);margin:0 0 22px}.proof-step{position:relative;padding:16px;min-height:130px;border-right:1px solid var(--line)}.proof-step:last-child{border-right:0}.proof-step-number{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--accent);font-weight:600}.proof-step h2{font-size:15px;margin:18px 0 4px}.proof-step p{font-size:12.5px;color:var(--muted);margin:0 0 10px}.proof-step a{font-size:12.5px;font-weight:700;color:var(--accent)}.proof-count{position:absolute;top:12px;right:14px;min-width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-family:"IBM Plex Mono",monospace;font-weight:600}.proof-step--warn{background:var(--draft-bg)}
+.desk-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(260px,.65fr);gap:18px;align-items:start}.desk-panel{border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}.desk-panel-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 16px;border-bottom:1px solid var(--line)}.desk-panel-head h2{font-size:16px;margin:0}.desk-panel-head a{font-size:12px;color:var(--accent)}.attention-list{display:grid}.attention-item{display:grid;grid-template-columns:34px minmax(0,1fr) auto;gap:11px;align-items:start;padding:13px 16px;border-bottom:1px solid var(--line);text-decoration:none}.attention-item:last-child{border-bottom:0}.attention-item:hover{background:var(--accent-soft)}.attention-mark{width:28px;height:28px;border-radius:8px;display:grid;place-items:center;background:var(--accent-soft);color:var(--accent);font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:700}.attention-item--warn .attention-mark{background:var(--draft-bg);color:var(--warn)}.attention-copy strong{display:block}.attention-copy span{display:block;color:var(--muted);font-size:12px;margin-top:2px}.attention-go{color:var(--accent);font-weight:700}.desk-status{padding:15px 16px}.desk-status-row{display:flex;justify-content:space-between;gap:16px;padding:9px 0;border-bottom:1px solid var(--line)}.desk-status-row:last-child{border-bottom:0}.desk-status-row span{color:var(--muted)}
+.intake-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.intake-card{border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:18px}.intake-card h2{font-size:18px;margin:0 0 5px}.intake-card>p{color:var(--muted);margin:0 0 16px}.intake-card>.primary-action{margin-top:14px}.field{display:block;margin-top:12px}.field>span{display:block;font-weight:600;margin-bottom:6px}.field input,.field select,.field textarea{display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:inherit}.safety-note{display:flex;gap:9px;margin-top:14px;padding:10px;border-radius:9px;background:var(--accent-soft);color:var(--text-2);font-size:12.5px}.safety-note::before{content:'\\2713';color:var(--accent);font-weight:700}.advanced-panel{margin-top:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel)}.advanced-panel>summary{cursor:pointer;padding:12px 14px;font-weight:600}.advanced-panel>div{padding:0 14px 14px}.queue-empty{padding:24px;text-align:center;color:var(--muted)}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+@media(max-width:900px){.proof-rail{grid-template-columns:repeat(2,1fr)}.proof-step:nth-child(2){border-right:0}.proof-step:nth-child(-n+2){border-bottom:1px solid var(--line)}.desk-grid,.intake-grid{grid-template-columns:1fr}}
+@media(max-width:760px){.admin-frame{grid-template-columns:1fr}.admin-rail{position:static;height:auto;overflow:visible}.admin-nav{grid-template-columns:repeat(2,1fr)}.admin-nav-group{grid-column:1/-1}.admin-nav-group>div{grid-template-columns:repeat(2,1fr)}.admin-main{padding:18px 14px}.admin-top,.content-desk-head{align-items:flex-start;grid-template-columns:1fr;flex-direction:column}.content-desk-head h1{font-size:28px}.proof-rail{grid-template-columns:1fr}.proof-step{border-right:0;border-bottom:1px solid var(--line)!important;min-height:0}.proof-step:last-child{border-bottom:0!important}.attention-item{grid-template-columns:32px minmax(0,1fr)}.attention-go{display:none}}
 </style>
 </head>
 <body>
@@ -149,7 +162,15 @@ tr:last-child td{border-bottom:0}.mono{font-family:"IBM Plex Mono",monospace;fon
     <div class="admin-brand"><svg width="20" height="20" viewBox="0 0 260 260" aria-hidden="true"><g transform="translate(130,146)"><polygon points="0,60 104,22 0,-16 -104,22" style="fill:var(--logo-bot)"/><polygon points="0,22 92,-12 0,-46 -92,-12" style="fill:var(--logo-mid)"/><polygon points="0,-16 80,-46 0,-76 -80,-46" style="fill:var(--logo-top)"/></g></svg>Admin</div>
     <div class="admin-source">Controlled content ops</div>
     <nav class="admin-nav" aria-label="Admin navigation">
-      ${nav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}
+      ${primaryNav.map(([keys, href, label], index) => `<a href="${href}"${current(keys) ? ' aria-current="page"' : ''}${index === 1 ? ' class="admin-nav-create"' : ''}>${label}</a>`).join('')}
+      <details class="admin-nav-group"${libraryOpen ? ' open' : ''}>
+        <summary>Libraries</summary>
+        <div>${libraryNav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</div>
+      </details>
+      <details class="admin-nav-group"${advancedOpen ? ' open' : ''}>
+        <summary>Advanced</summary>
+        <div>${advancedNav.map(([key, href, label]) => `<a href="${href}"${key === active ? ' aria-current="page"' : ''}>${label}</a>`).join('')}</div>
+      </details>
     </nav>
   </aside>
   <main class="admin-main">
@@ -367,26 +388,255 @@ ${['parseResults', 'extractionResults', 'diffResults', 'pipelineRuns', 'exports'
   });
 }
 
-export function renderDashboard({ counts, contentSource }) {
-  const metrics = [
-    ['Content source', contentSource],
-    ['Subjects total', counts.subjectsTotal],
-    ['Verified subjects', counts.subjectsVerified, 'status-ok'],
-    ['Needs verification', counts.subjectsNeedsVerification, 'status-warn'],
-    ['Placeholder subjects', counts.subjectsPlaceholder, 'status-bad'],
-    ['Colleges total', counts.collegesTotal],
-    ['Branch profiles', counts.branchProfilesTotal],
+export function renderDashboard({ counts, contentSource, workflow = {}, freshness = {} }) {
+  const sourceAttention = Number(freshness.due || 0) + Number(freshness.missing || 0);
+  const reviewAttention = Number(workflow.proposalsNeedingReview || 0) + Number(counts.subjectsNeedsVerification || 0);
+  const publishAttention = Number(workflow.approvedProposals || 0) + Number(workflow.activeReleases || 0);
+  const tasks = [
+    ...(workflow.commitFailed ? [{
+      kind: '!',
+      warn: true,
+      title: `${workflow.commitFailed} live change${workflow.commitFailed === 1 ? '' : 's'} not committed`,
+      detail: 'Reconcile this before the next deployment.',
+      href: '/admin/release-candidates',
+    }] : []),
+    ...(workflow.pendingPush ? [{
+      kind: '\u2191',
+      warn: true,
+      title: `${workflow.pendingPush} verified change${workflow.pendingPush === 1 ? '' : 's'} waiting for push`,
+      detail: 'The live apply is safe, but origin/main still needs the commit.',
+      href: '/admin/release-candidates',
+    }] : []),
+    ...(workflow.pipelineFailures ? [{
+      kind: '!',
+      warn: true,
+      title: `${workflow.pipelineFailures} pipeline run${workflow.pipelineFailures === 1 ? '' : 's'} stopped`,
+      detail: 'Review the evidence or missing fields before retrying.',
+      href: '/admin/pipeline-runs',
+    }] : []),
+    ...(workflow.proposalsNeedingReview ? [{
+      kind: 'R',
+      title: `${workflow.proposalsNeedingReview} proposed change${workflow.proposalsNeedingReview === 1 ? '' : 's'} need a decision`,
+      detail: 'Compare the source evidence, then approve or request changes.',
+      href: '/admin/review',
+    }] : []),
+    ...(workflow.approvedProposals ? [{
+      kind: 'P',
+      title: `${workflow.approvedProposals} approved change${workflow.approvedProposals === 1 ? '' : 's'} ready to prepare`,
+      detail: 'Add reviewed changes to a small release batch.',
+      href: '/admin/release-candidates',
+    }] : []),
+    ...(sourceAttention ? [{
+      kind: 'S',
+      title: `${sourceAttention} source${sourceAttention === 1 ? '' : 's'} due for a freshness review`,
+      detail: `Review cadence is ${freshness.reviewDays || 180} days. Open the source before creating an update.`,
+      href: '/admin/freshness',
+    }] : []),
+    ...(counts.subjectsNeedsVerification ? [{
+      kind: 'V',
+      title: `${counts.subjectsNeedsVerification} existing draft${counts.subjectsNeedsVerification === 1 ? '' : 's'} need source verification`,
+      detail: 'These remain private until a human verifies the published evidence.',
+      href: '/admin/verification-reviews',
+    }] : []),
   ];
+  const workflowStatus = workflow.available
+    ? '<span class="status-ok">Ready</span>'
+    : '<span class="status-warn">Needs database</span>';
   return adminShell({
-    title: 'Dashboard',
+    title: 'Today',
     active: 'dashboard',
     body: `
-<div class="admin-top"><div><h1>Dashboard</h1><div class="admin-sub">Visibility only. No edits, publishing, or automation are available here.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
-<section class="metric-grid">${metrics.map(([label, value, cls]) => `<div class="metric"><div class="metric-label">${escapeHtml(label)}</div><div class="metric-value ${cls || ''}">${escapeHtml(value)}</div></div>`).join('')}</section>`,
+<header class="content-desk-head">
+  <div>
+    <div class="content-desk-kicker">CONTENT DESK / ${escapeHtml(contentSource).toUpperCase()}</div>
+    <h1>Keep every page grounded in a source.</h1>
+    <p>Start with the document. Automation prepares a review item; you keep the verification and publishing decisions.</p>
+  </div>
+  <div><a class="primary-action" href="/admin/content/new">+ Start an update</a> <a class="logout" style="margin-left:10px" href="/admin/logout">Sign out</a></div>
+</header>
+
+<section class="proof-rail" aria-label="Content workflow">
+  <article class="proof-step${sourceAttention ? ' proof-step--warn' : ''}"><span class="proof-step-number">01 / SOURCE</span><span class="proof-count">${escapeHtml(sourceAttention)}</span><h2>Check evidence</h2><p>Fetch or upload an official document.</p><a href="/admin/freshness">Review freshness \u2192</a></article>
+  <article class="proof-step${counts.subjectsNeedsVerification ? ' proof-step--warn' : ''}"><span class="proof-step-number">02 / DRAFT</span><span class="proof-count">${escapeHtml(counts.subjectsNeedsVerification)}</span><h2>Prepare content</h2><p>Parse, extract, validate and compare.</p><a href="/admin/content/new">Start from a source \u2192</a></article>
+  <article class="proof-step${reviewAttention ? ' proof-step--warn' : ''}"><span class="proof-step-number">03 / REVIEW</span><span class="proof-count">${escapeHtml(reviewAttention)}</span><h2>Make the decision</h2><p>Verify evidence and approve safe changes.</p><a href="/admin/review">Open review queue \u2192</a></article>
+  <article class="proof-step${publishAttention ? ' proof-step--warn' : ''}"><span class="proof-step-number">04 / PUBLISH</span><span class="proof-count">${escapeHtml(publishAttention)}</span><h2>Ship a batch</h2><p>Plan, apply, verify, commit and deploy.</p><a href="/admin/release-candidates">Open publishing \u2192</a></article>
+</section>
+
+<div class="desk-grid">
+  <section class="desk-panel">
+    <div class="desk-panel-head"><h2>What needs you now</h2><a href="/admin/review">Review all</a></div>
+    ${tasks.length ? `<div class="attention-list">${tasks.map(task => `<a class="attention-item${task.warn ? ' attention-item--warn' : ''}" href="${task.href}"><span class="attention-mark">${escapeHtml(task.kind)}</span><span class="attention-copy"><strong>${escapeHtml(task.title)}</strong><span>${escapeHtml(task.detail)}</span></span><span class="attention-go">Open \u2192</span></a>`).join('')}</div>` : '<div class="queue-empty"><strong>Nothing is blocked.</strong><br>Start a source update when a new syllabus or official revision appears.</div>'}
+  </section>
+  <aside class="desk-panel">
+    <div class="desk-panel-head"><h2>Operating state</h2><a href="/admin/checks">System checks</a></div>
+    <div class="desk-status">
+      <div class="desk-status-row"><span>Guided workflow</span><strong>${workflowStatus}</strong></div>
+      <div class="desk-status-row"><span>Verified subjects</span><strong>${escapeHtml(counts.subjectsVerified)}</strong></div>
+      <div class="desk-status-row"><span>Sources reviewed on time</span><strong>${escapeHtml(freshness.current || 0)} / ${escapeHtml(freshness.totalSources || 0)}</strong></div>
+      <div class="desk-status-row"><span>Active releases</span><strong>${escapeHtml(workflow.activeReleases || 0)}</strong></div>
+    </div>
+    ${workflow.available ? '' : '<div class="notice" style="margin:0 14px 14px;">The public JSON site is healthy. DB-backed automation is unavailable until the configured MySQL connection is reachable.</div>'}
+  </aside>
+</div>
+
+<div class="notice" style="margin-top:18px;"><strong>Freshness promise.</strong> The dashboard schedules human review from recorded retrieval dates. It does not claim that an upstream PDF is unchanged; open the official source before approving any update.</div>`,
+  });
+}
+
+export function renderContentIntakePage({ sources = [], values = {}, error = null } = {}) {
+  const enabledSources = sources.filter(source => source.enabled);
+  const sourceOptions = enabledSources.map(source => `<option value="${escapeHtml(source.id)}"${selectedAttr(values.discovery_source_id, source.id)}>${escapeHtml(source.name)} \u00b7 ${escapeHtml(source.baseUrl || source.sourceKey)}</option>`).join('');
+  const sourceSelect = `<select name="discovery_source_id" required><option value="">Choose a trusted source</option>${sourceOptions}</select>`;
+  return adminShell({
+    title: 'Start an update',
+    active: 'content_new',
+    breadcrumbs: [{ href: '/admin/', label: 'Today' }, { label: 'Start an update' }],
+    body: `
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 01 / SOURCE</div><h1>Start with the official document</h1><div class="admin-sub">Choose one intake path. The system stores immutable evidence, then helps prepare a review item. Nothing publishes automatically.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+${enabledSources.length ? '' : '<div class="notice evidence-warning" style="margin-bottom:14px;"><strong>No enabled trusted sources.</strong> Add or enable a source in Advanced \u2192 Source registry before fetching or uploading evidence.</div>'}
+<div class="intake-grid">
+  <form class="intake-card" method="post" action="/admin/content/new/fetch">
+    <div class="content-desk-kicker">RECOMMENDED</div>
+    <h2>Fetch an official URL</h2>
+    <p>Best when the university publishes a stable PDF or HTML page.</p>
+    <label class="field"><span>Trusted source</span>${sourceSelect}</label>
+    <label class="field"><span>Document URL</span><input name="source_url" value="${escapeHtml(values.source_url || '')}" type="url" required placeholder="https://jntuk.edu.in/.../syllabus.pdf"></label>
+    <div class="safety-note">The URL must match the trusted source domain. Private networks, redirect loops, oversized files and unsupported formats are blocked.</div>
+    <button class="primary-action" type="submit"${enabledSources.length ? '' : ' disabled'}>Fetch document</button>
+  </form>
+  <form class="intake-card" method="post" action="/admin/assets/new?guided=1" enctype="multipart/form-data">
+    <div class="content-desk-kicker">WHEN DOWNLOAD IS REQUIRED</div>
+    <h2>Upload a source file</h2>
+    <p>Use a PDF or HTML file downloaded from the official source.</p>
+    <label class="field"><span>Trusted source</span>${sourceSelect}</label>
+    <label class="field"><span>Original document URL <small class="admin-sub">optional</small></span><input name="source_url" value="${escapeHtml(values.source_url || '')}" type="url" placeholder="https://..."></label>
+    <label class="field"><span>File</span><input name="asset_file" required type="file" accept=".pdf,.html,.htm,.zip,image/*"></label>
+    <div class="safety-note">The original file and checksum are preserved so every proposed field can be traced back to evidence.</div>
+    <button class="primary-action" type="submit"${enabledSources.length ? '' : ' disabled'}>Store document</button>
+  </form>
+</div>
+<section class="desk-panel" style="margin-top:18px;">
+  <div class="desk-panel-head"><h2>Already have a private draft?</h2><a href="/admin/verification-reviews">Open drafts</a></div>
+  <div class="desk-status">Use <strong>Verify drafts</strong> when a subject already exists as <span class="mono">needs_verification</span>. Do not ingest the same content again.</div>
+</section>
+<details class="advanced-panel"><summary>Need to configure a source or inspect raw assets?</summary><div><a href="/admin/sources">Open source registry</a> \u00b7 <a href="/admin/assets">Open source assets</a></div></details>`,
+  });
+}
+
+export function renderGuidedProcessingPage({
+  asset,
+  fileStatus = null,
+  parsers = [],
+  values = {},
+  error = null,
+} = {}) {
+  const availableParsers = parsers.filter(parser => parser.available);
+  const selectedParser = values.parser_key
+    || availableParsers.find(parser => parser.suggested)?.key
+    || availableParsers[0]?.key
+    || '';
+  const createReviewItem = values.create_proposal == null || checkedAttr(values.create_proposal);
+  return adminShell({
+    title: 'Prepare content',
+    active: 'content_new',
+    breadcrumbs: [
+      { href: '/admin/', label: 'Today' },
+      { href: '/admin/content/new', label: 'Start an update' },
+      { label: 'Prepare content' },
+    ],
+    body: `
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 02 / DRAFT</div><h1>Prepare a review item</h1><div class="admin-sub">The document is stored. Run the safe pipeline to parse, extract, validate and compare it with current content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
+<section class="desk-panel" style="margin-bottom:16px;">
+  <div class="desk-panel-head"><h2>Source docket</h2><a href="/admin/assets/${escapeHtml(asset.id)}">Technical details</a></div>
+  <div class="desk-status">
+    <div class="desk-status-row"><span>Document</span><strong>${escapeHtml(asset.originalFilename || `Asset ${asset.id}`)}</strong></div>
+    <div class="desk-status-row"><span>Trusted source</span><strong>${escapeHtml(asset.discoverySourceName || asset.discoverySourceId || 'not recorded')}</strong></div>
+    <div class="desk-status-row"><span>Source URL</span><strong>${asset.sourceUrl ? `<a href="${escapeHtml(asset.sourceUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceHost(asset.sourceUrl))} \u2197</a>` : 'not recorded'}</strong></div>
+    <div class="desk-status-row"><span>Evidence file</span><strong>${escapeHtml(fileStatus?.status || 'unknown')} \u00b7 ${escapeHtml(formatBytes(asset.fileSize) || 'size unknown')}</strong></div>
+    <div class="desk-status-row"><span>Checksum</span><strong class="mono">${escapeHtml((asset.sha256Checksum || '').slice(0, 16) || 'not recorded')}</strong></div>
+  </div>
+</section>
+
+<form class="intake-card" method="post" action="/admin/assets/${escapeHtml(asset.id)}/pipeline?guided=1">
+  <h2>Build the draft</h2>
+  <p>The suggested parser is selected automatically. Only add matching hints when the document does not clearly identify the target.</p>
+  <label class="field"><span>Document reader</span><select name="parser_key" required>
+    ${availableParsers.map(parser => `<option value="${escapeHtml(parser.key)}"${selectedAttr(selectedParser, parser.key)}>${escapeHtml(parser.label)}${parser.suggested ? ' \u00b7 suggested' : ''}</option>`).join('')}
+  </select></label>
+  <label class="field"><span>Content type</span><select name="entity_type" required>
+    ${[['subject', 'Subject syllabus'], ['college', 'College record'], ['branch_profile', 'Branch guide profile']].map(([value, label]) => `<option value="${value}"${selectedAttr(values.entity_type || 'subject', value)}>${label}</option>`).join('')}
+  </select></label>
+  <label class="field"><span>Existing record ID or slug <small class="admin-sub">leave blank for new content</small></span><input name="entity_key" value="${escapeHtml(values.entity_key || '')}" placeholder="e.g. r23-cse-3-1-computer-networks"></label>
+  <label style="display:flex;gap:8px;align-items:flex-start;margin-top:14px;"><input type="checkbox" name="create_proposal" value="1"${createReviewItem ? ' checked' : ''}><span><strong>Create a review item when validation passes</strong><br><small class="admin-sub">This is the automation handoff. It never approves, verifies or publishes the result.</small></span></label>
+
+  <details class="advanced-panel">
+    <summary>Matching hints — use only when the document is ambiguous</summary>
+    <div>
+      <div class="intake-grid">
+        <label class="field"><span>University</span><input name="university" value="${escapeHtml(values.university || '')}" placeholder="JNTUK"></label>
+        <label class="field"><span>Regulation</span><input name="regulation" value="${escapeHtml(values.regulation || '')}" placeholder="R23"></label>
+        <label class="field"><span>Branch</span><input name="branch" value="${escapeHtml(values.branch || '')}" placeholder="CSE"></label>
+        <label class="field"><span>Year</span><input name="year" value="${escapeHtml(values.year || '')}" inputmode="numeric" placeholder="3"></label>
+        <label class="field"><span>Semester</span><input name="semester" value="${escapeHtml(values.semester || '')}" inputmode="numeric" placeholder="1"></label>
+        <label class="field"><span>Candidate number</span><input name="candidate_index" value="${escapeHtml(values.candidate_index || '')}" inputmode="numeric" placeholder="0"></label>
+      </div>
+    </div>
+  </details>
+  <div class="safety-note">Validation failures stop before proposal creation. Ambiguous fields stay unresolved for human correction; the system does not invent missing syllabus content.</div>
+  <button class="primary-action" type="submit"${availableParsers.length && fileStatus?.status !== 'missing' ? '' : ' disabled'}>Run safe automation</button>
+  ${availableParsers.length ? '' : '<div class="notice evidence-warning" style="margin-top:10px;">No available parser matches this file. Open Technical details to inspect supported formats.</div>'}
+</form>`,
+  });
+}
+
+export function renderReviewQueuePage({ drafts = [], totalDrafts = 0, proposals = [], error = null } = {}) {
+  const proposalRows = proposals.filter(proposal => ['draft', 'needs_review', 'needs_verification', 'changes_requested'].includes(proposal.status));
+  return adminShell({
+    title: 'Review',
+    active: 'review',
+    breadcrumbs: [{ href: '/admin/', label: 'Today' }, { label: 'Review' }],
+    body: `
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 03 / REVIEW</div><h1>Decisions, not pipeline artifacts</h1><div class="admin-sub">Verify existing drafts or decide proposed changes. Publishing remains a separate step.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${error ? `<div class="notice evidence-warning">${escapeHtml(error)}</div>` : ''}
+<div class="intake-grid">
+  <section class="desk-panel">
+    <div class="desk-panel-head"><h2>Verify source drafts <span class="pill">${escapeHtml(totalDrafts)}</span></h2><a href="/admin/verification-reviews">View all</a></div>
+    ${drafts.length ? `<div class="attention-list">${drafts.slice(0, 8).map(subject => `<a class="attention-item" href="/admin/verification-reviews/${encodeURIComponent(subject.id)}"><span class="attention-mark">V</span><span class="attention-copy"><strong>${escapeHtml(subject.name)}</strong><span>${escapeHtml(subject.branch || '')} \u00b7 ${escapeHtml(subject.yearSemLabel || subject.year_sem_label || '')} \u00b7 ${escapeHtml(sourceHost(subject.source?.origin_url))}</span></span><span class="attention-go">Verify \u2192</span></a>`).join('')}</div>` : '<div class="queue-empty">No source-verification drafts are waiting.</div>'}
+  </section>
+  <section class="desk-panel">
+    <div class="desk-panel-head"><h2>Review proposed changes <span class="pill">${escapeHtml(proposalRows.length)}</span></h2><a href="/admin/proposals">View all</a></div>
+    ${proposalRows.length ? `<div class="attention-list">${proposalRows.slice(0, 8).map(proposal => `<a class="attention-item" href="/admin/proposals/${escapeHtml(proposal.id)}"><span class="attention-mark">R</span><span class="attention-copy"><strong>${escapeHtml(proposal.entityType)} / ${escapeHtml(proposal.entityKey)}</strong><span>${escapeHtml(proposal.status)} \u00b7 validation ${escapeHtml(proposal.validationStatus)}</span></span><span class="attention-go">Review \u2192</span></a>`).join('')}</div>` : '<div class="queue-empty">No proposed changes are waiting for a decision.</div>'}
+  </section>
+</div>
+<div class="notice" style="margin-top:18px;">Approval requires visible evidence, passed validation and a reviewer note. The dashboard never auto-verifies or auto-approves content.</div>`,
+  });
+}
+
+export function renderFreshnessPage({ freshness }) {
+  return adminShell({
+    title: 'Freshness',
+    active: 'freshness',
+    breadcrumbs: [{ href: '/admin/', label: 'Today' }, { label: 'Freshness' }],
+    body: `
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 01 / SOURCE</div><h1>Source review cadence</h1><div class="admin-sub">A source becomes due ${escapeHtml(freshness.reviewDays)} days after its oldest linked record was checked. This is a review reminder, not a claim that the remote file is unchanged.</div></div><a class="primary-action" href="/admin/content/new">Start an update</a></div>
+<section class="metric-grid">
+  <div class="metric"><div class="metric-label">Source records</div><div class="metric-value">${escapeHtml(freshness.totalSources)}</div></div>
+  <div class="metric"><div class="metric-label">Current</div><div class="metric-value status-ok">${escapeHtml(freshness.current)}</div></div>
+  <div class="metric"><div class="metric-label">Review due</div><div class="metric-value status-warn">${escapeHtml(freshness.due)}</div></div>
+  <div class="metric"><div class="metric-label">Missing date or URL</div><div class="metric-value ${freshness.missing ? 'status-bad' : 'status-ok'}">${escapeHtml(freshness.missing)}</div></div>
+</section>
+<div class="table-wrap" style="margin-top:16px;"><table><thead><tr><th>Status</th><th>Source</th><th>Last checked</th><th>Age</th><th>Subjects</th><th>Examples</th><th></th></tr></thead><tbody>
+${freshness.sources.map(source => `<tr><td><span class="pill ${source.status === 'current' ? 'status-ok' : source.status === 'due' ? 'status-warn' : 'status-bad'}">${escapeHtml(source.status)}</span></td><td>${source.url ? `<a href="${escapeHtml(source.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(source.host)} \u2197</a>` : '<span class="status-bad">URL missing</span>'}</td><td>${escapeHtml(source.reviewedAt || 'not recorded')}</td><td>${source.ageDays == null ? '-' : `${escapeHtml(source.ageDays)} days`}</td><td>${escapeHtml(source.subjectCount)}</td><td>${source.examples.map(example => escapeHtml(example.name)).join('<br>')}</td><td>${source.url ? `<a href="/admin/content/new?source_url=${encodeURIComponent(source.url)}">Review source</a>` : '<a href="/admin/subjects">Find records</a>'}</td></tr>`).join('')}
+</tbody></table></div>`,
   });
 }
 
 export function renderAdminChecksPage({ checks }) {
+  const expectedSearchDocs = Number(checks.content.subjectsVerified || 0)
+    + Number(checks.content.collegesTotal || 0)
+    + Number(checks.content.branchProfilesTotal || 0);
   const dbRows = [
     ['Configured', checks.db.configured ? 'yes' : 'no'],
     ['Connection', checks.db.skipped ? 'skipped' : checks.db.connected ? 'connected' : 'failed'],
@@ -419,7 +669,7 @@ export function renderAdminChecksPage({ checks }) {
 <div class="admin-top"><div><h1>Runtime checks</h1><div class="admin-sub">Protected diagnostics. Values are status-only and never include secrets.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Public content</div><div class="metric-value">${passFail(checks.content.subjectsVerified > 0 && checks.content.collegesTotal > 0)}</div></div>
-  <div class="metric"><div class="metric-label">Search index</div><div class="metric-value">${passFail(checks.searchIndex.ok && checks.searchIndex.total === 619)}</div></div>
+  <div class="metric"><div class="metric-label">Search index</div><div class="metric-value">${passFail(checks.searchIndex.ok && checks.searchIndex.total === expectedSearchDocs)}</div></div>
   <div class="metric"><div class="metric-label">Storage</div><div class="metric-value">${passFail(checks.storage.ok)}</div></div>
   <div class="metric"><div class="metric-label">Database</div><div class="metric-value">${checks.db.skipped ? '<span class="status-warn">not configured</span>' : checks.db.connected ? passFail(checks.db.ok) : '<span class="status-bad">connection failed</span>'}</div></div>
 </section>
@@ -1023,9 +1273,19 @@ ${parseResults.length ? parseResults.map(result => `<tr><td><span class="pill">$
 }
 
 export function renderPipelineRunDetailPage({ result }) {
+  const proposalStep = result.steps?.find(step => step.step === 'proposal' && step.status === 'success');
+  const extractionStep = result.steps?.find(step => step.step === 'extract' && step.status === 'success');
+  const diffStep = result.steps?.find(step => step.step === 'diff' && step.status === 'success');
+  const nextAction = proposalStep?.proposal_id
+    ? `<div class="attention-item"><span class="attention-mark">R</span><span class="attention-copy"><strong>Review item ready</strong><span>Automation stopped at the human decision gate. Compare the evidence before approval.</span></span><a class="primary-action" href="/admin/proposals/${escapeHtml(proposalStep.proposal_id)}">Review change</a></div>`
+    : result.status === 'validation_failed' && extractionStep?.extraction_result_id
+      ? `<div class="attention-item attention-item--warn"><span class="attention-mark">!</span><span class="attention-copy"><strong>Validation needs a correction</strong><span>Open the extracted fields to see exactly what is missing. No proposal was created.</span></span><a class="secondary-action" href="/admin/extraction-results/${escapeHtml(extractionStep.extraction_result_id)}">Inspect fields</a></div>`
+      : result.status === 'success' && diffStep?.diff_result_id
+        ? `<div class="attention-item"><span class="attention-mark">D</span><span class="attention-copy"><strong>Comparison ready</strong><span>Review the structured changes before creating a review item.</span></span><a class="secondary-action" href="/admin/diff-results/${escapeHtml(diffStep.diff_result_id)}">View comparison</a></div>`
+        : `<div class="attention-item attention-item--warn"><span class="attention-mark">!</span><span class="attention-copy"><strong>The run stopped</strong><span>${escapeHtml(result.errorMessage || 'Review the recorded steps before retrying.')}</span></span><a class="secondary-action" href="/admin/assets/${escapeHtml(result.assetId)}">Open source</a></div>`;
   return adminShell({
     title: `Pipeline run ${result.id}`,
-    active: 'assets',
+    active: 'pipeline_runs',
     body: `
 <div class="admin-top"><div><h1>Pipeline run ${escapeHtml(result.id)}</h1><div class="admin-sub">Manual evidence pipeline. This run does not publish content or mark anything verified.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('parse')}
@@ -1034,6 +1294,11 @@ ${workflowNav('parse')}
   <div class="metric"><div class="metric-label">Parser</div><div class="metric-value">${escapeHtml(result.parserKey)}</div></div>
   <div class="metric"><div class="metric-label">Entity</div><div class="metric-value">${escapeHtml(result.entityType)}</div></div>
   <div class="metric"><div class="metric-label">Asset</div><div class="metric-value"><a href="/admin/assets/${escapeHtml(result.assetId)}">${escapeHtml(result.assetFilename || result.assetId)}</a></div></div>
+</section>
+
+<section class="desk-panel" style="margin-top:16px;">
+  <div class="desk-panel-head"><h2>Next safe action</h2></div>
+  ${nextAction}
 </section>
 
 <h2>Summary</h2>
@@ -1350,23 +1615,24 @@ ${!existingProposal && result.status !== 'success' ? '<div class="notice">Only s
 
 export function renderProposalUnavailablePage({ message }) {
   return adminShell({
-    title: 'Review queue',
+    title: 'Proposed changes',
     active: 'proposals',
     body: `
-<div class="admin-top"><div><h1>Review queue</h1><div class="admin-sub">DB-backed proposal workflow</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><h1>Proposed changes</h1><div class="admin-sub">DB-backed review decisions are currently unavailable.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 <div class="notice">${escapeHtml(message)}</div>`,
   });
 }
 
 export function renderProposalsPage({ proposals }) {
   return adminShell({
-    title: 'Review queue',
+    title: 'Proposed changes',
     active: 'proposals',
     body: `
-<div class="admin-top"><div><h1>Review queue</h1><div class="admin-sub">Human review only. No proposal action publishes verified content.</div></div><div><a class="logout" href="/admin/proposals/new">Create proposal</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 03 / REVIEW</div><h1>Proposed changes</h1><div class="admin-sub">Human review only. No decision on this page publishes content.</div></div><div><a class="logout" href="/admin/review">Review overview</a> <a class="logout" style="margin-left:10px" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Entity</th><th>Key</th><th>Source</th><th>Updated</th><th></th></tr></thead><tbody>
-${proposals.length ? proposals.map(p => `<tr><td><span class="pill">${escapeHtml(p.status)}</span></td><td>${escapeHtml(p.entityType)}</td><td class="mono">${escapeHtml(p.entityKey)}</td><td class="mono">${escapeHtml(p.source?.originUrl || '')}</td><td>${escapeHtml(p.updatedAt || '')}</td><td><a href="/admin/proposals/${p.id}">View</a></td></tr>`).join('') : `<tr><td colspan="6">${emptyState('No content proposals yet', 'Create proposals manually or from reviewed diffs. Nothing publishes directly from the queue.', '<a href="/admin/proposals/new">Create proposal</a>')}</td></tr>`}
-</tbody></table></div>`,
+${proposals.length ? proposals.map(p => `<tr><td><span class="pill">${escapeHtml(p.status)}</span></td><td>${escapeHtml(p.entityType)}</td><td class="mono">${escapeHtml(p.entityKey)}</td><td class="mono">${escapeHtml(p.source?.originUrl || '')}</td><td>${escapeHtml(p.updatedAt || '')}</td><td><a href="/admin/proposals/${p.id}">Review</a></td></tr>`).join('') : `<tr><td colspan="6">${emptyState('No proposed changes yet', 'Start from an official source and let the pipeline prepare a validated review item.', '<a href="/admin/content/new">Start an update</a>')}</td></tr>`}
+</tbody></table></div>
+<details class="advanced-panel"><summary>Manual JSON proposal</summary><div>Use only when the guided extraction cannot represent a well-sourced correction. <a href="/admin/proposals/new">Open manual proposal editor</a>.</div></details>`,
   });
 }
 
@@ -1413,6 +1679,10 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const safetyWarnings = diffSafetyWarnings(proposal.diff);
   const safetyBlockingWarnings = blockingSafetyWarnings(proposal.diff);
   const canonicalPath = canonicalSubjectPathForProposal(proposal);
+  const canApprove = ['needs_review', 'needs_verification', 'changes_requested'].includes(proposal.status);
+  const canRequestChanges = ['needs_review', 'needs_verification', 'approved_for_draft'].includes(proposal.status);
+  const canMarkNeedsVerification = ['needs_review', 'changes_requested', 'approved_for_draft'].includes(proposal.status);
+  const canReject = ['draft', 'needs_review', 'needs_verification', 'changes_requested', 'approved_for_draft', 'approved'].includes(proposal.status);
   return adminShell({
     title: `Proposal ${proposal.id}`,
     active: 'proposals',
@@ -1448,7 +1718,7 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 
 <h2>Approval for draft</h2>
 <div class="proposal-actions">
-  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+  ${canApprove ? `<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Approve for draft/release preparation</strong>
     <div class="admin-sub">Requires passed validation. This does not publish, write live data files, mark content verified, or change CONTENT_SOURCE.</div>
     ${safetyBlockingWarnings.length ? `<div class="danger-copy">Blocking diff safety warnings detected. Check the override only after confirming the proposed payload is safe for draft preparation.</div>
@@ -1457,7 +1727,9 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
     <input type="hidden" name="action" value="approve_for_draft">
     <button type="submit"${validationPassed ? '' : ' disabled'}>Approve for draft</button>
     ${validationPassed ? '' : '<div class="notice" style="margin-top:10px;">Approval is blocked until proposal validation passes.</div>'}
-  </form>
+  </form>` : proposal.status === 'approved_for_draft'
+    ? '<div class="action-box"><strong class="status-ok">Approved for draft preparation</strong><div class="admin-sub">The next step is to add this reviewed change to a small release batch.</div><a class="primary-action" style="margin-top:12px;" href="/admin/release-candidates">Continue to publishing</a></div>'
+    : `<div class="action-box"><strong>No approval action available</strong><div class="admin-sub">This proposal is ${escapeHtml(proposal.status)}. Review history records the completed decision.</div></div>`}
   <div class="action-box">
     <strong>Approval history</strong>
     ${approvalEvents.length ? `<div class="table-wrap" style="margin-top:10px;"><table><thead><tr><th>Reviewer</th><th>Note</th><th>When</th></tr></thead><tbody>${approvalEvents.map(event => `<tr><td>${escapeHtml(event.actor || '')}</td><td>${escapeHtml(event.note || '')}</td><td>${escapeHtml(event.createdAt || '')}</td></tr>`).join('')}</tbody></table></div>` : '<div class="notice" style="margin-top:10px;">No draft approval has been recorded for this proposal.</div>'}
@@ -1469,46 +1741,46 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 ${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="pill">${escapeHtml(source.status || '')}</span></td><td>${escapeHtml(source.retrievedAt || '')}</td><td class="mono">${escapeHtml(source.originUrl || '')}</td><td class="mono">${escapeHtml(source.rawAssetPath || '')}</td></tr>` : '<tr><td colspan="5">No source linked to this proposal.</td></tr>'}
 </tbody></table></div>
 
-<h2>Proposed payload</h2>
-<pre class="json-block">${escapeHtml(payload)}</pre>
-
-<h2>Normalized payload</h2>
-<pre class="json-block">${escapeHtml(normalized)}</pre>
-
-<h2>Diff</h2>
-<pre class="json-block">${escapeHtml(diff)}</pre>
-
-<h2>Publishing export</h2>
-<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/export">
-  <strong>Export proposal for review</strong>
-  <div class="admin-sub">Writes review artifacts under tmp/proposal-exports only. It does not publish, mark verified, or write data files.</div>
-  <button type="submit"${exportEligible ? '' : ' disabled'}>Export proposal for review</button>
-  ${exportEligible ? '' : '<div class="notice" style="margin-top:10px;">Export is available only after validation passes and the proposal is approved_for_draft.</div>'}
-</form>
-<div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
-${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="5">${emptyState('No exports yet', 'Export creates review artifacts in tmp/proposal-exports only. It does not modify data/ or dist/.')}</td></tr>`}
-</tbody></table></div>
+<details class="advanced-panel">
+  <summary>Technical payload, diff and standalone export</summary>
+  <div>
+    <h2>Proposed payload</h2><pre class="json-block">${escapeHtml(payload)}</pre>
+    <h2>Normalized payload</h2><pre class="json-block">${escapeHtml(normalized)}</pre>
+    <h2>Diff</h2><pre class="json-block">${escapeHtml(diff)}</pre>
+    <h2>Standalone export</h2>
+    <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/export">
+      <strong>Export proposal for review</strong>
+      <div class="admin-sub">Publishing normally prepares this from the release page. Use this only for technical inspection.</div>
+      <button type="submit"${exportEligible ? '' : ' disabled'}>Export proposal for review</button>
+      ${exportEligible ? '' : '<div class="notice" style="margin-top:10px;">Export is available only after validation passes and approval.</div>'}
+    </form>
+    <div class="table-wrap"><table><thead><tr><th>Status</th><th>Path</th><th>Created</th><th>By</th><th></th></tr></thead><tbody>
+    ${exports.length ? exports.map(item => `<tr><td><span class="pill">${escapeHtml(item.validationStatus)}</span></td><td class="mono">${escapeHtml(item.exportPath)}</td><td>${escapeHtml(item.createdAt || '')}</td><td>${escapeHtml(item.createdBy || '')}</td><td><a href="/admin/proposal-exports/${escapeHtml(item.id)}">View</a></td></tr>`).join('') : '<tr><td colspan="5">No exports yet.</td></tr>'}
+    </tbody></table></div>
+  </div>
+</details>
 
 <h2>Review actions</h2>
 <div class="proposal-actions">
-  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+  ${canRequestChanges ? `<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Request changes</strong>
     <textarea name="note" required placeholder="Describe what needs to change."></textarea>
     <input type="hidden" name="action" value="request_changes">
     <button class="warn" type="submit">Request changes</button>
-  </form>
-  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+  </form>` : ''}
+  ${canMarkNeedsVerification ? `<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Mark needs verification</strong>
     <textarea name="note" required placeholder="Required: record why this needs verification before further review."></textarea>
     <input type="hidden" name="action" value="mark_needs_verification">
     <button type="submit">Mark needs verification</button>
-  </form>
-  <form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
+  </form>` : ''}
+  ${canReject ? `<form class="action-box" method="post" action="/admin/proposals/${escapeHtml(proposal.id)}/review">
     <strong>Reject proposal</strong>
     <textarea name="note" required placeholder="Required: record why this proposal is being rejected."></textarea>
     <input type="hidden" name="action" value="reject">
     <button class="reject" type="submit">Reject</button>
-  </form>
+  </form>` : ''}
+  ${!canRequestChanges && !canMarkNeedsVerification && !canReject ? '<div class="notice">No further review actions are available from this status.</div>' : ''}
 </div>
 
 <h2>Review history</h2>
@@ -1600,31 +1872,31 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 
 export function renderReleaseCandidateUnavailablePage({ message }) {
   return adminShell({
-    title: 'Release candidates',
+    title: 'Publish',
     active: 'release_candidates',
     breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Releases' }],
     body: `
-<div class="admin-top"><div><h1>Release candidates</h1><div class="admin-sub">DB-backed release preparation workflow</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 04 / PUBLISH</div><h1>Publish reviewed changes</h1><div class="admin-sub">DB-backed release preparation is currently unavailable.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 <div class="notice">${escapeHtml(message)}</div>`,
   });
 }
 
 export function renderReleaseCandidatesPage({ releases }) {
   return adminShell({
-    title: 'Release candidates',
+    title: 'Publish',
     active: 'release_candidates',
     breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Releases' }],
     body: `
-<div class="admin-top"><div><h1>Release candidates</h1><div class="admin-sub">Group approved proposals for final human review. No live JSON writes or publishing happen here.</div></div><div><a class="logout" href="/admin/release-candidates/new">Create release</a> &middot; <a class="logout" href="/admin/logout">Sign out</a></div></div>
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 04 / PUBLISH</div><h1>Publish reviewed changes</h1><div class="admin-sub">Prepare small batches of approved changes, verify the plan, then use the guarded publish confirmation.</div></div><div><a class="primary-action" href="/admin/release-candidates/new">New publishing batch</a> <a class="logout" style="margin-left:10px" href="/admin/logout">Sign out</a></div></div>
 <div class="table-wrap"><table><thead><tr><th>Status</th><th>Title</th><th>Items</th><th>Exports</th><th>Draft applies</th><th>Revisions</th><th>Updated</th><th></th></tr></thead><tbody>
-${releases.length ? releases.map(release => `<tr><td><span class="pill">${escapeHtml(release.status)}</span></td><td>${escapeHtml(release.title)}</td><td>${escapeHtml(release.itemCount)}</td><td>${escapeHtml(release.exportedCount)}</td><td>${escapeHtml(release.draftAppliedCount)}</td><td>${escapeHtml(release.revisionCount)}</td><td>${escapeHtml(release.updatedAt || '')}</td><td><a href="/admin/release-candidates/${escapeHtml(release.id)}">View</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No release candidates yet', 'Create a release candidate after proposals have been approved for draft preparation.', '<a href="/admin/release-candidates/new">Create release</a>')}</td></tr>`}
+${releases.length ? releases.map(release => `<tr><td><span class="pill">${escapeHtml(release.status)}</span></td><td>${escapeHtml(release.title)}</td><td>${escapeHtml(release.itemCount)}</td><td>${escapeHtml(release.exportedCount)}</td><td>${escapeHtml(release.draftAppliedCount)}</td><td>${escapeHtml(release.revisionCount)}</td><td>${escapeHtml(release.updatedAt || '')}</td><td><a href="/admin/release-candidates/${escapeHtml(release.id)}">Continue</a></td></tr>`).join('') : `<tr><td colspan="8">${emptyState('No publishing batches yet', 'Create a batch after one or more proposed changes have been approved.', '<a href="/admin/release-candidates/new">Create a publishing batch</a>')}</td></tr>`}
 </tbody></table></div>`,
   });
 }
 
 export function renderReleaseCandidateCreatePage({ values = {}, error = null } = {}) {
   return adminShell({
-    title: 'Create release candidate',
+    title: 'New publishing batch',
     active: 'release_candidates',
     breadcrumbs: [
       { href: '/admin/', label: 'Dashboard' },
@@ -1632,13 +1904,13 @@ export function renderReleaseCandidateCreatePage({ values = {}, error = null } =
       { label: 'Create' },
     ],
     body: `
-<div class="admin-top"><div><h1>Create release candidate</h1><div class="admin-sub">Release candidates are review groupings only. They do not publish or write live content.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><div class="content-desk-kicker">STEP 04 / PUBLISH</div><h1>New publishing batch</h1><div class="admin-sub">Group a small set of approved changes for one final plan and confirmation. Creating the batch does not publish.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <form class="action-box" method="post" action="/admin/release-candidates/new">
   <label for="title"><strong>Title</strong></label>
   <input id="title" name="title" value="${escapeHtml(values.title || '')}" required maxlength="255" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="July verified content draft">
   <div class="notice" style="margin-top:12px;">This creates an empty draft release candidate. Add only approved_for_draft proposals from the detail page.</div>
-  <button type="submit">Create release candidate</button>
+  <button type="submit">Create publishing batch</button>
 </form>`,
   });
 }

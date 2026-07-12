@@ -11,6 +11,7 @@
     "audit:site": "node scripts/audit-site.js",
     "test:content-store": "node scripts/check-content-store.js",
     "test:parsers": "node scripts/test-parsers.js",
+    "test:admin-ui": "node scripts/test-admin-ui.js",
     "db:import-json": "node scripts/import-json-to-db.js",
     "db:export-json": "node scripts/export-db-to-json.js",
     "db:parity": "node scripts/check-db-parity.js",

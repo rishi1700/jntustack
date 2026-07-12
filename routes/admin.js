@@ -10,6 +10,7 @@ import {
   registerAsset,
 } from '../lib/assets.js';
 import { getAdminChecks } from '../lib/admin-checks.js';
+import { buildContentFreshness } from '../lib/content-freshness.js';
 import {
   CLEAN_TEST_ARTIFACTS_CONFIRMATION,
   adminCleanupErrorSummary,
@@ -151,6 +152,9 @@ import {
   renderAdminCleanupPage,
   renderAdminChecksPage,
   renderAdminTestToolsPage,
+  renderContentIntakePage,
+  renderFreshnessPage,
+  renderGuidedProcessingPage,
   renderReleaseApplyPlanDetailPage,
   renderReleaseLiveApplyDetailPage,
   renderAssetDetailPage,
@@ -173,6 +177,7 @@ import {
   renderProposalDetailPage,
   renderProposalUnavailablePage,
   renderProposalsPage,
+  renderReviewQueuePage,
   renderReleaseCandidateCreatePage,
   renderReleaseCandidateDetailPage,
   renderReleaseCandidateUnavailablePage,
@@ -276,6 +281,24 @@ function sourceFormOptions() {
   };
 }
 
+function matchDiscoverySourceForUrl(sources = [], value = '') {
+  if (!value) return null;
+  try {
+    const target = new URL(value);
+    return sources.find(source => {
+      if (!source.enabled || !source.baseUrl) return false;
+      try {
+        const base = new URL(source.baseUrl);
+        return target.hostname === base.hostname || target.hostname.endsWith(`.${base.hostname}`);
+      } catch {
+        return false;
+      }
+    }) || null;
+  } catch {
+    return null;
+  }
+}
+
 // Per-IP cap: blocks a single source from brute-forcing the login endpoint.
 // Successful logins (redirect, status < 400) don't count -- only failed
 // attempts (401) do, so a legitimate admin who logs in repeatedly is never
@@ -343,6 +366,45 @@ function requireAdmin(config) {
 
 async function getContent(root) {
   return loadContent({ root });
+}
+
+async function getWorkflowSnapshot() {
+  const results = await Promise.allSettled([
+    listContentProposals({ limit: 1000 }),
+    listReleaseCandidates({ limit: 1000 }),
+    listPipelineRuns({ limit: 1000 }),
+    listDiscoverySources(),
+    getPendingGitPushSummary(),
+  ]);
+  const [proposalResult, releaseResult, pipelineResult, sourceResult, gitResult] = results;
+  const proposals = proposalResult.status === 'fulfilled' ? proposalResult.value : [];
+  const releases = releaseResult.status === 'fulfilled' ? releaseResult.value : [];
+  const pipelines = pipelineResult.status === 'fulfilled' ? pipelineResult.value : [];
+  const sources = sourceResult.status === 'fulfilled' ? sourceResult.value : [];
+  const git = gitResult.status === 'fulfilled' ? gitResult.value : {};
+  const proposalReviewStatuses = new Set(['draft', 'needs_review', 'needs_verification', 'changes_requested']);
+  const activeReleaseStatuses = new Set([
+    'draft',
+    'applied_to_draft',
+    'ready_for_review',
+    'partial_applied_needs_review',
+    'files_written',
+    'verification_running',
+  ]);
+  return {
+    available: results.slice(0, 4).every(result => result.status === 'fulfilled'),
+    errors: results
+      .map((result, index) => result.status === 'rejected' ? ['proposals', 'releases', 'pipelines', 'sources', 'git'][index] : null)
+      .filter(Boolean),
+    proposalsNeedingReview: proposals.filter(proposal => proposalReviewStatuses.has(proposal.status)).length,
+    approvedProposals: proposals.filter(proposal => proposal.status === 'approved_for_draft' && proposal.validationStatus === 'passed').length,
+    pipelineFailures: pipelines.filter(run => ['validation_failed', 'error'].includes(run.status)).length,
+    activeReleases: releases.filter(release => activeReleaseStatuses.has(release.status)).length,
+    readyReleases: releases.filter(release => release.status === 'ready_for_review').length,
+    configuredSources: sources.filter(source => source.enabled).length,
+    pendingPush: git.pendingPush?.length || 0,
+    commitFailed: git.commitFailed?.length || 0,
+  };
 }
 
 export function createAdminRouter({ root }) {
@@ -433,8 +495,14 @@ export function createAdminRouter({ root }) {
     try {
       const content = await getContent(root);
       const countsByStatus = statusCounts(content.data.subjects);
+      const [workflow, freshness] = await Promise.all([
+        getWorkflowSnapshot(),
+        Promise.resolve(buildContentFreshness(content.data.subjects)),
+      ]);
       res.send(renderDashboard({
         contentSource: content.source,
+        workflow,
+        freshness,
         counts: {
           subjectsTotal: content.data.subjects.length,
           subjectsVerified: countsByStatus.verified || 0,
@@ -446,6 +514,69 @@ export function createAdminRouter({ root }) {
       }));
     } catch (err) {
       next(err);
+    }
+  });
+
+  router.get('/content/new', async (req, res) => {
+    try {
+      const sources = await listDiscoverySources();
+      const values = { ...(req.query || {}) };
+      const matchedSource = matchDiscoverySourceForUrl(sources, values.source_url);
+      if (!values.discovery_source_id && matchedSource) values.discovery_source_id = matchedSource.id;
+      res.send(renderContentIntakePage({ sources, values }));
+    } catch (err) {
+      res.status(503).send(renderContentIntakePage({
+        sources: [],
+        values: req.query || {},
+        error: discoverySourceErrorSummary(err),
+      }));
+    }
+  });
+
+  router.post('/content/new/fetch', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    const values = req.body || {};
+    try {
+      const result = await fetchSourceUrl({
+        root,
+        discoverySourceId: parseSourceId(values.discovery_source_id),
+        sourceUrl: values.source_url,
+        actor: config.email,
+      });
+      res.redirect(`/admin/content/process/${result.assetId}`);
+    } catch (err) {
+      let sources = [];
+      try {
+        sources = await listDiscoverySources();
+      } catch {
+        sources = [];
+      }
+      res.status(400).send(renderContentIntakePage({
+        sources,
+        values,
+        error: sourceFetchErrorSummary(err),
+      }));
+    }
+  });
+
+  router.get('/freshness', async (req, res, next) => {
+    try {
+      const content = await getContent(root);
+      res.send(renderFreshnessPage({ freshness: buildContentFreshness(content.data.subjects) }));
+    } catch (err) {
+      next(err);
+    }
+  });
+
+  router.get('/content/process/:id', async (req, res) => {
+    try {
+      const detail = await loadAssetDetail(req.params.id);
+      if (!detail) {
+        res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
+        return;
+      }
+      res.send(renderGuidedProcessingPage(detail));
+    } catch (err) {
+      res.status(503).send(renderAssetsUnavailablePage({ message: assetErrorSummary(err) }));
     }
   });
 
@@ -722,18 +853,18 @@ export function createAdminRouter({ root }) {
         buffer: parsed.file.buffer,
         actor: config.email,
       });
-      res.redirect(`/admin/assets/${result.asset.id}`);
+      res.redirect(req.query.guided === '1'
+        ? `/admin/content/process/${result.asset.id}`
+        : `/admin/assets/${result.asset.id}`);
     } catch (err) {
       try {
         sources = await listDiscoverySources();
       } catch {
         sources = [];
       }
-      res.status(400).send(renderAssetUploadPage({
-        sources,
-        values: fields,
-        error: assetErrorSummary(err),
-      }));
+      res.status(400).send(req.query.guided === '1'
+        ? renderContentIntakePage({ sources, values: fields, error: assetErrorSummary(err) })
+        : renderAssetUploadPage({ sources, values: fields, error: assetErrorSummary(err) }));
     }
   });
 
@@ -754,7 +885,7 @@ export function createAdminRouter({ root }) {
         res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
         return;
       }
-      res.send(renderAssetDetailPage(detail));
+      res.send(renderAssetDetailPage({ ...detail, guided: req.query.guided === '1' }));
     } catch (err) {
       res.status(503).send(renderAssetsUnavailablePage({ message: assetErrorSummary(err) }));
     }
@@ -839,11 +970,19 @@ export function createAdminRouter({ root }) {
           res.status(404).send(renderAssetsUnavailablePage({ message: 'Source asset not found.' }));
           return;
         }
-        res.status(400).send(renderAssetDetailPage({
-          ...detail,
-          pipelineValues: values,
-          pipelineError: pipelineErrorSummary(err),
-        }));
+        if (req.query.guided === '1') {
+          res.status(400).send(renderGuidedProcessingPage({
+            ...detail,
+            values,
+            error: pipelineErrorSummary(err),
+          }));
+        } else {
+          res.status(400).send(renderAssetDetailPage({
+            ...detail,
+            pipelineValues: values,
+            pipelineError: pipelineErrorSummary(err),
+          }));
+        }
       } catch (innerErr) {
         res.status(503).send(renderAssetsUnavailablePage({ message: pipelineErrorSummary(innerErr) }));
       }
@@ -1237,8 +1376,25 @@ export function createAdminRouter({ root }) {
     }
   });
 
-  router.get('/review', (req, res) => {
-    res.redirect('/admin/proposals');
+  router.get('/review', async (req, res) => {
+    const [draftResult, proposalResult] = await Promise.allSettled([
+      listNeedsVerificationSubjects({ root, filters: {} }),
+      listContentProposals({ limit: 1000 }),
+    ]);
+    const draftQueue = draftResult.status === 'fulfilled'
+      ? draftResult.value
+      : { subjects: [], totalDrafts: 0 };
+    const proposals = proposalResult.status === 'fulfilled' ? proposalResult.value : [];
+    const unavailable = [
+      draftResult.status === 'rejected' ? 'draft verification queue' : '',
+      proposalResult.status === 'rejected' ? 'proposal queue' : '',
+    ].filter(Boolean);
+    res.status(unavailable.length === 2 ? 503 : 200).send(renderReviewQueuePage({
+      drafts: draftQueue.subjects || [],
+      totalDrafts: draftQueue.totalDrafts || 0,
+      proposals,
+      error: unavailable.length ? `Unavailable: ${unavailable.join(' and ')}. Open System checks for database/runtime details.` : null,
+    }));
   });
 
   router.get('/review/:id', (req, res) => {

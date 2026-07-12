@@ -79,10 +79,17 @@ approved. Do not set Hostinger production to `db` just because migrations exist.
 
 ## Admin dashboard
 
-The private admin dashboard is disabled by default. When enabled, it shows
-content counts and DB-backed workflows for source evidence, parser results,
-extractions, proposals, verification reviews, release candidates, durable apply
-plans, and guarded live applies.
+The private admin dashboard is disabled by default. When enabled, its primary
+workflow is **Today → Start an update → Review → Publish → Content**. The guided
+update path stores source evidence and wraps the existing parse, extraction,
+validation, diff, and proposal pipeline without weakening human verification or
+publishing gates. Technical artifact pages remain under the collapsed Advanced
+navigation.
+
+Today also reports source review cadence from recorded retrieval dates. This is
+a freshness reminder, not remote change detection: the admin must still open the
+official source before approving an update. The review window defaults to 180
+days and can be configured with `CONTENT_REVIEW_DAYS` between 30 and 730 days.
 
 Runtime/admin hardening:
 
