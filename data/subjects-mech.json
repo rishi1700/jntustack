@@ -3596,7 +3596,7 @@
         "Learn various Python libraries.",
         "Do programming for regression methods.",
         "Write coding for different types of neural networks.",
-        "Write a program for decision tree, Na\u00efve Bayes and SVM and generate code for autoencoders."
+        "Write a program for decision tree, Naïve Bayes and SVM and generate code for autoencoders."
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -3769,6 +3769,1828 @@
         "college_source_note": "Both the subject list and detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently cross-confirmed against JNTUK's own exam records -- autonomous colleges may adapt content locally."
       },
       "notes": "Audit course - no credit (L-T-P-C 2-0-0-0 as shown in the source). 5-unit syllabus read from the source PDF."
+    },
+    {
+      "id": "r23-mech-4-1-cad-cam",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "CAD/CAM",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Fundamentals of CAD, CAM, Automation, design process, Application of computers for design, Benefits of CAD, Product Design and CAD- Comparison, benefits of using CAD in product design and product development cycle. COMPUTER GRAPHICS: Raster scan graphics coordinate system, database structure for graphics modeling, transformation of geometry, 3D transformations, mathematics of projections."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Wire Frame Modeling",
+          "topics": [
+            "Definition, advantages, dis-advantages, wire frame entities- analytic entities and synthetic entities. SURFACE MODELING: Definition, advantages, disadvantages, surface entities- analytic entities and synthetic entities. SOLID MODELING: Definition, constructive solid geometry, advantages, modelling entities. Curve representation: Implicit and explicit forms of straight line, circle, ellipse, cubic spline and Bezier curve, differences between Bezier curve and, cubic spline curve and Introduction to Data exchange formats."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Part Programming",
+          "topics": [
+            "NC, NC modes, NC elements, CNC machine tools and their applications, Parts and power transmission in CNC machine tools, features of Machining center, turning center, CNC Part Programming: fundamentals, manual part programming methods, Computer Aided Part Programming- APT language, simple problems in manual part programming and Computer Aided Part Programming. Direct Numerical Control, Adaptive Control."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Group Technology",
+          "topics": [
+            "Part family, coding and classification, Optiz and MICLASS classification system, benefits of group technology - production flow analysis, types and advantages. FMS: Introduction, types of FMS, Equipment, Tool management systems, Layouts, FMS Control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Computer Integrated Manufacturing Systems",
+          "topics": [
+            "Types of manufacturing systems, machine tools and related equipment, material handling systems, material requirement planning, MRP, Enterprise resource planning, computer control systems, human labor in manufacturing systems, CIMS benefits, computer aided quality control, Computer aided processes planning – variant process planning and generative process planning-Implementation considerations."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cad-cam-jntuk-r23-mech-4-1",
+        "title": "CAD/CAM - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 CAD/CAM syllabus: computer graphics, geometric modelling, CNC programming, group technology, FMS, CAPP and CIM."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-operations-research",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Operations Research",
+      "category": "HSMC",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "INTRODUCTION - definition– characteristics and phases – types of operation research models – applications. LINEAR PROGRAMMING: Linear programming problem formulation – graphical solution – simplex method – artificial variables techniques -two– phase method, big-M method – duality principle."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Transportation Problem",
+          "topics": [
+            "Formulation – optimal solution, unbalanced transportation problem – degeneracy, assignment problem – formulation – optimal solution - variants of assignment problem- travelling salesman problem. SEQUENCING – Introduction – flow –shop sequencing – n jobs through two machines – n jobs through three machines – job shop sequencing – two jobs through ‘m’ machines."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Replacement",
+          "topics": [
+            "Introduction – replacement of items that deteriorate with time – when money value is not counted and counted – replacement of items that fail completely, group replacement. THEORY OF GAMES: Introduction – mini. max (max. mini) – criterion and optimal strategy – solution of games with saddle points – rectangular games without saddle points – 2 x 2 games – dominance principle – m x 2 & 2 x n games -graphical method."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Queueing Theory",
+          "topics": [
+            "Introduction – single channel – poison arrivals – exponential service times – with infinite population and finite population models– multichannel – poison arrivals – exponential service times with infinite population single channel. INVENTORY CONTROL : Introduction – single item – deterministic models – purchase inventory models with one price break and multiple price breaks – shortages are not allowed – stochastic models – demand may be discrete variable or continuous variable, Instantaneous demand and continuous demand and no set up cost. ABC & VED Analysis."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Dynamic Programming",
+          "topics": [
+            "Introduction – Bellman’s principle of optimality – shortest path problem. SIMULATION: Definition – types of simulation models – phases of simulation– applications of simulation – inventory problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "operations-research-jntuk-r23-mech-4-1",
+        "title": "Operations Research - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Operations Research syllabus: linear programming, transportation, assignment, queuing, sequencing, inventory and simulation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-cad-cam-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "CAD/CAM Lab",
+      "category": "Lab",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "from each section CONTENTS 1."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "cad-cam-lab-jntuk-r23-mech-4-1",
+        "title": "CAD/CAM Lab - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 CAD/CAM Lab: modelling, drafting, CNC programming, machining simulation and computer-aided manufacturing exercises."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-mechatronics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Mechatronics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Mechatronics Systems",
+          "topics": [
+            "Elements & levels of mechatronics system, Mechatronics design process, system, measurement systems, control systems, microprocessor-based controllers, advantages and disadvantages of mechatronics systems. Sensors and transducers, types, displacement, position, proximity, velocity, motion, force, acceleration, torque, fluid pressure, liquid flow, liquid level, temperature and light sensors."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Solid State Electronic Devices",
+          "topics": [
+            "PN junction diode, BJT, FET, DIAC, TRIAC and LEDs. Analog signal conditioning, operational amplifiers, noise reduction, filtering"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hydraulic And Pneumatic Actuating Systems",
+          "topics": [
+            "Fluid systems, Hydraulic systems, and pneumatic systems, components, control valves, electro- pneumatic, hydro-pneumatic, electro-hydraulic servo systems. Mechanical actuating systems and electrical actuating systems – basic principles and elements."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Digital Electronics And Systems",
+          "topics": [
+            "Digital logic control, microprocessors and micro controllers, programming, process controllers, programmable logic controllers, PLCs versus computers, application of PLCs for control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "System And Interfacing And Data Acquisition",
+          "topics": [
+            "Data Acquisition Systems, Analog to Digital and Digital to Analog conversions; Digital Signal Processing – data flow in DSPs, block diagrams, typical layouts, Interfacing motor drives. Design of mechatronics systems & future trends."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mechatronics-jntuk-r23-mech-4-1",
+        "title": "Mechatronics - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Mechatronics syllabus: sensors, signal conditioning, actuators, digital control, PLCs, data acquisition and system design."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-computational-fluid-dynamics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Computational Fluid Dynamics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Conservation Principles",
+          "topics": [
+            "Introduction, conservation of mass, Newton’s second law of motion, expanded forms of Navier-stokes equations (Derivation), conservation of energy principle, special forms of the Navier-stokes equations. APPLIED NUMERICAL METHODS: Solution of a system of simultaneous linear algebraic equations, iterative schemes of matrix inversion, direct methods for matrix inversion, direct methods for banded matrices, TDMA – Algorithms."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Conduction And Convention",
+          "topics": [
+            "Steady flow, dimensionless form of momentum and energy equations, stokes equation, conservative body force fields, stream function -vorticity formulation. Finite difference applications in heat conduction and convention –heat conduction, steady heat conduction in a rectangular geometry, transient heat conduction, finite difference application in convective heat transfer, closure."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Explicit And Implicit Methods",
+          "topics": [
+            "Finite differences, discretization, consistency, stability, and fundamentals of fluid flow modelling: introduction, elementary finite difference quotients, implementation aspects of finite- difference equations, consistency, explicit and implicit methods."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Introduction To First Order Wave Equation",
+          "topics": [
+            "Stability of hyperbolic and elliptic equations, fundamentals of fluid flow modelling, conservative property, the upwind scheme. FINITE VOLUME METHOD: Approximation of surface integrals, volume integrals, interpolation and differentiation practices, upwind interpolation, linear interpolation and quadratic interpolation."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Finite Element Method",
+          "topics": [
+            "Introduction – Weighted Residual and Variational Formulations – Rayleigh-Ritz Method – Interpolation – One dimensional and Two dimensional regions – Error Control – Applications of FEM to One dimensional Problems (Steady and Transient) – Two dimensional problems"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "computational-fluid-dynamics-jntuk-r23-mech-4-1",
+        "title": "Computational Fluid Dynamics - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Computational Fluid Dynamics syllabus: governing equations, discretization, finite differences, finite volumes, grids and flow solutions."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-functional-materials-and-applications",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Functional Materials and Applications",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Crystallography",
+          "topics": [
+            "Crystal structures: BCC, FCC and HCP – directions and planes - linear and planar densities – crystal imperfections- edge and screw dislocations – grain and twin boundaries - Burgers vector and elastic strain energy- Slip systems, plastic deformation of materials - Polymorphism – phase changes."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Electrical And Magnetic Properties Of Materials",
+          "topics": [
+            "Classical free electron theory - Expression for electrical conductivity – Thermal conductivity, expression - Quantum free electron theory: Tunneling – degenerate states – Fermi- Dirac statistics – Density of energy states – Electron in periodic potential – Energy bands in solids – tight binding approximation - Electron effective mass – concept of hole. Magnetic materials: Dia, para and ferromagnetic effects – paramagnetism in the conduction electrons in metals – exchange interaction and ferromagnetism – quantum interference devices – GMR devices."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Semiconductors And Transport Physics",
+          "topics": [
+            "Intrinsic Semiconductors – Energy band diagram – direct and indirect band gap semiconductors – Carrier concentration in intrinsic semiconductors – extrinsic semiconductors - Carrier concentration in N-type & P-type semiconductors – Variation of carrier concentration with temperature – Carrier transport in Semiconductors: Drift, mobility and diffusion – Hall effect and devices – Ohmic contacts – Schottky diode"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Optical Properties Of Materials",
+          "topics": [
+            "Classification of optical materials – Optical processes in semiconductors: optical absorption and emission, charge injection and recombination, optical absorption, loss and gain. Optical processes in quantum wells – Optoelectronic devices: light detectors and solar cells – light emitting diode – laser diode - optical processes in organic semiconductor devices –excitonic state – Electro-optics and nonlinear optics: Modulators and switching devices – plasmonics."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Nanoelectronic Materials",
+          "topics": [
+            "Quantum confinement – Quantum structures – quantum wells, wires and dots – Zener-Bloch oscillations – Resonant tunneling – quantum interference effects - mesoscopic structures - Single electron phenomena – Single electron Transistor. Semiconductor photonic structures – 1D, 2D and 3D photonic crystal. Active and passive optoelectronic devices – photo processes – spintronics – carbon nanotubes: Properties and applications."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "functional-materials-and-applications-jntuk-r23-mech-4-1",
+        "title": "Functional Materials and Applications - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Functional Materials and Applications syllabus: smart, piezoelectric, shape-memory, magnetic, optical and energy materials."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-drives-and-actuators-for-robotics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Drives and Actuators for Robotics",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Relay And Power Semi-Conductor Devices",
+          "topics": [
+            "Study of Switching Devices – Relay and Types, Switching characteristics -BJT, SCR, TRIAC, GTO, MOSFET, IGBT and IGCT-: SCR, MOSFET and IGBT - Triggering and commutation circuit - Introduction to Driver and snubber circuits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Drive Characteristics",
+          "topics": [
+            "Electric drive – Equations governing motor load dynamics – steady state stability – multi quadrant Dynamics: acceleration, deceleration, torque, and Direction starting & stopping – Selection of motor"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Dc Motors And Drives",
+          "topics": [
+            "DC Servomotor - Types of PMDC & BLDC motors - principle of operation- emf and torque equations - characteristics and control – Drives- H bridge - Single and Three Phases – 4 quadrant operation – Applications"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Ac Motors And Drives",
+          "topics": [
+            "Introduction – Induction motor drives – Speed control of 3-phase induction motor – Stator voltage control – Stator frequency control – Stator voltage and frequency control – Stator current control – Static rotor resistance control – Slip power recovery control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Stepper And Servo Motor",
+          "topics": [
+            "Stepper Motor: Classifications- Construction and Principle of Operation – Modes of Excitation Drive System- Logic Sequencer - Applications. Servo Mechanism – DC Servo motor-AC Servo motor – Applications."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "drives-and-actuators-for-robotics-jntuk-r23-mech-4-1",
+        "title": "Drives and Actuators for Robotics - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Drives and Actuators for Robotics syllabus: electric, hydraulic and pneumatic drives, motors, control, selection and robotic applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-hydrogen-and-fuel-cell-technology",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Hydrogen and Fuel Cell Technology",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction Of Hydrogen Energy Systems",
+          "topics": [
+            "Properties of hydrogen as fuel, Hydrogen pathways introduction-current uses, general introduction to infrastructure requirement for hydrogen production, storage, dispensing, utilization, safety and hydrogen production plants."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Hydrogen Production Processes",
+          "topics": [
+            "Thermal-Steam reformation, thermo chemical water splitting, gasification-pyrolysis, nuclear thermal catalytic and partial oxidation methods, Electrochemical-Electrolysis, photo electro chemical, Biological-Anaerobic digestion, fermentation micro- organism, PM based electrolyser."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hydrogen Storage",
+          "topics": [
+            "Physical and chemical properties, general storage methods, compressed storage-composite cylinders, glass micro sphere storage, zeolites, metal hydride storage, chemical hydride storage and cryogenic storage, carbon based materials for hydrogen storage."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Hydrogen Utilization",
+          "topics": [
+            "Overview of hydrogen utilization, IC Engines, gas turbines, hydrogen burners, power plant, domestic cooking gas, marine applications, hydrogen dual fuel engines."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Fuel Cells",
+          "topics": [
+            "History – principle - working - thermodynamics and kinetics of fuel cell process –performance evaluation of fuel cell – comparison on battery Vs fuel cell, Types of fuel cells – AFC, PAFC, SOFC, MCFC, DMFC, PEMFC, microbial fuel cells, relative merits and demerits and application of fuel cells."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "hydrogen-and-fuel-cell-technology-jntuk-r23-mech-4-1",
+        "title": "Hydrogen and Fuel Cell Technology - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Hydrogen and Fuel Cell Technology syllabus: hydrogen production, storage, safety, fuel-cell types, performance and applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-smart-manufacturing",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Smart Manufacturing",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Concepts Of Smart Manufacturing",
+          "topics": [
+            "Definition and key characteristics of smart manufacturing, Corporate adaptation processes, manufacturing challenges, challenges vs technologies, Overview of circular manufacturing, Stages in smart manufacturing. Minimizing Six big losses in manufacturing with Industry 4.0, Industry 5.0, and their benefits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Smart Machines And Smart Sensors",
+          "topics": [
+            "Concept and Functions of a Smart, Machine Salient features and Critical Subsystems of a Smart Machine, Smart sensors; smart sensors ecosystem, need, benefits and applications of sensors in industry, Sensing for Manufacturing Process in IIoT, Block Diagram of a IoT Sensing Device, Sensors in IIoT Applications, Smart Machine Interfaces"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Architecture Of Cyber-Physical System (Cps)",
+          "topics": [
+            "Functions of CPS, 5C Architecture; Smart Connection Level, Data-to- Information Level, Cyber Level, Cognition Level, Configuration Level. Design of PHM based CPS systems. Comparison of today’s factory and Industry 4.0 factory by the implementation of 5C CPS architecture"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Digital Twin",
+          "topics": [
+            "Introduction, applications of digital twins, impact zones of digital twins in manufacturing (factories/plants and OEMs), advantages of digital twins, basic steps of digital twin technology, Multiverse and AR and VR. MACHINE LEARNING (ML) AND ARTIFICIAL INTELLIGENCE (AI) IN MANUFACTURING: Introduction, benefits and applications of ML in industries, common approaches of ML; supervised and unsupervised, semi- supervised and reinforced ML, Application of AI and ML for predictive maintenance."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "IOT CONNECTIVITY FOR INDUSTRY 4.0: Industrial communication requirement and its infrastructure, an overview of different types of networks, mesh network in industrial IoT, IoT protocols and the internet, TCP/IP (transmission control protocol/internet protocol) model, IoT connectivity standards: common protocols, application layer protocols, internet/network layer protocols, physical layer IoT protocols."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "smart-manufacturing-jntuk-r23-mech-4-1",
+        "title": "Smart Manufacturing - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Smart Manufacturing syllabus: Industry 4.0, cyber-physical production, IoT, digital twins, analytics, automation and implementation."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-autonomous-systems",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Autonomous Systems",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction To Agent Systems",
+          "topics": [
+            "Introduction to Agents, Agent Architectures, and Multi-agent Systems and Society of Agents, Distributed Problem Solving and Planning, Case Study: Collaborative Robotics, Robocup"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Architecture Of Autonomous Systems",
+          "topics": [
+            "Degree of Autonomy, Reactive Systems, Real-time Systems, Architecture of AGV’s , AUV , Drones, Tele-Operation, AR, VR applications"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Classification, Modelling, And Control Aspects Of Unmanned Vehicles",
+          "topics": [
+            "Different types of unmanned vehicles: ground (wheeled and legged), aerial (fixed, flapping, and rotary wings), underwater vehicles , Modelling of unmanned vehicles considering basic forces, kinematics, and dynamics, Discussion on different types of control for aerial, underwater (fins and propulsion control), ground (biped and quadruped motion control for legged robots)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Sensors And Actuators",
+          "topics": [
+            "Types of sensors used in unmanned vehicles (proximity, IMU, magnetometers, thermal imaging, vision, LiDAR, GPS, RTK, etc.) and their characteristics, Sensor data aggregation, processing, and sensor fusion, Introduction to popular computing platforms for data processing, Types of actuators: motors, servos, harmonic drive, linear actuators"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Flight Concepts",
+          "topics": [
+            "Basic Aerial Robot Flight Concepts, Micro-aerial vehicle, Frame Rotations and Representations, Aerial robots equations of motion, State-Space Form, Time, Motion, and Trajectories, Linearization, 2-D and 3-D control of Aerial robots, PID Control, LQR control, Motion planning, Collision-free Navigation, Sensing and Estimation, Vision-based Guidance for aerial robots, Introduction to Communication and Networking Protocols."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "autonomous-systems-jntuk-r23-mech-4-1",
+        "title": "Autonomous Systems - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Autonomous Systems syllabus: sensing, localization, planning, control, mobile robots, autonomous vehicles and system safety."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-embedded-systems-and-programming",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Embedded Systems and Programming",
+      "category": "ProfessionalElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction To Microcontroller",
+          "topics": [
+            "Fundamentals Functions of ALU - Microprocessor - Microcontrollers – CISC and RISC – Types Microcontroller - 8051 Family - Architecture - Features and Specifications - Memory Organization - Instruction Sets – Addressing Modes."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Programming And Communication",
+          "topics": [
+            "Fundamentals of Assembly Language Programming – Instruction to Assembler – Compiler and IDE - C Programming for 8051 Microcontroller – Basic Arithmetic and Logical Programming - Timer and Counter - Interrupts – Interfacing and Programming of Serial Communication, I2C, SPI and CAN of 8051 Microcontroller – Bluetooth and WI-FI interfacing of 8051 Microcontroller."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Peripheral Interfacing",
+          "topics": [
+            "I/O Programming – Interfacing of Memory, Key Board and Displays – Alphanumeric and Graphic, RTC, interfacing of ADC and DAC, Sensors - Relays - Solenoid Valve and Heater - Stepper Motors, DC Motors - PWM Programming – Closed Loop Control Programming of Servomotor – Traffic Light"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Arm Processor",
+          "topics": [
+            "Introduction ARM 7 Processor - Internal Architecture – Modes of Operations – Register Set – Instruction Sets – ARM Thumb - Thumb State Registers – Pipelining – basic programming of ARM 7 - Applications."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Single Board Computers And Programming",
+          "topics": [
+            "System on Chip - Broadcom BCM2711 SoC – SBC architecture - Models and Languages – Embedded Design – Real Time Embedded Operating Systems - Real Time Programming Languages -– Python for Embedded Systems- GPIO Programming – Interfacing"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "embedded-systems-and-programming-jntuk-r23-mech-4-1",
+        "title": "Embedded Systems and Programming - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Embedded Systems and Programming syllabus: architectures, microcontrollers, interfaces, real-time systems, programming and applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-finite-element-methods",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Finite Element Methods",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Variational Methods",
+          "topics": [
+            "Introduction to finite element method, stress and equilibrium, strain –displacement relations, stress–strain relations, plane stress and plane strain conditions, variational methods."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Weighted Residual Methods",
+          "topics": [
+            "solving differential equations using weighted residual methods, concept of potential energy, one dimensional problems."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "1D-ELEMENTS: Bar element formulation, Discretization of domain, element shapes, discretization procedures, assembly of stiffness matrix, band width, node numbering, mesh generation, interpolation functions, local and global coordinates, convergence requirements, treatment of boundary conditions."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "2D- ELEMENTS: Finite element modeling of two dimensional stress analysis with constant strain triangles and treatment of boundary conditions. Finite element modeling of four noded rectangular element."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Higher Order And Iso-Parametric Elements",
+          "topics": [
+            "One dimensional, quadratic and cubic elements in natural coordinates, two dimensional four node iso-parametric elements and numerical integration."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "finite-element-methods-jntuk-r23-mech-4-1",
+        "title": "Finite Element Methods - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Finite Element Methods syllabus: discretization, interpolation, one- and two-dimensional elements, structural, thermal and dynamic analysis."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-introduction-to-mechatronics",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Introduction to Mechatronics",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Mechatronics Systems",
+          "topics": [
+            "Elements & levels of mechatronics system, Mechatronics design process, system, measurement systems, control systems, microprocessor-based controllers, advantages and disadvantages of mechatronics systems. Sensors and transducers, types, displacement, position, proximity, velocity, motion, force, acceleration, torque, fluid pressure, liquid flow, liquid level, temperature and light sensors."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Solid State Electronic Devices",
+          "topics": [
+            "PN junction diode, BJT, FET, DIAC, TRIAC and LEDs. Analog signal conditioning, operational amplifiers, noise reduction, filtering"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Hydraulic And Pneumatic Actuating Systems",
+          "topics": [
+            "Fluid systems, Hydraulic systems, and pneumatic systems, components, control valves, electro-pneumatic, hydro-pneumatic, electro-hydraulic servo systems. Mechanical actuating systems and electrical actuating systems – basic principles and elements."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Digital Electronics And Systems",
+          "topics": [
+            "Digital logic control, microprocessors and micro controllers, programming, process controllers, programmable logic controllers, PLCs versus computers, application of PLCs for control."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "System And Interfacing And Data Acquisition",
+          "topics": [
+            "Data Acquisition Systems, Analog to Digital and Digital to Analog conversions; Digital Signal Processing – data flow in DSPs, block diagrams, typical layouts, Interfacing motor drives. Design of mechatronics systems & future trends."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "introduction-to-mechatronics-jntuk-r23-mech-4-1",
+        "title": "Introduction to Mechatronics - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Introduction to Mechatronics syllabus: sensors, electronics, fluid and mechanical actuation, microcontrollers, PLCs and data acquisition."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-product-design-and-development",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Product Design and Development",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Fundamentals Of Product Design And Development",
+          "topics": [
+            "Introduction – Reading of Drawing – Grid reading, Revisions, ECN (Engg. Change Note), Component material grade, Specifications, customer specific requirements – Basics of monitoring of NPD applying Gantt chart, Critical path analysis – Fundamentals of BOM (Bill of Materials), Engg. BOM & Manufacturing BOM. Basics of MIS software and their application in industries like SAP, MS Dynamics, Oracle ERP Cloud – QFD."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Material Specifications, Analysis & Process",
+          "topics": [
+            "Material specification standards – ISO, DIN, JIS, ASTM, EN, etc. – Awareness on various manufacturing process like Metal castings & Forming, Machining (Conventional, 3 Axis, 4 Axis, 5 Axis, ), Fabrications, Welding process. Qualifications of parts mechanical, physical & Chemical properties and their test report preparation and submission. Fundamentals of DFMEA & PFMEA, Fundamentals of FEA, Bend Analysis, Hot Distortion, Metal and Material Flow, Fill and Solidification analysis."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Essentials Of Product Design And Development",
+          "topics": [
+            "RFQ (Request of Quotation) Processing – Feasibility Studies & reporting – CFT (Cross Function Team) discussion on new product and reporting – Concept design, Machine selection for tool making, Machining – Manufacturing Process selection, Machining Planning, cutting tool selection – Various Inspection methods – Manual measuring, CMM – GOM (Geometric Optical Measuring), Lay out marking and Cut section analysis. Tool Design and Detail drawings preparation, release of details to machine shop and CAM programing. Tool assembly and shop floor trials. Initial sample submission with PPAP documents."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Criterions Of Product Design And Development",
+          "topics": [
+            "New product qualification for Dimensions, Mechanical & Physical Properties, Internal Soundness proving through X-Ray, Radiography, Ultrasonic Testing, MPT, etc. Agreement with customer for testing frequencies. Market Survey on similar products, Risk analysis, validating samples with simulation results, Lesson Learned & Horizontal deployment in NPD (New Product Development)."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Reporting & Forward-Thinking Of Npd",
+          "topics": [
+            "Detailed study on PPAP with 18 elements reporting, APQP and its 5 Sections, APQP vs PPAP, Importance of SOP (Standard Operating Procedure) – Purpose & documents, deployment in shop floor. Prototyping & RPT - Concepts, Application and its advantages, 3D Printing – resin models, Sand cores for foundries; Reverse Engineering. Cloud points generation, converting cloud data to 3D model – Advantages & Limitation of RE, CE (Concurrent Engineering) – Basics, Application and its advantages in NPD (to reduce development lead time, time to Market, Improve productivity and product cost.)"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "product-design-and-development-jntuk-r23-mech-4-1",
+        "title": "Product Design and Development - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Product Design and Development syllabus: drawings, BOM, materials, manufacturing, FMEA, prototyping, validation and NPD."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-advanced-materials",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Advanced Materials",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Advanced Metals & Alloys",
+          "topics": [
+            "Metallic materials- super alloys, titanium and Nickel based alloys and intermetallics, Materials for cryogenic application, Materials for space environment, Evaluation of materials for extreme environment, Introduction to metallic foams."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Ceramics",
+          "topics": [
+            "Applications - characteristics- classification-Processing of ceramics- Powder preparations- consolidation- hot compaction-drying- sintering-finishing of ceramics, Al2O3, silicon nitride Si3N4 and Cermets, Areas of applications."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Composite Materials",
+          "topics": [
+            "Introduction, polymer matrix composites, metal matrix composites, ceramic matrix composites, carbon–carbon composites, fiber- reinforced composites and nature-made composites, and applications. REINFORCEMENTS: Fibres- glass, silica, kevlar, carbon, boron, silicon carbide, and born carbide fibres."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Shape Memory Alloys",
+          "topics": [
+            "Introduction-shape memory effect- classification of shape memory alloys-composition-properties and applications of shape memory alloys. FUNCTIONALLY GRADED MATERIALS: Types of functionally graded materials-classification different systems-preparation-properties and applications of functionally graded materials."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Nano Materials",
+          "topics": [
+            "Introduction-properties at nano scales-advantages & disadvantages applications in comparison with bulk materials (nano – structure, wires, tubes, composites). state of art nano advanced- topic delivered by student."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-materials-jntuk-r23-mech-4-1",
+        "title": "Advanced Materials - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Advanced Materials syllabus: composites, ceramics, polymers, nanomaterials, smart materials, processing, properties and applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-introduction-to-smart-manufacturing",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Introduction to Smart Manufacturing",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Concepts Of Smart Manufacturing",
+          "topics": [
+            "Definition and key characteristics of smart manufacturing, Corporate adaptation processes, manufacturing challenges, challenges vs technologies, Stages in smart manufacturing. Minimizing Six big losses in manufacturing with Industry 4.0, and their benefits"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Smart Machines And Smart Sensors",
+          "topics": [
+            "Concept and Functions of a Smart, Machine Salient features and Critical Subsystems of a Smart Machine, Smart sensors; smart sensors ecosystem, need, benefits and applications of sensors in industry, Sensing for Manufacturing Process in IIoT, Block Diagram of aIoT Sensing Device, Sensors in IIoT Applications, Smart Machine Interfaces"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Architecture Of Cyber- Physical System (Cps)",
+          "topics": [
+            "Functions of CPS, 5C Architecture; Smart Connection Level, Data-to- Information Level, Cyber Level, Cognition Level, Configuration Level. Design of PHM based CPS systems. Comparison of today’s factory and Industry 4.0 factory by the implementation of 5C CPS architecture"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Digital Twins",
+          "topics": [
+            "Introduction, applications of digital twins, impact zones of digital twins in manufacturing (factories/plants and OEMs), advantages of digital twins, basic steps of digital twin technology MACHINE LEARNING (ML) AND ARTIFICIAL INTELLIGENCE (AI) IN MANUFACTURING: Introduction, benefits and applicationsof ML in industries, common approaches of ML; supervised and unsupervised, semi- supervised and reinforced ML. PREDICTIVE MAINTENANCE: Introduction of predictive maintenance, difference between preventive and predictive maintenance, working and various components of predictive maintenance, benefits and tools of predictive maintenance. Common approaches to IoT predictive maintenance; Rule-based (condition monitoring) and AI (artificial intelligence) based predictive maintenance."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "IoT CONNECTIVITY FOR INDUSTRY 4.0: Industrial communication requirement and its infrastructure, an overview of different types of networks, mesh network in industrial IoT, IoT protocols and the internet, TCP/IP (transmission control protocol/internet protocol) model, IoT connectivity standards: common protocols, application layer protocols, internet/network layer protocols, physical layer IoT protocols, choosing the right IoT connectivity protocol"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "introduction-to-smart-manufacturing-jntuk-r23-mech-4-1",
+        "title": "Introduction to Smart Manufacturing - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Introduction to Smart Manufacturing syllabus: Industry 4.0, connected factories, sensors, cloud, analytics, automation and digital twins."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-optimization-techniques",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Optimization Techniques",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction To Optimization",
+          "topics": [
+            "Engineering applications of optimization- statement of an optimization problem- classification of optimization problem- optimization techniques. CLASSICAL OPTIMIZATION TECHNIQUES: Single variable optimization- multivariable optimization with equality constraints- multivariable optimization with inequality constraints."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unconstrained Optimization Techniques",
+          "topics": [
+            "Pattern search method- Rosenbrock's method of rotating coordinates- Simplex method- Descent methods- Gradient of function- Steepest Descent method."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Constrained Optimization Techniques",
+          "topics": [
+            "Characteristics of constrained problem methods of feasible directions - basic approach in the penalty function method- interior penalty function method- convex programming problem- exterior penalty function method."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "GEOMETRIC PROGRAMMING (G.P): Solution of an unconstrained geometric programming, differential calculus method and arithmetic method. primal dual relationship and sufficiency conditions. Solution of a constrained geometric programming problem (G.P.P). Complimentary geometric programming (C.G.P)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "INTEGER PROGRAMMING (I.P): Graphical representation. Gomory's cutting plane method. Algorithm for zero-one programming problem. Integer non-linear programming."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "optimization-techniques-jntuk-r23-mech-4-1",
+        "title": "Optimization Techniques - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Optimization Techniques syllabus: classical methods, linear and nonlinear programming, dynamic programming and evolutionary optimization."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-advanced-manufacturing-processes",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Advanced Manufacturing Processes",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Coating Techniques",
+          "topics": [
+            "Scope, Cleaners, Methods of cleaning, Surface coating types, ceramic and organic methods of coating, and economics of coating. Electro forming, Chemical vapor deposition, Physical vapor deposition, thermal spraying, Ion implantation, diffusion coating, Diamond coating and cladding."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Processing Of Ceramics",
+          "topics": [
+            "Applications, characteristics, classification, Processing of particulate ceramics, Powder preparations, consolidation, hot compaction, drying, sintering, and finishing of ceramics, Areas of application. PROCESSING OF COMPOSITES: Composite Layers, Particulate and fiber reinforced composites, Elastomers, Reinforced plastics, MMC, CMC, Polymer matrix composites."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Fabrication Of Microelectronic Devices",
+          "topics": [
+            "Crystal growth and wafer preparation, Film Deposition oxidation, lithography, bonding and packaging, reliability and yield, Printed Circuit boards, computer aided design in micro electronics, surface mount technology, Integrated circuit economics."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Nanomanufacturing",
+          "topics": [
+            "Nanotubes, Nanoparticles, nanowires, Lithography, Eletrospinning, mechanical milling, Inert gas condensation, sputtering, laser ablation, Arc discharge, Sol-gel methods, working, applications, advantages."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Rapid Prototyping",
+          "topics": [
+            "Working Principles, Methods, Stereo Lithography, Laser Sintering, Fused Deposition Method, Applications and Limitations, Rapid tooling, Techniques of rapid manufacturing."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "advanced-manufacturing-processes-jntuk-r23-mech-4-1",
+        "title": "Advanced Manufacturing Processes - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Advanced Manufacturing Processes syllabus: mechanical, electrochemical, thermal and additive processes, selection and applications."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-total-quality-management",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Total Quality Management",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "The concept of TQM, Quality and Business performance, attitude and involvement of top management, communication, culture and management systems. Management of Process Quality: Definition of quality, Quality Control, a brief history, Product Inspection vs, Process Control, Statistical Quality Control, Control Charts and Acceptance Sampling."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Customer Focus And Satisfaction",
+          "topics": [
+            "The importance of customer satisfaction and loyalty- Crating satisfied customers, Understanding the customer needs, Process Vs. Customer, internal customer conflict, quality focus, Customer Satisfaction, role of Marketing and Sales, Buyer – Supplier relationships. Bench Marketing: Evolution of Bench Marketing, meaning of Bench marketing, benefits of bench marketing, the bench marketing process, pitfalls of bench marketing."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Organizing For Tqm",
+          "topics": [
+            "The systems approach, Organizing for quality implementation, making the transition from a traditional to a TQM organizing, Quality Circles. Productivity, Quality and Reengineering: The leverage of Productivity and Quality, Management systems Vs. Technology, Measuring Productivity, Improving Productivity Re-engineering."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "3-D OBJECT REPRESENTATION: spline representation, Hermitem THE COST OF QUALITY: Definition of the Cost of Quality, Quality Costs, Measuring Quality Costs, use of Quality Cost Information, Accounting Systems and Quality Management."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Iso9000",
+          "topics": [
+            "Universal Standards of Quality: ISO around the world, The ISO9000 ANSI/ASQCQ-Series Standards, benefits of ISO9000 certification, the third party audit, Documentation ISO9000 and services, the cost of certification implementing the system"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "total-quality-management-jntuk-r23-mech-4-1",
+        "title": "Total Quality Management - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Total Quality Management syllabus: quality principles, leadership, customer focus, process improvement, tools, systems and standards."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-operations-management",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Operations Management",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Forecasting",
+          "topics": [
+            "Introduction, types of forecasting and their uses, General principles of forecasting, forecasting techniques: qualitative and quantitative methods of Forecasting. PRODUCTION SYSTEMS: Types of production systems: job, batch, mass and flow type production. AGGREGATE PLANNING: Introduction, aggregate planning strategies, aggregate planning methods, problems"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Scheduling",
+          "topics": [
+            "Introduction, difference with loading, scheduling policies, techniques, standard scheduling methods. MATERIALS MANAGEMENT: Introduction, functions of materials management, inventory, inventory management, types of inventories, Selective inventory control techniques: ABC analysis, VED analysis."
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Inventory Control",
+          "topics": [
+            "P and Q Systems, Basic Economic Order Quantity model, Price break model, assumptions and problems MATERIAL REQUIREMENT PLANNING: Introduction, Inputs, outputs and MRP logic. CONTEMPORARY MANAGEMENT TECHNIQUES: Introduction to Lean, JIT, ERP and Supply chain Management."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Quality Management",
+          "topics": [
+            "Quality engineering, Taguchi Principles, SQC – X bar, p and c charts, problems, Juran‘s principles Introduction to quality acceptance sampling. Deming‘s Philosophy, Introduction to Total quality management, Quality Function Deployment, Introduction to six sigma and ISO 9000 2015 standards."
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Optimization",
+          "topics": [
+            "Linear Programming – Graphical and simplex method – problems, Demonstration of Transportation and Assignment Models, Travelling Salesman problem."
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "operations-management-jntuk-r23-mech-4-1",
+        "title": "Operations Management - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Operations Management syllabus: forecasting, capacity, facilities, production planning, inventory, scheduling and supply chains."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-energy-auditing",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Energy Auditing",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Energy scenario of World, India and TN - Environmental aspects of Energy Generation – Material and Energy balancing - Energy Auditing: Need, Types, Methodology and Barriers. Role of Energy Managers. Basic instruments for Energy Auditing."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Electrical Supply Systems",
+          "topics": [
+            "Electricity Tariff structures – Typical Billing - Demand Side Management - HT and LT supply - Power Factor – Energy conservation in Transformers – Harmonics"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Energy Conservation In Major Thermal Utilities",
+          "topics": [
+            "Stoichiometry - Combustion principles. Energy conservation in: Boilers - Steam Distribution Systems - Furnaces - Thermic Fluid Heaters – Cooling Towers – D.G. sets. Insulation and Refractories - Waste Heat Recovery Devices."
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Energy Conservation In Major Electrical Utilities",
+          "topics": [
+            "Energy conservation in: Motors - Pumps – Fans – Blowers - Compressed Air Systems - Refrigeration and Air Conditioning Systems - Illumination systems"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Energy Monitoring, Targeting, Labelling And Economics",
+          "topics": [
+            "Elements of Monitoring & Targeting System – CUSUM - Energy / Cost index diagram – Energy Labelling - Energy Economics – Cost of production and Life Cycle Costing - Economic evaluation techniques – Discounting and Non-Discounting - ESCO concept – PAT scheme"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "energy-auditing-jntuk-r23-mech-4-1",
+        "title": "Energy Auditing - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Energy Auditing syllabus: energy management, audit methods, instruments, efficiency, economic analysis and conservation opportunities."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-quantum-science-and-technology",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Quantum Science and Technology",
+      "category": "OpenElective",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Fundamentals of Quantum Mechanics: Historical background: Blackbody radiation, photoelectric effect, and Compton scattering; Dual nature of light and matter; De Broglie hypothesis; Schrödinger equation; Free particle, infinite potential well, step potential; Operators and observables: position, momentum, Hamiltonian; Commutation relations and uncertainty principle; Quantum postulates and measurement theory; Eigenvalues, eigenfunctions."
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Quantum Information Theory: Classical vs. quantum information; Qubit representation using Bloch sphere; Quantum superposition and quantum entanglement; Dirac notation (bra-ket), tensor products, and composite systems; Bell states and EPR paradox; Quantum gates: Pauli-X, Y, Z; Hadamard; Phase; T; CNOT; Quantum circuit models and notation; Measurement in computational basis; Quantum teleportation and no-cloning theorem; Quantum state tomography (introductory)"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "Quantum Computing: Classical computing review and limitations; Quantum parallelism and interference; Deutsch and Deutsch-Jozsa algorithms; Grover’s search algorithm, Oracle and amplitude amplification; Shor’s factoring algorithm (overview and significance); Quantum Fourier Transform (QFT); Quantum error correction: Bit-flip, phase-flip, and Shor’s 9-qubit code; Introduction to quantum programming: Qiskit, Cirq, IBM Quantum Experience (overview)"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "Quantum Communication: Introduction to quantum cryptography; Quantum key distribution (QKD): BB84 protocol; Entanglement-based QKD: Ekert protocol (E91); Eavesdropping and security of QKD; Quantum teleportation (circuit and protocol); Quantum dense coding; Quantum networks and entanglement swapping; Role of quantum repeaters; Single-photon sources and detectors; Implementation challenges (loss, decoherence, noise)"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Quantum Technologies and Applications: Quantum sensors: magnetometry, gravimetry; Quantum metrology: standard time, atomic clocks; Quantum imaging and lithography; Quantum materials: topological insulators, graphene, quantum dots; NV centers in diamonds for sensing; Hardware platforms: Superconducting qubits, Trapped ions, Photonic quantum processors; Quantum supremacy and NISQ era; Global initiatives: IBM, Google, D- Wave, IonQ, India’s NQM; Ethical concerns and future prospects"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "quantum-science-and-technology-jntuk-r23-mech-4-1",
+        "title": "Quantum Science and Technology - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Quantum Science and Technology syllabus: quantum mechanics, information, computing, communication, sensing and hardware."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-mechatronics-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Mechatronics Lab",
+      "category": "SkillEnhancement",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 4,
+        "C": 2
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "1. DYNA 1750 Transducers Kit :- a. Characteristics of LVDT b. Principle & Characteristics of Strain Gauge c. Characteristics of Summing Amplifier d. Characteristics of Reflective Opto Transducer 2. PLC PROGRAMMING & Simulation of Allen Bradley, Siemens or IEC Ladder Using Automation Studio a. Ladder programming on Logic gates ,Timers (TON,TOFF) &counters (UP,DOWN) b. Ladder Programming for digital &Analogy sensors c. Ladder programming & Simulations of Virtual System such as Traffic Light control, Washing machine, Garage Door, Water level control, Lift control, Conveyor Belt etc. d. Ladder programming to control circuits such as single solenoid spring return latch circuit, double solenoid Hydraulic / Pneumatic circuits, Self-Reciprocating Hydraulic / Pneumatic Circuit. 3. AUTOMATION STUDIO SOFTWARE (Design, Simulate & Analyze) Course Outcomes: At the end of the course, student will be able to CO1 Analyze and interpret the response of LVDT, strain gauges, opto transducers, and amplifiers. CO2 Design and simulate PLC programs for sensors, actuators, and process control applications. CO3 Create and simulate control circuits with various hydraulic and pneumatic configurations including PID-based position control. CO4 Implement control algorithms and analyze system responses using MATLAB and SIMULINK. a. Introduction to Automation studio & its control. b. Draw & Simulate Hydraulic circuits for series &parallel cylinders connection, Accumulator circuit, Pressure intensifier circuit, Simple Electro- Hydraulic Electro - Pneumatic circuits (Plot Waveforms for different parameters). c. Design & Simulate Meter-in, Meter-out, Regenerative circuit, sequencing circuit, traverse and feed hydraulic circuit, hydraulic press and clamping. d. Position Control of Proportional Servo Valve Circuit using PID Feedback controller. 4. MATLAB Programming a. Sample programmes on MATLAB b. Simulation and analysis of PID controller using SIMULINK"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mechatronics-lab-jntuk-r23-mech-4-1",
+        "title": "Mechatronics Lab - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Mechatronics Lab: sensors, actuators, PLCs, microcontrollers, pneumatic and hydraulic control, interfacing and automation experiments."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-constitution-of-india",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Constitution of India",
+      "category": "MandatoryNonCredit",
+      "credits": {
+        "L": 2,
+        "T": 0,
+        "P": 0,
+        "C": 0
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Unit I",
+          "topics": [
+            "Introduction to Indian Constitution: Constitution meaning of the term, Indian Constitution - Sources and constitutional history, Features - Citizenship, Preamble, Fundamental Rights and Duties, Directive Principles of State Policy. Learning outcomes: After completion of this unit student will  Understand the concept of Indian constitution  Apply the knowledge on directive principle of state policy  Analyze the History, features of Indian constitution  Evaluate Preamble Fundamental Rights and Duties"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Unit II",
+          "topics": [
+            "Union Government and its Administration Structure of the Indian Union: Federalism, Centre- State relationship, President: Role, power and position, PM and Council of ministers, Cabinet and Central Secretariat, Lok Sabha, Rajya Sabha, The Supreme Court and High Court: Powers and Functions; Learning outcomes:-After completion of this unit student will ● Understand the structure of Indian government ● Differentiate between the state and central government ● Explain the role of President and Prime Minister ● Know the Structure of supreme court and High court"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Unit III",
+          "topics": [
+            "State Government and its Administration Governor - Role and Position - CM and Council of ministers, State Secretariat: Organisation, Structure and Functions. Learning outcomes: After completion of this unit student will ● Understand the structure of state government ● Analyze the role Governor and Chief Minister ● Explain the role of state Secretariat ● Differentiate between structure and functions of state secretariat"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Unit IV",
+          "topics": [
+            "A. Local Administration - District’s Administration Head - Role and Importance, Municipalities – Mayor and role of Elected Representative - CEO of Municipal Corporation PachayatiRaj: Functions PRI: ZilaPanchayat, Elected officials and their roles, CEO Zilla Panchayat: Block level Organizational Hierarchy - (Different departments), Village level - Role of Elected and Appointed officials - Importance of grass root democracy. Learning outcomes: - After completion of this unit student will  Understand the local Administration  Compare and contrast district administration role and importance  Analyze the role of Myer and elected representatives of Municipalities  Evaluate Zilla Panchayat block level organization"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Unit V",
+          "topics": [
+            "Election Commission: Election Commission- Role of Chief Election Commissioner and Election Commissionerate State Election Commission: Functions of Commissions for the welfare of SC/ST/OBC and women Learning outcomes: - After completion of this unit student will  Know the role of Election Commission apply knowledge  Contrast and compare the role of Chief Election commissioner and Commissionerate  Analyze role of state election commission  Evaluate various commissions of viz SC/ST/OBC and women"
+          ]
+        }
+      ],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "constitution-of-india-jntuk-r23-mech-4-1",
+        "title": "Constitution of India - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Constitution of India syllabus: constitutional history, rights and duties, government institutions, local administration and elections."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "verified",
+        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-4-1-evaluation-of-industry-internship",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 1,
+      "year_sem_label": "4-1",
+      "subject_code": null,
+      "name": "Evaluation of Industry Internship",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 0,
+        "C": 2
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "evaluation-of-industry-internship-jntuk-r23-mech-4-1",
+        "title": "Industry Internship Evaluation - MECH 4-1",
+        "meta_description": "JNTUK R23 MECH 4-1 Evaluation of Industry Internship (2 credits), listed without detailed evaluation guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: the official course structure provides the title and credits but no detailed evaluation or implementation guidelines."
+    },
+    {
+      "id": "r23-mech-4-2-internship-and-project",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 4,
+      "semester": 2,
+      "year_sem_label": "4-2",
+      "subject_code": null,
+      "name": "Internship and Project",
+      "category": "Internship",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 24,
+        "C": 12
+      },
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "internship-and-project-jntuk-r23-mech-4-2",
+        "title": "Internship and Project - MECH 4-2",
+        "meta_description": "JNTUK R23 MECH 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed guidelines."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
+        "retrieved_date": "2026-07-12",
+        "status": "needs_verification",
+        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+      },
+      "notes": "NEEDS VERIFICATION: the official course structure provides the title and credits but no detailed evaluation or implementation guidelines."
     }
   ]
 }

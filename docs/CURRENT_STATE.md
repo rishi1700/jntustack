@@ -28,22 +28,22 @@ Current JSON/build state:
 
 | Metric | Count |
 | --- | ---: |
-| Subjects | 401 |
-| Verified subjects | 363 |
-| Needs verification subjects | 37 |
+| Subjects | 427 |
+| Verified subjects | 387 |
+| Needs verification subjects | 39 |
 | Placeholder subjects | 1 |
 | Colleges | 376 |
 | Branch profiles | 6 |
-| Search docs | 745 |
-| Sitemap URLs | 372 |
+| Search docs | 769 |
+| Sitemap URLs | 396 |
 | Migration files | 24 |
 
 The parity constants in `lib/db-json.js` currently expect:
 
-- `verifiedSubjects: 363`
+- `verifiedSubjects: 387`
 - `colleges: 376`
 - `branchProfiles: 6`
-- `searchDocs: 745`
+- `searchDocs: 769`
 
 ## Verified/Draft State
 
