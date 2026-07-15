@@ -15,6 +15,31 @@ const DRAFT_META_PATTERNS = [
   /\bdraft\b/i,
   /\bunverified\b/i,
 ];
+const VERIFIED_RECORD_STALE_PATTERNS = [
+  /\bneeds verification\b/i,
+  /\bbefore (?:flipping|marking|promoting)[^.]*\bverified\b/i,
+  /\bstatus\s*:\s*(?:draft|needs_verification)\b/i,
+];
+// These require table/heading syntax so legitimate topics such as "reference
+// models" or "textbook concepts" do not look like PDF extraction artifacts.
+const VERIFIED_TOPIC_ARTIFACT_PATTERNS = [
+  {
+    label: 'raw semester/course boundary header',
+    pattern: /\b(?:I|II|III|IV|[1-4](?:st|nd|rd|th)?)\s+Year\s*[-–—]?\s*(?:I|II|[12](?:st|nd)?)\s+Semester\b/i,
+  },
+  {
+    label: 'raw L-T-P-C table header',
+    pattern: /\bL\s*(?:[-–—|]\s*)?T\s*(?:[-–—|]\s*)?P\s*(?:[-–—|]\s*)?C\b\s*[:=-]?\s*\d+(?:\.\d+)?(?:\s+\d+(?:\.\d+)?){3}\b/i,
+  },
+  {
+    label: 'bibliography section label',
+    pattern: /\b(?:text\s*books?|reference\s*books?)\b(?:\s*:|\s+(?=\d+\s*[.)]))/i,
+  },
+  {
+    label: 'course outcomes section label',
+    pattern: /\bcourse\s+outcomes?\b(?:\s*:|\s+(?=(?:at\s+the\s+end\b|CO\s*[-:]?\s*\d+\b|\d+\s*[.)])))/i,
+  },
+];
 const PUBLIC_BRANCH_COUNT = 6;
 
 function walk(dir, predicate = () => true) {
@@ -76,6 +101,23 @@ function pathForHtmlFile(file) {
 
 function canonicalSubjectPath(subject) {
   return `/${subject.seo?.slug || subject.id}/`;
+}
+
+function findVerifiedTopicArtifacts(subject) {
+  const failures = [];
+  for (const [unitIndex, unit] of (subject.units || []).entries()) {
+    for (const [topicIndex, topic] of (unit?.topics || []).entries()) {
+      if (typeof topic !== 'string') continue;
+      const normalizedTopic = topic.replace(/\s+/g, ' ').trim();
+      const matchedLabels = VERIFIED_TOPIC_ARTIFACT_PATTERNS
+        .filter(({ pattern }) => pattern.test(normalizedTopic))
+        .map(({ label }) => label);
+      if (!matchedLabels.length) continue;
+      const unitLabel = unit?.number ?? unitIndex + 1;
+      failures.push(`${subject.id} unit ${unitLabel} topic ${topicIndex + 1} contains ${matchedLabels.join(' and ')}`);
+    }
+  }
+  return failures;
 }
 
 function parseSitemapEntries() {
@@ -288,6 +330,10 @@ function auditIndexingReadiness() {
       const metaDescription = subject.seo?.meta_description || '';
       const stalePattern = DRAFT_META_PATTERNS.find(pattern => pattern.test(metaDescription));
       if (stalePattern) failures.push(`verified subject has stale draft-style meta description: ${subject.id}`);
+      const recordNotes = [subject.notes, subject.source?.college_source_note].filter(Boolean).join(' ');
+      const staleRecordPattern = VERIFIED_RECORD_STALE_PATTERNS.find(pattern => pattern.test(recordNotes));
+      if (staleRecordPattern) failures.push(`verified subject has stale draft-style record notes: ${subject.id}`);
+      failures.push(...findVerifiedTopicArtifacts(subject));
 
       const target = distTargetForPathname(canonicalPath);
       const html = fs.existsSync(target) ? fs.readFileSync(target, 'utf-8') : '';

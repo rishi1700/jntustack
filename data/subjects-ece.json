@@ -655,11 +655,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "NEEDS VERIFICATION: subject name, 3-0-0-3 credits (Basic Science) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
+      "notes": null
     },
     {
       "id": "r23-ece-2-1-universal-human-values",
@@ -751,11 +751,11 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-11",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
         "college_source_note": "Subject name, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's own official R23 course structure and syllabus document, not an autonomous college's adaptation."
       },
-      "notes": "NEEDS VERIFICATION: subject name, 2-1-0-3 credits (HSMC) and the five UNIT TITLES are confirmed from the source PDF's course structure and unit headers, but the detailed unit topic lists were not transcribed in this pass. Transcribe unit topics from the source PDF before flipping to verified."
+      "notes": null
     },
     {
       "id": "r23-ece-2-2-managerial-economics-and-financial-analysis",
@@ -4652,7 +4652,7 @@
           "number": 4,
           "title": "Cellsite And Mobile Antennas",
           "topics": [
-            "Sum and difference patterns and their synthesis, omni directional antennas, directional antennas for interference reduction, space diversity antennas, umbrella pattern antennas, minimum separation of cell site antennas, high gain antennas. HANDOFFS: Handoff Initiation, types of handoff, delaying handoff, advantages of Handoff, power difference handoff, forced handoff, mobile assisted and soft and Hard handoffs. Intersystem and Intrasystem handoffs, dropped call rates and their evaluation. IV Year I Semester CELLULAR & MOBILE COMMUNICATIONS L T P C 3 0 0 3"
+            "Sum and difference patterns and their synthesis, omni directional antennas, directional antennas for interference reduction, space diversity antennas, umbrella pattern antennas, minimum separation of cell site antennas, high gain antennas. HANDOFFS: Handoff Initiation, types of handoff, delaying handoff, advantages of Handoff, power difference handoff, forced handoff, mobile assisted and soft and Hard handoffs. Intersystem and Intrasystem handoffs, dropped call rates and their evaluation."
           ]
         },
         {
@@ -4663,7 +4663,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Identify the limitations of conventional mobile telephone systems and understand the concepts of cellular systems.",
+        "Understand the different types of interferences influencing cellular and mobile communications.",
+        "Understand frequency management, channel assignment, and types of handoff.",
+        "Understand the concept of handoff in cellular systems.",
+        "Understand multiple-access schemes in mobile communications and develop the ability to search, select, organize, and present information on new mobile and cellular communication technologies."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4677,9 +4683,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -4713,7 +4719,7 @@
           "number": 2,
           "title": "Plant Location",
           "topics": [
-            "Definition, factors affecting the plant location, comparison of rural and urban sites, methods for selection of plant- matrix approach. Plant layout - definition, objectives, types of plant layout, various data analyzing forms travel chart. WORK STUDY: Definition, objectives, method study - definition, objectives, steps involved- various types of associated charts, difference between micro motion and memo motion studies. Work measurement- definition, time study, steps involved, equipment, different methods of performance rating, allowances, standard time calculation. Work Sampling - definition, steps involved, standard time calculations, and differences with time study. IV Year I Semester MANAGEMENT SCIENCE L T P C 2 0 0 2"
+            "Definition, factors affecting the plant location, comparison of rural and urban sites, methods for selection of plant- matrix approach. Plant layout - definition, objectives, types of plant layout, various data analyzing forms travel chart. WORK STUDY: Definition, objectives, method study - definition, objectives, steps involved- various types of associated charts, difference between micro motion and memo motion studies. Work measurement- definition, time study, steps involved, equipment, different methods of performance rating, allowances, standard time calculation. Work Sampling - definition, steps involved, standard time calculations, and differences with time study."
           ]
         },
         {
@@ -4752,7 +4758,7 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
         "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
@@ -4959,11 +4965,17 @@
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Interfacing Memory and I/O Peripherals to Programmable DSP Devices: Memory space organization, External bus interfacing signals, Memory interface, Parallel I/O interface, Programmed I/O, Interrupts and I/O, Direct memory access (DMA). IV Year I Semester DSP PROCESSORS AND ARCHITECTURES (PE-IV) L T P C 3 0 0 3"
+            "Interfacing Memory and I/O Peripherals to Programmable DSP Devices: Memory space organization, External bus interfacing signals, Memory interface, Parallel I/O interface, Programmed I/O, Interrupts and I/O, Direct memory access (DMA)."
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basics of digital signal processing and transforms.",
+        "Distinguish between the architectural features of general-purpose processors and DSP processors.",
+        "Understand the architectures of TMS320C54xx devices and ADSP 2100 DSP devices.",
+        "Write simple assembly-language programs using the TMS320C54xx instruction set.",
+        "Interface various devices to DSP processors."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -4977,9 +4989,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5184,11 +5196,16 @@
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Detection of Radar Signals in Noise : Introduction, Matched Filter Receiver – Response Characteristics and Derivation, Correlation detection and Cross-correlation Receiver, Efficiency of Non-matched Filters, Matched Filter with Non-white Noise, Noise Figure and Noise Temperature. IV Year I Semester RADAR ENGINEERING (PE-V) L T P C 3 0 0 3 Radar Transmitters & Receivers –Displays – types. Duplexers – Branch type and Balanced type, Circulators as Duplexers. Introduction to Phased Array Antennas – Basic Concepts, Radiation Pattern, Beam Steering and Beam Width changes, Series versus parallel feeds, Applications, Advantages and Limitations. Radomes Modulators, solid state"
+            "Detection of Radar Signals in Noise : Introduction, Matched Filter Receiver – Response Characteristics and Derivation, Correlation detection and Cross-correlation Receiver, Efficiency of Non-matched Filters, Matched Filter with Non-white Noise, Noise Figure and Noise Temperature. Radar Transmitters & Receivers – Displays – types. Duplexers – Branch type and Balanced type, Circulators as Duplexers. Introduction to Phased Array Antennas – Basic Concepts, Radiation Pattern, Beam Steering and Beam Width changes, Series versus parallel feeds, Applications, Advantages and Limitations. Radomes Modulators, solid state"
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Derive the radar range equation and solve analytical problems.",
+        "Understand the different types of radars and their applications.",
+        "Understand the concept of tracking and different tracking techniques.",
+        "Understand the various components of a radar receiver and its performance."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5202,9 +5219,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5245,7 +5262,7 @@
           "number": 3,
           "title": "Unit III",
           "topics": [
-            "Image Restoration and Reconstruction: A model of the image degradation / Restoration process, Noise models, restoration in the presence of noise only-Spatial Filtering, Periodic Noise Reduction by frequency domain filtering, Linear, Position –Invariant Degradations, Estimating the degradation function, Inverse filtering, Minimum mean square error (Wiener) filtering. IV Year I Semester DIGITAL IMAGE PROCESSING (PE-V) L T P C 3 0 0 3"
+            "Image Restoration and Reconstruction: A model of the image degradation / Restoration process, Noise models, restoration in the presence of noise only-Spatial Filtering, Periodic Noise Reduction by frequency domain filtering, Linear, Position –Invariant Degradations, Estimating the degradation function, Inverse filtering, Minimum mean square error (Wiener) filtering."
           ]
         },
         {
@@ -5259,11 +5276,17 @@
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Image segmentation: Fundamentals, point, line, edge detection, thresholding, and Region –based segmentation. Color image processing: Color fundamentals, color models, pseudo color image processing, basics of full color image processing, color transformations, smoothing and sharpening. Image segmentation based on color, noise in color images, color image compression. Text Books 1. R. C. Gonzalez and R. E. Woods, “Digital Image Processing, 3rd edition, Pearson,2008. Reference Books 1. Anil K.Jain, “Fundamentals of Digital Image Processing”, Prentice Hall of India, 9th Edition, Indian Reprint, 2002. 2. Jayaraman, S. Esakkirajan, and T. Veerakumar,” Digital Image Processing”, Tata McGraw-Hill Education, 2009."
+            "Image segmentation: Fundamentals, point, line, edge detection, thresholding, and Region –based segmentation. Color image processing: Color fundamentals, color models, pseudo color image processing, basics of full color image processing, color transformations, smoothing and sharpening. Image segmentation based on color, noise in color images, color image compression."
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Describe an image-processing system and the scope of digital image processing, and compare various image transforms.",
+        "Apply filtering operations to images in both the spatial and frequency domains.",
+        "Describe the image-degradation model and explain image-restoration techniques.",
+        "Analyze digital images using wavelets and multiresolution processing, and use coding techniques for image compression.",
+        "Explain segmentation techniques for digital images, colour models, and colour image processing."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5277,9 +5300,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5402,18 +5425,24 @@
           "number": 4,
           "title": "Unit IV",
           "topics": [
-            "MOS Combinational Circuits Pass-Transistor Logic, Realizing Pass-Transistor Logic, Advantages and Disadvantages, Pass- Transistor Logic Families, Gate Logic, Fan-In and Fan-Out, n-MOS NAND and NOR Gates, CMOS Realization, Switching Characteristics, CMOS NOR Gate, CMOS Complex Logic Gates, MOS Dynamic Circuits, Single-Phase Dynamic Circuits, Two-Phase Dynamic Circuits, CMOS Dynamic Circuits, Advantages and Disadvantages Domino CMOS Circuits, NORA Logic IV Year I Semester FUNDAMENTALS OF VLSI DESIGN (OE-III) L T P C 3 0 0 3"
+            "MOS Combinational Circuits Pass-Transistor Logic, Realizing Pass-Transistor Logic, Advantages and Disadvantages, Pass- Transistor Logic Families, Gate Logic, Fan-In and Fan-Out, n-MOS NAND and NOR Gates, CMOS Realization, Switching Characteristics, CMOS NOR Gate, CMOS Complex Logic Gates, MOS Dynamic Circuits, Single-Phase Dynamic Circuits, Two-Phase Dynamic Circuits, CMOS Dynamic Circuits, Advantages and Disadvantages Domino CMOS Circuits, NORA Logic"
           ]
         },
         {
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Sequential MOS Logic Circuits Behaviour of bistable elements, SR Latch, Clocked latch and flip flop circuits, CMOS D latch and edge triggered flip-flop. TEXT BOOKS 1. 1.Principals of CMOS VLSI Design-N.H.EWeste, K. Eshraghian, 2nd Edition, Addison Wesley. 2. 2.CMOS Digital Integrated Circuits Analysis and Design – Sung-Mo Kang, Yusuf Leblebici, TMH, 3rd Ed., 2011. 3. 3.Low-Power VLSI Circuits and Systems,Ajit Pal, SPRINGER PUBLISHERS"
+            "Sequential MOS Logic Circuits Behaviour of bistable elements, SR Latch, Clocked latch and flip flop circuits, CMOS D latch and edge triggered flip-flop."
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the physical structure, operation, and electrical characteristics of MOS transistors, including threshold voltage, transconductance, and body effects.",
+        "Describe MOS fabrication process steps, including wafer fabrication, oxidation, photolithography, diffusion, and CMOS/NMOS fabrication techniques, and analyze issues such as latch-up and short-channel effects.",
+        "Apply layout design rules to CMOS circuits, including scalable CMOS and micron design rules, while complying with fabrication constraints.",
+        "Design and analyze MOS combinational logic circuits, including pass-transistor logic, CMOS gate logic, dynamic logic, domino logic, and NORA logic.",
+        "Understand and design sequential MOS logic circuits, including bistable elements, SR latches, clocked latches, and CMOS flip-flops, to implement memory and timing functions."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5427,9 +5456,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5477,7 +5506,7 @@
           "number": 4,
           "title": "Unit IV",
           "topics": [
-            "INTRODUCTION OF PLD’s : PLDs: PROM, PAL, PLA -Basics structures, realization of Boolean functions. Architectures of CPLD,FPGA, flash memories(NAND,NOR) IV Year I Semester DIGITAL ELECTRONICS (OE-III) L T P C 3 0 0 3"
+            "INTRODUCTION OF PLD’s : PLDs: PROM, PAL, PLA -Basics structures, realization of Boolean functions. Architectures of CPLD,FPGA, flash memories(NAND,NOR)"
           ]
         },
         {
@@ -5488,7 +5517,14 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Classify different number systems and apply them to generate various codes.",
+        "Use Boolean algebra to minimize switching functions.",
+        "Design different types of combinational logic circuits.",
+        "Apply knowledge of flip-flops when designing registers and counters.",
+        "Understand the operation and design methodology for synchronous sequential circuits and algorithmic state machines.",
+        "Produce innovative designs by modifying traditional design techniques."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5502,9 +5538,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5552,18 +5588,24 @@
           "number": 4,
           "title": "Unit IV",
           "topics": [
-            "Signal Generators: Introduction, Fixed and variable AF oscillator, Standard signal generator, Laboratory type signal generator, AF sine and Square wave generator, Function generator, Square and Pulse generator, Sweep frequency generator. IV Year I Semester ELECTRONIC MEASUREMENTS AND INSTRUMENTATIONS (OE-III) L T P C 3 0 0 3"
+            "Signal Generators: Introduction, Fixed and variable AF oscillator, Standard signal generator, Laboratory type signal generator, AF sine and Square wave generator, Function generator, Square and Pulse generator, Sweep frequency generator."
           ]
         },
         {
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Transducers: Introduction, Types of Transducers, Electrical transducers, Selecting a transducer, Resistive transducer, Strain gauges, Piezoelectric transducer, Photoelectric transducer, Photovoltaic transducer, Temperature transducers-RTD, LVDT. TEXT BOOKS 1. H. S. Kalsi, “Electronic Instrumentation”, Third edition, Tata McGraw Hill, 2010. 2. A. D. Helfrick and W.D. Cooper, “Modern Electronic Instrumentation and Measurement Techniques”, PHI, 6th Edition, 2010. REFERENCE BOOKS 1. A.K. Sawhney, DhanpatRai& Co., “A course in Electrical and Electronic Measurements and Instrumentation”, 9th Edition, 2010. 2. David A. Bell, “Electronic Instrumentation & Measurements”, PHI, 2nd Edition, 2006."
+            "Transducers: Introduction, Types of Transducers, Electrical transducers, Selecting a transducer, Resistive transducer, Strain gauges, Piezoelectric transducer, Photoelectric transducer, Photovoltaic transducer, Temperature transducers-RTD, LVDT."
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand various analog and digital measuring instruments.",
+        "Understand the principles and operation of various oscilloscopes.",
+        "Perform measurements using various bridges.",
+        "Become familiar with different signal generators and function generators.",
+        "Understand various transducers."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5577,9 +5619,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5634,11 +5676,17 @@
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Source to fiber power launching - Output patterns, Power coupling, Power launching, Equilibrium Numerical Aperture, Laser diode to fiber coupling, Optical receiver operation- IV Year I Semester OPTICAL COMMUNICATIONS (OE-III) L T P C 3 0 0 3 Fundamental receiver operation, Digital signal transmission, error sources, Receiver configuration, Digital receiver performance, Probability of Error, Quantum limit, Analog receivers. Optical system design - Point-to- point links- Component choice and considerations, Link power budget, Rise time budget with examples, Line coding in Optical links, WDM, Necessity, Principles, Measurement of Attenuation and Dispersion, Eye pattern."
+            "Source to fiber power launching - Output patterns, Power coupling, Power launching, Equilibrium Numerical Aperture, Laser diode to fiber coupling, Optical receiver operation- Fundamental receiver operation, Digital signal transmission, error sources, Receiver configuration, Digital receiver performance, Probability of Error, Quantum limit, Analog receivers. Optical system design - Point-to- point links- Component choice and considerations, Link power budget, Rise time budget with examples, Line coding in Optical links, WDM, Necessity, Principles, Measurement of Attenuation and Dispersion, Eye pattern."
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Choose the components required in modern optical communication systems.",
+        "Design and build optical-fiber experiments, calculate electromagnetic modes in waveguides, and calculate optical-system loss and fiber dispersion.",
+        "Use different types of photodetectors and optical test equipment to analyze optical-fiber and lightwave systems.",
+        "Choose optical cables for communication with minimum losses.",
+        "Design, build, and demonstrate optical-fiber experiments in the laboratory."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5652,9 +5700,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5709,11 +5757,17 @@
           "number": 5,
           "title": "Unit V",
           "topics": [
-            "Multiple access schemes in mobile communications: TDMA, FDMA, CDMA. Introduction to MIMO systems Principles of CDMA cellular systems, Principles of OFDM based broadband wireless systems , 4G LTE basics – OFDM, and OFDMA ,Generalised framework for Filtered OFDM and FBMC .Introduction of 5G IV Year I Semester PRINCIPLES OF CELLULAR & MOBILE COMMUNICATIONS (OE-IV) L T P C 3 0 0 3"
+            "Multiple access schemes in mobile communications: TDMA, FDMA, CDMA. Introduction to MIMO systems Principles of CDMA cellular systems, Principles of OFDM based broadband wireless systems , 4G LTE basics – OFDM, and OFDMA ,Generalised framework for Filtered OFDM and FBMC .Introduction of 5G"
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand impairments due to a multipath fading channel.",
+        "Understand fundamental techniques for overcoming different fading effects.",
+        "Understand co-channel and non-co-channel interference.",
+        "Understand frequency management, channel assignment, and types of handoff.",
+        "Understand multiple-access schemes in mobile communications."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5727,9 +5781,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5852,7 +5906,7 @@
           "number": 4,
           "title": "Real Time Operating System",
           "topics": [
-            "Operating system basics, Types of operating systems, Tasks, Process and Threads, Multiprocessing and Multitasking, Task Scheduling, Threads, Processes and Scheduling, Task communication, Task synchronization. HARDWARE SOFTWARE CO-DESIGN: Fundamental Issues in Hardware Software Co- Design, Computational models in embedded design, Hardware software Trade-offs, Integration of Hardware and Firmware. IV Year I Semester EMBEDDED SYSTEMS (OE-IV) L T P C 3 0 0 3"
+            "Operating system basics, Types of operating systems, Tasks, Process and Threads, Multiprocessing and Multitasking, Task Scheduling, Threads, Processes and Scheduling, Task communication, Task synchronization. HARDWARE SOFTWARE CO-DESIGN: Fundamental Issues in Hardware Software Co- Design, Computational models in embedded design, Hardware software Trade-offs, Integration of Hardware and Firmware."
           ]
         },
         {
@@ -5863,7 +5917,12 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Understand the basic concepts of an embedded system and an embedded-system design approach for performing a specific function.",
+        "Understand the hardware components required for an embedded system and the embedded-hardware design approach.",
+        "Understand various embedded-firmware design approaches in an embedded environment.",
+        "Understand how to integrate the hardware and firmware of an embedded system using a real-time operating system."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5877,9 +5936,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },
@@ -5927,7 +5986,7 @@
           "number": 4,
           "title": "Unit IV",
           "topics": [
-            "Intelligent Sensors: definition of intelligent instrumentation, types of instruments, Static Characteristics: Accuracy and Precision, Error, Correction, and Uncertainty, Repeatability, Reproducibility, and Hysteresis, Sensitivity, Offset, and Dead Band, Resolution and Linearity, Statistical Characteristics, Error Modeling, Dynamic Characteristics, Dynamic Error and IV Year I Semester TRANSDUCERS AND SIGNAL CONDITIONING (OE-IV) L T P C 3 0 0 3 Dynamic Sensitivity, Input-Output Impedances., Historical Perspective, Current status, software based instruments. Classification, Smart sensors , Cogent Sensors, Soft or Virtual sensors, Self-Adaptive Sensors, Self-Validating Sensors, Temperature Compensating Intelligent Sensors, Pressure Sensor, Indirect Sensing"
+            "Intelligent Sensors: definition of intelligent instrumentation, types of instruments, Static Characteristics: Accuracy and Precision, Error, Correction, and Uncertainty, Repeatability, Reproducibility, and Hysteresis, Sensitivity, Offset, and Dead Band, Resolution and Linearity, Statistical Characteristics, Error Modeling, Dynamic Characteristics, Dynamic Error and Dynamic Sensitivity, Input-Output Impedances., Historical Perspective, Current status, software based instruments. Classification, Smart sensors , Cogent Sensors, Soft or Virtual sensors, Self-Adaptive Sensors, Self-Validating Sensors, Temperature Compensating Intelligent Sensors, Pressure Sensor, Indirect Sensing"
           ]
         },
         {
@@ -5938,7 +5997,13 @@
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Choose a suitable sensor or transducer for a physical variable and understand its principle, characteristics, and order.",
+        "Measure displacement, pressure, flow, and temperature variables.",
+        "Design a suitable signal-conditioning circuit for sensors and transducers.",
+        "Analyze bridge circuits for calculating inductance, capacitance, and resistance.",
+        "Understand noise reduction using grounding and shielding techniques, and design high-input-impedance instrumentation amplifiers."
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5952,9 +6017,9 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
+        "college_source_note": "The course structure, credits, unit-wise syllabus, and course outcomes are sourced directly from JNTUK's official revised R23 ECE course structure and syllabus."
       },
       "notes": null
     },

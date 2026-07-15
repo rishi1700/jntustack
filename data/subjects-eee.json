@@ -5186,11 +5186,17 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
-        "college_source_note": "EEE placement and credits are confirmed in JNTUK’s official EEE structure; the common five-unit syllabus is published in the official ECE document linked here and matches CE and Mechanical versions."
+        "college_source_note": "EEE placement and credits are confirmed in JNTUK’s official EEE structure; the common five-unit syllabus is published in the official ECE document linked here and matches CE and Mechanical versions.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
+            "label": "Official JNTUK R23 Electrical and Electronics Engineering course structure and syllabus"
+          }
+        ]
       },
-      "notes": "EEE placement source: https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf. The EEE PDF has a heading-only detail page; official ECE pages 183-184 provide the common syllabus used here."
+      "notes": "The EEE placement source is listed under additional official sources. The EEE PDF has a heading-only detail page; official ECE pages 183-184 provide the common syllabus used here."
     }
   ]
 }

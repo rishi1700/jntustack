@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-12 after the cross-branch syllabus reconciliation,
-canonical consolidation, and public SEO implementation.
+Last updated: 2026-07-15 after the verified-content extraction cleanup and
+integrity-audit hardening.
 
 ## Architecture
 
@@ -62,6 +62,16 @@ Recent RC13 verified promotions:
 
 Recent integrity corrections:
 
+- PDF page-boundary headers and bibliography tails were removed from affected
+  ECE 4-1 unit topics, and eleven source-published course-outcome sets were
+  restored to their structured fields. Management Science remains without
+  outcomes because the official section publishes objectives only.
+- Mechanical Mechatronics Lab experiments and outcomes were separated into
+  their structured fields, and EEE Constitution of India now records both
+  official JNTUK evidence documents as structured sources.
+- The site audit now rejects verified records containing raw semester/L-T-P-C
+  boundaries, embedded bibliography or course-outcome headings, and stale
+  draft-style verification notes.
 - CSE, ECE, EEE, IT, Mechanical, and Civil subjects through 3-2 were
   reconciled against JNTUK's official R23 PDFs.
 - Twenty-two missing official open-elective subjects were added across ECE,

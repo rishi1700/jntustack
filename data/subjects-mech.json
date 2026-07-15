@@ -5384,11 +5384,19 @@
           "number": 1,
           "title": "Laboratory Experiments",
           "topics": [
-            "1. DYNA 1750 Transducers Kit :- a. Characteristics of LVDT b. Principle & Characteristics of Strain Gauge c. Characteristics of Summing Amplifier d. Characteristics of Reflective Opto Transducer 2. PLC PROGRAMMING & Simulation of Allen Bradley, Siemens or IEC Ladder Using Automation Studio a. Ladder programming on Logic gates ,Timers (TON,TOFF) &counters (UP,DOWN) b. Ladder Programming for digital &Analogy sensors c. Ladder programming & Simulations of Virtual System such as Traffic Light control, Washing machine, Garage Door, Water level control, Lift control, Conveyor Belt etc. d. Ladder programming to control circuits such as single solenoid spring return latch circuit, double solenoid Hydraulic / Pneumatic circuits, Self-Reciprocating Hydraulic / Pneumatic Circuit. 3. AUTOMATION STUDIO SOFTWARE (Design, Simulate & Analyze) Course Outcomes: At the end of the course, student will be able to CO1 Analyze and interpret the response of LVDT, strain gauges, opto transducers, and amplifiers. CO2 Design and simulate PLC programs for sensors, actuators, and process control applications. CO3 Create and simulate control circuits with various hydraulic and pneumatic configurations including PID-based position control. CO4 Implement control algorithms and analyze system responses using MATLAB and SIMULINK. a. Introduction to Automation studio & its control. b. Draw & Simulate Hydraulic circuits for series &parallel cylinders connection, Accumulator circuit, Pressure intensifier circuit, Simple Electro- Hydraulic Electro - Pneumatic circuits (Plot Waveforms for different parameters). c. Design & Simulate Meter-in, Meter-out, Regenerative circuit, sequencing circuit, traverse and feed hydraulic circuit, hydraulic press and clamping. d. Position Control of Proportional Servo Valve Circuit using PID Feedback controller. 4. MATLAB Programming a. Sample programmes on MATLAB b. Simulation and analysis of PID controller using SIMULINK"
+            "1. DYNA 1750 Transducers Kit: (a) Characteristics of LVDT; (b) Principle & Characteristics of Strain Gauge; (c) Characteristics of Summing Amplifier; (d) Characteristics of Reflective Opto Transducer",
+            "2. PLC PROGRAMMING & Simulation of Allen Bradley, Siemens or IEC Ladder Using Automation Studio: (a) Ladder programming on Logic gates, Timers (TON, TOFF) & counters (UP, DOWN); (b) Ladder Programming for digital & Analogy sensors; (c) Ladder programming & Simulations of Virtual System such as Traffic Light control, Washing machine, Garage Door, Water level control, Lift control, Conveyor Belt etc.; (d) Ladder programming to control circuits such as single solenoid spring return latch circuit, double solenoid Hydraulic / Pneumatic circuits, Self-Reciprocating Hydraulic / Pneumatic Circuit",
+            "3. AUTOMATION STUDIO SOFTWARE (Design, Simulate & Analyze): (a) Introduction to Automation studio & its control; (b) Draw & Simulate Hydraulic circuits for series & parallel cylinders connection, Accumulator circuit, Pressure intensifier circuit, Simple Electro-Hydraulic Electro-Pneumatic circuits (Plot Waveforms for different parameters); (c) Design & Simulate Meter-in, Meter-out, Regenerative circuit, sequencing circuit, traverse and feed hydraulic circuit, hydraulic press and clamping; (d) Position Control of Proportional Servo Valve Circuit using PID Feedback controller",
+            "4. MATLAB Programming: (a) Sample programmes on MATLAB; (b) Simulation and analysis of PID controller using SIMULINK"
           ]
         }
       ],
-      "course_outcomes": [],
+      "course_outcomes": [
+        "Analyze and interpret the response of LVDT, strain gauges, opto transducers, and amplifiers",
+        "Design and simulate PLC programs for sensors, actuators, and process control applications",
+        "Create and simulate control circuits with various hydraulic and pneumatic configurations including PID-based position control",
+        "Implement control algorithms and analyze system responses using MATLAB and SIMULINK"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
@@ -5402,7 +5410,7 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/6109041773304279376.pdf",
-        "retrieved_date": "2026-07-12",
+        "retrieved_date": "2026-07-15",
         "status": "verified",
         "college_source_note": "The course structure, credits, and unit-wise syllabus are sourced directly from JNTUK's official R23 Mechanical Engineering course structure and syllabus."
       },
