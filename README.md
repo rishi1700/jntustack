@@ -26,6 +26,12 @@ feature-gated and must remain disabled unless explicitly approved.
   support, and known risks.
 - `docs/CONTENT_OPS_RUNBOOK.md` -- content/admin operating procedure from
   source evidence through Git sync, DB parity, and indexing requests.
+- `docs/NLP_CONTENT_AUTOMATION.md` -- planned natural-language request,
+  evidence, Telegram approval, and GitHub-first publishing design. This is a
+  future design, not an active workflow.
+- `docs/AFFILIATE_BOOKS_MONETIZATION.md` -- planned syllabus-bibliography and
+  affiliate-books pilot, including evidence, disclosure, data separation, and
+  rollout guardrails. This is not currently active.
 - Original handoff notes -- historical context only. Do not use old handoff
   text as the source of truth for current counts or operations.
 
