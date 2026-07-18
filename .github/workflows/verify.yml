@@ -1,0 +1,56 @@
+name: verify
+
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: npm
+      - name: Verify sealed publication artifact
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+          REPOSITORY_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+          PUBLICATION_SIGNING_PUBLIC_KEYS_JSON: ${{ vars.PUBLICATION_SIGNING_PUBLIC_KEYS_JSON }}
+        shell: bash
+        run: |
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            if [[ -z "$REPOSITORY_DEFAULT_BRANCH" || "$PR_BASE_REF" != "$REPOSITORY_DEFAULT_BRANCH" ]]; then
+              echo "Verification only trusts the repository default branch as the pull-request base."
+              exit 1
+            fi
+            if git cat-file -e "${PR_BASE_SHA}:scripts/verify-publication-artifact.js"; then
+              git show "${PR_BASE_SHA}:scripts/verify-publication-artifact.js" > "$RUNNER_TEMP/verify-publication-artifact.mjs"
+              node "$RUNNER_TEMP/verify-publication-artifact.mjs"
+            else
+              echo "Trusted publication verifier is absent from the base branch; refusing PR-supplied verifier code."
+              exit 1
+            fi
+          else
+            node scripts/verify-publication-artifact.js
+          fi
+      - run: npm ci
+      - run: npm run build
+      - run: npm run test:parsers
+      - run: npm run test:retrieve
+      - run: npm run test:admin-ui
+      - run: npm run test:content-store
+      - run: npm run audit:site

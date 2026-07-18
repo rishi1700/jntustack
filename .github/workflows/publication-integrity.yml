@@ -1,0 +1,40 @@
+name: publication-integrity
+
+on:
+  pull_request_target:
+    branches: [main]
+    types: [opened, synchronize, reopened, ready_for_review, edited]
+
+permissions:
+  contents: read
+
+jobs:
+  publication-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Require the repository default branch as PR base
+        env:
+          PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+          REPOSITORY_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        shell: bash
+        run: |
+          if [[ -z "$REPOSITORY_DEFAULT_BRANCH" || "$PR_BASE_REF" != "$REPOSITORY_DEFAULT_BRANCH" ]]; then
+            echo "Publication integrity checks only trust the repository default branch as the pull-request base."
+            exit 1
+          fi
+      # pull_request_target keeps this workflow definition on the trusted base.
+      # The untrusted head is read only as data; no head code is executed.
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Run verifier from the trusted base commit
+        env:
+          PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          PUBLICATION_SIGNING_PUBLIC_KEYS_JSON: ${{ vars.PUBLICATION_SIGNING_PUBLIC_KEYS_JSON }}
+        shell: bash
+        run: |
+          git show "${PR_BASE_SHA}:scripts/verify-publication-artifact.js" > "$RUNNER_TEMP/verify-publication-artifact.mjs"
+          node "$RUNNER_TEMP/verify-publication-artifact.mjs"
