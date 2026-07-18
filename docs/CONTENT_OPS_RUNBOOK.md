@@ -348,7 +348,7 @@ The GitHub publisher is the fail-safe default for new releases. Existing rows
 migrated with `publication_mode=legacy` retain their recovery workflow. Set
 `CONTENT_PUBLICATION_MODE=legacy` only as an explicit cutover-recovery override.
 
-Apply all 26 migrations, including
+Confirm all 26 migrations are applied, including
 `026_github_publication_foundation.sql`, then set:
 
 ```sh
@@ -427,14 +427,13 @@ executes PR code.
 Store the private key as base64 in the deployment secret rather than committing
 a PEM file.
 
-GitHub returned `403` when branch protection was checked for the current private
-repository on 2026-07-18 because the account plan does not provide it. Publication
-is therefore an installed but inactive foundation: upgrade the account or make
-the repository public, configure and independently verify the rules above, and
-only then set `GITHUB_PUBLICATION_TRUST_READY=true`. The publisher refuses to
-create PRs while this gate is false. `CODEOWNERS` protects trust-root paths once
-code-owner enforcement is available, and workflow actions are pinned by full
-commit SHA.
+The repository became public on 2026-07-18, so the branch controls that were
+previously unavailable to the private repository can now be configured.
+Publication remains an installed but inactive foundation until those rules are
+configured and independently verified. Only then set
+`GITHUB_PUBLICATION_TRUST_READY=true`. The publisher refuses to create PRs while
+this gate is false. `CODEOWNERS` protects trust-root paths once code-owner
+enforcement is active, and workflow actions are pinned by full commit SHA.
 
 The current `main` branch does not yet contain the base-owned verifier, so the
 first protected publication PR cannot bootstrap it. Make a separately reviewed,

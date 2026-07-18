@@ -78,8 +78,9 @@ New reviewed releases use the GitHub PR publisher by default. Existing rows
 created before migration 026 remain `legacy`; set `CONTENT_PUBLICATION_MODE=legacy`
 only as a deliberate cutover-recovery measure and never change it mid-release.
 
-1. Apply all 26 migrations, including
-   `026_github_publication_foundation.sql`.
+1. Confirm all 26 migrations are applied, including
+   `026_github_publication_foundation.sql`. Production recorded 26/26 applied
+   on 2026-07-18 after a verified logical backup.
 2. Create the private Cloudflare R2 bucket `jntustack-source-evidence` and a
    bucket-scoped object read/write token. Do not expose a public bucket URL.
 3. Register a repository-only GitHub App with Metadata read, Contents
@@ -91,9 +92,9 @@ only as a deliberate cutover-recovery measure and never change it mid-release.
    most recent push by someone other than its pusher, prohibit direct/force
    pushes, and configure no bypass actors. A human must approve and merge every
    publication PR; the GitHub App must never be a reviewer or bypass actor. The
-   current private repository/account plan returned GitHub
-   `403` for branch protection on 2026-07-18; upgrade the account or make the
-   repository public before activating publication.
+   repository became public on 2026-07-18, making the required branch controls
+   available; they must still be configured and independently verified before
+   activating publication.
    Because the current `main` predates the trusted verifier, bootstrap only
    `.github/CODEOWNERS`, the pinned workflows, and
    `scripts/verify-publication-artifact.js` in a separately reviewed one-time
@@ -793,7 +794,7 @@ Use `docs/CURRENT_STATE.md` for current state and
 limited to setup-level reminders:
 
 1. Keep `CONTENT_SOURCE=json` and `ASK_ENABLED=false`.
-2. Complete the GitHub App, private R2, migration 026, branch-protection, and
+2. Complete the GitHub App, private R2, branch protection, and
    notes-only production trial in `docs/CONTENT_OPS_RUNBOOK.md`.
 3. Publish new content through a review PR, required CI, and human merge; then
    verify `/release.json`, `/health`, and `/sitemap.xml` after Hostinger deploys.

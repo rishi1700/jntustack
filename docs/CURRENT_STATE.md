@@ -154,13 +154,15 @@ manual live JSON edit.
 
 New releases default to `CONTENT_PUBLICATION_MODE=github_pr` and fail closed if
 the GitHub/R2 production setup is incomplete. PR creation additionally requires
-`GITHUB_PUBLICATION_TRUST_READY=true`. GitHub returned `403` for branch
-protection on the current private repository/account plan on 2026-07-18, so this
-gate must remain false until the account is upgraded or the repository is made
-public and the required rules are proven. Migration 026 deliberately keeps
-existing release rows in `legacy` mode. Legacy live-apply code is retained only
-for explicit recovery during cutover; it is not the desired path for new
-production publishes.
+`GITHUB_PUBLICATION_TRUST_READY=true`. The repository became public on
+2026-07-18, but the required branch rules are not yet proven, so this gate
+remains false. Migration 026 deliberately keeps existing release rows in
+`legacy` mode. Legacy live-apply code is retained only for explicit recovery
+during cutover; it is not the desired path for new production publishes.
+
+Production MySQL was backed up and migrations 025 and 026 were applied on
+2026-07-18. The migration journal reports 26/26 applied with no partial or
+failed steps; all 27 pre-migration tables were captured in the verified backup.
 
 `main` also predates the base-owned verifier. Activation therefore requires a
 separately reviewed trust-root-only bootstrap of `CODEOWNERS`, the pinned
@@ -198,10 +200,11 @@ validation, proposal review, a sealed release, required CI, and human merge.
 
 ## Known Risks and Deferred Work
 
-- GitHub/R2 publishing must not be treated as active production until migration
-  026, credentials, supported branch/ruleset protection, and the
-  no-public-output trial pass. The current private repository plan cannot enable
-  those controls, so `GITHUB_PUBLICATION_TRUST_READY` remains false.
+- GitHub/R2 publishing must not be treated as active production until
+  credentials, branch/ruleset protection, and the no-public-output trial pass.
+  The repository is public and migrations are complete, but the remaining
+  controls are not yet configured, so `GITHUB_PUBLICATION_TRUST_READY` remains
+  false.
 - Remote Hostinger MySQL access depends on current IP allowlisting. A DB outage
   must not interrupt the JSON-backed public site or trigger a switch to DB mode.
 - Official course placement does not prove that a detailed syllabus exists;
