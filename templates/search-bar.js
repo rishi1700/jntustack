@@ -7,7 +7,7 @@
 export function renderSearchBar() {
   return `<div class="site-search" role="search">
     <input type="search" class="site-search-input" data-search-input autocomplete="off"
-      placeholder="Search subjects, branches, colleges..." aria-label="Search JNTUStack" />
+      placeholder="Search subjects, guides, branches, colleges..." aria-label="Search JNTUStack" />
     <div class="site-search-results" data-search-results role="listbox" aria-label="Search results" hidden></div>
   </div>`;
 }
@@ -19,7 +19,7 @@ import { retrieve } from '/retrieve.js';
 const input = document.querySelector('[data-search-input]');
 const panel = document.querySelector('[data-search-results]');
 if (input && panel) {
-  const TYPE_LABEL = { subject: 'Subject', branch_profile: 'Branch', college: 'College' };
+  const TYPE_LABEL = { subject: 'Subject', guide: 'Guide', branch_profile: 'Branch', college: 'College' };
   let docs = null, loading = null;
 
   function loadIndex() {
@@ -42,7 +42,7 @@ if (input && panel) {
     const linkable = hits.filter(h => h && h.url); // never render a result we can't link to
     if (!linkable.length) {
       panel.hidden = false;
-      panel.innerHTML = '<div class="site-search-empty">No matches for &ldquo;' + esc(q) + '&rdquo; yet. Only verified pages are searchable.</div>';
+      panel.innerHTML = '<div class="site-search-empty">No matches for &ldquo;' + esc(q) + '&rdquo; yet. Only verified pages and guides are searchable.</div>';
       return;
     }
     panel.hidden = false;

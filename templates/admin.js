@@ -585,7 +585,7 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
     </div>
   </details>
   <div class="safety-note">Validation failures stop before proposal creation. Ambiguous fields stay unresolved for human correction; the system does not invent missing syllabus content.</div>
-  <button class="primary-action" type="submit"${availableParsers.length && fileStatus?.status !== 'missing' ? '' : ' disabled'}>Run safe automation</button>
+  <button class="primary-action" type="submit"${availableParsers.length && ['present', 'repaired'].includes(fileStatus?.status) ? '' : ' disabled'}>Run safe automation</button>
   ${availableParsers.length ? '' : '<div class="notice evidence-warning" style="margin-top:10px;">No available parser matches this file. Open Technical details to inspect supported formats.</div>'}
 </form>`,
   });
@@ -634,9 +634,10 @@ ${freshness.sources.map(source => `<tr><td><span class="pill ${source.status ===
 }
 
 export function renderAdminChecksPage({ checks }) {
-  const expectedSearchDocs = Number(checks.content.subjectsVerified || 0)
+  const expectedSearchDocs = Number(checks.content.subjectPages ?? checks.content.subjectsVerified ?? 0)
     + Number(checks.content.collegesTotal || 0)
-    + Number(checks.content.branchProfilesTotal || 0);
+    + Number(checks.content.branchProfilesTotal || 0)
+    + Number(checks.content.guidesTotal || 0);
   const dbRows = [
     ['Configured', checks.db.configured ? 'yes' : 'no'],
     ['Connection', checks.db.skipped ? 'skipped' : checks.db.connected ? 'connected' : 'failed'],
@@ -657,6 +658,7 @@ export function renderAdminChecksPage({ checks }) {
     ['Generated at', checks.generatedAt],
     ['Node', checks.runtime.nodeVersion],
     ['Content source', checks.runtime.contentSource],
+    ['Publication mode', checks.runtime.contentPublicationMode || 'legacy'],
     ['Admin enabled', checks.runtime.adminEnabled ? 'yes' : 'no'],
     ['Admin configured', checks.runtime.adminConfigured ? 'yes' : 'no'],
     ['Ask enabled', checks.runtime.askEnabled ? 'yes' : 'no'],
@@ -688,8 +690,10 @@ ${checks.db.error ? `<tr><th>Error</th><td><pre class="mono" style="white-space:
 
 <h2>Storage</h2>
 <div class="table-wrap"><table><tbody>
-<tr><th>Status</th><td>${checks.storage.ok ? 'readable and writable' : 'needs attention'}</td></tr>
-<tr><th>Path</th><td class="mono">${escapeHtml(checks.storage.path)}</td></tr>
+<tr><th>Status</th><td>${checks.storage.ok ? 'configured' : 'needs attention'}</td></tr>
+<tr><th>Provider</th><td class="mono">${escapeHtml(checks.storage.provider || 'local')}</td></tr>
+${checks.storage.path ? `<tr><th>Path</th><td class="mono">${escapeHtml(checks.storage.path)}</td></tr>` : ''}
+${checks.storage.missing?.length ? `<tr><th>Missing env keys</th><td class="mono">${escapeHtml(checks.storage.missing.join(', '))}</td></tr>` : ''}
 <tr><th>Message</th><td>${escapeHtml(checks.storage.message || '')}</td></tr>
 </tbody></table></div>
 
@@ -698,10 +702,13 @@ ${checks.db.error ? `<tr><th>Error</th><td><pre class="mono" style="white-space:
 <tr><th>Source</th><td>${escapeHtml(checks.content.source)}</td></tr>
 <tr><th>Subjects total</th><td>${escapeHtml(checks.content.subjectsTotal)}</td></tr>
 <tr><th>Verified subjects</th><td>${escapeHtml(checks.content.subjectsVerified)}</td></tr>
+<tr><th>Standalone subject pages</th><td>${escapeHtml(checks.content.subjectPages ?? checks.content.subjectsVerified)}</td></tr>
+<tr><th>Listing-only subjects</th><td>${escapeHtml(checks.content.subjectListings || 0)}</td></tr>
 <tr><th>Needs verification</th><td>${escapeHtml(checks.content.subjectsNeedsVerification)}</td></tr>
 <tr><th>Placeholder</th><td>${escapeHtml(checks.content.subjectsPlaceholder)}</td></tr>
 <tr><th>Colleges</th><td>${escapeHtml(checks.content.collegesTotal)}</td></tr>
 <tr><th>Branch profiles</th><td>${escapeHtml(checks.content.branchProfilesTotal)}</td></tr>
+<tr><th>Guides</th><td>${escapeHtml(checks.content.guidesTotal || 0)}</td></tr>
 </tbody></table></div>
 
 <h2>Search index</h2>
@@ -1172,17 +1179,18 @@ export function renderAssetDetailPage({
 }) {
   const selectedParser = pipelineValues.parser_key || parsers.find(parser => parser.suggested && parser.available)?.key || parsers.find(parser => parser.available)?.key || '';
   const fileState = fileStatus?.status || 'missing';
-  const fileStateLabel = fileState === 'repaired' ? 'repaired' : fileState === 'present' ? 'present' : 'missing';
-  const missingWarning = fileState === 'missing'
-    ? `<div class="error"><strong>Stored file missing.</strong> This asset has database metadata but the physical file is not present under storage/source-assets. Parsers and pipeline runs will fail until the file is repaired or re-uploaded.</div>`
+  const fileReadable = ['present', 'repaired'].includes(fileState);
+  const fileStateLabel = fileState === 'repaired' ? 'repaired' : fileState === 'present' ? 'present' : fileState === 'invalid' ? 'integrity check failed' : 'missing';
+  const missingWarning = ['missing', 'invalid'].includes(fileState)
+    ? `<div class="error"><strong>${fileState === 'invalid' ? 'Stored evidence failed its integrity check.' : 'Stored evidence is missing.'}</strong> Parsers and pipeline runs are blocked until the evidence is safely re-fetched or re-uploaded.${fileStatus?.integrityError ? ` ${escapeHtml(fileStatus.integrityError)}` : ''}</div>`
     : '';
   const repairAction = fileStatus?.repairAvailable
     ? `<form class="action-box" method="post" action="/admin/assets/${escapeHtml(asset.id)}/repair">
-        <strong>Repair missing asset file</strong>
+        <strong>Repair stored evidence</strong>
         <div class="admin-sub">Safely re-fetches the original source URL, reuses this asset row, refreshes checksum/size/content type/storage metadata, and records audit events. It does not parse, create proposals, publish content, or change CONTENT_SOURCE.</div>
-        <button type="submit">Repair missing file</button>
+        <button type="submit">Repair evidence</button>
       </form>`
-    : fileState === 'missing'
+    : ['missing', 'invalid'].includes(fileState)
       ? `<div class="notice">Repair action unavailable: this asset does not have both a source URL and discovery source.</div>`
       : '';
   return adminShell({
@@ -1208,8 +1216,10 @@ ${repairAction}
 <tr><th>Content type</th><td>${escapeHtml(asset.contentType || '')}</td></tr>
 <tr><th>SHA-256</th><td class="mono">${escapeHtml(asset.sha256Checksum || '')}</td></tr>
 <tr><th>Source URL</th><td class="mono">${escapeHtml(asset.sourceUrl || '')}</td></tr>
-<tr><th>Storage path</th><td class="mono">${escapeHtml(asset.localStoragePath || '')}</td></tr>
-<tr><th>File existence</th><td>${escapeHtml(fileStateLabel)}${fileStatus?.repairedAt ? ` <span class="admin-sub">(repaired ${escapeHtml(fileStatus.repairedAt)})</span>` : ''}</td></tr>
+<tr><th>Storage provider</th><td class="mono">${escapeHtml(asset.storageProvider || 'local')}</td></tr>
+<tr><th>Storage key</th><td class="mono">${escapeHtml(asset.storageKey || asset.localStoragePath || '')}</td></tr>
+<tr><th>Evidence state</th><td>${escapeHtml(fileStateLabel)}${fileStatus?.repairedAt ? ` <span class="admin-sub">(repaired ${escapeHtml(fileStatus.repairedAt)})</span>` : ''}</td></tr>
+<tr><th>Storage verified</th><td>${escapeHtml(asset.storageVerifiedAt || '')}</td></tr>
 <tr><th>Downloaded at</th><td>${escapeHtml(asset.downloadedAt || '')}</td></tr>
 <tr><th>Duplicate of</th><td>${asset.duplicateOfAssetId ? `<a href="/admin/assets/${escapeHtml(asset.duplicateOfAssetId)}">${escapeHtml(asset.duplicateOfAssetId)}</a>` : ''}</td></tr>
 <tr><th>ETag</th><td class="mono">${escapeHtml(asset.etag || '')}</td></tr>
@@ -1224,7 +1234,7 @@ ${parsers.length ? parsers.map(parser => `<form class="action-box" method="post"
   <div class="admin-sub">${escapeHtml(parser.description || '')}</div>
   <div class="mono" style="margin-top:8px;">${escapeHtml(parser.key)} v${escapeHtml(parser.version)}</div>
   <input type="hidden" name="parser_key" value="${escapeHtml(parser.key)}">
-  ${parser.available ? '<button type="submit">Run parser</button>' : `<div class="notice" style="margin-top:10px;">${escapeHtml(parser.unavailableReason || 'Parser unavailable.')}</div>`}
+  ${parser.available && fileReadable ? '<button type="submit">Run parser</button>' : `<div class="notice" style="margin-top:10px;">${escapeHtml(parser.available ? 'Stored evidence must pass its integrity check before parsing.' : parser.unavailableReason || 'Parser unavailable.')}</div>`}
 </form>`).join('') : `<div class="notice">${emptyState('No parser matches this asset', 'Upload HTML for html-basic/source-specific parsers, or wait for a future PDF parser dependency before parsing PDF assets.')}</div>`}
 </div>
 
@@ -1257,7 +1267,7 @@ ${parsers.length ? parsers.map(parser => `<form class="action-box" method="post"
 
   <label style="display:block;margin-top:12px;"><input type="checkbox" name="create_proposal" value="1"${pipelineValues.create_proposal ? ' checked' : ''}> Create proposal from diff</label>
   <div class="notice" style="margin-top:10px;">Leave proposal creation off unless you have reviewed the source asset, parser choice, candidate index, and entity key. If checked, the pipeline can create a review-queue proposal, but it still cannot publish or mark anything verified.</div>
-  <button type="submit">Run manual pipeline</button>
+  <button type="submit"${fileReadable ? '' : ' disabled'}>Run manual pipeline</button>
 </form>
 
 <h2>Pipeline history</h2>
@@ -1452,9 +1462,10 @@ ${extractionResults.length ? extractionResults.map(extraction => `<tr><td><span 
 
 <h2>Run diff</h2>
 <form class="action-box" method="post" action="/admin/parse-results/${escapeHtml(result.id)}/diff">
+  <div class="admin-sub">Guides are supported only when the parsed payload already matches the Guide JSON schema. Automatic guide extraction is not available; use the manual proposal editor for authored guide content.</div>
   <label for="entity_type"><strong>Entity type</strong></label>
   <select id="entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
-    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+    ${[['subject', 'subject'], ['college', 'college'], ['branch_profile', 'branch_profile'], ['guide', 'guide (manual payload only)']].map(([type, label]) => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${label}</option>`).join('')}
   </select>
   <label for="entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong></label>
   <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="subject id, slug, college key, or branch code">
@@ -1645,13 +1656,14 @@ export function renderProposalCreatePage({ values = {}, error = null } = {}) {
 <div class="admin-top"><div><h1>Create proposal</h1><div class="admin-sub">Manual proposal only. This does not write to public content or mark anything verified.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 <form class="action-box" method="post" action="/admin/proposals/new">
+  <div class="admin-sub">Guide proposals are manual-only: provide a complete Guide JSON payload grounded in reviewed evidence. PDF/entity extraction does not author guide sections.</div>
   <label for="entity_type"><strong>Proposal type</strong></label>
   <select id="entity_type" name="entity_type" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;">
-    ${['subject', 'college', 'branch_profile'].map(type => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${type}</option>`).join('')}
+    ${[['subject', 'subject'], ['college', 'college'], ['branch_profile', 'branch_profile'], ['guide', 'guide (manual only)']].map(([type, label]) => `<option value="${type}"${values.entity_type === type ? ' selected' : ''}>${label}</option>`).join('')}
   </select>
 
   <label for="entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong></label>
-  <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="stable id, college key, or branch code">
+  <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="stable id, slug/name, college key, or branch code">
 
   <label for="source_id" style="display:block;margin-top:12px;"><strong>Source ID</strong> <span class="admin-sub">optional</span></label>
   <input id="source_id" name="source_id" value="${escapeHtml(values.source_id || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="numeric source id">
@@ -1982,7 +1994,99 @@ function renderReleaseReviewSummary(summary) {
 </section>`;
 }
 
-export function renderReleaseCandidateDetailPage({ release, approvedProposals = [], reviewSummary = null, error = null }) {
+const GITHUB_PUBLICATION_LIFECYCLE = Object.freeze({
+  preparing: {
+    label: 'Preparing review PR',
+    detail: 'The reviewed artifact is being written to its immutable publication branch.',
+    className: 'status-warn',
+  },
+  pr_open: {
+    label: 'Review PR open',
+    detail: 'The sealed content change is waiting for required checks and human review in GitHub.',
+    className: 'status-warn',
+  },
+  ci_failed: {
+    label: 'PR checks failed',
+    detail: 'Required checks did not pass. Inspect the review PR before retrying or replacing this release.',
+    className: 'status-bad',
+  },
+  deploy_pending: {
+    label: 'Merged · deployment pending',
+    detail: 'The reviewed PR was merged. Automated deployment and live release verification are still pending.',
+    className: 'status-warn',
+  },
+  verification_inconclusive: {
+    label: 'Deployment check inconclusive',
+    detail: 'The live site could not be verified yet. Retry verification without changing the sealed artifact.',
+    className: 'status-warn',
+  },
+  verification_failed: {
+    label: 'Deployment mismatch',
+    detail: 'The live release does not match this reviewed artifact. Keep the release blocked and investigate.',
+    className: 'status-bad',
+  },
+  deployed: {
+    label: 'Deployed and verified',
+    detail: 'The live release marker, health endpoint, and sitemap match the reviewed artifact.',
+    className: 'status-ok',
+  },
+  superseded: {
+    label: 'Superseded by a newer release',
+    detail: 'A newer reviewed release is live. This publication remains available as historical evidence.',
+    className: 'status-warn',
+  },
+  tampered: {
+    label: 'Blocked · integrity failure',
+    detail: 'The publication branch no longer matches the sealed artifact. Do not merge or reuse it.',
+    className: 'status-bad',
+  },
+  blocked_stale_base: {
+    label: 'Blocked · reviewed base changed',
+    detail: 'The default branch moved after review. Create a fresh release candidate from the new base.',
+    className: 'status-bad',
+  },
+  closed_unmerged: {
+    label: 'PR closed without merge',
+    detail: 'The publication was not deployed. Create a fresh release candidate if the change is still needed.',
+    className: 'status-warn',
+  },
+  failed: {
+    label: 'Publication failed',
+    detail: 'The review PR could not be prepared. Resolve the recorded failure before retrying.',
+    className: 'status-bad',
+  },
+});
+
+function githubPublicationLifecycle(publication) {
+  if (!publication) {
+    return {
+      label: 'Publication not started',
+      detail: 'Generate the reviewed apply plan before creating a GitHub review PR.',
+      className: '',
+    };
+  }
+  if (publication.status === 'deployed' && publication.lastVerificationAttempt?.outcome === 'inconclusive') {
+    return {
+      label: 'Deployed · latest recheck inconclusive',
+      detail: `The last successful deployment attestation is preserved, but the latest recheck could not conclude${publication.lastCheckedAt ? ` at ${publication.lastCheckedAt}` : ''}. Retry and investigate the recorded reason.`,
+      className: 'status-warn',
+    };
+  }
+  return GITHUB_PUBLICATION_LIFECYCLE[publication.status] || {
+    label: String(publication.status || 'Publication status unavailable').replaceAll('_', ' '),
+    detail: 'Open the sealed apply plan for the full publication record.',
+    className: 'status-warn',
+  };
+}
+
+export function renderReleaseCandidateDetailPage({
+  release,
+  approvedProposals = [],
+  reviewSummary = null,
+  githubPublication = null,
+  githubTrustReady = false,
+  error = null,
+}) {
   if (!release) {
     return renderReleaseCandidateUnavailablePage({ message: error || 'Release candidate not found.' });
   }
@@ -1991,6 +2095,15 @@ export function renderReleaseCandidateDetailPage({ release, approvedProposals = 
   const canMarkReady = ['draft', 'applied_to_draft'].includes(release.status);
   const readyBlocked = !reviewSummary || Boolean(reviewSummary.has_blocking_warnings);
   const blockedByCurrentPolicy = release.status === 'ready_for_review' && Boolean(reviewSummary?.has_blocking_warnings);
+  const usesGitHubPublication = release.publicationMode === 'github_pr';
+  const publicationLifecycle = githubPublicationLifecycle(githubPublication);
+  const releaseSubtitle = usesGitHubPublication
+    ? `Release candidate ${escapeHtml(release.id)} · ${escapeHtml(publicationLifecycle.label)}.`
+    : `Release candidate ${escapeHtml(release.id)} · Legacy direct-publication workflow.`;
+  const applyPlanUrl = `/admin/release-apply-plans/${escapeHtml(release.id)}`;
+  const pullRequestLink = githubPublication?.pullRequestUrl
+    ? `<a class="secondary-action" href="${escapeHtml(githubPublication.pullRequestUrl)}" target="_blank" rel="noopener noreferrer">Open review PR #${escapeHtml(githubPublication.pullRequestNumber || '')}</a>`
+    : '';
   return adminShell({
     title: `Release candidate ${release.id}`,
     active: 'release_candidates',
@@ -2000,18 +2113,28 @@ export function renderReleaseCandidateDetailPage({ release, approvedProposals = 
       { label: `Release ${release.id}` },
     ],
     body: `
-<div class="admin-top"><div><h1>${escapeHtml(release.title)}</h1><div class="admin-sub">Release candidate ${escapeHtml(release.id)}. NOT PUBLISHED.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><h1>${escapeHtml(release.title)}</h1><div class="admin-sub">${releaseSubtitle}</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('release')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${blockedByCurrentPolicy ? '<div class="error"><strong>Blocked by current policy warnings.</strong><br>This release is ready_for_review in stored workflow state, but current release-review policy has blocking warnings. Do not treat it as safely publishable until the warnings are resolved and a fresh apply plan is generated.</div>' : ''}
+${usesGitHubPublication && !githubTrustReady && !githubPublication ? '<div class="error"><strong>GitHub publication is not activated.</strong><br>The trust gate remains closed until protected-branch controls, required checks, human review, and signing configuration are independently proven.</div>' : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Status</div><div class="metric-value">${escapeHtml(release.status)}</div></div>
+  <div class="metric"><div class="metric-label">Publication</div><div class="metric-value ${usesGitHubPublication ? publicationLifecycle.className : ''}" style="font-size:15px;">${escapeHtml(usesGitHubPublication ? publicationLifecycle.label : 'Legacy live JSON')}</div></div>
   <div class="metric"><div class="metric-label">Items</div><div class="metric-value">${escapeHtml(release.itemCount)}</div></div>
   <div class="metric"><div class="metric-label">Exports</div><div class="metric-value">${escapeHtml(release.exportedCount)}</div></div>
   <div class="metric"><div class="metric-label">Draft applies</div><div class="metric-value">${escapeHtml(release.draftAppliedCount)}</div></div>
   <div class="metric"><div class="metric-label">Revisions</div><div class="metric-value">${escapeHtml(release.revisionCount)}</div></div>
 </section>
-<div class="notice" style="margin-top:14px;">Release candidates only group approved proposals and help create review artifacts. They do not write live data/*.json, modify dist/, publish, crawl, schedule jobs, or expose /api/ask.</div>
+<div class="notice" style="margin-top:14px;">Release candidates only group approved proposals and help create review artifacts. ${release.publicationMode === 'github_pr' ? 'After final review, this release can create an immutable content branch and review PR; merge remains a human action in GitHub.' : 'This legacy release can use the direct live-JSON workflow after final review.'}</div>
+${usesGitHubPublication && githubPublication ? `<div class="action-box" style="margin-top:12px;">
+  <strong>${escapeHtml(publicationLifecycle.label)}</strong>
+  <div class="admin-sub">${escapeHtml(publicationLifecycle.detail)}</div>
+  <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px;">
+    <a class="primary-action" href="${applyPlanUrl}">Open sealed apply plan and publication</a>
+    ${pullRequestLink}
+  </div>
+</div>` : ''}
 
 <h2>Generate review summary</h2>
 <form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/review-summary">
@@ -2022,14 +2145,14 @@ ${blockedByCurrentPolicy ? '<div class="error"><strong>Blocked by current policy
 ${renderReleaseReviewSummary(reviewSummary)}
 
 <h2>Apply plan</h2>
-${release.status === 'ready_for_review' ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/apply-plan">
+${githubPublication ? `<div class="notice"><strong>Apply plan sealed for publication.</strong><br>This release already has a publication record, so its reviewed plan cannot be regenerated. <a href="${applyPlanUrl}">Open the sealed apply plan and publication status</a>.</div>` : release.status === 'ready_for_review' ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/apply-plan">
   <strong>Generate apply plan</strong>
-  <div class="admin-sub">Stores a final human-reviewable plan in MySQL and may write tmp convenience files. NOT APPLIED and NOT PUBLISHED.</div>
+  <div class="admin-sub">Stores a final human-reviewable plan in MySQL and may write tmp convenience files. Generating the plan does not publish it.</div>
   <button type="submit"${reviewSummary?.has_blocking_warnings ? ' disabled' : ''}>Generate apply plan</button>
   ${reviewSummary?.has_blocking_warnings ? '<div class="notice" style="margin-top:10px;">Apply plan generation is blocked while review summary blocking warnings exist.</div>' : ''}
 </form>` : '<div class="notice">Apply plans can only be generated after the release candidate reaches ready_for_review.</div>'}
 
-<h2>Partial live apply recovery</h2>
+${(release.publicationMode || 'legacy') === 'legacy' ? `<h2>Partial live apply recovery</h2>
 <form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/recover-live-apply">
   <strong>Recover timeout/partial live apply</strong>
   <div class="admin-sub">Use only if a previous live apply request timed out after writing data/*.json but before a live apply record was created. This inspects the current live data file, searches for a backup, and creates recovery bookkeeping. It does not write data/*.json.</div>
@@ -2039,7 +2162,7 @@ ${release.status === 'ready_for_review' ? `<form class="action-box" method="post
   <input id="candidate_recovery_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="RECOVER PARTIAL APPLY">
   <button type="submit">Recover partial apply</button>
   <div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">RECOVER PARTIAL APPLY</span> exactly. This is for incident recovery only.</div>
-</form>
+</form>` : ''}
 
 <h2>Add approved proposal</h2>
 ${canEdit ? `<form class="action-box" method="post" action="/admin/release-candidates/${escapeHtml(release.id)}/items">
@@ -2074,9 +2197,65 @@ function verificationRows(verification) {
   return checks.map(check => `<tr><td class="mono">${escapeHtml(check.command)}</td><td><span class="pill">${escapeHtml(check.status)}</span></td><td>${escapeHtml(check.exit_code)}</td><td><details><summary>Output</summary><pre class="mono" style="white-space:pre-wrap;">${escapeHtml([check.stdout, check.stderr].filter(Boolean).join('\n'))}</pre></details></td></tr>`).join('');
 }
 
+function renderGitHubPublicationFlow({ plan, publication, confirmationPhrase, trustReady = false }) {
+  const canCreate = plan.status === 'ready_for_review'
+    && (plan.final_warnings || []).length === 0
+    && trustReady
+    && (!publication || ['preparing', 'failed'].includes(publication.status));
+  const canRefresh = publication && ['pr_open', 'ci_failed'].includes(publication.status);
+  const canVerify = publication && ['deploy_pending', 'verification_inconclusive', 'verification_failed', 'deployed'].includes(publication.status);
+  const lifecycle = githubPublicationLifecycle(publication);
+  const prLink = publication?.pullRequestUrl
+    ? `<a href="${escapeHtml(publication.pullRequestUrl)}" target="_blank" rel="noopener noreferrer">Review PR #${escapeHtml(publication.pullRequestNumber || '')}</a>`
+    : '-';
+  return `
+<h2>Reviewed GitHub publication</h2>
+<div class="action-box">
+  <strong>Human-gated publication workflow</strong>
+  <div class="admin-sub">Create review PR → required GitHub checks → human review and merge → automated deployment → live marker verification. This admin never merges a pull request.</div>
+  ${publication ? `<div class="table-wrap" style="margin-top:12px;"><table><tbody>
+    <tr><th>Status</th><td><span class="pill ${escapeHtml(lifecycle.className)}">${escapeHtml(lifecycle.label)}</span><br><span class="mono">${escapeHtml(publication.status)}</span></td></tr>
+    <tr><th>Pull request</th><td>${prLink}</td></tr>
+    <tr><th>Branch</th><td class="mono">${escapeHtml(publication.branchName || '')}</td></tr>
+    <tr><th>Reviewed base</th><td class="mono">${escapeHtml(publication.baseSha || '')}</td></tr>
+    <tr><th>Reviewed head</th><td class="mono">${escapeHtml(publication.headSha || '')}</td></tr>
+    <tr><th>Artifact SHA-256</th><td class="mono">${escapeHtml(publication.artifactHash || '')}</td></tr>
+    <tr><th>Attempts</th><td>${escapeHtml(publication.attemptCount || 0)}</td></tr>
+  </tbody></table></div>` : '<div class="notice" style="margin-top:12px;">No publication has been created for this reviewed artifact.</div>'}
+  ${publication?.lastError ? `<div class="error" style="margin-top:12px;">${escapeHtml(publication.lastError)}</div>` : ''}
+  ${publication?.verification ? `<details style="margin-top:12px;"><summary>Live deployment verification</summary><pre class="json-block">${escapeHtml(JSON.stringify(publication.verification, null, 2))}</pre></details>` : ''}
+  ${publication?.lastVerificationAttempt ? `<details style="margin-top:12px;"${publication.lastVerificationAttempt.outcome === 'inconclusive' ? ' open' : ''}><summary>Latest verification attempt${publication.lastCheckedAt ? ` · ${escapeHtml(publication.lastCheckedAt)}` : ''}</summary><pre class="json-block">${escapeHtml(JSON.stringify(publication.lastVerificationAttempt, null, 2))}</pre></details>` : ''}
+  ${!trustReady && !publication ? '<div class="error" style="margin-top:12px;"><strong>Publication trust gate is closed.</strong><br>Protect the default branch/ruleset, require the verify and publication-integrity checks, prove the controls, then set <span class="mono">GITHUB_PUBLICATION_TRUST_READY=true</span>. PR creation remains disabled until then.</div>' : ''}
+</div>
+${canCreate ? `<form class="action-box" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/publish-github">
+  <strong>${publication ? 'Retry review PR creation' : 'Create review PR'}</strong>
+  <div class="admin-sub">Replays the sealed apply plan against the reviewed default-branch base, writes only deterministic data files plus data/release.json to an immutable branch, and opens a pull request.</div>
+  <label for="github_confirmation" style="display:block;margin-top:12px;"><strong>Confirmation phrase</strong></label>
+  <input id="github_confirmation" name="confirmation_phrase" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="${escapeHtml(confirmationPhrase)}">
+  <button type="submit">${publication ? 'Retry review PR' : 'Create review PR'}</button>
+  <div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(confirmationPhrase)}</span> exactly. A human must still approve and merge the PR in GitHub.</div>
+</form>` : ''}
+${canRefresh ? `<form class="action-box" method="post" action="/admin/github-publications/${escapeHtml(publication.id)}/refresh">
+  <strong>Refresh GitHub status</strong>
+  <div class="admin-sub">Checks branch integrity, pull-request state, merge state, and required checks. It never merges.</div>
+  <button type="submit">Refresh status</button>
+</form>` : ''}
+${canVerify ? `<form class="action-box" method="post" action="/admin/github-publications/${escapeHtml(publication.id)}/verify-deployment">
+  <strong>Verify deployed release</strong>
+  <div class="admin-sub">Checks the live release marker, health endpoint, and sitemap with bounded requests. Temporary failures remain verification_inconclusive; only a conclusive same-release artifact mismatch recommends a revert.</div>
+  <button type="submit">Verify live deployment</button>
+</form>` : ''}
+${publication?.status === 'superseded' ? '<div class="notice"><strong>Superseded.</strong><br>A valid newer reviewed release is already live. No revert is recommended for this release.</div>' : ''}
+${publication && ['blocked_stale_base', 'tampered', 'closed_unmerged'].includes(publication.status) ? '<div class="error"><strong>Publication is blocked.</strong><br>Create a fresh release candidate and review a newly sealed artifact. Do not reuse or merge this branch.</div>' : ''}`;
+}
+
 export function renderReleaseApplyPlanDetailPage({
   plan,
   latestApply = null,
+  publicationMode = 'legacy',
+  githubPublication = null,
+  githubTrustReady = false,
+  githubConfirmationPhrase = 'CREATE REVIEW PR',
   confirmationPhrase = 'APPLY LIVE JSON',
   recoveryPhrase = 'RECOVER PARTIAL APPLY',
   error = null,
@@ -2094,6 +2273,10 @@ export function renderReleaseApplyPlanDetailPage({
   const tmpStatusClass = storage.tmp_artifact_status === 'available' ? 'status-ok' : 'status-warn';
   const currentPolicyBlocked = warnings.length > 0 && plan.current_review_status?.generated_from_current_policy;
   const staleProposalBlocked = hasWarningCode(warnings, 'proposal_not_approved_for_draft');
+  const publicationLifecycle = githubPublicationLifecycle(githubPublication);
+  const planSubtitle = publicationMode === 'github_pr'
+    ? `${publicationLifecycle.label}. ${publicationLifecycle.detail}`
+    : 'Reviewed artifact for the guarded legacy live-JSON workflow.';
   return adminShell({
     title: `Release apply plan ${plan.release_candidate_id}`,
     active: 'release_candidates',
@@ -2104,13 +2287,14 @@ export function renderReleaseApplyPlanDetailPage({
       { label: 'Apply plan' },
     ],
     body: `
-<div class="admin-top"><div><h1>Release apply plan ${escapeHtml(plan.release_candidate_id)}</h1><div class="admin-sub">NOT APPLIED / NOT PUBLISHED. Review artifact only.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+<div class="admin-top"><div><h1>Release apply plan ${escapeHtml(plan.release_candidate_id)}</h1><div class="admin-sub">${escapeHtml(planSubtitle)}</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
 ${workflowNav('release')}
 ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
 ${currentPolicyBlocked ? '<div class="error"><strong>Blocked by current policy warnings.</strong><br>This stored apply plan is not safe to live-apply as-is. Current review policy found blocking warnings after the plan was generated; regenerate only after resolving those warnings.</div>' : ''}
 ${staleProposalBlocked ? '<div class="error"><strong>Stale apply plan.</strong><br>Release contains proposals that are no longer approved_for_draft. Regenerate release artifacts after proposal repair.</div>' : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Release status</div><div class="metric-value">${escapeHtml(plan.status)}</div></div>
+  ${publicationMode === 'github_pr' ? `<div class="metric"><div class="metric-label">Publication</div><div class="metric-value ${publicationLifecycle.className}" style="font-size:15px;">${escapeHtml(publicationLifecycle.label)}</div></div>` : ''}
   <div class="metric"><div class="metric-label">Changes</div><div class="metric-value">${escapeHtml(changes.length)}</div></div>
   <div class="metric"><div class="metric-label">Blocking warnings</div><div class="metric-value ${warnings.length ? 'status-bad' : 'status-ok'}">${escapeHtml(warnings.length)}</div></div>
   <div class="metric"><div class="metric-label">Info warnings</div><div class="metric-value ${informationalWarnings.length ? 'status-warn' : 'status-ok'}">${escapeHtml(informationalWarnings.length)}</div></div>
@@ -2124,6 +2308,12 @@ ${plan.current_review_status?.generated_from_current_policy ? `<div class="notic
 ${plan.reconstructed_from_metadata ? `<div class="notice evidence-warning" style="margin-top:10px;"><strong>Recovered apply-plan view.</strong><br>This plan was reconstructed from durable release, proposal, export, and live-apply metadata because the original tmp artifact was unavailable.</div>` : ''}
 ${plan.recovered_context ? `<h2>Recovered apply context</h2><pre class="json-block">${escapeHtml(JSON.stringify(plan.recovered_context, null, 2))}</pre>` : ''}
 
+${publicationMode === 'github_pr' ? renderGitHubPublicationFlow({
+  plan,
+  publication: githubPublication,
+  confirmationPhrase: githubConfirmationPhrase,
+  trustReady: githubTrustReady,
+}) : `
 <h2>Final live JSON apply</h2>
 <form class="action-box danger-zone" method="post" action="/admin/release-apply-plans/${escapeHtml(plan.release_candidate_id)}/apply-live">
   <strong>Apply to live JSON</strong>
@@ -2149,6 +2339,7 @@ ${plan.recovered_context ? `<h2>Recovered apply context</h2><pre class="json-blo
   <button type="submit"${activeApply ? ' disabled' : ''}>Recover partial apply</button>
   <div class="notice evidence-warning" style="margin-top:10px;">Type <span class="mono">${escapeHtml(recoveryPhrase)}</span> exactly. This does not write data/*.json; it records the observed partial state.</div>
 </form>
+`}
 
 <h2>Ordered file changes</h2>
 <div class="table-wrap"><table><thead><tr><th>Order</th><th>File</th><th>Operation</th><th>Entity</th><th>Canonical path</th><th>Proposal</th><th>Revision</th></tr></thead><tbody>

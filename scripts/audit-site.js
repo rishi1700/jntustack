@@ -2,8 +2,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { buildSearchIndex } from '../lib/retrieve.js';
-import { loadMergedColleges, loadMergedSubjects, subjectBranchCodes } from '../lib/dataset.js';
+import {
+  isListingOnlySubject,
+  isPageSubject,
+  loadGuides,
+  loadMergedColleges,
+  loadMergedSubjects,
+  subjectBranchCodes,
+  subjectOfferings,
+} from '../lib/dataset.js';
 import { TEMPORARY_REDIRECTS } from '../lib/temporary-redirects.js';
+import { LEGACY_REDIRECTS } from '../lib/legacy-redirects.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const DIST = path.join(ROOT, 'dist');
@@ -220,6 +229,25 @@ function auditTemporaryRedirects() {
   return { ok: failures.length === 0, failures, count: Object.keys(TEMPORARY_REDIRECTS).length };
 }
 
+function auditLegacyRedirects() {
+  const failures = [];
+  const sitemapSet = new Set(parseSitemapUrls() || []);
+  const redirects = new Map(Object.entries(LEGACY_REDIRECTS));
+  for (const [source, target] of redirects) {
+    if (!source.startsWith('/') || !source.endsWith('/') || !target.startsWith('/')) {
+      failures.push(`legacy redirect must use root-relative page paths: ${source} -> ${target}`);
+      continue;
+    }
+    if (source === new URL(target, SITE_URL).pathname) failures.push(`legacy redirect loops to itself: ${source}`);
+    if (sitemapSet.has(`${SITE_URL}${source}`)) failures.push(`legacy redirect source remains in sitemap: ${source}`);
+    if (fs.existsSync(distTargetForPathname(source))) failures.push(`legacy redirect source remains published in dist: ${source}`);
+    const targetPath = new URL(target, SITE_URL).pathname;
+    if (!fs.existsSync(distTargetForPathname(targetPath))) failures.push(`legacy redirect target is missing: ${source} -> ${target}`);
+    if (redirects.has(targetPath)) failures.push(`legacy redirect chain detected: ${source} -> ${targetPath} -> ${redirects.get(targetPath)}`);
+  }
+  return { ok: failures.length === 0, failures, count: redirects.size };
+}
+
 function auditIndexingReadiness() {
   const failures = [];
   const warnings = [];
@@ -311,6 +339,7 @@ function auditIndexingReadiness() {
     : '';
 
   const verifiedSubjects = subjects.filter(subject => subject.source?.status === 'verified');
+  const verifiedPageSubjects = verifiedSubjects.filter(isPageSubject);
   // A shared subject (branchCodes set) counts toward every branch it lists,
   // same resolution build.js uses for hub membership and nav counts.
   const verifiedBranches = new Set(verifiedSubjects.flatMap(subjectBranchCodes));
@@ -324,6 +353,14 @@ function auditIndexingReadiness() {
       if (sitemapSet.has(canonicalUrl)) failures.push(`needs_verification subject appears in sitemap: ${subject.id} -> ${canonicalPath}`);
       if (searchSubjectUrls.has(canonicalPath)) failures.push(`needs_verification subject appears in search index: ${subject.id} -> ${canonicalPath}`);
       if (fs.existsSync(distTargetForPathname(canonicalPath))) failures.push(`needs_verification subject was rendered to dist: ${subject.id} -> ${canonicalPath}`);
+    }
+
+    if (isListingOnlySubject(subject)) {
+      if (subject.source?.status !== 'verified') failures.push(`listing-only subject is not source-verified: ${subject.id}`);
+      if (sitemapSet.has(canonicalUrl)) failures.push(`listing-only subject appears in sitemap: ${subject.id}`);
+      if (searchSubjectUrls.has(canonicalPath)) failures.push(`listing-only subject appears as standalone search document: ${subject.id}`);
+      if (fs.existsSync(distTargetForPathname(canonicalPath))) failures.push(`listing-only subject generated a detail page: ${subject.id}`);
+      continue;
     }
 
     if (subject.source?.status === 'verified') {
@@ -344,7 +381,8 @@ function auditIndexingReadiness() {
         : codes.length > 2
           ? `${codes.length} Branches`
           : codes.join('/');
-      if (!title.includes('Syllabus') || !title.includes('JNTUK') || !title.includes(subject.regulation) || !title.includes(branchScope) || !title.includes(subject.year_sem_label)) {
+      const semesterScope = [...new Set(subjectOfferings(subject).map(offering => offering.year_sem_label))].join('/');
+      if (!title.includes('Syllabus') || !title.includes('JNTUK') || !title.includes(subject.regulation) || !title.includes(branchScope) || !title.includes(semesterScope)) {
         failures.push(`${subject.id} title is missing Syllabus/JNTUK/regulation/branch/semester targeting: ${title}`);
       }
       if (!html.includes('class="source-docket"')) failures.push(`${subject.id} is missing the source docket`);
@@ -383,14 +421,41 @@ function auditIndexingReadiness() {
       const hubJsonLd = parseJsonLd(hubHtml).nodes;
       if (!hubJsonLd.some(node => node?.['@type'] === 'CollectionPage')) failures.push(`${branchPath} is missing CollectionPage JSON-LD`);
       if (!hubJsonLd.some(node => node?.['@type'] === 'ItemList')) failures.push(`${branchPath} is missing subject ItemList JSON-LD`);
-      const branchSubject = verifiedSubjects.find(subject => subjectBranchCodes(subject).includes(branch));
-      const subjectPath = canonicalSubjectPath(branchSubject);
-      if (!hubHtml.includes(`href="${subjectPath}"`)) failures.push(`${branchPath} does not link a verified subject page: ${subjectPath}`);
+      const branchSubject = verifiedPageSubjects.find(subject => subjectBranchCodes(subject).includes(branch));
+      if (branchSubject) {
+        const subjectPath = canonicalSubjectPath(branchSubject);
+        if (!hubHtml.includes(`href="${subjectPath}"`)) failures.push(`${branchPath} does not link a verified subject page: ${subjectPath}`);
+      }
     }
   }
 
   if (!homeHtml.includes('href="/colleges/"')) failures.push('homepage/header does not link /colleges/');
   if (!homeHtml.includes('href="/branch-guide/"')) failures.push('homepage/header does not link /branch-guide/');
+
+  const { guides } = loadGuides(DATA);
+  const searchGuideUrls = new Set(searchDocs.filter(doc => doc.type === 'guide').map(doc => doc.url));
+  for (const guide of guides) {
+    const guidePath = `/${guide.seo?.slug || guide.id}/`;
+    const guideUrl = `${SITE_URL}${guidePath}`;
+    const target = distTargetForPathname(guidePath);
+    if (guide.source?.status !== 'verified') {
+      if (fs.existsSync(target) || sitemapSet.has(guideUrl) || searchGuideUrls.has(guidePath)) {
+        failures.push(`unverified guide reached public output: ${guide.id}`);
+      }
+      continue;
+    }
+    if (!fs.existsSync(target)) failures.push(`verified guide page is missing: ${guide.id}`);
+    if (!sitemapSet.has(guideUrl)) failures.push(`verified guide is missing from sitemap: ${guide.id}`);
+    if (!searchGuideUrls.has(guidePath)) failures.push(`verified guide is missing from search: ${guide.id}`);
+    if (fs.existsSync(target)) {
+      const html = fs.readFileSync(target, 'utf-8');
+      const nodes = parseJsonLd(html).nodes;
+      if (!nodes.some(node => node?.['@type'] === 'Article')) failures.push(`${guide.id} is missing Article JSON-LD`);
+      for (const section of guide.sections || []) {
+        if (!html.includes(`id="${section.id}"`)) failures.push(`${guide.id} is missing section anchor #${section.id}`);
+      }
+    }
+  }
 
   return {
     ok: failures.length === 0,
@@ -421,8 +486,10 @@ function auditSearchCoverage() {
 
   const { subjects } = loadMergedSubjects(DATA);
   const { colleges } = loadMergedColleges(DATA);
+  const { guides } = loadGuides(DATA);
+  const { branches } = JSON.parse(fs.readFileSync(path.join(DATA, 'shared.json'), 'utf-8'));
   const { branch_profiles } = JSON.parse(fs.readFileSync(path.join(DATA, 'branch-guide-data.json'), 'utf-8'));
-  const expectedDocs = buildSearchIndex({ subjects, branchProfiles: branch_profiles, colleges });
+  const expectedDocs = buildSearchIndex({ subjects, branches, branchProfiles: branch_profiles, colleges, guides });
   const actualDocs = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
 
   const expectedIds = new Set(expectedDocs.map(d => `${d.type}:${d.id}`));
@@ -431,13 +498,13 @@ function auditSearchCoverage() {
   const extra = [...actualIds].filter(id => !expectedIds.has(id)).sort();
   const expected = countByType(expectedDocs);
   const actual = countByType(actualDocs);
-  const requiredTypes = ['subject', 'college', 'branch_profile'];
+  const requiredTypes = ['subject', 'college', 'branch_profile', 'guide'];
   const requiredTypesPresent = requiredTypes.every(type => (actual[type] || 0) > 0);
 
   return {
     ok: missing.length === 0 && extra.length === 0 && requiredTypesPresent,
     message: requiredTypesPresent
-      ? 'search-index coverage matches merged verified subjects, colleges, and branch profiles.'
+      ? 'search-index coverage matches verified subject pages, colleges, branch profiles, and guides.'
       : 'search-index is missing at least one required document type.',
     expected,
     actual,
@@ -477,6 +544,23 @@ function auditResponsiveShell() {
   return { ok: failures.length === 0, failures, pageCount: files.length };
 }
 
+function auditReleaseMarker() {
+  const markerPath = path.join(DIST, 'release.json');
+  if (!fs.existsSync(markerPath)) return { ok: false, failures: ['dist/release.json is missing'] };
+  try {
+    const marker = JSON.parse(fs.readFileSync(markerPath, 'utf-8'));
+    const failures = [];
+    if (marker.schema_version !== 1) failures.push(`unsupported release marker schema: ${marker.schema_version}`);
+    const hasRelease = marker.release_id != null;
+    const hasHash = marker.artifact_hash != null;
+    if (hasRelease !== hasHash) failures.push('release marker must provide release_id and artifact_hash together');
+    if (hasHash && !/^[a-f0-9]{64}$/.test(String(marker.artifact_hash))) failures.push('release marker artifact_hash is not SHA-256');
+    return { ok: failures.length === 0, failures, marker };
+  } catch (error) {
+    return { ok: false, failures: [`dist/release.json is invalid JSON: ${error.message}`] };
+  }
+}
+
 const sourceFiles = [
   ...walk(path.join(ROOT, 'templates'), f => /\.(js|html|css)$/.test(f)),
   ...walk(path.join(ROOT, 'public'), f => /\.(js|html|css)$/.test(f)),
@@ -489,6 +573,8 @@ const coverage = auditSearchCoverage();
 const indexing = auditIndexingReadiness();
 const responsive = auditResponsiveShell();
 const temporaryRedirects = auditTemporaryRedirects();
+const legacyRedirects = auditLegacyRedirects();
+const releaseMarker = auditReleaseMarker();
 
 console.log('Site audit');
 console.log('----------');
@@ -501,6 +587,8 @@ console.log(`Canonical public pages       : ${indexing.canonicalCount}`);
 console.log(`Indexing warnings            : ${indexing.warnings.length}`);
 console.log(`Responsive shell pages       : ${responsive.pageCount}`);
 console.log(`Temporary redirect checks    : ${temporaryRedirects.count}`);
+console.log(`Legacy redirect checks       : ${legacyRedirects.count}`);
+console.log(`Release marker               : ${releaseMarker.marker?.artifact_hash ? 'sealed' : 'local/unsealed'}`);
 
 const failures = [];
 if (hashHrefHits.length) failures.push(['href="#" placeholders', hashHrefHits]);
@@ -514,6 +602,8 @@ if (!coverage.ok) {
 if (!indexing.ok) failures.push(['indexing readiness', indexing.failures]);
 if (!responsive.ok) failures.push(['responsive shell', responsive.failures]);
 if (!temporaryRedirects.ok) failures.push(['temporary redirects', temporaryRedirects.failures]);
+if (!legacyRedirects.ok) failures.push(['legacy redirects', legacyRedirects.failures]);
+if (!releaseMarker.ok) failures.push(['release marker', releaseMarker.failures]);
 
 if (failures.length) {
   for (const [label, items] of failures) {

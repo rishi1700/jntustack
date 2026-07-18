@@ -1,0 +1,73 @@
+{
+  "guides": [
+    {
+      "id": "r23-internships-and-projects",
+      "regulation": "R23",
+      "name": "JNTUK R23 Internships and Project Work Guide",
+      "seo": {
+        "slug": "r23-internships-and-projects",
+        "title": "JNTUK R23 Internships and Project Work Guide",
+        "meta_description": "Official JNTUK R23 requirements for the Community Service Project, Industry Internship, evaluations, final-semester internship and project work."
+      },
+      "sections": [
+        {
+          "id": "community-service-project",
+          "title": "Community Service Project",
+          "body": [
+            "The first mandatory summer internship is the Community Service Project undertaken at the end of the second year. It may be onsite or virtual and must have a minimum duration of eight weeks.",
+            "This project is society-oriented and is completed with government organizations, NGOs or other suitable organizations. Students register for it according to the course structure and follow the applicable APSCHE and University guidelines.",
+            "The course structure places the undertaking after the second-year second semester and records its evaluation in the third-year first semester."
+          ]
+        },
+        {
+          "id": "community-service-project-evaluation",
+          "title": "Community Service Project Evaluation",
+          "body": [
+            "A departmental committee evaluates the summer internship. The student submits an internship report containing the successful-completion certificate and gives an oral presentation.",
+            "The committee comprises the Head of Department, the internship supervisor and a senior faculty member. The report and oral presentation each carry 50 percent of the evaluation weight."
+          ]
+        },
+        {
+          "id": "industry-internship",
+          "title": "Industry Internship",
+          "body": [
+            "The second mandatory summer internship is undertaken at the end of the third year. It may be onsite or virtual, must last at least eight weeks and is completed in collaboration with industry in an area connected to the undergraduate specialization.",
+            "The course structure places the undertaking after the third-year second semester and records its evaluation in the fourth-year first semester."
+          ]
+        },
+        {
+          "id": "industry-internship-evaluation",
+          "title": "Industry Internship Evaluation",
+          "body": [
+            "The Industry Internship uses the University summer-internship evaluation process: a report with the completion certificate and an oral presentation before the departmental committee.",
+            "Summer Internship evaluation carries 50 external marks and no internal marks. A student must secure at least 40 percent; an unsuccessful student reappears when the University conducts semester supplementary examinations."
+          ]
+        },
+        {
+          "id": "final-semester-internship-and-project",
+          "title": "Final-Semester Internship and Project Work",
+          "body": [
+            "In the final semester, every student registers for an onsite or virtual internship and works in parallel on a project with well-defined objectives.",
+            "At the end of the semester, the student submits an internship-completion certificate and a project report. The project report may cover work carried out during the internship."
+          ]
+        },
+        {
+          "id": "submissions-marks-and-completion",
+          "title": "Submissions, Marks and Completion",
+          "body": [
+            "Project work carries 200 marks: 60 internal and 140 external. The supervisor awards 30 internal marks, split equally between the report and seminar. A departmental Project Review Committee awards the remaining 30 internal marks when projects are showcased at the end of the semester.",
+            "The external evaluation is a 140-mark viva voce conducted by internal and University-appointed external examiners.",
+            "Completion of the internships is mandatory for the degree. A student who does not complete an internship must repeat and complete it. Colleges facilitate and monitor the work, so students should also follow current instructions issued by their own department."
+          ]
+        }
+      ],
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Sections 14 and the R23 course structure provide the mandatory internship stages, evaluation process, project marks and completion requirements summarized here."
+      },
+      "notes": "University-level guide. Students should confirm current operational dates, forms, approved organizations and submission procedures with their college or department."
+    }
+  ]
+}

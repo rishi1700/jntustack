@@ -26,6 +26,7 @@ try {
   console.log(`Subjects         : ${content.subjects.length}`);
   console.log(`Colleges         : ${content.colleges.length}`);
   console.log(`Branch profiles  : ${content.branchProfiles.length}`);
+  console.log(`Guides           : ${(content.guides || []).length}`);
 } catch (err) {
   console.error('DB export failed:', JSON.stringify(describeDbError(err), null, 2));
   if (err?.name === 'DatabaseConfigError' || err?.code === 'ER_NO_SUCH_TABLE' || err?.code === 'ER_BAD_FIELD_ERROR') {

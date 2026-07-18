@@ -1242,17 +1242,21 @@
       },
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-eee-3-1",
-        "title": "Community Service Internship - R23 EEE 3-1",
-        "meta_description": "JNTUK R23 EEE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Community Service Internship - EEE 3-1",
+        "meta_description": "Official JNTUK R23 EEE Evaluation of Community Service Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official EEE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project-evaluation"
+      }
     },
     {
       "id": "r23-eee-3-1-signals-and-systems",
@@ -1757,11 +1761,15 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official branch course structure confirms the title, placement and credits, but does not publish a unit-wise syllabus."
       },
-      "notes": "NEEDS VERIFICATION: the official EEE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
+      "notes": "Verified official elective listing. Intentionally published without a standalone syllabus page because no official unit-wise syllabus is available.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": null
+      }
     },
     {
       "id": "r23-eee-3-2-switchgear-and-protection",
@@ -5060,17 +5068,21 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-jntuk-r23-eee-4-1",
-        "title": "Industry Internship Evaluation - EEE 4-1",
-        "meta_description": "JNTUK R23 EEE 4-1 Evaluation of Industry Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Industry Internship - EEE 4-1",
+        "meta_description": "Official JNTUK R23 EEE Evaluation of Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official course structure supplies the title and credits but no detailed evaluation or implementation guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship-evaluation"
+      }
     },
     {
       "id": "r23-eee-4-2-internship-and-project",
@@ -5081,7 +5093,7 @@
       "semester": 2,
       "year_sem_label": "4-2",
       "subject_code": null,
-      "name": "Internship and Project",
+      "name": "Full Semester Internship & Project Work",
       "category": "Internship",
       "credits": {
         "L": 0,
@@ -5099,17 +5111,21 @@
       },
       "seo": {
         "slug": "internship-and-project-jntuk-r23-eee-4-2",
-        "title": "Internship and Project - EEE 4-2",
-        "meta_description": "JNTUK R23 EEE 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed guidelines."
+        "title": "Full Semester Internship & Project Work - EEE 4-2",
+        "meta_description": "Official JNTUK R23 EEE Full Semester Internship & Project Work milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8240931773304279393.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official course structure supplies the title and credits but no detailed evaluation or implementation guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#final-semester-internship-and-project"
+      }
     },
     {
       "id": "r23-eee-4-1-constitution-of-india",
@@ -5197,6 +5213,82 @@
         ]
       },
       "notes": "The EEE placement source is listed under additional official sources. The EEE PDF has a heading-only detail page; official ECE pages 183-184 provide the common syllabus used here."
+    },
+    {
+      "id": "r23-eee-2-2-community-service-project-internship",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Community Service Project Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project"
+      },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "community-service-project-internship-jntuk-r23-eee-2-2",
+        "title": "Community Service Project Internship - EEE 2-2",
+        "meta_description": "Official JNTUK R23 EEE Community Service Project Internship milestone, listed with the university internship and project requirements guide."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure and mandatory-internship regulations confirm this eight-week summer milestone. No standalone unit-wise syllabus is published."
+      },
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page."
+    },
+    {
+      "id": "r23-eee-3-2-mandatory-industry-internship",
+      "regulation": "R23",
+      "branch": "EEE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mandatory Industry Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship"
+      },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mandatory-industry-internship-jntuk-r23-eee-3-2",
+        "title": "Mandatory Industry Internship - EEE 3-2",
+        "meta_description": "Official JNTUK R23 EEE Mandatory Industry Internship milestone, listed with the university internship and project requirements guide."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure and mandatory-internship regulations confirm this eight-week summer milestone. No standalone unit-wise syllabus is published."
+      },
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page."
     }
   ]
 }

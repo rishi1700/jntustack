@@ -1,5 +1,3 @@
-import { escapeHtml } from './layout.js';
-
 // Set to true only for this standalone preview file -- the real generator
 // build should always leave this false so the widget calls the real
 // /api/ask function once it's deployed.
@@ -23,7 +21,6 @@ export function renderAskWidget({ mock = false } = {}) {
   const input = document.getElementById('askInput');
   const submit = document.getElementById('askSubmit');
   const answerEl = document.getElementById('askAnswer');
-  let searchIndexPromise = MOCK ? null : fetch('/search-index.json').then(r => r.json()).catch(() => []);
 
   async function mockAnswer(question) {
     await new Promise(r => setTimeout(r, 600));
@@ -40,11 +37,10 @@ export function renderAskWidget({ mock = false } = {}) {
   }
 
   async function realAnswer(question) {
-    const searchIndex = await searchIndexPromise;
     const res = await fetch('/api/ask', {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ question, searchIndex }),
+      body: JSON.stringify({ question }),
     });
     if (!res.ok) throw new Error('Request failed');
     return res.json();

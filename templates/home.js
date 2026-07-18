@@ -38,7 +38,7 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null,
   const semesterTiles = branches.map(b => b.published
     ? `<a class="semester-tile" href="${escapeHtml(b.href)}">
         <div class="semester-tile-code">${escapeHtml(b.code)}</div>
-        <div class="semester-tile-count mono">${b.verifiedCount} subject${b.verifiedCount === 1 ? '' : 's'}</div>
+        <div class="semester-tile-count mono">${b.verifiedCount} page${b.verifiedCount === 1 ? '' : 's'}${b.listingCount ? ` + ${b.listingCount} listings` : ''}</div>
       </a>`
     : `<div class="semester-tile semester-tile--disabled" aria-disabled="true">
         <div class="semester-tile-code">${escapeHtml(b.code)}</div>
@@ -82,7 +82,7 @@ export function renderHomePage({ branches = [], collegeUniversitySummary = null,
     ? `<a class="registry-row registry-row--live" href="${escapeHtml(b.href)}">
         <span class="registry-code">${escapeHtml(b.code)}</span>
         <span class="registry-name">${escapeHtml(b.name)}</span>
-        <span class="registry-status">${b.verifiedCount} verified subject${b.verifiedCount === 1 ? '' : 's'} &rarr;</span>
+        <span class="registry-status">${b.verifiedCount} syllabus page${b.verifiedCount === 1 ? '' : 's'}${b.listingCount ? ` + ${b.listingCount} official listings` : ''} &rarr;</span>
       </a>`
     : `<div class="registry-row" aria-disabled="true">
         <span class="registry-code">${escapeHtml(b.code)}</span>
@@ -126,7 +126,7 @@ ${pipeline}
 
 <section>
   <h2>Browse by branch</h2>
-  <p class="guide-intro">Published branches link to every verified subject in one place. Branches without a verified subject yet are listed but marked not-yet-available -- never a dead link.</p>
+  <p class="guide-intro">Published branches link to every verified syllabus page and clearly labelled official milestone in one place. Branches without verified content are marked not-yet-available -- never a dead link.</p>
   <div class="registry">${branchRows}</div>
 </section>
 

@@ -35,10 +35,11 @@ availability, and affiliate-program decisions.
 
 ## Current Project Findings
 
-Snapshot at the time this note was recorded:
+Current content baseline (updated 2026-07-18; the pilot remains deferred):
 
-- JNTUStack has 427 subject records: 396 verified/public and 31 drafts.
-- The verified set includes 293 theory and 29 theory-cum-lab courses.
+- JNTUStack has 436 subject records, all source-verified.
+- Publication produces 403 standalone subject pages and 33 verified
+  listing-only records; listing-only records are not affiliate-page inventory.
 - The canonical Subject schema has no textbook, reference-book, recommendation,
   ISBN, author, publisher, or commercial-offer fields.
 - The existing `resources` object contains only lecture notes, previous papers,
@@ -55,7 +56,7 @@ Snapshot at the time this note was recorded:
 - A legacy audit parser in `scripts/audit-content.js` demonstrates basic
   textbook/reference-section extraction, but its output is not used by the
   canonical build.
-- The 396 verified subjects point to a small set of recurring syllabus PDFs,
+- The source-verified subjects point to a small set of recurring syllabus PDFs,
   which makes source-level extraction more tractable than editing every subject
   independently.
 

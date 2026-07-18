@@ -53,6 +53,9 @@ export const askRouter = Router();
 
 askRouter.post('/api/ask', async (req, res) => {
   try {
+    // The browser sends only the question. The server-owned index is the sole
+    // grounding source; accepting a client-supplied copy would waste bandwidth
+    // and could let a caller smuggle unverified material into the prompt.
     const { question } = req.body || {};
 
     if (!question || typeof question !== 'string') {

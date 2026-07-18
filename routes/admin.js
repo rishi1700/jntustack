@@ -1,7 +1,7 @@
 import { spawn } from 'node:child_process';
 import express, { Router } from 'express';
 import rateLimit from 'express-rate-limit';
-import { getAdminConfig, getAdminTestConfig } from '../lib/config.js';
+import { getAdminConfig, getAdminTestConfig, getGitHubPublicationTrustReady } from '../lib/config.js';
 import {
   assetErrorSummary,
   getAsset,
@@ -117,6 +117,11 @@ import {
   getReleaseApplyPlan,
   releaseApplyPlanErrorSummary,
 } from '../lib/release-apply-plan.js';
+import {
+  CREATE_REVIEW_PR_CONFIRMATION,
+  createGitHubPublisher,
+  getGitHubPublicationForRelease,
+} from '../lib/github-publisher.js';
 import {
   LIVE_APPLY_CONFIRMATION,
   LIVE_RECOVERY_CONFIRMATION,
@@ -244,6 +249,7 @@ function collectSources(content) {
   }
   for (const branch of content.data.branches || []) add('branch', branch.source);
   for (const subject of content.data.subjects || []) add('subject', subject.source);
+  for (const guide of content.guides || content.data.guides || []) add('guide', guide.source);
   for (const college of content.colleges || []) add('college', college.source);
   for (const profile of content.branchProfiles || []) add('branch_profile', profile.source);
   return sources.sort((a, b) => `${a.entityType}:${a.originUrl}`.localeCompare(`${b.entityType}:${b.originUrl}`));
@@ -364,6 +370,43 @@ function requireAdmin(config) {
   };
 }
 
+const SAFE_ADMIN_METHODS = new Set(['GET', 'HEAD', 'OPTIONS']);
+
+export function adminMutationIsSameOrigin(req) {
+  const method = String(req?.method || '').toUpperCase();
+  if (SAFE_ADMIN_METHODS.has(method)) return true;
+
+  const header = name => typeof req?.get === 'function' ? req.get(name) : undefined;
+  const origin = header('origin');
+  if (!origin) {
+    return String(header('sec-fetch-site') || '').toLowerCase() === 'same-origin';
+  }
+
+  try {
+    const host = header('host');
+    if (!host || !req?.protocol) return false;
+    const expectedOrigin = new URL(`${req.protocol}://${host}`).origin;
+    const suppliedOrigin = String(origin).trim();
+    const parsedOrigin = new URL(suppliedOrigin);
+    return suppliedOrigin === parsedOrigin.origin && suppliedOrigin === expectedOrigin;
+  } catch {
+    return false;
+  }
+}
+
+function requireSameOriginAdminMutation(req, res, next) {
+  if (adminMutationIsSameOrigin(req)) {
+    next();
+    return;
+  }
+  res.status(403).send('Forbidden: submit admin changes from this site\'s admin interface.');
+}
+
+async function getGitHubPublicationForReleaseIfNeeded(release) {
+  if (!release || release.publicationMode !== 'github_pr') return null;
+  return getGitHubPublicationForRelease(release.id);
+}
+
 async function getContent(root) {
   return loadContent({ root });
 }
@@ -419,6 +462,12 @@ export function createAdminRouter({ root }) {
     }
     next();
   });
+
+  // Authentication cookies alone are not proof that a state-changing request
+  // originated from this admin. Enforce the browser's Origin signal before
+  // both login and authenticated mutations; same-origin GET/HEAD/OPTIONS stay
+  // unaffected.
+  router.use(requireSameOriginAdminMutation);
 
   router.use((req, res, next) => {
     if (req.path === '/login') return next();
@@ -1495,8 +1544,17 @@ export function createAdminRouter({ root }) {
       const approvedProposals = release.status === 'draft'
         ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
         : [];
-      const reviewSummary = await generateReleaseReviewSummary({ releaseCandidateId: release.id });
-      res.send(renderReleaseCandidateDetailPage({ release, approvedProposals, reviewSummary }));
+      const [reviewSummary, githubPublication] = await Promise.all([
+        generateReleaseReviewSummary({ releaseCandidateId: release.id }),
+        getGitHubPublicationForReleaseIfNeeded(release),
+      ]);
+      res.send(renderReleaseCandidateDetailPage({
+        release,
+        approvedProposals,
+        reviewSummary,
+        githubPublication,
+        githubTrustReady: getGitHubPublicationTrustReady(),
+      }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseCandidateErrorSummary(err) }));
     }
@@ -1504,6 +1562,11 @@ export function createAdminRouter({ root }) {
 
   router.post('/release-candidates/:id/apply-plan', express.urlencoded({ extended: false }), async (req, res) => {
     try {
+      const release = await getReleaseCandidate(req.params.id);
+      const existingPublication = await getGitHubPublicationForReleaseIfNeeded(release);
+      if (existingPublication) {
+        throw new Error('This release already has a sealed GitHub publication. Its apply plan cannot be regenerated.');
+      }
       await generateReleaseApplyPlan({
         root,
         releaseCandidateId: req.params.id,
@@ -1519,10 +1582,13 @@ export function createAdminRouter({ root }) {
         const reviewSummary = release
           ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
           : null;
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
           reviewSummary,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseApplyPlanErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1538,15 +1604,81 @@ export function createAdminRouter({ root }) {
         res.status(404).send(renderReleaseCandidateUnavailablePage({ message: 'Release apply plan not found. Generate it from a ready_for_review release candidate.' }));
         return;
       }
+      const release = await getReleaseCandidate(req.params.id);
       const latestApply = await getLatestReleaseLiveApply(req.params.id);
+      const githubPublication = release?.publicationMode === 'github_pr'
+        ? await getGitHubPublicationForRelease(req.params.id)
+        : null;
       res.send(renderReleaseApplyPlanDetailPage({
         plan,
         latestApply,
+        publicationMode: release?.publicationMode || 'legacy',
+        githubPublication,
+        githubTrustReady: getGitHubPublicationTrustReady(),
+        githubConfirmationPhrase: CREATE_REVIEW_PR_CONFIRMATION,
         confirmationPhrase: LIVE_APPLY_CONFIRMATION,
         recoveryPhrase: LIVE_RECOVERY_CONFIRMATION,
       }));
     } catch (err) {
       res.status(503).send(renderReleaseCandidateUnavailablePage({ message: releaseApplyPlanErrorSummary(err) }));
+    }
+  });
+
+  router.post('/release-apply-plans/:id/publish-github', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const publisher = createGitHubPublisher();
+      await publisher.createPublication({
+        releaseCandidateId: req.params.id,
+        confirmation: req.body?.confirmation_phrase,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-apply-plans/${encodeURIComponent(req.params.id)}`);
+    } catch (err) {
+      try {
+        const plan = await getReleaseApplyPlan({ root, releaseCandidateId: req.params.id });
+        const release = await getReleaseCandidate(req.params.id);
+        const latestApply = await getLatestReleaseLiveApply(req.params.id);
+        const githubPublication = await getGitHubPublicationForRelease(req.params.id).catch(() => null);
+        res.status(400).send(renderReleaseApplyPlanDetailPage({
+          plan,
+          latestApply,
+          publicationMode: release?.publicationMode || 'legacy',
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
+          githubConfirmationPhrase: CREATE_REVIEW_PR_CONFIRMATION,
+          confirmationPhrase: LIVE_APPLY_CONFIRMATION,
+          recoveryPhrase: LIVE_RECOVERY_CONFIRMATION,
+          error: err?.message || String(err),
+        }));
+      } catch (innerErr) {
+        res.status(503).send(renderReleaseCandidateUnavailablePage({ message: innerErr?.message || String(innerErr) }));
+      }
+    }
+  });
+
+  router.post('/github-publications/:id/refresh', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const publisher = createGitHubPublisher();
+      const publication = await publisher.refreshPublication({
+        publicationId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-apply-plans/${encodeURIComponent(publication.releaseCandidateId)}`);
+    } catch (err) {
+      res.status(400).send(renderReleaseCandidateUnavailablePage({ message: err?.message || String(err) }));
+    }
+  });
+
+  router.post('/github-publications/:id/verify-deployment', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
+    try {
+      const publisher = createGitHubPublisher();
+      const publication = await publisher.verifyDeployment({
+        publicationId: req.params.id,
+        actor: config.email,
+      });
+      res.redirect(`/admin/release-apply-plans/${encodeURIComponent(publication.releaseCandidateId)}`);
+    } catch (err) {
+      res.status(400).send(renderReleaseCandidateUnavailablePage({ message: err?.message || String(err) }));
     }
   });
 
@@ -1690,9 +1822,12 @@ export function createAdminRouter({ root }) {
         const approvedProposals = release?.status === 'draft'
           ? await listApprovedProposalsForRelease({ releaseCandidateId: release.id })
           : [];
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseReviewErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1718,10 +1853,13 @@ export function createAdminRouter({ root }) {
         const reviewSummary = release
           ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
           : null;
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
           reviewSummary,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1759,10 +1897,13 @@ export function createAdminRouter({ root }) {
         const reviewSummary = release
           ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
           : null;
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
           reviewSummary,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1789,10 +1930,13 @@ export function createAdminRouter({ root }) {
         const reviewSummary = release
           ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
           : null;
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
           reviewSummary,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {
@@ -1819,10 +1963,13 @@ export function createAdminRouter({ root }) {
         const reviewSummary = release
           ? await generateReleaseReviewSummary({ releaseCandidateId: release.id })
           : null;
+        const githubPublication = await getGitHubPublicationForReleaseIfNeeded(release);
         res.status(400).send(renderReleaseCandidateDetailPage({
           release,
           approvedProposals,
           reviewSummary,
+          githubPublication,
+          githubTrustReady: getGitHubPublicationTrustReady(),
           error: releaseCandidateErrorSummary(err),
         }));
       } catch (innerErr) {

@@ -145,7 +145,7 @@ app.get('/health', (req, res) => {
 app.use(express.static(DIST_DIR, {
   setHeaders(res, filePath) {
     const extension = path.extname(filePath).toLowerCase();
-    if (extension === '.html' || ['sitemap.xml', 'robots.txt', 'search-index.json'].includes(path.basename(filePath))) {
+    if (extension === '.html' || ['sitemap.xml', 'robots.txt', 'search-index.json', 'release.json'].includes(path.basename(filePath))) {
       // HTML and discovery indexes may change on every content publish. They can
       // be stored, but must be revalidated so deploys never leave stale pages.
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');

@@ -1,0 +1,14 @@
+# Publication authorization is part of the production trust boundary.
+# Keep these paths under explicit owner review in the main-branch ruleset.
+/.github/CODEOWNERS @rishi1700
+/.github/workflows/** @rishi1700
+/data/*.json @rishi1700
+/scripts/verify-publication-artifact.js @rishi1700
+/scripts/build.js @rishi1700
+/lib/** @rishi1700
+/routes/admin.js @rishi1700
+/templates/admin.js @rishi1700
+/server.js @rishi1700
+/package.json @rishi1700
+/package-lock.json @rishi1700
+/migrations/** @rishi1700

@@ -3,28 +3,42 @@
     {
       "id": "r23-1-1-basic-electrical-and-electronics-engineering",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Basic Electrical & Electronics Engineering",
       "category": "EngineeringScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
       "type": "theory",
       "units": [
         {
@@ -43,7 +57,7 @@
           "topics": [
             "Construction, principle and operation of DC motor, DC generator, single-phase transformer, three-phase induction motor, and alternator",
             "Applications of electrical machines",
-            "Construction and working of PMMC and moving-iron (MI) instruments, and wattmeter"
+            "Construction and working of PMMC and moving-iron instruments and the Wheatstone bridge"
           ]
         },
         {
@@ -52,7 +66,8 @@
           "topics": [
             "Conventional and non-conventional energy resources; hydel, nuclear, solar and wind power generation layouts",
             "Power rating of household appliances, electricity tariff and bill calculation for domestic consumers",
-            "Equipment safety: fuse working principle, electric shock and earthing, safety precautions"
+            "Equipment safety: fuse and miniature circuit breaker working principles, merits and demerits",
+            "Personal safety: electric shock, types of earthing and precautions to avoid shock"
           ]
         },
         {
@@ -96,101 +111,82 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "basic-electrical-and-electronics-engineering-jntuk-r23-1-1",
-        "title": "Basic Electrical & Electronics Engineering - 1-1",
-        "meta_description": "JNTUK R23 1-1 Basic Electrical & Electronics Engineering: DC/AC circuits, machines, energy resources, semiconductor devices and digital electronics..."
+        "slug": "basic-electrical-and-electronics-engineering-jntuk-r23",
+        "title": "Basic Electrical & Electronics Engineering - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Basic Electrical & Electronics Engineering syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-chemistry",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CSE",
-        "EEE"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
-      "subject_code": "R231104",
+      "subject_code": null,
       "name": "Chemistry",
       "category": "BasicScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
       "type": "theory",
       "units": [
         {
           "number": 1,
           "title": "Structure and Bonding Models",
           "topics": [
-            "Fundamentals of quantum mechanics, Schrodinger wave equation, significance of psi and psi-squared",
-            "Particle in a one-dimensional box",
-            "Molecular orbital theory -- bonding in homo- and hetero-nuclear diatomic molecules, energy level diagrams of O2 and CO",
-            "Pi-molecular orbitals of butadiene and benzene, calculation of bond order"
+            "Fundamentals of quantum mechanics, Schrodinger wave equation, significance of psi and psi-squared, and the particle in a one-dimensional box",
+            "Molecular orbital theory for homo- and heteronuclear diatomic molecules, including energy-level diagrams of O2 and CO",
+            "Pi molecular orbitals of butadiene and benzene and calculation of bond order"
           ]
         },
         {
           "number": 2,
           "title": "Modern Engineering Materials",
           "topics": [
-            "Semiconductors -- introduction, basic concepts, applications",
-            "Superconductors -- introduction, basic concepts, applications",
-            "Supercapacitors -- introduction, basic concepts, classification, applications",
-            "Nanomaterials -- introduction, classification, properties and applications of fullerenes, carbon nanotubes and graphene nanoparticles"
+            "Semiconductors and superconductors: basic concepts and applications",
+            "Supercapacitors: basic concept, classification and applications",
+            "Nanomaterials: classification, properties and applications of fullerenes, carbon nanotubes and graphene nanoparticles"
           ]
         },
         {
           "number": 3,
           "title": "Electrochemistry and Applications",
           "topics": [
-            "Electrochemical cell, Nernst equation, cell potential calculations",
-            "Potentiometry -- potentiometric titrations (redox); conductivity, conductometric titrations (acid-base)",
-            "Construction and working of standard hydrogen electrode and calomel electrode",
-            "Primary cells (zinc-air battery), secondary cells (lithium-ion batteries) -- working and cell reactions",
-            "Fuel cells, hydrogen-oxygen fuel cell, polymer electrolyte membrane fuel cells (PEMFC)"
+            "Electrochemical cells, Nernst equation, cell-potential calculations and numerical problems",
+            "Potentiometric redox titrations, conductivity and conductometric acid-base titrations",
+            "Potentiometric and amperometric electrochemical sensors with examples",
+            "Zinc-air and lithium-ion batteries, hydrogen-oxygen fuel cells and polymer electrolyte membrane fuel cells"
           ]
         },
         {
           "number": 4,
           "title": "Polymer Chemistry",
           "topics": [
-            "Introduction to polymers, functionality of monomers, chain growth and step growth polymerization",
-            "Coordination polymerization with examples and mechanisms",
-            "Thermoplastics and thermosetting plastics -- PVC, Teflon, Bakelite, Nylon-6,6, carbon fibres",
-            "Elastomers -- Buna-S, Buna-N: preparation, properties and applications",
-            "Conducting polymers -- polyacetylene, polyaniline; biodegradable polymers -- PGA, PLA"
+            "Functionality of monomers, chain-growth, step-growth and coordination polymerization with examples and mechanisms",
+            "Preparation, properties and applications of PVC, Teflon, Bakelite, Nylon-6,6 and carbon fibres",
+            "Buna-S and Buna-N elastomers, polyacetylene and polyaniline conducting polymers, and PGA and PLA biodegradable polymers"
           ]
         },
         {
           "number": 5,
           "title": "Instrumental Methods and Applications",
           "topics": [
-            "Electromagnetic spectrum, absorption of radiation, Beer-Lambert law -- applications and limitations",
-            "UV-visible spectroscopy -- electronic transitions and instrumentation",
-            "IR spectroscopy -- instrumentation, identification and applications",
-            "Procedure and applications of MRI and CT scans"
+            "Electromagnetic spectrum, absorption of radiation and Beer-Lambert law",
+            "UV-visible spectroscopy: electronic transitions and instrumentation",
+            "IR spectroscopy: fundamental modes, selection rules and instrumentation",
+            "Chromatography classification and HPLC principle, instrumentation and applications"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand the concepts of molecular orbitals and bond orders",
-        "Apply the principle of band diagrams in the application of conductors and semiconductors",
-        "Compare the materials of construction for battery and fuel cells",
-        "Explain the preparation, properties, and applications of thermoplastics, thermosetting polymers, elastomers, and conducting polymers",
-        "Summarize the concepts of instrumental methods and explain the principles of spectrometry"
+        "Compare materials used to construct batteries and electrochemical sensors",
+        "Explain the preparation, properties and applications of thermoplastics, thermosetting plastics, elastomers and conducting polymers",
+        "Explain the principles of spectrometry and solid-liquid chromatography for separating mixtures",
+        "Apply band-diagram principles to conductors and semiconductors",
+        "Summarize the concepts of instrumental methods"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -198,69 +194,83 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "chemistry-jntuk-r23-1-1",
-        "title": "Chemistry - 1-1",
-        "meta_description": "JNTUK R23 CSE/EEE 1-1 Chemistry notes: quantum structure and bonding, modern engineering materials, electrochemistry, polymer chemistry, and instrumental..."
+        "slug": "chemistry-jntuk-r23",
+        "title": "Chemistry - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Chemistry syllabus for CSE, EEE, ECE and IT: bonding, engineering materials, electrochemistry, polymers and instrumental methods."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
-      "notes": null
+      "notes": null,
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        },
+        {
+          "branchCodes": [
+            "ECE",
+            "IT"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        }
+      ]
     },
     {
       "id": "r23-1-1-chemistry-lab",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CSE",
-        "EEE"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
       "subject_code": null,
       "name": "Chemistry Lab",
       "category": "BasicScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
       "type": "lab",
       "units": [
         {
           "number": 1,
           "title": "Laboratory Experiments",
           "topics": [
-            "Determination of crystal-field splitting energy (10Dq) by spectrophotometric method",
+            "Measurement of 10Dq by spectrophotometric method",
             "Conductometric titration of a strong acid against a strong base",
             "Conductometric titration of a weak acid against a strong base",
             "Determination of cell constant and conductance of solutions",
-            "Potentiometric determination and redox titration experiments",
-            "Determination of acid concentration in a lead-acid battery",
+            "Potentiometric determination of redox potentials and EMFs",
+            "Determination of acid strength in a lead-acid battery",
             "Preparation of Bakelite",
-            "Verification of Beer-Lambert law using a colorimeter or UV-visible spectrophotometer",
-            "Identification of functional groups using infrared spectroscopy",
+            "Verification of the Beer-Lambert law",
+            "Wavelength measurement of a sample by UV-visible spectroscopy",
+            "Identification of simple organic compounds by IR spectroscopy",
             "Preparation of nanomaterials by precipitation method",
-            "Determination of ferrous iron by dichrometry",
-            "Determination of total hardness of water by EDTA method",
-            "Estimation of vitamin C",
-            "Determination of magnesium in an antacid"
+            "Estimation of ferrous iron by dichrometry"
           ]
         }
       ],
       "course_outcomes": [
         "Determine the cell constant and conductance of solutions",
-        "Prepare advanced polymer Bakelite materials",
+        "Prepare advanced Bakelite polymer material",
         "Measure the strength of an acid present in secondary batteries",
-        "Analyse the IR spectra of some organic compounds",
-        "Calculate the strength of acid in a Pb-acid battery"
+        "Analyze IR spectra of simple organic compounds",
+        "Calculate acid strength in a lead-acid battery"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -268,44 +278,88 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "chemistry-lab-jntuk-r23-1-1",
-        "title": "Chemistry Lab - 1-1",
-        "meta_description": "JNTUK R23 CSE/EEE 1-1 Chemistry Lab: conductometric and potentiometric titrations, Bakelite preparation, UV-Visible and IR spectroscopy experiments."
+        "slug": "chemistry-lab-jntuk-r23",
+        "title": "Chemistry Lab - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Chemistry Lab for CSE, EEE, ECE and IT, covering conductometry, potentiometry, polymers, UV-visible and IR experiments."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
-      "notes": null
+      "notes": null,
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        },
+        {
+          "branchCodes": [
+            "ECE",
+            "IT"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        }
+      ]
     },
     {
       "id": "r23-1-1-communicative-english",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 2,
+            "T": 0,
+            "P": 0,
+            "C": 2
+          }
+        },
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 2,
+            "T": 0,
+            "P": 0,
+            "C": 2
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Communicative English",
       "category": "HSMC",
-      "credits": {
-        "L": 2,
-        "T": 0,
-        "P": 0,
-        "C": 2
-      },
       "type": "theory",
       "units": [
         {
@@ -380,44 +434,58 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "communicative-english-jntuk-r23-1-1",
-        "title": "Communicative English - 1-1",
-        "meta_description": "JNTUK R23 1-1 Communicative English notes covering listening, speaking, reading, writing, grammar, and vocabulary across five thematic units."
+        "slug": "communicative-english-jntuk-r23",
+        "title": "Communicative English - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Communicative English syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-communicative-english-lab",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        },
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Communicative English Lab",
       "category": "HSMC",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
       "type": "lab",
       "units": [
         {
@@ -450,16 +518,16 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "communicative-english-lab-jntuk-r23-1-1",
-        "title": "Communicative English Lab - 1-1",
-        "meta_description": "JNTUK R23 1-1 Communicative English Lab: phonetics, accent neutralization, email/resume writing, group discussions, debates and interview skills practice."
+        "slug": "communicative-english-lab-jntuk-r23",
+        "title": "Communicative English Lab - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Communicative English Lab, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -529,38 +597,52 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-electrical-and-electronics-engineering-workshop",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 3,
+            "C": 1.5
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 3,
+            "C": 1.5
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Electrical & Electronics Engineering Workshop",
       "category": "EngineeringScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 3,
-        "C": 1.5
-      },
       "type": "lab",
       "units": [
         {
@@ -576,9 +658,9 @@
           "number": 2,
           "title": "Electrical Engineering Experiments",
           "topics": [
-            "Demonstration of basic electrical equipment",
             "Verification of Kirchhoff's current and voltage laws",
             "Verification of the superposition theorem",
+            "Measurement of resistance using a Wheatstone bridge",
             "Magnetization characteristics of a DC shunt generator",
             "Measurement of power and power factor using a single-phase wattmeter",
             "Measurement of earth resistance using a megger",
@@ -592,10 +674,11 @@
             "Forward- and reverse-bias V-I characteristics of a PN-junction diode",
             "V-I characteristics of a Zener diode and its use as a voltage regulator",
             "Implementation of half-wave and full-wave rectifiers",
-            "Verification of AND, OR and NOT gates using integrated circuits",
-            "Verification of XOR and XNOR gates using integrated circuits",
-            "Verification of universal gates using integrated circuits",
-            "Implementation of Boolean functions using logic gates"
+            "Input and output characteristics of a BJT in CE and CB configurations",
+            "Frequency response of a CE amplifier",
+            "Simulation of an RC-coupled amplifier using the supplied design",
+            "Verification of AND, OR, NOT, NAND, NOR, XOR and XNOR truth tables using integrated circuits",
+            "Verification of SR, JK and D flip-flop truth tables using integrated circuits"
           ]
         }
       ],
@@ -604,8 +687,10 @@
         "Measure resistance using a Wheatstone bridge",
         "Investigate critical field resistance and critical speed of a DC shunt generator",
         "Investigate reactive power and power factor in electrical loads",
-        "Identify and test common electronic components and use electronic measuring instruments",
-        "Plot characteristics of semiconductor devices and implement basic digital circuits"
+        "Identify and test common electronic components",
+        "Use electronic measuring instruments",
+        "Plot and discuss the characteristics of semiconductor devices",
+        "Explain the operation of a digital circuit"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -613,44 +698,58 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "electrical-and-electronics-engineering-workshop-jntuk-r23-1-1",
-        "title": "Electrical & Electronics Engineering Workshop - 1-1",
-        "meta_description": "JNTUK R23 1-1 Electrical & Electronics Engineering Workshop: hands-on practice on electrical wiring, electronic devices and circuit fundamentals."
+        "slug": "electrical-and-electronics-engineering-workshop-jntuk-r23",
+        "title": "Electrical & Electronics Engineering Workshop - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Electrical & Electronics Engineering Workshop, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-engineering-graphics",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 1,
+            "T": 0,
+            "P": 4,
+            "C": 3
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 1,
+            "T": 0,
+            "P": 4,
+            "C": 3
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Engineering Graphics",
       "category": "EngineeringScience",
-      "credits": {
-        "L": 1,
-        "T": 0,
-        "P": 4,
-        "C": 3
-      },
       "type": "theory_cum_lab",
       "units": [
         {
@@ -711,44 +810,58 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "engineering-graphics-jntuk-r23-1-1",
-        "title": "Engineering Graphics - 1-1",
-        "meta_description": "JNTUK R23 1-1 Engineering Graphics notes: curves and scales, orthographic projections, projections of solids, development of surfaces, and AutoCAD basics."
+        "slug": "engineering-graphics-jntuk-r23",
+        "title": "Engineering Graphics - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Engineering Graphics syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-engineering-workshop",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 3,
+            "C": 1.5
+          }
+        },
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 3,
+            "C": 1.5
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Engineering Workshop",
       "category": "EngineeringScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 3,
-        "C": 1.5
-      },
       "type": "lab",
       "units": [
         {
@@ -779,44 +892,58 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "engineering-workshop-jntuk-r23-1-1",
-        "title": "Engineering Workshop - 1-1",
-        "meta_description": "JNTUK R23 1-1 Engineering Workshop: wood working, sheet metal, fitting, electrical wiring, foundry, welding, plumbing and two-wheeler basic repair trades."
+        "slug": "engineering-workshop-jntuk-r23",
+        "title": "Engineering Workshop - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Engineering Workshop syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-health-and-wellness-yoga-and-sports",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 1,
+            "C": 0.5
+          }
+        },
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 1,
+            "C": 0.5
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Health and Wellness, Yoga and Sports",
       "category": "MandatoryNonCredit",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 1,
-        "C": 0.5
-      },
       "type": "lab",
       "units": [
         {
@@ -863,16 +990,16 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "health-and-wellness-yoga-and-sports-jntuk-r23-1-1",
-        "title": "Health and Wellness, Yoga and Sports - 1-1",
-        "meta_description": "JNTUK R23 1-1 Health and Wellness, Yoga and Sports: mandatory non-credit course on physical fitness, yoga, and personality development."
+        "slug": "health-and-wellness-yoga-and-sports-jntuk-r23",
+        "title": "Health and Wellness, Yoga and Sports - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Health and Wellness, Yoga and Sports syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -971,38 +1098,52 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-it-workshop",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        }
+      ],
       "subject_code": null,
       "name": "IT Workshop",
       "category": "EngineeringScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
       "type": "lab",
       "units": [
         {
@@ -1070,16 +1211,16 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "it-workshop-jntuk-r23-1-1",
-        "title": "IT Workshop - 1-1",
-        "meta_description": "JNTUK R23 1-1 IT Workshop: PC hardware/software assembly, OS installation, LAN connectivity, and productivity tool practice."
+        "slug": "it-workshop-jntuk-r23",
+        "title": "IT Workshop - JNTUK R23",
+        "meta_description": "Official JNTUK R23 IT Workshop syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -1179,38 +1320,52 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-1-nss-ncc-scouts-and-guides-community-service",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 1,
-      "year_sem_label": "1-1",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 1,
+            "C": 0.5
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 1,
+            "C": 0.5
+          }
+        }
+      ],
       "subject_code": null,
       "name": "NSS/NCC/Scouts & Guides/Community Service",
       "category": "MandatoryNonCredit",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 1,
-        "C": 0.5
-      },
       "type": "lab",
       "units": [
         {
@@ -1254,98 +1409,123 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "nss-ncc-scouts-and-guides-community-service-jntuk-r23-1-1",
-        "title": "NSS/NCC/Scouts & Guides/Community Service - 1-1",
-        "meta_description": "JNTUK R23 1-1 NSS/NCC/Scouts & Guides/Community Service: mandatory non-credit course on discipline, civic responsibility and community engagement."
+        "slug": "nss-ncc-scouts-and-guides-community-service-jntuk-r23",
+        "title": "NSS/NCC/Scouts & Guides/Community Service - JNTUK R23",
+        "meta_description": "Official JNTUK R23 NSS/NCC/Scouts & Guides/Community Service syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-1%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-2-basic-civil-and-mechanical-engineering",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        },
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Basic Civil and Mechanical Engineering",
       "category": "EngineeringScience",
-      "credits": null,
       "type": "theory",
       "units": [
         {
           "number": 1,
-          "title": "Part A -- Basics of Civil Engineering",
+          "title": "Part A - Basics of Civil Engineering",
           "topics": [
-            "Role of civil engineers in society, disciplines of civil engineering (structural, geotechnical, transportation, hydraulics/water resources, environmental)",
-            "Building construction and planning; construction materials -- cement, aggregate, bricks, cement concrete, steel",
-            "Introduction to prefabricated construction techniques, glossary of civil terms, significance of the NBC"
+            "Role of civil engineers in society and the scope of structural, geotechnical, transportation, water-resources and environmental engineering",
+            "Building construction and planning; cement, aggregates, bricks, cement concrete and steel",
+            "Introduction to prefabricated construction techniques"
           ]
         },
         {
           "number": 2,
-          "title": "Part A -- Surveying",
+          "title": "Part A - Surveying",
           "topics": [
-            "Objectives of surveying, horizontal and angular measurements, introduction to bearings",
-            "Levelling instruments, simple problems on levelling and bearings, contour mapping"
+            "Objectives of surveying, horizontal and angular measurements, and introduction to bearings",
+            "Levelling instruments, simple problems on levelling and bearings, and contour mapping"
           ]
         },
         {
           "number": 3,
-          "title": "Part A -- Transportation, Water Resources and Environmental Engineering",
+          "title": "Part A - Transportation, Water Resources and Environmental Engineering",
           "topics": [
-            "Importance of transportation in economic development, flexible and rigid highway pavements, road safety basics",
-            "Basics of harbour, tunnel, airport and railway engineering",
-            "Sources and quality of water, introduction to hydrology, rainwater harvesting, water storage and conveyance structures"
+            "Importance of transportation, flexible and rigid highway pavements, and basics of harbour, tunnel, airport and railway engineering",
+            "Sources and quality of water, water specifications, hydrology and rainwater harvesting",
+            "Water storage and conveyance structures, including a simple introduction to dams and reservoirs"
           ]
         },
         {
           "number": 4,
-          "title": "Part B -- Introduction to Mechanical Engineering",
+          "title": "Part B - Introduction to Mechanical Engineering",
           "topics": [
-            "Role of mechanical engineering in industry and society across energy, manufacturing, automotive, aerospace and marine sectors",
-            "Engineering materials -- ferrous and non-ferrous metals, ceramics, composites, smart materials"
+            "Role of mechanical engineering in the energy, manufacturing, automotive, aerospace and marine sectors",
+            "Ferrous and non-ferrous metals, ceramics, composites and smart materials"
           ]
         },
         {
           "number": 5,
-          "title": "Part B -- Manufacturing and Thermal Engineering",
+          "title": "Part B - Manufacturing and Thermal Engineering",
           "topics": [
-            "Principles of casting, forming, joining and machining; introduction to CNC machines, 3D printing, smart manufacturing",
-            "Working principles of boilers, Otto and Diesel cycles, refrigeration and air-conditioning cycles, IC engines"
+            "Principles of casting, forming, joining and machining, plus CNC machines, 3D printing and smart manufacturing",
+            "Working principles of boilers, Otto and Diesel cycles, refrigeration and air-conditioning cycles",
+            "Two-stroke and four-stroke SI/CI engines and components of electric and hybrid vehicles"
           ]
         },
         {
           "number": 6,
-          "title": "Part B -- Power Plants, Transmission and Robotics",
+          "title": "Part B - Power Plants, Transmission and Robotics",
           "topics": [
             "Working principles of steam, diesel, hydro and nuclear power plants",
-            "Mechanical power transmission: belt, chain and rope drives, gear drives",
-            "Introduction to robotics -- joints, links, configurations and applications"
+            "Belt, chain, rope and gear drives and their applications",
+            "Robot joints, links, configurations and applications"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand the different manufacturing processes",
-        "Explain the basics of thermal engineering and its applications",
-        "Describe the working of different mechanical power transmission systems and power plants",
-        "Describe the basics of robotics and its applications"
+        "Understand the subdivisions of civil engineering and their role in society",
+        "Explain surveying concepts and the measurement of distances, angles and levels",
+        "Explain the importance of transportation and related engineering measures",
+        "Understand water-storage and conveyance structures and the social importance of water conservation",
+        "Describe basic civil-engineering materials and prefabricated technology",
+        "Understand different manufacturing processes",
+        "Explain basic thermal engineering and its applications",
+        "Describe mechanical power-transmission systems and power plants",
+        "Describe basic robotics and its applications"
       ],
       "resources": {
         "lecture_notes_pdf": null,
@@ -1353,18 +1533,18 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "basic-civil-and-mechanical-engineering-jntuk-r23-1-2",
-        "title": "Basic Civil and Mechanical Engineering - 1-2",
-        "meta_description": "JNTUK R23 1-2 Basic Civil and Mechanical Engineering notes: civil engineering basics, surveying, transportation and water resources, plus mechanical..."
+        "slug": "basic-civil-and-mechanical-engineering-jntuk-r23",
+        "title": "Basic Civil and Mechanical Engineering - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Basic Civil and Mechanical Engineering syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
-      "notes": "This combined Basic Civil Engineering (Part A) + Basic Mechanical Engineering (Part B) course appears identically in both the 1-1 and 1-2 source documents with no explicit L-T-P-C table row, official combined course title, or branch/semester-group scope statement in either -- unlike every other subject in this source, which states its branch scope directly. JNTUK R23 is known to swap this course with Basic Electrical & Electronics Engineering between semesters depending on branch group, but this source does not disambiguate which group takes it in 1-1 vs 1-2. Placed at 1-2 here (arbitrary pick pending verification); credits left null. Needs human verification against a branch-specific timetable before promoting to verified."
+      "notes": null
     },
     {
       "id": "r23-1-2-differential-equations-and-vector-calculus",
@@ -1454,34 +1634,52 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-2-engineering-physics",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CSE",
-        "EEE"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 3,
+            "T": 0,
+            "P": 0,
+            "C": 3
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Engineering Physics",
       "category": "BasicScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
       "type": "theory",
       "units": [
         {
@@ -1545,44 +1743,58 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "engineering-physics-jntuk-r23-1-2",
-        "title": "Engineering Physics - 1-2",
-        "meta_description": "JNTUK R23 CSE/EEE 1-2 Engineering Physics notes: wave optics, crystallography, dielectric and magnetic materials, quantum mechanics, and semiconductors."
+        "slug": "engineering-physics-jntuk-r23",
+        "title": "Engineering Physics - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Engineering Physics syllabus, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
     {
       "id": "r23-1-2-engineering-physics-lab",
       "regulation": "R23",
-      "branch": null,
-      "branchCodes": [
-        "CE",
-        "CSE",
-        "ECE",
-        "EEE",
-        "IT",
-        "MECH"
-      ],
       "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
+      "offerings": [
+        {
+          "branchCodes": [
+            "CE",
+            "ECE",
+            "IT",
+            "MECH"
+          ],
+          "year": 1,
+          "semester": 1,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        },
+        {
+          "branchCodes": [
+            "CSE",
+            "EEE"
+          ],
+          "year": 1,
+          "semester": 2,
+          "credits": {
+            "L": 0,
+            "T": 0,
+            "P": 2,
+            "C": 1
+          }
+        }
+      ],
       "subject_code": null,
       "name": "Engineering Physics Lab",
       "category": "BasicScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
       "type": "lab",
       "units": [
         {
@@ -1624,16 +1836,16 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "engineering-physics-lab-jntuk-r23-1-2",
-        "title": "Engineering Physics Lab - 1-2",
-        "meta_description": "JNTUK R23 1-2 Engineering Physics Lab: optics, semiconductor and energy-gap experiments verifying interference, diffraction and Hall effect concepts."
+        "slug": "engineering-physics-lab-jntuk-r23",
+        "title": "Engineering Physics Lab - JNTUK R23",
+        "meta_description": "Official JNTUK R23 Engineering Physics Lab, offered in 1-1 or 1-2 according to branch group."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -1723,10 +1935,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-12",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null,
       "branchCodes": [
@@ -1785,177 +1997,14 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-12",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null,
       "branchCodes": [
         "CSE",
-        "IT"
-      ]
-    },
-    {
-      "id": "r23-ece-1-2-chemistry",
-      "regulation": "R23",
-      "branch": null,
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": "R231104",
-      "name": "Chemistry",
-      "category": "BasicScience",
-      "credits": {
-        "L": 3,
-        "T": 0,
-        "P": 0,
-        "C": 3
-      },
-      "type": "theory",
-      "units": [
-        {
-          "number": 1,
-          "title": "Structure and Bonding Models",
-          "topics": [
-            "Fundamentals of quantum mechanics, Schrodinger wave equation, significance of psi and psi-squared",
-            "Particle in a one-dimensional box",
-            "Molecular orbital theory -- bonding in homo- and hetero-nuclear diatomic molecules, energy level diagrams of O2 and CO",
-            "Pi-molecular orbitals of butadiene and benzene, calculation of bond order"
-          ]
-        },
-        {
-          "number": 2,
-          "title": "Modern Engineering Materials",
-          "topics": [
-            "Semiconductors -- introduction, basic concepts, applications",
-            "Superconductors -- introduction, basic concepts, applications",
-            "Supercapacitors -- introduction, basic concepts, classification, applications",
-            "Nanomaterials -- introduction, classification, properties and applications of fullerenes, carbon nanotubes and graphene nanoparticles"
-          ]
-        },
-        {
-          "number": 3,
-          "title": "Electrochemistry and Applications",
-          "topics": [
-            "Electrochemical cell, Nernst equation, cell potential calculations",
-            "Potentiometry -- potentiometric titrations (redox); conductivity, conductometric titrations (acid-base)",
-            "Construction and working of standard hydrogen electrode and calomel electrode",
-            "Primary cells (zinc-air battery), secondary cells (lithium-ion batteries) -- working and cell reactions",
-            "Fuel cells, hydrogen-oxygen fuel cell, polymer electrolyte membrane fuel cells (PEMFC)"
-          ]
-        },
-        {
-          "number": 4,
-          "title": "Polymer Chemistry",
-          "topics": [
-            "Introduction to polymers, functionality of monomers, chain growth and step growth polymerization",
-            "Coordination polymerization with examples and mechanisms",
-            "Thermoplastics and thermosetting plastics -- PVC, Teflon, Bakelite, Nylon-6,6, carbon fibres",
-            "Elastomers -- Buna-S, Buna-N: preparation, properties and applications",
-            "Conducting polymers -- polyacetylene, polyaniline; biodegradable polymers -- PGA, PLA"
-          ]
-        },
-        {
-          "number": 5,
-          "title": "Instrumental Methods and Applications",
-          "topics": [
-            "Electromagnetic spectrum, absorption of radiation, Beer-Lambert law -- applications and limitations",
-            "UV-visible spectroscopy -- electronic transitions and instrumentation",
-            "IR spectroscopy -- instrumentation, identification and applications",
-            "Procedure and applications of MRI and CT scans"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Understand the concepts of molecular orbitals and bond orders",
-        "Apply the principle of band diagrams in the application of conductors and semiconductors",
-        "Compare the materials of construction for battery and fuel cells",
-        "Explain the preparation, properties, and applications of thermoplastics, thermosetting polymers, elastomers, and conducting polymers",
-        "Summarize the concepts of instrumental methods and explain the principles of spectrometry"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "chemistry-jntuk-r23-1-2",
-        "title": "Chemistry - JNTUK R23 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry: bonding models, engineering materials, electrochemistry, polymers and instrumental analysis."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
-      },
-      "notes": null,
-      "branchCodes": [
-        "ECE",
-        "IT"
-      ]
-    },
-    {
-      "id": "r23-ece-1-2-chemistry-lab",
-      "regulation": "R23",
-      "branch": null,
-      "specialization": null,
-      "year": 1,
-      "semester": 2,
-      "year_sem_label": "1-2",
-      "subject_code": "R231104L",
-      "name": "Chemistry Lab",
-      "category": "BasicScience",
-      "credits": {
-        "L": 0,
-        "T": 0,
-        "P": 2,
-        "C": 1
-      },
-      "type": "lab",
-      "units": [
-        {
-          "number": 1,
-          "title": "Laboratory Experiments",
-          "topics": [
-            "Measure 10Dq by spectrophotometry; verify the Beer-Lambert law; measure sample wavelength using UV-visible spectroscopy",
-            "Conductometric titrations of strong and weak acids against a strong base; determine cell constant and solution conductance",
-            "Use potentiometry to determine redox potentials and EMF; determine acid strength in a lead-acid battery",
-            "Prepare Bakelite and nanomaterials by precipitation; identify simple organic compounds using IR spectroscopy",
-            "Estimate ferrous iron, total water hardness, vitamin C and magnesium in an antacid"
-          ]
-        }
-      ],
-      "course_outcomes": [
-        "Determine the cell constant and conductance of solutions",
-        "Prepare advanced polymer Bakelite materials",
-        "Measure the strength of an acid present in secondary batteries",
-        "Analyse the IR spectra of some organic compounds",
-        "Calculate the strength of acid in a Pb-acid battery"
-      ],
-      "resources": {
-        "lecture_notes_pdf": null,
-        "previous_question_papers_pdf": null,
-        "lab_manual_pdf": null
-      },
-      "seo": {
-        "slug": "chemistry-lab-jntuk-r23-1-2",
-        "title": "Chemistry Lab - JNTUK R23 1-2",
-        "meta_description": "JNTUK R23 ECE/IT 1-2 Chemistry Lab: conductivity, potentiometry, polymers, spectroscopy, nanomaterials, hardness and vitamin C experiments."
-      },
-      "legacy_equivalent_id": null,
-      "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "verified",
-        "college_source_note": "Branch scope, credits, units, outcomes and lab experiments are stated in the published R23 first-year syllabus linked here; this copy is hosted by a JNTUK-affiliated college."
-      },
-      "notes": null,
-      "branchCodes": [
-        "ECE",
         "IT"
       ]
     },
@@ -1980,54 +2029,51 @@
       "units": [
         {
           "number": 1,
-          "title": "Circuit Analysis Fundamentals",
+          "title": "Circuit Analysis and Network Theorems",
           "topics": [
-            "Types of circuit components, types of sources and source transformations",
-            "Mesh and nodal analysis with dependent sources, principle of duality",
-            "Steady-state analysis of AC circuits: impedance concept, phase angle, series R-L, R-C, R-L-C circuits",
-            "Complex impedance and phasor notation, star-delta conversion"
+            "Circuit components, source types and source transformations, mesh and nodal analysis with dependent sources, and the principle of duality",
+            "Thevenin, Norton, Millman, reciprocity, compensation, substitution, superposition, maximum-power-transfer and Tellegen theorems"
           ]
         },
         {
           "number": 2,
-          "title": "Resonance and Coupled Circuits",
+          "title": "Transients and Laplace Transform",
           "topics": [
-            "Series resonance, bandwidth, parallel resonance, anti-resonance",
-            "Coupled circuits: self-inductance, mutual inductance, coefficient of coupling",
-            "Dot rule of coupled circuits, conductively coupled equivalent circuits"
+            "First-order RL and RC transients with DC excitation, time constants and initial conditions",
+            "Second-order RLC differential equations with DC and AC excitation and response in the s-plane",
+            "Laplace transforms, basic theorems, partial fractions and Heaviside expansions"
           ]
         },
         {
           "number": 3,
-          "title": "Network Theorems",
+          "title": "Steady-State Analysis of AC Circuits",
           "topics": [
-            "Thevenin's, Norton's, Millman's, reciprocity, compensation, substitution, superposition, maximum power transfer, and Tellegen's theorems",
-            "Problem solving using dependent sources under AC and DC excitation"
+            "Impedance, phase angle and series RL, RC and RLC circuits",
+            "Complex impedance and phasor notation, mesh and nodal analysis, star-delta conversion and Laplace-transform problem solving"
           ]
         },
         {
           "number": 4,
-          "title": "Transients and Laplace Transform",
+          "title": "Resonance and Coupled Circuits",
           "topics": [
-            "First-order differential equations, time constants, R-L and R-C circuits with DC excitation",
-            "Second-order differential equations (homogeneous and non-homogeneous) with R-L-C elements",
-            "Laplace transform: basic theorems, partial fraction expansion, Heaviside expansion"
+            "Series and parallel resonance, Q, bandwidth and anti-resonance",
+            "Self-inductance, mutual inductance, coupling coefficient, dot rule and conductively coupled equivalent circuits"
           ]
         },
         {
           "number": 5,
           "title": "Two-Port Networks",
           "topics": [
-            "Z-parameters, Y-parameters, transmission-line parameters, h-parameters, relationships between parameter sets",
-            "Parallel and series connection, cascading of two-port networks",
-            "Image and iterative impedances, insertion loss, attenuators, lattice networks, impedance matching"
+            "Z, Y, transmission and h parameters and relationships between parameter sets",
+            "Series, parallel and cascaded connections of two-port networks",
+            "Image and iterative impedances and transfer constants, insertion loss, attenuators, lattice networks and impedance matching"
           ]
         }
       ],
       "course_outcomes": [
-        "Understand basic electrical circuits with nodal and mesh analysis",
-        "Analyze circuits using network simplification theorems",
-        "Find transient and steady-state response of a network",
+        "Understand basic electrical circuits through nodal and mesh analysis",
+        "Analyze circuits using network-simplification theorems",
+        "Find transient and steady-state responses of a network",
         "Analyze electrical networks in the Laplace domain",
         "Compute the parameters of a two-port network"
       ],
@@ -2043,12 +2089,12 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
-        "status": "needs_verification",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
-      "notes": "This source PDF did not include an explicit L-T-P-C table row for this subject (unlike its EEE/CSE-IT counterparts); credits are inferred by pattern-matching against Electrical Circuit Analysis-I and Data Structures, both 3-0-0-3 in the same regulation and year -- needs confirmation against an explicit source before treating the credit value as verified."
+      "notes": null
     },
     {
       "id": "r23-ece-1-2-network-analysis-lab",
@@ -2059,7 +2105,7 @@
       "semester": 2,
       "year_sem_label": "1-2",
       "subject_code": null,
-      "name": "Network Analysis Lab",
+      "name": "Network Analysis and Simulation Laboratory",
       "category": "ProfessionalCore",
       "credits": {
         "L": 0,
@@ -2071,20 +2117,20 @@
       "units": [
         {
           "number": 1,
-          "title": "Network Analysis Experiments",
+          "title": "Network Analysis and Simulation Experiments",
           "topics": [
-            "Study circuit components and verify Kirchhoff's current and voltage laws",
+            "Study circuit components and verify KCL and KVL",
             "Verify mesh and nodal analysis for AC circuits",
-            "Determine Q factor and bandwidth of series- and parallel-resonance circuits",
             "Verify superposition, Thevenin and Norton theorems for AC circuits",
             "Verify the maximum-power-transfer theorem for AC circuits",
-            "Verify Tellegen's theorem for two networks with the same topology",
+            "Verify Tellegen theorem for two networks with the same topology",
             "Study DC transients in RL, RC and RLC circuits",
-            "Study frequency response of first-order RL and RC networks",
-            "Study transient and steady-state responses of a second-order circuit as its parameters vary",
+            "Study the frequency response of first-order RL and RC networks",
+            "Study second-order transient and steady-state responses while varying circuit parameters",
+            "Find the Q factor and bandwidth of series- and parallel-resonance circuits",
             "Determine open-circuit Z and short-circuit Y parameters",
             "Determine hybrid H and transmission ABCD parameters",
-            "Measure two-port parameters and frequency response of a twin-T network"
+            "Measure two-port parameters of a twin-T network and study its frequency response"
           ]
         }
       ],
@@ -2101,16 +2147,16 @@
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "network-analysis-lab-jntuk-r23-ece-1-2",
-        "title": "Network Analysis Lab - ECE 1-2",
-        "meta_description": "JNTUK R23 ECE 1-2 Network Analysis Lab: verification of Kirchoff’s laws, network theorems, resonance and two-port network parameters."
+        "slug": "network-analysis-and-simulation-laboratory-jntuk-r23-ece-1-2",
+        "title": "Network Analysis and Simulation Laboratory - ECE 1-2",
+        "meta_description": "JNTUK R23 ECE 1-2 Network Analysis and Simulation Laboratory: circuit laws, network theorems, transients, resonance and two-port parameters."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -2197,10 +2243,10 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     },
@@ -2262,10 +2308,392 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://tecnrt.org/R23_FINIAL_SYLLABUS/FIRST%20YEAR/1-2%20syllubus.pdf",
-        "retrieved_date": "2026-07-08",
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
         "status": "verified",
-        "college_source_note": "Subject names, credits, and semester placement are cross-confirmed against JNTUK's own centrally-administered exam records. Detailed unit topics are sourced from an autonomous JNTUK-affiliated college's published syllabus and have not been independently verified against the university's own document -- autonomous colleges may adapt unit-level content locally."
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-1-2-engineering-chemistry",
+      "regulation": "R23",
+      "branch": null,
+      "branchCodes": [
+        "CE",
+        "MECH"
+      ],
+      "specialization": null,
+      "year": 1,
+      "semester": 2,
+      "year_sem_label": "1-2",
+      "subject_code": null,
+      "name": "Engineering Chemistry",
+      "category": "BasicScience",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Water Technology",
+          "topics": [
+            "Soft and hard water and EDTA hardness estimation",
+            "Dissolved oxygen estimation and boiler troubles: priming, foaming, scale, sludge and caustic embrittlement",
+            "Drinking-water specifications, ion exchange, reverse osmosis and electrodialysis"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Electrochemistry, Batteries and Corrosion",
+          "topics": [
+            "Electrodes, electrochemical cells, the Nernst equation and cell-potential calculations",
+            "Zinc-air, nickel-cadmium and lithium-ion batteries and the hydrogen-oxygen fuel cell",
+            "Electrochemical and dry corrosion, factors affecting corrosion, cathodic and anodic protection, and nickel/copper plating"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Polymers and Fuel Chemistry",
+          "topics": [
+            "Chain-growth and step-growth polymerization",
+            "Preparation, properties and applications of polystyrene, PVC, Nylon-6,6, Bakelite, Buna-S, Buna-N and Thiokol",
+            "Calorific value, coal analysis, petroleum refining, octane/cetane numbers and alternative fuels"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Modern Engineering Materials",
+          "topics": [
+            "Particle-, fibre- and structural-reinforced composites",
+            "Classification, properties and applications of refractories and lubricants",
+            "Portland cement constituents, setting and hardening"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Surface Chemistry and Nanomaterials",
+          "topics": [
+            "Colloids, micelles, nanometals and nanometal oxides",
+            "Chemical and biological preparation and stabilization of colloids and nanomaterials",
+            "Freundlich and Langmuir adsorption isotherms, BET equation without derivation, and applications in catalysis, medicine and sensors"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Demonstrate corrosion-prevention methods and factors affecting corrosion",
+        "Explain the preparation, properties and applications of thermoplastics, thermosetting plastics, elastomers and conducting polymers",
+        "Explain calorific values, octane number, petroleum refining and cracking of oils",
+        "Explain the setting and hardening of cement",
+        "Summarize concepts of colloids, micelles and nanomaterials"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-chemistry-jntuk-r23-1-2",
+        "title": "Engineering Chemistry - JNTUK R23 CE/MECH 1-2",
+        "meta_description": "Official JNTUK R23 CE/MECH 1-2 Engineering Chemistry syllabus: water, electrochemistry, corrosion, polymers, fuels, materials and nanomaterials."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-1-2-engineering-chemistry-lab",
+      "regulation": "R23",
+      "branch": null,
+      "branchCodes": [
+        "CE",
+        "MECH"
+      ],
+      "specialization": null,
+      "year": 1,
+      "semester": 2,
+      "year_sem_label": "1-2",
+      "subject_code": null,
+      "name": "Engineering Chemistry Lab",
+      "category": "BasicScience",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 2,
+        "C": 1
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Laboratory Experiments",
+          "topics": [
+            "Determine hardness of a groundwater sample",
+            "Estimate dissolved oxygen by Winkler method",
+            "Determine acid strength in a lead-acid battery",
+            "Prepare Bakelite",
+            "Determine iron in cement by colorimetry",
+            "Estimate calcium in Portland cement",
+            "Prepare nanomaterials by precipitation",
+            "Study adsorption of acetic acid by charcoal",
+            "Determine moisture in coal",
+            "Determine lubricating-oil viscosity using Redwood Viscometer 1",
+            "Determine lubricating-oil viscosity using Redwood Viscometer 2",
+            "Determine gas calorific value using a Junker gas calorimeter"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Determine the cell constant and conductance of solutions",
+        "Prepare advanced polymer materials",
+        "Determine physical properties such as surface tension, adsorption and viscosity",
+        "Estimate iron and calcium in cement",
+        "Calculate water hardness"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-chemistry-lab-jntuk-r23-1-2",
+        "title": "Engineering Chemistry Lab - JNTUK R23 CE/MECH 1-2",
+        "meta_description": "Official JNTUK R23 CE/MECH Engineering Chemistry Lab experiments covering water, cement, polymers, adsorption, viscosity and calorific value."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-1-2-engineering-mechanics",
+      "regulation": "R23",
+      "branch": null,
+      "branchCodes": [
+        "CE",
+        "MECH"
+      ],
+      "specialization": null,
+      "year": 1,
+      "semester": 2,
+      "year_sem_label": "1-2",
+      "subject_code": null,
+      "name": "Engineering Mechanics",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 3,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
+      "type": "theory",
+      "units": [
+        {
+          "number": 1,
+          "title": "Force Systems and Friction",
+          "topics": [
+            "Basic concepts, scope and applications of engineering mechanics",
+            "Coplanar concurrent forces, components in space, resultants, moments and couples",
+            "Limiting friction, impending motion, Coulomb laws of dry friction, coefficient and cone of static friction"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Equilibrium of Force Systems",
+          "topics": [
+            "Free-body diagrams, Lami theorem and equilibrium equations for coplanar systems",
+            "Graphical equilibrium, triangle and polygon laws, and spatial force systems using vectors",
+            "Plane trusses and the principle of virtual work"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Centroids, Centre of Gravity and Moments of Inertia",
+          "topics": [
+            "Centroids and centres of gravity of simple and composite figures and bodies, including Pappus theorems",
+            "Area moments of inertia, polar moment, transfer theorem and products of inertia",
+            "Mass moments of inertia and composite bodies"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Particle Motion",
+          "topics": [
+            "Rectilinear and curvilinear kinematics and kinetics",
+            "D Alembert principle, work-energy method and impulse-momentum method"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Rigid-Body Motion",
+          "topics": [
+            "Kinematics and kinetics of translation, rotation about a fixed axis and plane motion",
+            "Work-energy and impulse-momentum methods for rigid bodies"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Understand fundamental mechanics concepts and determine frictional forces",
+        "Analyze concurrent, coplanar and spatial force systems and calculate resultants and moments",
+        "Calculate centroids, centres of gravity and moments of inertia",
+        "Apply work-energy and impulse-momentum principles to particle motion",
+        "Solve translational and rotational rigid-body motion problems"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-mechanics-jntuk-r23-1-2",
+        "title": "Engineering Mechanics - JNTUK R23 CE/MECH 1-2",
+        "meta_description": "Official JNTUK R23 CE/MECH Engineering Mechanics syllabus: forces, equilibrium, friction, centroids, inertia, particle motion and rigid-body motion."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-ce-1-2-engineering-mechanics-and-building-practices-lab",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 1,
+      "semester": 2,
+      "year_sem_label": "1-2",
+      "subject_code": null,
+      "name": "Engineering Mechanics & Building Practices Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Engineering Mechanics and Building Practices Experiments",
+          "topics": [
+            "Study construction tools",
+            "Forces in pin-jointed trusses",
+            "Experimental proof of Lami theorem",
+            "Verify the parallelogram law of forces",
+            "Determine centre of gravity of plane laminae",
+            "Determine coefficients of static and rolling friction",
+            "Verify the law of moments",
+            "Study alternative materials such as M-sand, fly ash and sea sand",
+            "Field visit for quality testing",
+            "Construction-industry safety practices",
+            "Demonstrate non-destructive testing with rebound hammer and UPV",
+            "Study plumbing in buildings"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Evaluate coefficients of friction for different surfaces and rollers on an inclined plane",
+        "Verify the parallelogram law and law of moments",
+        "Determine centres of gravity of different configurations",
+        "Understand quality-testing, assessment and non-destructive-testing principles",
+        "Recognize construction-industry safety practices"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-mechanics-and-building-practices-lab-jntuk-r23-ce-1-2",
+        "title": "Engineering Mechanics & Building Practices Lab - CE 1-2",
+        "meta_description": "Official JNTUK R23 CE 1-2 Engineering Mechanics & Building Practices Lab experiments, construction quality tests, NDT and safety practices."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
+      },
+      "notes": null
+    },
+    {
+      "id": "r23-mech-1-2-engineering-mechanics-lab",
+      "regulation": "R23",
+      "branch": "MECH",
+      "specialization": null,
+      "year": 1,
+      "semester": 2,
+      "year_sem_label": "1-2",
+      "subject_code": null,
+      "name": "Engineering Mechanics Lab",
+      "category": "ProfessionalCore",
+      "credits": {
+        "L": 0,
+        "T": 0,
+        "P": 3,
+        "C": 1.5
+      },
+      "type": "lab",
+      "units": [
+        {
+          "number": 1,
+          "title": "Engineering Mechanics Experiments",
+          "topics": [
+            "Verify the parallelogram law of forces",
+            "Verify the triangle law of forces",
+            "Verify the polygon law for coplanar concurrent forces using a universal force table",
+            "Determine coefficients of static and rolling friction",
+            "Determine centre of gravity of plane laminae",
+            "Verify rigid-body equilibrium for a coplanar non-concurrent parallel force system",
+            "Study pulley systems and draw free-body diagrams",
+            "Determine acceleration due to gravity using a compound pendulum",
+            "Determine moment of inertia of a compound pendulum",
+            "Determine moment of inertia of a flywheel",
+            "Verify the law of moments"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Evaluate coefficients of friction for different surfaces and rollers on an inclined plane",
+        "Verify the polygon law of forces and law of moments",
+        "Determine centres of gravity and moments of inertia",
+        "Verify rigid-body equilibrium under different force systems"
+      ],
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "engineering-mechanics-lab-jntuk-r23-mech-1-2",
+        "title": "Engineering Mechanics Lab - MECH 1-2",
+        "meta_description": "Official JNTUK R23 MECH 1-2 Engineering Mechanics Lab experiments covering force laws, friction, equilibrium, pendulums and moments of inertia."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "Official JNTUK R23 regulations, Group A/Group B course structure and first-year syllabi confirm the placement, credits, units and course outcomes recorded here."
       },
       "notes": null
     }

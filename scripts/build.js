@@ -3,13 +3,19 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { validateData } from '../lib/validate.js';
 import { loadContent } from '../lib/content-store/index.js';
-import { subjectBranchCodes } from '../lib/dataset.js';
+import {
+  isListingOnlySubject,
+  isPageSubject,
+  subjectBranchCodes,
+  subjectOfferings,
+} from '../lib/dataset.js';
 import { layout } from '../templates/layout.js';
 import { renderSubjectPage } from '../templates/subject-page.js';
 import { renderBranchGuidePage } from '../templates/branch-guide.js';
 import { renderBranchHubPage } from '../templates/branch-hub.js';
 import { renderCollegeDirectoryPage, collegeDirectoryUniversitySummary, campusesFromData } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
+import { renderGuidePage } from '../templates/guide-page.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE_URL = 'https://jntustack.com';
@@ -35,6 +41,8 @@ const subjectById = Object.fromEntries(data.subjects.map(s => [s.id, s]));
 // A shared subject (branchCodes set) counts toward every branch it lists --
 // subjectBranchCodes() resolves branch/branchCodes into one array either way.
 const verifiedSubjects = data.subjects.filter(s => s.source.status === 'verified');
+const verifiedPageSubjects = verifiedSubjects.filter(isPageSubject);
+const verifiedListingSubjects = verifiedSubjects.filter(isListingOnlySubject);
 const publishedBranchCodes = new Set(verifiedSubjects.flatMap(subjectBranchCodes));
 
 // Single source of truth for the nav + homepage branch grid: ALL six branches,
@@ -45,19 +53,23 @@ const publishedBranchCodes = new Set(verifiedSubjects.flatMap(subjectBranchCodes
 // them as disabled (never a link), so a branch can be listed without a dead URL.
 // The moment a branch gains a verified subject it flips to published automatically.
 const verifiedCountByBranch = {};
+const listingCountByBranch = {};
 for (const s of verifiedSubjects) {
   for (const code of subjectBranchCodes(s)) {
-    verifiedCountByBranch[code] = (verifiedCountByBranch[code] || 0) + 1;
+    const target = isPageSubject(s) ? verifiedCountByBranch : listingCountByBranch;
+    target[code] = (target[code] || 0) + 1;
   }
 }
 const navBranches = data.branches.map(b => {
   const verifiedCount = verifiedCountByBranch[b.code] || 0;
-  const published = verifiedCount > 0;
+  const listingCount = listingCountByBranch[b.code] || 0;
+  const published = verifiedCount + listingCount > 0;
   return {
     code: b.code,
     name: b.name,
     published,
     verifiedCount,
+    listingCount,
     href: published ? `/${b.code.toLowerCase()}/` : null,
   };
 });
@@ -94,11 +106,13 @@ function compactSubjectTitleBase(subject) {
     /\s*-\s*(?:JNTUK\s+)?R\d+\s+(?:(?:CSE|IT|ECE|EEE|CE|MECH)(?:\/(?:CSE|IT|ECE|EEE|CE|MECH))?\s+)?\d-\d(?:\s+lecture notes)?$/i,
     /\s*-\s*(?:CSE|IT|ECE|EEE|CE|MECH)(?:\/(?:CSE|IT|ECE|EEE|CE|MECH))?\s+\d-\d$/i,
     /\s*-\s*(?:JNTUK\s+)?R\d+\s+\d-\d$/i,
+    /\s*-\s*(?:JNTUK\s+)?R\d+$/i,
     /\s*-\s*\d-\d$/i,
   ];
   let base = raw;
   const separatorIndex = raw.lastIndexOf(' - ');
-  if (separatorIndex > 0 && raw.slice(separatorIndex + 3).includes(subject.year_sem_label)) {
+  const semesterLabels = subjectOfferings(subject).map(offering => offering.year_sem_label);
+  if (separatorIndex > 0 && semesterLabels.some(label => raw.slice(separatorIndex + 3).includes(label))) {
     base = raw.slice(0, separatorIndex);
   }
   for (const pattern of suffixes) base = base.replace(pattern, '');
@@ -162,7 +176,8 @@ function subjectDocumentTitle(subject, branches) {
     : codes.length > 2
       ? `${codes.length} Branches`
       : codes.join('/');
-  const suffix = ` Syllabus | JNTUK ${subject.regulation} ${branchScope} ${subject.year_sem_label}`;
+  const semesterScope = [...new Set(subjectOfferings(subject).map(offering => offering.year_sem_label))].join('/');
+  const suffix = ` Syllabus | JNTUK ${subject.regulation} ${branchScope} ${semesterScope}`;
   const offeringQualifier = subject.category === 'OpenElective' ? ' OE' : '';
   const compactBase = compactSubjectTitleBase(subject)
     .replace(/\s*(?:\(Open Elective\)|Open Elective|OE)$/i, '')
@@ -179,9 +194,11 @@ function courseJsonLd(subject, branches, canonical) {
   // `branches` is always an array (length 1 for an ordinary per-branch subject,
   // 2+ for a shared subject rendered at one branch-neutral URL) so this reads
   // the same either way instead of special-casing the shared case.
-  const levelLabel = branches.length > 1
-    ? `Common to ${branches.map(b => b.code).join(', ')} - ${subject.year_sem_label}`
-    : `${branches[0]?.name || subject.branch} - ${subject.year_sem_label}`;
+  const offerings = subjectOfferings(subject);
+  const levelLabel = offerings.map(offering => {
+    const names = offering.branchCodes.map(code => branchByCode[code]?.name || code).join(', ');
+    return `${names} - ${offering.year_sem_label}`;
+  }).join('; ');
   const citations = [
     subject.source.origin_url,
     ...(subject.source.additional_sources || []).map(source => typeof source === 'string' ? source : source?.origin_url),
@@ -311,10 +328,34 @@ function collegesJsonLd(colleges, canonical, dateModified) {
   ])];
 }
 
-let published = 0, drafted = 0, skipped = 0;
+function guideJsonLd(guide, canonical) {
+  return [{
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    '@id': `${canonical}#article`,
+    headline: guide.name,
+    description: guide.seo.meta_description,
+    url: canonical,
+    mainEntityOfPage: canonical,
+    dateModified: guide.source.retrieved_date,
+    citation: guide.source.origin_url || undefined,
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    inLanguage: 'en',
+  }, breadcrumbJsonLd([
+    { name: 'Home', url: `${SITE_URL}/` },
+    { name: guide.name, url: canonical },
+  ])];
+}
+
+let published = 0, listed = 0, drafted = 0, skipped = 0;
 const sitemapEntries = [];
 
 for (const subject of data.subjects) {
+  if (isListingOnlySubject(subject)) {
+    if (subject.source.status === 'verified') listed++;
+    else skipped++;
+    continue;
+  }
   const branches = subjectBranchCodes(subject).map(code => branchByCode[code]);
   const regulation = regulationByCode[subject.regulation];
   const legacySubject = subject.legacy_equivalent_id ? subjectById[subject.legacy_equivalent_id] : null;
@@ -326,7 +367,16 @@ for (const subject of data.subjects) {
     description: subject.seo.meta_description || '',
     canonical,
     jsonLd: courseJsonLd(subject, branches, canonical),
-    bodyHtml: renderSubjectPage(subject, { branches, regulation, legacySubject, branchHubPublished: branches.length === 1 && publishedBranchCodes.has(branches[0]?.code) }),
+    bodyHtml: renderSubjectPage(subject, {
+      branches,
+      offerings: subjectOfferings(subject).map(offering => ({
+        ...offering,
+        branches: offering.branchCodes.map(code => branchByCode[code]).filter(Boolean),
+      })),
+      regulation,
+      legacySubject,
+      branchHubPublished: branches.length === 1 && publishedBranchCodes.has(branches[0]?.code),
+    }),
     navBranches,
     stamp: subject.source.status,
     socialImageAlt: `${subject.name} ${subject.regulation} syllabus on JNTUStack`,
@@ -395,6 +445,30 @@ if (fs.existsSync(branchGuidePath)) {
   }
 }
 
+// Verified editorial guides are data-backed public destinations. Listing-only
+// milestones may point at section anchors here without creating thin pages.
+let guidesPublished = 0;
+for (const guide of data.guides || []) {
+  if (guide.source?.status !== 'verified') continue;
+  const slug = guide.seo.slug || guide.id;
+  const canonical = `${SITE_URL}/${slug}/`;
+  const html = layout({
+    title: guide.seo.title,
+    description: guide.seo.meta_description,
+    canonical,
+    jsonLd: guideJsonLd(guide, canonical),
+    bodyHtml: renderGuidePage(guide),
+    navBranches,
+    stamp: 'verified',
+    socialImageAlt: `${guide.name} on JNTUStack`,
+  });
+  const outDir = path.join(distDir, slug);
+  fs.mkdirSync(outDir, { recursive: true });
+  fs.writeFileSync(path.join(outDir, 'index.html'), html);
+  sitemapEntries.push({ url: canonical, lastmod: guide.source.retrieved_date });
+  guidesPublished++;
+}
+
 // College directory: colleges across every JNTU campus present in the merged
 // data, same verified-only discipline as the branch guide -- the page is
 // generated only if every record is verified, so an unverified college can
@@ -447,18 +521,18 @@ for (const branch of data.branches) {
   const code = branch.code.toLowerCase();
   const canonical = `${SITE_URL}/${code}/`;
   const title = `${branch.code} JNTUK R23 Syllabus & Subjects | JNTUStack`;
-  const description = `JNTUK R23 ${branch.name} (${branch.code}) subjects and unit-wise syllabus, grouped by year and semester and checked against published sources.`;
+  const description = `JNTUK R23 ${branch.name} (${branch.code}) subjects and unit-wise syllabus, plus available earlier-regulation pages, grouped by semester and checked against published sources.`;
   const lastmod = latestRetrievedDate(branchVerified);
   const html = layout({
     title,
     description,
     canonical,
     jsonLd: collectionPageJsonLd({
-      name: `${branch.code} JNTUK R23 syllabus and subjects`,
+      name: `${branch.code} JNTUK syllabus and subjects`,
       description,
       canonical,
       dateModified: lastmod,
-      items: branchVerified.map(subject => ({
+      items: branchVerified.filter(isPageSubject).map(subject => ({
         name: subject.name,
         url: `${SITE_URL}/${subject.seo?.slug || subject.id}/`,
       })),
@@ -478,16 +552,17 @@ for (const branch of data.branches) {
 // it can honestly reflect what actually got published above.
 const homeHtml = layout({
   title: 'JNTUStack - JNTUK R23 Syllabus & Subject Directory',
-  description: 'Verified JNTUK R23 subject syllabi and unit breakdowns by branch and semester, plus an engineering college directory and branch-choice guide.',
+  description: 'Verified JNTUK subject syllabi led by R23, with unit breakdowns by branch and semester, an engineering college directory and a branch-choice guide.',
   canonical: `${SITE_URL}/`,
   jsonLd: homeJsonLd(),
-  bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary, verifiedSubjectCount: verifiedSubjects.length, verifiedCollegeCount: collegesPublished }),
+  bodyHtml: renderHomePage({ branches: navBranches, collegeUniversitySummary, verifiedSubjectCount: verifiedPageSubjects.length, verifiedCollegeCount: collegesPublished }),
   navBranches,
   stamp: null,
 });
 fs.writeFileSync(path.join(distDir, 'index.html'), homeHtml);
 const homeLastmod = latestRetrievedDate([
   ...verifiedSubjects,
+  ...(data.guides || []).filter(guide => guide.source?.status === 'verified'),
   ...content.branchProfiles.filter(profile => profile.source?.status === 'verified'),
   ...allColleges.filter(college => college.source?.status === 'verified'),
 ]);
@@ -500,13 +575,42 @@ ${sitemapEntries.map(entry => `  <url><loc>${entry.url}</loc>${entry.lastmod ? `
 `;
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 
+// Deployment attestation is intentionally independent of git metadata because
+// Hostinger receives the built artifact. The GitHub publisher supplies these
+// values for reviewed releases; ordinary local builds remain explicit nulls.
+let reviewedReleaseMarker = {};
+const reviewedReleaseMarkerPath = path.join(dataDir, 'release.json');
+const hasReviewedReleaseMarker = fs.existsSync(reviewedReleaseMarkerPath);
+if (hasReviewedReleaseMarker) {
+  reviewedReleaseMarker = JSON.parse(fs.readFileSync(reviewedReleaseMarkerPath, 'utf-8'));
+}
+fs.writeFileSync(path.join(distDir, 'release.json'), `${JSON.stringify({
+  schema_version: reviewedReleaseMarker.schema_version || 1,
+  // Once a reviewed marker is committed, it is the only deployment identity.
+  // Environment overrides remain available solely for pre-marker legacy builds.
+  release_id: hasReviewedReleaseMarker
+    ? reviewedReleaseMarker.release_id || null
+    : process.env.RELEASE_ID || null,
+  artifact_hash: hasReviewedReleaseMarker
+    ? reviewedReleaseMarker.artifact_hash || null
+    : process.env.RELEASE_ARTIFACT_HASH || null,
+  content: {
+    subject_pages: published,
+    listing_only_records: listed,
+    guides: guidesPublished,
+    sitemap_urls: sitemapEntries.length,
+  },
+}, null, 2)}\n`);
+
 console.log('');
 console.log('Build summary');
 console.log('-------------');
 console.log(`Published (verified)         : ${published}  -> dist/   (these are deployable)`);
+console.log(`Listing-only (verified)       : ${listed}  -> branch hubs (no standalone page)`);
 console.log(`Drafted (needs_verification) : ${drafted}  -> drafts/ (watermarked preview, NOT deployed)`);
 console.log(`Skipped (placeholder)        : ${skipped}  -> not rendered at all`);
 console.log(`Sitemap entries               : ${sitemapEntries.length}`);
 console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `published (${branchGuidePublished} branches)` : 'not published'}`);
+console.log(`Editorial guides              : ${guidesPublished} published`);
 console.log(`College directory             : ${collegesPublished > 0 ? `published (${collegesPublished} colleges)` : 'not published'}`);
 console.log(`Branch hubs                   : ${branchHubsPublished} published, ${branchHubsSkipped} skipped (no verified subjects)`);

@@ -1,14 +1,17 @@
 import { escapeHtml } from './layout.js';
+import { isListingOnlySubject, subjectOfferingForBranch } from '../lib/dataset.js';
 
 // Group a branch's subjects by their year-semester label (e.g. "3-2"), sorted
 // chronologically. Only verified subjects are ever passed in here -- the build
 // gate upstream guarantees a hub is never generated for a branch with none.
-function groupByYearSem(subjects) {
+function groupByYearSem(subjects, branchCode) {
   const groups = new Map();
   for (const s of subjects) {
-    const key = s.year_sem_label || `${s.year}-${s.semester}`;
+    const offering = subjectOfferingForBranch(s, branchCode);
+    if (!offering) continue;
+    const key = offering.year_sem_label;
     if (!groups.has(key)) groups.set(key, []);
-    groups.get(key).push(s);
+    groups.get(key).push({ subject: s, offering });
   }
   return [...groups.entries()].sort((a, b) => {
     const [ay, as] = a[0].split('-').map(Number);
@@ -24,7 +27,19 @@ function groupByYearSem(subjects) {
 // semester shows honestly as "soon" instead of just silently not existing.
 const ALL_BRANCH_SEMESTERS = ['1-1', '1-2', '2-1', '2-2', '3-1', '3-2', '4-1', '4-2'];
 
-function subjectCard(subject) {
+function subjectCard({ subject }) {
+  if (isListingOnlySubject(subject)) {
+    const href = subject.publication?.listing_url || subject.source?.origin_url || null;
+    const external = href && !href.startsWith('/');
+    const inner = `<div>
+      <div class="subject-card-title">${escapeHtml(subject.name)}</div>
+      <div class="subject-card-meta">${escapeHtml(subject.regulation)} &middot; &#10003; OFFICIAL LISTING</div>
+    </div>
+    ${href ? '<span class="subject-card-arrow" aria-hidden="true">&rarr;</span>' : ''}`;
+    return href
+      ? `<a class="subject-card subject-card--listing" href="${escapeHtml(href)}"${external ? ' target="_blank" rel="noopener noreferrer"' : ''}>${inner}</a>`
+      : `<div class="subject-card subject-card--listing" aria-label="Official listing without a detail page">${inner}</div>`;
+  }
   const slug = subject.seo?.slug || subject.id;
   return `<a class="subject-card" href="/${escapeHtml(slug)}/">
     <div>
@@ -36,9 +51,10 @@ function subjectCard(subject) {
 }
 
 export function renderBranchHubPage(branch, subjects) {
-  const groups = groupByYearSem(subjects);
+  const groups = groupByYearSem(subjects, branch.code);
   const groupsByLabel = new Map(groups);
-  const count = subjects.length;
+  const pageCount = subjects.filter(subject => !isListingOnlySubject(subject)).length;
+  const listingCount = subjects.filter(isListingOnlySubject).length;
 
   // First semester with any verified content is the page's landing section,
   // so its rail item starts visually "active" -- no scroll-tracking JS needed.
@@ -82,15 +98,17 @@ export function renderBranchHubPage(branch, subjects) {
     <div class="hub-head-row">
       <div>
         <h1 class="subject-title">${escapeHtml(branch.name || branch.code)}</h1>
-        <p class="guide-intro">Browse the JNTUK R23 ${escapeHtml(branch.code)} syllabus by semester. Every subject and unit breakdown listed here has been checked against a published source.</p>
+        <p class="guide-intro">Browse the JNTUK R23 ${escapeHtml(branch.code)} syllabus and available earlier-regulation pages by semester. Full syllabus pages and official course-structure milestones are clearly distinguished and linked to their published evidence.</p>
       </div>
-      <div class="hub-stat-badge"><b>${count}</b><span>VERIFIED<br>SUBJECT${count === 1 ? '' : 'S'}</span></div>
+      <div class="hub-stat-badge"><b>${pageCount}</b><span>SYLLABUS<br>PAGE${pageCount === 1 ? '' : 'S'}</span></div>
     </div>
+
+    ${listingCount ? `<p class="hub-publication-summary"><strong>${pageCount}</strong> syllabus pages &middot; <strong>${listingCount}</strong> official listing${listingCount === 1 ? '' : 's'}/milestone${listingCount === 1 ? '' : 's'}</p>` : ''}
 
     ${groupsHtml}
   </div>
 </div>
 
-<div class="disclaimer-box">Only verified subject pages appear here. If a subject you're studying isn't listed yet, it hasn't cleared verification -- not that it's been forgotten. Studying under an older regulation? Open any listed subject to find its cross-linked legacy version.</div>
+<div class="disclaimer-box">Only source-verified content appears here. “Official listing” means the course structure confirms the milestone but does not publish enough unit-level material for a standalone syllabus page.</div>
 `;
 }
