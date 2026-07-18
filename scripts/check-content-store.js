@@ -9,20 +9,26 @@ import { getDbPool } from '../lib/db.js';
 import { runParser } from '../lib/parse-results.js';
 import { buildSearchIndex } from '../lib/retrieve.js';
 import { EXPECTED_PARITY_COUNTS } from '../lib/db-json.js';
+import { isListingOnlySubject, isPageSubject } from '../lib/dataset.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 
 function count(content) {
   const searchDocs = buildSearchIndex({
     subjects: content.data.subjects,
+    branches: content.data.branches,
     colleges: content.colleges,
     branchProfiles: content.branchProfiles,
+    guides: content.guides || content.data.guides || [],
   });
   return {
     subjects: content.data.subjects.length,
     verifiedSubjects: content.data.subjects.filter(s => s.source?.status === 'verified').length,
+    subjectPages: content.data.subjects.filter(s => s.source?.status === 'verified' && isPageSubject(s)).length,
+    listingSubjects: content.data.subjects.filter(s => s.source?.status === 'verified' && isListingOnlySubject(s)).length,
     colleges: content.colleges.length,
     branchProfiles: content.branchProfiles.length,
+    guides: (content.guides || content.data.guides || []).length,
     searchDocs: searchDocs.length,
   };
 }
@@ -34,9 +40,13 @@ function assertEqual(name, actual, expected) {
 }
 
 function assertExpectedCounts(label, counts) {
+  assertEqual(`${label} subjects`, counts.subjects, EXPECTED_PARITY_COUNTS.subjects);
   assertEqual(`${label} verified subjects`, counts.verifiedSubjects, EXPECTED_PARITY_COUNTS.verifiedSubjects);
+  assertEqual(`${label} subject pages`, counts.subjectPages, EXPECTED_PARITY_COUNTS.subjectPages);
+  assertEqual(`${label} listing subjects`, counts.listingSubjects, EXPECTED_PARITY_COUNTS.listingSubjects);
   assertEqual(`${label} colleges`, counts.colleges, EXPECTED_PARITY_COUNTS.colleges);
   assertEqual(`${label} branch profiles`, counts.branchProfiles, EXPECTED_PARITY_COUNTS.branchProfiles);
+  assertEqual(`${label} guides`, counts.guides, EXPECTED_PARITY_COUNTS.guides);
   assertEqual(`${label} search docs`, counts.searchDocs, EXPECTED_PARITY_COUNTS.searchDocs);
 }
 
@@ -87,7 +97,11 @@ async function checkMissingAssetRepair() {
       reason: 'test_missing_asset_repair',
     });
 
-    assertEqual('repair reused existing asset row', repair.asset.id, assetId);
+    if (repair.asset.id === assetId) {
+      throw new Error('Changed repair bytes must create a new immutable source asset version.');
+    }
+    assertEqual('repair supersedes original asset row', Number(repair.supersedesAssetId), Number(assetId));
+    assertEqual('repair reports versioning', repair.versioned, true);
     assertEqual('repair file size', Number(repair.asset.fileSize), buffer.length);
     if (!await assetFileExists(tmpRoot, repair.asset.localStoragePath)) {
       throw new Error('Repaired asset file was not written to storage.');
@@ -96,7 +110,7 @@ async function checkMissingAssetRepair() {
       'SELECT COUNT(*) AS count FROM source_assets WHERE discovery_source_id = ? AND source_url = ?',
       [sourceId, sourceUrl]
     );
-    assertEqual('source URL row count after repair', Number(sameUrlRows[0].count), 1);
+    assertEqual('source URL row count after versioned repair', Number(sameUrlRows[0].count), 2);
 
     const parseResult = await runParser({
       root: tmpRoot,

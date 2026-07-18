@@ -10,14 +10,25 @@ const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 // data/subjects-*.json file, never a hardcoded filename, so the search index
 // stays in sync the moment a new branch file is dropped in.
 const content = await loadContent({ root: ROOT });
-const { subjects } = content.data;
+const { subjects, branches = [] } = content.data;
 const branch_profiles = content.branchProfiles;
 const { colleges } = content;
+const guides = content.guides || content.data.guides || [];
 
-const index = buildSearchIndex({ subjects, branchProfiles: branch_profiles, colleges });
+const index = buildSearchIndex({
+  subjects,
+  branches,
+  branchProfiles: branch_profiles,
+  colleges,
+  guides,
+});
 
 const outDir = path.join(ROOT, 'dist');
 fs.mkdirSync(outDir, { recursive: true });
 fs.writeFileSync(path.join(outDir, 'search-index.json'), JSON.stringify(index));
 
-console.log(`Wrote search-index.json with ${index.length} grounded documents from ${content.source} -> dist/search-index.json`);
+const counts = index.reduce((result, doc) => {
+  result[doc.type] = (result[doc.type] || 0) + 1;
+  return result;
+}, {});
+console.log(`Wrote search-index.json with ${index.length} grounded documents from ${content.source} (${Object.entries(counts).map(([type, count]) => `${type}: ${count}`).join(', ')}) -> dist/search-index.json`);

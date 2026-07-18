@@ -2496,17 +2496,21 @@
       },
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-ce-3-1",
-        "title": "Community Service Internship - CE 3-1",
-        "meta_description": "JNTUK R23 CE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Community Service Internship - CE 3-1",
+        "meta_description": "Official JNTUK R23 CE Evaluation of Community Service Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official Civil III-I structure confirms a 2-credit evaluation row but supplies no university course code, evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project-evaluation"
+      }
     },
     {
       "id": "r23-ce-3-2-design-and-drawing-of-steel-structures",
@@ -4500,17 +4504,21 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-jntuk-r23-ce-4-1",
-        "title": "Industry Internship Evaluation - CE 4-1",
-        "meta_description": "JNTUK R23 CE 4-1 Evaluation of Industry Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Industry Internship - CE 4-1",
+        "meta_description": "Official JNTUK R23 CE Evaluation of Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official structure lists a 2-credit internship evaluation but provides no detailed evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship-evaluation"
+      }
     },
     {
       "id": "r23-ce-4-2-full-semester-internship-and-project-work",
@@ -4521,7 +4529,7 @@
       "semester": 2,
       "year_sem_label": "4-2",
       "subject_code": null,
-      "name": "Internship and Project",
+      "name": "Full Semester Internship & Project Work",
       "category": "Internship",
       "credits": {
         "L": 0,
@@ -4539,17 +4547,21 @@
       },
       "seo": {
         "slug": "internship-and-project-jntuk-r23-ce-4-2",
-        "title": "Internship and Project - CE 4-2",
-        "meta_description": "JNTUK R23 CE 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed project or evaluation guidelines."
+        "title": "Full Semester Internship & Project Work - CE 4-2",
+        "meta_description": "Official JNTUK R23 CE Full Semester Internship & Project Work milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/9418111773304520652.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official structure lists Internship and Project as the sole VIII-semester item but provides no detailed implementation or evaluation guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#final-semester-internship-and-project"
+      }
     },
     {
       "id": "r23-ce-4-1-quantum-science-and-technology",
@@ -5002,6 +5014,82 @@
         "college_source_note": "The course placement, credits and syllabus are sourced directly from JNTUK's official R23 Civil Engineering course structure and syllabus."
       },
       "notes": "Named Open Elective-II option in the official III-II structure."
+    },
+    {
+      "id": "r23-ce-2-2-community-service-project-internship",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 2,
+      "semester": 2,
+      "year_sem_label": "2-2",
+      "subject_code": null,
+      "name": "Community Service Project Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project"
+      },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "community-service-project-internship-jntuk-r23-ce-2-2",
+        "title": "Community Service Project Internship - CE 2-2",
+        "meta_description": "Official JNTUK R23 CE Community Service Project Internship milestone, listed with the university internship and project requirements guide."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure and mandatory-internship regulations confirm this eight-week summer milestone. No standalone unit-wise syllabus is published."
+      },
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page."
+    },
+    {
+      "id": "r23-ce-3-2-mandatory-industry-internship",
+      "regulation": "R23",
+      "branch": "CE",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mandatory Industry Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship"
+      },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mandatory-industry-internship-jntuk-r23-ce-3-2",
+        "title": "Mandatory Industry Internship - CE 3-2",
+        "meta_description": "Official JNTUK R23 CE Mandatory Industry Internship milestone, listed with the university internship and project requirements guide."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure and mandatory-internship regulations confirm this eight-week summer milestone. No standalone unit-wise syllabus is published."
+      },
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page."
     }
   ]
 }

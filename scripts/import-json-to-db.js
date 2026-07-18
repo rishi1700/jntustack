@@ -19,6 +19,7 @@ function parseArgs(argv) {
     subjects: false,
     colleges: false,
     branchProfiles: false,
+    guides: false,
     file: null,
     queryTimeoutMs: undefined,
   };
@@ -28,6 +29,7 @@ function parseArgs(argv) {
     else if (arg === '--subjects') options.subjects = true;
     else if (arg === '--colleges') options.colleges = true;
     else if (arg === '--branch-profiles') options.branchProfiles = true;
+    else if (arg === '--guides') options.guides = true;
     else if (arg.startsWith('--file=')) options.file = arg.slice('--file='.length);
     else if (arg.startsWith('--query-timeout-ms=')) options.queryTimeoutMs = Number(arg.slice('--query-timeout-ms='.length));
     else {
@@ -48,6 +50,7 @@ function printImportSummary(result) {
   console.log(`Subjects        : ${result.subjects}`);
   console.log(`Colleges        : ${result.colleges}`);
   console.log(`Branch profiles : ${result.branchProfiles}`);
+  console.log(`Guides          : ${result.guides}`);
   console.log(`Sources touched : ${result.sourcesTouched}`);
   console.log(`Last phase      : ${result.lastCompletedPhase || 'none'}`);
 }
@@ -74,6 +77,7 @@ try {
       subjects: options.subjects,
       colleges: options.colleges,
       branchProfiles: options.branchProfiles,
+      guides: options.guides,
       file: options.file,
       queryTimeoutMs: options.queryTimeoutMs,
       logger: message => console.log(`[db:import-json] ${message}`),

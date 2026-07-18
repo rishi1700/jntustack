@@ -12,6 +12,7 @@ storage/
 .env.*
 hostinger-env.txt
 *.key
+*.pem
 
 # Logs
 *.log

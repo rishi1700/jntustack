@@ -28,6 +28,8 @@ jobs:
         env:
           PR_BASE_SHA: ${{ github.event.pull_request.base.sha }}
           PR_BASE_REF: ${{ github.event.pull_request.base.ref }}
+          PR_HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
           REPOSITORY_DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
           PUBLICATION_SIGNING_PUBLIC_KEYS_JSON: ${{ vars.PUBLICATION_SIGNING_PUBLIC_KEYS_JSON }}
         shell: bash
@@ -41,16 +43,19 @@ jobs:
               git show "${PR_BASE_SHA}:scripts/verify-publication-artifact.js" > "$RUNNER_TEMP/verify-publication-artifact.mjs"
               node "$RUNNER_TEMP/verify-publication-artifact.mjs"
             else
-              echo "Trusted publication verifier is absent from the base branch; refusing PR-supplied verifier code."
+              echo "Trusted publication verifier is absent from the base branch; refusing to trust verifier code supplied by this PR."
               exit 1
             fi
           else
-            node scripts/verify-publication-artifact.js
+            npm run verify:publication
           fi
       - run: npm ci
       - run: npm run build
       - run: npm run test:parsers
       - run: npm run test:retrieve
       - run: npm run test:admin-ui
+      - run: npm run test:publishing
+      - run: npm run test:source-security
+      - run: npm run test:publication-artifact
       - run: npm run test:content-store
       - run: npm run audit:site

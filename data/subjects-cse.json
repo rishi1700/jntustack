@@ -103,31 +103,98 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": null,
+      "subject_code": "CS322",
       "name": "Data Warehousing and Mining",
       "category": "ProfessionalCore",
-      "credits": null,
+      "credits": {
+        "L": 4,
+        "T": 0,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "Need for data warehousing and data-mining technologies, data and pattern types, and real-time applications",
+            "Pattern recognition, features, database query versus mining, curse of dimensionality and efficiency",
+            "Major data-mining issues, data objects and attribute types, statistical descriptions, visualization, similarity and dissimilarity"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Data Preprocessing",
+          "topics": [
+            "Overview of data preprocessing",
+            "Data cleaning, integration, reduction, transformation and discretization"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Classification and Decision Trees",
+          "topics": [
+            "Classification concepts and a general problem-solving approach",
+            "Decision-tree operation and construction",
+            "Attribute-test conditions, split-selection measures and the decision-tree induction algorithm"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Alternative Classification Techniques",
+          "topics": [
+            "Bayes theorem",
+            "Naive Bayesian classification",
+            "Bayesian belief networks"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Association Analysis",
+          "topics": [
+            "Association-analysis problem definition",
+            "Frequent-itemset generation and rule generation",
+            "Compact representations of frequent itemsets and the FP-Growth algorithm"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Cluster Analysis",
+          "topics": [
+            "Importance of cluster analysis, clustering techniques and cluster types",
+            "Basic K-means, additional issues, bisecting K-means, strengths and weaknesses",
+            "Basic agglomerative hierarchical clustering",
+            "Traditional density-centred approach, DBSCAN algorithm, strengths and weaknesses"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Explain data-mining concepts and functions",
+        "Discuss preprocessing techniques including cleaning, integration, transformation and reduction",
+        "Explain the need for data mining and how it differs from traditional statistical techniques",
+        "Demonstrate Bayesian alternative classification techniques",
+        "Demonstrate association-analysis techniques for generating rules from data",
+        "Use different clustering techniques to cluster data"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "data-warehousing-and-data-mining-r16-jntuk-3-2-lecture-notes",
+        "slug": "data-warehousing-and-mining-jntuk-r16-cse-3-2",
         "title": "Data Warehousing and Mining - JNTUK R16 CSE 3-2",
-        "meta_description": "Draft JNTUK R16 CSE 3-2 Data Warehousing and Mining record pending verification against a primary official university syllabus."
+        "meta_description": "Official JNTUK R16 CSE 3-2 Data Warehousing and Mining syllabus: preprocessing, decision trees, Bayesian classification, association rules and clustering."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": null,
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "Primary official JNTUK R16 CSE syllabus evidence was not located during the 2026-07-12 review; the former third-party page is not sufficient for publication."
+        "origin_url": "https://www.jntucek.ac.in/dashboard/uploads/Syllabus/68f9fc74e47ee_P021A05R16.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUCEK R16 CSE course structure and syllabus confirm the subject code, placement, credits, units and course outcomes recorded here."
       },
-      "notes": "Withdrawn from publication pending a primary official JNTUK R16 CSE syllabus. The former jntukmaterials.com page is neither an official source nor a direct resource file, so its claimed credits, outcomes and lecture-notes link were removed."
+      "notes": null
     },
     {
       "id": "r16-cse-3-2-computer-networks",
@@ -137,31 +204,98 @@
       "year": 3,
       "semester": 2,
       "year_sem_label": "3-2",
-      "subject_code": null,
+      "subject_code": "CS321",
       "name": "Computer Networks",
       "category": "ProfessionalCore",
-      "credits": null,
+      "credits": {
+        "L": 4,
+        "T": 2,
+        "P": 0,
+        "C": 3
+      },
       "type": "theory",
-      "units": [],
-      "course_outcomes": [],
+      "units": [
+        {
+          "number": 1,
+          "title": "Introduction",
+          "topics": [
+            "OSI overview, TCP/IP and other network models",
+            "Novell Networks, ARPANET and the Internet",
+            "WAN, LAN, MAN and network topologies"
+          ]
+        },
+        {
+          "number": 2,
+          "title": "Physical Layer and Overview of Switching",
+          "topics": [
+            "Frequency-division, wavelength-division, synchronous time-division and statistical time-division multiplexing",
+            "Circuit-switched, datagram and virtual-circuit networks"
+          ]
+        },
+        {
+          "number": 3,
+          "title": "Data Link Layer",
+          "topics": [
+            "Design issues, fixed- and variable-size framing, flow control, error control, error detection and correction, CRC and Internet checksum",
+            "Services to the network layer and elementary simplex, stop-and-wait and noisy-channel protocols",
+            "One-bit, Go-Back-N and selective-repeat sliding-window protocols",
+            "HDLC configurations, transfer modes, frames and control fields; PPP framing, transition phases, multiplexing and multilink PPP"
+          ]
+        },
+        {
+          "number": 4,
+          "title": "Random and Controlled Access",
+          "topics": [
+            "ALOHA, MAC addresses, CSMA, CSMA/CD and CSMA/CA",
+            "Reservation, polling and token passing",
+            "FDMA, TDMA and CDMA channelization"
+          ]
+        },
+        {
+          "number": 5,
+          "title": "Network Layer and IEEE Standards",
+          "topics": [
+            "Virtual-circuit and datagram subnets",
+            "Shortest-path, flooding, hierarchical, broadcast, multicast and distance-vector routing",
+            "IEEE data-link and physical-layer standards, Manchester encoding, standard and fast Ethernet, and IEEE 802.11 architecture, addressing and frame structure"
+          ]
+        },
+        {
+          "number": 6,
+          "title": "Transport and Application Layers",
+          "topics": [
+            "Process-to-process delivery, UDP, TCP, congestion control, quality of service and techniques to improve QoS",
+            "WWW and HTTP architecture, browsers, servers and URLs",
+            "HTTP transactions, operating model, client/server communication and generic request/response message formats"
+          ]
+        }
+      ],
+      "course_outcomes": [
+        "Demonstrate OSI, TCP/IP structures and other example networks",
+        "Organize physical-layer functions and use physical-layer switching",
+        "Analyze data-link-layer functions and protocols",
+        "Summarize random-access and channelization methods",
+        "Design routing algorithms and choose appropriate IEEE standards",
+        "Explain the importance of transport and application layers"
+      ],
       "resources": {
         "lecture_notes_pdf": null,
         "previous_question_papers_pdf": null,
         "lab_manual_pdf": null
       },
       "seo": {
-        "slug": "computer-networks-jntuk-r16-3-2-lecture-notes",
+        "slug": "computer-networks-jntuk-r16-cse-3-2",
         "title": "Computer Networks - JNTUK R16 CSE 3-2",
-        "meta_description": "Draft JNTUK R16 CSE 3-2 Computer Networks record pending verification against a primary official university syllabus."
+        "meta_description": "Official JNTUK R16 CSE 3-2 Computer Networks syllabus: network models, switching, data-link protocols, MAC, routing, transport and HTTP."
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": null,
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "Primary official JNTUK R16 CSE syllabus evidence was not located during the 2026-07-12 review; the former third-party page is not sufficient for publication."
+        "origin_url": "https://www.jntucek.ac.in/dashboard/uploads/Syllabus/68f9fc74e47ee_P021A05R16.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUCEK R16 CSE course structure and syllabus confirm the subject code, placement, credits, units and course outcomes recorded here."
       },
-      "notes": "Withdrawn from publication pending a primary official JNTUK R16 CSE syllabus. The former jntukmaterials.com page is neither an official source nor a direct resource file, so its lecture-notes link was removed."
+      "notes": null
     },
     {
       "id": "r23-cse-2-1-discrete-mathematics-and-graph-theory",
@@ -1762,16 +1896,20 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-cse-2-2",
         "title": "Community Service Project Internship - CSE 2-2",
-        "meta_description": "JNTUK R23 CSE Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
+        "meta_description": "Official JNTUK R23 CSE Community Service Project Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official CSE structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits, assessment scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project"
+      }
     },
     {
       "id": "r23-cse-3-1-computer-networks",
@@ -2813,11 +2951,15 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official branch course structure confirms the title, placement and credits, but does not publish a unit-wise syllabus."
       },
-      "notes": "NEEDS VERIFICATION: the official CSE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
+      "notes": "Verified official elective listing. Intentionally published without a standalone syllabus page because no official unit-wise syllabus is available.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": null
+      }
     },
     {
       "id": "r23-cse-3-1-evaluation-of-community-service-internship",
@@ -2846,17 +2988,21 @@
       },
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-cse-3-1",
-        "title": "Community Service Internship - CSE 3-1",
-        "meta_description": "JNTUK R23 CSE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Community Service Internship - CSE 3-1",
+        "meta_description": "Official JNTUK R23 CSE Evaluation of Community Service Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official CSE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project-evaluation"
+      }
     },
     {
       "id": "r23-cse-3-2-compiler-design",
@@ -4194,7 +4340,7 @@
       "semester": 2,
       "year_sem_label": "3-2",
       "subject_code": null,
-      "name": "Mandatory Industry Internship / Mini Project",
+      "name": "Mandatory Industry Internship",
       "category": "Internship",
       "credits": null,
       "type": "internship",
@@ -4207,17 +4353,21 @@
       },
       "seo": {
         "slug": "mandatory-industry-internship-mini-project-jntuk-r23-cse-3-2",
-        "title": "Industry Internship / Mini Project - CSE 3-2",
-        "meta_description": "JNTUK R23 CSE Mandatory Industry Internship / Mini Project: an eight-week summer requirement listed without detailed guidelines."
+        "title": "Mandatory Industry Internship - CSE 3-2",
+        "meta_description": "Official JNTUK R23 CSE Mandatory Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official CSE III-II structure confirms an eight-week summer Industry Internship / Mini Project footnote but gives no credits or detailed guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship"
+      }
     },
     {
       "id": "r23-cse-4-1-deep-learning",
@@ -5284,7 +5434,7 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": null,
-      "name": "Evaluation of Industry Internship / Mini Project",
+      "name": "Evaluation of Industry Internship",
       "category": "Internship",
       "credits": {
         "L": 0,
@@ -5302,17 +5452,21 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-mini-project-jntuk-r23-cse-4-1",
-        "title": "Internship / Mini Project Evaluation - CSE 4-1",
-        "meta_description": "JNTUK R23 CSE 4-1 Evaluation of Industry Internship / Mini Project (2 credits), listed in the official structure without detailed evaluation guidelines."
+        "title": "Evaluation of Industry Internship - CSE 4-1",
+        "meta_description": "Official JNTUK R23 CSE Evaluation of Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: JNTUK lists this as a 2-credit internship evaluation row but provides no detailed evaluation scheme or guidelines in the syllabus. Confirm those requirements before marking the record verified."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship-evaluation"
+      }
     },
     {
       "id": "r23-cse-4-2-full-semester-internship-and-project-work",
@@ -5341,17 +5495,21 @@
       },
       "seo": {
         "slug": "full-semester-internship-and-project-work-jntuk-r23-cse-4-2",
-        "title": "Internship & Project Work - CSE 4-2",
-        "meta_description": "JNTUK R23 CSE 4-2 Full Semester Internship & Project Work (0-0-24-12), listed as the sole final-semester item without detailed guidelines."
+        "title": "Full Semester Internship & Project Work - CSE 4-2",
+        "meta_description": "Official JNTUK R23 CSE Full Semester Internship & Project Work milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: JNTUK lists Full Semester Internship & Project Work as the sole VIII-semester item (0-0-24-12) but provides no detailed project, internship or evaluation guidelines. Confirm those requirements before marking the record verified."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#final-semester-internship-and-project"
+      }
     },
     {
       "id": "r23-cse-3-2-big-data-analytics",

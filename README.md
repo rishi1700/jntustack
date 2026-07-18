@@ -8,9 +8,12 @@ via GitHub. Not Cloudflare Pages -- that was the original plan, changed
 mid-build, and the architecture below reflects the current (Hostinger)
 target.
 
-**Live status (2026-07-06):** deployed to Hostinger as a Node.js/Express app
-via GitHub auto-deploy, entry `server.js`, Node 24. Production remains
-`CONTENT_SOURCE=json`; `/api/ask` remains disabled.
+**Current repository state (2026-07-18):** the site deploys to Hostinger as a
+Node.js/Express app via GitHub auto-deploy, entry `server.js`, Node 24. The
+validated build contains 436 verified subject records: 403 standalone pages and
+33 listing-only official milestones, plus one editorial guide, 376 colleges,
+six branch profiles, 786 search documents, and 413 sitemap URLs. Production
+public serving remains `CONTENT_SOURCE=json`; `/api/ask` remains disabled.
 
 ## What this is
 
@@ -40,6 +43,8 @@ feature-gated and must remain disabled unless explicitly approved.
 ```
 npm install
 npm run build      # generates dist/ AND dist/search-index.json
+npm run test:retrieve
+npm run test:publishing
 npm start          # boots server.js on process.env.PORT (defaults to 3000)
 ```
 
@@ -66,6 +71,74 @@ while `ASK_ENABLED=false`.
    hPanel build command is configured to run the same build explicitly.
 6. Connect jntustack.com to the deployed app. Current production uses GitHub
    auto-deploy, not manual archive upload.
+
+### GitHub/R2 production publishing setup
+
+New reviewed releases use the GitHub PR publisher by default. Existing rows
+created before migration 026 remain `legacy`; set `CONTENT_PUBLICATION_MODE=legacy`
+only as a deliberate cutover-recovery measure and never change it mid-release.
+
+1. Apply all 26 migrations, including
+   `026_github_publication_foundation.sql`.
+2. Create the private Cloudflare R2 bucket `jntustack-source-evidence` and a
+   bucket-scoped object read/write token. Do not expose a public bucket URL.
+3. Register a repository-only GitHub App with Metadata read, Contents
+   read/write, Pull Requests read/write, Checks read, and Commit statuses read.
+   Do not grant Administration, Workflows, or branch-protection bypass permissions.
+4. Protect `main`: require pull requests and code-owner review, require branches
+   to be up to date, bind both the `verify` and `publication-integrity` required
+   checks to GitHub Actions, dismiss stale approvals, require approval of the
+   most recent push by someone other than its pusher, prohibit direct/force
+   pushes, and configure no bypass actors. A human must approve and merge every
+   publication PR; the GitHub App must never be a reviewer or bypass actor. The
+   current private repository/account plan returned GitHub
+   `403` for branch protection on 2026-07-18; upgrade the account or make the
+   repository public before activating publication.
+   Because the current `main` predates the trusted verifier, bootstrap only
+   `.github/CODEOWNERS`, the pinned workflows, and
+   `scripts/verify-publication-artifact.js` in a separately reviewed one-time
+   trust-root change before enabling these rules. Do not combine that bootstrap
+   with content. The bootstrap cannot approve itself; verify its exact diff and
+   action SHAs out of band, then enable the rules and rebase/sign content work.
+5. Configure Hostinger secrets:
+
+   ```text
+   CONTENT_PUBLICATION_MODE=github_pr
+   GITHUB_PUBLICATION_TRUST_READY=false
+   ASSET_STORAGE_PROVIDER=r2
+   R2_ACCOUNT_ID=...
+   R2_ACCESS_KEY_ID=...
+   R2_SECRET_ACCESS_KEY=...
+   R2_BUCKET=jntustack-source-evidence
+   GITHUB_APP_ID=...
+   GITHUB_APP_INSTALLATION_ID=...
+   GITHUB_APP_PRIVATE_KEY_BASE64=...
+   GITHUB_REPOSITORY_OWNER=...
+   GITHUB_REPOSITORY_NAME=...
+   GITHUB_DEFAULT_BRANCH=main
+   PUBLICATION_SIGNING_KEY_ID=2026-07
+   PUBLICATION_SIGNING_PRIVATE_KEY_BASE64=...
+   ```
+
+6. Add the matching public key as the GitHub Actions repository variable
+   `PUBLICATION_SIGNING_PUBLIC_KEYS_JSON`, formatted as
+   `{"2026-07":"<base64-SPKI-public-PEM>"}`. Keep retired public keys in this
+   keyring until every database publication using that key ID is terminal with
+   no retry or open PR remaining.
+7. After branch controls are enabled and independently verified, change
+   `GITHUB_PUBLICATION_TRUST_READY=true`. This explicit gate keeps PR creation
+   disabled while the repository trust boundary is incomplete.
+8. Run `npm run test:publishing` and `npm run test:publication-artifact`, then complete a notes-only/listing-only trial
+   whose public output is unchanged. Confirm deterministic retry, required CI,
+   human merge, Hostinger deployment, and `/release.json` attestation before
+   using the path for real content.
+
+R2 evidence is immutable and addressed by SHA-256. Missing, oversized, or
+checksum-mismatched objects block the workflow, and production R2 mode never
+falls back silently to local storage. Publication requires the exact phrase
+`CREATE REVIEW PR`; the publisher can create a branch, commit, and review PR,
+but it cannot merge or write directly to `main`. Workflow actions are pinned to
+full commits and `CODEOWNERS` covers the publication trust-root files.
 
 ## Database foundation
 
@@ -131,9 +204,11 @@ Expected unauthenticated behavior:
 - After login, check `/admin/checks` first, then `/admin/sources`,
   `/admin/assets`, `/admin/proposals`, and `/admin/revisions`.
 
-### Live-apply git reconciliation
+### Legacy live-apply git reconciliation
 
-Guarded live JSON apply (`lib/release-live-apply.js`) writes straight to
+This section documents recovery for releases that already use guarded live
+apply. It is not the desired path for new production releases after GitHub PR
+mode is enabled. Guarded live JSON apply (`lib/release-live-apply.js`) writes straight to
 `data/*.json` on whichever host it runs on and never gets git push/remote
 credentials -- that's deliberate, to avoid widening attack surface. What it
 does do, immediately after verification passes:
@@ -206,21 +281,23 @@ publish anything. All source create/update/enable/disable actions write to
 
 Source assets are immutable raw materials stored before parsing. Manual admin
 uploads currently accept PDF, HTML, ZIP, and image files, calculate a SHA-256
-checksum, store metadata in `source_assets`, and place the file under:
+checksum, store metadata in `source_assets`, and place the object under a
+content-addressed local or private-R2 key:
 
 ```
 storage/
   source-assets/
-    <source-id>/
-      YYYY/
-        MM/
-          original-file.pdf
+    sha256/
+      <first-two-hash-characters>/
+        <full-sha256>
 ```
 
 `storage/` is intentionally ignored by git and is never served from `public/`
 or `dist/`. If the same SHA-256 checksum already exists, the upload records a
-duplicate asset reference and reuses the existing stored path instead of writing
-another copy. Assets are treated as immutable because they are evidence: later
+duplicate asset reference and reuses the existing immutable object instead of
+writing another copy. If an official URL later returns changed bytes, repair
+creates a linked new version rather than changing the original row. Assets are
+treated as immutable because they are evidence: later
 parsers and reviewers should be able to reproduce exactly what was available at
 ingestion time. Updating content must create new proposals or new assets, not
 rewrite historical raw material.
@@ -324,10 +401,11 @@ rows remain low-confidence or ignored evidence.
 Manual source fetch is an evidence-ingestion path for one URL at a time. From a
 discovery source detail page, an admin can fetch a URL that belongs to that
 source's configured base domain. The fetcher stores the response as a
-`source_assets` row, captures content type, size, ETag, Last-Modified, checksum,
-and duplicate status, and writes `source_fetch.*` audit events. It blocks
-localhost/private IP ranges, non-HTTP(S) schemes, unsupported content types,
-oversized downloads, and redirect loops. Fetching does not crawl, schedule
+`source_assets` row, captures requested/resolved URLs, content type, size, ETag,
+Last-Modified, checksum, version/duplicate status, and writes `source_fetch.*`
+audit events. It validates every DNS result and redirect, pins the accepted
+public address into the actual connection, rejects credential/sensitive-token
+URLs, and enforces absolute time and size limits. Fetching does not crawl, schedule
 jobs, parse, extract, create diffs, create proposals, publish, or write to
 `data/*.json`.
 
@@ -420,7 +498,7 @@ content verified. Apply-plan generation records `release_apply_plan.generate`;
 blocked and error paths record `release_apply_plan.blocked` and
 `release_apply_plan.error`.
 
-Final live JSON apply is a guarded admin action from the release apply-plan
+Legacy live JSON apply is a guarded admin action from the release apply-plan
 detail page. It requires:
 
 - release candidate status `ready_for_review`
@@ -530,7 +608,7 @@ opened, and compared in the admin UI, but they cannot be edited and they do not
 publish anything. They exist so future approval/publish automation has a
 complete audit trail before it is allowed to touch live content.
 
-Current content lifecycle:
+Target content lifecycle for new production releases:
 
 ```
 Asset
@@ -546,13 +624,17 @@ Asset
   -> Revision
   -> Release Review Summary
   -> Release Apply Plan
-  -> Apply Live JSON
-  -> Live Verification
-  -> Git Sync
-  -> DB Import/Parity
+  -> Create Review PR
+  -> Required GitHub CI
+  -> Human Merge
   -> Hostinger Deploy
-  -> Search Console Indexing Request
+  -> Release/Health/Sitemap Verification
+  -> DB Import/Parity
+  -> Search Console Observation
 ```
+
+The `APPLY LIVE JSON` path described above remains available only for legacy
+release recovery during the GitHub PR cutover.
 
 Environment variables:
 
@@ -622,8 +704,8 @@ npm run test:content-store # verify json adapter counts; db adapter when env exi
 ```
 
 The JSON import command is idempotent and logs each import phase:
-universities, regulations, branches, subjects, colleges, branch profiles, and a
-completion summary. Each phase runs in its own transaction with query timeouts,
+universities, regulations, branches, subjects, colleges, branch profiles,
+guides, and a completion summary. Each phase runs in its own transaction with query timeouts,
 so failures should report the current phase and last completed phase instead of
 leaving an ambiguous hang.
 
@@ -633,11 +715,12 @@ For operational recovery or focused mirror syncs, use scoped imports:
 npm run db:import-json -- --subjects --verify
 npm run db:import-json -- --colleges --verify
 npm run db:import-json -- --branch-profiles --verify
+npm run db:import-json -- --guides --verify
 npm run db:import-json -- --file=data/subjects-cse.json --verify
 ```
 
-`--file` currently supports `data/subjects-*.json`, `data/colleges-*.json`, and
-`data/branch-guide-data.json`. Scoped imports still use the same upsert paths and
+`--file` currently supports `data/subjects-*.json`, `data/colleges-*.json`,
+`data/branch-guide-data.json`, and `data/guides.json`. Scoped imports still use the same upsert paths and
 should be followed by parity verification when the DB mirror is expected to
 match JSON.
 
@@ -657,14 +740,17 @@ these commands fail with setup instructions instead of silently succeeding.
 
 | Piece | Status |
 |---|---|
-| Schema (`data/schema.json`) | Stable. Regulation/Branch/Subject/BranchProfile/College all defined, ajv-validated. |
-| Subject data (`data/subjects-*.json`) | Split by branch and governed by the verified-only publishing gate. Current counts live in `docs/CURRENT_STATE.md`. |
-| Data loading layer (`lib/dataset.js`) | Stable. Globs `data/subjects-*.json` and merges them with `data/shared.json` (regulations + branches) into one dataset; the merged object is then ajv-validated against the schema. Shared by `build.js`, `build-search-index.js`, and `lib/retrieve.js`. Adding a branch needs no change here -- drop in a `data/subjects-<code>.json` file and it's discovered automatically. |
+| Schema (`data/schema.json`) | Regulation, Branch, Subject, offerings, publication mode, Guide, BranchProfile, and College are AJV-validated. |
+| Subject data (`data/subjects-*.json`) | 436 verified records: 403 page-mode and 33 listing-only. Current counts live in `docs/CURRENT_STATE.md`. |
+| Data loading layer (`lib/dataset.js`) | Globs subject files, loads `guides.json`, and merges shared regulations/branches into one validated dataset used by build and search. |
 | Branch guide (6 branches) | Verified and live, includes a working client-side quiz. No fabricated stats anywhere -- intentional. |
-| College directory | Live and generated from the merged college JSON files. Current count lives in `docs/CURRENT_STATE.md`. |
+| Internship/project guide | One verified indexed guide backed by the official R23 regulations; internship milestones link to its section anchors. |
+| College directory | Live and generated from 376 verified college records. |
 | Ask widget UI | Built but not exposed in production. `/api/ask` remains disabled until rate limiting and final model testing are explicitly approved. |
 | `routes/ask.js` + `server.js` | Express route exists behind `ASK_ENABLED=true`; production keeps `ASK_ENABLED=false`, so `/api/ask` returns 404. |
-| `lib/retrieve.js` | Tested, working keyword retrieval. Has a known limitation: naive keyword overlap, no semantic search. Fine at this corpus size; revisit if it grows ~10x. |
+| `lib/retrieve.js` | Shared deterministic field/IDF ranker with typed intent, exact filters, atomic offering contexts, guide support, and assertion-based quality gates. No embeddings or external search service. |
+| Private evidence storage | Local and Cloudflare R2 adapters exist. Production R2 mode is immutable, checksum-verified, private, and fail-closed. |
+| GitHub publication | GitHub App publisher creates a sealed deterministic branch/commit/review PR; required CI and human merge remain mandatory. |
 
 ## Data files & how they're loaded
 
@@ -677,6 +763,7 @@ records.
 | `data/schema.json` | The content model. Everything below is ajv-validated against it at build time. |
 | `data/shared.json` | `regulations` (R16/R19/R20/R23/R25) and `branches` (all six: CSE, IT, ECE, EEE, CE, MECH). Cross-branch facts that don't belong to any one subject file. |
 | `data/subjects-<code>.json` | One file per branch -- each a `{ "subjects": [...] }` object (e.g. `data/subjects-cse.json`). **Adding a branch = drop in a new `data/subjects-<code>.json` file.** The build globs `data/subjects-*.json`, so no build-script edit is needed. |
+| `data/guides.json` | Verified editorial guides, currently the R23 internships and projects guide. |
 | `data/branch-guide-data.json` | `branch_profiles` for the branch-choice guide (separate dataset, loaded on its own). |
 | `data/colleges-<campus>.json` | College directory records split by campus and merged by the build. |
 
@@ -691,10 +778,13 @@ published. There are no hardcoded subject filenames anywhere in the build.
 ## The verified/needs_verification/placeholder discipline
 
 This is load-bearing, not decorative: `scripts/build.js` refuses to publish
-anything whose `source.status` isn't `verified`. Don't bypass this to get
-more content live faster -- the whole point is that nothing reaches a
-student without a real source behind it. `needs_verification` content
-renders to `drafts/` with a visible orange watermark instead.
+anything whose `source.status` is not `verified`. Do not bypass this to get
+more content live faster. A verified subject can still be `listing_only` when
+the official evidence establishes course placement but does not publish enough
+content for a useful standalone page. Listing-only records appear on branch
+hubs but never generate detail pages, Course structured data, sitemap entries,
+or standalone search documents. `needs_verification` content renders only to
+`drafts/` with a visible orange watermark.
 
 ## Immediate next steps
 
@@ -702,14 +792,14 @@ Use `docs/CURRENT_STATE.md` for current state and
 `docs/CONTENT_OPS_RUNBOOK.md` for operational workflow. Keep README next steps
 limited to setup-level reminders:
 
-1. Review the live admin UI with `ADMIN_ENABLED=true`, starting at
-   `/admin/checks`, and keep `CONTENT_SOURCE=json`.
-2. Run content work through the proposal/release/apply-plan workflow in
-   `docs/CONTENT_OPS_RUNBOOK.md`; do not bypass the verified-only gate.
-3. After any guarded live apply, sync Git and run DB import/parity before the
-   next deploy.
-4. Decide free-vs-rate-limited access model for the ask widget before
-   enabling `ASK_ENABLED=true` or linking `/api/ask` from a live page.
+1. Keep `CONTENT_SOURCE=json` and `ASK_ENABLED=false`.
+2. Complete the GitHub App, private R2, migration 026, branch-protection, and
+   notes-only production trial in `docs/CONTENT_OPS_RUNBOOK.md`.
+3. Publish new content through a review PR, required CI, and human merge; then
+   verify `/release.json`, `/health`, and `/sitemap.xml` after Hostinger deploys.
+4. Record Search Console baselines and follow-ups on days 0, 7, 14, and 28.
+5. Keep NLP/n8n/Telegram automation and affiliate-book monetization deferred
+   until the reviewed publishing foundation is stable.
 
 ## Design constraints worth preserving as this grows
 

@@ -1508,16 +1508,20 @@
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-it-2-2",
         "title": "Community Service Project Internship - IT 2-2",
-        "meta_description": "JNTUK R23 IT Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
+        "meta_description": "Official JNTUK R23 IT Community Service Project Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official IT structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project"
+      }
     },
     {
       "id": "r23-it-3-1-advanced-java",
@@ -3735,17 +3739,21 @@
       },
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-it-3-1",
-        "title": "Evaluation of Community Service Internship - R23 IT 3-1",
-        "meta_description": "JNTUK R23 IT 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Community Service Internship - IT 3-1",
+        "meta_description": "Official JNTUK R23 IT Evaluation of Community Service Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official IT III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project-evaluation"
+      }
     },
     {
       "id": "r23-it-4-1-internet-of-things",
@@ -4137,7 +4145,7 @@
       "semester": 1,
       "year_sem_label": "4-1",
       "subject_code": null,
-      "name": "Evaluation of Industry Internship / Mini Project",
+      "name": "Evaluation of Industry Internship",
       "category": "Internship",
       "credits": {
         "L": 0,
@@ -4155,17 +4163,21 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-mini-project-jntuk-r23-it-4-1",
-        "title": "Internship / Mini Project Evaluation - IT 4-1",
-        "meta_description": "JNTUK R23 IT 4-1 Evaluation of Industry Internship / Mini Project (2 credits), listed in the official structure without detailed evaluation guidelines."
+        "title": "Evaluation of Industry Internship - IT 4-1",
+        "meta_description": "Official JNTUK R23 IT Evaluation of Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: JNTUK lists this as a 2-credit internship evaluation row but provides no detailed evaluation scheme or guidelines in the syllabus. Confirm those requirements before marking the record verified."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship-evaluation"
+      }
     },
     {
       "id": "r23-it-4-2-full-semester-internship-and-project-work",
@@ -4194,17 +4206,59 @@
       },
       "seo": {
         "slug": "full-semester-internship-and-project-work-jntuk-r23-it-4-2",
-        "title": "Internship & Project Work - IT 4-2",
-        "meta_description": "JNTUK R23 IT 4-2 Full Semester Internship & Project Work (0-0-24-12), listed as the sole final-semester item without detailed guidelines."
+        "title": "Full Semester Internship & Project Work - IT 4-2",
+        "meta_description": "Official JNTUK R23 IT Full Semester Internship & Project Work milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: JNTUK lists Full Semester Internship & Project Work as the sole VIII-semester item (0-0-24-12) but provides no detailed project, internship or evaluation guidelines. Confirm those requirements before marking the record verified."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#final-semester-internship-and-project"
+      }
+    },
+    {
+      "id": "r23-it-3-2-mandatory-industry-internship",
+      "regulation": "R23",
+      "branch": "IT",
+      "specialization": null,
+      "year": 3,
+      "semester": 2,
+      "year_sem_label": "3-2",
+      "subject_code": null,
+      "name": "Mandatory Industry Internship",
+      "category": "Internship",
+      "credits": null,
+      "type": "internship",
+      "units": [],
+      "course_outcomes": [],
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship"
+      },
+      "resources": {
+        "lecture_notes_pdf": null,
+        "previous_question_papers_pdf": null,
+        "lab_manual_pdf": null
+      },
+      "seo": {
+        "slug": "mandatory-industry-internship-jntuk-r23-it-3-2",
+        "title": "Mandatory Industry Internship - IT 3-2",
+        "meta_description": "Official JNTUK R23 IT Mandatory Industry Internship milestone, listed with the university internship and project requirements guide."
+      },
+      "legacy_equivalent_id": null,
+      "source": {
+        "origin_url": "https://jntukucen.ac.in/wp-content/uploads/2023/11/R23-REGULATIONS.pdf",
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure and mandatory-internship regulations confirm this eight-week summer milestone. No standalone unit-wise syllabus is published."
+      },
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page."
     }
   ]
 }

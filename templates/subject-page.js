@@ -78,14 +78,16 @@ function sourcePageEvidence(subject) {
   return evidence.join(' \u00b7 ') || 'Published course record';
 }
 
-function subjectIntro(subject, branches) {
+function subjectIntro(subject, branches, offerings) {
   const branchScope = branches.length === 1
     ? `${branches[0]?.name || branches[0]?.code || subject.branch} (${branches[0]?.code || subject.branch})`
     : branches.length === 2
       ? branches.map(branch => branch?.code).filter(Boolean).join(' and ')
       : 'all listed engineering branches';
   const category = CATEGORY_LABELS[subject.category] || 'course';
-  const totalCredits = subject.credits?.C ?? subject.credits?.total;
+  const totalCredits = offerings.length === 1
+    ? offerings[0].credits?.C ?? offerings[0].credits?.total
+    : null;
   const creditText = typeof totalCredits === 'number'
     ? totalCredits === 0
       ? 'It is a non-credit requirement.'
@@ -101,7 +103,32 @@ function subjectIntro(subject, branches) {
   } else if (units.length > 1) {
     coverageText = `The published coverage runs across ${units.length} units, from ${units[0].title} through ${units[units.length - 1].title}.`;
   }
-  return `This JNTUK ${subject.regulation} ${category} is listed for ${branchScope} in semester ${subject.year_sem_label}. ${creditText} ${coverageText}`.replace(/\s+/g, ' ').trim();
+  const semesters = [...new Set(offerings.map(offering => offering.year_sem_label))].join(' and ');
+  const placementText = offerings.length > 1
+    ? `Its official branch and semester placements (${semesters}) are listed below.`
+    : `It is listed in semester ${semesters}.`;
+  return `This JNTUK ${subject.regulation} ${category} is listed for ${branchScope}. ${placementText} ${creditText} ${coverageText}`.replace(/\s+/g, ' ').trim();
+}
+
+function creditCell(credits, key) {
+  const value = credits?.[key];
+  return value == null ? '—' : escapeHtml(value);
+}
+
+function offeringsTable(offerings) {
+  if (!offerings.length) return '';
+  return `<section class="offering-table-wrap" aria-labelledby="offered-in-title">
+    <h2 id="offered-in-title">Offered in</h2>
+    <div class="table-scroll"><table class="offering-table">
+      <thead><tr><th>Branches</th><th>Semester</th><th>L</th><th>T</th><th>P</th><th>C</th></tr></thead>
+      <tbody>${offerings.map(offering => `<tr>
+        <td>${offering.branches.map(branch => escapeHtml(branch.code)).join(', ')}</td>
+        <td>${escapeHtml(offering.year_sem_label)}</td>
+        <td>${creditCell(offering.credits, 'L')}</td><td>${creditCell(offering.credits, 'T')}</td>
+        <td>${creditCell(offering.credits, 'P')}</td><td>${creditCell(offering.credits, 'C')}</td>
+      </tr>`).join('')}</tbody>
+    </table></div>
+  </section>`;
 }
 
 function sourceDocket(subject, isVerified) {
@@ -145,7 +172,7 @@ function sourceDocket(subject, isVerified) {
   </section>`;
 }
 
-export function renderSubjectPage(subject, { branches = [], regulation, legacySubject, branchHubPublished }) {
+export function renderSubjectPage(subject, { branches = [], offerings = [], regulation, legacySubject, branchHubPublished }) {
   // branches is always an array: length 1 for an ordinary per-branch subject
   // (identical to the old single-branch behavior below), length 2+ for a
   // subject shared across branches and rendered once at a branch-neutral URL.
@@ -238,8 +265,9 @@ export function renderSubjectPage(subject, { branches = [], regulation, legacySu
   // Reuses the same disclaimer-box styling as the source caveat below -- no
   // new UI, just another instance of the existing "why this page looks the
   // way it does" callout, for the other reason a page might need one.
+  const semesterScope = [...new Set(offerings.map(offering => offering.year_sem_label))].join('/');
   const sharedNoteHtml = isShared
-    ? `<div class="disclaimer-box">Common to ${branches.map(b => escapeHtml(b?.code || '')).join(', ')} in ${escapeHtml(subject.regulation)} semester ${escapeHtml(subject.year_sem_label)}. One branch-neutral page keeps the shared syllabus and source evidence together.</div>`
+    ? `<div class="disclaimer-box">This official syllabus is shared across ${branches.map(b => escapeHtml(b?.code || '')).join(', ')}. One neutral page keeps the syllabus and source evidence together while the table below preserves each exact branch/semester placement.</div>`
     : '';
 
   const legacyHtml = legacySubject
@@ -278,24 +306,26 @@ ${breadcrumbHtml}
     <div class="pill-row">
       <span class="pill">${escapeHtml(subject.regulation)}</span>
       ${isShared
-        ? `<span class="pill">${branches.map(b => escapeHtml(b?.code || '')).join('/')} &middot; ${escapeHtml(subject.year_sem_label)}</span>`
-        : `<span class="pill">${escapeHtml(branch?.code || subject.branch)} &middot; ${escapeHtml(subject.year_sem_label)}</span>`}
+        ? `<span class="pill">${branches.map(b => escapeHtml(b?.code || '')).join('/')} &middot; ${escapeHtml(semesterScope)}</span>`
+        : `<span class="pill">${escapeHtml(branch?.code || subject.branch)} &middot; ${escapeHtml(semesterScope)}</span>`}
       ${subject.subject_code ? `<span class="pill">${escapeHtml(subject.subject_code)}</span>` : ''}
       <span class="pill ${isVerified ? 'pill--verified' : ''}">${isVerified ? '&#10003; ' : ''}${badgeLabel.toUpperCase()}${subject.source.retrieved_date ? ` ${escapeHtml(subject.source.retrieved_date)}` : ''}</span>
     </div>
 
     <h1 class="subject-title subject-title--contextual">
       <span>${escapeHtml(subject.name)}</span>
-      <span class="subject-title-context">JNTUK ${escapeHtml(subject.regulation)} &middot; ${escapeHtml(branchScopeLabel)} &middot; semester ${escapeHtml(subject.year_sem_label)} &middot; ${pageKind}</span>
+      <span class="subject-title-context">JNTUK ${escapeHtml(subject.regulation)} &middot; ${escapeHtml(branchScopeLabel)} &middot; semester ${escapeHtml(semesterScope)} &middot; ${pageKind}</span>
     </h1>
     ${offeringHtml}
-    <p class="subject-intro">${escapeHtml(subjectIntro(subject, branches))}</p>
+    <p class="subject-intro">${escapeHtml(subjectIntro(subject, branches, offerings))}</p>
     <div class="status-row">
       <span class="badge ${badgeClass}">${badgeLabel}</span>
       ${subject.source.retrieved_date ? `<span>Checked <time datetime="${escapeHtml(subject.source.retrieved_date)}">${escapeHtml(displayDate(subject.source.retrieved_date))}</time></span>` : ''}
     </div>
 
     ${sharedNoteHtml}
+
+    ${offeringsTable(offerings)}
 
     ${sourceDocket(subject, isVerified)}
 

@@ -23,8 +23,9 @@ jobs:
             echo "Publication integrity checks only trust the repository default branch as the pull-request base."
             exit 1
           fi
-      # pull_request_target keeps this workflow definition on the trusted base.
-      # The untrusted head is read only as data; no head code is executed.
+      # pull_request_target keeps this workflow definition on the trusted base
+      # branch. The untrusted head is only read as data; no head code, package
+      # script, or dependency is executed.
       - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}

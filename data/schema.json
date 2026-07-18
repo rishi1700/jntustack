@@ -163,9 +163,71 @@
         "source": { "$ref": "#/definitions/Source" }
       }
     },
+    "Offering": {
+      "type": "object",
+      "required": ["branchCodes", "year", "semester"],
+      "properties": {
+        "branchCodes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string" }
+        },
+        "year": { "type": "integer", "minimum": 1, "maximum": 4 },
+        "semester": { "type": "integer", "enum": [1, 2] },
+        "year_sem_label": { "type": "string", "pattern": "^[1-4]-[12]$" },
+        "credits": {
+          "type": ["object", "null"],
+          "properties": {
+            "L": { "type": "number" }, "T": { "type": "number" },
+            "P": { "type": "number" }, "C": { "type": "number" }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "Publication": {
+      "type": "object",
+      "required": ["mode"],
+      "properties": {
+        "mode": { "type": "string", "enum": ["page", "listing_only"] },
+        "listing_url": { "type": ["string", "null"], "pattern": "^/" }
+      },
+      "additionalProperties": false
+    },
     "Subject": {
       "type": "object",
-      "required": ["id", "regulation", "year", "semester", "name", "category", "type", "seo", "source"],
+      "required": ["id", "regulation", "name", "category", "type", "seo", "source"],
+      "oneOf": [
+        {
+          "required": ["offerings"],
+          "not": {
+            "anyOf": [
+              { "required": ["branch"] }, { "required": ["branchCodes"] },
+              { "required": ["year"] }, { "required": ["semester"] },
+              { "required": ["year_sem_label"] }, { "required": ["credits"] }
+            ]
+          }
+        },
+        {
+          "required": ["year", "semester"],
+          "not": { "required": ["offerings"] },
+          "oneOf": [
+            {
+              "required": ["branch"],
+              "properties": { "branch": { "type": "string" } }
+            },
+            {
+              "required": ["branch", "branchCodes"],
+              "properties": {
+                "branch": { "type": "null" },
+                "branchCodes": { "type": "array", "minItems": 2, "uniqueItems": true, "items": { "type": "string" } }
+              }
+            }
+          ]
+        }
+      ],
       "properties": {
         "id": {
           "type": "string",
@@ -185,6 +247,12 @@
         "year": { "type": "integer", "minimum": 1, "maximum": 4 },
         "semester": { "type": "integer", "enum": [1, 2] },
         "year_sem_label": { "type": "string", "examples": ["1-1", "3-2"] },
+        "offerings": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/definitions/Offering" },
+          "description": "Atomic branch/semester placements for one canonical syllabus offered in different semesters or with different credits. Replaces top-level branch/year/semester/credits when present."
+        },
         "subject_code": { "type": ["string", "null"] },
         "name": { "type": "string" },
         "category": {
@@ -220,6 +288,7 @@
         "course_outcomes": { "type": "array", "items": { "type": "string" } },
         "resources": { "$ref": "#/definitions/Resources" },
         "seo": { "$ref": "#/definitions/SEO" },
+        "publication": { "$ref": "#/definitions/Publication" },
         "legacy_equivalent_id": {
           "type": ["string", "null"],
           "description": "id of the equivalent subject under an older regulation already live on the site -- cross-link instead of orphaning that page"
@@ -227,6 +296,37 @@
         "source": { "$ref": "#/definitions/Source" },
         "notes": { "type": ["string", "null"] }
       }
+    },
+    "GuideSection": {
+      "type": "object",
+      "required": ["id", "title", "body"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" },
+        "title": { "type": "string" },
+        "body": {
+          "oneOf": [
+            { "type": "string" },
+            { "type": "array", "minItems": 1, "items": { "type": "string" } }
+          ]
+        }
+      },
+      "additionalProperties": false
+    },
+    "Guide": {
+      "type": "object",
+      "required": ["id", "regulation", "name", "seo", "sections", "source"],
+      "properties": {
+        "id": { "type": "string" },
+        "regulation": { "type": "string" },
+        "name": { "type": "string" },
+        "seo": { "$ref": "#/definitions/SEO" },
+        "intro": { "type": "string" },
+        "aliases": { "type": "array", "uniqueItems": true, "items": { "type": "string" } },
+        "sections": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/GuideSection" } },
+        "source": { "$ref": "#/definitions/Source" },
+        "notes": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
     }
   },
   "type": "object",
@@ -235,6 +335,7 @@
     "regulations": { "type": "array", "items": { "$ref": "#/definitions/Regulation" } },
     "branches": { "type": "array", "items": { "$ref": "#/definitions/Branch" } },
     "subjects": { "type": "array", "items": { "$ref": "#/definitions/Subject" } },
+    "guides": { "type": "array", "items": { "$ref": "#/definitions/Guide" } },
     "branch_profiles": { "type": "array", "items": { "$ref": "#/definitions/BranchProfile" } },
     "colleges": { "type": "array", "items": { "$ref": "#/definitions/College" } }
   }

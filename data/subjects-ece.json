@@ -1546,17 +1546,21 @@
       },
       "seo": {
         "slug": "community-service-project-internship-jntuk-r23-ece-2-2",
-        "title": "Community Service Project Internship - R23 ECE 2-2",
-        "meta_description": "JNTUK R23 ECE Community Service Project Internship: an eight-week summer requirement listed without credits or detailed guidelines."
+        "title": "Community Service Project Internship - ECE 2-2",
+        "meta_description": "Official JNTUK R23 ECE Community Service Project Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official ECE structure confirms a mandatory eight-week Community Service Project Internship during summer vacation, but gives no credits or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project"
+      }
     },
     {
       "id": "r23-ece-3-1-analog-and-digital-ic-applications",
@@ -2263,11 +2267,15 @@
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official branch course structure confirms the title, placement and credits, but does not publish a unit-wise syllabus."
       },
-      "notes": "NEEDS VERIFICATION: the official ECE III-I structure confirms this 3-credit alternative to Open Elective-I, but the document contains no exact unit-wise syllabus."
+      "notes": "Verified official elective listing. Intentionally published without a standalone syllabus page because no official unit-wise syllabus is available.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": null
+      }
     },
     {
       "id": "r23-ece-3-1-analog-and-digital-ic-applications-lab",
@@ -2554,17 +2562,21 @@
       },
       "seo": {
         "slug": "evaluation-of-community-service-internship-jntuk-r23-ece-3-1",
-        "title": "Community Service Internship - ECE 3-1",
-        "meta_description": "JNTUK R23 ECE 3-1 Evaluation of Community Service Internship (2 credits), listed without detailed evaluation guidelines."
+        "title": "Evaluation of Community Service Internship - ECE 3-1",
+        "meta_description": "Official JNTUK R23 ECE Evaluation of Community Service Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official ECE III-I structure confirms a 2-credit evaluation row but supplies no evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#community-service-project-evaluation"
+      }
     },
     {
       "id": "r23-ece-3-2-vlsi-design",
@@ -3909,16 +3921,20 @@
       "seo": {
         "slug": "mandatory-industry-internship-jntuk-r23-ece-3-2",
         "title": "Mandatory Industry Internship - ECE 3-2",
-        "meta_description": "JNTUK R23 ECE Mandatory Industry Internship: an eight-week summer requirement listed without credits or detailed guidelines."
+        "meta_description": "Official JNTUK R23 ECE Mandatory Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "JNTUK’s official course structure confirms this row, but does not provide unit-wise content or implementation guidelines."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official ECE III-II structure confirms an eight-week mandatory summer internship but gives no credits or detailed guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship"
+      }
     },
     {
       "id": "r23-ece-3-1-electronic-devices-and-circuits",
@@ -6186,17 +6202,21 @@
       },
       "seo": {
         "slug": "evaluation-of-industry-internship-jntuk-r23-ece-4-1",
-        "title": "Industry Internship Evaluation - ECE 4-1",
-        "meta_description": "JNTUK R23 ECE 4-1 Evaluation of Industry Internship (2 credits), listed in the official structure without detailed evaluation guidelines."
+        "title": "Evaluation of Industry Internship - ECE 4-1",
+        "meta_description": "Official JNTUK R23 ECE Evaluation of Industry Internship milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official structure lists a 2-credit internship evaluation but supplies no detailed evaluation scheme or guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#industry-internship-evaluation"
+      }
     },
     {
       "id": "r23-ece-4-2-internship-and-project",
@@ -6207,7 +6227,7 @@
       "semester": 2,
       "year_sem_label": "4-2",
       "subject_code": null,
-      "name": "Internship and Project",
+      "name": "Full Semester Internship & Project Work",
       "category": "Internship",
       "credits": {
         "L": 0,
@@ -6225,17 +6245,21 @@
       },
       "seo": {
         "slug": "internship-and-project-jntuk-r23-ece-4-2",
-        "title": "Internship and Project - ECE 4-2",
-        "meta_description": "JNTUK R23 ECE 4-2 Internship and Project (24 practical hours, 12 credits), listed without detailed project or evaluation guidelines."
+        "title": "Full Semester Internship & Project Work - ECE 4-2",
+        "meta_description": "Official JNTUK R23 ECE Full Semester Internship & Project Work milestone, listed with the university internship and project requirements guide."
       },
       "legacy_equivalent_id": null,
       "source": {
         "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/4699901779382116754.pdf",
-        "retrieved_date": "2026-07-12",
-        "status": "needs_verification",
-        "college_source_note": "The title, semester placement and credits come from JNTUK's official course structure; detailed evaluation guidelines were not included."
+        "retrieved_date": "2026-07-18",
+        "status": "verified",
+        "college_source_note": "The official JNTUK R23 course structure confirms this branch milestone; the university regulations provide the shared internship, evaluation and project-work requirements. No standalone unit-wise syllabus is published."
       },
-      "notes": "NEEDS VERIFICATION: the official structure lists Internship and Project as the sole VIII-semester item with 24 practical hours and 12 credits but supplies no detailed guidelines."
+      "notes": "Verified official milestone. Intentionally published as a listing linked to the shared R23 internships and projects guide, not as a standalone syllabus page.",
+      "publication": {
+        "mode": "listing_only",
+        "listing_url": "/r23-internships-and-projects/#final-semester-internship-and-project"
+      }
     }
   ]
 }
