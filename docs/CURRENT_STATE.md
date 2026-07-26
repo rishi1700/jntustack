@@ -151,6 +151,19 @@ same marker before an operator explicitly changes
 acknowledgement are complete, publication storage is not ready. Cloudflare R2
 remains a supported private alternative and never acts as a silent fallback.
 
+On 2026-07-26, production deploy A at commit
+`cde6bb3e2383e306559693d55deb921c2e2b84de` completed the authenticated
+bounded write/read/checksum/delete probe against the selected Hostinger local
+store and seeded its store-ID-bound persistence marker. System checks reported
+`seeded_waiting_for_new_deploy`; `ASSET_STORAGE_PERSISTENCE_VERIFIED` and
+`GITHUB_PUBLICATION_TRUST_READY` remain `false`.
+
+This current-state note intentionally creates distinct commit B for the
+second-deployment proof. After Hostinger deploys it with the same storage root
+and expected store ID, authenticated System checks must read the deploy-A
+marker and report `verified_not_acknowledged` before either acknowledgement or
+publication trust is enabled.
+
 The repository-scoped GitHub App may read metadata, checks, and commit statuses
 and read/write contents and pull requests. It receives no Administration,
 Workflows, or branch-protection bypass permission. Publication requires
