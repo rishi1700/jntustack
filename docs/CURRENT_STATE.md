@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-18 after the R23/R16 content completion, deterministic
-search upgrade, and GitHub/R2 publishing-foundation work.
+Last updated: 2026-07-26 after reconciling the completed 2026-07-18 trust-root
+bootstrap, implementation cutover, production deploy, and database parity.
 
 ## Architecture
 
@@ -15,12 +15,21 @@ admin workflow.
 - `scripts/build-search-index.js` writes the verified public retrieval index to
   `dist/search-index.json` using the same matcher as the browser and server.
 - `server.js` serves `dist/`, `/health`, and private admin routes when enabled.
+  Each build writes a separate, non-secret `dist/deployment.json` marker from
+  the checked-out Git commit. `/health` returns that validated commit and source
+  cleanliness with `Cache-Control: no-store`, allowing production code
+  provenance to be checked before any signed publication marker exists.
 - `/api/ask` exists in code but is mounted only when `ASK_ENABLED=true`.
   Production keeps `ASK_ENABLED=false`, so the endpoint returns `404`.
 - MySQL mirrors JSON content and stores immutable evidence metadata, parser and
   extraction results, proposals, release candidates, durable apply plans,
   GitHub publications, legacy live-apply recovery state, revisions, and audit
   events.
+- The selected evidence architecture pairs that existing MySQL database with
+  an absolute private Hostinger filesystem root outside the deployed `nodejs`
+  tree and `public_html`. MySQL stores provider/key/checksum identity; the
+  filesystem stores immutable bytes. Private Cloudflare R2 remains an optional
+  alternative, not the selected store.
 
 Production public serving remains JSON-backed:
 
@@ -117,22 +126,30 @@ rate-limit, model, and live-safety approval.
 
 ## Publishing Foundation
 
-The repository contains the GitHub App and private Cloudflare R2 foundation for
-reviewed publishing. Migration `026_github_publication_foundation.sql` brings
-the migration count to 26.
+The repository contains the GitHub App and pluggable private evidence-storage
+foundation for reviewed publishing. Migration
+`026_github_publication_foundation.sql` brings the migration count to 26.
 
 The intended production cutover configuration is:
 
 ```text
 CONTENT_PUBLICATION_MODE=github_pr
 GITHUB_PUBLICATION_TRUST_READY=false
-ASSET_STORAGE_PROVIDER=r2
-R2_BUCKET=jntustack-source-evidence
+ASSET_STORAGE_PROVIDER=local
+ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
+ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
+ASSET_STORAGE_PERSISTENCE_VERIFIED=false
 ```
 
-The private R2 adapter stores immutable evidence by SHA-256, verifies checksum
-and size on every write/read, and fails closed. R2 mode has no silent local
-fallback.
+The root shown above is a placeholder: production must use the actual absolute
+Hostinger account path, outside `nodejs` and `public_html`. The local adapter
+stores immutable evidence by SHA-256, rejects unsafe paths/symlinks, verifies
+checksum and size on writes and reads, and fails closed. System checks seed a
+private store-ID-bound marker on deploy A. A distinct deploy B must read that
+same marker before an operator explicitly changes
+`ASSET_STORAGE_PERSISTENCE_VERIFIED=true`. Until the two-deploy proof and
+acknowledgement are complete, publication storage is not ready. Cloudflare R2
+remains a supported private alternative and never acts as a silent fallback.
 
 The repository-scoped GitHub App may read metadata, checks, and commit statuses
 and read/write contents and pull requests. It receives no Administration,
@@ -153,21 +170,51 @@ fail visibly. A production mismatch is handled with a reviewed revert PR, not a
 manual live JSON edit.
 
 New releases default to `CONTENT_PUBLICATION_MODE=github_pr` and fail closed if
-the GitHub/R2 production setup is incomplete. PR creation additionally requires
-`GITHUB_PUBLICATION_TRUST_READY=true`. The repository became public on
-2026-07-18, but the required branch rules are not yet proven, so this gate
-remains false. Migration 026 deliberately keeps existing release rows in
-`legacy` mode. Legacy live-apply code is retained only for explicit recovery
-during cutover; it is not the desired path for new production publishes.
+the GitHub/persistent-evidence production setup is incomplete. PR creation
+additionally requires `GITHUB_PUBLICATION_TRUST_READY=true`. Migration 026
+deliberately keeps existing release rows in `legacy` mode. Legacy live-apply
+code is retained only for explicit recovery during cutover; it is not the
+desired path for new production publishes.
 
 Production MySQL was backed up and migrations 025 and 026 were applied on
 2026-07-18. The migration journal reports 26/26 applied with no partial or
 failed steps; all 27 pre-migration tables were captured in the verified backup.
+The current JSON dataset was imported, 21 obsolete mirror-only subject rows
+were removed transactionally with before-image audit events, and exact JSON/DB
+parity was then verified. Public serving remained JSON-backed throughout.
 
-`main` also predates the base-owned verifier. Activation therefore requires a
-separately reviewed trust-root-only bootstrap of `CODEOWNERS`, the pinned
-workflows, and the artifact verifier before rules are enabled. The current
-code-and-content batch is an implementation branch, not that bootstrap.
+That verified backup establishes the database migration checkpoint only. The
+selected external asset root still requires a private
+`source_assets` provider/key/checksum inventory, a key-preserving copy verified
+against every MySQL checksum, a complete asset archive and matching MySQL dump
+copied off-host, and an isolated staging restore drill. Hostinger backup
+coverage for a root outside `nodejs`/`public_html` has not been verified and
+must not be claimed or relied upon until an actual Hostinger restore proves it.
+
+The repository became public and completed its separate trust-root-only
+bootstrap (`008a0c2`) on 2026-07-18. That bootstrap contained `CODEOWNERS`, the
+pinned workflows, and the base-owned artifact verifier before the implementation
+cutover. The cutover reached `main` at `962f05d`, both required jobs succeeded,
+Hostinger deployed it, and all 413 live sitemap URLs returned HTTP 200.
+
+`main` is now protected with strict, up-to-date `verify` and
+`publication-integrity` GitHub Actions checks; one code-owner approval; stale
+review dismissal; approval of the last push by someone other than its pusher;
+conversation resolution; linear history; administrator enforcement; and no
+force pushes or deletions. GitHub secret scanning, push protection, and
+Dependabot security updates are enabled for the public repository, and the
+required verification workflow rejects high-severity npm audit findings.
+
+These repository controls are complete, but the automated publisher is not
+active. A dedicated publication-signing key (`2026-07`) exists only in the
+ignored, permission-restricted operator environment, and its matching public
+key is configured in the repository's Actions keyring. The Hostinger persistent
+root proof and acknowledgement, key-preserving asset migration, off-host backup
+and staging restore drill, deployment of the repository-only GitHub App
+credentials and private signing key to Hostinger, and notes-only production
+trial remain outstanding. Production must therefore keep
+`GITHUB_PUBLICATION_TRUST_READY=false`; branch protection alone is not a reason
+to enable it.
 
 ## Controlled Release Flow
 
@@ -200,13 +247,22 @@ validation, proposal review, a sealed release, required CI, and human merge.
 
 ## Known Risks and Deferred Work
 
-- GitHub/R2 publishing must not be treated as active production until
-  credentials, branch/ruleset protection, and the no-public-output trial pass.
-  The repository is public and migrations are complete, but the remaining
-  controls are not yet configured, so `GITHUB_PUBLICATION_TRUST_READY` remains
-  false.
-- Remote Hostinger MySQL access depends on current IP allowlisting. A DB outage
-  must not interrupt the JSON-backed public site or trigger a switch to DB mode.
+- GitHub publishing must not be treated as active production until the
+  Hostinger filesystem survives two distinct deploys, its store ID is
+  explicitly acknowledged, the MySQL/key/checksum migration and staging restore
+  drill pass, and the GitHub App, Hostinger private-key configuration, and
+  no-public-output trial pass. Repository protection, migrations, local signing
+  key generation, and the Actions public-key ring are complete, but the
+  remaining publisher prerequisites are not, so
+  `GITHUB_PUBLICATION_TRUST_READY` remains false.
+- Hostinger backup coverage for the external asset root is unknown. Maintain a
+  checksum-manifested asset archive plus same-cutoff MySQL dump off-host until
+  that scope is proven, and retain the independent copy even after proof.
+- Remote workstation access to Hostinger MySQL depends on current IP
+  allowlisting. Authenticated mirror maintenance can instead run from the
+  Hostinger application under System checks without opening MySQL broadly. A DB
+  outage must not interrupt the JSON-backed public site or trigger a switch to
+  DB mode.
 - Official course placement does not prove that a detailed syllabus exists;
   preserve listing-only publication instead of fabricating thin pages.
 - Google decides crawl and indexing timing. Measure Search Console outcomes at

@@ -1,8 +1,17 @@
 import { spawn } from 'node:child_process';
 import express, { Router } from 'express';
 import rateLimit from 'express-rate-limit';
-import { getAdminConfig, getAdminTestConfig, getGitHubPublicationTrustReady } from '../lib/config.js';
 import {
+  getAdminConfig,
+  getAdminTestConfig,
+  getAskConfig,
+  getContentPublicationMode,
+  getContentSource,
+  getDbConfig,
+  getGitHubPublicationTrustReady,
+} from '../lib/config.js';
+import {
+  assertAssetStorageIntakeReady,
   assetErrorSummary,
   getAsset,
   getAssetFileStatus,
@@ -20,12 +29,21 @@ import {
 import {
   adminCookieName,
   adminIsConfigured,
+  createAdminCsrfToken,
   createAdminCookie,
   passwordHashHelp,
   readCookies,
+  verifyAdminCsrfToken,
   verifyAdminCookie,
   verifyAdminCredentials,
 } from '../lib/admin-auth.js';
+import {
+  DATABASE_MIRROR_CSRF_ACTION,
+  DATABASE_MIRROR_PRUNE_CONFIRMATION,
+  DATABASE_MIRROR_RESULT_RENDER_TIMEOUT_MS,
+  databaseMirrorMaintenanceErrorSummary,
+  runDatabaseMirrorMaintenance,
+} from '../lib/admin-database-maintenance.js';
 import { loadContent } from '../lib/content-store/index.js';
 import {
   SOURCE_KINDS,
@@ -411,6 +429,88 @@ async function getContent(root) {
   return loadContent({ root });
 }
 
+function maintenanceChecksFallback(config, reason) {
+  const db = getDbConfig();
+  return {
+    generatedAt: new Date().toISOString(),
+    runtime: {
+      contentSource: getContentSource(),
+      contentPublicationMode: getContentPublicationMode(),
+      adminEnabled: config.enabled,
+      adminConfigured: adminIsConfigured(config),
+      askEnabled: getAskConfig().enabled,
+      nodeVersion: process.version,
+    },
+    db: {
+      configured: db.configured,
+      missing: db.missing,
+      skipped: !db.configured,
+      connected: false,
+      ok: false,
+      expectedMigrations: 'refresh unavailable',
+      appliedMigrations: null,
+      pendingMigrations: null,
+      message: 'The post-action diagnostics refresh did not complete within its bounded window.',
+    },
+    storage: {
+      ok: false,
+      provider: String(process.env.ASSET_STORAGE_PROVIDER || 'local'),
+      message: 'Storage status refresh unavailable.',
+    },
+    content: {
+      source: getContentSource(),
+      subjectsTotal: 0,
+      subjectsVerified: 0,
+      subjectPages: 0,
+      subjectListings: 0,
+      subjectsNeedsVerification: 0,
+      subjectsPlaceholder: 0,
+      collegesTotal: 0,
+      branchProfilesTotal: 0,
+      guidesTotal: 0,
+    },
+    searchIndex: {
+      ok: false,
+      total: null,
+      byType: {},
+      path: 'refresh unavailable',
+      message: 'Search-index status refresh unavailable.',
+    },
+    refreshFallback: true,
+    refreshReason: reason,
+  };
+}
+
+export async function boundedAdminChecksForResult({
+  loadChecks,
+  fallback,
+  timeoutMs = DATABASE_MIRROR_RESULT_RENDER_TIMEOUT_MS,
+}) {
+  const effectiveTimeoutMs = Math.max(
+    1,
+    Math.min(DATABASE_MIRROR_RESULT_RENDER_TIMEOUT_MS, Number(timeoutMs) || DATABASE_MIRROR_RESULT_RENDER_TIMEOUT_MS)
+  );
+  let timer = null;
+  const timeout = new Promise(resolve => {
+    timer = setTimeout(() => resolve({
+      checks: fallback('timeout'),
+      notice: `Runtime diagnostics refresh exceeded ${Math.ceil(effectiveTimeoutMs / 1000)} seconds. The maintenance result below is preserved; reload System checks later.`,
+    }), effectiveTimeoutMs);
+  });
+  const loaded = Promise.resolve()
+    .then(loadChecks)
+    .then(checks => ({ checks, notice: null }))
+    .catch(() => ({
+      checks: fallback('error'),
+      notice: 'Runtime diagnostics refresh failed. The maintenance result below is preserved; reload System checks later.',
+    }));
+  try {
+    return await Promise.race([loaded, timeout]);
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 async function getWorkflowSnapshot() {
   const results = await Promise.allSettled([
     listContentProposals({ limit: 1000 }),
@@ -482,6 +582,12 @@ export function createAdminRouter({ root }) {
   // page if the summary query itself fails for any reason.
   router.use(async (req, res, next) => {
     if (req.path === '/login') return next();
+    if (req.path === '/checks' || req.path === '/checks/database-mirror') {
+      // These routes have a documented end-to-end maintenance/diagnostics
+      // budget. Do not put the unrelated git-summary DB query in front of it;
+      // the banner remains visible on the dashboard and other admin pages.
+      return next();
+    }
     let bannerHtml = '';
     try {
       bannerHtml = renderPendingGitPushBanner(await getPendingGitPushSummary());
@@ -631,10 +737,83 @@ export function createAdminRouter({ root }) {
 
   router.get('/checks', async (req, res, next) => {
     try {
-      const checks = await getAdminChecks({ root });
-      res.send(renderAdminChecksPage({ checks }));
+      const { checks, notice: checksNotice } = await boundedAdminChecksForResult({
+        loadChecks: () => getAdminChecks({ root }),
+        fallback: reason => maintenanceChecksFallback(config, reason),
+      });
+      const cookies = readCookies(req);
+      const csrfToken = createAdminCsrfToken(
+        cookies[adminCookieName()],
+        DATABASE_MIRROR_CSRF_ACTION,
+        config
+      );
+      res.set('Cache-Control', 'no-store');
+      res.send(renderAdminChecksPage({
+        checks,
+        csrfToken,
+        pruneConfirmationPhrase: DATABASE_MIRROR_PRUNE_CONFIRMATION,
+        checksNotice,
+      }));
     } catch (err) {
       next(err);
+    }
+  });
+
+  router.post('/checks/database-mirror', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res, next) => {
+    const cookies = readCookies(req);
+    const sessionCookie = cookies[adminCookieName()];
+    const csrfToken = createAdminCsrfToken(
+      sessionCookie,
+      DATABASE_MIRROR_CSRF_ACTION,
+      config
+    );
+    const renderResult = async ({
+      status = 200,
+      maintenance = null,
+      maintenanceError = null,
+    } = {}) => {
+      const { checks, notice: checksNotice } = await boundedAdminChecksForResult({
+        loadChecks: () => getAdminChecks({ root }),
+        fallback: reason => maintenanceChecksFallback(config, reason),
+      });
+      res.set('Cache-Control', 'no-store');
+      res.status(status).send(renderAdminChecksPage({
+        checks,
+        csrfToken,
+        pruneConfirmationPhrase: DATABASE_MIRROR_PRUNE_CONFIRMATION,
+        maintenance,
+        maintenanceError,
+        checksNotice,
+      }));
+    };
+
+    if (!verifyAdminCsrfToken(
+      req.body?.csrf_token,
+      sessionCookie,
+      DATABASE_MIRROR_CSRF_ACTION,
+      config
+    )) {
+      await renderResult({
+        status: 403,
+        maintenanceError: 'The maintenance request token was missing or invalid. Reload System checks and try again.',
+      }).catch(next);
+      return;
+    }
+
+    try {
+      const maintenance = await runDatabaseMirrorMaintenance({
+        root,
+        actor: config.email,
+        action: req.body?.action,
+        confirmationPhrase: req.body?.confirmation_phrase,
+      });
+      await renderResult({ maintenance });
+    } catch (err) {
+      await renderResult({
+        status: Number(err?.httpStatus) || 503,
+        maintenance: err?.result || null,
+        maintenanceError: databaseMirrorMaintenanceErrorSummary(err),
+      }).catch(next);
     }
   });
 
@@ -888,6 +1067,7 @@ export function createAdminRouter({ root }) {
     let fields = {};
     let sources = [];
     try {
+      await assertAssetStorageIntakeReady({ root });
       const body = await readRequestBuffer(req, { limitBytes: 30 * 1024 * 1024 });
       const parsed = parseMultipartForm(body, req.headers['content-type']);
       fields = parsed.fields;
@@ -1626,7 +1806,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/release-apply-plans/:id/publish-github', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       await publisher.createPublication({
         releaseCandidateId: req.params.id,
         confirmation: req.body?.confirmation_phrase,
@@ -1658,7 +1838,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/github-publications/:id/refresh', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       const publication = await publisher.refreshPublication({
         publicationId: req.params.id,
         actor: config.email,
@@ -1671,7 +1851,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/github-publications/:id/verify-deployment', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       const publication = await publisher.verifyDeployment({
         publicationId: req.params.id,
         actor: config.email,

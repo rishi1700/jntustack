@@ -13,7 +13,22 @@ Node.js/Express app via GitHub auto-deploy, entry `server.js`, Node 24. The
 validated build contains 436 verified subject records: 403 standalone pages and
 33 listing-only official milestones, plus one editorial guide, 376 colleges,
 six branch profiles, 786 search documents, and 413 sitemap URLs. Production
-public serving remains `CONTENT_SOURCE=json`; `/api/ask` remains disabled.
+public serving remains `CONTENT_SOURCE=json`; `/api/ask` remains disabled. The
+separate trust-root bootstrap and initial implementation cutover both completed
+on 2026-07-18. Commit `962f05d` deployed successfully, all 413 sitemap URLs
+passed the live HTTP check, and the production MySQL mirror reached exact JSON
+parity.
+
+The public repository's `main` branch is protected with required, up-to-date
+GitHub Actions checks (`verify` and `publication-integrity`), one code-owner
+approval, stale-review dismissal, last-push approval, conversation resolution,
+linear history, administrator enforcement, and no force pushes or deletions.
+GitHub secret scanning, push protection, and Dependabot security updates are
+enabled, and the required verification job fails on high-severity npm audit
+findings. These controls protect the repository, but the automated publisher
+remains inactive until the selected Hostinger persistent asset root survives
+the documented two-deploy check, its backup/restore path is proven, and the
+GitHub App and signing configuration pass the documented production trial.
 
 ## What this is
 
@@ -67,12 +82,18 @@ while `ASK_ENABLED=false`.
 4. Hostinger sets `PORT` itself -- server.js already defers to
    `process.env.PORT`, don't hardcode a port anywhere.
 5. The `postinstall` script runs `npm run build`, which generates `dist/` and
-   `dist/search-index.json` on Hostinger deploy. Do not remove this unless the
-   hPanel build command is configured to run the same build explicitly.
+   `dist/search-index.json` on Hostinger deploy. The build also writes a
+   non-secret `dist/deployment.json` marker from the checked-out Git commit;
+   `/health` exposes that marker with `Cache-Control: no-store`, so a deploy can
+   be matched directly to Git even before the first signed content publication.
+   A clean production checkout reports `source_clean: true`. If a managed build
+   omits `.git`, it may supply a full commit SHA through
+   `DEPLOYMENT_COMMIT_SHA`; malformed or arbitrary values are never reflected.
+   Do not remove the build unless hPanel is configured to run it explicitly.
 6. Connect jntustack.com to the deployed app. Current production uses GitHub
    auto-deploy, not manual archive upload.
 
-### GitHub/R2 production publishing setup
+### GitHub publishing and persistent evidence setup
 
 New reviewed releases use the GitHub PR publisher by default. Existing rows
 created before migration 026 remain `legacy`; set `CONTENT_PUBLICATION_MODE=legacy`
@@ -81,36 +102,34 @@ only as a deliberate cutover-recovery measure and never change it mid-release.
 1. Confirm all 26 migrations are applied, including
    `026_github_publication_foundation.sql`. Production recorded 26/26 applied
    on 2026-07-18 after a verified logical backup.
-2. Create the private Cloudflare R2 bucket `jntustack-source-evidence` and a
-   bucket-scoped object read/write token. Do not expose a public bucket URL.
+2. Create a dedicated private directory in the Hostinger account filesystem.
+   Its absolute path must be outside both the deployed `nodejs` release tree
+   and `public_html`; never use the repository's `storage/` directory as the
+   production root. Confirm the actual absolute account path in hPanel rather
+   than copying the example below literally. Keep directories mode `0700` and
+   files mode `0600`; the adapter rejects configured paths with another owner
+   or any group/world permission.
 3. Register a repository-only GitHub App with Metadata read, Contents
    read/write, Pull Requests read/write, Checks read, and Commit statuses read.
    Do not grant Administration, Workflows, or branch-protection bypass permissions.
-4. Protect `main`: require pull requests and code-owner review, require branches
-   to be up to date, bind both the `verify` and `publication-integrity` required
-   checks to GitHub Actions, dismiss stale approvals, require approval of the
-   most recent push by someone other than its pusher, prohibit direct/force
-   pushes, and configure no bypass actors. A human must approve and merge every
-   publication PR; the GitHub App must never be a reviewer or bypass actor. The
-   repository became public on 2026-07-18, making the required branch controls
-   available; they must still be configured and independently verified before
-   activating publication.
-   Because the current `main` predates the trusted verifier, bootstrap only
-   `.github/CODEOWNERS`, the pinned workflows, and
-   `scripts/verify-publication-artifact.js` in a separately reviewed one-time
-   trust-root change before enabling these rules. Do not combine that bootstrap
-   with content. The bootstrap cannot approve itself; verify its exact diff and
-   action SHAs out of band, then enable the rules and rebase/sign content work.
+4. Preserve the completed trust boundary. On 2026-07-18, the trust-root-only
+   bootstrap (`008a0c2`) landed before the implementation cutover, and `main`
+   was then protected with the two base-owned required checks, code-owner
+   review, strict up-to-date branches, stale-review dismissal, last-push
+   approval, administrator enforcement, conversation resolution, linear
+   history, and no force pushes, deletions, or bypass actors. A human must
+   approve and merge every publication PR; the GitHub App must never be a
+   reviewer or bypass actor. Do not weaken these controls to activate the
+   publisher.
 5. Configure Hostinger secrets:
 
    ```text
    CONTENT_PUBLICATION_MODE=github_pr
    GITHUB_PUBLICATION_TRUST_READY=false
-   ASSET_STORAGE_PROVIDER=r2
-   R2_ACCOUNT_ID=...
-   R2_ACCESS_KEY_ID=...
-   R2_SECRET_ACCESS_KEY=...
-   R2_BUCKET=jntustack-source-evidence
+   ASSET_STORAGE_PROVIDER=local
+   ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
+   ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
+   ASSET_STORAGE_PERSISTENCE_VERIFIED=false
    GITHUB_APP_ID=...
    GITHUB_APP_INSTALLATION_ID=...
    GITHUB_APP_PRIVATE_KEY_BASE64=...
@@ -126,20 +145,43 @@ only as a deliberate cutover-recovery measure and never change it mid-release.
    `{"2026-07":"<base64-SPKI-public-PEM>"}`. Keep retired public keys in this
    keyring until every database publication using that key ID is terminal with
    no retry or open PR remaining.
-7. After branch controls are enabled and independently verified, change
+7. Prove the selected filesystem survives a deploy before acknowledging it:
+   deploy commit A with `ASSET_STORAGE_PERSISTENCE_VERIFIED=false`, open
+   **Advanced → System checks** to seed the bounded
+   `health/deployment-persistence.json` marker, then deploy a distinct commit B
+   with the same absolute root and `ASSET_STORAGE_EXPECTED_ID`. System checks
+   must report `verified_not_acknowledged`. Only after independently confirming
+   that the marker survived should an operator set
+   `ASSET_STORAGE_PERSISTENCE_VERIFIED=true`. A same-deploy marker, missing
+   marker, changed store ID, relative path, or manual acknowledgement without
+   the two-deploy proof keeps publication fail-closed.
+8. After persistent storage, its off-host backup/restore path, the
+   repository-only GitHub App, dedicated signing key, Actions public-key
+   variable, and production trial are independently verified, change
    `GITHUB_PUBLICATION_TRUST_READY=true`. This explicit gate keeps PR creation
-   disabled while the repository trust boundary is incomplete.
-8. Run `npm run test:publishing` and `npm run test:publication-artifact`, then complete a notes-only/listing-only trial
+   disabled while publisher infrastructure is incomplete.
+9. Run `npm run test:publishing` and `npm run test:publication-artifact`, then complete a notes-only/listing-only trial
    whose public output is unchanged. Confirm deterministic retry, required CI,
    human merge, Hostinger deployment, and `/release.json` attestation before
    using the path for real content.
 
-R2 evidence is immutable and addressed by SHA-256. Missing, oversized, or
-checksum-mismatched objects block the workflow, and production R2 mode never
-falls back silently to local storage. Publication requires the exact phrase
-`CREATE REVIEW PR`; the publisher can create a branch, commit, and review PR,
-but it cannot merge or write directly to `main`. Workflow actions are pinned to
-full commits and `CODEOWNERS` covers the publication trust-root files.
+Cloudflare R2 remains a supported optional alternative if the Hostinger
+filesystem cannot be independently proven or operated safely. R2 requires a
+private bucket and bucket-scoped read/write token; it is not the selected
+architecture, and switching providers is a separately reviewed migration, not
+a fallback. Under either provider, evidence is immutable and addressed by
+SHA-256. Missing, oversized, or checksum-mismatched objects block the workflow,
+and no provider silently falls back to another. Publication requires the exact
+phrase `CREATE REVIEW PR`; the publisher can create a branch, commit, and
+review PR, but it cannot merge or write directly to `main`. Workflow actions
+are pinned to full commits and `CODEOWNERS` covers the publication trust-root
+files.
+
+Do not assume Hostinger account backups include an asset root outside
+`nodejs`/`public_html`. Until a Hostinger restore proves that scope, create a
+checksum manifest plus archive of `ASSET_STORAGE_ROOT`, pair it with a
+same-cutoff MySQL logical backup, copy both off-host, and complete the staging
+restore drill in `docs/CONTENT_OPS_RUNBOOK.md`.
 
 ## Database foundation
 
@@ -286,15 +328,20 @@ checksum, store metadata in `source_assets`, and place the object under a
 content-addressed local or private-R2 key:
 
 ```
-storage/
+ASSET_STORAGE_ROOT/
   source-assets/
     sha256/
       <first-two-hash-characters>/
         <full-sha256>
+  health/
+    deployment-persistence.json
 ```
 
-`storage/` is intentionally ignored by git and is never served from `public/`
-or `dist/`. If the same SHA-256 checksum already exists, the upload records a
+For production local storage, `ASSET_STORAGE_ROOT` is an absolute private
+Hostinger path outside the deployed `nodejs` tree and `public_html`. The
+repository-local `storage/` directory remains an ignored development default
+and is not publication-ready. Neither storage location is served from
+`public/` or `dist/`. If the same SHA-256 checksum already exists, the upload records a
 duplicate asset reference and reuses the existing immutable object instead of
 writing another copy. If an official URL later returns changed bytes, repair
 creates a linked new version rather than changing the original row. Assets are
@@ -302,6 +349,17 @@ treated as immutable because they are evidence: later
 parsers and reviewers should be able to reproduce exactly what was available at
 ingestion time. Updating content must create new proposals or new assets, not
 rewrite historical raw material.
+
+Before pointing production at the external root, export a private MySQL
+inventory of every `source_assets.storage_provider`, `storage_key`,
+`sha256_checksum`, and size. For each local object, hash the old bytes, copy
+them to `ASSET_STORAGE_ROOT/<unchanged-storage_key>`, and verify the destination
+against the same database checksum. This is a physical move only: do not rename
+keys or rewrite provider, key, checksum, duplicate, supersession, or parse
+provenance fields. Resolve missing/unsafe keys and any one-key/multiple-checksum
+conflict before cutover. The complete SQL inventory, migration checklist,
+off-host archive procedure, and isolated staging restore drill are in
+`docs/CONTENT_OPS_RUNBOOK.md`.
 
 The parser framework is DB-backed and manual-only. Parsers are registered by
 `parser_key`, run from an asset detail page, and write extracted evidence to
@@ -683,7 +741,11 @@ Hostinger setup:
 1. Create a MySQL database in hPanel.
 2. Add the `DB_*` values to the Node.js app's Environment Variables.
 3. Keep `CONTENT_SOURCE=json` until DB-backed serving is explicitly approved.
-4. Run migrations manually when needed:
+4. Configure the separate absolute `ASSET_STORAGE_ROOT`,
+   `ASSET_STORAGE_EXPECTED_ID`, and initially-false persistence acknowledgement
+   described above. The filesystem holds immutable bytes; MySQL holds their
+   provider/key/checksum inventory and workflow metadata.
+5. Run migrations manually when needed:
 
 ```
 npm run db:status
@@ -725,6 +787,56 @@ npm run db:import-json -- --file=data/subjects-cse.json --verify
 should be followed by parity verification when the DB mirror is expected to
 match JSON.
 
+Normal imports never delete rows that are absent from JSON. If an obsolete
+mirror row must be removed, inspect the full authoritative dataset first:
+
+```
+npm run db:import-json -- --prune-dry-run
+npm run db:import-json -- --prune --confirm-prune=DELETE_OBSOLETE_MIRROR_RECORDS:<sha256-from-dry-run> --verify
+```
+
+The dry-run is read-only and prints a plan-bound confirmation token. Apply mode
+recomputes the plan under locks and rejects a stale token if JSON or database
+keys changed. It cannot be combined with `--file` or a partial scope: it runs
+the full upsert, rejects retained foreign-key references, writes a full
+before-image to `audit_log` for every deletion, and rolls back unless the final
+stable-ID sets exactly match JSON.
+
+Every destructive run also has a UUID request ID. The same prune transaction
+writes a final `content_sync.authoritative_prune_committed` evidence marker
+after all assertions and before `COMMIT`. If the client loses the `COMMIT`
+acknowledgement, the outcome is reported as **unknown**, never failed: use a
+fresh database connection to reconcile that exact request ID, plan digest, and
+confirmation token before retrying.
+Likewise, a pre-commit error is only classified as failed after `ROLLBACK` is
+acknowledged; an unacknowledged rollback makes the outcome inconclusive and the
+connection is discarded.
+
+If the preview reports missing authoritative rows, run a normal full
+`db:import-json` sync first, then preview again. Do not reuse an earlier token.
+Both preview and apply also require the authoritative dataset to match the
+reviewed baseline counts in `EXPECTED_PARITY_COUNTS`; a truncated or
+unexpectedly expanded dataset fails before any prune-mode database work. Review
+the dataset and update those constants together when an intentional content
+release changes the counts.
+
+On Hostinger, the same guarded actions are available to an authenticated owner
+under **Advanced → System checks → JSON → MySQL mirror maintenance**. Start with
+the default read-only parity check. Safe sync only upserts. Prune preview is
+read-only. Full sync and prune additionally requires the exact confirmation
+token produced by that preview, records request-level and per-row audit
+evidence, and never changes `CONTENT_SOURCE=json`. If an acknowledgement is
+lost, the app uses a fresh connection: the exact durable marker proves commit.
+A matching authoritative-content digest, exact key state, and parity are
+additionally required for `committed_reconciled`; a valid marker with failed
+post-checks returns `committed_with_postcheck_attention` and must not be
+reapplied. Without a valid marker, the outcome remains inconclusive.
+
+If safe sync commits but its later parity or completion-audit check fails, the
+admin reports `committed_with_postcheck_attention` and requires a read-only
+parity check before another sync; it never labels acknowledged writes as
+failed.
+
 If an import fails midway, do not manually edit DB rows. Re-run the same import
 after fixing the reported cause; completed phases are upserts and can be safely
 replayed. For Hostinger remote DB failures, first confirm the app/user/password
@@ -750,7 +862,7 @@ these commands fail with setup instructions instead of silently succeeding.
 | Ask widget UI | Built but not exposed in production. `/api/ask` remains disabled until rate limiting and final model testing are explicitly approved. |
 | `routes/ask.js` + `server.js` | Express route exists behind `ASK_ENABLED=true`; production keeps `ASK_ENABLED=false`, so `/api/ask` returns 404. |
 | `lib/retrieve.js` | Shared deterministic field/IDF ranker with typed intent, exact filters, atomic offering contexts, guide support, and assertion-based quality gates. No embeddings or external search service. |
-| Private evidence storage | Local and Cloudflare R2 adapters exist. Production R2 mode is immutable, checksum-verified, private, and fail-closed. |
+| Private evidence storage | The selected design is an absolute Hostinger persistent filesystem root plus MySQL provider/key/checksum metadata. Two-deploy persistence proof and explicit acknowledgement are mandatory. Private Cloudflare R2 remains an optional alternative. |
 | GitHub publication | GitHub App publisher creates a sealed deterministic branch/commit/review PR; required CI and human merge remain mandatory. |
 
 ## Data files & how they're loaded
@@ -794,8 +906,11 @@ Use `docs/CURRENT_STATE.md` for current state and
 limited to setup-level reminders:
 
 1. Keep `CONTENT_SOURCE=json` and `ASK_ENABLED=false`.
-2. Complete the GitHub App, private R2, branch protection, and
-   notes-only production trial in `docs/CONTENT_OPS_RUNBOOK.md`.
+2. Complete the two-deploy Hostinger filesystem proof, off-host backup and
+   staging restore drill, repository-only GitHub App, dedicated signing key
+   and public-key ring, and notes-only production trial in
+   `docs/CONTENT_OPS_RUNBOOK.md`. Keep
+   `GITHUB_PUBLICATION_TRUST_READY=false` until all prerequisites are verified.
 3. Publish new content through a review PR, required CI, and human merge; then
    verify `/release.json`, `/health`, and `/sitemap.xml` after Hostinger deploys.
 4. Record Search Console baselines and follow-ups on days 0, 7, 14, and 28.
