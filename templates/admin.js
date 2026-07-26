@@ -633,7 +633,98 @@ ${freshness.sources.map(source => `<tr><td><span class="pill ${source.status ===
   });
 }
 
-export function renderAdminChecksPage({ checks }) {
+function boundedMaintenanceValues(values = [], limit = 50) {
+  const items = Array.isArray(values) ? values : [];
+  const visible = escapeHtml(items.slice(0, limit).join(', '));
+  return `${visible}${items.length > limit ? ` … and ${escapeHtml(items.length - limit)} more` : ''}`;
+}
+
+function maintenanceResultHtml(result) {
+  if (!result) return '';
+  const planConfirmation = result.action === 'prune_preview' && result.prune?.confirmationToken
+    ? `<div class="notice evidence-warning" style="margin:16px;">
+      <strong>Confirmation token for this exact deletion plan</strong>
+      <div class="admin-sub">Copy this only after reviewing every obsolete key and reference blocker below. Any authoritative JSON change, obsolete-row before-image change, or key/reference-plan change invalidates it.</div>
+      <label class="field"><span>Plan-bound token</span><input class="mono" value="${escapeHtml(result.prune.confirmationToken)}" readonly></label>
+    </div>`
+    : '';
+  const parityRows = (result.parity?.checks || []).map(check => `
+<tr><td>${check.ok ? '<span class="status-ok">pass</span>' : '<span class="status-bad">attention</span>'}</td><td>${escapeHtml(check.name)}</td><td>${escapeHtml(check.details || '')}</td></tr>`).join('');
+  const pruneRows = (result.prune?.entities || []).map(entity => {
+    const blockers = Array.isArray(entity.referenceBlockers) ? entity.referenceBlockers : [];
+    const blockerHtml = blockers.slice(0, 50).map(blocker => `
+<div>
+  <strong class="mono">${escapeHtml(blocker.referencingTable)}.${escapeHtml(blocker.referencingColumn)}</strong>:
+  ${escapeHtml(blocker.count)} row(s)
+  ${(blocker.referencingIds || []).length ? `<div class="mono">IDs: ${boundedMaintenanceValues(blocker.referencingIds)}</div>` : ''}
+</div>`).join('');
+    return `
+<tr>
+  <td>${escapeHtml(entity.entityType)}</td>
+  <td>${escapeHtml(entity.authoritativeCount)}</td>
+  <td>${escapeHtml(entity.currentCount)}</td>
+  <td>${escapeHtml(entity.obsoleteCount)}</td>
+  <td>${escapeHtml(entity.missingCount)}${(entity.missingKeys || []).length ? `<div class="mono">${boundedMaintenanceValues(entity.missingKeys)}</div>` : ''}</td>
+  <td>${escapeHtml(entity.deletedCount)}</td>
+  <td>${boundedMaintenanceValues(entity.obsoleteKeys)}</td>
+  <td>${blockerHtml || 'none'}${blockers.length > 50 ? `<div>… and ${escapeHtml(blockers.length - 50)} more blocker(s)</div>` : ''}</td>
+</tr>`;
+  }).join('');
+  const auditLabel = result.audit?.persistent === true
+    ? `yes · ${escapeHtml(result.audit.requestId || result.requestId || '')}`
+    : result.audit?.persistent === false
+      ? escapeHtml(result.audit.reason || 'not written')
+      : escapeHtml(result.audit?.note || 'outcome not proven');
+  const keyStateTotals = result.keyState?.totals
+    ? [
+        `authoritative ${result.keyState.totals.authoritative ?? 'unknown'}`,
+        `current ${result.keyState.totals.current ?? 'unknown'}`,
+        `missing ${result.keyState.totals.missing ?? 'unknown'}`,
+        `unexpected ${result.keyState.totals.unexpected ?? 'unknown'}`,
+        `duplicate/empty ${result.keyState.totals.duplicateOrEmpty ?? 'unknown'}`,
+      ].map(escapeHtml).join(' · ')
+    : '';
+  return `
+<section class="desk-panel" style="margin-top:16px;">
+  <div class="desk-panel-head"><h2>Latest maintenance result</h2><span class="pill ${result.ok ? 'status-ok' : 'status-warn'}">${escapeHtml(result.status || (result.ok ? 'passed' : 'attention'))}</span></div>
+  <div class="desk-status">
+    <div class="desk-status-row"><span>Action</span><strong class="mono">${escapeHtml(result.action || '')}</strong></div>
+    <div class="desk-status-row"><span>Request ID</span><strong class="mono">${escapeHtml(result.requestId || '')}</strong></div>
+    ${result.pruneRequestId ? `<div class="desk-status-row"><span>Prune transaction request</span><strong class="mono">${escapeHtml(result.pruneRequestId)}</strong></div>` : ''}
+    <div class="desk-status-row"><span>Actor</span><strong>${escapeHtml(result.actor || '')}</strong></div>
+    <div class="desk-status-row"><span>Started</span><strong>${escapeHtml(result.startedAt || '')}</strong></div>
+    <div class="desk-status-row"><span>Finished</span><strong>${escapeHtml(result.finishedAt || '')}</strong></div>
+    <div class="desk-status-row"><span>Duration</span><strong>${result.durationMs == null ? '' : `${escapeHtml(result.durationMs)} ms`}</strong></div>
+    <div class="desk-status-row"><span>Public content source before / after</span><strong>${escapeHtml(result.publicContentSourceBefore || 'unchanged')} / ${escapeHtml(result.publicContentSourceAfter || 'unchanged')}</strong></div>
+    <div class="desk-status-row"><span>Persistent audit</span><strong>${auditLabel}</strong></div>
+  </div>
+  ${result.operatorInstruction ? `<div class="notice evidence-warning" style="margin:16px;"><strong>Operator instruction</strong><div>${escapeHtml(result.operatorInstruction)}</div></div>` : ''}
+  ${result.reconciliation?.attempted ? `<h2 style="margin-left:16px;">Fresh-connection reconciliation</h2><div class="table-wrap" style="margin:0 16px 16px;"><table><tbody>
+    <tr><th>Status</th><td>${escapeHtml(result.reconciliation.status || '')}</td></tr>
+    <tr><th>Commit evidence</th><td>${result.reconciliation.commitEvidenceFound === true ? 'found and validated' : result.reconciliation.commitEvidenceFound === false ? 'not found' : 'unavailable'}</td></tr>
+    <tr><th>Exact authoritative key state</th><td>${result.reconciliation.exactKeyStateVerified === true ? 'verified' : result.reconciliation.exactKeyStateVerified === false ? 'mismatch' : 'unavailable'}${keyStateTotals ? `<div class="admin-sub">${keyStateTotals}</div>` : ''}</td></tr>
+    <tr><th>Authoritative content snapshot</th><td>${result.reconciliation.authoritativeContentDigestMatchesMarker === true ? 'matches committed marker' : result.reconciliation.authoritativeContentDigestMatchesMarker === false ? 'changed since commit' : 'unavailable'}</td></tr>
+    ${result.reconciliation.commitEvidenceAuditId ? `<tr><th>Commit evidence audit ID</th><td class="mono">${escapeHtml(result.reconciliation.commitEvidenceAuditId)}</td></tr>` : ''}
+    ${result.reconciliation.postcheckErrorCode ? `<tr><th>Post-check error code</th><td class="mono">${escapeHtml(result.reconciliation.postcheckErrorCode)}</td></tr>` : ''}
+  </tbody></table></div>` : ''}
+  ${planConfirmation}
+  ${result.import ? `<h2 style="margin-left:16px;">Import summary</h2><div class="table-wrap" style="margin:0 16px 16px;"><table><tbody>
+    ${Object.entries(result.import).map(([key, value]) => `<tr><th>${escapeHtml(key)}</th><td>${escapeHtml(value ?? '')}</td></tr>`).join('')}
+  </tbody></table></div>` : ''}
+  ${pruneRows ? `<h2 style="margin-left:16px;">Authoritative prune report</h2><div class="table-wrap" style="margin:0 16px 16px;"><table><thead><tr><th>Entity</th><th>JSON</th><th>Database</th><th>Obsolete</th><th>Missing</th><th>Deleted</th><th>Obsolete keys (first 50)</th><th>Reference blockers</th></tr></thead><tbody>${pruneRows}</tbody></table></div>` : ''}
+  ${parityRows ? `<h2 style="margin-left:16px;">Parity checks</h2><div class="table-wrap" style="margin:0 16px 16px;"><table><thead><tr><th>Status</th><th>Check</th><th>Details</th></tr></thead><tbody>${parityRows}</tbody></table></div>` : ''}
+  ${(result.logs || []).length ? `<details class="advanced-panel" style="margin:0 16px 16px;"><summary>Bounded operation log</summary><div><pre class="json-block">${escapeHtml(result.logs.join('\n'))}</pre></div></details>` : ''}
+</section>`;
+}
+
+export function renderAdminChecksPage({
+  checks,
+  csrfToken = '',
+  pruneConfirmationPhrase = '',
+  maintenance = null,
+  maintenanceError = null,
+  checksNotice = null,
+}) {
   const expectedSearchDocs = Number(checks.content.subjectPages ?? checks.content.subjectsVerified ?? 0)
     + Number(checks.content.collegesTotal || 0)
     + Number(checks.content.branchProfilesTotal || 0)
@@ -669,6 +760,7 @@ export function renderAdminChecksPage({ checks }) {
     breadcrumbs: [{ href: '/admin/', label: 'Dashboard' }, { label: 'Checks' }],
     body: `
 <div class="admin-top"><div><h1>Runtime checks</h1><div class="admin-sub">Protected diagnostics. Values are status-only and never include secrets.</div></div><a class="logout" href="/admin/logout">Sign out</a></div>
+${checksNotice ? `<div class="notice evidence-warning" style="margin-bottom:12px;">${escapeHtml(checksNotice)}</div>` : ''}
 <section class="metric-grid">
   <div class="metric"><div class="metric-label">Public content</div><div class="metric-value">${passFail(checks.content.subjectsVerified > 0 && checks.content.collegesTotal > 0)}</div></div>
   <div class="metric"><div class="metric-label">Search index</div><div class="metric-value">${passFail(checks.searchIndex.ok && checks.searchIndex.total === expectedSearchDocs)}</div></div>
@@ -687,6 +779,25 @@ ${dbRows.map(([label, value]) => `<tr><th>${escapeHtml(label)}</th><td>${escapeH
 ${checks.db.missing?.length ? `<tr><th>Missing env keys</th><td class="mono">${escapeHtml(checks.db.missing.join(', '))}</td></tr>` : ''}
 ${checks.db.error ? `<tr><th>Error</th><td><pre class="mono" style="white-space:pre-wrap;margin:0;">${escapeHtml(JSON.stringify(checks.db.error, null, 2))}</pre></td></tr>` : ''}
 </tbody></table></div>
+
+<h2>JSON → MySQL mirror maintenance</h2>
+${maintenanceError ? `<div class="error" style="margin-bottom:12px;">${escapeHtml(maintenanceError)}</div>` : ''}
+<form class="action-box" method="post" action="/admin/checks/database-mirror">
+  <input type="hidden" name="csrf_token" value="${escapeHtml(csrfToken)}">
+  <label class="field"><span>Action</span><select name="action">
+    <option value="parity" selected>Check parity — read-only (recommended)</option>
+    <option value="sync">Sync JSON into MySQL — upsert only, no deletion</option>
+    <option value="prune_preview">Preview obsolete mirror rows — read-only</option>
+    <option value="sync_prune">Sync and prune obsolete mirror rows — destructive</option>
+  </select></label>
+  <label class="field"><span>Destructive confirmation <small class="admin-sub">only for sync and prune</small></span>
+    <input name="confirmation_phrase" value="" autocomplete="off" spellcheck="false" placeholder="${escapeHtml(pruneConfirmationPhrase)}:&lt;64-character preview hash&gt;">
+  </label>
+  <div class="safety-note">The default action only compares repository JSON with MySQL. Safe sync never deletes rows. Destructive pruning requires the exact plan-bound token from a fresh preview, runs as a full authoritative import, records before-images in the audit log, and refuses referenced rows. Authoritative JSON, obsolete-row before-images, keys, and reference blockers are all bound to the token.</div>
+  <div class="notice" style="margin-top:10px;"><strong>Serving remains JSON.</strong> This tool maintains the private MySQL mirror only; it never changes <span class="mono">CONTENT_SOURCE</span>, public files, or publication state. Primary maintenance is capped at 45 seconds. An ambiguous destructive outcome may use up to 8 more seconds on a fresh connection for commit-marker reconciliation, and the result-page diagnostics refresh is capped at 3 seconds. Only one maintenance action may run at a time.</div>
+  <button type="submit"${csrfToken ? '' : ' disabled'}>Run selected maintenance</button>
+</form>
+${maintenanceResultHtml(maintenance)}
 
 <h2>Storage</h2>
 <div class="table-wrap"><table><tbody>

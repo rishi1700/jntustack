@@ -1,7 +1,7 @@
 # Content Operations Runbook
 
-Last updated: 2026-07-18 after the immutable evidence-storage and GitHub PR
-publishing foundation was introduced.
+Last updated: 2026-07-26 after reconciling the completed 2026-07-18 trust-root
+bootstrap, protected-main cutover, production deploy, and database parity.
 
 This runbook is for controlled content work. It does not authorize broad rewrites, unverified publishing, crawler/scheduler work, `/api/ask`, or DB-backed serving.
 
@@ -68,8 +68,11 @@ Local checks:
 ```sh
 npm run test:parsers
 npm run test:admin-ui
+npm run test:deployment-provenance
+npm run test:db-json-prune
 npm run test:source-security
 npm run test:publishing
+npm run test:publication-artifact
 npm run build
 npm run test:retrieve
 npm run test:content-store
@@ -113,6 +116,49 @@ NODE_OPTIONS=--dns-result-order=ipv4first npm run db:status
 ```
 
 Keep `CONTENT_SOURCE=json` unless a task explicitly approves DB serving.
+
+### JSON → MySQL mirror maintenance
+
+Use **Advanced → System checks → JSON → MySQL mirror maintenance** when remote
+MySQL access from a workstation is unavailable. The action runs inside the
+authenticated Hostinger application and does not expose MySQL publicly.
+
+1. Run **Check parity** first. It is read-only and is the default after every
+   page load and result.
+2. Use **Sync JSON into MySQL** for an idempotent upsert. It never deletes.
+   If its writes commit but a later parity/audit check fails, the result is
+   `committed_with_postcheck_attention`; run parity before another sync.
+3. Use **Preview obsolete mirror rows** to inspect every obsolete/missing count,
+   bounded key list, and foreign-key blocker without writing content or audit
+   rows.
+4. Use **Sync and prune obsolete mirror rows** only after reviewing that
+   preview. Copy its exact plan-bound
+   `DELETE_OBSOLETE_MIRROR_RECORDS:<sha256>` token; a static phrase, stale
+   preview, or changed candidate set is rejected. Apply also requires a full
+   authoritative import, the approved baseline counts, no retained foreign-key
+   references, before-image audit rows, and exact post-prune stable-ID equality.
+   The destructive transaction also writes a request/plan-bound
+   `content_sync.authoritative_prune_committed` marker after its final assertions
+   and before `COMMIT`. On a lost COMMIT acknowledgement, the application opens
+   a fresh connection. The exact marker proves whether the transaction
+   committed. A matching authoritative-content digest, fresh exact-key snapshot,
+   parity, and `CONTENT_SOURCE=json` are additionally required for
+   `committed_reconciled`; marker evidence with a failed post-check is reported
+   as `committed_with_postcheck_attention` and must not be reapplied.
+
+The route additionally requires the owner session, same-origin request
+validation, and a per-session/action CSRF token. It has bounded request, query,
+and log sizes plus application and MariaDB locks. Primary maintenance is capped
+at 45 seconds, fresh-connection reconciliation at 8 seconds, and final
+diagnostics at 3 seconds (about 56 seconds maximum end to end). Write attempts
+record a started audit and then attempt a completed or failed audit when the
+outcome is conclusive; the result states when an unsafe connection prevented
+that follow-up audit. A lost START acknowledgement discards the connection and
+is a failed phase start because no phase callback/data work ran. A lost COMMIT
+or ROLLBACK acknowledgement is inconclusive and is never mislabeled failed. If
+durable proof is absent or unavailable, rerun parity and a fresh prune preview
+before deciding whether to retry. Keep `CONTENT_SOURCE=json`; the operation
+refuses to run otherwise and never changes the serving source.
 
 ## PDF Fetch or Upload
 
@@ -416,32 +462,40 @@ Register a repository-only GitHub App with:
 - Commit statuses: read
 
 Do not grant Administration, Workflows, Actions write, or branch-protection
-bypass permissions. Protect `main`, require pull requests and code-owner review,
-require branches to be up to date, bind both the `verify` and
-`publication-integrity` required checks to GitHub Actions, dismiss stale
-approvals, require approval of the most recent push by someone other than its
-pusher, prohibit direct and force pushes, and configure no bypass actors. Require
-at least one human approval on every PR; keep the GitHub App off the reviewer and
-bypass lists. The latter check runs from the trusted base branch and never
-executes PR code.
-Store the private key as base64 in the deployment secret rather than committing
-a PEM file.
+bypass permissions. Store the private key as base64 in the deployment secret
+rather than committing a PEM file.
 
-The repository became public on 2026-07-18, so the branch controls that were
-previously unavailable to the private repository can now be configured.
-Publication remains an installed but inactive foundation until those rules are
-configured and independently verified. Only then set
-`GITHUB_PUBLICATION_TRUST_READY=true`. The publisher refuses to create PRs while
-this gate is false. `CODEOWNERS` protects trust-root paths once code-owner
-enforcement is active, and workflow actions are pinned by full commit SHA.
+The repository trust boundary was completed on 2026-07-18:
 
-The current `main` branch does not yet contain the base-owned verifier, so the
-first protected publication PR cannot bootstrap it. Make a separately reviewed,
-one-time trust-root change containing only `.github/CODEOWNERS`, the pinned
-workflows, and `scripts/verify-publication-artifact.js`; verify that exact diff
-and every action SHA out of band. Do not include content or application changes
-in this bootstrap. After it lands, enable and independently test the rules,
-configure the public-key ring, and only then rebase and sign publication work.
+1. The separate trust-root-only bootstrap (`008a0c2`) added
+   `.github/CODEOWNERS`, pinned workflows, and the base-owned artifact verifier
+   before application/content code.
+2. `main` was protected with strict, up-to-date `verify` and
+   `publication-integrity` checks bound to GitHub Actions; one code-owner
+   approval; stale-review dismissal; last-push approval by someone other than
+   the pusher; conversation resolution; linear history; administrator
+   enforcement; and no force pushes or deletions.
+3. The implementation cutover reached `main` at `962f05d`; both required jobs
+   passed, Hostinger deployed the commit, and all 413 sitemap URLs returned HTTP
+   200.
+4. Production MySQL reached 26/26 migrations and exact JSON parity after the
+   verified backup, import, and audited removal of 21 obsolete mirror rows.
+
+Keep the GitHub App off reviewer and bypass lists. Require at least one human
+approval for every PR, and do not weaken the completed branch controls. The
+publication-integrity job runs from the trusted base branch and never executes
+PR code. GitHub secret scanning, push protection, and Dependabot security
+updates are enabled, and the required verification workflow rejects
+high-severity npm audit findings; keep those controls enabled.
+
+Publication remains an installed but inactive foundation. A dedicated
+publication key (`2026-07`) has been generated outside Git and its matching
+public key is configured in the Actions keyring. The private R2 bucket/token,
+repository-only GitHub App credentials, deployment of the private signing key
+to Hostinger, and notes-only trial are not complete. The publisher refuses to
+create PRs while `GITHUB_PUBLICATION_TRUST_READY=false`. Keep that gate false
+until every remaining prerequisite is configured and independently verified;
+completed branch protection alone does not activate publication.
 
 Publication requires the exact confirmation phrase:
 

@@ -11,8 +11,20 @@ storage/
 .env
 .env.*
 hostinger-env.txt
+.npmrc
+.netrc
+id_rsa
+id_ed25519
 *.key
 *.pem
+*.p12
+*.pfx
+*.jks
+
+# Database backups
+*.sql.gz
+*.dump
+*.bak
 
 # Logs
 *.log

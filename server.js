@@ -11,10 +11,17 @@ import { askRouter, loadSearchIndex } from './routes/ask.js';
 import { getAdminConfig, getAskConfig } from './lib/config.js';
 import { LEGACY_REDIRECTS } from './lib/legacy-redirects.js';
 import { TEMPORARY_REDIRECTS } from './lib/temporary-redirects.js';
+import {
+  DEPLOYMENT_PROVENANCE_FILENAME,
+  readDeploymentProvenance,
+} from './lib/deployment-provenance.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const DIST_DIR = path.join(__dirname, 'dist');
 const PORT = process.env.PORT || 3000; // Hostinger sets PORT itself -- always defer to it, never hardcode
+const deploymentProvenance = readDeploymentProvenance(
+  path.join(DIST_DIR, DEPLOYMENT_PROVENANCE_FILENAME),
+);
 
 const app = express();
 // Hostinger terminates TLS and proxies requests to this process, so without
@@ -91,6 +98,8 @@ console.log('JNTUStack runtime config:', JSON.stringify({
   adminEnabled: adminConfig.enabled,
   adminConfigured: Boolean(adminConfig.email && (adminConfig.passwordHash || adminConfig.password)),
   askEnabled: askConfig.enabled,
+  deploymentCommit: deploymentProvenance.commit_sha,
+  deploymentSourceClean: deploymentProvenance.source_clean,
   nodeVersion: process.version,
 }));
 
@@ -138,14 +147,17 @@ if (adminConfig.enabled) {
 // and for confirming the app is actually up after a deploy.
 app.get('/health', (req, res) => {
   res.setHeader('Cache-Control', 'no-store');
-  res.json({ status: 'ok' });
+  res.json({
+    status: 'ok',
+    deployment: deploymentProvenance,
+  });
 });
 
 // The generated site itself.
 app.use(express.static(DIST_DIR, {
   setHeaders(res, filePath) {
     const extension = path.extname(filePath).toLowerCase();
-    if (extension === '.html' || ['sitemap.xml', 'robots.txt', 'search-index.json', 'release.json'].includes(path.basename(filePath))) {
+    if (extension === '.html' || ['sitemap.xml', 'robots.txt', 'search-index.json', 'release.json', DEPLOYMENT_PROVENANCE_FILENAME].includes(path.basename(filePath))) {
       // HTML and discovery indexes may change on every content publish. They can
       // be stored, but must be revalidated so deploys never leave stale pages.
       res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');

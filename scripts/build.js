@@ -16,6 +16,10 @@ import { renderBranchHubPage } from '../templates/branch-hub.js';
 import { renderCollegeDirectoryPage, collegeDirectoryUniversitySummary, campusesFromData } from '../templates/college-directory.js';
 import { renderHomePage } from '../templates/home.js';
 import { renderGuidePage } from '../templates/guide-page.js';
+import {
+  DEPLOYMENT_PROVENANCE_FILENAME,
+  resolveDeploymentProvenance,
+} from '../lib/deployment-provenance.js';
 
 const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
 const SITE_URL = 'https://jntustack.com';
@@ -575,9 +579,10 @@ ${sitemapEntries.map(entry => `  <url><loc>${entry.url}</loc>${entry.lastmod ? `
 `;
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 
-// Deployment attestation is intentionally independent of git metadata because
-// Hostinger receives the built artifact. The GitHub publisher supplies these
-// values for reviewed releases; ordinary local builds remain explicit nulls.
+// Reviewed content-release attestation is intentionally independent of git
+// metadata because Hostinger receives the built artifact. The GitHub publisher
+// supplies these values for reviewed releases; ordinary local builds remain
+// explicit nulls.
 let reviewedReleaseMarker = {};
 const reviewedReleaseMarkerPath = path.join(dataDir, 'release.json');
 const hasReviewedReleaseMarker = fs.existsSync(reviewedReleaseMarkerPath);
@@ -602,6 +607,17 @@ fs.writeFileSync(path.join(distDir, 'release.json'), `${JSON.stringify({
   },
 }, null, 2)}\n`);
 
+// This marker identifies the code checkout that produced the deployed build.
+// It is deliberately separate from release.json: that file remains the signed
+// content-publication contract, while this marker is available for every build.
+// Only strict full-length commit SHAs are accepted, so no arbitrary environment
+// value can be reflected into a public response.
+const deploymentProvenance = resolveDeploymentProvenance({ root: ROOT });
+fs.writeFileSync(
+  path.join(distDir, DEPLOYMENT_PROVENANCE_FILENAME),
+  `${JSON.stringify(deploymentProvenance, null, 2)}\n`,
+);
+
 console.log('');
 console.log('Build summary');
 console.log('-------------');
@@ -614,3 +630,4 @@ console.log(`Branch guide                  : ${branchGuidePublished > 0 ? `publi
 console.log(`Editorial guides              : ${guidesPublished} published`);
 console.log(`College directory             : ${collegesPublished > 0 ? `published (${collegesPublished} colleges)` : 'not published'}`);
 console.log(`Branch hubs                   : ${branchHubsPublished} published, ${branchHubsSkipped} skipped (no verified subjects)`);
+console.log(`Deployment commit             : ${deploymentProvenance.commit_sha || 'unavailable'} (${deploymentProvenance.source}, clean=${deploymentProvenance.source_clean ?? 'unknown'})`);

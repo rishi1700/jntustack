@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-18 after the R23/R16 content completion, deterministic
-search upgrade, and GitHub/R2 publishing-foundation work.
+Last updated: 2026-07-26 after reconciling the completed 2026-07-18 trust-root
+bootstrap, implementation cutover, production deploy, and database parity.
 
 ## Architecture
 
@@ -15,6 +15,10 @@ admin workflow.
 - `scripts/build-search-index.js` writes the verified public retrieval index to
   `dist/search-index.json` using the same matcher as the browser and server.
 - `server.js` serves `dist/`, `/health`, and private admin routes when enabled.
+  Each build writes a separate, non-secret `dist/deployment.json` marker from
+  the checked-out Git commit. `/health` returns that validated commit and source
+  cleanliness with `Cache-Control: no-store`, allowing production code
+  provenance to be checked before any signed publication marker exists.
 - `/api/ask` exists in code but is mounted only when `ASK_ENABLED=true`.
   Production keeps `ASK_ENABLED=false`, so the endpoint returns `404`.
 - MySQL mirrors JSON content and stores immutable evidence metadata, parser and
@@ -154,20 +158,40 @@ manual live JSON edit.
 
 New releases default to `CONTENT_PUBLICATION_MODE=github_pr` and fail closed if
 the GitHub/R2 production setup is incomplete. PR creation additionally requires
-`GITHUB_PUBLICATION_TRUST_READY=true`. The repository became public on
-2026-07-18, but the required branch rules are not yet proven, so this gate
-remains false. Migration 026 deliberately keeps existing release rows in
-`legacy` mode. Legacy live-apply code is retained only for explicit recovery
-during cutover; it is not the desired path for new production publishes.
+`GITHUB_PUBLICATION_TRUST_READY=true`. Migration 026 deliberately keeps
+existing release rows in `legacy` mode. Legacy live-apply code is retained only
+for explicit recovery during cutover; it is not the desired path for new
+production publishes.
 
 Production MySQL was backed up and migrations 025 and 026 were applied on
 2026-07-18. The migration journal reports 26/26 applied with no partial or
 failed steps; all 27 pre-migration tables were captured in the verified backup.
+The current JSON dataset was imported, 21 obsolete mirror-only subject rows
+were removed transactionally with before-image audit events, and exact JSON/DB
+parity was then verified. Public serving remained JSON-backed throughout.
 
-`main` also predates the base-owned verifier. Activation therefore requires a
-separately reviewed trust-root-only bootstrap of `CODEOWNERS`, the pinned
-workflows, and the artifact verifier before rules are enabled. The current
-code-and-content batch is an implementation branch, not that bootstrap.
+The repository became public and completed its separate trust-root-only
+bootstrap (`008a0c2`) on 2026-07-18. That bootstrap contained `CODEOWNERS`, the
+pinned workflows, and the base-owned artifact verifier before the implementation
+cutover. The cutover reached `main` at `962f05d`, both required jobs succeeded,
+Hostinger deployed it, and all 413 live sitemap URLs returned HTTP 200.
+
+`main` is now protected with strict, up-to-date `verify` and
+`publication-integrity` GitHub Actions checks; one code-owner approval; stale
+review dismissal; approval of the last push by someone other than its pusher;
+conversation resolution; linear history; administrator enforcement; and no
+force pushes or deletions. GitHub secret scanning, push protection, and
+Dependabot security updates are enabled for the public repository, and the
+required verification workflow rejects high-severity npm audit findings.
+
+These repository controls are complete, but the automated publisher is not
+active. A dedicated publication-signing key (`2026-07`) exists only in the
+ignored, permission-restricted operator environment, and its matching public
+key is configured in the repository's Actions keyring. The private R2 bucket
+and token, repository-only GitHub App credentials, deployment of the private
+signing key to Hostinger, and notes-only production trial remain outstanding.
+Production must therefore keep `GITHUB_PUBLICATION_TRUST_READY=false`; branch
+protection alone is not a reason to enable it.
 
 ## Controlled Release Flow
 
@@ -200,13 +224,17 @@ validation, proposal review, a sealed release, required CI, and human merge.
 
 ## Known Risks and Deferred Work
 
-- GitHub/R2 publishing must not be treated as active production until
-  credentials, branch/ruleset protection, and the no-public-output trial pass.
-  The repository is public and migrations are complete, but the remaining
-  controls are not yet configured, so `GITHUB_PUBLICATION_TRUST_READY` remains
-  false.
-- Remote Hostinger MySQL access depends on current IP allowlisting. A DB outage
-  must not interrupt the JSON-backed public site or trigger a switch to DB mode.
+- GitHub/R2 publishing must not be treated as active production until the
+  private R2, GitHub App, Hostinger private-key configuration, and
+  no-public-output trial pass. Repository protection, migrations, local signing
+  key generation, and the Actions public-key ring are complete, but the
+  remaining publisher prerequisites are not, so
+  `GITHUB_PUBLICATION_TRUST_READY` remains false.
+- Remote workstation access to Hostinger MySQL depends on current IP
+  allowlisting. Authenticated mirror maintenance can instead run from the
+  Hostinger application under System checks without opening MySQL broadly. A DB
+  outage must not interrupt the JSON-backed public site or trigger a switch to
+  DB mode.
 - Official course placement does not prove that a detailed syllabus exists;
   preserve listing-only publication instead of fabricating thin pages.
 - Google decides crawl and indexing timing. Measure Search Console outcomes at
