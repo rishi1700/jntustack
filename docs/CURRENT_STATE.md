@@ -164,6 +164,10 @@ and expected store ID, authenticated System checks must read the deploy-A
 marker and report `verified_not_acknowledged` before either acknowledgement or
 publication trust is enabled.
 
+The checkpoint branch is advanced by the repository-scoped publisher App so
+the required code-owner approval follows an independent, reviewable App push
+without weakening branch protection.
+
 The repository-scoped GitHub App may read metadata, checks, and commit statuses
 and read/write contents and pull requests. It receives no Administration,
 Workflows, or branch-protection bypass permission. Publication requires
