@@ -1,7 +1,7 @@
 # JNTUStack Current State
 
-Last updated: 2026-07-26 after reconciling the completed 2026-07-18 trust-root
-bootstrap, implementation cutover, production deploy, and database parity.
+Last updated: 2026-07-26 after production asset recovery, paired restore
+verification, guarded publisher activation, reviewed merge, and deployment.
 
 ## Architecture
 
@@ -124,49 +124,49 @@ approved, the browser sends only `{question}` and the server-owned index remains
 the sole grounding source. Ask remains disabled pending explicit product,
 rate-limit, model, and live-safety approval.
 
-## Publishing Foundation
+## Reviewed Publishing
 
 The repository contains the GitHub App and pluggable private evidence-storage
 foundation for reviewed publishing. Migration
 `026_github_publication_foundation.sql` brings the migration count to 26.
 
-The intended production cutover configuration is:
+The active production cutover configuration is:
 
 ```text
 CONTENT_PUBLICATION_MODE=github_pr
-GITHUB_PUBLICATION_TRUST_READY=false
+GITHUB_PUBLICATION_TRUST_READY=true
 ASSET_STORAGE_PROVIDER=local
-ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
-ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
-ASSET_STORAGE_PERSISTENCE_VERIFIED=false
+ASSET_STORAGE_PERSISTENCE_VERIFIED=true
 ```
 
-The root shown above is a placeholder: production must use the actual absolute
-Hostinger account path, outside `nodejs` and `public_html`. The local adapter
+The private storage root and store identity are intentionally not recorded in
+the public repository. The production root is outside `nodejs` and
+`public_html`. The local adapter
 stores immutable evidence by SHA-256, rejects unsafe paths/symlinks, verifies
 checksum and size on writes and reads, and fails closed. System checks seed a
 private store-ID-bound marker on deploy A. A distinct deploy B must read that
 same marker before an operator explicitly changes
-`ASSET_STORAGE_PERSISTENCE_VERIFIED=true`. Until the two-deploy proof and
-acknowledgement are complete, publication storage is not ready. Cloudflare R2
-remains a supported private alternative and never acts as a silent fallback.
+`ASSET_STORAGE_PERSISTENCE_VERIFIED=true`. Cloudflare R2 remains a supported
+private alternative and never acts as a silent fallback.
 
 On 2026-07-26, production deploy A at commit
 `cde6bb3e2383e306559693d55deb921c2e2b84de` completed the authenticated
 bounded write/read/checksum/delete probe against the selected Hostinger local
 store and seeded its store-ID-bound persistence marker. System checks reported
-`seeded_waiting_for_new_deploy`; `ASSET_STORAGE_PERSISTENCE_VERIFIED` and
-`GITHUB_PUBLICATION_TRUST_READY` remain `false`.
+`seeded_waiting_for_new_deploy`.
 
-This current-state note intentionally creates distinct commit B for the
-second-deployment proof. After Hostinger deploys it with the same storage root
-and expected store ID, authenticated System checks must read the deploy-A
-marker and report `verified_not_acknowledged` before either acknowledgement or
-publication trust is enabled.
+Distinct deploy B reached production at
+`1c63a97de6ba45514e69beb96dd6accd82279420`. With the same private root and
+store identity, authenticated System checks read the deploy-A marker and
+reported `verified_not_acknowledged`. After the database/asset restore gates
+below passed, the operator acknowledged persistence and enabled publication
+trust. A final redeploy reports storage `configured`, publication ready `yes`,
+deployment persistence `verified`, commit-changing deploy survival `verified`,
+and a passing write/read/checksum/delete probe.
 
-The checkpoint branch is advanced by the repository-scoped publisher App so
-the required code-owner approval follows an independent, reviewable App push
-without weakening branch protection.
+The checkpoint and activation-note branches are advanced by the
+repository-scoped publisher App so required code-owner approval follows an
+independent, reviewable App push without weakening branch protection.
 
 The repository-scoped GitHub App may read metadata, checks, and commit statuses
 and read/write contents and pull requests. It receives no Administration,
@@ -200,13 +200,22 @@ The current JSON dataset was imported, 21 obsolete mirror-only subject rows
 were removed transactionally with before-image audit events, and exact JSON/DB
 parity was then verified. Public serving remained JSON-backed throughout.
 
-That verified backup establishes the database migration checkpoint only. The
-selected external asset root still requires a private
-`source_assets` provider/key/checksum inventory, a key-preserving copy verified
-against every MySQL checksum, a complete asset archive and matching MySQL dump
-copied off-host, and an isolated staging restore drill. Hostinger backup
-coverage for a root outside `nodejs`/`public_html` has not been verified and
-must not be claimed or relied upon until an actual Hostinger restore proves it.
+The external-root recovery gates completed on 2026-07-26. The private inventory
+contains 10 exact, case-sensitive local storage keys totaling 17,393,490 bytes,
+with zero missing keys, invalid checksums, size mismatches, or key conflicts.
+Every object was copied under its unchanged database `storage_key`, secured
+with private directory/file modes, and verified through all 10 production asset
+detail reads without changing database identity or provenance rows.
+
+A same-window MySQL logical dump, the complete asset root including its
+untouched persistence marker, manifests, and checksums were copied to
+independent encrypted off-host storage. An isolated socket-only MariaDB restore
+matched all 26 migration checksums, restored all 10 exact-case keys, and matched
+every database size and SHA-256. Representative Tirumala HTML/PDF and LBRCE PDF
+parsers also succeeded against the restored bytes without production writes.
+Hostinger backup coverage for a root outside `nodejs`/`public_html` has still
+not been proven by an actual Hostinger restore, so the independent off-host
+copy remains required.
 
 The repository became public and completed its separate trust-root-only
 bootstrap (`008a0c2`) on 2026-07-18. That bootstrap contained `CODEOWNERS`, the
@@ -222,20 +231,21 @@ force pushes or deletions. GitHub secret scanning, push protection, and
 Dependabot security updates are enabled for the public repository, and the
 required verification workflow rejects high-severity npm audit findings.
 
-These repository controls are complete, but the automated publisher is not
-active. A dedicated publication-signing key (`2026-07`) exists only in the
-ignored, permission-restricted operator environment, and its matching public
-key is configured in the repository's Actions keyring. The Hostinger persistent
-root proof and acknowledgement, key-preserving asset migration, off-host backup
-and staging restore drill, deployment of the repository-only GitHub App
-credentials and private signing key to Hostinger, and notes-only production
-trial remain outstanding. Production must therefore keep
-`GITHUB_PUBLICATION_TRUST_READY=false`; branch protection alone is not a reason
-to enable it.
+The guarded automated publisher is now active in GitHub-PR mode. Its dedicated
+publication-signing key (`2026-07`), repository-only GitHub App credentials,
+and matching Actions public-key ring are deployed. The App still has no
+Administration, Workflows, merge, or branch-protection bypass permission.
+
+The notes-only production trial completed through PR 4: the App made the latest
+reviewable push, all required checks passed, a separate code-owner approval was
+recorded, the PR merged, and Hostinger deployed the reviewed commit. Production
+now stores both `ASSET_STORAGE_PERSISTENCE_VERIFIED=true` and
+`GITHUB_PUBLICATION_TRUST_READY=true`. This permits creation of guarded review
+PRs only; it does not permit automatic merge or direct writes to `main`.
 
 ## Controlled Release Flow
 
-The target content lifecycle is:
+The production content lifecycle is:
 
 ```text
 official source -> private immutable evidence -> parse/extract -> validate
@@ -264,14 +274,12 @@ validation, proposal review, a sealed release, required CI, and human merge.
 
 ## Known Risks and Deferred Work
 
-- GitHub publishing must not be treated as active production until the
-  Hostinger filesystem survives two distinct deploys, its store ID is
-  explicitly acknowledged, the MySQL/key/checksum migration and staging restore
-  drill pass, and the GitHub App, Hostinger private-key configuration, and
-  no-public-output trial pass. Repository protection, migrations, local signing
-  key generation, and the Actions public-key ring are complete, but the
-  remaining publisher prerequisites are not, so
-  `GITHUB_PUBLICATION_TRUST_READY` remains false.
+- GitHub publishing is active but remains deliberately PR-only. The first real
+  content release after activation should stay small and operator-observed.
+  New release candidates use `github_pr`; migration 026 intentionally left
+  historical release rows in `legacy` mode. Never use those legacy rows as
+  evidence that a current release bypassed the signed-manifest, required-CI,
+  human-review, and deploy-verification flow.
 - Hostinger backup coverage for the external asset root is unknown. Maintain a
   checksum-manifested asset archive plus same-cutoff MySQL dump off-host until
   that scope is proven, and retain the independent copy even after proof.
