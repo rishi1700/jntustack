@@ -95,6 +95,7 @@ async function checkMissingAssetRepair() {
       finalUrl: sourceUrl,
       actor: 'test:content-store',
       reason: 'test_missing_asset_repair',
+      storagePersistenceCheck: async () => ({ ready: true, status: 'verified' }),
     });
 
     if (repair.asset.id === assetId) {

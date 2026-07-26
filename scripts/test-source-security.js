@@ -7,6 +7,7 @@ import {
   AssetIntegrityError,
   LocalAssetStorage,
   R2AssetStorage,
+  createAssetStorage,
   sha256,
 } from '../lib/asset-storage.js';
 import {
@@ -15,6 +16,120 @@ import {
   requestPinnedSource,
   resolvePublicSourceAddress,
 } from '../lib/source-fetcher.js';
+import {
+  assertAssetStorageIntakeReady,
+  registerAsset,
+  repairAssetRecordWithBuffer,
+} from '../lib/assets.js';
+
+class PartialWriteLocalAssetStorage extends LocalAssetStorage {
+  async writeAndSyncTempFile(absolute, buffer) {
+    const partialLength = Math.max(1, Math.floor(buffer.length / 2));
+    await fs.writeFile(absolute, buffer.subarray(0, partialLength), {
+      flag: 'wx',
+      mode: 0o600,
+    });
+    const error = new Error('simulated local asset write failure');
+    error.code = 'ENOSPC';
+    throw error;
+  }
+}
+
+await assert.rejects(
+  assertAssetStorageIntakeReady({
+    env: {},
+    persistenceCheck: async () => ({ provider: 'local', ready: false }),
+  }),
+  error => (
+    error instanceof AssetIntegrityError &&
+    error.code === 'asset_storage_persistence_not_verified'
+  )
+);
+
+for (const environment of ['production', 'test', 'development']) {
+  await assert.rejects(
+    assertAssetStorageIntakeReady({
+      env: {
+        NODE_ENV: environment,
+        ASSET_STORAGE_PROVIDER: 'local',
+        ASSET_STORAGE_ALLOW_UNVERIFIED_LOCAL: 'true',
+      },
+      persistenceCheck: async () => ({ provider: 'local', ready: false }),
+    }),
+    error => (
+      error instanceof AssetIntegrityError &&
+      error.code === 'asset_storage_persistence_not_verified'
+    )
+  );
+}
+
+const readyPersistence = {
+  provider: 'local',
+  ready: true,
+  status: 'verified',
+};
+let readyCheckArguments = null;
+assert.strictEqual(
+  await assertAssetStorageIntakeReady({
+    root: '/persistent/assets',
+    env: { NODE_ENV: 'production', ASSET_STORAGE_PROVIDER: 'local' },
+    persistenceCheck: async options => {
+      readyCheckArguments = options;
+      return readyPersistence;
+    },
+  }),
+  readyPersistence
+);
+assert.deepEqual(readyCheckArguments, {
+  root: '/persistent/assets',
+  env: { NODE_ENV: 'production', ASSET_STORAGE_PROVIDER: 'local' },
+  seedIfMissing: false,
+});
+
+let blockedStorageInteractions = 0;
+let blockedDatabaseInteractions = 0;
+const blockedStorage = new Proxy({}, {
+  get() {
+    blockedStorageInteractions += 1;
+    return async () => {
+      throw new Error('Blocked storage must not be called.');
+    };
+  },
+});
+const blockedDatabase = new Proxy({}, {
+  get() {
+    blockedDatabaseInteractions += 1;
+    return async () => {
+      throw new Error('Blocked database must not be called.');
+    };
+  },
+});
+const blockedPersistenceCheck = async () => ({ provider: 'local', ready: false });
+const blockedAssetArguments = {
+  root: '/tmp/blocked-assets',
+  originalFilename: 'blocked.html',
+  contentType: 'text/html',
+  buffer: Buffer.from('<!doctype html><title>Blocked evidence</title>'),
+  storage: blockedStorage,
+  database: blockedDatabase,
+  storagePersistenceCheck: blockedPersistenceCheck,
+};
+await assert.rejects(
+  registerAsset({
+    ...blockedAssetArguments,
+    discoverySourceId: 1,
+  }),
+  error => error?.code === 'asset_storage_persistence_not_verified'
+);
+await assert.rejects(
+  repairAssetRecordWithBuffer({
+    ...blockedAssetArguments,
+    assetId: 1,
+  }),
+  error => error?.code === 'asset_storage_persistence_not_verified'
+);
+assert.equal(blockedStorageInteractions, 0);
+assert.equal(blockedDatabaseInteractions, 0);
 
 const blocked = [
   '0.0.0.0',
@@ -115,6 +230,161 @@ try {
 
 const tempRoot = await fs.mkdtemp(path.join(os.tmpdir(), 'jntustack-source-security-'));
 try {
+  const defaultStorage = createAssetStorage({
+    env: { ASSET_STORAGE_PROVIDER: 'local' },
+    root: tempRoot,
+  });
+  assert.equal(defaultStorage.root, path.resolve(tempRoot, 'storage'));
+  assert.throws(
+    () => createAssetStorage({
+      env: {
+        ASSET_STORAGE_PROVIDER: 'local',
+        ASSET_STORAGE_ROOT: 'relative/persistent-assets',
+      },
+      root: tempRoot,
+    }),
+    /ASSET_STORAGE_ROOT must be an absolute path/
+  );
+
+  const persistentRootInput = path.join(
+    tempRoot,
+    'persistent',
+    'releases',
+    '..',
+    'asset-store'
+  );
+  const persistentStorage = createAssetStorage({
+    env: {
+      ASSET_STORAGE_PROVIDER: 'local',
+      ASSET_STORAGE_ROOT: persistentRootInput,
+    },
+    root: path.join(tempRoot, 'ephemeral-release'),
+  });
+  assert.equal(persistentStorage.root, path.resolve(persistentRootInput));
+  const persistentBody = Buffer.from('persistent Hostinger asset bytes');
+  const persistentChecksum = sha256(persistentBody);
+  const persistentWrite = await persistentStorage.putImmutable({
+    body: persistentBody,
+    sha256: persistentChecksum,
+  });
+  assert.deepEqual(
+    await fs.readFile(path.join(persistentStorage.root, persistentWrite.key)),
+    persistentBody
+  );
+  await assert.rejects(
+    fs.access(path.join(tempRoot, 'ephemeral-release', 'storage', persistentWrite.key)),
+    error => error?.code === 'ENOENT'
+  );
+  const persistentAbsolute = path.join(persistentStorage.root, persistentWrite.key);
+  await fs.chmod(persistentAbsolute, 0o644);
+  await assert.rejects(
+    persistentStorage.getBuffer({
+      provider: 'local',
+      key: persistentWrite.key,
+      expectedSha256: persistentChecksum,
+    }),
+    error => error?.code === 'UNSAFE_ASSET_STORAGE_PERMISSIONS'
+  );
+  await fs.chmod(persistentAbsolute, 0o600);
+
+  const unsafeModeRoot = path.join(tempRoot, 'unsafe-mode-storage');
+  await fs.mkdir(unsafeModeRoot, { mode: 0o700 });
+  await fs.chmod(unsafeModeRoot, 0o755);
+  const unsafeModeStorage = new LocalAssetStorage({ storageRoot: unsafeModeRoot });
+  await assert.rejects(
+    unsafeModeStorage.putImmutable({
+      body: persistentBody,
+      sha256: persistentChecksum,
+    }),
+    error => error?.code === 'UNSAFE_ASSET_STORAGE_PERMISSIONS'
+  );
+
+  const partialWriteRoot = path.join(tempRoot, 'partial-write-storage');
+  const partialWriteStorage = new PartialWriteLocalAssetStorage({
+    storageRoot: partialWriteRoot,
+    maxBytes: 1024,
+  });
+  const faultBody = Buffer.from('a partial write must never become canonical');
+  const faultChecksum = sha256(faultBody);
+  const faultKey = `source-assets/sha256/${faultChecksum.slice(0, 2)}/${faultChecksum}`;
+  const faultCanonical = partialWriteStorage.absolutePathForKey(faultKey);
+  await assert.rejects(
+    partialWriteStorage.putImmutable({ body: faultBody, sha256: faultChecksum }),
+    error => error?.code === 'ENOSPC'
+  );
+  await assert.rejects(
+    fs.access(faultCanonical),
+    error => error?.code === 'ENOENT'
+  );
+  assert.deepEqual(await fs.readdir(path.dirname(faultCanonical)), []);
+
+  const healthyAfterPartial = new LocalAssetStorage({
+    storageRoot: partialWriteRoot,
+    maxBytes: 1024,
+  });
+  const healthyPublication = await healthyAfterPartial.putImmutable({
+    body: faultBody,
+    sha256: faultChecksum,
+  });
+  assert.equal(healthyPublication.reused, false);
+  assert.deepEqual(
+    await healthyAfterPartial.getBuffer({
+      provider: 'local',
+      key: faultKey,
+      expectedSha256: faultChecksum,
+    }),
+    faultBody
+  );
+  const reusedAfterHealthyPublication = await healthyAfterPartial.putImmutable({
+    body: faultBody,
+    sha256: faultChecksum,
+  });
+  assert.equal(reusedAfterHealthyPublication.reused, true);
+  assert.deepEqual(await fs.readdir(path.dirname(faultCanonical)), [faultChecksum]);
+
+  const partialRecoveryRoot = path.join(tempRoot, 'partial-recovery-storage');
+  const partialRecoveryStorage = new PartialWriteLocalAssetStorage({
+    storageRoot: partialRecoveryRoot,
+    maxBytes: 1024,
+  });
+  await assert.rejects(
+    partialRecoveryStorage.putRecoveryImmutable({
+      body: faultBody,
+      sha256: faultChecksum,
+    }),
+    error => error?.code === 'ENOSPC'
+  );
+  const recoveryPublicationDirectory = path.join(
+    partialRecoveryRoot,
+    'source-assets',
+    'recovery',
+    'sha256',
+    faultChecksum.slice(0, 2),
+    faultChecksum
+  );
+  assert.deepEqual(await fs.readdir(recoveryPublicationDirectory), []);
+
+  const concurrentRoot = path.join(tempRoot, 'concurrent-local-storage');
+  const concurrentStorageA = new LocalAssetStorage({
+    storageRoot: concurrentRoot,
+    maxBytes: 1024,
+  });
+  const concurrentStorageB = new LocalAssetStorage({
+    storageRoot: concurrentRoot,
+    maxBytes: 1024,
+  });
+  const concurrentResults = await Promise.all([
+    concurrentStorageA.putImmutable({ body: faultBody, sha256: faultChecksum }),
+    concurrentStorageB.putImmutable({ body: faultBody, sha256: faultChecksum }),
+  ]);
+  assert.deepEqual(
+    concurrentResults.map(result => result.reused).sort(),
+    [false, true]
+  );
+  const concurrentCanonical = concurrentStorageA.absolutePathForKey(faultKey);
+  assert.deepEqual(await fs.readFile(concurrentCanonical), faultBody);
+  assert.deepEqual(await fs.readdir(path.dirname(concurrentCanonical)), [faultChecksum]);
+
   const storage = new LocalAssetStorage({ root: tempRoot, maxBytes: 1024 });
   const body = Buffer.from('verified recovery bytes');
   const checksum = sha256(body);
@@ -132,6 +402,68 @@ try {
     expectedSha256: checksum,
   }), body);
   assert.equal((await fs.readFile(storage.absolutePathForKey(canonical.key))).toString(), 'corrupt');
+
+  const outsideRoot = path.join(tempRoot, 'outside-storage-root');
+  const symlinkStorageRoot = path.join(tempRoot, 'symlink-safe-storage');
+  await fs.mkdir(outsideRoot, { recursive: true });
+  await fs.mkdir(path.join(symlinkStorageRoot, 'source-assets'), { recursive: true });
+  await fs.chmod(symlinkStorageRoot, 0o700);
+  await fs.chmod(path.join(symlinkStorageRoot, 'source-assets'), 0o700);
+  await fs.symlink(outsideRoot, path.join(symlinkStorageRoot, 'source-assets', 'sha256'));
+  const symlinkStorage = new LocalAssetStorage({ storageRoot: symlinkStorageRoot });
+  const symlinkBody = Buffer.from('must remain inside the configured storage root');
+  const symlinkChecksum = sha256(symlinkBody);
+  await assert.rejects(
+    symlinkStorage.putImmutable({ body: symlinkBody, sha256: symlinkChecksum }),
+    error => (
+      error?.code === 'UNSAFE_ASSET_STORAGE_SYMLINK' &&
+      /must not contain symbolic links/.test(error.message)
+    )
+  );
+  await assert.rejects(
+    fs.access(path.join(outsideRoot, symlinkChecksum.slice(0, 2), symlinkChecksum)),
+    error => error?.code === 'ENOENT'
+  );
+
+  const rootSymlink = path.join(tempRoot, 'storage-root-symlink');
+  await fs.symlink(outsideRoot, rootSymlink);
+  const rootSymlinkStorage = new LocalAssetStorage({ storageRoot: rootSymlink });
+  await assert.rejects(
+    rootSymlinkStorage.putImmutable({ body: symlinkBody, sha256: symlinkChecksum }),
+    error => error?.code === 'UNSAFE_ASSET_STORAGE_SYMLINK'
+  );
+
+  const fileSymlinkStorage = new LocalAssetStorage({
+    storageRoot: path.join(tempRoot, 'file-symlink-storage'),
+  });
+  const fileSymlinkKey =
+    `source-assets/sha256/${symlinkChecksum.slice(0, 2)}/${symlinkChecksum}`;
+  const fileSymlinkAbsolute = fileSymlinkStorage.absolutePathForKey(fileSymlinkKey);
+  const outsideFile = path.join(outsideRoot, 'outside-asset');
+  await fs.mkdir(path.dirname(fileSymlinkAbsolute), { recursive: true });
+  for (const privateDirectory of [
+    fileSymlinkStorage.root,
+    path.join(fileSymlinkStorage.root, 'source-assets'),
+    path.join(fileSymlinkStorage.root, 'source-assets', 'sha256'),
+    path.dirname(fileSymlinkAbsolute),
+  ]) {
+    await fs.chmod(privateDirectory, 0o700);
+  }
+  await fs.writeFile(outsideFile, Buffer.from('outside bytes'));
+  await fs.symlink(outsideFile, fileSymlinkAbsolute);
+  await assert.rejects(
+    fileSymlinkStorage.putImmutable({ body: symlinkBody, sha256: symlinkChecksum }),
+    error => error?.code === 'UNSAFE_ASSET_STORAGE_SYMLINK'
+  );
+  await assert.rejects(
+    fileSymlinkStorage.getBuffer({
+      provider: 'local',
+      key: fileSymlinkKey,
+      expectedSha256: symlinkChecksum,
+    }),
+    error => error?.code === 'UNSAFE_ASSET_STORAGE_SYMLINK'
+  );
+  assert.equal((await fs.readFile(outsideFile)).toString(), 'outside bytes');
 
   const r2Body = Buffer.from('bounded remote bytes');
   const r2Checksum = sha256(r2Body);

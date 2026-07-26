@@ -11,6 +11,7 @@ import {
   getGitHubPublicationTrustReady,
 } from '../lib/config.js';
 import {
+  assertAssetStorageIntakeReady,
   assetErrorSummary,
   getAsset,
   getAssetFileStatus,
@@ -1066,6 +1067,7 @@ export function createAdminRouter({ root }) {
     let fields = {};
     let sources = [];
     try {
+      await assertAssetStorageIntakeReady({ root });
       const body = await readRequestBuffer(req, { limitBytes: 30 * 1024 * 1024 });
       const parsed = parseMultipartForm(body, req.headers['content-type']);
       fields = parsed.fields;
@@ -1804,7 +1806,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/release-apply-plans/:id/publish-github', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       await publisher.createPublication({
         releaseCandidateId: req.params.id,
         confirmation: req.body?.confirmation_phrase,
@@ -1836,7 +1838,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/github-publications/:id/refresh', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       const publication = await publisher.refreshPublication({
         publicationId: req.params.id,
         actor: config.email,
@@ -1849,7 +1851,7 @@ export function createAdminRouter({ root }) {
 
   router.post('/github-publications/:id/verify-deployment', express.urlencoded({ extended: false, limit: '20kb' }), async (req, res) => {
     try {
-      const publisher = createGitHubPublisher();
+      const publisher = createGitHubPublisher({ root });
       const publication = await publisher.verifyDeployment({
         publicationId: req.params.id,
         actor: config.email,

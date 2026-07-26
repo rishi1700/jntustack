@@ -743,7 +743,15 @@ const checks = renderAdminChecksPage({
     generatedAt: '2026-07-12T00:00:00Z',
     runtime: { nodeVersion: 'v24', contentSource: 'json', contentPublicationMode: 'github_pr', adminEnabled: true, adminConfigured: true, askEnabled: false },
     db: { configured: true, skipped: false, connected: true, ok: true, expectedMigrations: 26, appliedMigrations: 26, pendingMigrations: [], message: 'ok' },
-    storage: { ok: true, configured: true, provider: 'r2', message: 'private R2 adapter configured' },
+    storage: {
+      ok: true,
+      configured: true,
+      provider: 'r2',
+      publicationReady: true,
+      persistenceStatus: 'configured',
+      persistenceVerified: true,
+      message: 'private R2 adapter configured',
+    },
     content: { source: 'json', subjectsTotal: 436, subjectsVerified: 436, subjectPages: 403, subjectListings: 33, subjectsNeedsVerification: 0, subjectsPlaceholder: 0, collegesTotal: 376, branchProfilesTotal: 6, guidesTotal: 1 },
     searchIndex: { ok: true, total: 786, byType: { subject: 403, college: 376, branch_profile: 6, guide: 1 }, path: '/dist/search-index.json' },
   },
@@ -752,13 +760,23 @@ assert.doesNotMatch(checks, /needs attention/);
 assert.doesNotMatch(checks, /619/);
 assert.match(checks, /github_pr/);
 assert.match(checks, /private R2 adapter configured/);
+assert.match(checks, /Publication ready/);
+assert.match(checks, /Survived a commit-changing deploy/);
 
 const maintenanceChecks = renderAdminChecksPage({
   checks: {
     generatedAt: '2026-07-26T00:00:00Z',
     runtime: { nodeVersion: 'v24', contentSource: 'json', contentPublicationMode: 'github_pr', adminEnabled: true, adminConfigured: true, askEnabled: false },
     db: { configured: true, skipped: false, connected: true, ok: true, expectedMigrations: 26, appliedMigrations: 26, pendingMigrations: [], message: 'ok' },
-    storage: { ok: true, configured: true, provider: 'local', message: 'ok' },
+    storage: {
+      ok: true,
+      configured: true,
+      provider: 'local',
+      publicationReady: true,
+      persistenceStatus: 'verified',
+      persistenceVerified: true,
+      message: 'ok',
+    },
     content: { source: 'json', subjectsTotal: 436, subjectsVerified: 436, subjectPages: 403, subjectListings: 33, subjectsNeedsVerification: 0, subjectsPlaceholder: 0, collegesTotal: 376, branchProfilesTotal: 6, guidesTotal: 1 },
     searchIndex: { ok: true, total: 786, byType: { subject: 403, college: 376, branch_profile: 6, guide: 1 }, path: '/dist/search-index.json' },
   },

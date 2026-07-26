@@ -15,7 +15,11 @@ This runbook is for controlled content work. It does not authorize broad rewrite
 - After any legacy guarded live apply, immediately sync Git and update the DB mirror.
 - Do not manually edit live JSON if the guarded apply workflow has failed; use resume, recovery, or rollback paths.
 - GitHub publication creates a review PR only. The publisher must never merge, bypass branch protection, or write directly to `main`.
-- In R2 mode, storage errors must fail closed. Never copy evidence into local storage as a silent fallback.
+- Storage errors must fail closed under every provider. Never copy evidence to a
+  different provider as a silent fallback.
+- Production local evidence must use an absolute `ASSET_STORAGE_ROOT` outside
+  the deployed `nodejs` tree and `public_html`. Never acknowledge persistence
+  until the same marker survives two distinct deployments.
 - Do not turn an official listing into a standalone page when the source does
   not provide enough content for one. Use `publication.mode = "listing_only"`.
 
@@ -195,8 +199,16 @@ Safe source fetch constraints:
 - Re-fetch reuses an exact existing version; changed official bytes create a
   linked immutable version rather than mutating evidence in place.
 - New assets use content-addressed keys (`source-assets/sha256/...`) through the configured storage adapter.
-- Existing local rows remain readable after the R2 cutover. They are not silently migrated or deleted.
-- R2 assets are read privately and checksum-verified before parsing; they do not need a public bucket URL or persistent local copy.
+- The selected production design stores local bytes under an absolute private
+  Hostinger filesystem root. MySQL remains the canonical inventory for each
+  asset's provider, immutable key, checksum, size, and provenance.
+- A physical move to the persistent root must preserve every existing local
+  `storage_key` exactly and verify both source and destination against the
+  MySQL checksum. It must not silently rename keys, change providers, or delete
+  the old copy.
+- R2 remains an optional private alternative. R2 rows are read privately and
+  checksum-verified before parsing; there is never a public bucket URL or
+  silent local fallback.
 - A missing checksum, oversized object, or checksum mismatch creates a failed parse result and blocks downstream proposal creation. Repair from the official source instead of bypassing the check.
 
 ## Parse
@@ -410,12 +422,150 @@ GITHUB_DEFAULT_BRANCH=main
 PUBLICATION_SIGNING_KEY_ID=2026-07
 PUBLICATION_SIGNING_PRIVATE_KEY_BASE64=...
 
-ASSET_STORAGE_PROVIDER=r2
-R2_ACCOUNT_ID=...
-R2_ACCESS_KEY_ID=...
-R2_SECRET_ACCESS_KEY=...
-R2_BUCKET=jntustack-source-evidence
+ASSET_STORAGE_PROVIDER=local
+ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
+ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
+ASSET_STORAGE_PERSISTENCE_VERIFIED=false
 ```
+
+### Hostinger persistent asset root
+
+The selected architecture is the existing Hostinger MySQL database plus a
+private Hostinger filesystem directory for immutable asset bytes. MySQL stores
+provider/key/checksum inventory and workflow metadata; it does not contain the
+source files themselves.
+
+1. In hPanel, create or identify a private account directory whose absolute
+   path is outside both the deployed `nodejs` release tree and `public_html`.
+   The path shown above is a placeholder, not a known Hostinger account path.
+   Do not use a relative path, the repository checkout, `dist/`, `tmp/`, or the
+   repository-local `storage/` directory. The application rejects a configured
+   root, descendant directory, or file that is owned by another user or grants
+   any group/world permission; use mode `0700` for directories and `0600` for
+   files, including migrated objects.
+2. Assign a stable, non-secret identity of 16–128 letters, numbers, dots,
+   underscores, or hyphens in `ASSET_STORAGE_EXPECTED_ID`. Keep the same ID for
+   the lifetime of that store; a different root must receive a different ID.
+3. Set `ASSET_STORAGE_PERSISTENCE_VERIFIED=false`. Keep
+   `GITHUB_PUBLICATION_TRUST_READY=false` throughout preparation, migration,
+   and testing.
+4. Deploy commit A and open **Advanced → System checks**. The bounded
+   write/read/checksum/delete probe must pass. The first check atomically seeds
+   `health/deployment-persistence.json` and reports
+   `seeded_waiting_for_new_deploy`.
+5. On the same deployment, another check must report
+   `waiting_for_new_deploy`; this is not persistence proof.
+6. Deploy a distinct commit B with exactly the same `ASSET_STORAGE_ROOT` and
+   `ASSET_STORAGE_EXPECTED_ID`. System checks must read the commit-A marker and
+   report `verified_not_acknowledged`.
+7. Record both commit SHAs, the expected store ID, and the verification time.
+   Only then set `ASSET_STORAGE_PERSISTENCE_VERIFIED=true` and restart/redeploy.
+   System checks must report `verified` and publication readiness. This setting
+   is the operator's explicit acknowledgement; do not set it merely to clear a
+   warning.
+
+The persistence marker is bounded, private, and store-ID-bound. Do not edit,
+copy between roots, or regenerate it manually. A missing/invalid marker, same
+deployment SHA, store-ID mismatch, symlinked path, failed I/O probe, or false
+acknowledgement keeps publication blocked.
+
+### MySQL inventory and key-preserving checksum migration
+
+Before moving any existing local objects, take a MySQL backup and export a
+private provider/key inventory. These queries expose no credentials, but their
+output is operational evidence and must not be committed:
+
+```sql
+SELECT COALESCE(NULLIF(TRIM(storage_provider), ''), 'local') AS effective_provider,
+       COUNT(*) AS rows_total,
+       COUNT(DISTINCT storage_key) AS distinct_keys,
+       SUM(storage_key IS NULL OR TRIM(storage_key) = '') AS missing_keys,
+       SUM(COALESCE(sha256_checksum, checksum) IS NULL
+           OR COALESCE(sha256_checksum, checksum)
+              NOT REGEXP '^[0-9A-Fa-f]{64}$') AS invalid_checksums
+FROM source_assets
+GROUP BY effective_provider
+ORDER BY effective_provider;
+
+SELECT COALESCE(NULLIF(TRIM(storage_provider), ''), 'local') AS effective_provider,
+       storage_key,
+       COUNT(DISTINCT LOWER(COALESCE(sha256_checksum, checksum))) AS checksum_count
+FROM source_assets
+WHERE storage_key IS NOT NULL AND TRIM(storage_key) <> ''
+GROUP BY effective_provider, storage_key
+HAVING COUNT(DISTINCT LOWER(COALESCE(sha256_checksum, checksum))) > 1;
+
+SELECT id,
+       COALESCE(NULLIF(TRIM(storage_provider), ''), 'local') AS effective_provider,
+       storage_key,
+       LOWER(COALESCE(sha256_checksum, checksum)) AS expected_sha256,
+       file_size, download_status
+FROM source_assets
+ORDER BY effective_provider, storage_key, id;
+```
+
+The conflicting-checksum query must return zero rows. Resolve missing keys,
+invalid checksums, unsafe keys, and conflicts through a separately reviewed
+repair before copying bytes.
+
+For each distinct row whose provider is `local`:
+
+1. Treat `storage_key` as the immutable relative identity. It must be a safe
+   `source-assets/...` key, never an absolute path or a path containing `..`.
+2. Hash the old object and require exact equality with
+   `LOWER(COALESCE(sha256_checksum, checksum))`.
+3. Copy it to `ASSET_STORAGE_ROOT/<storage_key>` without changing any key
+   segment. Use private directories/files and never overwrite a different
+   checksum.
+4. Hash the destination, compare size, and record the result in a private
+   migration manifest.
+5. Leave `source_assets.id`, `storage_provider`, `storage_key`, checksum fields,
+   duplicate/version links, and parse provenance unchanged. This is a physical
+   root migration, not a provider or identity migration.
+
+After every expected local key has a verified destination, switch the app to
+the absolute root, run System checks, open representative asset records, and
+run representative parsers. Keep the old copy read-only through the rollback
+window. Do not delete it until the two-deploy persistence check and the staging
+restore drill below both pass. Existing R2 rows, if any, remain R2 rows and
+still require R2 credentials; moving R2 objects to local is a separate reviewed
+provider migration.
+
+### Asset and database backup/restore
+
+Treat MySQL and `ASSET_STORAGE_ROOT` as one recoverable evidence set:
+
+1. Pause asset writes or record a clear cutoff time. Create a consistent MySQL
+   logical dump using hPanel export or a protected client configuration; never
+   put the database password in shell history.
+2. Create a private archive of the complete asset root, including the
+   persistence marker, plus a manifest of every relative key, byte size, and
+   SHA-256. Hash the archive and the database dump.
+3. Copy the dump, archive, manifests, and checksums to encrypted off-host
+   storage. A file under the deployed checkout, `tmp/`, `public_html`, or the
+   same Hostinger filesystem is not an off-host backup.
+4. Record cutoff time, asset count/bytes, store ID, database dump checksum,
+   archive checksum, operator, and off-host retention location.
+
+Do **not** claim that Hostinger automatic/account backups cover an external
+`ASSET_STORAGE_ROOT` until a documented Hostinger restore proves that exact
+path is included. Even after that proof, retain an independent off-host copy.
+
+Before production cutover and periodically thereafter, perform a staging
+restore drill:
+
+1. Restore the logical dump into an isolated staging database and extract the
+   asset archive into a new isolated absolute root.
+2. Configure staging with its own DB credentials and the restored root. Keep
+   `CONTENT_SOURCE=json`, `GITHUB_PUBLICATION_TRUST_READY=false`, and all
+   production GitHub App/publication credentials disconnected.
+3. Re-run the provider/key inventory. Require the same counts, zero key/checksum
+   conflicts, every local key present, and every restored SHA-256 equal to its
+   MySQL checksum.
+4. Run System checks and representative asset reads/parsers. Verify duplicate
+   and supersession chains still resolve to the same keys.
+5. Record restore duration, checks performed, failures, fixes, and final
+   pass/fail. A backup is not operationally verified until this drill passes.
 
 Create a dedicated publication-signing key. Do not reuse the GitHub App key and
 never commit the private key:
@@ -449,9 +599,14 @@ retain each old public key until every database publication with that
 signed bytes. The exact signed manifest bytes are stored with the publication,
 so interrupted retries do not change identity during rotation.
 
-`R2_ENDPOINT` is optional; the adapter derives the standard account endpoint.
-Keep the bucket private and scope the token to object read/write for that bucket.
-There is no local fallback when `ASSET_STORAGE_PROVIDER=r2`.
+Cloudflare R2 is an optional alternative, not the selected production store. If
+it is deliberately selected, replace the local variables with
+`ASSET_STORAGE_PROVIDER=r2`, `R2_ACCOUNT_ID`, `R2_ACCESS_KEY_ID`,
+`R2_SECRET_ACCESS_KEY`, and `R2_BUCKET`. `R2_ENDPOINT` is optional; the adapter
+derives the standard account endpoint. Keep the bucket private, scope the token
+to object read/write for that bucket, and complete the same inventory,
+off-host-backup, and staging-restore discipline. There is no local fallback
+when `ASSET_STORAGE_PROVIDER=r2`.
 
 Register a repository-only GitHub App with:
 
@@ -490,12 +645,14 @@ high-severity npm audit findings; keep those controls enabled.
 
 Publication remains an installed but inactive foundation. A dedicated
 publication key (`2026-07`) has been generated outside Git and its matching
-public key is configured in the Actions keyring. The private R2 bucket/token,
-repository-only GitHub App credentials, deployment of the private signing key
-to Hostinger, and notes-only trial are not complete. The publisher refuses to
-create PRs while `GITHUB_PUBLICATION_TRUST_READY=false`. Keep that gate false
-until every remaining prerequisite is configured and independently verified;
-completed branch protection alone does not activate publication.
+public key is configured in the Actions keyring. The selected Hostinger
+persistent root still requires its two-deploy proof, explicit acknowledgement,
+key-preserving migration, and restore drill. Repository-only GitHub App
+credentials and the private signing key still need deployment to Hostinger, and
+the notes-only trial is also incomplete. The publisher refuses to create PRs while
+`GITHUB_PUBLICATION_TRUST_READY=false`. Keep that gate false until every
+remaining prerequisite is configured and independently verified; completed
+branch protection alone does not activate publication.
 
 Publication requires the exact confirmation phrase:
 
@@ -632,5 +789,5 @@ the same fields on every checkpoint so deltas are comparable.
 Natural-language content requests, LLM generation, n8n orchestration, Telegram
 approval, automatic merge/rollback, and the affiliate-books pilot remain design
 notes only. They must not be connected to the production publishing path until
-the GitHub/R2 workflow has completed its trial and operated reliably under
-human review. `/api/ask` also remains disabled.
+the GitHub/persistent-evidence workflow has completed its trial and operated
+reliably under human review. `/api/ask` also remains disabled.

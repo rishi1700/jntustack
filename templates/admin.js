@@ -803,6 +803,9 @@ ${maintenanceResultHtml(maintenance)}
 <div class="table-wrap"><table><tbody>
 <tr><th>Status</th><td>${checks.storage.ok ? 'configured' : 'needs attention'}</td></tr>
 <tr><th>Provider</th><td class="mono">${escapeHtml(checks.storage.provider || 'local')}</td></tr>
+<tr><th>Publication ready</th><td>${checks.storage.publicationReady === true ? 'yes' : 'no'}</td></tr>
+${checks.storage.persistenceStatus ? `<tr><th>Deployment persistence</th><td class="mono">${escapeHtml(checks.storage.persistenceStatus)}</td></tr>` : ''}
+${typeof checks.storage.persistenceVerified === 'boolean' ? `<tr><th>Survived a commit-changing deploy</th><td>${checks.storage.persistenceVerified ? 'verified' : 'not yet verified'}</td></tr>` : ''}
 ${checks.storage.path ? `<tr><th>Path</th><td class="mono">${escapeHtml(checks.storage.path)}</td></tr>` : ''}
 ${checks.storage.missing?.length ? `<tr><th>Missing env keys</th><td class="mono">${escapeHtml(checks.storage.missing.join(', '))}</td></tr>` : ''}
 <tr><th>Message</th><td>${escapeHtml(checks.storage.message || '')}</td></tr>

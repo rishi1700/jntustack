@@ -17,8 +17,14 @@ import {
 } from '../lib/assets.js';
 import { GitHubAppClient, createGitHubAppJwt } from '../lib/github-app-client.js';
 import { acquireReleasePublicationLocks } from '../lib/release-publication-lock.js';
-import { getContentPublicationMode, getGitHubPublicationTrustReady } from '../lib/config.js';
 import {
+  getAssetStoragePublicationReadiness,
+  getContentPublicationMode,
+  getGitHubPublicationTrustReady,
+} from '../lib/config.js';
+import {
+  CREATE_REVIEW_PR_CONFIRMATION,
+  GitHubPublisher,
   buildPublicationArtifact,
   canonicalJson,
   canonicalPrettyJson,
@@ -293,6 +299,82 @@ try {
   assert.equal(getContentPublicationMode({ CONTENT_PUBLICATION_MODE: 'legacy' }), 'legacy');
   assert.equal(getGitHubPublicationTrustReady({}), false);
   assert.equal(getGitHubPublicationTrustReady({ GITHUB_PUBLICATION_TRUST_READY: 'true' }), true);
+  assert.deepEqual(getAssetStoragePublicationReadiness({}), {
+    provider: 'local',
+    ready: false,
+    persistenceVerified: false,
+    absoluteRoot: false,
+    validExpectedStoreId: false,
+    missing: [
+      'ASSET_STORAGE_ROOT',
+      'ASSET_STORAGE_EXPECTED_ID',
+      'ASSET_STORAGE_PERSISTENCE_VERIFIED',
+    ],
+  });
+  assert.equal(getAssetStoragePublicationReadiness({
+    ASSET_STORAGE_PROVIDER: 'local',
+    ASSET_STORAGE_ROOT: '/srv/jntustack-private-assets',
+    ASSET_STORAGE_EXPECTED_ID: 'jntustack-assets-2026-07',
+    ASSET_STORAGE_PERSISTENCE_VERIFIED: 'true',
+  }).ready, true);
+  assert.equal(getAssetStoragePublicationReadiness({
+    ASSET_STORAGE_PROVIDER: 'local',
+    ASSET_STORAGE_ROOT: 'relative/assets',
+    ASSET_STORAGE_EXPECTED_ID: 'jntustack-assets-2026-07',
+    ASSET_STORAGE_PERSISTENCE_VERIFIED: 'true',
+  }).ready, false);
+  assert.deepEqual(getAssetStoragePublicationReadiness({
+    ASSET_STORAGE_PROVIDER: 'r2',
+    R2_ACCOUNT_ID: 'account',
+    R2_ACCESS_KEY_ID: 'access',
+    R2_SECRET_ACCESS_KEY: 'secret',
+    R2_BUCKET: 'evidence',
+  }), {
+    provider: 'r2',
+    ready: true,
+    persistenceVerified: true,
+    absoluteRoot: null,
+    validExpectedStoreId: null,
+    missing: [],
+  });
+  await assert.rejects(
+    new GitHubPublisher({
+      trustReady: true,
+      storageReadiness: { provider: 'local', ready: false },
+    }).createPublication({
+      publicationId: 1,
+      confirmation: CREATE_REVIEW_PR_CONFIRMATION,
+    }),
+    error => error?.code === 'asset_storage_not_ready'
+  );
+  let persistenceCheckArguments = null;
+  const publisherRoot = path.join(tempRoot, 'publisher-root');
+  const publisherEnv = { ASSET_STORAGE_PROVIDER: 'local' };
+  await assert.rejects(
+    new GitHubPublisher({
+      root: publisherRoot,
+      env: publisherEnv,
+      trustReady: true,
+      storageReadiness: { provider: 'local', ready: true },
+      storagePersistenceCheck: async options => {
+        persistenceCheckArguments = options;
+        return {
+          provider: 'local',
+          ready: false,
+          status: 'waiting_for_new_deploy',
+        };
+      },
+    }).createPublication({
+      publicationId: 1,
+      confirmation: CREATE_REVIEW_PR_CONFIRMATION,
+    }),
+    error => error?.code === 'asset_storage_persistence_not_verified'
+  );
+  assert.deepEqual(persistenceCheckArguments, {
+    root: path.resolve(publisherRoot),
+    env: publisherEnv,
+    seedIfMissing: false,
+  });
   assert.equal(githubPublicationActionAllowed('pr_open', 'refresh'), true);
   assert.equal(githubPublicationActionAllowed('deploy_pending', 'verify_deployment'), true);
   assert.equal(githubPublicationActionAllowed('verification_inconclusive', 'verify_deployment'), true);
