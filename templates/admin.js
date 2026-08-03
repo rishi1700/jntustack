@@ -1779,14 +1779,20 @@ ${error ? `<div class="error">${escapeHtml(error)}</div>` : ''}
   <label for="entity_key" style="display:block;margin-top:12px;"><strong>Entity key</strong></label>
   <input id="entity_key" name="entity_key" value="${escapeHtml(values.entity_key || '')}" required style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="stable id, slug/name, college key, or branch code">
 
-  <label for="source_id" style="display:block;margin-top:12px;"><strong>Source ID</strong> <span class="admin-sub">optional</span></label>
-  <input id="source_id" name="source_id" value="${escapeHtml(values.source_id || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="numeric source id">
+  <label for="source_asset_id" style="display:block;margin-top:12px;"><strong>Source asset ID</strong> <span class="admin-sub">required when preserving verified status</span></label>
+  <input id="source_asset_id" name="source_asset_id" value="${escapeHtml(values.source_asset_id || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="stored evidence asset id">
+
+  <label for="source_id" style="display:block;margin-top:12px;"><strong>Existing content-source row ID</strong> <span class="admin-sub">advanced / optional; this is not a source asset ID</span></label>
+  <input id="source_id" name="source_id" value="${escapeHtml(values.source_id || '')}" inputmode="numeric" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" placeholder="existing database source row id">
 
   <label for="proposed_payload_json" style="display:block;margin-top:12px;"><strong>Proposed payload JSON</strong></label>
   <textarea id="proposed_payload_json" name="proposed_payload_json" required style="width:100%;min-height:280px;border:1px solid var(--line);border-radius:6px;padding:10px;font:12px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;margin-top:6px;">${escapeHtml(payload)}</textarea>
 
-  <label for="note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong> <span class="admin-sub">optional</span></label>
+  <label for="note" style="display:block;margin-top:12px;"><strong>Reviewer note</strong> <span class="admin-sub">required for a verified provenance amendment</span></label>
   <textarea id="note" name="note" style="width:100%;min-height:90px;border:1px solid var(--line);border-radius:6px;padding:10px;font:inherit;margin-top:6px;">${escapeHtml(values.note || '')}</textarea>
+
+  <label for="verified_amendment_confirmation" style="display:block;margin-top:12px;"><strong>Verified amendment confirmation</strong> <span class="admin-sub">only for a source-only update; type AMEND VERIFIED SOURCE</span></label>
+  <input id="verified_amendment_confirmation" name="verified_amendment_confirmation" value="${escapeHtml(values.verified_amendment_confirmation || '')}" style="display:block;width:100%;padding:9px;border:1px solid var(--line);border-radius:6px;margin-top:6px;" autocomplete="off">
 
   <button type="submit">Create proposal</button>
 </form>`,
@@ -1799,6 +1805,7 @@ export function renderProposalDetailPage({ proposal, exports = [], error = null 
   const normalized = proposal.normalizedPayload ? JSON.stringify(proposal.normalizedPayload, null, 2) : 'No normalized payload stored yet.';
   const validationErrors = Array.isArray(proposal.validationErrors) ? proposal.validationErrors : [];
   const source = proposal.source;
+  const sourceAsset = proposal.sourceAsset;
   const validationPassed = proposal.validationStatus === 'passed';
   const exportEligible = validationPassed && proposal.status === 'approved_for_draft';
   const approvalEvents = (proposal.events || []).filter(event => event.action === 'approve_for_draft');
@@ -1864,7 +1871,9 @@ ${validationErrors.length ? `<div class="table-wrap"><table><thead><tr><th>Path<
 
 <h2>Source evidence</h2>
 <div class="table-wrap"><table><thead><tr><th>Type</th><th>Status</th><th>Retrieved</th><th>URL</th><th>Asset</th></tr></thead><tbody>
-${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="pill">${escapeHtml(source.status || '')}</span></td><td>${escapeHtml(source.retrievedAt || '')}</td><td class="mono">${escapeHtml(source.originUrl || '')}</td><td class="mono">${escapeHtml(source.rawAssetPath || '')}</td></tr>` : '<tr><td colspan="5">No source linked to this proposal.</td></tr>'}
+${source ? `<tr><td>${escapeHtml(source.sourceType || '')}</td><td><span class="pill">${escapeHtml(source.status || '')}</span></td><td>${escapeHtml(source.retrievedAt || '')}</td><td class="mono">${escapeHtml(source.originUrl || '')}</td><td class="mono">${escapeHtml(source.rawAssetPath || '')}</td></tr>` : ''}
+${sourceAsset ? `<tr><td>${escapeHtml(sourceAsset.discoverySourceName || 'stored evidence')}</td><td><span class="pill">${escapeHtml(sourceAsset.downloadStatus || '')}</span></td><td>-</td><td class="mono">${escapeHtml(sourceAsset.resolvedUrl || sourceAsset.sourceUrl || '')}</td><td><a href="/admin/assets/${escapeHtml(sourceAsset.id)}">Asset ${escapeHtml(sourceAsset.id)}</a><br><span class="mono">${escapeHtml(sourceAsset.sha256Checksum || '')}</span></td></tr>` : ''}
+${!source && !sourceAsset ? '<tr><td colspan="5">No source linked to this proposal.</td></tr>' : ''}
 </tbody></table></div>
 
 <details class="advanced-panel">

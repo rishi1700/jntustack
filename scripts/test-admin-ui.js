@@ -1005,6 +1005,9 @@ assert.equal(guideDiff.proposedPayload.intro, 'After');
 const proposalCreate = renderProposalCreatePage({ values: { entity_type: 'guide' } });
 assert.match(proposalCreate, /value="guide" selected>guide \(manual only\)<\/option>/);
 assert.match(proposalCreate, /Guide proposals are manual-only/);
+assert.match(proposalCreate, /Source asset ID/);
+assert.match(proposalCreate, /Existing content-source row ID/);
+assert.match(proposalCreate, /AMEND VERIFIED SOURCE/);
 
 const parseDetail = renderParseResultDetailPage({
   result: {

@@ -109,6 +109,9 @@ import {
   verificationReviewErrorSummary,
 } from '../lib/verification-review.js';
 import {
+  prepareVerifiedProvenanceAmendment,
+} from '../lib/verified-amendments.js';
+import {
   exportProposalForReview,
   getProposalExport,
   listProposalExports,
@@ -1653,14 +1656,45 @@ export function createAdminRouter({ root }) {
         throw new Error('Proposed payload must be valid JSON.');
       }
 
+      let sourceAssetId = null;
+      let diff = null;
+      let allowVerifiedSource = false;
+      if (proposedPayload?.source?.status === 'verified') {
+        sourceAssetId = parseSourceId(values.source_asset_id);
+        if (!sourceAssetId) throw new Error('Source asset ID is required for a verified provenance amendment.');
+        const [content, sourceAsset] = await Promise.all([loadContent({ root }), getAsset(sourceAssetId)]);
+        if (!sourceAsset) throw new Error(`Source asset not found: ${sourceAssetId}.`);
+        const [sourceAssetFileStatus, discoverySource] = await Promise.all([
+          getAssetFileStatus(root, sourceAsset),
+          getDiscoverySource(sourceAsset.discoverySourceId),
+        ]);
+        const amendment = prepareVerifiedProvenanceAmendment({
+          root,
+          content,
+          entityType: values.entity_type,
+          entityKey: values.entity_key,
+          proposedPayload,
+          sourceAsset,
+          sourceAssetFileStatus,
+          discoverySource,
+          reviewerNote: values.note,
+          confirmationPhrase: values.verified_amendment_confirmation,
+        });
+        proposedPayload = amendment.proposedPayload;
+        diff = amendment.diff;
+        allowVerifiedSource = true;
+      }
+
       const id = await createContentProposal({
         root,
         entityType: values.entity_type,
         entityKey: values.entity_key,
         proposedPayload,
+        diff,
         sourceId: parseSourceId(values.source_id),
         createdBy: config.email,
         note: values.note || '',
+        allowVerifiedSource,
       });
       res.redirect(`/admin/proposals/${id}`);
     } catch (err) {
