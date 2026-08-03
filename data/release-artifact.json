@@ -1,0 +1,150 @@
+{
+  "artifact_hash": "b0f05526769b8b7fb3df6737ed15e3bdc8e1e14dc27d069272d3007907a6322d",
+  "authorization": {
+    "algorithm": "RS256",
+    "key_id": "2026-07",
+    "signature": "yPuD1YPRZ5MrxCGTwrA4lrr3TefnfETCvLsPuZRATc8684Iw6/oNnfhL2lskQFdq8KYts8B1IFybZm6FDdvMlYd0vLe6aeDKJKCo4YssLoj5pkt0F7R0VbbjOddDL9wKsqRT6l+yXra3jNChEMBywargtAhHuHy3x3V2AUwJAoPMCz9LPj7615lxUJDaS8uaFhTk/+vkXmqBh1ZCfar5xqkNRnhXrXfBML/bxa7oWldgk5lUOvq4AFft9yw97uKmKv1MnzeBTRcx7dgw8XPcSSy5BJqskrciqwofSEdkQVgz5vIVjcC0vyNZ2pDXCMztlghGoZn8SvmzpifK4ikxbzDVDzWrloaHsBEpZyMmMJBzUOqhq1KNF/qVOARiOb4u8FJHb7g40nuJgIX1f09XquZYWKPPzdSgt34aTzAA2UfOfl19cRqEr2Zd2hDpVQEPL2vDEsu/plVfE5C6Sdw5Qt6CuI2L2FvBNOh2yCE4j25LLDrVJgsqYggWQa+iaj87"
+  },
+  "branch_name": "jntustack/rc-18-b0f05526769b8b7fb3df6737ed15e3bdc8e1e14dc27d069272d3007907a6322d",
+  "default_branch": "main",
+  "payload": {
+    "base_sha": "3ef05a5891ed1e5128e5fb0ac88f2841fe746104",
+    "files": [
+      {
+        "after_sha256": "8a640f369ad0dfcfe4fe601373afa4212223f36624c3891a7d542365af02709d",
+        "after_size": 253599,
+        "before_sha256": "f9a7ee943956a8d7ff099b08a75ab8e4142ddf779a9ff31fd6f4dc6ef1920ad0",
+        "before_size": 253033,
+        "path": "data/subjects-cse.json"
+      }
+    ],
+    "patch": [
+      {
+        "collection": "subjects",
+        "entity_key": "r23-cse-3-1-principles-of-operating-systems",
+        "entity_type": "subject",
+        "file": "data/subjects-cse.json",
+        "index": 32,
+        "op": "replace",
+        "proposal_id": 39,
+        "value": {
+          "branch": null,
+          "branchCodes": [
+            "CSE",
+            "IT"
+          ],
+          "category": "OpenElective",
+          "course_outcomes": [],
+          "credits": {
+            "C": 3,
+            "L": 3,
+            "P": 0,
+            "T": 0
+          },
+          "id": "r23-cse-3-1-principles-of-operating-systems",
+          "legacy_equivalent_id": null,
+          "name": "Principles of Operating Systems",
+          "notes": "Shared CSE/IT Open Elective-I option (3-0-0-3), with matching official branch syllabi.",
+          "regulation": "R23",
+          "resources": {
+            "lab_manual_pdf": null,
+            "lecture_notes_pdf": null,
+            "previous_question_papers_pdf": null
+          },
+          "semester": 1,
+          "seo": {
+            "meta_description": "JNTUK R23 CSE/IT 3-1 Principles of Operating Systems: processes, threads, scheduling, synchronization, deadlocks, memory and file systems.",
+            "slug": "principles-of-operating-systems-jntuk-r23-3-1",
+            "title": "Principles of Operating Systems - R23 3-1"
+          },
+          "source": {
+            "additional_sources": [
+              {
+                "label": "Official JNTUK R23 CSE course structure and syllabus previously reviewed",
+                "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf"
+              },
+              {
+                "label": "Official JNTUK R23 Information Technology course structure and syllabus",
+                "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf"
+              }
+            ],
+            "college_source_note": "JNTUK's official 2026 Open Elective-I syllabus confirms the course placement, 3-0-0-3 credits, and the same five units; the earlier official CSE and IT syllabus documents remain linked as corroborating primary sources.",
+            "origin_url": "https://www.jntuk.edu.in/jntuk_uploads/notification/5340571783322882922.pdf",
+            "retrieved_date": "2026-08-03",
+            "status": "verified"
+          },
+          "specialization": null,
+          "subject_code": null,
+          "type": "theory",
+          "units": [
+            {
+              "number": 1,
+              "title": "Operating Systems Overview and System Structures",
+              "topics": [
+                "Operating systems overview: introduction, OS functions, OS operations, computing environments, free and open-source operating systems",
+                "System structures: operating system services, user and operating-system interface, system calls and types of system calls",
+                "System programs; operating system design and implementation; operating system structure",
+                "Building and booting an operating system; operating system debugging"
+              ]
+            },
+            {
+              "number": 2,
+              "title": "Processes, Threads and CPU Scheduling",
+              "topics": [
+                "Processes: process concept, process scheduling, operations on processes, inter-process communication",
+                "Threads and concurrency: multithreading models, thread libraries, threading issues",
+                "CPU scheduling: basic concepts, scheduling criteria, scheduling algorithms",
+                "Multiple-processor scheduling"
+              ]
+            },
+            {
+              "number": 3,
+              "title": "Process Synchronization and Deadlocks",
+              "topics": [
+                "Synchronization tools: the critical section problem and Peterson's solution",
+                "Mutex locks, semaphores, monitors and classic problems of synchronization",
+                "Deadlocks: system model and deadlock characterization",
+                "Methods for handling deadlocks"
+              ]
+            },
+            {
+              "number": 4,
+              "title": "Memory Management and Storage",
+              "topics": [
+                "Memory-management strategies: contiguous memory allocation, paging, structure of the page table, swapping",
+                "Virtual memory management: demand paging, copy-on-write, page replacement",
+                "Allocation of frames and thrashing",
+                "Storage management: overview of mass storage structure and HDD scheduling"
+              ]
+            },
+            {
+              "number": 5,
+              "title": "File Systems",
+              "topics": [
+                "File system interface: file concept, access methods, directory structure",
+                "File system implementation: file-system structure and operations, directory implementation",
+                "Allocation methods and free space management",
+                "File-system internals: file-system mounting, partitions and mounting, file sharing"
+              ]
+            }
+          ],
+          "year": 3,
+          "year_sem_label": "3-1"
+        }
+      }
+    ],
+    "release_candidate_id": 18,
+    "schema_version": 1,
+    "validation": [
+      {
+        "draft": "passed",
+        "export": "passed",
+        "item_id": 31,
+        "proposal": "passed",
+        "proposal_id": 39
+      }
+    ]
+  },
+  "repository_full_name": "rishi1700/jntustack",
+  "schema_version": 1
+}
