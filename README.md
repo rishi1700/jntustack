@@ -404,6 +404,14 @@ still does not approve verification, publish content, or write to
 `data/*.json`; verified status requires the verified-promotion review workflow
 and guarded release apply path.
 
+An already verified subject may receive a provenance-only amendment through the
+manual proposal editor. The amendment must reference a checksum-backed stored
+source asset from an enabled official discovery source, preserve every field
+outside `source`, keep `source.status` as `verified`, include a reviewer note,
+and use the exact confirmation phrase `AMEND VERIFIED SOURCE`. The audited diff
+records the asset ID and checksum; export re-checks the asset, persistent file,
+official source trust, URL binding, and checksum before preparing a release.
+
 Entity extraction sits between raw parser output and diffs. Parsing means
 capturing raw evidence from an immutable source asset, such as title text,
 headings, links, and a text preview. Extraction means manually asking the admin

@@ -250,6 +250,14 @@ For verified promotion proposals, release review blocks missing public metadata:
 
 Fix metadata through the supported proposal/review workflow before live apply.
 
+For an already verified subject whose official provenance needs updating, use a
+verified provenance amendment. In the manual proposal editor, link the stored
+`source_asset` (not the legacy content-source row), preserve every non-source
+field byte-for-byte in the JSON payload, keep `source.status` as `verified`,
+record a reviewer note, and type `AMEND VERIFIED SOURCE`. The server rejects
+missing files/checksums, non-official or disabled sources, URL mismatches, empty
+source diffs, and any academic, SEO, routing, notes, or publication change.
+
 ## Diff
 
 Generate structured diffs from extraction or manual proposal payloads.
