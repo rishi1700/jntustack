@@ -424,9 +424,14 @@ PUBLICATION_SIGNING_PRIVATE_KEY_BASE64=...
 
 ASSET_STORAGE_PROVIDER=local
 ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
-ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
+ASSET_STORAGE_EXPECTED_ID=<stable-private-store-id>
 ASSET_STORAGE_PERSISTENCE_VERIFIED=false
 ```
+
+This is the fail-closed preparation template. Current production completed
+these gates and runs with both `ASSET_STORAGE_PERSISTENCE_VERIFIED=true` and
+`GITHUB_PUBLICATION_TRUST_READY=true`; do not toggle either gate as part of a
+normal content release.
 
 ### Hostinger persistent asset root
 
@@ -635,6 +640,9 @@ The repository trust boundary was completed on 2026-07-18:
    200.
 4. Production MySQL reached 26/26 migrations and exact JSON parity after the
    verified backup, import, and audited removal of 21 obsolete mirror rows.
+5. The selected persistent asset root passed its distinct-deploy survival
+   proof, all 10 legacy assets were recovered under unchanged keys, the paired
+   off-host restore drill passed, and the notes-only publisher trial completed.
 
 Keep the GitHub App off reviewer and bypass lists. Require at least one human
 approval for every PR, and do not weaken the completed branch controls. The
@@ -643,16 +651,14 @@ PR code. GitHub secret scanning, push protection, and Dependabot security
 updates are enabled, and the required verification workflow rejects
 high-severity npm audit findings; keep those controls enabled.
 
-Publication remains an installed but inactive foundation. A dedicated
-publication key (`2026-07`) has been generated outside Git and its matching
-public key is configured in the Actions keyring. The selected Hostinger
-persistent root still requires its two-deploy proof, explicit acknowledgement,
-key-preserving migration, and restore drill. Repository-only GitHub App
-credentials and the private signing key still need deployment to Hostinger, and
-the notes-only trial is also incomplete. The publisher refuses to create PRs while
-`GITHUB_PUBLICATION_TRUST_READY=false`. Keep that gate false until every
-remaining prerequisite is configured and independently verified; completed
-branch protection alone does not activate publication.
+Publication is active in guarded GitHub-PR mode. The dedicated publication key
+(`2026-07`), matching Actions public-key ring, repository-only GitHub App
+credentials, and private signing key are deployed. The persistent root proof,
+explicit acknowledgement, key-preserving migration, paired restore drill, and
+notes-only production trial are complete. Production runs with
+`GITHUB_PUBLICATION_TRUST_READY=true`, but that gate authorizes review-PR
+creation only: it does not authorize automatic merge, direct writes to `main`,
+or branch-protection bypass.
 
 Publication requires the exact confirmation phrase:
 
@@ -683,10 +689,10 @@ Important publication states:
 - `deployed`: live release ID and artifact hash match the reviewed PR.
 - `superseded`: a valid newer release is already live. Keep this as historical evidence; no revert is recommended.
 
-Before enabling this for real content, run a notes-only or listing-only trial whose
-public output is unchanged. Confirm deterministic retry behavior, required CI,
-human merge, Hostinger deployment, live attestation, and fail-closed behavior with
-temporarily invalid credentials.
+The notes-only trial is complete. Keep the first real content publication small
+and operator-observed. Confirm its deterministic artifact, required CI, human
+merge, Hostinger deployment, `/release.json` attestation, JSON-to-MySQL import,
+and final parity before increasing batch size.
 
 Local foundation check:
 

@@ -8,16 +8,18 @@ via GitHub. Not Cloudflare Pages -- that was the original plan, changed
 mid-build, and the architecture below reflects the current (Hostinger)
 target.
 
-**Current repository state (2026-07-18):** the site deploys to Hostinger as a
-Node.js/Express app via GitHub auto-deploy, entry `server.js`, Node 24. The
+**Current repository state (verified 2026-08-03):** the site deploys to
+Hostinger as a Node.js/Express app via GitHub auto-deploy, entry `server.js`,
+Node 24. The
 validated build contains 436 verified subject records: 403 standalone pages and
 33 listing-only official milestones, plus one editorial guide, 376 colleges,
 six branch profiles, 786 search documents, and 413 sitemap URLs. Production
 public serving remains `CONTENT_SOURCE=json`; `/api/ask` remains disabled. The
-separate trust-root bootstrap and initial implementation cutover both completed
-on 2026-07-18. Commit `962f05d` deployed successfully, all 413 sitemap URLs
-passed the live HTTP check, and the production MySQL mirror reached exact JSON
-parity.
+separate trust-root bootstrap, implementation cutover, persistent-asset
+recovery, paired restore drill, and guarded publisher activation are complete.
+Commit `bf5e423` is deployed, `/health` reports the same clean Git commit, the
+local site audit passes all 413 canonical URLs, and the production MySQL mirror
+reached exact JSON parity.
 
 The public repository's `main` branch is protected with required, up-to-date
 GitHub Actions checks (`verify` and `publication-integrity`), one code-owner
@@ -25,10 +27,11 @@ approval, stale-review dismissal, last-push approval, conversation resolution,
 linear history, administrator enforcement, and no force pushes or deletions.
 GitHub secret scanning, push protection, and Dependabot security updates are
 enabled, and the required verification job fails on high-severity npm audit
-findings. These controls protect the repository, but the automated publisher
-remains inactive until the selected Hostinger persistent asset root survives
-the documented two-deploy check, its backup/restore path is proven, and the
-GitHub App and signing configuration pass the documented production trial.
+findings. The guarded publisher is active in GitHub-PR mode after the selected
+Hostinger persistent asset root passed the two-deploy check, all 10 legacy
+assets were recovered, the paired off-host restore drill passed, and the
+notes-only production trial completed. The App still cannot merge or write
+directly to `main`; required CI and independent human approval remain mandatory.
 
 ## What this is
 
@@ -128,7 +131,7 @@ only as a deliberate cutover-recovery measure and never change it mid-release.
    GITHUB_PUBLICATION_TRUST_READY=false
    ASSET_STORAGE_PROVIDER=local
    ASSET_STORAGE_ROOT=/absolute/hostinger/account/path/jntustack-private-assets
-   ASSET_STORAGE_EXPECTED_ID=jntustack-hostinger-assets-2026-07
+   ASSET_STORAGE_EXPECTED_ID=<stable-private-store-id>
    ASSET_STORAGE_PERSISTENCE_VERIFIED=false
    GITHUB_APP_ID=...
    GITHUB_APP_INSTALLATION_ID=...
@@ -906,16 +909,15 @@ Use `docs/CURRENT_STATE.md` for current state and
 limited to setup-level reminders:
 
 1. Keep `CONTENT_SOURCE=json` and `ASK_ENABLED=false`.
-2. Complete the two-deploy Hostinger filesystem proof, off-host backup and
-   staging restore drill, repository-only GitHub App, dedicated signing key
-   and public-key ring, and notes-only production trial in
-   `docs/CONTENT_OPS_RUNBOOK.md`. Keep
-   `GITHUB_PUBLICATION_TRUST_READY=false` until all prerequisites are verified.
-3. Publish new content through a review PR, required CI, and human merge; then
-   verify `/release.json`, `/health`, and `/sitemap.xml` after Hostinger deploys.
-4. Record Search Console baselines and follow-ups on days 0, 7, 14, and 28.
-5. Keep NLP/n8n/Telegram automation and affiliate-book monetization deferred
-   until the reviewed publishing foundation is stable.
+2. Keep the first real content release small and operator-observed. Publish it
+   through the guarded review-PR flow, required CI, and independent human merge.
+3. After Hostinger deploys that merge, verify `/release.json`, `/health`, and
+   `/sitemap.xml`, then import the reviewed JSON into MySQL and confirm parity.
+4. Prove whether Hostinger account backups include the external private asset
+   root. Until then, retain the checksum-manifested paired off-host backup.
+5. Record Search Console baselines and follow-ups on days 0, 7, 14, and 28.
+6. Keep NLP/n8n/Telegram automation and affiliate-book monetization deferred
+   until multiple real reviewed publications complete reliably.
 
 ## Design constraints worth preserving as this grows
 
