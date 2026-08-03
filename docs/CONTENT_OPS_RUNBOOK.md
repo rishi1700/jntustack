@@ -257,6 +257,9 @@ field byte-for-byte in the JSON payload, keep `source.status` as `verified`,
 record a reviewer note, and type `AMEND VERIFIED SOURCE`. The server rejects
 missing files/checksums, non-official or disabled sources, URL mismatches, empty
 source diffs, and any academic, SEO, routing, notes, or publication change.
+The export must name the existing subject's actual checked-in data file. Shared
+subjects with a null `branch` are resolved by stable ID/slug/code across
+`data/subjects-*.json`; do not accept a guessed `subjects-branch.json` target.
 
 ## Diff
 

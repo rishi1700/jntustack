@@ -5,6 +5,7 @@ import {
   isVerifiedReviewDiff,
   prepareVerifiedProvenanceAmendment,
 } from '../lib/verified-amendments.js';
+import { resolveSubjectTargetForExport } from '../lib/proposal-export.js';
 
 const root = process.cwd();
 const content = await loadContent({ root });
@@ -58,6 +59,15 @@ assert.ok(prepared.diff.changes.length > 0);
 assert.ok(prepared.diff.changes.every(change => change.path.startsWith('source.')));
 assert.equal(isVerifiedReviewDiff(prepared.diff), true);
 assert.equal(isVerifiedReviewDiff({ workflow: { type: 'verified_promotion' } }), true);
+
+const exportTarget = await resolveSubjectTargetForExport({
+  root,
+  entityKey,
+  payload: proposedPayload,
+  existing: true,
+});
+assert.equal(exportTarget.dataFileHint, 'data/subjects-cse.json');
+assert.ok(exportTarget.index >= 0);
 
 assert.throws(() => prepareVerifiedProvenanceAmendment({
   root,
