@@ -411,6 +411,9 @@ outside `source`, keep `source.status` as `verified`, include a reviewer note,
 and use the exact confirmation phrase `AMEND VERIFIED SOURCE`. The audited diff
 records the asset ID and checksum; export re-checks the asset, persistent file,
 official source trust, URL binding, and checksum before preparing a release.
+For existing subjects, export resolves the entity's actual
+`data/subjects-*.json` owner by stable identity instead of guessing from
+`branch`; this matters for shared electives whose public `branch` is null.
 
 Entity extraction sits between raw parser output and diffs. Parsing means
 capturing raw evidence from an immutable source asset, such as title text,
