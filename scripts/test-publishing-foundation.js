@@ -34,6 +34,7 @@ import {
   githubPublicationStatusForVerification,
   publicationBranchName,
   publicationIdempotencyKey,
+  recordGitHubPublicationAudit,
   releaseMarker,
   storedPublicationManifestBuffer,
   verifyDeploymentMarker,
@@ -381,6 +382,27 @@ try {
   assert.equal(githubPublicationActionAllowed('superseded', 'verify_deployment'), false);
   assert.equal(githubPublicationActionAllowed('tampered', 'refresh'), false);
   assert.equal(githubPublicationActionAllowed('closed_unmerged', 'retry'), false);
+
+  let publicationAuditCall = null;
+  await recordGitHubPublicationAudit({
+    async execute(sql, values) {
+      publicationAuditCall = { sql, values };
+      return [{ affectedRows: 1 }];
+    },
+  }, {
+    actor: 'admin@example.test',
+    action: 'github_publication.preparing',
+    entityId: 17,
+    after: { status: 'preparing' },
+  });
+  assert.equal((publicationAuditCall.sql.match(/\?/g) || []).length, publicationAuditCall.values.length);
+  assert.deepEqual(publicationAuditCall.values, [
+    'admin@example.test',
+    'github_publication.preparing',
+    '17',
+    null,
+    JSON.stringify({ status: 'preparing' }),
+  ]);
 
   const staleSnapshot = {
     ...snapshot,
