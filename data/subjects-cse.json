@@ -2814,10 +2814,20 @@
       },
       "legacy_equivalent_id": null,
       "source": {
-        "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
-        "retrieved_date": "2026-07-12",
+        "origin_url": "https://www.jntuk.edu.in/jntuk_uploads/notification/5340571783322882922.pdf",
+        "retrieved_date": "2026-08-03",
         "status": "verified",
-        "college_source_note": "The course placement, credits and five units are published in JNTUK’s official CSE document linked here and match the official IT syllabus."
+        "college_source_note": "JNTUK's official 2026 Open Elective-I syllabus confirms the course placement, 3-0-0-3 credits, and the same five units; the earlier official CSE and IT syllabus documents remain linked as corroborating primary sources.",
+        "additional_sources": [
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8529641773304296341.pdf",
+            "label": "Official JNTUK R23 CSE course structure and syllabus previously reviewed"
+          },
+          {
+            "origin_url": "https://jntuk.edu.in/jntuk_uploads/notification/8650351779382116914.pdf",
+            "label": "Official JNTUK R23 Information Technology course structure and syllabus"
+          }
+        ]
       },
       "notes": "Shared CSE/IT Open Elective-I option (3-0-0-3), with matching official branch syllabi.",
       "branchCodes": [
